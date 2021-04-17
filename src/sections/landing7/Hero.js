@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
+import { Title, Button, Section, Box, Text, Span } from "../../components/Core";
 
 const Hero = () => {
   return (
@@ -47,7 +47,7 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1300"
                 >
-                  <Button>Boka en sprint</Button>
+                  <Button color="dark" bg="secondary">Boka en sprint</Button>
                 </Box>
               </Box>
             </Col>

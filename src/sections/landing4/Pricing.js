@@ -137,7 +137,7 @@ const Pricing = () => {
           </Row>
           <div className="text-center pt-5">
             <div className="d-inline-flex justify-content-between align-items-center mb-5">
-              <Text>Styckpris</Text>
+              <Text>Löpande</Text>
 
               <Switch onClick={() => setTimeMonthly(!timeMonthly)} />
               <div className="d-flex align-items-center">
@@ -160,7 +160,7 @@ const Pricing = () => {
                           margin-bottom: 0 !important;
                         `}
                       >
-                        {timeMonthly ? 1200 : 1400}
+                        {timeMonthly ? 1400 : 1200}
                       </Title>
                       <TimePer>/h</TimePer>
                     </div>

@@ -63,11 +63,9 @@ const Feature = () => (
             data-aos-delay="500"
           >
             <Box>
-              <Title color="light">Build a perfect landing page.</Title>
+              <Title color="light">Det är inte så svårt.</Title>
               <Text color="light" opacity={0.7}>
-                Create custom landing pages with Omega that converts more
-                visitors than any website. With lots of unique blocks, you can
-                easily build a page without coding.
+                Vi har sett allt för många projekt som har börjat på fel sätt. Felaktiga teknikval, superdetaljerade specar, gigantiska budgetar som inte leder framåt. Vi vet hur man börjar projekt men också hur man för dem i hamn.
               </Text>
               <Button mt={4}>Learn more</Button>
             </Box>
@@ -85,7 +83,7 @@ const Feature = () => (
                   <FeatureCard
                     color="primary"
                     iconName="icon-layout-11"
-                    title="Multiple Layouts"
+                    title="Teknik som funkar"
                   >
                     With lots of unique blocks, you can easily build a page
                     without coding.
@@ -102,7 +100,7 @@ const Feature = () => (
                   <FeatureCard
                     color="ash"
                     iconName="icon-sidebar-2"
-                    title="Fully Responsive
+                    title="Team som leder sig själva
 "
                   >
                     With lots of unique blocks, you can easily build a page
@@ -120,7 +118,7 @@ const Feature = () => (
                   <FeatureCard
                     color="dark"
                     iconName="icon-voice-recognition-2"
-                    title="Great Support"
+                    title="Budget som håller"
                   >
                     With lots of unique blocks, you can easily build a page
                     without coding.

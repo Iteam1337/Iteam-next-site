@@ -54,10 +54,9 @@ const Team = () => (
         <Row className="justify-content-center">
           <Col lg="6" className="text-center pb-3">
             <div className="">
-              <Title>Meet the team</Title>
+              <Title>Vadå ha kul?</Title>
               <Text>
-                Create custom landing pages with Omega that converts more
-                visitors than any website.{" "}
+                Digitialisering är ett kreativt arbete och när vi får lösa svåra uppgifter och använda vår kompetens. Och ja, att få fira tillsammans när vi lyckas!{" "}
               </Text>
             </div>
           </Col>

@@ -127,7 +127,7 @@ const Feature = () => (
                 <FeatureCard
                   color="ash"
                   iconName="icon-chat-45-2"
-                  title="Great Support"
+                  title="Hålla budget"
                 >
                   With lots of unique blocks, you can easily build a page
                   without coding.

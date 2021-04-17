@@ -66,7 +66,7 @@ const Hero = () => {
                   </Title>
                   <Text mb={4} color="light" opacity={0.7}>
                     Vi digitaliserar företag och organisationer genom en enkel och välbeprövad metod som bygger på
-                    en användarstyrd process med öppen källkod, teamwork och samarbete.
+                    en användarstyrd process med öppen källkod, teamwork och effektivitet.
                   </Text>
                   <div className="d-flex flex-column align-items-start pt-3">
                     <Button mb={2}>Boka ett team och börja bygga</Button>

@@ -15,7 +15,7 @@ import { device } from "../../utils";
 
 import imgL2HeroOval1 from "../../assets/image/png/l2-hero-oval1.png";
 import imgL2HeroOval2 from "../../assets/image/png/l2-hero-oval2.png";
-import imgL2HeroBg from "../../assets/image/jpeg/l2-hero-bg.jpg";
+import imgL2HeroBg from "../../assets/image/jpeg/Hans-Amir-Tesla-Lowres.jpg";
 
 const SectionStyled = styled(Section)`
   background: url(${imgL2HeroBg}) no-repeat;
@@ -62,29 +62,7 @@ const Hero = () => {
         <div className="pt-5"></div>
         <Container>
           <Row>
-            <Col lg="5" className="order-lg-2">
-              <div className="position-relative w-100 h-100">
-                <ImageTop
-                  bg="light"
-                  data-aos="zoom-out"
-                  data-aos-duration="750"
-                  data-aos-once="true"
-                  data-aos-delay="1000"
-                  className="d-none d-lg-block"
-                >
-                  <img src={imgL2HeroOval1} alt="" className="img-fluid" />
-                </ImageTop>
-                <ImageBottom
-                  data-aos="zoom-out"
-                  data-aos-duration="750"
-                  data-aos-once="true"
-                  data-aos-delay="1000"
-                  className="d-none d-lg-block"
-                >
-                  <img src={imgL2HeroOval2} alt="" className="img-fluid" />
-                </ImageBottom>
-              </div>
-            </Col>
+            
             <Col
               md="9"
               lg="7"
@@ -94,7 +72,7 @@ const Hero = () => {
               data-aos-delay="500"
               data-aos-once="true"
             >
-              <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
+              <Box py={[null, null, null, 4]} pr={5} pt={[4, null]}>
                 <Title variant="hero">
                   När du vet vad du vill bygga.
                 </Title>

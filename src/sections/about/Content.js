@@ -21,16 +21,16 @@ const Content = () => (
         <Row className="justify-content-center pb-4">
           <Col lg="6">
             <Title variant="hero">
-              Digitalisering kräver erfarenhet och mod att sätta igång
+              Digitalisering kräver mod att sätta igång
             </Title>
           </Col>
           <Col lg="6" className="pl-lg-5">
             <Text>
-            Digitalisering till sin natur är oförutsägbar och komplex och att gamla metoder för framtagning av fysiska produkter och tjänster inte gäller här, tvärtom leder dom ofta till höga kostnader och ett dåligt resultat.
+            Digitalisering är till sin natur oförutsägbar och komplex. Gamla metoder för framtagning av fysiska produkter och tjänster gäller inte längre. Tvärtom leder dom ofta till höga kostnader och dåliga resultat.
             </Text>
             <Text>
-            Vi har under 25 års tid förfinat en process som faktiskt fungerar i för att tämja denna komplexitet och skapa lyckade projekt. 
-Grunden handlar om att våga sätta igång. Att inte avvakta till att man har alla svaren. Det bygger på ett förtroende och därför satsar vi mycket på våra kundrelationer. Vi vill lita på dig och du lita på oss. Kärnan i det är att vi har kul ihop och att vi är ärliga mot varandra.
+            Vi har tillbringat 25 år med att lära oss hur man gör på ett bättre sätt. 
+Grunden handlar om att våga sätta igång. Att inte avvakta till att man har alla svaren. Det bygger på tillit. Vi litar på dig och du kan lita på oss.
             </Text>
           </Col>
         </Row>
