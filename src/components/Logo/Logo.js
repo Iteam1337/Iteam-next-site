@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import imgL1Logo from "../../assets/image/png/iteam-logo.png";
+import imgL1Logo from "../../assets/image/png/Iteam-logo.png";
 import imgL1LogoWhite from "../../assets/image/png/Iteam-Logotype-Horizontal-RGB-White.png";
 
 const Logo = ({ white, height, className = "", ...rest }) => {
