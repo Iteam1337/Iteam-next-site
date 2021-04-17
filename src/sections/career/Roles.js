@@ -73,10 +73,9 @@ const Roles = () => (
         <Row className="justify-content-center">
           <Col lg="6" className="text-center">
             <div>
-              <Title>Open roles</Title>
+              <Title>Lediga tjänster</Title>
               <Text>
-                These companies release their own versions of the operating
-                systems with minor changes, and yet always.
+                Vi svarar på alla vanliga och spontanansökningar och har en snabb och effektiv process för vår rekrytering.
               </Text>
             </div>
           </Col>
@@ -84,42 +83,18 @@ const Roles = () => (
         <Row className="mt-lg-5">
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
-              color="secondary"
-              title="Senior UX Designer"
+              color="primary"
+              title="Senior Frontend Developer"
               type="Full-time"
-              location="South Haven, USA"
+              location="Sweden"
             />
           </Col>
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
               color="primary"
-              title="Senior UI Developer"
+              title="Senior Backend Engineer"
               type="Full-time"
-              location="South Haven, USA"
-            />
-          </Col>
-          <Col lg="4" md="6" className="pt-4">
-            <RolesCard
-              color="success"
-              title="Senior QA Engineer"
-              type="Remote"
-              location="South Haven, USA"
-            />
-          </Col>
-          <Col lg="4" md="6" className="pt-4">
-            <RolesCard
-              color="secondary"
-              title="Senior UI Developer"
-              type="Part-time"
-              location="South Haven, USA"
-            />
-          </Col>
-          <Col lg="4" md="6" className="pt-4">
-            <RolesCard
-              color="primary"
-              title="Senior QA Engineer"
-              type="Remote"
-              location="South Haven, USA"
+              location="Sweden"
             />
           </Col>
           <Col lg="4" md="6" className="pt-4">

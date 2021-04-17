@@ -10,9 +10,8 @@ const Career = () => {
   return (
     <>
       <PageWrapper footerDark>
-        <Hero title="Career">
-          Create custom landing pages with Omega that converts more visitors
-          than any website.
+        <Hero title="Bli en del av teamet">
+          Vi söker dig som har talang för att lära dig snabbt och gillar mer komplexa utmaningar.
         </Hero>
         <Content />
         <Feature />

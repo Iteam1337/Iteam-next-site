@@ -1,26 +1,32 @@
 import React from "react";
-import Hero from "../sections/landing1/Hero";
-import Clients from "../sections/landing1/Clients";
-import Feature from "../sections/landing1/Feature";
-import Content1 from "../sections/landing1/Content1";
-import Content2 from "../sections/landing1/Content2";
-import Testimonial from "../sections/landing1/Testimonial";
-import CTA from "../sections/landing1/CTA";
+import Hero from "../sections/landing4/Hero";
+import Feature from "../sections/landing4/Feature";
+import Clients from "../sections/landing4/Clients";
+import Content1 from "../sections/landing4/Content1";
+import Content2 from "../sections/landing4/Content2";
+import Testimonial from "../sections/landing4/Testimonial";
+import Fact from "../sections/landing4/Fact";
+import Pricing from "../sections/landing4/Pricing";
+import Faq from "../sections/landing4/Faq";
+import CTA from "../sections/landing4/CTA";
 import PageWrapper from "../components/PageWrapper";
 
-const IndexPage = () => {
+const LandingPage4 = () => {
   return (
     <>
-      <PageWrapper footerDark>
+      <PageWrapper headerDark footerDark>
         <Hero />
-        <Clients />
         <Feature />
+        <Clients />
         <Content1 />
         <Content2 />
         <Testimonial />
+        <Fact />
+        <Pricing />
+        <Faq />
         <CTA />
       </PageWrapper>
     </>
   );
 };
-export default IndexPage;
+export default LandingPage4;

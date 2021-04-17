@@ -25,7 +25,7 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="700"
                 >
-                  A creative agency who helps you uplift your brand
+                  Iteam X - när du inte vet vad som är möjligt
                 </Text>
                 <Title
                   my={4}
@@ -36,9 +36,9 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1000"
                 >
-                  Human-centered
+                  Experimentell utveckling
                   <br className="d-none d-lg-block" />
-                  startup development
+                  med exponentiell teknik
                 </Title>
                 <Box
                   pt="12px"
@@ -47,7 +47,7 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1300"
                 >
-                  <Button>Get In Touch</Button>
+                  <Button>Boka en sprint</Button>
                 </Box>
               </Box>
             </Col>

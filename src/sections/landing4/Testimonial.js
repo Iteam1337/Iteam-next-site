@@ -7,7 +7,7 @@ import { rgba } from "polished";
 import { Title, Section, Box, Text } from "../../components/Core";
 import { device, breakpoints } from "../../utils";
 
-import imgCustomer1 from "../../assets/image/jpeg/testimonial-image.jpg";
+import imgCustomer1 from "../../assets/image/jpeg/littorin.jpg";
 import imgCustomer2 from "../../assets/image/jpeg/testimonial-image-2.jpg";
 import imgQuote from "../../assets/image/png/quote-shape.png";
 
@@ -175,10 +175,9 @@ const Testimonial = () => {
           <Row className="justify-content-center mb-4">
             <Col lg="6" md="9">
               <div className="text-center">
-                <Title>Customers love us</Title>
+                <Title>Vi har kul med våra kunder</Title>
                 <Text>
-                  Create custom landing pages with Omega that converts more
-                  visitors than any website.
+                  Kreativitet kommer inte från krångliga avtal utan från samarbete och förtroende.
                 </Text>
               </div>
             </Col>
@@ -196,14 +195,12 @@ const Testimonial = () => {
                         <img src={imgQuote} alt="" className="img-fluid" />
                       </SliderQuoteShape>
                       <Text color="dark" my={2}>
-                        OMG! I cannot believe that I have got a brand new
-                        landing page after getting Omega. It was super easy to
-                        edit and publish.
+                      Vi känner att vårt team på Iteam är mer som kollegor än leverantörer. Istället för att skriva en teknisk kravspecifikation att arbeta efter, så samarbetar vi kontinuerligt för att utveckla funktionalitet. Detta arbetssätt har gjort att vi kommit mycket längre än vi nånsin kunnat tro eftersom det varit så effektivt.
                       </Text>
                       <Title variant="card" mb={0} mt={3}>
-                        Jonathan Taylor
+                        Johan Littorin
                       </Title>
-                      <Text variant="small">CEO at Creativex</Text>
+                      <Text variant="small">Grundare Vimla</Text>
                     </SliderText>
                   </SliderCard>
                 </SliderItem>

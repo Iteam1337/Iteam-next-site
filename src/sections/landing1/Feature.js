@@ -97,7 +97,7 @@ const Feature = () => (
                 <FeatureCard
                   color="primary"
                   iconName="icon-layout-11"
-                  title="Multiple Layouts"
+                  title="API"
                 >
                   With lots of unique blocks, you can easily build a page
                   without coding.
@@ -107,7 +107,7 @@ const Feature = () => (
                 <FeatureCard
                   color="warning"
                   iconName="icon-sidebar-2"
-                  title="Fully Responsive"
+                  title="APP"
                 >
                   With lots of unique blocks, you can easily build a page
                   without coding.
@@ -117,7 +117,7 @@ const Feature = () => (
                 <FeatureCard
                   color="secondary"
                   iconName="icon-bookmark-2-2"
-                  title="Well Documented"
+                  title="Continous Delivery"
                 >
                   With lots of unique blocks, you can easily build a page
                   without coding.

@@ -75,9 +75,8 @@ const Content = () => {
             <Col lg="10">
               <div className="text-center">
                 <Title color="light">
-                  Our expert team <Span color="secondary">helps to grow</Span>{" "}
-                  any business from around the world to get customers for their
-                  services.
+                  Våra team utgår från <Span color="secondary">en hypotes.</Span>{" "}
+                  Den försöker vi därefter att motbevisa med hjälp av olika experiment.
                 </Title>
               </div>
             </Col>
@@ -91,7 +90,7 @@ const Content = () => {
               data-aos-duration="1000"
               data-aos-once="true"
             >
-              <ContentCard>Graphic Design</ContentCard>
+              <ContentCard>Blockkedjor</ContentCard>
             </Col>
             <Col
               lg="4"
@@ -102,7 +101,7 @@ const Content = () => {
               data-aos-once="true"
               data-aos-delay="200"
             >
-              <ContentCard>Digital Marketing</ContentCard>
+              <ContentCard>AI</ContentCard>
             </Col>
             <Col
               lg="4"
@@ -113,7 +112,7 @@ const Content = () => {
               data-aos-once="true"
               data-aos-delay="400"
             >
-              <ContentCard>Content Marketing</ContentCard>
+              <ContentCard>Data pipelines</ContentCard>
             </Col>
             <Col
               lg="4"
@@ -124,7 +123,7 @@ const Content = () => {
               data-aos-once="true"
               data-aos-delay="600"
             >
-              <ContentCard>Website Development</ContentCard>
+              <ContentCard>Digital Twins</ContentCard>
             </Col>
             <Col
               lg="4"
@@ -135,7 +134,7 @@ const Content = () => {
               data-aos-once="true"
               data-aos-delay="800"
             >
-              <ContentCard>Search Engine Optimization</ContentCard>
+              <ContentCard>Machine Learning</ContentCard>
             </Col>
             <Col
               lg="4"
@@ -146,7 +145,7 @@ const Content = () => {
               data-aos-once="true"
               data-aos-delay="1000"
             >
-              <ContentCard>Maintenance & Support</ContentCard>
+              <ContentCard>Drönare</ContentCard>
             </Col>
           </Row>
         </Container>

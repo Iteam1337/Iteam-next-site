@@ -22,9 +22,9 @@ const Fact = () => (
         <Row className="text-center">
           <Col md="4" className="mb-5">
             <Box>
-              <Title color="secondary">1M+</Title>
+              <Title color="secondary">26</Title>
               <Text>
-                Customers visit Omega every month to get their service done.
+                år har Iteam jobbat med digitalisering.
               </Text>
             </Box>
           </Col>

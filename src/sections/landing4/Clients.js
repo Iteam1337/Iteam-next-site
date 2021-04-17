@@ -4,14 +4,16 @@ import { Container } from "react-bootstrap";
 
 import { Box } from "../../components/Core";
 
-import imgL1Brand1 from "../../assets/image/png/l1-brand1.png";
-import imgL1Brand2 from "../../assets/image/png/l1-brand2.png";
-import imgL1Brand3 from "../../assets/image/png/l1-brand3.png";
-import imgL1Brand4 from "../../assets/image/png/l1-brand4.png";
-import imgL1Brand5 from "../../assets/image/png/l1-brand5.png";
+import imgL1Brand1 from "../../assets/image/svg/vimla.svg";
+import imgL1Brand2 from "../../assets/image/svg/seb.svg";
+import imgL1Brand3 from "../../assets/image/svg/taxi-stockholm.svg";
+import imgL1Brand4 from "../../assets/image/png/Skatteverket.png";
+import imgL1Brand5 from "../../assets/image/png/weopendata.png";
 
 const Brand = styled(Box)`
   opacity: 0.7;
+  filter: grayscale(100%);
+  width: 100px;
   transition: all 0.3s ease-out;
   &:hover {
     opacity: 1;

@@ -6,6 +6,7 @@ import { Title, Button, Section, Box, Text } from "../../components/Core";
 
 import imgOval from "../../assets/image/png/l1-cta-oval.png";
 import svgCurve from "../../assets/image/svg/l1-curve-cta.svg";
+import Link from "next/link";
 
 const LeftCard = styled(Box)`
   position: absolute;
@@ -44,7 +45,7 @@ const CTA = () => (
               </Text>
             </Box>
             <Box>
-              <Button>Check Job Openings</Button>
+              <Link href="/career">Check Job Openings</Link>
             </Box>
           </Col>
         </Row>

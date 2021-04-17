@@ -23,23 +23,23 @@ const Fact = () => (
         <Row className="text-center">
           <Col md="4" className="mb-5">
             <Box>
-              <Title color="secondary">1M+</Title>
+              <Title color="secondary">26 år</Title>
               <Text>
-                Customers visit Omega every month to get their service done.
+                har vi jobbat med digitalisering.
               </Text>
             </Box>
           </Col>
           <Col md="4" className="mb-5">
             <Box>
-              <Title color="secondary">92%</Title>
-              <Text>Satisfaction rate comes from our awesome customers.</Text>
+              <Title color="secondary">95%</Title>
+              <Text>Lyckade digitaliseringsprojekt.</Text>
             </Box>
           </Col>
           <Col md="4" className="mb-5">
             <Box>
-              <Title color="secondary">4.9/5.0</Title>
+              <Title color="secondary">5.0</Title>
               <Text>
-                Average customer ratings we have got all over internet.
+                Betyg på FB och Google
               </Text>
             </Box>
           </Col>

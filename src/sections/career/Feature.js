@@ -82,25 +82,23 @@ const Feature = () => (
       <Container>
         <Row className="">
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="secondary" title="Work from anywhere">
-              Many of us are able to work from home, a café, or a park whenever
-              we want. Yay freedom!
+            <FeatureCard color="secondary" title="Jobba där du är">
+              Du jobbar där du trivs bäst. Hemma, kontoret, cafét eller från en strand?
+              Yay freedom!
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="primary" title="Flexible hours">
-              Many of us are able to work from home, a café, or a park whenever
-              we want. Yay freedom!
+            <FeatureCard color="primary" title="Flexibla tider">
+              Livspusslet ska gå ihop. Work/life balance är något vi aktivt jobbar med att balansera. 
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="warning" title="Work and travel">
-              Many of us are able to work from home, a café, or a park whenever
-              we want. Yay freedom!
+            <FeatureCard color="warning" title="Träning på schemat">
+              För att hjärnan ska fungera så måste även kroppen göra det. Vi tränar gärna ihop, har träningstävlingar etc.
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="success" title="Paid parental leave">
+            <FeatureCard color="success" title="Föräldralön">
               Many of us are able to work from home, a café, or a park whenever
               we want. Yay freedom!
             </FeatureCard>

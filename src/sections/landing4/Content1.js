@@ -109,14 +109,13 @@ const Content1 = () => (
             >
               <div>
                 <Title>
-                  Make beautiful{" "}
+                  Användarstyrd{" "}
                   <br className="d-none d-sm-block d-md-none d-lg-block" />{" "}
-                  landing pages easily.
+                  API utveckling.
                 </Title>
                 <Text mb={4}>
-                  Create custom landing pages with Omega that converts more
-                  visitors than any website. With lots of unique blocks, you can
-                  easily build a page without coding.
+                  Många gånger kan grunden till en digital strategi vara ett bra API. 
+                  Ett bra API kan förenkla resten av digitaliseringen och underlätta utrangeringen av gamla legacysystem.
                 </Text>
 
                 <ULStyled>

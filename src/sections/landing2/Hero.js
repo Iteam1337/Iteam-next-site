@@ -96,12 +96,10 @@ const Hero = () => {
             >
               <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                 <Title variant="hero">
-                  Bring more leads for your business.
+                  När du vet vad du vill bygga.
                 </Title>
                 <Text mb={4}>
-                  Create custom landing pages with Omega that convert more
-                  visitors than any website. With lots of unique blocks, you can
-                  easily build a page without coding.
+                  Det är svårt att komma igång med digitala projekt. Teamet ska funka, rätt teknikval och inte bygga för mycket innan användarna är med. Vi är experter!
                 </Text>
                 <form action="/">
                   <div className="position-relative">

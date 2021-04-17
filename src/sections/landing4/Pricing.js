@@ -49,6 +49,7 @@ const ULStyled = styled.ul`
     line-height: 50px;
     display: flex;
     margin-bottom: 5px;
+    width: 100%;
 
     &:before {
       content: "\f00c";
@@ -111,7 +112,7 @@ const TimePer = styled.span`
 `;
 
 const Pricing = () => {
-  const [timeMonthly, setTimeMonthly] = useState(false);
+  const [timeMonthly, setTimeMonthly] = useState(true);
 
   return (
     <>
@@ -126,22 +127,21 @@ const Pricing = () => {
           <Row className="justify-content-center">
             <Col md="8" lg="9">
               <div className=" text-center">
-                <Title>Pricing &amp; Plans</Title>
+                <Title>Våra enkla priser</Title>
                 <Text>
-                  Create custom landing pages with Omega that converts{" "}
-                  <br className="d-none d-md-block" /> more visitors than any
-                  website.
+                  Vi vill göra det enkelt att jobba med oss{" "}
+                  <br className="d-none d-md-block" /> därför har vi enkla och transparenta prislistor.
                 </Text>
               </div>
             </Col>
           </Row>
           <div className="text-center pt-5">
             <div className="d-inline-flex justify-content-between align-items-center mb-5">
-              <Text>Monthly</Text>
+              <Text>Styckpris</Text>
 
               <Switch onClick={() => setTimeMonthly(!timeMonthly)} />
               <div className="d-flex align-items-center">
-                <Text>Yearly</Text>
+                <Text>Ramavtal (3 mån)</Text>
                 <Badge ml={2}>Save 25%</Badge>
               </div>
             </div>
@@ -150,9 +150,9 @@ const Pricing = () => {
               <Col lg="6" className="mb-5">
                 <CardPricing>
                   <div className="mb-4">
-                    <TitleSmall>Starter</TitleSmall>
+                    <TitleSmall>Helt team</TitleSmall>
                     <div className="d-flex align-items-end justify-content-center my-3">
-                      <Currency>$</Currency>
+                      <Currency>SEK</Currency>
                       <Title
                         css={`
                           font-size: 80px;
@@ -160,28 +160,28 @@ const Pricing = () => {
                           margin-bottom: 0 !important;
                         `}
                       >
-                        {timeMonthly ? 24 : 20}
+                        {timeMonthly ? 1200 : 1400}
                       </Title>
-                      <TimePer>/mo</TimePer>
+                      <TimePer>/h</TimePer>
                     </div>
-                    <Text fontSize="18px">Per user</Text>
+                    <Text fontSize="18px">per person</Text>
                     <ULStyled>
-                      <li>5 responsive landing pages</li>
-                      <li>50+ HTML UI elements</li>
-                      <li>Unlimited domains</li>
-                      <li>6 months premium support</li>
-                      <li>Lifetime updates</li>
+                      <li>Frontendutvecklare</li>
+                      <li>Backendutvecklare</li>
+                      <li>UX-designer</li>
+                      <li>Agil coach</li>
+                      <li>Max tre dagar i veckan</li>
                     </ULStyled>
                   </div>
-                  <Button bg="secondary">Start 14 Days Free Trial</Button>
+                  <Button bg="secondary">Boka en provvecka</Button>
                 </CardPricing>
               </Col>
               <Col lg="6" className="mb-4">
                 <CardPricing>
                   <div className="mb-4">
-                    <TitleSmall>Team</TitleSmall>
+                    <TitleSmall>Konsult</TitleSmall>
                     <div className="d-flex align-items-end justify-content-center my-3">
-                      <Currency>$</Currency>
+                      <Currency>SEK</Currency>
                       <Title
                         css={`
                           font-size: 80px;
@@ -189,17 +189,17 @@ const Pricing = () => {
                           margin-bottom: 0 !important;
                         `}
                       >
-                        {timeMonthly ? 60 : 50}
+                        {timeMonthly ? 1400 : 900}
                       </Title>
-                      <TimePer> /mo</TimePer>
+                      <TimePer> /h</TimePer>
                     </div>
-                    <Text fontSize="18px">Per user</Text>
+                    <Text fontSize="18px">timtaxa</Text>
                     <ULStyled>
-                      <li>5 responsive landing pages</li>
-                      <li>50+ HTML UI elements</li>
-                      <li>Unlimited domains</li>
+                      <li>Minst tre månaders avtal</li>
+                      <li>Stärker upp ert team</li>
                       <li>6 months premium support</li>
                       <li>Lifetime updates</li>
+                      <li>32h i veckan</li>
                     </ULStyled>
                   </div>
                   <Button bg="secondary">Start 14 Days Free Trial</Button>

@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 
 import { device } from "../../utils";
-import imgHeroTab from "../../assets/image/png/l5-hero-image.png";
+import imgHeroTab from "../../assets/image/png/Illustrationer-Digitalt Vit BG_M.png";
 
 const SectionStyled = styled(Section)`
   background-image: ${({ theme }) => `radial-gradient(
@@ -18,12 +18,13 @@ const SectionStyled = styled(Section)`
 
 const ImgRight = styled(Box)`
   position: relative;
-  left: -100px;
+  left: 50px;
+  width: 300px;
   @media ${device.md} {
     position: absolute;
     top: 0;
-    max-width: 100%;
-    min-width: 100%;
+    max-width: 40%;
+    min-width: 30%;
     right: 0;
     left: auto;
     transform: translateX(25%);
@@ -60,23 +61,22 @@ const Hero = () => {
               >
                 <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                   <Title variant="hero" color="light">
-                    Get your next <br className="d-none d-sm-block" />
-                    landing page.
+                    We move fast <br className="d-none d-sm-block" />
+                    and fix things.
                   </Title>
                   <Text mb={4} color="light" opacity={0.7}>
-                    Create custom landing pages with Omega that convert more
-                    visitors than any website. With lots of unique blocks, you
-                    can easily build a page without coding.
+                    Vi digitaliserar företag och organisationer genom en enkel och välbeprövad metod som bygger på
+                    en användarstyrd process med öppen källkod, teamwork och samarbete.
                   </Text>
                   <div className="d-flex flex-column align-items-start pt-3">
-                    <Button mb={2}>Start 14 Days Free Trial</Button>
+                    <Button mb={2}>Boka ett team och börja bygga</Button>
                     <Text
                       variant="small"
                       fontSize={"14px"}
                       color="light"
                       opacity={0.7}
                     >
-                      No credit card required
+                      Vi har enkla avtal utan bindningstid
                     </Text>
                   </div>
                 </Box>

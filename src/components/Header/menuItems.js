@@ -1,21 +1,18 @@
 export const menuItems = [
+  
   {
-    name: "case",
-    label: "Case",
+    name: "erbjudande",
+    label: "Erbjudanden",
     items: [
-      { name: "", label: "Landing 01" },
-      { name: "landing-2", label: "Landing 02" },
-      { name: "landing-3", label: "Landing 03" },
-      { name: "landing-4", label: "Landing 04" },
-      { name: "landing-5", label: "Landing 05" },
-      { name: "landing-6", label: "Landing 06" },
-      { name: "landing-7", label: "Landing 07" },
-      { name: "landing-8", label: "Landing 08" },
+      { name: "landing-7", label: "Iteam X" },
+      { name: "landing-2", label: "Iteam MVP" },
+      { name: "landing-3", label: "Iteam Scale-up" },
+      { name: "landing-4", label: "Utbildningar" },
     ],
   },
   {
     name: "erbjudande",
-    label: "Erbjudande",
+    label: "Sidor att välja",
     items: [
       {
         name: "career",
@@ -25,14 +22,7 @@ export const menuItems = [
           { name: "career-details", label: "Career Details" },
         ],
       },
-      {
-        name: "case-study",
-        label: "Case Study",
-        items: [
-          { name: "case-study", label: "Case Study" },
-          { name: "case-study-details", label: "Case Study Details" },
-        ],
-      },
+      
       {
         name: "pricing",
         label: "Pricing",
@@ -83,6 +73,14 @@ export const menuItems = [
         ],
       },
     ],
+  },
+  {
+    name: "career",
+    label: "Karriär",
+  },
+  {
+    name: "case-study",
+    label: "Case",
   },
   {
     name: "blog-regular",

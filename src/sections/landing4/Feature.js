@@ -5,9 +5,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
-import iconLayout from "../../assets/image/png/icon-layout.png";
-import iconLayers from "../../assets/image/png/icon-layers.png";
-import iconResponsive from "../../assets/image/png/icon-responsive.png";
+import iconCollaboration from "../../assets/image/png/Lego-2-Medium.png";
+import iconOpenSource from "../../assets/image/png/Laptop-Large.png";
+import iconInsight from "../../assets/image/png/Video-Call-Large.png";
 
 const SectionStyled = styled(Section)`
   padding-top: 47px;
@@ -19,10 +19,11 @@ const SectionStyled = styled(Section)`
   }
 `;
 
+
 const FeatureCard = ({ iconImage, title, children, ...rest }) => (
   <Box {...rest}>
     <Box mb={[3, 3, 3, 4]} pb={2}>
-      <img src={iconImage} alt="" />
+      <img src={iconImage} height="200" alt="" />
     </Box>
     <Box>
       <Title variant="card" fontSize="24px" mb={3}>
@@ -40,21 +41,18 @@ const Feature = () => (
       <Container>
         <Row className="justify-content-center">
           <Col lg="4" className="mb-5 mb-lg-4">
-            <FeatureCard title="Multiple Modern Layouts" iconImage={iconLayout}>
-              With lots of unique blocks, you can easily build a page without
-              coding. Build your next landing page quickly.
+            <FeatureCard title="Användarstyrd process" iconImage={iconInsight}>
+              Användarna älskar det vi gör. Genom att involvera dem redan från första början och kontinuerligt bygga det som efterfrågas mest blir det bra.
             </FeatureCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-4">
-            <FeatureCard title="Built with Bootstrap 4" iconImage={iconLayers}>
-              With lots of unique blocks, you can easily build a page without
-              coding. Build your next landing page quickly.
+            <FeatureCard title="Teamwork" iconImage={iconCollaboration}>
+              Komplexa lösningar kräver fler hjärnor. Vi jobbar bara i team (därav vårt namn). Teamet blir autonomt och du som kund är en del av teamet.
             </FeatureCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-4">
-            <FeatureCard title="Fully Responsive" iconImage={iconResponsive}>
-              With lots of unique blocks, you can easily build a page without
-              coding. Build your next landing page quickly.
+            <FeatureCard title="Open Source" iconImage={iconOpenSource}>
+              Genom att använda öppen källkod som princip i allt vi bygger så blir det enkelt för vem som helst att ansluta till teamet. Dessutom blir det billigare.
             </FeatureCard>
           </Col>
         </Row>
