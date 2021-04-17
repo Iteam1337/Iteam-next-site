@@ -12,7 +12,7 @@ import {
 } from "../../components/Core";
 import { device } from "../../utils";
 
-import imgCtaBG from "../../assets/image/jpeg/l2-cta-big.jpg";
+import imgCtaBG from "../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg";
 import imgOval from "../../assets/image/png/l2-cta-oval.png";
 
 const ImageBottom = styled(Box)`
@@ -54,16 +54,6 @@ const CTA = () => (
                   `}
                 />
               </div>
-              <ImageBottom
-                className=""
-                bg="light"
-                data-aos="fade-right"
-                data-aos-duration="750"
-                data-aos-once="true"
-                data-aos-delay="500"
-              >
-                <img src={imgOval} alt="" className="img-fluid" />
-              </ImageBottom>
             </div>
           </Col>
           <Col

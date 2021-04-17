@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
-import imgContentBig from "../../assets/image/jpeg/l2-content3-big.jpg";
+import imgContentBig from "../../assets/image/jpeg/Mac-Plus-Lowres.jpg";
 import imgOval from "../../assets/image/png/l2-content3-oval.png";
 
 const ImageBottom = styled(Box)`
@@ -70,11 +70,9 @@ const Content2 = () => (
               data-aos-once="true"
             >
               <div>
-                <Title>Save tons of time on design & coding.</Title>
+                <Title>Man kommer inte ifrån legacy.</Title>
                 <Text mb={4}>
-                  Create custom landing pages with Omega that converts more
-                  visitors than any website. With lots of unique blocks, you can
-                  easily build a page without coding.
+                  Våra lösningar bygger oftast på någon form av integration mot underliggande system. Ibland så gamla som från 80-talet. Vi vet hur man tämjer gamla system.
                 </Text>
 
                 <Button mt={3}>Get Started</Button>

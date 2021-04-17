@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Gravatar from "react-gravatar";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box, Text } from "../../components/Core";
@@ -10,6 +11,8 @@ import imgU3 from "../../assets/image/jpeg/about-team-4.jpg";
 import imgU4 from "../../assets/image/jpeg/about-team-5.jpg";
 import imgU5 from "../../assets/image/jpeg/about-team-6.jpg";
 import imgU6 from "../../assets/image/jpeg/about-team-2.jpg";
+
+import team from './team.json'
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -23,7 +26,7 @@ const CardImage = styled.div`
   margin-bottom: 29px;
 `;
 
-const TeamCard = ({ userImg, title, children, ...rest }) => (
+const TeamCard = ({ email, title, children, ...rest }) => (
   <Box
     className="text-center"
     pt="15px"
@@ -33,7 +36,11 @@ const TeamCard = ({ userImg, title, children, ...rest }) => (
     {...rest}
   >
     <CardImage>
-      <img src={userImg} className="img-fluid" alt="" />
+      <Gravatar
+        email={email}
+        className="img-fluid"
+        size={200}
+        />
     </CardImage>
     <div className="text-center">
       <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
@@ -62,36 +69,15 @@ const Team = () => (
           </Col>
         </Row>
         <Row className="align-items-center justify-content-center">
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU1} title="Louise Elliott">
-              Founder and CEO
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU2} title="Trevor Fleming">
-              CTO
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU3} title="Raymond Baker">
-              Software Engineer
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU4} title="George Torres">
-              UX Designer
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU5} title="Daisy Ferguson">
-              Content Writer
-            </TeamCard>
-          </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU6} title="Todd Summers">
-              Digital Marketer
-            </TeamCard>
-          </Col>
+          {team
+            .sort((a, b) => a.fullname > b.fullname)
+            .map(({fullname, title, email}) => 
+              <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
+                <TeamCard email={email} title={fullname}>
+                  {title}
+                </TeamCard>
+              </Col>
+          )}
         </Row>
       </Container>
     </Section>

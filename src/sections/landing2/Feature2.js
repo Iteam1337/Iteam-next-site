@@ -4,6 +4,13 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box } from "../../components/Core";
 
+const services = [
+  'API',
+  'Appar',
+  'Plattformar'
+]
+
+
 const ContentCard = ({
   color = "primary",
   className,
@@ -57,15 +64,15 @@ const Feature2 = () => (
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
               <Title>
-                It’s everything
+                Vi bygger allt
                 <br />
-                you’ll ever need.
+                du behöver.
               </Title>
             </Box>
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col
+          {services.map(service => <Col
             lg="4"
             md="6"
             className="mb-4"
@@ -75,11 +82,13 @@ const Feature2 = () => (
             data-aos-delay="50"
           >
             <ContentCard
-              title="50+ Unique Design Blocks"
+              title={service}
               color="primary"
               iconName="icon-cards-2"
             />
           </Col>
+          )}
+          
           <Col
             lg="4"
             md="6"

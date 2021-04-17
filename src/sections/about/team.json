@@ -1,0 +1,228 @@
+[
+  {
+    "email": "iris@lothen.se",
+    "fullname": "Iris Löthén"
+  },
+  {
+    "username": "ilix",
+    "email": "alexander@iteam.se",
+    "title": "Senior developer",
+    "billing-active": 1,
+    "fullname": "Alexander Czigler",
+    "displayname": "alexander",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "irony",
+    "email": "christian.landgren@iteam.se",
+    "title": "VD & Grundare",
+    "status": "Owner",
+    "billing-active": 1,
+    "fullname": "Christian Landgren",
+    "displayname": "irony",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "martinloman",
+    "email": "martin.loman@iteam.se",
+    "title": "Backend Engineer",
+    "billing-active": 1,
+    "fullname": "Martin Loman",
+    "displayname": "martinloman",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "hrn",
+    "email": "hans.rollman@iteam.se",
+    "title": "Partner & CFO",
+    "status": "Primary Owner",
+    "billing-active": 1,
+    "fullname": "Hans Rollman",
+    "displayname": "hans",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "ram",
+    "email": "radu.achim@iteam.se",
+    "title": "Senior Developer",
+    "billing-active": 1,
+    "fullname": "Radu Achim",
+    "displayname": "Radu",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "osiris",
+    "email": "anders.bornholm@iteam.se",
+    "title": "Partner & Fullstack Engineer",
+    "status": "Owner",
+    "billing-active": 1,
+    "fullname": "Anders Norrback Bornholm",
+    "displayname": "osiris",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "mittistormen",
+    "email": "johanna.grahn@iteam.se",
+    "title": "Partner & Regionansvarig",
+    "status": "Admin",
+    "billing-active": 1,
+    "fullname": "Johanna Månsson Grahn",
+    "displayname": "mittistormen",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "mikaelnaeslund",
+    "email": "mikael.naeslund@iteam.se",
+    "title": "Styrelseordförande",
+    "billing-active": 1,
+    "fullname": "Mikael Naeslund",
+    "displayname": "mikaelnaeslund",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "mariasolscher",
+    "email": "maria.solscher@iteam.se",
+    "title": "Partner & Säljchef (föräldraledig)",
+    "status": "Admin",
+    "billing-active": 1,
+    "fullname": "Maria Sölscher",
+    "displayname": "mariasolscher",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "emmaklara",
+    "email": "emma-klara.wachter@iteam.se",
+    "title": "Head of Team Coach",
+    "billing-active": 1,
+    "fullname": "Emma-Klara",
+    "displayname": "emmaklara",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "mikael",
+    "email": "mikael.graborg@iteam.se",
+    "title": "Senior Developer",
+    "billing-active": 0,
+    "fullname": "Mikael Gråborg",
+    "displayname": "mikael",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "jonna",
+    "email": "jonna.hjern@iteam.se",
+    "title": "CMO",
+    "billing-active": 1,
+    "fullname": "Jonna",
+    "displayname": "Jonna",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "simonlundell",
+    "email": "simon.lundell@iteam.se",
+    "title": "Senior Developer",
+    "billing-active": 1,
+    "fullname": "Simon Lundell",
+    "displayname": "simonlundell",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "fannynylund",
+    "email": "fanny.nylund@iteam.se",
+    "title": "Agil coach",
+    "status": "Owner",
+    "billing-active": 1,
+    "fullname": "Fanny Willbjer Schörling",
+    "displayname": "fanny",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "jimmy.jardland",
+    "email": "jimmy.jardland@iteam.se",
+    "title": "ex CTO",
+    "billing-active": 1,
+    "fullname": "Jimmy Jardland",
+    "displayname": "jimmy.jardland",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "rebecca",
+    "email": "rebecca.noren@iteam.se",
+    "title": "Head of UX",
+    "billing-active": 1,
+    "fullname": "Rebecca Norén",
+    "displayname": "Rebecca",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "andreas.indal",
+    "title": "Senior Developer",
+    "email": "andreas.indal@iteam.se",
+    "billing-active": 1,
+    "fullname": "Andreas Alsterholm",
+    "displayname": "indal",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "adam.naslund",
+    "email": "adam.naslund@iteam.se",
+    "title": "Backend Engineer",
+    "billing-active": 1,
+    "fullname": "Adam Näslund",
+    "displayname": "Adam",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "andreas.lundqvist",
+    "email": "andreas.lundqvist@iteam.se",
+    "title": "Developer",
+    "billing-active": 1,
+    "fullname": "Andreas Lundqvist",
+    "displayname": "lassekongo",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "anna.l.moller",
+    "email": "anna.l.moller@iteam.se",
+    "title": "UX-Designer",
+    "billing-active": 1,
+    "fullname": "Anna Lööf Möller",
+    "displayname": "Anna",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "stephanie.weaver",
+    "email": "stephanie.weaver@iteam.se",
+    "title": "UX-Designer (föräldarledig)",
+    "billing-active": 0,
+    "fullname": "Stephanie Weaver",
+    "displayname": "Stephanie Weaver",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "izabella.larsson",
+    "email": "izabella.larsson@iteam.se",
+    "title": "Developer",
+    "billing-active": 1,
+    "fullname": "Izabella Larsson",
+    "displayname": "Izabella Larsson",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "mikaela.lundsgard",
+    "email": "mikaela.lundsgard@iteam.se",
+    "title": "Developer",
+    "billing-active": 1,
+    "fullname": "Mikaela Lundsgård",
+    "displayname": "Mikaela Lundsgård",
+    "expiration-timestamp": ""
+  },
+  {
+    "username": "petronella.johansson",
+    "email": "petronella.johansson@iteam.se",
+    "title": "UX-Designer",
+    "billing-active": 1,
+    "fullname": "Petronella Johansson",
+    "displayname": "Petronella Johansson",
+    "expiration-timestamp": ""
+  }
+]

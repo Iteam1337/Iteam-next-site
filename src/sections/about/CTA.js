@@ -38,14 +38,13 @@ const CTA = () => (
         <Row className="justify-content-center text-center">
           <Col lg="6">
             <Box mb={5} className="text-center">
-              <Title color="light">Want to join?</Title>
+              <Title color="light">Bli del av teamet?</Title>
               <Text color="light" opacity={0.7}>
-                Are you interested to join our team? Check out our job openings
-                and apply on your suitable role.
+                Vill du också hänga med oss om dagarna. Kolla våra jobbannonser eller skicka en spontanansökan! 
               </Text>
             </Box>
             <Box>
-              <Link href="/career">Check Job Openings</Link>
+              <Button bg="secondary" color="black" href="/career">Lediga tjänster</Button>
             </Box>
           </Col>
         </Row>
