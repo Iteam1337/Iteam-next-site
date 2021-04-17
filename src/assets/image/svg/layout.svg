@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="22px" viewBox="0 0 19 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>layout-11</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-2" transform="translate(-658.000000, -2747.000000)" fill="#5454D4" fill-rule="nonzero">
+            <g id="Content-2" transform="translate(0.000000, 2432.000000)">
+                <g id="Content" transform="translate(247.000000, 86.000000)">
+                    <g id="List" transform="translate(0.000000, 200.000000)">
+                        <g id="1-copy-7" transform="translate(378.000000, 0.000000)">
+                            <g id="Icon" transform="translate(15.000000, 12.000000)">
+                                <g id="layout-11" transform="translate(18.000000, 17.000000)">
+                                    <path d="M7.52941176,13 L0.470588235,13 C0.210823529,13 0,12.776 0,12.5 L0,0.5 C0,0.224 0.210823529,0 0.470588235,0 L7.52941176,0 C7.78917647,0 8,0.224 8,0.5 L8,12.5 C8,12.776 7.78917647,13 7.52941176,13 Z" id="Path"></path>
+                                    <path d="M7.52941176,22 L0.470588235,22 C0.210823529,22 0,21.776 0,21.5 L0,15.5 C0,15.224 0.210823529,15 0.470588235,15 L7.52941176,15 C7.78917647,15 8,15.224 8,15.5 L8,21.5 C8,21.776 7.78917647,22 7.52941176,22 Z" id="Path"></path>
+                                    <path d="M18.5294118,7 L11.4705882,7 C11.2108235,7 11,6.776 11,6.5 L11,0.5 C11,0.224 11.2108235,0 11.4705882,0 L18.5294118,0 C18.7891765,0 19,0.224 19,0.5 L19,6.5 C19,6.776 18.7891765,7 18.5294118,7 Z" id="Path"></path>
+                                    <path d="M18.5294118,22 L11.4705882,22 C11.2108235,22 11,21.776 11,21.5 L11,9.5 C11,9.224 11.2108235,9 11.4705882,9 L18.5294118,9 C18.7891765,9 19,9.224 19,9.5 L19,21.5 C19,21.776 18.7891765,22 18.5294118,22 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

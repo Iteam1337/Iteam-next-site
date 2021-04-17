@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>grid-46</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-2" transform="translate(-753.000000, -2861.000000)" fill="#F04037" fill-rule="nonzero">
+            <g id="Content-2" transform="translate(0.000000, 2432.000000)">
+                <g id="Content" transform="translate(247.000000, 86.000000)">
+                    <g id="List" transform="translate(0.000000, 200.000000)">
+                        <g id="1-copy-10" transform="translate(474.000000, 114.000000)">
+                            <g id="Icon" transform="translate(15.000000, 12.000000)">
+                                <g id="grid-46" transform="translate(17.000000, 17.000000)">
+                                    <path d="M11,11 L11,21 L19.5,21 C20.3284271,21 21,20.3284271 21,19.5 L21,11 L11,11 Z" id="Path"></path>
+                                    <path d="M10,10 L10,0 L1.5,0 C0.671572875,0 0,0.671572875 0,1.5 L0,10 L10,10 Z" id="Path"></path>
+                                    <path d="M11,10 L21,10 L21,1.5 C21,0.671572875 20.3284271,0 19.5,0 L11,0 L11,10 Z" id="Path"></path>
+                                    <path d="M10,11 L0,11 L0,19.5 C0,20.3284271 0.671572875,21 1.5,21 L10,21 L10,11 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,41 @@
+// Override default variables before the import
+
+$primary: #f04037;
+$secondary: #5454d4;
+$bg: #ffffff;
+$heading: #19191b;
+$text: #696871;
+$white: $bg;
+$black: $text;
+$body-color: $text;
+$headings-color: $text;
+$body-bg: $bg;
+$font-family-base: "Roboto", sans-serif;
+$headings-font-family: $font-family-base;
+
+// Import Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap.scss";
+
+.has-offcanvas {
+  width: 100%;
+  height: 100%;
+  // overflow: hidden !important;
+}
+
+// Fix for flush list group
+.list-group-flush:first-child,
+.list-group-item:first-child {
+  border-top: 0;
+}
+
+// Fix for Gallery Lightbox (react-image package)
+.react-images__blanket,
+.react-images__positioner {
+  z-index: 999999 !important;
+}
+
+// Fix for Modal
+.modal,
+.modal-backdrop {
+  z-index: 99999 !important;
+}

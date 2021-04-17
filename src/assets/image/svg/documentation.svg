@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="22px" viewBox="0 0 18 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Doc</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-2" transform="translate(-1040.000000, -2975.000000)" fill="#5454D4" fill-rule="nonzero">
+            <g id="Content-2" transform="translate(0.000000, 2432.000000)">
+                <g id="Content" transform="translate(247.000000, 86.000000)">
+                    <g id="List" transform="translate(0.000000, 200.000000)">
+                        <g id="1-copy-13" transform="translate(759.000000, 228.000000)">
+                            <g id="Icon" transform="translate(15.000000, 12.000000)">
+                                <path d="M34.5,17 L21.5,17 C20.1199734,17.0015812 19.0016531,18.0712777 19,19.3913015 L19,38.5217139 C19,38.6932768 19.0960533,38.8517013 19.2517445,38.9368842 C19.4074356,39.0220671 19.5989001,39.0209567 19.7535,38.9339743 L28,34.2938928 L36.2465,38.9330177 C36.4009459,39.0199139 36.5921969,39.0211148 36.7478221,38.9361656 C36.9034474,38.8512163 36.9996515,38.6931058 37,38.5217139 L37,19.3913015 C36.9983469,18.0712777 35.8800266,17.0015812 34.5,17 Z" id="Doc"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
