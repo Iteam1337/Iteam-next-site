@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Text } from "../../components/Core";
 import { device } from "../../utils";
-import imgContent from "../../assets/image/png/l5-content-image.png";
+import imgContent from "../../assets/image/png/Painting-Medium.png";
 
 const ImgContainer = styled.div`
   margin-top: 50px;
@@ -94,6 +94,7 @@ const Content1 = () => (
                 data-aos-duration="750"
                 data-aos-once="true"
                 css={`
+                  margin-right:400px;
                   box-shadow: ${({ theme }) =>
                     `0 12px 84px ${theme.colors.shadow}`};
                   border-radius: 10px;
@@ -109,20 +110,21 @@ const Content1 = () => (
             >
               <div>
                 <Title>
-                  Användarstyrd{" "}
+                  Börja genom{" "}
                   <br className="d-none d-sm-block d-md-none d-lg-block" />{" "}
-                  API utveckling.
+                  att bara börja.
                 </Title>
                 <Text mb={4}>
-                  Många gånger kan grunden till en digital strategi vara ett bra API. 
-                  Ett bra API kan förenkla resten av digitaliseringen och underlätta utrangeringen av gamla legacysystem.
+                  När vi frågar personer som lyckats med innovationsprojekt om varför så är ofta svaret
+                  att de vågade sätta igång. Vi har anammat detta och försöker alltid få en helhet av det vi bygger
+                  att bli klar.
                 </Text>
 
                 <ULStyled>
-                  <li>50+ HTML Elements</li>
-                  <li>6 Month Support</li>
-                  <li>Bootstrap 4 Framework</li>
-                  <li>Lifetime Updates</li>
+                  <li>Börja redan på måndag</li>
+                  <li>Tänk visionärt och småskaligt samtidigt</li>
+                  <li>Försök få helheten på plats först</li>
+                  <li>Iterera tillsammans med användarna</li>
                 </ULStyled>
               </div>
             </div>

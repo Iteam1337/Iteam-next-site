@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Title, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
-import imgMobile from "../../assets/image/png/mobile.png";
+import imgMobile from "../../assets/image/png/Lego-2-Medium.png";
 import icon3dModel from "../../assets/image/png/icon-3d-model.png";
 import iconLayout from "../../assets/image/png/icon-layot-25.png";
 
@@ -27,7 +27,6 @@ const ContentCard = ({ iconImage, title, className, children, ...rest }) => (
 );
 
 const ImgStyled = styled.img`
-  transform: rotate(10deg);
   box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
   border-radius: 10px;
   max-width: 70%;
@@ -65,30 +64,25 @@ const Content2 = () => (
           <Col lg="6" md="9">
             <Box className="pt-5 pt-lg-0">
               <Title>
-                Fits everything on{" "}
-                <br className="d-none d-sm-block d-md-none d-xl-block" /> all
-                your devices.
+                Vad är ett API?
               </Title>
               <Text>
-                Create custom landing pages with Omega that converts more
-                visitors than any website. With lots of unique blocks, you can
-                easily build a page without coding.
+                De flesta projekt vi jobbar med innehåller ett API på ett eller annat sätt. Det är bra att lära sig vad ett API är:
+                API är ett standardiserat sätt för program att prata med varandra.
               </Text>
               <Box mt={4} pt={3}>
                 <ContentCard
-                  title="Faster Development UI Kits"
+                  title="Leder till snabbare utveckling"
                   iconImage={icon3dModel}
                   mb={4}
                 >
-                  With lots of unique blocks, you can easily build a page
-                  without coding. Build your next landing page quickly.
+                  När inte alla behöver känna till hur gamla system fungerar finns det fler personer att välja på för nyutveckling.
                 </ContentCard>
                 <ContentCard
-                  title="Ultra Responsive Layout"
+                  title="Kapslar in legacy"
                   iconImage={iconLayout}
                 >
-                  With lots of unique blocks, you can easily build a page
-                  without coding. Build your next landing page quickly.
+                  När man väl har ett API kan man enklare byta ut delar som tidigare var sammansvetsade med gränssnitten.
                 </ContentCard>
               </Box>
             </Box>

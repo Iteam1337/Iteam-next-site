@@ -175,7 +175,7 @@ const Testimonial = () => {
           <Row className="justify-content-center mb-4">
             <Col lg="6" md="9">
               <div className="text-center">
-                <Title>Vi har kul med våra kunder</Title>
+                <Title>Vi är stolta över våra kunder</Title>
                 <Text>
                   Kreativitet kommer inte från krångliga avtal utan från samarbete och förtroende.
                 </Text>
