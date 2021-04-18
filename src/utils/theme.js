@@ -9,7 +9,7 @@ const defaultColors = {
   black: "#000000",
   yellow: "#fedc5a",
   ash: "#141313",
-  green: "#363636",
+  green: "#s",
   info: "#0e567c",
 };
 
@@ -25,7 +25,7 @@ const colors = {
   border: rgba(defaultColors.ash, 0.115),
   shadow: rgba(defaultColors.ash, 0.175),
   heading: defaultColors.dark,
-  text: rgba(defaultColors.dark, 0.75),
+  text: rgba(defaultColors.dark, 0.9),
   warning: defaultColors.yellow,
   success: defaultColors.green,
   info: defaultColors.info,
@@ -43,7 +43,7 @@ const colors = {
       border: rgba(defaultColors.ash, 0.115),
       shadow: rgba(defaultColors.ash, 0.175),
       heading: defaultColors.white,
-      text: rgba(defaultColors.white, 0.75),
+      text: rgba(defaultColors.white, 0.9),
       warning: defaultColors.yellow,
       success: defaultColors.green,
       info: defaultColors.info,
