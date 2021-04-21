@@ -51,7 +51,7 @@ const Feature = () => (
               Komplexa lösningar kräver fler hjärnor. Vi jobbar bara i team
               (därav vårt namn) och alltid med en agil coach så att teamet
               snabbt blir autonomt och högpresterande och du som kund får det
-              stör du behöver.
+              stöd du behöver.
             </FeatureCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-4">
