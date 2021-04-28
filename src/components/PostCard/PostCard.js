@@ -62,6 +62,7 @@ const PostCard = ({
   title,
   children,
   readMore,
+  link = '',
   ...rest
 }) => (
   <Card
@@ -70,7 +71,7 @@ const PostCard = ({
   >
     {horizontal ? (
       <ImageContainerHorizontal>
-        <Link href="/">
+        <Link href={link}>
           <a className="w-100 h-100 d-flex">
             <img src={img} alt="" className="w-100 img-fluid" />
             {imgBrand && (
@@ -83,7 +84,7 @@ const PostCard = ({
       </ImageContainerHorizontal>
     ) : (
       <Box className="position-relative">
-        <Link href="/">
+        <Link href={link}>
           <a className="w-100 h-100 d-flex">
             <img src={img} alt="" className="w-100 img-fluid" />
             {imgBrand && (
@@ -103,7 +104,7 @@ const PostCard = ({
         </Text>
       )}
 
-      <Link href="/">
+      <Link href={link}>
         <a>
           <TitleStyled variant="card" mb="14px">
             {title}
@@ -115,7 +116,7 @@ const PostCard = ({
       </Text>
       {readMore && (
         <Box>
-          <Link href="/">
+          <Link href={link}>
             <a>
               <Span color="primary">Continue Reading</Span>
             </a>
