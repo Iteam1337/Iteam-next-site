@@ -93,7 +93,7 @@ const Layout = ({ children, pageContext }) => {
       >
         <GlobalStyle />
         <Head>
-          <title>Omega</title>
+          <title>Iteam</title>
           <link rel="icon" type="image/png" href={imgFavicon} />
         </Head>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
@@ -119,7 +119,7 @@ const Layout = ({ children, pageContext }) => {
       >
         <GlobalStyle />
         <Head>
-          <title>Omega</title>
+          <title>Iteam</title>
           <link rel="icon" type="image/png" href={imgFavicon} />
         </Head>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>

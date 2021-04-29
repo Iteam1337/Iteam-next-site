@@ -7,7 +7,7 @@ import PostCard from "../../components/PostCard";
 import imgCase1 from "../../assets/image/case/matcha-kontraktet1.jpg";
 import tjejjourenThumbnail from "../../assets/image/case/tjejjouren-thumbnail.jpeg";
 import imgCase3 from "../../assets/image/jpeg/case-card-img-3.jpg";
-import imgBrand1 from "../../assets/image/jpeg/case-card-brand-img.jpg";
+import imgBrand1 from "../../assets/image/case/sa-logo.png";
 import imgBrand3 from "../../assets/image/jpeg/case-card-brand-img-3.jpg";
 
 const CaseList = () => (
