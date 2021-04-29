@@ -36,7 +36,7 @@ const ContentCard = ({
       className="d-flex justify-content-center align-items-center"
       css={`
         background-color: ${({ theme, color }) =>
-          rgba(theme.colors[color], 0.1)};
+          `rgba(${theme.colors[color]}, 0.1)`};
       `}
       mr={3}
     >

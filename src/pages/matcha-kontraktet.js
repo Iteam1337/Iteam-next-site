@@ -5,7 +5,7 @@ import PageWrapper from "../components/PageWrapper";
 import { Section, Title, Text, Box } from "../components/Core";
 
 import CaseList from "../sections/case/CaseList1";
-import CaseDetails from "../sections/case/CaseDetails";
+import CaseDetails from "../sections/case/matcha-kontraktet/CaseDetails";
 import CTA from "../sections/case/CTA";
 import imgBrand from "../assets/image/jpeg/case-card-brand-img-2--border.jpg";
 
@@ -19,13 +19,11 @@ const CaseStudyDetails = () => {
             <Row className="justify-content-center text-center">
               <Col lg="8">
                 <Box className="text-center" mb={4}>
-                  <img src={imgBrand} alt="" className="img-fluid" />
+                  Sveriges Allmännytta
                 </Box>
-                <Title variant="hero">Web app for Covet</Title>
+                <Title variant="hero">Matcha Kontraktet</Title>
                 <Text>
-                  Create custom landing pages with Omega that converts{" "}
-                  <br className="d-none d-md-block"></br> more visitors than any
-                  website.
+                Tryggare boendemiljö med automatisk spårning av olaglig andrahandsuthyrning
                 </Text>
               </Col>
             </Row>

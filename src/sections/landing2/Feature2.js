@@ -4,12 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box } from "../../components/Core";
 
-const services = [
-  'API',
-  'Appar',
-  'Plattformar'
-]
-
+const services = ["API", "Appar", "Plattformar"];
 
 const ContentCard = ({
   color = "primary",
@@ -43,7 +38,7 @@ const ContentCard = ({
       className="d-flex justify-content-center align-items-center"
       css={`
         background-color: ${({ theme, color }) =>
-          rgba(theme.colors[color], 0.1)};
+          `rgba(${theme.colors[color]}, 0.1)`};
       `}
       mr={3}
     >
@@ -72,23 +67,24 @@ const Feature2 = () => (
           </Col>
         </Row>
         <Row className="justify-content-center">
-          {services.map(service => <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard
-              title={service}
-              color="primary"
-              iconName="icon-cards-2"
-            />
-          </Col>
-          )}
-          
+          {services.map((service) => (
+            <Col
+              lg="4"
+              md="6"
+              className="mb-4"
+              data-aos="zoom-in"
+              data-aos-duration="750"
+              data-aos-once="true"
+              data-aos-delay="50"
+            >
+              <ContentCard
+                title={service}
+                color="primary"
+                iconName="icon-cards-2"
+              />
+            </Col>
+          ))}
+
           <Col
             lg="4"
             md="6"

@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Section } from "../../components/Core";
 import PostCard from "../../components/PostCard";
 
-import imgCase1 from "../../assets/image/jpeg/case-card-img.jpg";
+import imgCase1 from "../../assets/image/case/matcha-kontraktet1.jpg";
 import imgCase2 from "../../assets/image/jpeg/case-card-img-2.jpg";
 import imgCase3 from "../../assets/image/jpeg/case-card-img-3.jpg";
 import imgBrand1 from "../../assets/image/jpeg/case-card-brand-img.jpg";
@@ -21,10 +21,10 @@ const CaseList = () => (
             <PostCard
               img={imgCase1}
               imgBrand={imgBrand1}
-              title="Brag Mobile App"
+              title="Matcha kontraktet"
+              link="/matcha-kontraktet"
             >
-              Throwing consider dwelling bachelor joy her proposal laughter.
-              Raptures returned disposed one entirely her men ham.
+              Tryggare boendemiljö med automatisk spårning av olaglig andrahandsuthyrning
             </PostCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-0">
