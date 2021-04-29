@@ -27,11 +27,11 @@ const OuterCircle = styled(Box)`
   border-radius: 50%;
   position: absolute;
   transform: perspective(1px) translateZ(0);
-  background-color: ${({ theme, bg }) => rgba(theme.colors[bg], 0.06)};
+  background-color: ${({ theme, bg }) => `rgba(${theme.colors[bg]}, 0.06)`};
   &:before {
     content: "";
     position: absolute;
-    border: ${({ theme, bg }) => `6px solid ${rgba(theme.colors[bg], 0.08)}`};
+    border: ${({ theme, bg }) => `6px solid rgba(${theme.colors[bg]}, 0.08)`};
     border-radius: 500px;
     right: 0;
     bottom: 0;
@@ -83,18 +83,20 @@ const Feature = () => (
         <Row className="">
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard color="secondary" title="Jobba där du är">
-              Du jobbar där du trivs bäst. Hemma, kontoret, cafét eller från en strand?
-              Yay freedom!
+              Du jobbar där du trivs bäst. Hemma, kontoret, cafét eller från en
+              strand? Yay freedom!
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard color="primary" title="Flexibla tider">
-              Livspusslet ska gå ihop. Work/life balance är något vi aktivt jobbar med att balansera. 
+              Livspusslet ska gå ihop. Work/life balance är något vi aktivt
+              jobbar med att balansera.
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard color="warning" title="Träning på schemat">
-              För att hjärnan ska fungera så måste även kroppen göra det. Vi tränar gärna ihop, har träningstävlingar etc.
+              För att hjärnan ska fungera så måste även kroppen göra det. Vi
+              tränar gärna ihop, har träningstävlingar etc.
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
