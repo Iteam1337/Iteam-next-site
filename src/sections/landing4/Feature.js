@@ -19,7 +19,6 @@ const SectionStyled = styled(Section)`
   }
 `;
 
-
 const FeatureCard = ({ iconImage, title, children, ...rest }) => (
   <Box {...rest}>
     <Box mb={[3, 3, 3, 4]} pb={2}>
@@ -42,17 +41,24 @@ const Feature = () => (
         <Row className="justify-content-center">
           <Col lg="4" className="mb-5 mb-lg-4">
             <FeatureCard title="Användarstyrd process" iconImage={iconInsight}>
-              Användarna älskar det vi gör. Genom att involvera dem redan från första början och kontinuerligt bygga det som efterfrågas mest blir det bra.
+              Användarna älskar det vi gör. Genom att involvera dem redan från
+              första början och kontinuerligt bygga det som efterfrågas mest
+              blir det bra.
             </FeatureCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-4">
             <FeatureCard title="Teamwork" iconImage={iconCollaboration}>
-              Komplexa lösningar kräver fler hjärnor. Vi jobbar bara i team (därav vårt namn). Teamet blir autonomt och du som kund är en del av teamet.
+              Komplexa lösningar kräver fler hjärnor. Vi jobbar bara i team
+              (därav vårt namn) och alltid med en agil coach så att teamet
+              snabbt blir autonomt och högpresterande och du som kund får det
+              stöd du behöver.
             </FeatureCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-4">
             <FeatureCard title="Open Source" iconImage={iconOpenSource}>
-              Genom att använda öppen källkod som princip i allt vi bygger så blir det enkelt för vem som helst att ansluta till teamet. Dessutom blir det billigare.
+              Genom att använda öppen källkod som princip i allt vi bygger så
+              blir det enkelt för vem som helst att ansluta till teamet.
+              Dessutom blir det billigare.
             </FeatureCard>
           </Col>
         </Row>
