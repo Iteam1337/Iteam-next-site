@@ -17,10 +17,9 @@ const CaseStudy = () => {
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="6">
-                <Title variant="hero">Våra case</Title>
+                <Title variant="hero">Case</Title>
                 <Text>
-                  Create custom landing pages with Omega that converts more
-                  visitors than any website.
+                  Projekten vi genomfört med våra kunder berättar bäst vilka vi är och vad vi gör.
                 </Text>
               </Col>
             </Row>
