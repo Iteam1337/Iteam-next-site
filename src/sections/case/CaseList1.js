@@ -5,10 +5,9 @@ import { Section } from "../../components/Core";
 import PostCard from "../../components/PostCard";
 
 import imgCase1 from "../../assets/image/case/matcha-kontraktet1.jpg";
-import imgCase2 from "../../assets/image/jpeg/case-card-img-2.jpg";
+import tjejjourenThumbnail from "../../assets/image/case/tjejjouren-thumbnail.jpeg";
 import imgCase3 from "../../assets/image/jpeg/case-card-img-3.jpg";
 import imgBrand1 from "../../assets/image/jpeg/case-card-brand-img.jpg";
-import imgBrand2 from "../../assets/image/jpeg/case-card-brand-img-2.jpg";
 import imgBrand3 from "../../assets/image/jpeg/case-card-brand-img-3.jpg";
 
 const CaseList = () => (
@@ -19,22 +18,22 @@ const CaseList = () => (
         <Row className="align-items-center justify-content-center">
           <Col lg="4" className="mb-5 mb-lg-0">
             <PostCard
-              img={imgCase1}
-              imgBrand={imgBrand1}
-              title="Matcha kontraktet"
-              link="/matcha-kontraktet"
+              img={tjejjourenThumbnail}
+              title="Tjejjouren Väst"
+              link="/case/tjejjouren-vast"
             >
-              Tryggare boendemiljö med automatisk spårning av olaglig andrahandsuthyrning
+              Appen Stella ger tjejer stöd dygnet runt
             </PostCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-0">
             <PostCard
-              img={imgCase2}
-              imgBrand={imgBrand2}
-              title="Brag Mobile App"
+              img={imgCase1}
+              imgBrand={imgBrand1}
+              title="Matcha kontraktet"
+              link="/case/matcha-kontraktet"
             >
-              Throwing consider dwelling bachelor joy her proposal laughter.
-              Raptures returned disposed one entirely her men ham.
+              Tryggare boendemiljö med automatisk spårning av olaglig
+              andrahandsuthyrning
             </PostCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-0">
