@@ -4,22 +4,25 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Section } from "../../components/Core";
 import PostCard from "../../components/PostCard";
 
-import imgCase1 from "../../assets/image/case/matcha-kontraktet1.jpg";
-import imgCase2 from "../../assets/image/case/tjejjouren-thumbnail.jpeg";
-import imgCase3 from "../../assets/image/case/photo-1588075592446-265fd1e6e76f.webp";
-import imgCase4 from "../../assets/image/case/Digitala_kvitton.png";
-import imgBrand1 from "../../assets/image/case/sa-logo.png";
-import imgBrand3 from "../../assets/image/case/skelleftea.jpg";
-
 // TODO: add json with case
+import trrThumbnail from "../../assets/image/case/trr-case-phone.png";
+import imgCase1 from "../../assets/image/case/matcha-kontraktet1.jpg";
+import imgCase2 from "../../assets/image/jpeg/case-card-img-2.jpg";
+import imgCase3 from "../../assets/image/jpeg/case-card-img-3.jpg";
+import imgCase4 from "../../assets/image/case/Digitala_kvitton.png";
+import imgBrand1 from "../../assets/image/jpeg/case-card-brand-img.jpg";
+import imgBrand2 from "../../assets/image/jpeg/case-card-brand-img-2.jpg";
+import imgBrand3 from "../../assets/image/jpeg/case-card-brand-img-3.jpg";
+
+const Column = (props) => <Col sm={6} lg={4} className="mb-4" {...props} />;
 
 const CaseList = () => (
   <>
     {/* <!-- Feature section --> */}
     <Section className="position-relative">
       <Container>
-        <Row className="justify-content-center">
-          <Col lg="4" className="mb-5 flex-grow-1">
+        <Row>
+          <Column>
             <PostCard
               img={imgCase2}
               title="Tjejjouren Väst"
@@ -27,8 +30,13 @@ const CaseList = () => (
             >
               Appen Stella ger tjejer stöd dygnet runt
             </PostCard>
-          </Col>
-          <Col lg="4" className="mb-5 flex-grow-1">
+          </Column>
+          <Column>
+            <PostCard img={trrThumbnail} title="TRR" link="/trr">
+              Vi rustar Sveriges bästa omställningsaktör för framtiden
+            </PostCard>
+          </Column>
+          <Column>
             <PostCard
               img={imgCase1}
               imgBrand={imgBrand1}
@@ -38,8 +46,8 @@ const CaseList = () => (
               Tryggare boendemiljö med automatisk spårning av olaglig
               andrahandsuthyrning
             </PostCard>
-          </Col>
-          <Col lg="4" className="mb-5 flex-grow-1">
+          </Column>
+          <Column>
             <PostCard
               img={imgCase3}
               imgBrand={imgBrand3}
@@ -50,10 +58,8 @@ const CaseList = () => (
               skola? Vi hjälpte Skellefteå att försöka hitta en teknisk lösning
               som skyddade integriteten.
             </PostCard>
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
-          <Col lg="4" className="mb-5 flex-grow-1">
+          </Column>
+          <Column>
             <PostCard
               img={imgCase4}
               title="Skatteverket & Karios Future"
@@ -61,7 +67,7 @@ const CaseList = () => (
             >
               Säkra kvitton genom kryptoteknik
             </PostCard>
-          </Col>
+          </Column>
         </Row>
       </Container>
     </Section>
