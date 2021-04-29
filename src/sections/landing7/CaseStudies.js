@@ -169,12 +169,13 @@ const CaseStudies = () => {
             >
               <CaseCard
                 img={imgCase1}
-                meta={`Website Development, Search Engine Optimization`}
-                title="Growing Organic Customers for Brag Business."
+                meta={`AI, Kryptering, Egendata`}
+                title="Ansiktsigenkänning med bibehållen integritet"
               >
-                Create custom landing pages with Omega that converts more
-                visitors than any website. With lots of unique blocks, you can
-                easily build a page.
+                Lärare i Skellefteå kommun lägger cirka 16 000 timmar per år på 
+                närvaroregistrering, och har identifierat det som ett utmärkt område för 
+                effektivisering med digitala medel och AI. Kan man använda ansiktsigenkänning 
+                med bibehållen integritet?
               </CaseCard>
             </Col>
             <Col
@@ -184,24 +185,24 @@ const CaseStudies = () => {
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-once="true"
-              data-aos-delay="500"
+              data-aos-delay="200"
             >
               <CaseCard
                 bg="light"
                 isDark={false}
                 img={imgCase2}
-                meta={`Content Writing, Digital Marketing`}
-                title="How we’ve helped the most interesting startup."
+                meta={`Blockkedjor, Kryptering`}
+                title="Säkra kvittohanteringen med kryptoteknik"
               >
-                Create custom landing pages with Omega that converts more
-                visitors than any website. With lots of unique blocks, you can
-                easily build a page.
+                Sättet som digitala kvitton produceras och hanteras på idag underlättar 
+                för bedrägerier och försvårar skattekontroll. Kan man skapa ett digitalt fingeravtryck
+                för varje kvitto utan att samtidigt samla på sig för mycket data om människors beteenden?
               </CaseCard>
             </Col>
           </Row>
           <Box className="text-center" pt={[4, null, null, null, 5]}>
             <Button variant="outline" color="light">
-              View Our Works
+              Läs mer om våra Iteam X case
             </Button>
           </Box>
         </Container>

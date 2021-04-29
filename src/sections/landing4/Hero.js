@@ -37,7 +37,11 @@ const Hero = () => {
       {/* <!-- Hero Area --> */}
       <SectionStyled className="position-relative">
         <div className="pt-5"></div>
-        <Container>
+        <Container
+          css={`
+            margin: 15px;
+          `}
+        >
           <Row className="justify-content-center align-items-center position-relative">
             <Col md="5" className="order-md-2 position-static">
               <ImgRight>
@@ -45,9 +49,8 @@ const Hero = () => {
                   src={imgHeroTab}
                   alt=""
                   className="img-fluid"
-                  data-aos="fade-left"
                   data-aos-duration="750"
-                  data-aos-delay="1000"
+                  data-aos-delay="200"
                   data-aos-once="true"
                 />
               </ImgRight>

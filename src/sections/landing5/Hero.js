@@ -140,22 +140,23 @@ const Hero = () => {
               >
                 <Box pt={[4, null, null, 0]} pl={5}>
                   <Title>
-                    Solve your daily life <br className="d-none d-sm-block" />
-                    problems in 1 minute.
+                    Guide till <br className="d-none d-sm-block" />
+                    Agil Coachning.
                   </Title>
                   <Box mb={3}>
                     <ULStyled>
-                      <li>12 Chapter with detail illustrations</li>
-                      <li>Learn from the expert with 24 years experience</li>
-                      <li>Audio version is included with the purchase</li>
+                      <li>Hur ska produktägare agera när teamet stormar?</li>
+                      <li>Agila Teamets utvecklingsfaser</li>
+                      <li>Summering av agila metoder (XP, Scrum, Kanban)</li>
+                      <li>Konflikthantering för att xx yy</li>
                     </ULStyled>
                   </Box>
                   <div className="d-flex flex-column align-items-start pt-2">
-                    <Button mb={2}>Get this book - Starts from $29</Button>
+                    <Button mb={2}>Ladda ner PDF</Button>
                     <Text fontSize={"18px"} color="ash" fontWeight={500}>
-                      Interested in a free chapter?{" "}
+                      Osäker?{" "}
                       <a href="/" target="blank">
-                        <Span color="secondary">Get it now</Span>
+                        <Span color="secondary">Ladda ner förhandsvisning</Span>
                       </a>
                     </Text>
                   </div>

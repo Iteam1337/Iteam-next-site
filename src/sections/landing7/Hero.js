@@ -13,6 +13,7 @@ const Hero = () => {
           className="position-relative"
           css={`
             z-index: 10;
+            margin: 15px;
           `}
         >
           <Row>
@@ -36,7 +37,7 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1000"
                 >
-                  Experimentell utveckling
+                  Experimentell utveckling{" "}
                   <br className="d-none d-lg-block" />
                   med exponentiell teknik
                 </Title>

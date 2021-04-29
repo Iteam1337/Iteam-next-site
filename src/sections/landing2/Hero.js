@@ -60,7 +60,11 @@ const Hero = () => {
       {/* <!-- Hero Area --> */}
       <SectionStyled>
         <div className="pt-5"></div>
-        <Container>
+        <Container
+          css={`
+          z-index: 10;
+          margin: 15px;
+        `}>
           <Row>
             
             <Col

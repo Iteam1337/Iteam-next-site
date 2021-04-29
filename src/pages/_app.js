@@ -2,16 +2,10 @@
 import Layout from "../components/Layout";
 import { GlobalProvider } from "../context/GlobalContext";
 
-import "../assets/fonts/fontawesome-5/webfonts/fa-brands-400.ttf";
-import "../assets/fonts/fontawesome-5/webfonts/fa-regular-400.ttf";
-import "../assets/fonts/fontawesome-5/webfonts/fa-solid-900.ttf";
 import "../assets/fonts/typography-font/Roboto-Bold.ttf";
 import "../assets/fonts/typography-font/Roboto-BoldItalic.ttf";
 import "../assets/fonts/typography-font/Roboto-Medium.ttf";
 import "../assets/fonts/typography-font/Roboto-MediumItalic.ttf";
-
-import "../assets/fonts/icon-font/fonts/avasta.ttf";
-import "../assets/fonts/icon-font/css/style.css";
 
 import "../components/Layout/bootstrap-custom.scss";
 import "../../node_modules/slick-carousel/slick/slick.css";
