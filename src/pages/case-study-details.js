@@ -4,9 +4,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import PageWrapper from "../components/PageWrapper";
 import { Section, Title, Text, Box } from "../components/Core";
 
-import CaseList from "../sections/case-study/CaseList1";
-import CaseDetails from "../sections/case-study/CaseDetails";
-import CTA from "../sections/case-study/CTA";
+import CaseList from "../sections/case/CaseList1";
+import CaseDetails from "../sections/case/CaseDetails";
+import CTA from "../sections/case/CTA";
 import imgBrand from "../assets/image/jpeg/case-card-brand-img-2--border.jpg";
 
 const CaseStudyDetails = () => {
