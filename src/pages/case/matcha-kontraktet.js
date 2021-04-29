@@ -1,13 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-import PageWrapper from "../components/PageWrapper";
-import { Section, Title, Text, Box } from "../components/Core";
+import PageWrapper from "../../components/PageWrapper";
+import { Section, Title, Text, Box } from "../../components/Core";
 
-import CaseList from "../sections/case/CaseList1";
-import CaseDetails from "../sections/case/matcha-kontraktet/CaseDetails";
-import CTA from "../sections/case/CTA";
-import imgBrand from "../assets/image/jpeg/case-card-brand-img-2--border.jpg";
+import CaseList from "../../sections/case/CaseList1";
+import CaseDetails from "../../sections/case/matcha-kontraktet/CaseDetails";
+import CTA from "../../sections/case/CTA";
 
 const CaseStudyDetails = () => {
   return (
@@ -23,7 +22,8 @@ const CaseStudyDetails = () => {
                 </Box>
                 <Title variant="hero">Matcha Kontraktet</Title>
                 <Text>
-                Tryggare boendemiljö med automatisk spårning av olaglig andrahandsuthyrning
+                  Tryggare boendemiljö med automatisk spårning av olaglig
+                  andrahandsuthyrning
                 </Text>
               </Col>
             </Row>
