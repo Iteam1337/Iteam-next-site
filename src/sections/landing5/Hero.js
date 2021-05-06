@@ -111,6 +111,15 @@ const AuthorText = styled(Box)`
 `;
 
 const Hero = () => {
+
+  const openForm = () => {
+    hbspt.forms.create({
+      region: 'na1',
+      portalId: '5211588',
+      formId: '7d3129b6-d7ff-48e7-8a84-4b69aa00e03c'
+    })
+  }
+
   return (
     <>
       {/* <!-- Hero Area --> */}
@@ -152,7 +161,10 @@ const Hero = () => {
                     </ULStyled>
                   </Box>
                   <div className="d-flex flex-column align-items-start pt-2">
-                    <Button mb={2}>Ladda ner PDF</Button>
+                    <Button onClick={() => window.location.href = 'https://share.hsforms.com/1fTEpttf_SOeKhEtpqgDgPA33pac'} mb={2}>Ladda ner PDF</Button>
+
+                    <script type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+
                     <Text fontSize={"18px"} color="ash" fontWeight={500}>
                       Osäker?{" "}
                       <a href="/" target="blank">

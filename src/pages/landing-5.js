@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "../sections/landing5/Hero";
-import Testimonial from "../sections/landing5/Testimonial";
 import Feature from "../sections/landing5/Feature";
 import Content from "../sections/landing5/Content";
 import Fact from "../sections/landing5/Fact";
@@ -17,7 +16,6 @@ const LandingPage5 = () => {
     <>
       <PageWrapper>
         <Hero />
-        <Testimonial />
         <Feature />
         <Content />
         <Offer />
