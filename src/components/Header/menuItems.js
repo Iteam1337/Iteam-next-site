@@ -6,7 +6,7 @@ export const menuItems = [
     items: [
       { name: "iteam-x", label: "Iteam X" },
       { name: "iteam-mvp", label: "Iteam MVP" },
-      { name: "landing-3", label: "Iteam Scale-up" },
+      { name: "iteam-scale-up", label: "Iteam Scale-up" },
       { name: "landing-4", label: "Utbildningar" },
     ],
   },
