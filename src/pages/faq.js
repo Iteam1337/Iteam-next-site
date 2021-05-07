@@ -57,7 +57,7 @@ const Faq = () => {
                       <Box>
                         <Box mb={4}>
                           <Title variant="card" mb={3} fontSize="24px">
-                            Can I use Omega for my clients?
+                            Jonna fyller
                           </Title>
                           <Text variant="small">
                             Create custom landing pages with Omega that converts

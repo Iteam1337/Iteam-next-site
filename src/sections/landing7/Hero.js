@@ -39,7 +39,7 @@ const Hero = () => {
                 >
                   Experimentell utveckling{" "}
                   <br className="d-none d-lg-block" />
-                  med exponentiell teknik
+                  med exponentiell teknik<Span color="secondary">.</Span>
                 </Title>
                 <Box
                   pt="12px"

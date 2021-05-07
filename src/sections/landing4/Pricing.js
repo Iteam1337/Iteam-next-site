@@ -197,9 +197,7 @@ const Pricing = () => {
                     <ULStyled>
                       <li>Minst tre månaders avtal</li>
                       <li>Stärker upp ert team</li>
-                      <li>6 months premium support</li>
-                      <li>Lifetime updates</li>
-                      <li>32h i veckan</li>
+                      <li>[Jonna fyller på]</li>
                     </ULStyled>
                   </div>
                   <Button bg="secondary">Start 14 Days Free Trial</Button>

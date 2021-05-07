@@ -46,7 +46,7 @@ const Faq = () => (
           <Col lg="6" className="mb-5">
             <FaqCard>
               <div>
-                <FaqTitle>Can I use Omega for my clients?</FaqTitle>
+                <FaqTitle>Jonna fyller i</FaqTitle>
                 <Text variant="small" color="light" opacity={0.7}>
                   Absolutely. The Envato Theme license allows you to build a
                   websites for personal use or for a client. User Omega for your

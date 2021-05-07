@@ -10,6 +10,8 @@ import imgCase3 from "../../assets/image/jpeg/case-card-img-3.jpg";
 import imgBrand1 from "../../assets/image/case/sa-logo.png";
 import imgBrand3 from "../../assets/image/jpeg/case-card-brand-img-3.jpg";
 
+// TODO: add json with case
+
 const CaseList = () => (
   <>
     {/* <!-- Feature section --> */}

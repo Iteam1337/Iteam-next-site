@@ -21,9 +21,6 @@ const SectionStyled = styled(Section)`
 
 const FeatureCard = ({ iconImage, title, children, ...rest }) => (
   <Box {...rest}>
-    <Box mb={[3, 3, 3, 4]} pb={2}>
-      <img src={iconImage} height="200" alt="" />
-    </Box>
     <Box>
       <Title variant="card" fontSize="24px" mb={3}>
         {title}

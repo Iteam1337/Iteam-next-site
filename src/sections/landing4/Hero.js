@@ -43,19 +43,7 @@ const Hero = () => {
           `}
         >
           <Row className="justify-content-center align-items-center position-relative">
-            <Col md="5" className="order-md-2 position-static">
-              <ImgRight>
-                <img
-                  src={imgHeroTab}
-                  alt=""
-                  className="img-fluid"
-                  data-aos-duration="750"
-                  data-aos-delay="200"
-                  data-aos-once="true"
-                />
-              </ImgRight>
-            </Col>
-            <Col md="7" className="order-md-1">
+            <Col className="order-md-1">
               <div
                 data-aos="fade-right"
                 data-aos-duration="750"
