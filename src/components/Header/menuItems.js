@@ -7,7 +7,7 @@ export const menuItems = [
       { name: "landing-7", label: "Iteam X" },
       { name: "landing-2", label: "Iteam MVP" },
       { name: "landing-3", label: "Iteam Scale-up" },
-      { name: "landing-4", label: "Utbildningar" },
+      // { name: "landing-4", label: "Utbildningar" },
     ],
   },
   {
