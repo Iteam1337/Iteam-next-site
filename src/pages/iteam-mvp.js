@@ -1,12 +1,12 @@
 import React from "react";
 import PageWrapper from "../components/PageWrapper";
-import Hero from "../sections/landing2/Hero";
-import Feature1 from "../sections/landing2/Feature1";
-import Content1 from "../sections/landing2/Content1";
-import Feature2 from "../sections/landing2/Feature2";
-import Content2 from "../sections/landing2/Content2";
-import Testimonial from "../sections/landing2/Testimonial";
-import CTA from "../sections/landing2/CTA";
+import Hero from "../sections/iteam-mvp/Hero";
+import Feature1 from "../sections/iteam-mvp/Feature1";
+import Content1 from "../sections/iteam-mvp/Content1";
+import Feature2 from "../sections/iteam-mvp/Feature2";
+import Content2 from "../sections/iteam-mvp/Content2";
+import Testimonial from "../sections/iteam-mvp/Testimonial";
+import CTA from "../sections/iteam-mvp/CTA";
 
 const LandingPage2 = () => {
   return (

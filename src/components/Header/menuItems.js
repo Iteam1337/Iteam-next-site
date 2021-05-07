@@ -5,7 +5,7 @@ export const menuItems = [
     label: "Erbjudanden",
     items: [
       { name: "iteam-x", label: "Iteam X" },
-      { name: "landing-2", label: "Iteam MVP" },
+      { name: "iteam-mvp", label: "Iteam MVP" },
       { name: "landing-3", label: "Iteam Scale-up" },
       { name: "landing-4", label: "Utbildningar" },
     ],
