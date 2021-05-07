@@ -82,39 +82,36 @@ const Feature = () => (
       <Container>
         <Row className="">
           <Col md="6" xl="4" className="mb-5">
+            <FeatureCard color="ash" title="Agila team">
+              Du leder dig själv och ditt eget arbete i ett agilt team och en platt organisation, allt för att vi ska bli bäst ihop.
+            </FeatureCard>
+          </Col>
+          <Col md="6" xl="4" className="mb-5">
             <FeatureCard color="secondary" title="Jobba där du är">
               Du jobbar där du trivs bäst. Hemma, kontoret, cafét eller från en
               strand? Yay freedom!
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="primary" title="Flexibla tider">
-              Livspusslet ska gå ihop. Work/life balance är något vi aktivt
-              jobbar med att balansera.
+            <FeatureCard color="ash" title="Learn, sleep, repeat">
+              Vi är beroende av att lära för att leverera. I teamen, på kodlunch, med den egna utbildningspotten och med gemensamma labbar.
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard color="warning" title="Träning på schemat">
               För att hjärnan ska fungera så måste även kroppen göra det. Vi
-              tränar gärna ihop, har träningstävlingar etc.
+              tränar gärna ihop, kör egna tävlingar och sponsrar såklart med ett generöst friskvårdsbidrag.
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard color="success" title="Föräldralön">
-              Many of us are able to work from home, a café, or a park whenever
-              we want. Yay freedom!
+              Vi har över 50% föräldrar på Iteam och är måna om vårt familjeliv. Casha in lite extra när du är föräldraledig och häng med oss i #parenting-kanalen
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="dark" title="Yearly bonuses">
-              Many of us are able to work from home, a café, or a park whenever
-              we want. Yay freedom!
-            </FeatureCard>
-          </Col>
-          <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="ash" title="Smart salary">
-              Many of us are able to work from home, a café, or a park whenever
-              we want. Yay freedom!
+            <FeatureCard color="primary" title="Flexibla tider">
+              Livspusslet ska gå ihop. Work/life balance är något vi aktivt
+              jobbar med att balansera.
             </FeatureCard>
           </Col>
         </Row>

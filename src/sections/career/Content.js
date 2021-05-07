@@ -49,7 +49,7 @@ const Content = () => {
           <Row className="justify-content-center pb-5 mb-5">
             <Col lg="6">
               <Title variant="hero" className="mb-0">
-                Kolla in hur vi har det
+                Här är vårt team
               </Title>
             </Col>
             <Col lg="6" className="pl-lg-5 d-flex align-items-end">
