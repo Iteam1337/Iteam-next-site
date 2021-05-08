@@ -21,32 +21,32 @@ const Fact = () => (
       <Container>
         <Row>
           <Col md="4" sm="6" className="mb-4 mb-md-0">
-            <Box pr={4}>
+            <Box>
               <Title color="light" mb="20px!important">
-                50K+
+                2012
               </Title>
               <Text color="lightShade">
-                People are already reading this book and improving!
+                Året då vi började använde NodeJS
               </Text>
             </Box>
           </Col>
           <Col md="4" sm="6" className="mb-4 mb-md-0">
-            <Box>
+            <Box pr={4}>
               <Title color="light" mb="20px!important">
-                96%
+                2013
               </Title>
               <Text color="lightShade">
-                Satisfaction rate comes from our awesome customers.
+                Året då vi började använda AI/ML
               </Text>
             </Box>
           </Col>
           <Col md="4" sm="6" className="mb-4 mb-md-0">
             <Box pl={[null, null, null, 4]}>
               <Title color="light" mb="20px!important">
-                4.9/5.0
+                2016
               </Title>
               <Text color="lightShade">
-                Average customer ratings we have got all over internet.
+                Första AI-modellen i produktion.
               </Text>
             </Box>
           </Col>

@@ -103,9 +103,9 @@ const SiteHeader = styled.header`
 
 const ToggleButton = styled.button`
   color: ${({ dark, theme }) =>
-    dark ? theme.colors.lightShade : theme.colors.darkShade}!important;
+    dark ? '#fff' : '#000'} !important;
   border-color: ${({ dark, theme }) =>
-    dark ? theme.colors.lightShade : theme.colors.darkShade}!important;
+    dark ? '#fff' : '#000'} !important;
 `;
 
 const Menu = styled.ul`
@@ -175,7 +175,7 @@ const MenuDropdown = styled.ul`
     border-top: ${({ theme }) => `3px solid ${theme.colors.secondary}`};
   }
   > .drop-menu-item {
-    color: ${({ theme }) => theme.colors.dark};
+    color: '${({ theme }) => theme.colors.dark};'
     font-size: 16px;
     font-weight: 300;
     letter-spacing: -0.5px;
@@ -283,7 +283,7 @@ const Header = ({ isDark = false }) => {
           <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
             {/* <!-- Brand Logo--> */}
             <div className="brand-logo">
-              <Logo white={isDark} />
+              <Logo vertical={!showReveal} white={isDark} />
             </div>
             <div className="collapse navbar-collapse">
               <div className="navbar-nav ml-lg-auto mr-3">

@@ -4,10 +4,10 @@ export const menuItems = [
     name: "erbjudande",
     label: "Erbjudanden",
     items: [
-      { name: "landing-7", label: "Iteam X" },
-      { name: "landing-2", label: "Iteam MVP" },
-      { name: "landing-3", label: "Iteam Scale-up" },
-      { name: "landing-4", label: "Utbildningar" },
+      { name: "iteamX", label: "Iteam X" },
+      { name: "mvp", label: "Iteam MVP" },
+      { name: "scaleup", label: "Iteam Scale-up" },
+      { name: "education", label: "Utbildningar" },
     ],
   },
   {

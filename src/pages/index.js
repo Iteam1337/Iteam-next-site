@@ -1,14 +1,14 @@
 import React from "react";
-import Hero from "../sections/landing4/Hero";
-import Feature from "../sections/landing4/Feature";
-import Clients from "../sections/landing4/Clients";
-import Content1 from "../sections/landing4/Content1";
-import Content2 from "../sections/landing4/Content2";
-import Testimonial from "../sections/landing4/Testimonial";
-import Fact from "../sections/landing4/Fact";
-import Pricing from "../sections/landing4/Pricing";
-import Faq from "../sections/landing4/Faq";
-import CTA from "../sections/landing4/CTA";
+import Hero from "../sections/startpage/Hero";
+import Feature from "../sections/startpage/Feature";
+import Clients from "../sections/startpage/Clients";
+import Content1 from "../sections/startpage/Content1";
+import Content2 from "../sections/startpage/Content2";
+import Testimonial from "../sections/startpage/Testimonial";
+import Fact from "../sections/startpage/Fact";
+import Pricing from "../sections/startpage/Pricing";
+import Faq from "../sections/startpage/Faq";
+import CTA from "../sections/startpage/CTA";
 import PageWrapper from "../components/PageWrapper";
 
 const LandingPage4 = () => {
