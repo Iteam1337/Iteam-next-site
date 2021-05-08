@@ -141,8 +141,8 @@ const Pricing = () => {
 
               <Switch onClick={() => setTimeMonthly(!timeMonthly)} />
               <div className="d-flex align-items-center">
-                <Text>Ramavtal (3 mån)</Text>
-                <Badge ml={2}>Save 25%</Badge>
+                <Text>Fast avtal ( &gt; 3 mån)</Text>
+                <Badge ml={2}>15% rabatt</Badge>
               </div>
             </div>
 
@@ -173,7 +173,7 @@ const Pricing = () => {
                       <li>Max tre dagar i veckan</li>
                     </ULStyled>
                   </div>
-                  <Button bg="secondary">Boka en provvecka</Button>
+                  <Button bg="secondary">Boka tid för intromöte</Button>
                 </CardPricing>
               </Col>
               <Col lg="6" className="mb-4">
@@ -189,18 +189,20 @@ const Pricing = () => {
                           margin-bottom: 0 !important;
                         `}
                       >
-                        {timeMonthly ? 1400 : 900}
+                        {timeMonthly ? 1200 : 900}
                       </Title>
                       <TimePer> /h</TimePer>
                     </div>
                     <Text fontSize="18px">timtaxa</Text>
                     <ULStyled>
+                      <li>Frontend, Backend, Fullstack</li>
+                      <li>UX, Agil Coach, Strateg</li>
                       <li>Minst tre månaders avtal</li>
                       <li>Stärker upp ert team</li>
-                      <li>[Jonna fyller på]</li>
+                      <li>Minst 32h/vecka</li>
                     </ULStyled>
                   </div>
-                  <Button bg="secondary">Start 14 Days Free Trial</Button>
+                  <Button bg="secondary">Boka tid för intromöte</Button>
                 </CardPricing>
               </Col>
             </Row>

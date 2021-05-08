@@ -55,7 +55,7 @@ const Hero = () => {
                     We move fast <br className="d-none d-sm-block" />
                     and fix things.
                   </Title>
-                  <Text mb={4} color="light" opacity={0.7}>
+                  <Text mb={4} color="light">
                     Vi digitaliserar företag och organisationer genom en enkel och välbeprövad metod som bygger på
                     en användarstyrd process med öppen källkod, teamwork och effektivitet.
                   </Text>
