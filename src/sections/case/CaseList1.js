@@ -6,9 +6,9 @@ import PostCard from "../../components/PostCard";
 
 import imgCase1 from "../../assets/image/case/matcha-kontraktet1.jpg";
 import tjejjourenThumbnail from "../../assets/image/case/tjejjouren-thumbnail.jpeg";
-import imgCase3 from "../../assets/image/jpeg/case-card-img-3.jpg";
+import imgCase3 from "../../assets/image/case/photo-1588075592446-265fd1e6e76f.webp";
 import imgBrand1 from "../../assets/image/case/sa-logo.png";
-import imgBrand3 from "../../assets/image/jpeg/case-card-brand-img-3.jpg";
+import imgBrand3 from "../../assets/image/case/skelleftea.jpg";
 
 // TODO: add json with case
 
@@ -42,10 +42,11 @@ const CaseList = () => (
             <PostCard
               img={imgCase3}
               imgBrand={imgBrand3}
-              title="Brag Mobile App"
+              title="Skellefteå ansiktsigenkänning"
+              link="/case/skelleftea"
             >
-              Throwing consider dwelling bachelor joy her proposal laughter.
-              Raptures returned disposed one entirely her men ham.
+              Kan man använda ansiktsigenkänning för att registrera närvaro i en skola? Vi 
+              hjälpte Skellefteå att försöka hitta en teknisk lösning som skyddade integriteten.
             </PostCard>
           </Col>
         </Row>

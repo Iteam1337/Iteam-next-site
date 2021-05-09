@@ -201,18 +201,13 @@ const Testimonial = () => {
                       <img src={imgCustomer2} alt="" />
                     </SliderImgContainer>
                     <SliderText>
-                      <SliderQuoteShape>
-                        <img src={imgQuote} alt="" className="img-fluid" />
-                      </SliderQuoteShape>
                       <Text color="dark" my={2}>
-                        OMG! I cannot believe that I have got a brand new
-                        landing page after getting Omega. It was super easy to
-                        edit and publish.
+                        Iteam-gänget var superbra att jobba med. Väldigt professionella och ansvarstagande. Jag kände inte heller att det var nån uppdelning mellan “våra” två utvecklare och konsulterna från Iteam, utan vi var verkligen ett team som jobbade mot samma mål: en riktigt grym app.
                       </Text>
                       <Title variant="card" mb={0} mt={3}>
-                        Maria Vesconti
+                        Tom Airaksinen
                       </Title>
-                      <Text variant="small">Designer at Creativex</Text>
+                      <Text variant="small">Produktägare på PE Accounting</Text>
                     </SliderText>
                   </SliderCard>
                 </SliderItem>

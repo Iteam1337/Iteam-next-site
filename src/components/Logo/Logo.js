@@ -15,13 +15,13 @@ const Logo = ({ white, height, vertical = false, className = "", ...rest }) => {
           vertical ? 
           <img src={imgL1VericalLogoWhite} style={{marginTop: 15}} alt="" height="150"/>
           : 
-          <img src={imgL1LogoWhite} alt="" width="150"/>
+          <img src={imgL1LogoWhite} style={{marginTop: 15}} alt="" width="150"/>
 
         ) : (
           vertical ? 
           <img src={imgL1VericalLogo} alt="" height="150"/>
           :
-          <img src={imgL1Logo} alt="" width="150"/>
+          <img src={imgL1Logo} style={{marginTop: 15}} alt="" width="150"/>
 
         )}
       </a>

@@ -36,15 +36,14 @@ const CTA = () => (
       <Container>
         <Row className="justify-content-center text-center">
           <Col lg="6">
-            <Box mb={5} className="text-center">
-              <Title color="light">Ready to launch?</Title>
+            <Box mb={5} className="text-left">
+              <Title color="light">Har du också ett projekt?</Title>
               <Text color="light" opacity={0.7}>
-                Are you interested to join our team? Check out our job openings
-                and apply on your suitable role.
+                Vi har erfarenhet att jobba med många branscher. Hör av dig till oss om du är nyfiken av vad vi skulle kunna hjälpa dig med i in organisation.
               </Text>
             </Box>
             <Box>
-              <Button>Get Omega Now</Button>
+              <Button>Boka möte</Button>
             </Box>
           </Col>
         </Row>

@@ -142,6 +142,21 @@ const Feature2 = () => (
               iconName="icon-check-simple"
             />
           </Col>
+          <Col
+            lg="4"
+            md="6"
+            className="mb-4"
+            data-aos="zoom-in"
+            data-aos-duration="750"
+            data-aos-once="true"
+            data-aos-delay="50"
+          >
+            <ContentCard
+              title="UX-design"
+              color="success"
+              iconName="icon-check-simple"
+            />
+          </Col>
         </Row>
         <Row className="justify-content-center">
           <Col

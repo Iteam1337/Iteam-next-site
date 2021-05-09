@@ -58,13 +58,13 @@ const Feature = () => (
             lg="6"
             className="offset-lg-1 pl-lg-5 order-lg-2"
             data-aos="fade-left"
-            data-aos-duration="750"
+            data-aos-duration="600"
             data-aos-once="true"
             data-aos-delay="500"
           >
             <Box>
               <Title color="light">Det är inte så svårt.</Title>
-              <Text color="light" opacity={0.7}>
+              <Text color="light" >
                 Vi har sett allt för många projekt som har börjat på fel sätt. Felaktiga teknikval, superdetaljerade specar, gigantiska budgetar som inte leder framåt. Vi vet hur man börjar projekt men också hur man för dem i hamn.
               </Text>
               <Button mt={4}>Learn more</Button>
@@ -76,7 +76,7 @@ const Feature = () => (
                 <Col
                   md="12"
                   data-aos="fade-right"
-                  data-aos-duration="750"
+                  data-aos-duration="600"
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
@@ -92,7 +92,7 @@ const Feature = () => (
                   md="12"
                   className="mt-4"
                   data-aos="fade-right"
-                  data-aos-duration="750"
+                  data-aos-duration="600"
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
@@ -109,12 +109,12 @@ const Feature = () => (
                   md="12"
                   className="mt-4"
                   data-aos="fade-right"
-                  data-aos-duration="750"
+                  data-aos-duration="600"
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
                   <FeatureCard
-                    color="dark"
+                    color="secondary"
                     title="Budget som håller"
                   >
                     With lots of unique blocks, you can easily build a page
