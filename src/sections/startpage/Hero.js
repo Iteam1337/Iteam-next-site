@@ -17,22 +17,8 @@ const SectionStyled = styled(Section)`
     ),
     /* bottom, image */
     url(${imgHeroTab}) no-repeat center 20% fixed;
-  background-size: cover; 
-`;
-
-const ImgRight = styled(Box)`
-  position: relative;
-  left: 50px;
-  width: 300px;
-  @media ${device.md} {
-    position: absolute;
-    top: 0;
-    max-width: 40%;
-    min-width: 30%;
-    right: 0;
-    left: auto;
-    transform: translateX(25%);
-  }
+  background-size: cover;
+  padding-top: 128px;
 `;
 
 const Hero = () => {
@@ -60,7 +46,7 @@ const Hero = () => {
                     Fix things.
                   </Title>
                   <Text mb={4} color="light">
-                    Vi digitaliserar företag och organisationer genom en enkel och välbeprövad och användarstyrd process med öppen källkod, teamwork och effektivitet.
+                    Vi digitaliserar företag och organisationer genom en välbeprövad och användarstyrd process med öppen källkod och teamwork.
                   </Text>
                 </Box>
               </div>

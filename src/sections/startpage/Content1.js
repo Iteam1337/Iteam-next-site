@@ -65,7 +65,7 @@ const ULStyled = styled.ul`
       align-items: center;
       justify-content: center;
       border-radius: 500px;
-      color: ${({ theme }) => theme.colors.black};
+      color: ${({ theme }) => theme.colors.secondary};
       position: relative;
       top: 9px;
       margin-right: 13px;

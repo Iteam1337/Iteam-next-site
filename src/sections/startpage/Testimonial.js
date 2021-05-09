@@ -124,19 +124,13 @@ const SliderImgContainer = styled(Box)`
 `;
 
 const SliderText = styled(Box)`
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   flex: auto;
   padding: 50px 30px 0px;
-  @media ${device.md} {
-    padding: 20px 50px 20px;
-  }
-  @media ${device.lg} {
-    padding: 30px 70px 20px;
-  }
 `;
 const SliderQuoteShape = styled(Box)`
   display: flex;
@@ -191,13 +185,10 @@ const Testimonial = () => {
                       <img src={imgCustomer1} alt="" />
                     </SliderImgContainer>
                     <SliderText>
-                      <SliderQuoteShape>
-                        <img src={imgQuote} alt="" className="img-fluid" />
-                      </SliderQuoteShape>
-                      <Text color="dark" my={2}>
+                      <Text color="dark" my={2} className="text-left">
                       Vårt team på Iteam är mer som kollegor än leverantörer. Istället för att skriva en teknisk kravspecifikation, så samarbetar vi kontinuerligt för att utveckla funktionalitet.
                       </Text>
-                      <Title variant="card" mb={0} mt={3}>
+                      <Title variant="card" mb={0} mt={3} className="text-left">
                         Johan Littorin
                       </Title>
                       <Text variant="small">Grundare Vimla</Text>

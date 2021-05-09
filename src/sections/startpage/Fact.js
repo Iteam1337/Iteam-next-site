@@ -25,14 +25,14 @@ const Fact = () => (
             <Box>
               <Title color="secondary">26 år</Title>
               <Text>
-                har vi jobbat med digitalisering.
+                Sedan starten.
               </Text>
             </Box>
           </Col>
           <Col md="4" className="mb-5">
             <Box>
               <Title color="secondary">95%</Title>
-              <Text>Lyckade digitaliseringsprojekt.</Text>
+              <Text>Lyckade digitaliseringsprojekt. [Jonna fyller på]</Text>
             </Box>
           </Col>
           <Col md="4" className="mb-5">
