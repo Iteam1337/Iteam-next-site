@@ -23,18 +23,18 @@ const Overlay = styled.div`
 
 const Drawer = styled.div`
   position: fixed;
-  width: 17rem;
+  width: 100%;
   top: 0;
   right: 0;
   bottom: 0;
   height: 100%;
   z-index: 999999;
-  background: #fff;
+  background: #000;
   overflow-y: auto;
   transform: translateX(0);
-  transition: all 0.3s ease-out;
+  transition: all 0.15s ease-out;
   &.hidden {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
   .dropdown-menu {
     position: static !important;
@@ -66,8 +66,9 @@ const Offcanvas = ({ show, onHideOffcanvas, children, ...rest }) => {
       <Drawer className={show ? "" : "hidden"}>
         <Container>
           <div className="p-3">
+            <i className="icon icon-simple-remove icon-close"></i>
             <LogoContainer className="my-3">
-              <Logo onClick={onHideOffcanvas} />
+              <Logo white onClick={onHideOffcanvas} />
             </LogoContainer>
             <div className="pt-4">{children}</div>
           </div>

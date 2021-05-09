@@ -44,8 +44,8 @@ const HeroTitle = styled(SectionTitle)`
   }
 
   @media ${device.xl} {
-    font-size: 100px;
-    line-height: 104px;
+    font-size: 90px;
+    line-height: 94px;
   }
 `;
 

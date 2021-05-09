@@ -1,80 +1,106 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Title, Section, Box, Text, Span } from "../../components/Core";
-import ReviewCard from "../../components/ReviewCard";
+import { Title, Section, Box, Text } from "../../components/Core";
 
-import imgR1 from "../../assets/image/jpeg/reviewer1.jpg";
-import imgR2 from "../../assets/image/jpeg/reviewer2.jpg";
-import imgR3 from "../../assets/image/jpeg/reviewer3.jpg";
+import imgB1 from "../../assets/image/png/testimonial-brand-logo-1.png";
+import imgB2 from "../../assets/image/png/testimonial-brand-logo-2.png";
+import imgB3 from "../../assets/image/png/testimonial-brand-3.png";
+
+import imgR1 from "../../assets/image/jpeg/l8-testimonial-user-image-1.jpg";
+import imgR2 from "../../assets/image/jpeg/l8-testimonial-user-image-2.jpg";
+import imgR3 from "../../assets/image/jpeg/l8-testimonial-user-image-3.jpg";
+
+const ContentCard = ({
+  className,
+  imageBrand = imgB1,
+  image,
+  name,
+  company,
+  children,
+  ...rest
+}) => (
+  <Box
+    minHeight={["320px", null, `400px`]}
+    borderColor="border"
+    borderRadius={10}
+    className={`d-flex flex-column ${className}`}
+    {...rest}
+    aos="fade-left"
+    data-aos-delay="500"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <Box className="text-center">
+      <img src={imageBrand} alt="" className="img-fluid" />
+    </Box>
+    <Text color="lightShade" mt={4} mb={3} className="text-center mb-0">
+      {children}
+    </Text>
+    <Box className={`mt-auto`}>
+      <Box className="text-center">
+        <img
+          src={image}
+          alt=""
+          className="img-fluid"
+          css={`
+            border-radius: 500px;
+          `}
+        />
+      </Box>
+      <Box className="flex-grow-1 text-center" mt={3}>
+        <Title color="light" variant="card" mb={1}>
+          {name}
+        </Title>
+        <Text variant="small" color="lightShade" opacity={0.5}>
+          {company}
+        </Text>
+      </Box>
+    </Box>
+  </Box>
+);
 
 const Reviews = () => {
   return (
     <>
-      <Section bg="#f7f7fb" borderBottom="1px solid #EAE9F2;">
+      <Section bg="dark">
         <Container>
-          <Row className="justify-content-center">
-            <Col md="9" lg="6" className="text-center">
-              <Box className="text-center">
-                <Title>Reviews from readers</Title>
-              </Box>
-              <Text mb={4}>
-                Create custom landing pages with Omega that converts more
-                visitors than any website.
-              </Text>
-            </Col>
-          </Row>
           <Row className="justify-content-center mt-3">
-            <Col lg="4" md="6" className="mb-4 mb-lg-0">
-              <ReviewCard
-                name="Jonathan Taylor"
-                company="From Amazon.com"
+            <Col lg="4" md="6" className="mb-5 mb-lg-0">
+              <ContentCard
+                name="Troy Patrick"
+                company="CEO at CoWorks"
                 image={imgR1}
-                stars={5}
+                imageBrand={imgB1}
               >
                 "You made it so simple. My new site is so much faster and easier
                 to work with than my old site. I just choose the page, make the
                 change and click save."
-              </ReviewCard>
+              </ContentCard>
             </Col>
-            <Col lg="4" md="6" className="mb-4 mb-lg-0">
-              <ReviewCard
+            <Col lg="4" md="6" className="mb-5 mb-lg-0">
+              <ContentCard
                 name="Paromita Haque"
-                company="From Amazon.com"
+                company="CEO at CoWorks"
                 image={imgR2}
-                stars={4}
+                imageBrand={imgB2}
               >
                 "Simply the best. Better than all the rest. I’d recommend this
                 product to beginners and advanced users."
-              </ReviewCard>
+              </ContentCard>
             </Col>
-            <Col lg="4" md="6" className="mb-4 mb-lg-0">
-              <ReviewCard
+            <Col lg="4" md="6" className="mb-5 mb-lg-0">
+              <ContentCard
                 name="Trashee Habbard"
-                company="From Amazon.com"
+                company="CEO at CoWorks"
                 image={imgR3}
-                stars={5}
+                imageBrand={imgB3}
               >
                 "Must have book for students, who want to be Product Designer,
                 UX Designer, or Interaction Designer."
-              </ReviewCard>
+              </ContentCard>
             </Col>
           </Row>
-          <p
-            className="mb-0 mt-5"
-            css={`
-              font-size: 16px;
-              font-weight: 500;
-              letter-spacing: -0.5px;
-              text-align: center;
-            `}
-          >
-            <a href="/" target="_blank" className="text-decoration-none">
-              <Span color="secondary">
-                Check all 3,583 reviews on Amazon.com
-              </Span>
-            </a>
-          </p>
         </Container>
       </Section>
     </>

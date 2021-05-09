@@ -61,12 +61,11 @@ const ULStyled = styled.ul`
       font-size: 13px;
       width: 30px;
       height: 30px;
-      background-color: ${({ theme }) => rgba(theme.colors.secondary, 0.1)};
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 500px;
-      color: ${({ theme }) => theme.colors.secondary};
+      color: ${({ theme }) => theme.colors.black};
       position: relative;
       top: 9px;
       margin-right: 13px;

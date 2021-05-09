@@ -13,12 +13,17 @@ import Logo from "../Logo";
 import { menuItems } from "./menuItems";
 
 const SiteHeader = styled.header`
-  padding: 10px 0 10px 0;
+  padding: 10px 0 10px 3px;
   position: absolute !important;
   top: 0;
   right: 0;
   width: 100%;
   z-index: 999;
+
+  .container {
+    padding-left:0
+  }
+  
   @media ${device.lg} {
     position: fixed !important;
     transition: 0.4s;
@@ -45,6 +50,14 @@ const SiteHeader = styled.header`
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
     z-index: 1;
+  }
+
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar-toggler {
+    border: none;
   }
 
   .hvr-bounce-to-left:before {
@@ -113,6 +126,7 @@ const Menu = styled.ul`
     display: flex;
     justify-content: flex-end;
   }
+
   .dropdown-toggle {
     cursor: pointer;
   }
@@ -434,7 +448,6 @@ const Header = ({ isDark = false }) => {
               onClick={gContext.toggleOffCanvas}
               dark={isDark ? 1 : 0}
             >
-              {/* <i className="icon icon-simple-remove icon-close"></i> */}
               <i className="icon icon-menu-34 icon-burger d-block"></i>
             </ToggleButton>
           </nav>

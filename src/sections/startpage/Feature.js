@@ -38,7 +38,7 @@ const Feature = () => (
         <Row className="justify-content-center">
           <Col lg="4" className="mb-5 mb-lg-4">
             <FeatureCard title="Användarstyrd process" iconImage={iconInsight}>
-              Användarna älskar det vi gör (och vi älskar det vi gör). Genom att involvera dem redan från
+              Användarna älskar det vi gör (och vi). Genom att involvera dem redan från
               första början och kontinuerligt bygga det som efterfrågas mest
               blir det bättre än om någon killgissar.
             </FeatureCard>

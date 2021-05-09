@@ -173,8 +173,8 @@ const Testimonial = () => {
       <Section bg="#F7F7FB" pb={["50px!important"]}>
         <Container>
           <Row className="justify-content-center mb-4">
-            <Col lg="6" md="9">
-              <div className="text-center">
+            <Col lg="9" md="9">
+              <div className="text">
                 <Title>Vi är stolta över våra kunder</Title>
                 <Text>
                   Kreativitet kommer inte från krångliga avtal utan från samarbete och förtroende.
@@ -195,7 +195,7 @@ const Testimonial = () => {
                         <img src={imgQuote} alt="" className="img-fluid" />
                       </SliderQuoteShape>
                       <Text color="dark" my={2}>
-                      Vi känner att vårt team på Iteam är mer som kollegor än leverantörer. Istället för att skriva en teknisk kravspecifikation att arbeta efter, så samarbetar vi kontinuerligt för att utveckla funktionalitet. Detta arbetssätt har gjort att vi kommit mycket längre än vi nånsin kunnat tro eftersom det varit så effektivt.
+                      Vårt team på Iteam är mer som kollegor än leverantörer. Istället för att skriva en teknisk kravspecifikation, så samarbetar vi kontinuerligt för att utveckla funktionalitet.
                       </Text>
                       <Title variant="card" mb={0} mt={3}>
                         Johan Littorin

@@ -43,7 +43,7 @@ const Hero = () => {
         <div className="pt-5"></div>
         <Container
           css={`
-            margin: 15px;
+            margin: 0px;
           `}
         >
           <Row className="justify-content-center align-items-center position-relative">
@@ -56,12 +56,11 @@ const Hero = () => {
               >
                 <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                   <Title variant="hero" color="light">
-                    Move fast <br className="d-none d-sm-block" />
+                    Move fast,<br/>{" "}
                     Fix things.
                   </Title>
                   <Text mb={4} color="light">
-                    Vi digitaliserar företag och organisationer genom en enkel och välbeprövad metod som bygger på
-                    en användarstyrd process med öppen källkod, teamwork och effektivitet.
+                    Vi digitaliserar företag och organisationer genom en enkel och välbeprövad och användarstyrd process med öppen källkod, teamwork och effektivitet.
                   </Text>
                 </Box>
               </div>

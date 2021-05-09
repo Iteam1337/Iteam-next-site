@@ -7,7 +7,7 @@ import GlobalContext from "../../context/GlobalContext";
 
 const NestedMenuContainer = styled.div`
   a {
-    color: ${({ theme }) => theme.colors.text};
+    color: #fff !important;
     transition: all 0.3s ease-out;
     &:hover,
     &:active {
@@ -17,6 +17,9 @@ const NestedMenuContainer = styled.div`
   }
 
   .list-group-item {
+    background-color: #000;
+    color: #fff;
+    font-size: 33px;
     & + .collapse:not(.show) {
       .list-group-item {
         border: none !important;
@@ -38,42 +41,6 @@ const NestedMenuContainer = styled.div`
     border-bottom-width: 1px;
   } */
 `;
-
-const defaultMenuItems = [
-  { name: "home", label: "Home" },
-  {
-    name: "billing",
-    label: "Billing",
-    items: [
-      { name: "statements", label: "Statements" },
-      { name: "reports", label: "Reports" },
-    ],
-  },
-  {
-    name: "settings",
-    label: "Settings",
-    items: [
-      { name: "profile", label: "Profile" },
-      { name: "insurance", label: "Insurance" },
-      {
-        name: "notifications",
-        label: "Notifications",
-        items: [
-          { name: "email", label: "Email" },
-          {
-            name: "desktop",
-            label: "Desktop",
-            items: [
-              { name: "schedule", label: "Schedule" },
-              { name: "frequency", label: "Frequency" },
-            ],
-          },
-          { name: "sms", label: "SMS" },
-        ],
-      },
-    ],
-  },
-];
 
 const MenuItem = ({
   label,

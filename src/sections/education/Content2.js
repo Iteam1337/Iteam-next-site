@@ -5,7 +5,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Section, Box, Text } from "../../components/Core";
 
 import christian from "../../assets/image/jpeg/Teacher-Christian.jpg";
-import adam from "../../assets/image/jpeg/Adam.jpg";
+import adam from "../../assets/image/jpeg/Adam.png";
+import emmaklara from "../../assets/image/jpeg/Emma-Klara.jpg";
 
 const ContentImg = styled(Box)`
   box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
@@ -23,7 +24,9 @@ const Content2 = () => (
             <div className="text-center">
               <Title>Om lärarna</Title>
               <Text>
-                Christian Landgren är en välkänd profil i branschen och håller i den inledande föreläsningen. Adam Näslund är säkerhetsexpert och utvecklare och brinner för öppen källkod sedan länge.
+                Christian Landgren är en välkänd profil i branschen och håller i den inledande föreläsningen. 
+                Emma-Klara Wächter leder vårt Team Coach team och kan allt om gruppers utveckling och hur produktägare bör agera för att bygga välpresterande team.
+                Adam Näslund är säkerhetsexpert och utvecklare och brinner för öppen källkod sedan länge.
               </Text>
             </div>
           </Col>
@@ -34,7 +37,12 @@ const Content2 = () => (
               <img src={christian} alt="" className="img-fluid" />
             </ContentImg>
           </Col>
-          <Col lg="8" sm="7" className="mb-4">
+          <Col lg="4" sm="5" className="mb-4 ">
+            <ContentImg>
+              <img src={emmaklara} alt="" className="img-fluid" />
+            </ContentImg>
+          </Col>
+          <Col lg="4" sm="5" className="mb-4">
             <ContentImg>
               <img src={adam} alt="" className="img-fluid" />
             </ContentImg>

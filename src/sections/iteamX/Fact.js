@@ -6,7 +6,7 @@ import { Title, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
 const SectionStyled = styled(Section)`
-  border-bottom: 1px solid #ededf4;
+  border-bottom: 1px solid #2d2d30;
   padding-bottom: 30px;
   padding-top: 0;
   @media ${device.md} {
@@ -17,28 +17,36 @@ const SectionStyled = styled(Section)`
 const Fact = () => (
   <>
     {/* <!-- Fact section 1 --> */}
-    <SectionStyled bg="#f2f2f3" pt={0}>
+    <SectionStyled bg="dark">
       <Container>
-        <Row className="text-center">
-          <Col md="4" className="mb-5">
+        <Row>
+          <Col md="4" sm="6" className="mb-4 mb-md-0">
             <Box>
-              <Title color="secondary">26</Title>
-              <Text>
-                år har Iteam jobbat med digitalisering.
+              <Title color="light" mb="20px!important">
+                2012
+              </Title>
+              <Text color="lightShade">
+                Året då vi började använde NodeJS
               </Text>
             </Box>
           </Col>
-          <Col md="4" className="mb-5">
-            <Box>
-              <Title color="secondary">92%</Title>
-              <Text>Satisfaction rate comes from our awesome customers.</Text>
+          <Col md="4" sm="6" className="mb-4 mb-md-0">
+            <Box pr={4}>
+              <Title color="light" mb="20px!important">
+                2013
+              </Title>
+              <Text color="lightShade">
+                Året då vi började använda AI/ML
+              </Text>
             </Box>
           </Col>
-          <Col md="4" className="mb-5">
-            <Box>
-              <Title color="secondary">4.9/5.0</Title>
-              <Text>
-                Average customer ratings we have got all over internet.
+          <Col md="4" sm="6" className="mb-4 mb-md-0">
+            <Box pl={[null, null, null, 4]}>
+              <Title color="light" mb="20px!important">
+                2016
+              </Title>
+              <Text color="lightShade">
+                Första AI-modellen i produktion.
               </Text>
             </Box>
           </Col>

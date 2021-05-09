@@ -35,7 +35,7 @@ const Content3 = () => {
               >
                 <Box>
                   <Title color="dark">
-                    Den här borde vara obligatorisk i offentlig sektor
+                    Den här utbildningen borde vara obligatorisk i offentlig sektor
                   </Title>
                   <Text mb={4} color="dark" opacity={0.7}>
                     Create custom landing pages with Omega that convert more

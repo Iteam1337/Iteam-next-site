@@ -15,10 +15,10 @@ const Pricing2 = () => {
           <div className="pt-5"></div>
           <Container>
             <Row className="">
-              <Col lg="9">
+              <Col lg="7">
                 <Title variant="hero">Ibland behöver man förstärkning</Title>
                 <Text>
-                  Vi är även konsulter och stöttar befintliga team som kanske kört fast eller behöver fler hjärnor.
+                  Se oss som Mr Wolf - vi stöttar befintliga team som kanske kört fast eller behöver fler hjärnor.
                 </Text>
               </Col>
             </Row>
