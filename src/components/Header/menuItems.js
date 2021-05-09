@@ -7,8 +7,12 @@ export const menuItems = [
       { name: "iteamX", label: "Iteam X" },
       { name: "mvp", label: "Iteam MVP" },
       { name: "scaleup", label: "Iteam Scale-up" },
-      { name: "education", label: "Utbildningar" },
-    ],
+      { name: "övrigt", label: "Övrigt", items: [
+        { name: "education", label: "Open Source utbildning" },
+        { name: "whitepaper", label: "Agil coachning" },
+        { name: "designsprint", label: "Designsprint" },
+      ]}
+  ],
   },
   /*{
     name: "erbjudande",

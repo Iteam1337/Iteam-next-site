@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Section, Box } from "../../components/Core";
 
 const ContentCard = ({
-  color = "primary",
+  color = "success",
   className,
   iconName,
   title,
@@ -57,9 +57,9 @@ const Feature2 = () => (
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
               <Title color="light">
-                It’s everything
+                Du får med dig
                 <br />
-                you’ll ever need.
+                allt du behöver.
               </Title>
             </Box>
           </Col>
@@ -75,8 +75,8 @@ const Feature2 = () => (
             data-aos-delay="50"
           >
             <ContentCard
-              title="50+ Unique Design Blocks"
-              color="primary"
+              title="Vad är Pull Request?"
+              color="success"
               iconName="icon-cards-2"
             />
           </Col>
@@ -90,9 +90,9 @@ const Feature2 = () => (
             data-aos-delay="50"
           >
             <ContentCard
-              title="Multiple Layouts"
-              color="secondary"
-              iconName="icon-layout-11"
+              title="Autonoma team"
+              color="success"
+              iconName="icon-infinite"
             />
           </Col>
           <Col
@@ -105,8 +105,8 @@ const Feature2 = () => (
             data-aos-delay="50"
           >
             <ContentCard
-              title="Mobile First Design"
-              color="warning"
+              title="Modern apputveckling"
+              color="success"
               iconName="icon-phone-charging-3-2"
             />
           </Col>
@@ -122,9 +122,9 @@ const Feature2 = () => (
             data-aos-delay="50"
           >
             <ContentCard
-              title="Fully Responsive"
-              color="secondary"
-              iconName="icon-sidebar-2"
+              title="Vad är DevOps?"
+              color="success"
+              iconName="icon-cycling-2"
             />
           </Col>
           <Col
@@ -137,9 +137,9 @@ const Feature2 = () => (
             data-aos-delay="50"
           >
             <ContentCard
-              title="Bootstrap 4 Framework"
-              color="primary"
-              iconName="icon-grid-45"
+              title="Värdet av automatiska tester"
+              color="success"
+              iconName="icon-check-simple"
             />
           </Col>
         </Row>
@@ -154,24 +154,9 @@ const Feature2 = () => (
             data-aos-delay="50"
           >
             <ContentCard
-              title="Rich Documentation"
-              color="secondary"
-              iconName="icon-bookmark-2-2"
-            />
-          </Col>
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard
-              title="Humanly Support"
+              title="Continous Improvement"
               color="success"
-              iconName="icon-voice-recognition-2"
+              iconName="icon-chart-bar-52"
             />
           </Col>
           <Col
@@ -184,9 +169,24 @@ const Feature2 = () => (
             data-aos-delay="50"
           >
             <ContentCard
-              title="Lifetime Updates"
-              color="primary"
-              iconName="icon-infinite"
+              title="Team Agreement"
+              color="success"
+              iconName="icon-users-wm"
+            />
+          </Col>
+          <Col
+            lg="4"
+            md="6"
+            className="mb-4"
+            data-aos="zoom-in"
+            data-aos-duration="750"
+            data-aos-once="true"
+            data-aos-delay="50"
+          >
+            <ContentCard
+              title="Säkerhet med öppen källkod"
+              color="success"
+              iconName="icon-touch-id"
             />
           </Col>
         </Row>

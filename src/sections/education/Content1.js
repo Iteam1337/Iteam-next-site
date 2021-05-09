@@ -5,7 +5,7 @@ import { rgba } from "polished";
 import { Title, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
-import imgContent from "../../assets/image/png/l4-content-img.png";
+import imgContent from "../../assets/image/png/Floppy-disk-Large.png";
 
 const ContentCard = ({
   color = "primary",
@@ -18,7 +18,7 @@ const ContentCard = ({
   <Box
     width={360}
     bg="light"
-    border="1px solid"
+    border="none"
     borderColor="border"
     p="20px"
     borderRadius={10}
@@ -102,12 +102,14 @@ const Content2 = () => (
                   <ContentCard
                     title="2. Modern Appliktationsutveckling"
                     color="secondary"
+                    mb={3}
                   >
                     med Adam Näslund
                   </ContentCard>
                   <ContentCard
                     title="3. Agil Metodik med öppen källkod"
                     color="secondary"
+                    mb={3}
                   >
                     med Emma-Klara Wächter
                   </ContentCard>
