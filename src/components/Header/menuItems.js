@@ -10,7 +10,7 @@ export const menuItems = [
       { name: "education", label: "Utbildningar" },
     ],
   },
-  {
+  /*{
     name: "erbjudande",
     label: "Sidor att välja",
     items: [
@@ -73,14 +73,15 @@ export const menuItems = [
         ],
       },
     ],
+  },*/
+
+  {
+    name: "case",
+    label: "Case",
   },
   {
     name: "career",
     label: "Karriär",
-  },
-  {
-    name: "case",
-    label: "Case",
   },
   {
     name: "blog-regular",

@@ -13,7 +13,10 @@ const Pricing2 = () => {
       <PageWrapper footerDark>
         <Section>
           <div className="pt-5"></div>
-          <Container>
+          <Container css={`
+            z-index: 10;
+            margin-left: 0px;
+          `}>
             <Row className="">
               <Col lg="7">
                 <Title variant="hero">Ibland behöver man förstärkning</Title>

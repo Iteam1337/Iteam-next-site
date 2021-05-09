@@ -13,7 +13,7 @@ import {
 } from "../../components/Core";
 import GlobalContext from "../../context/GlobalContext";
 
-import imgHero from "../../assets/image/png/landing4-hero-img.png";
+import imgHero from "../../assets/image/png/Sofa-Large.png";
 
 const ImgRight = styled(Box)``;
 
@@ -75,6 +75,7 @@ const BtnGroup = styled(Box)`
 const Hero = () => {
   const gContext = useContext(GlobalContext);
   const [qty, setQty] = useState(1);
+  const price = 5000;
 
   const handleIncQty = () => {
     setQty(qty + 1);
@@ -126,10 +127,10 @@ const Hero = () => {
                   <BoxPrice mt={4} mb={3}>
                     <Box className="d-flex align-items-center">
                       <Title color="light" mb="0!important" mr={3}>
-                        5000kr
+                        {price}kr
                       </Title>
                     </Box>
-                    <Text color="lightShade">Per person</Text>
+                    <Text color="lightShade">per person</Text>
                   </BoxPrice>
 
                   <div className="d-flex pt-2">
@@ -145,9 +146,10 @@ const Hero = () => {
                         <button onClick={handleDecQty}>-</button>
                       </BtnGroup>
                     </ProductQty>
-                    <Button bg="warning" color="dark" mb={2}>
-                      Add to Cart
-                    </Button>
+                    {qty < 5 ? <Text variant="small">Minst fem personer</Text> :
+                      <Button bg="warning" color="dark" mb={2}>
+                      Boka för {qty * price} kr
+                      </Button>}
                   </div>
                 </Box>
               </div>

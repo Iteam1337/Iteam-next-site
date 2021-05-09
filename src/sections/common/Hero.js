@@ -20,7 +20,10 @@ const Hero = ({ title, children, ...rest }) => {
         pb={["50px!important", null, "180px!important"]}
         {...rest}
       >
-        <Container>
+        <Container css={`
+            z-index: 10;
+            margin-left: 0px;
+          `}>
           <Row>
             <Col lg="6">
               <div>
