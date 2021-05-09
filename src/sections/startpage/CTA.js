@@ -13,7 +13,7 @@ const CTA = () => (
             <Box className="text-center">
               <Title color="light">Move Fast, Fix Things</Title>
               <Text mb={4} color="light" opacity={0.7}>
-                Jobbar du med oss på Iteam vet du att lösningen du får kommer bli bra, användbar och värdefull.
+                Jobbar du med oss på Iteam vet du att lösningen kommer bli bra, användbar och värdefull.
               </Text>
               <div className="d-flex flex-column align-items-center pt-3">
                 <Button mb={2}>Boka ett team nu</Button>

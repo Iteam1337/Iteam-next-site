@@ -23,7 +23,7 @@ const SiteHeader = styled.header`
   .container {
     padding-left:0
   }
-  
+
   @media ${device.lg} {
     position: fixed !important;
     transition: 0.4s;
@@ -54,6 +54,8 @@ const SiteHeader = styled.header`
 
   .navbar {
     padding: 0;
+    align-items: flex-start;
+
   }
 
   .navbar-toggler {

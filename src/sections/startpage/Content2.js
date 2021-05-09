@@ -5,18 +5,13 @@ import styled from "styled-components";
 import { Title, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
-import imgMobile from "../../assets/image/png/Lego-2-Medium.png";
-import icon3dModel from "../../assets/image/png/icon-3d-model.png";
-import iconLayout from "../../assets/image/png/icon-layot-25.png";
+import imgMobile from "../../assets/image/jpeg/Kristina-Fanny-Maria-Lowres.jpg";
 
 const ContentCard = ({ iconImage, title, className, children, ...rest }) => (
   <Box
     {...rest}
     className={`d-flex align-items-start justify-content-start ${className}`}
   >
-    <Box mr={4}>
-      <img src={iconImage} alt="" />
-    </Box>
     <Box>
       <Title variant="card" fontSize="24px" mb={3}>
         {title}
@@ -73,14 +68,12 @@ const Content2 = () => (
               <Box mt={4} pt={3}>
                 <ContentCard
                   title="Leder till snabbare utveckling"
-                  iconImage={icon3dModel}
                   mb={4}
                 >
-                  När inte alla behöver känna till hur gamla system fungerar finns det fler personer att välja på för nyutveckling.
+                  När inte alla behöver känna till hur gamla system fungerar ökar friheten och kreativiteten.
                 </ContentCard>
                 <ContentCard
                   title="Kapslar in legacy"
-                  iconImage={iconLayout}
                 >
                   När man väl har ett API kan man enklare byta ut delar som tidigare var sammansvetsade med gränssnitten.
                 </ContentCard>
