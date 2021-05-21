@@ -26,7 +26,7 @@ const CardImage = styled.div`
   margin-bottom: 29px;
 `;
 
-const TeamCard = ({ email, title, children, ...rest }) => (
+const TeamCard = ({ email, name, title, phoneNumber, ...rest }) => (
   <Box
     className="text-center"
     pt="15px"
@@ -44,11 +44,18 @@ const TeamCard = ({ email, title, children, ...rest }) => (
     </CardImage>
     <div className="text-center">
       <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
-        {title}
+        {name}
       </Title>
       <Text fontSize={2} lineHeight={1.75}>
-        {children}
+        {title}
       </Text>
+      {phoneNumber && (
+        <a href={`tel:${phoneNumber}`}>
+          <Text fontSize={1} lineHeight={1.25}>
+            {phoneNumber}
+          </Text>
+        </a>
+      )}
     </div>
   </Box>
 );
@@ -71,11 +78,9 @@ const Team = () => (
         <Row className="align-items-center justify-content-center">
           {team
             .sort((a, b) => a.fullname > b.fullname)
-            .map(({fullname, title, email}) => 
-              <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-                <TeamCard email={email} title={fullname}>
-                  {title}
-                </TeamCard>
+            .map(({fullname, title, email, phoneNumber}) => 
+              <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4" key={email}>
+                <TeamCard email={email} name={fullname} title={title} phoneNumber={phoneNumber} />
               </Col>
           )}
         </Row>
