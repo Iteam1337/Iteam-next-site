@@ -17,8 +17,8 @@ const CaseList = () => (
     {/* <!-- Feature section --> */}
     <Section className="position-relative">
       <Container>
-        <Row className="align-items-center justify-content-center">
-          <Col lg="4" className="mb-5 mb-lg-0">
+        <Row className="justify-content-center">
+          <Col lg="4" className="mb-5 mb-lg-0 flex-grow-1">
             <PostCard
               img={tjejjourenThumbnail}
               title="Tjejjouren Väst"
@@ -27,7 +27,7 @@ const CaseList = () => (
               Appen Stella ger tjejer stöd dygnet runt
             </PostCard>
           </Col>
-          <Col lg="4" className="mb-5 mb-lg-0">
+          <Col lg="4" className="mb-5 mb-lg-0 flex-grow-1">
             <PostCard
               img={imgCase1}
               imgBrand={imgBrand1}
@@ -38,7 +38,7 @@ const CaseList = () => (
               andrahandsuthyrning
             </PostCard>
           </Col>
-          <Col lg="4" className="mb-5 mb-lg-0">
+          <Col lg="4" className="mb-5 mb-lg-0 flex-grow-1">
             <PostCard
               img={imgCase3}
               imgBrand={imgBrand3}
