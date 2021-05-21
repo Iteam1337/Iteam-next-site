@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Box, Title, Text } from "../../../components/Core";
+import Quote from '../../../components/Quote';
 
 import imgCase2 from "../../../assets/image/case/trr-laptop-transparent.png";
 
@@ -84,17 +85,14 @@ const CaseDetails = () => (
         <Row className="mt-5">
           <Col lg="12" xl="10" className="offset-xl-1 pt-4">
             <Box pb={["40px", null, "65px"]}>
-              <blockquote>
-                "Iteam har varit en självklar stöttepelare i projektet, och i
+              <Quote
+                text={`Iteam har varit en självklar stöttepelare i projektet, och i
                 ett arbetssätt som gör oss mer användarcentrerade. Som
                 rådgivande konsulter kan jag lita på att de alltid tänker på
-                projektets bästa före allt annat."
-                <br />
-                <br />
-                — Jonas Kowalski
-                <br />
-                Produktägare Kundplattformen
-              </blockquote>
+                projektets bästa före allt annat.`}
+                author="Jonas Kowalski"
+                authorTitle="Produktägare"
+              />
             </Box>
           </Col>
         </Row>
