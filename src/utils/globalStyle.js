@@ -24,12 +24,15 @@ const globalStyle = createGlobalStyle`
 
 
   a {
-    color: ${({ theme }) => theme.colors.text} !important;
-    transition: all 0.3s ease-out;
+    color: ${({ theme }) => theme.colors.secondary};  
+    transition: all 0.3s ease-out; 
     &:hover, &:active, &:focus{
-      color: ${({ theme }) => theme.colors.secondary} !important;
-      text-decoration: none!important;
+      color: ${({ theme }) => theme.colors.secondary};
+      text-decoration: none;
       outline: none !important;
+    }
+    &:hover {
+      text-decoration: underline;
     }
   }
 
