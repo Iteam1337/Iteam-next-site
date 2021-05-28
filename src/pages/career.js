@@ -10,8 +10,8 @@ const Career = () => {
   return (
     <>
       <PageWrapper footerDark>
-        <Hero title="Bli en del av teamet">
-          Vi söker dig som har talang för att lära dig snabbt och gillar mer komplexa utmaningar.
+        <Hero title="Kom in i värmen">
+          Vi söker dig som älskar att lära nytt och att lösa komplexa problem med digitala lösningar som skapar värde på riktigt.
         </Hero>
         <Content />
         <Feature />

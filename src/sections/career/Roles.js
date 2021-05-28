@@ -75,8 +75,7 @@ const Roles = () => (
             <div>
               <Title>Lediga tjänster</Title>
               <Text>
-                Vi svarar på alla vanliga och spontanansökningar och har en
-                snabb och effektiv process för vår rekrytering.
+                Kika igenom våra öppningar just nu, <a href="mailto:internship@iteam.se">anmäl intresse för praktik</a> eller <a href="mailto:joinus@iteam.se">skicka en spontantansökan</a> och berätta vad du drömmer om att göra ihop med oss
               </Text>
             </div>
           </Col>
@@ -84,26 +83,26 @@ const Roles = () => (
         <Row className="mt-lg-5">
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
-              color="primary"
-              title="Senior Frontend Developer"
+              color="warning"
+              title="Backendutvecklare Elixir"
               type="Full-time"
-              location="Sweden"
+              location="Göteborg, Stockholm eller remote"
             />
           </Col>
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
               color="primary"
-              title="Senior Backend Engineer"
+              title="Frontendutvecklare"
               type="Full-time"
-              location="Sweden"
+              location="Göteborg, Stockholm eller remote"
             />
           </Col>
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
-              color="success"
-              title="Senior UX Designer"
+              color="ash"
+              title="UX-designer"
               type="Full-time"
-              location="South Haven, USA"
+              location="Göteborg, Stockholm eller remote"
             />
           </Col>
         </Row>
