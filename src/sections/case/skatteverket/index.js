@@ -45,9 +45,9 @@ const CaseDetails = () => (
                 Demonstration av tekniken
               </Title>
               <Text variant="small">
-                Konceptet bygger på att digitala kvitton omvandlas hashar,
-                vilket är oigenkännliga textsträngar. Genom digital signaturer
-                kan kvittornas legitimitet sedan verifieras. På detta sätt
+                Konceptet bygger på att digitala kvitton omvandlas till hashar,
+                vilket är oigenkännliga textsträngar. Genom digitala signaturer
+                kan kvittonas legitimitet sedan verifieras. På detta sätt
                 stannar det digitala kvittot hos den som gjort köpet. Fördelarna
                 är att den enskilde individens integritet bevaras och att
                 säljarnas försäljningsdata inte läcker ut. Samtidigt kan
@@ -69,7 +69,7 @@ const CaseDetails = () => (
                     Vi kan avskaffa behovet av arkivering av fysiska kvitton.
                   </li>
                   <li>
-                    Kryptoteknik kan hjälpa oss minska bedrägerier och missatag,
+                    Kryptoteknik kan hjälpa oss minska bedrägerier och misstag,
                     exempelvis med moms.
                   </li>
                   <li>
@@ -82,7 +82,7 @@ const CaseDetails = () => (
                 <br />
                 Vill du prova själv?{" "}
                 <a href="https://www.digitala-kvitton.se/">
-                  klicka här för att testa prototypen
+                  Klicka här för att testa prototypen
                 </a>
               </Text>
             </Box>
