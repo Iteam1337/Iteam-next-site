@@ -28,6 +28,10 @@ const FaqCard = styled(Box)`
     position: absolute;
     left: 0;
   }
+
+  a {
+    color: ${({ theme }) => theme.colors.light} !important;
+  }
 `;
 
 const FaqTitle = styled(Title)`
@@ -48,11 +52,15 @@ const Faq = () => (
           <Col lg="6" className="mb-5">
             <FaqCard>
               <div>
-                <FaqTitle>Jonna fyller i</FaqTitle>
+                <FaqTitle>
+                  Hur lång är uppsägningstiden på löpande/fast avtal?
+                </FaqTitle>
                 <Text variant="small" color="light" opacity={0.7}>
-                  Absolutely. The Envato Theme license allows you to build a
-                  websites for personal use or for a client. User Omega for your
-                  clients.
+                  Om ni tecknar löpande avtal med oss är uppsägningstiden 1
+                  månad för båda parter. Har ni ett fast avtal definieras
+                  avtalsperioden av tidsbestämda avrop som inte går att häva
+                  under pågående avrop, dock förlängs inte ett avrop automatiskt
+                  utan sker endast enligt överenskommelse.
                 </Text>
               </div>
             </FaqCard>
@@ -60,11 +68,13 @@ const Faq = () => (
           <Col lg="6" className="mb-5">
             <FaqCard>
               <div>
-                <FaqTitle>Do I get free updates?</FaqTitle>
+                <FaqTitle>
+                  Kan vi byta konsult/kompetens under pågående avtal?
+                </FaqTitle>
                 <Text variant="small" color="light" opacity={0.7}>
-                  Yes. We update all of our themes regularly, plus are
-                  constantly adding new components, pages, and features to our
-                  themes. Purchase once and get lifetime updates.
+                  Ja, om uppdraget ändrar karaktär och ni behöver annan expertis
+                  kan vi utifrån tillgänglighet byta resurs under pågående
+                  avtal.
                 </Text>
               </div>
             </FaqCard>
@@ -72,11 +82,12 @@ const Faq = () => (
           <Col lg="6" className="mb-5">
             <FaqCard>
               <div>
-                <FaqTitle>Does it work with WordPress?</FaqTitle>
+                <FaqTitle>
+                  Varför kan jag inte boka en konsult 40 timmar/vecka?
+                </FaqTitle>
                 <Text variant="small" color="light" opacity={0.7}>
-                  Create custom landing pages with Omega that converts more
-                  visitors than any website. With lots of unique blocks, you can
-                  easily build a page without any design or custom coding.
+                  På Iteam är fredagar vikta till kompetensutveckling,
+                  bolagsstrategi och interna kulturbyggande aktiviteter.
                 </Text>
               </div>
             </FaqCard>
@@ -84,11 +95,13 @@ const Faq = () => (
           <Col lg="6" className="mb-5">
             <FaqCard>
               <div>
-                <FaqTitle>Will you provide support?</FaqTitle>
+                <FaqTitle>
+                  Var kan jag läsa mer om era team och konsulter?
+                </FaqTitle>
                 <Text variant="small" color="light" opacity={0.7}>
-                  With lots of unique blocks, you can easily build a page
-                  without any design or custom coding. with Omega that converts
-                  more visitors than any website.
+                  <a href="/about" color="light">
+                    Här hittar du mer information om oss
+                  </a>
                 </Text>
               </div>
             </FaqCard>
