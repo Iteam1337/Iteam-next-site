@@ -32,7 +32,7 @@ const CaseList = () => (
             </PostCard>
           </Column>
           <Column>
-            <PostCard img={trrThumbnail} title="TRR" link="/trr">
+            <PostCard img={trrThumbnail} title="TRR" link="/case/trr">
               Vi rustar Sveriges bästa omställningsaktör för framtiden
             </PostCard>
           </Column>
