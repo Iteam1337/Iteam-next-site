@@ -85,10 +85,10 @@ const Hero = () => {
             >
               <Box py={[null, null, null, 4]} pr={5} pt={[4, null]}>
                 <Title variant="hero">
-                  MVP: När du vet vad du vill bygga.
+                  MVP: När du vill bygga något nytt.
                 </Title>
                 <Text mb={4}>
-                  Det är svårt att komma igång med digitala projekt. Teamet ska funka, rätt teknikval och inte bygga för mycket innan användarna är med. Vi är experter!
+                  Oavsett om du har ett problem du behöver lösa eller redan vet vad din MVP ska innehålla så hjälper vi dig. Vi börjar där du står och utgår ifrån det helt enkelt. Ibland gör vi en <a href="/designsprint">Designsprint</a> för att snabbt fatta stora beslut om vad vi behöver göra. Andra gånger börjar vi med research på era kunder för att validera er hypotes om vad som ska byggas.
                 </Text>
               </Box>
             </Col>

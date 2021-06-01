@@ -73,10 +73,10 @@ const Content1 = () => (
             <Section py={[5, null, null, "190px"]}>
               <div className="omga-02__content-text section-title order-lg-1">
                 <Title>
-                  Lansera inom tre månader
+                  Ingen gillar att vänta
                 </Title>
                 <Text>
-                  Innan man har användare är det svårt att veta vad som är viktigt. Lorem ipsum dolor sit amet...
+                Vi hjälper dig definiera ett lagom scope för din MVP så att du kan lansera något nytt inom tre månader. För att göra det behöver du göra det svåraste som finns: välja bort. Vi har processer och metoder för hur du gör detta på ett strukturerat sätt. Dessutom hjälper vi dig kommunicera dina val och beslut internt så att alla är med på tåget.
                 </Text>
                 <Button mt={4}>Get Started</Button>
               </div>

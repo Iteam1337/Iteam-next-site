@@ -65,8 +65,7 @@ const Feature = () => (
             <Box>
               <Title color="light">Det är inte så svårt.</Title>
               <Text color="light" >
-                Vi har sett allt för många projekt som har börjat på fel sätt. Felaktiga teknikval, superdetaljerade specar, gigantiska budgetar som inte leder framåt. Vi vet hur man börjar projekt men också hur man för dem i hamn.
-              </Text>
+              Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text>
               <Button mt={4}>Learn more</Button>
             </Box>
           </Col>
@@ -84,8 +83,7 @@ const Feature = () => (
                     color="primary"
                     title="Teknik som funkar"
                   >
-                    With lots of unique blocks, you can easily build a page
-                    without coding.
+Vi har koll på de senaste teknikerna och vi vet hur man får gammal teknik att fungera i den nya digitala världen.
                   </FeatureCard>
                 </Col>
                 <Col
@@ -98,11 +96,10 @@ const Feature = () => (
                 >
                   <FeatureCard
                     color="ash"
-                    title="Team som leder sig själva
+                    title="Användaren i centrum
 "
                   >
-                    With lots of unique blocks, you can easily build a page
-                    without coding.
+Vi sätter alltid dina kunder i centrum så att vi säkerställer att vi levererar något de vill ha. På så sätt skapar vi hela tiden värde för dig.
                   </FeatureCard>
                 </Col>
                 <Col
@@ -115,10 +112,9 @@ const Feature = () => (
                 >
                   <FeatureCard
                     color="secondary"
-                    title="Budget som håller"
+                    title="Vi stöttar dig"
                   >
-                    With lots of unique blocks, you can easily build a page
-                    without coding.
+                   Vi har coacher, ux-strateger, affärsutvecklare och tekniska rådgivare som stöttar dig genom processen. Du behöver aldrig känna dig ensam.
                   </FeatureCard>
                 </Col>
               </Row>
