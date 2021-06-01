@@ -23,7 +23,7 @@ const ContentCard = ({ iconImage, title, className, children, ...rest }) => (
 
 const ImgStyled = styled.img`
   box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
-  border-radius: 10px;
+  border-radius: 0px;
   max-width: 70%;
   @media ${device.sm} {
     max-width: 50%;
@@ -35,7 +35,7 @@ const ImgStyled = styled.img`
     max-width: 100%;
   }
   @media ${device.xl} {
-    margin-left: 50px;
+    margin-left: -50px;
   }
 `;
 

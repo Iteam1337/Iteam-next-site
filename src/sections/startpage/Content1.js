@@ -93,10 +93,10 @@ const Content1 = () => (
                 data-aos-duration="600"
                 data-aos-once="true"
                 css={`
-                  margin-right:-400px;
+                  margin-right:-800px;
                   box-shadow: ${({ theme }) =>
                     `0 12px 84px ${theme.colors.shadow}`};
-                  border-radius: 10px;
+                  border-radius: 0;
                 `}
               />
             </ImgContainer>
