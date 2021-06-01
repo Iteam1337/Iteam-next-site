@@ -42,8 +42,8 @@ const Hero = () => {
               >
                 <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                   <Title variant="hero" color="light">
-                    Move fast,<br/>{" "}
-                    Fix things.
+                    We move fast,<br/>{" "}
+                    and fix things
                   </Title>
                   <Text mb={4} color="light">
                     Vi digitaliserar företag och organisationer genom en välbeprövad och användarstyrd process med öppen källkod och teamwork.
