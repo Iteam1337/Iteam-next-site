@@ -111,12 +111,17 @@ const Content1 = () => (
                 <Title>
                   Börja genom{" "}
                   <br className="d-none d-sm-block d-md-none d-lg-block" />{" "}
-                  att bara börja.
+                  att bara börja
                 </Title>
                 <Text mb={4}>
-                  När vi frågar personer som lyckats med innovationsprojekt om varför så är ofta svaret
-                  att de vågade sätta igång. Vi har anammat detta och försöker alltid få en helhet av det vi bygger
-                  att bli klar så fort som bara är möjligt.
+                  Det som inte är i produktion skapar inget värde. Det är bara en kostnad. 
+                  Därför tror vi inte på långa förarbeten som slutar i en rapport på någons skrivbord. 
+                  Istället är vi helt övertygade om att för att komma igång behöver vi börja. 
+                  Vi börjar genom att göra research kring era och era kunders behov, sätter upp en
+                  hypotes och utvecklar något litet. Sedan testar vi på riktiga kunder för att få nya insikter. 
+                  Insikterna använder vi sedan för att bygga lite till, testa och få nya insikter. 
+                  På detta sätt kommer tjänsten snabbt ut i produktion så att ni snabbt kan nå ut till era 
+                  kunder och skapa värde på riktigt.
                 </Text>
 
                 <ULStyled>
