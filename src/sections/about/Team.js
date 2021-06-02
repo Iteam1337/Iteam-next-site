@@ -61,9 +61,9 @@ const Team = () => (
         <Row className="justify-content-center">
           <Col lg="6" className="text-center pb-3">
             <div className="">
-              <Title>Vadå ha kul?</Title>
+              <Title>Medarbetare</Title>
               <Text>
-                Digitialisering är ett kreativt arbete och när vi får lösa svåra uppgifter och använda vår kompetens. Och ja, att få fira tillsammans när vi lyckas!{" "}
+                Här hittar du oss som jobbar på Iteam, tveka inte att höra av dig!
               </Text>
             </div>
           </Col>
