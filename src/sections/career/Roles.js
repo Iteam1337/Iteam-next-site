@@ -91,20 +91,20 @@ const Roles = () => (
         <Row className="mt-lg-5 justify-content-center">
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
-              color="warning"
-              title="Backend developer"
-              type="Full-time"
-              location="Göteborg, Stockholm eller remote"
-              link="/career/backend-developer"
-            />
-          </Col>
-          <Col lg="4" md="6" className="pt-4">
-            <RolesCard
               color="primary"
               title="Head of Development"
               type="Full-time"
               location="Göteborg eller Stockholm"
               link="/career/head-of-development"
+            />
+          </Col>
+          <Col lg="4" md="6" className="pt-4">
+            <RolesCard
+              color="warning"
+              title="Backend developer"
+              type="Full-time"
+              location="Göteborg, Stockholm eller remote"
+              link="/career/backend-developer"
             />
           </Col>
         </Row>

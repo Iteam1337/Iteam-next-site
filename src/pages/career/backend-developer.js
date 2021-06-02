@@ -6,34 +6,56 @@ import { Section, Title, Text, Box } from "../../components/Core";
 
 const OpeningDetails = () => {
   return (
-    <>
-      <PageWrapper footerDark>
-        <Section className="pb-0">
-          <div className="pt-5"></div>
-          <Container>
-            <Row className="justify-content-center text-center">
-              <Col lg="8">
-                <Box className="text-center" mb={4}>
-                  Backend developer
-                </Box>
-                <Title variant="hero">Iteam söker nu Backend developer!</Title>
-                <Text></Text>
-                <Title variant="hero">Rollen</Title>
-                <Text>
-                <b>Krav</b>
-                <b>Meriterande</b>
-                <b>Övrigt</b>
-                Omfattning: Heltid<br/>
-                Tillsättning: Snarast<br/>
-                Plats: Göteborg eller Stockholm eller helt remote<br/>
-                Frågor: Till <a href="matilto:johanna.grahn@iteam.se">johanna.grahn@iteam.se</a>
+    <PageWrapper footerDark>
+      <Section className="pb-0">
+        <div className="pt-5"></div>
+        <Container>
+          <Row className="justify-content-center text-center">
+            <Col lg="8">
+              <Box className="text-center" mb={4}>
+                Ledig tjänst
+              </Box>
+              <Title variant="hero">Backend developer</Title>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+
+      <Section className="position-relative" borderBottom="1px solid #eae9f2;">
+        <Container>
+          <Row>
+            <Col lg="12" xl="10" className="offset-xl-1">
+              <Box pb={["40px", null, "65px"]}>
+                <Title variant="card" mb="18px">
+                  Iteam söker nu Backend developer!
+                </Title>
+              </Box>
+
+              <Box pb={["40px", null, "65px"]}>
+                <Title variant="card" mb="18px">
+                  Övrigt
+                </Title>
+                <Text variant="small">
+                  Omfattning: Heltid
+                  <br />
+                  <br />
+                  Tillsättning: Snarast
+                  <br />
+                  <br />
+                  Plats: Göteborg eller Stockholm eller helt remote
+                  <br />
+                  <br />
+                  Frågor: Till{" "}
+                  <a href="mailto:johanna.grahn@iteam.se">
+                    johanna.grahn@iteam.se
+                  </a>
                 </Text>
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-      </PageWrapper>
-    </>
+              </Box>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+    </PageWrapper>
   );
 };
 export default OpeningDetails;
