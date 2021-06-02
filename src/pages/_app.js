@@ -21,7 +21,9 @@ const tagManagerArgs = {
   gtmId: "GTM-MP7MZVC",
 };
 
-TagManager.initialize(tagManagerArgs);
+if (process.browser) {
+  TagManager.initialize(tagManagerArgs);
+}
 
 const MyApp = ({ Component, pageProps, router }) => {
   if (router.pathname.match(/sign|reset|coming/)) {
