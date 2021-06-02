@@ -34,7 +34,7 @@ const CopyRightArea = styled.div`
   padding: 15px 0;
   p {
     color: ${({ dark, theme }) =>
-      dark ? theme.colors.lightShade : theme.colors.darkShade};
+      dark ? theme.colors.light : theme.colors.dark};
     font-size: 13px;
     font-weight: 300;
     letter-spacing: -0.41px;
@@ -77,7 +77,7 @@ const Footer = ({ isDark = true }) => {
           >
             <Row className="justify-content-center">
               <Col lg="2" md="4">
-                <Logo white={isDark} />
+                <Logo white={isDark} vertical/>
               </Col>
               <Col lg="10" md="8" className="mt-5 mt-lg-0">
                 <Row>
@@ -87,22 +87,25 @@ const Footer = ({ isDark = true }) => {
                         variant="card"
                         color={isDark ? "light" : "dark"}
                       >
-                        About
+                        Följ oss
                       </TitleStyled>
-                      <UlStyled color={isDark ? "lightShade" : "darkShade"}>
+                      <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
-                          <a href="/#" target="_blank">
-                            Our mission
+                          <a href="https://facebook.com/iteam1337" target="_blank">
+                            <i className="icon icon-logo-facebook"></i>&nbsp;
+                            Facebook
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
-                            Our story
+                          <a href="https://twitter.com/iteam1337" target="_blank">
+                            <i className="icon icon-logo-twitter"></i>&nbsp;
+                            Twitter
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
-                            Team Members
+                          <a href="https://instagram.com/iteam1337" target="_blank">
+                            <i className="icon icon-logo-instagram"></i>&nbsp;
+                            Instagram
                           </a>
                         </li>
                       </UlStyled>
@@ -114,23 +117,17 @@ const Footer = ({ isDark = true }) => {
                         variant="card"
                         color={isDark ? "light" : "dark"}
                       >
-                        Learn
+                        Besök oss<br/>
                       </TitleStyled>
-                      <UlStyled color={isDark ? "lightShade" : "darkShade"}>
+                      <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
-                          <a href="/#" target="_blank">
-                            Tutorials
+                          <a href="https://maps.google.com/?q=Iteam, Järntorgsgatan, Göteborg" target="_blank">
+                          Järntorgsgatan 12-14
+                          413 01 Göteborg
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
-                            How it works
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/#" target="_blank">
-                            F.A.Q
-                          </a>
+                          <a href="https://ec.europa.eu/taxation_customs/vies/">VAT: SE556551692801</a>
                         </li>
                       </UlStyled>
                     </div>
@@ -141,17 +138,22 @@ const Footer = ({ isDark = true }) => {
                         variant="card"
                         color={isDark ? "light" : "dark"}
                       >
-                        Stories
+                        Skryt
                       </TitleStyled>
-                      <UlStyled color={isDark ? "lightShade" : "darkShade"}>
+                      <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
                           <a href="/#" target="_blank">
-                            Blog
+                            Gasellföretag
                           </a>
                         </li>
                         <li>
                           <a href="/#" target="_blank">
-                            Tech stories
+                            AAA Rating
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.bisnode.se/kunskap/vara-tankar-om/superforetagen-2018/" target="_blank">
+                            VA Superföretag
                           </a>
                         </li>
                       </UlStyled>
@@ -163,22 +165,22 @@ const Footer = ({ isDark = true }) => {
                         variant="card"
                         color={isDark ? "light" : "dark"}
                       >
-                        Hire
+                        Kontakta oss
                       </TitleStyled>
-                      <UlStyled color={isDark ? "lightShade" : "darkShade"}>
+                      <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
-                          <a href="/#" target="_blank">
-                            Career
+                          <a href="/contact-1">
+                            Boka möte
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
-                            Freelancers
+                          <a href="/career">
+                            Sök jobb
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
-                            Trainee
+                          <a href="mailto:joinus@iteam.se">
+                            Spontanansökan
                           </a>
                         </li>
                       </UlStyled>
@@ -191,7 +193,7 @@ const Footer = ({ isDark = true }) => {
           <CopyRightArea dark={isDark ? 1 : 0}>
             <Row className="align-items-center">
               <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
-                <p>&copy; 2019 UXTheme, All Rights Reserved</p>
+                <p>&copy; 2021 Iteam, All Rights Reserved</p>
               </Col>
               <Col sm="6" className="text-sm-right text-center">
                 <ul className="social-icons">

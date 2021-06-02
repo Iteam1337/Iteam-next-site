@@ -1,7 +1,8 @@
 [
   {
-    "email": "iris@lothen.se",
-    "fullname": "Iris Löthén"
+    "fullname": "Iris Löthén",
+    "email": "iris.lothen@iteam.se",
+    "title": "UX-Designer"
   },
   {
     "username": "ilix",
@@ -10,7 +11,8 @@
     "billing-active": 1,
     "fullname": "Alexander Czigler",
     "displayname": "alexander",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "072-714 50 60"
   },
   {
     "username": "irony",
@@ -20,7 +22,8 @@
     "billing-active": 1,
     "fullname": "Christian Landgren",
     "displayname": "irony",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "070-775 58 31"
   },
   {
     "username": "martinloman",
@@ -29,7 +32,8 @@
     "billing-active": 1,
     "fullname": "Martin Loman",
     "displayname": "martinloman",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "070-722 70 24"
   },
   {
     "username": "hrn",
@@ -39,7 +43,8 @@
     "billing-active": 1,
     "fullname": "Hans Rollman",
     "displayname": "hans",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "073-813 37 87"
   },
   {
     "username": "ram",
@@ -48,7 +53,8 @@
     "billing-active": 1,
     "fullname": "Radu Achim",
     "displayname": "Radu",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "070-810 99 38"
   },
   {
     "username": "osiris",
@@ -58,7 +64,8 @@
     "billing-active": 1,
     "fullname": "Anders Norrback Bornholm",
     "displayname": "osiris",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "070-862 41 90"
   },
   {
     "username": "mittistormen",
@@ -68,7 +75,8 @@
     "billing-active": 1,
     "fullname": "Johanna Månsson Grahn",
     "displayname": "mittistormen",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "073-402 91 12"
   },
   {
     "username": "mikaelnaeslund",
@@ -87,7 +95,8 @@
     "billing-active": 1,
     "fullname": "Maria Sölscher",
     "displayname": "mariasolscher",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "073-374 27 84"
   },
   {
     "username": "emmaklara",
@@ -96,7 +105,8 @@
     "billing-active": 1,
     "fullname": "Emma-Klara",
     "displayname": "emmaklara",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "070-779 52 54"
   },
   {
     "username": "mikael",
@@ -105,16 +115,18 @@
     "billing-active": 0,
     "fullname": "Mikael Gråborg",
     "displayname": "mikael",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "073-539 46 83"
   },
   {
     "username": "jonna",
     "email": "jonna.hjern@iteam.se",
     "title": "CMO",
     "billing-active": 1,
-    "fullname": "Jonna",
+    "fullname": "Jonna Hjern",
     "displayname": "Jonna",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "072-975 53 66"
   },
   {
     "username": "simonlundell",
@@ -123,7 +135,8 @@
     "billing-active": 1,
     "fullname": "Simon Lundell",
     "displayname": "simonlundell",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "076-007 58 40"
   },
   {
     "username": "fannynylund",
@@ -131,17 +144,18 @@
     "title": "Agil coach",
     "status": "Owner",
     "billing-active": 1,
-    "fullname": "Fanny Willbjer Schörling",
+    "fullname": "Fanny Willbjer-Schörling",
     "displayname": "fanny",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "076-271 44 25"
   },
   {
-    "username": "jimmy.jardland",
-    "email": "jimmy.jardland@iteam.se",
-    "title": "ex CTO",
+    "username": "emil.ahlback",
+    "email": "emil.ahlback@iteam.se",
+    "title": "Utvecklare",
     "billing-active": 1,
-    "fullname": "Jimmy Jardland",
-    "displayname": "jimmy.jardland",
+    "fullname": "Emil Ahlbäck",
+    "displayname": "mullsork",
     "expiration-timestamp": ""
   },
   {
@@ -151,7 +165,8 @@
     "billing-active": 1,
     "fullname": "Rebecca Norén",
     "displayname": "Rebecca",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "073-722 36 09"
   },
   {
     "username": "andreas.indal",
@@ -160,7 +175,8 @@
     "billing-active": 1,
     "fullname": "Andreas Alsterholm",
     "displayname": "indal",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "070-771 40 90"
   },
   {
     "username": "adam.naslund",
@@ -169,7 +185,8 @@
     "billing-active": 1,
     "fullname": "Adam Näslund",
     "displayname": "Adam",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "072-449 91 21"
   },
   {
     "username": "andreas.lundqvist",
@@ -178,7 +195,8 @@
     "billing-active": 1,
     "fullname": "Andreas Lundqvist",
     "displayname": "lassekongo",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "076-033 41 91"
   },
   {
     "username": "anna.l.moller",
@@ -187,7 +205,8 @@
     "billing-active": 1,
     "fullname": "Anna Lööf Möller",
     "displayname": "Anna",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "073-053 72 58"
   },
   {
     "username": "stephanie.weaver",
@@ -196,7 +215,8 @@
     "billing-active": 0,
     "fullname": "Stephanie Weaver",
     "displayname": "Stephanie Weaver",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "073-464 08 60"
   },
   {
     "username": "izabella.larsson",

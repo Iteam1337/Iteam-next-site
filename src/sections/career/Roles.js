@@ -17,7 +17,7 @@ const Card = styled.a`
   padding: 35px;
   transition: 0.4s;
   border-radius: 10px;
-  cursor:pointer;
+  cursor: pointer;
   &:hover {
     box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
     color: #0056b3 !important;
@@ -77,7 +77,13 @@ const Roles = () => (
             <div>
               <Title>Lediga tjänster</Title>
               <Text>
-                Kika igenom våra öppningar just nu, <a href="mailto:internship@iteam.se">anmäl intresse för praktik</a> eller <a href="mailto:joinus@iteam.se">skicka en spontantansökan</a> och berätta vad du drömmer om att göra ihop med oss
+                Kika igenom våra öppningar just nu,{" "}
+                <a href="mailto:internship@iteam.se">
+                  anmäl intresse för praktik
+                </a>{" "}
+                eller{" "}
+                <a href="mailto:joinus@iteam.se">skicka en spontantansökan</a>{" "}
+                och berätta vad du drömmer om att göra ihop med oss
               </Text>
             </div>
           </Col>

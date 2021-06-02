@@ -4,13 +4,13 @@ import Link from "next/link";
 import { Title, Box, Text } from "../Core";
 
 const Card = styled(Box)`
-  border-radius: 10px 10px;
+  border-radius: 0;
   overflow: hidden;
 `;
 
 const ImageContainer = styled(Box)`
   max-width: 210px;
-  border-radius: 8px;
+  border-radius: 0px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -19,7 +19,7 @@ const ImageContainer = styled(Box)`
 const BrandImage = styled(Box)`
   overflow: hidden;
   img {
-    border-radius: 8px;
+    border-radius: 0px;
     border: 1px solid #eae9f2;
   }
 `;

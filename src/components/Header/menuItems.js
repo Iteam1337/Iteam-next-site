@@ -4,13 +4,17 @@ export const menuItems = [
     name: "erbjudande",
     label: "Erbjudanden",
     items: [
-      { name: "landing-7", label: "Iteam X" },
-      { name: "landing-2", label: "Iteam MVP" },
-      { name: "landing-3", label: "Iteam Scale-up" },
-      { name: "landing-4", label: "Utbildningar" },
-    ],
+      { name: "iteamX", label: "Iteam X" },
+      { name: "mvp", label: "Iteam MVP" },
+      { name: "scaleup", label: "Iteam Scale-up" },
+      { name: "övrigt", label: "Övrigt", items: [
+        { name: "education", label: "Open Source utbildning" },
+        { name: "whitepaper", label: "Agil coachning" },
+        { name: "designsprint", label: "Designsprint" },
+      ]}
+  ],
   },
-  {
+  /*{
     name: "erbjudande",
     label: "Sidor att välja",
     items: [
@@ -73,14 +77,15 @@ export const menuItems = [
         ],
       },
     ],
+  },*/
+
+  {
+    name: "case",
+    label: "Case",
   },
   {
     name: "career",
     label: "Karriär",
-  },
-  {
-    name: "case",
-    label: "Case",
   },
   {
     name: "blog-regular",

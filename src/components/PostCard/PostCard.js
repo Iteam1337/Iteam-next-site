@@ -66,7 +66,7 @@ const PostCard = ({
   ...rest
 }) => (
   <Card
-    className={horizontal ? "d-flex flex-column flex-md-row" : ""}
+    className={horizontal ? "d-flex flex-column flex-md-row" : "h-100"}
     {...rest}
   >
     {horizontal ? (
@@ -85,7 +85,7 @@ const PostCard = ({
     ) : (
       <Box className="position-relative">
         <Link href={link}>
-          <a className="w-100 h-100 d-flex">
+          <a className="w-100">
             <img src={img} alt="" className="w-100 img-fluid" />
             {imgBrand && (
               <BrandImage>

@@ -6,7 +6,7 @@ const Paragraph = styled.p`
   margin-bottom: 0;
   font-size: 21px;
   font-weight: 300;
-  letter-spacing: -0.66px;
+  letter-spacing: normal;
   line-height: 38px;
   ${color};
   ${space};
@@ -16,7 +16,6 @@ const Paragraph = styled.p`
 
 const ParagraphSmall = styled(Paragraph)`
   font-size: 16px;
-  letter-spacing: -0.5px;
   line-height: 28px;
   ${color};
   ${space};
