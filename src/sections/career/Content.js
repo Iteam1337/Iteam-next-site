@@ -54,16 +54,10 @@ const Content = () => {
             </Col>
             <Col lg="6" className="pl-lg-5 d-flex align-items-end">
               <Text>
-                Vi har kul nästan jämt! Kolla in vår snajsiga film och se om du kan motså att skicka en ansökan att börja här?
+                Developers, musikälskare, innovatörer, UX-designers, arkitekter, wannabe-triathleter, agila coacher, vi är ett gäng med rötterna i tekniken, internet och människan. Mer om oss alla finns <a href="/about#people">här</a>
               </Text>
             </Col>
           </Row>
-          <Box borderRadius={10} className="position-relative overflow-hidden">
-            <img src={imgVideo} alt="" className="img-fluid" />
-            <IconButton onClick={openVideoModal}>
-              <i className="icon icon-triangle-right-17-2"></i>
-            </IconButton>
-          </Box>
         </Container>
       </Section>
     </>

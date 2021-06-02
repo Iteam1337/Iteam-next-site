@@ -21,11 +21,7 @@ const OpeningDetails = () => {
                 <Title variant="hero">Rollen</Title>
                 <Text>
                 <b>Krav</b>
-                <ul>
-                </ul>
                 <b>Meriterande</b>
-                <ul>
-                </ul>
                 <b>Övrigt</b>
                 Omfattning: Heltid<br/>
                 Tillsättning: Snarast<br/>
