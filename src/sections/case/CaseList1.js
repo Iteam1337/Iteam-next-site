@@ -10,6 +10,7 @@ import imgCase1 from "../../assets/image/case/matcha-kontraktet1.jpg";
 import imgCase2 from "../../assets/image/jpeg/case-card-img-2.jpg";
 import imgCase3 from "../../assets/image/jpeg/case-card-img-3.jpg";
 import imgCase4 from "../../assets/image/case/Digitala_kvitton.png";
+import imgCase5 from "../../assets/image/case/vimla-case-phone.png";
 import imgBrand1 from "../../assets/image/jpeg/case-card-brand-img.jpg";
 import imgBrand2 from "../../assets/image/jpeg/case-card-brand-img-2.jpg";
 import imgBrand3 from "../../assets/image/jpeg/case-card-brand-img-3.jpg";
@@ -66,6 +67,11 @@ const CaseList = () => (
               link="/case/skatteverket-kairos-future"
             >
               Säkra kvitton genom kryptoteknik
+            </PostCard>
+          </Column>
+          <Column>
+            <PostCard img={imgCase5} title="Vimla" link="/case/vimla">
+              Digital plattform som strategisk framtidssatsning
             </PostCard>
           </Column>
         </Row>
