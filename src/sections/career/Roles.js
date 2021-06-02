@@ -17,6 +17,7 @@ const Card = styled.a`
   padding: 35px;
   transition: 0.4s;
   border-radius: 10px;
+  cursor:pointer;
   &:hover {
     box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
     color: #0056b3 !important;
@@ -49,9 +50,10 @@ const RolesCard = ({
   location,
   type,
   children,
+  link,
   ...rest
 }) => (
-  <Link href="/">
+  <Link href={link}>
     <Card className="card-job top-only" {...rest}>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <Location>
@@ -84,25 +86,19 @@ const Roles = () => (
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
               color="warning"
-              title="Backendutvecklare Elixir"
+              title="Backend developer"
               type="Full-time"
               location="Göteborg, Stockholm eller remote"
+              link="/career/backend-developer"
             />
           </Col>
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
               color="primary"
-              title="Frontendutvecklare"
+              title="Head of Development"
               type="Full-time"
-              location="Göteborg, Stockholm eller remote"
-            />
-          </Col>
-          <Col lg="4" md="6" className="pt-4">
-            <RolesCard
-              color="ash"
-              title="UX-designer"
-              type="Full-time"
-              location="Göteborg, Stockholm eller remote"
+              location="Göteborg eller Stockholm"
+              link="/career/head-of-development"
             />
           </Col>
         </Row>
