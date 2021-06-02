@@ -31,4 +31,10 @@ export const caseItems = [
     link: "/case/skatteverket-kairos-future",
     img: require("../assets/image/case/Digitala_kvitton.png"),
   },
+  {
+    title: "Vimla",
+    subTitle: "Digital plattform som strategisk framtidssatsning",
+    link: "/case/vimla",
+    img: require("../assets/image/case/vimla-case-phone.png"),
+  },
 ];
