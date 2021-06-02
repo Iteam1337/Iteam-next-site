@@ -88,7 +88,7 @@ const Roles = () => (
             </div>
           </Col>
         </Row>
-        <Row className="mt-lg-5">
+        <Row className="mt-lg-5 justify-content-center">
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
               color="warning"
