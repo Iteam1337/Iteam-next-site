@@ -53,10 +53,20 @@ const TermsConditions = () => {
                   </Title>
                   <Text variant="small">
                     De kategorier av personuppgifter som vi samlar, eller har rätt att samla in, är:
-                    Kundinformation, det vill säga de uppgifter som behövs för att kunna bli kund hos oss
-                    Kontaktuppgifter i samband med event, användartester, paneler, eller motsvarande
-                    Information om köpta produkter/tjänster och betalningshistorik
-                    Besöksinformation på icke-inloggade och inloggade tjänster, det vill säga din användargenererade data, data rörande vilken enhet som används och viss interaktionsdata.
+                    <List>
+                      <li>                        
+                        Kundinformation, det vill säga de uppgifter som behövs för att kunna bli kund hos oss
+                      </li>
+                      <li>                        
+                        Kontaktuppgifter i samband med event, användartester, paneler, eller motsvarande
+                      </li>
+                      <li>                        
+                        Information om köpta produkter/tjänster och betalningshistorik
+                      </li>
+                      <li>
+                        Besöksinformation på icke-inloggade och inloggade tjänster, det vill säga din användargenererade data, data rörande vilken enhet som används och viss interaktionsdata.
+                      </li>
+                    </List>
                   </Text>
                 </Box>
                 <Box mt={["40px", null, "50px"]}>
