@@ -20,7 +20,9 @@ const CaseStudyDetails = () => {
                 <Box className="text-center" mb={4}>
                   Vimla
                 </Box>
-                <Title variant="hero">Vimla</Title>
+                <Title variant="hero">
+                  Från idé till Sveriges bästa mobiloperatör
+                </Title>
                 <Text>Digital plattform som strategisk framtidssatsning</Text>
               </Col>
             </Row>
