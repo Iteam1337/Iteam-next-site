@@ -5,7 +5,7 @@ import PageWrapper from "../../components/PageWrapper";
 import { Section, Title, Text, Box } from "../../components/Core";
 
 import CaseList from "../../sections/case/CaseList1";
-import CaseDetails from "../../sections/case/vimla /CaseDetails";
+import CaseDetails from "../../sections/case/vimla/CaseDetails";
 import CTA from "../../sections/case/CTA";
 
 const CaseStudyDetails = () => {
