@@ -83,7 +83,8 @@ const Feature = () => (
         <Row className="">
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard color="ash" title="Agila team">
-              Du leder dig själv och ditt eget arbete i ett agilt team och en platt organisation, allt för att vi ska bli bäst ihop.
+              Du leder dig själv och ditt eget arbete i ett agilt team och en
+              platt organisation, allt för att vi ska bli bäst ihop.
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
@@ -94,18 +95,23 @@ const Feature = () => (
           </Col>
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard color="ash" title="Learn, sleep, repeat">
-              Vi är beroende av att lära för att leverera. I teamen, på kodlunch, med den egna utbildningspotten och med gemensamma labbar.
+              Vi är beroende av att lära för att leverera. I teamen, på
+              kodlunch, med den egna utbildningspotten och med gemensamma
+              labbar.
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
             <FeatureCard color="warning" title="Träning på schemat">
               För att hjärnan ska fungera så måste även kroppen göra det. Vi
-              tränar gärna ihop, kör egna tävlingar och sponsrar såklart med ett generöst friskvårdsbidrag.
+              tränar gärna ihop, kör egna tävlingar och sponsrar såklart med ett
+              generöst friskvårdsbidrag.
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
-            <FeatureCard color="success" title="Föräldralön">
-              Vi har över 50% föräldrar på Iteam och är måna om vårt familjeliv. Casha in lite extra när du är föräldraledig och häng med oss i #parenting-kanalen
+            <FeatureCard color="info" title="Föräldralön">
+              Vi har över 50% föräldrar på Iteam och är måna om vårt familjeliv.
+              Casha in lite extra när du är föräldraledig och häng med oss i
+              #parenting-kanalen
             </FeatureCard>
           </Col>
           <Col md="6" xl="4" className="mb-5">
