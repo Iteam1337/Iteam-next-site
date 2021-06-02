@@ -37,8 +37,9 @@ const Feature = () => (
       <Container>
         <Row className="justify-content-center">
           <Col lg="4" className="mb-5 mb-lg-4">
-            <FeatureCard title="Användarcentrerat" iconImage={iconInsight}>
-              Vi involverar användarna tidigt och gör allt för att lära oss mer om de bakomliggande behoven. Insikterna hjälper oss att prioritera det som är viktigt för både dig och slutanvändarna.
+            <FeatureCard title="Användarstyrd process" iconImage={iconInsight}>
+            Vi involverar användarna tidigt och gör allt för att lära oss mer om de bakomliggande behoven. 
+            Insikterna hjälper oss att prioritera det som är viktigt för både dig och slutanvändarna.
             </FeatureCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-4">

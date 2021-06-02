@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const GlobalContext = React.createContext();
 
@@ -68,6 +69,15 @@ const GlobalProvider = ({ children }) => {
         decCartTotal,
       }}
     >
+      <Helmet>
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/5211588.js"
+        ></script>
+      </Helmet>
       {children}
     </GlobalContext.Provider>
   );
