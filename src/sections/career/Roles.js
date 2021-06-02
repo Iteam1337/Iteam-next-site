@@ -38,7 +38,7 @@ const Location = styled.span`
 `;
 
 const BadgeStyled = styled(Badge)`
-  background-color: ${({ theme, bg }) => `rgba(${theme.colors[bg]}, 0.15)`};
+  background-color: ${({ theme, bg }) => rgba(`${theme.colors[bg]}`, 0.15)};
   color: ${({ theme, bg }) => theme.colors[bg]};
   border: none;
   font-weight: 300;
