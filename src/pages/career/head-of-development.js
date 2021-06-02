@@ -2,7 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import PageWrapper from "../../components/PageWrapper";
-import { Section, Title, Text, Box } from "../../components/Core";
+import { Section, Title, Text, Box, ImgContainer } from "../../components/Core";
+import imgRole from "../../assets/image/jpeg/from-top.jpg";
 
 const OpeningDetails = () => {
   return (
@@ -67,6 +68,12 @@ const OpeningDetails = () => {
                     kommer att vara situerad i Stockholm eller Göteborg.
                   </Text>
                 </Box>
+                <ImgContainer
+                  className="text-center"
+                  pb={["50px", null, "75px"]}
+                >
+                  <img src={imgRole} alt="" className="img-fluid" />
+                </ImgContainer>
                 <Box pb={["40px", null, "65px"]}>
                   <Title variant="card" mb="18px">
                     Rollen

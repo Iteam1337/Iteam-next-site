@@ -12,6 +12,7 @@ import Select from "./Select";
 import Switch from "./Switch";
 import Span from "./Span";
 import List from "./List";
+import ImgContainer from "./ImgContainer";
 
 export {
   Box,
@@ -28,4 +29,5 @@ export {
   Switch,
   Span,
   List,
+  ImgContainer,
 };
