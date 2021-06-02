@@ -1,36 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
-import {
-  Title,
-  Button,
-  Section,
-  Box,
-  Text,
-  InputGroup,
-} from "../../components/Core";
-import { device } from "../../utils";
-
+import { Section } from "../../components/Core";
+import HubspotForm from "../../components/HubspotForm";
 import imgCtaBG from "../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg";
-import imgOval from "../../assets/image/png/l2-cta-oval.png";
-
-const ImageBottom = styled(Box)`
-  border: 10px solid transparent;
-  box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
-  position: absolute;
-  top: 21%;
-  right: 0;
-  z-index: 2;
-  border-radius: 500px;
-  max-width: 50%;
-  overflow: hidden;
-
-  @media ${device.md} {
-    max-width: 100%;
-    right: 15%;
-  }
-`;
 
 const CTA = () => (
   <>
@@ -38,7 +11,7 @@ const CTA = () => (
       <Container>
         <Row className="align-items-center">
           <Col lg={6} md={10} className="">
-            <div className="position-relative mb-5">
+            <div className="position-relative">
               <div
                 className="img-1"
                 data-aos="fade-down"
@@ -58,30 +31,15 @@ const CTA = () => (
           </Col>
           <Col
             lg={6}
-            md={9}
+            md={10}
             className=""
             data-aos="fade-right"
             data-aos-duration="750"
             data-aos-once="true"
+            data-aos-delay="500"
           >
             <div className="">
-              <Title color="light">Get started now</Title>
-              <Text color="light" opacity={0.7} mb={4}>
-                Create custom landing pages with Omega that converts more
-                visitors than any website. With lots of unique blocks, you can
-                easily build a page without coding.
-              </Text>
-              <div className="pr-sm-5">
-                <InputGroup
-                  icon={<i className="icon icon-email-84" />}
-                  placeholder="Email address"
-                  className="text-center"
-                  pr="4.125rem"
-                />
-                <Button width="100%" mt={3}>
-                  Get Started
-                </Button>
-              </div>
+              <HubspotForm value="mvp" title="Boka in ett möte" />
             </div>
           </Col>
         </Row>
