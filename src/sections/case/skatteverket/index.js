@@ -1,16 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Section, Box, Title, Text } from "../../../components/Core";
+import {
+  Section,
+  Box,
+  Title,
+  Text,
+  ImgContainer,
+} from "../../../components/Core";
 
 import imgCase1 from "../../../assets/image/case/skatteverket.jpeg";
-import { marginLeft } from "styled-system";
-
-const ImgContainer = styled(Box)`
-  border-radius: 10px;
-  overflow: hidden;
-`;
 
 const CaseDetails = () => (
   <>
