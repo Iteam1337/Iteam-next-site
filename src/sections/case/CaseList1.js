@@ -63,8 +63,8 @@ const CaseList = () => (
           <Column>
             <PostCard
               img={imgCase4}
-              title="Skatteverket & Karios Future"
-              link="/case/skatteverket-kairos-future"
+              title="Skatteverket"
+              link="/case/skatteverket"
             >
               Säkra kvitton genom kryptoteknik
             </PostCard>
