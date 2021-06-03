@@ -29,7 +29,7 @@ const TermsConditions = () => {
                     Vad är personuppgifter?
                   </Title>
                   <Text variant="small">
-                    Med personuppgifter avses all slags information som direkt eller indirekt kan hänföras till en fysisk person som är i livet. Nedan riktlinjer följer de skyldigheter och rättigheter som gäller enligt dataskyddsförordningen eller annan rättsligt bindande bestämmelse.
+                    Med personuppgifter avses all slags information som direkt eller indirekt kan hänföras till en fysisk person som är i livet. Våra riktlinjer följer de skyldigheter och rättigheter som gäller enligt dataskyddsförordningen eller annan rättsligt bindande bestämmelse.
                   </Text>
                 </Box>
                 <Box mt={["40px", null, "50px"]}>
