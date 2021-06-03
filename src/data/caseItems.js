@@ -1,7 +1,7 @@
 export const caseItems = [
   {
-    title: "Tjejjouren Väst",
-    subTitle: "Appen Stella ger tjejer stöd dygnet runt",
+    title: "Stella - Tjejjouren Väst",
+    subTitle: "Mobilapp ger unga tjejer stöd dygnet runt",
     link: "/case/tjejjouren-vast",
     img: require("../assets/image/jpeg/case-card-img-2.jpg"),
   },
@@ -26,9 +26,9 @@ export const caseItems = [
     img: require("../assets/image/jpeg/case-card-img-3.jpg"),
   },
   {
-    title: "Skatteverket & Karios Future",
-    subTitle: "Säkra kvitton genom kryptoteknik",
-    link: "/case/skatteverket-kairos-future",
+    title: "Skatteverket",
+    subTitle: "Säkra kvittohanteringen med kryptoteknik",
+    link: "/case/skatteverket",
     img: require("../assets/image/case/Digitala_kvitton.png"),
   },
   {
