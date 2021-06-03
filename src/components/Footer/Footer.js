@@ -122,7 +122,7 @@ const Footer = ({ isDark = true }) => {
                       <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
                           <a href="https://maps.google.com/?q=Iteam, Järntorgsgatan, Göteborg" target="_blank">
-                          Järntorgsgatan 12-14
+                          Järntorgsgatan 12-14<br/>
                           413 01 Göteborg
                           </a>
                         </li>
