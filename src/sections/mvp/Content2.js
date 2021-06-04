@@ -4,8 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
-import imgContentBig from "../../assets/image/jpeg/Mac-Plus-Lowres.jpg";
-import imgOval from "../../assets/image/png/l2-content3-oval.png";
+import imgDesignSprint from "../../assets/image/jpeg/design-sprint.jpeg";
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;
@@ -50,7 +49,7 @@ const Content2 = () => (
                 data-aos-duration="750"
                 data-aos-once="true"
               >
-                <img src={imgContentBig} alt="" className="img-fluid" />
+                <img src={imgDesignSprint} alt="" className="img-fluid" />
               </ImageRight>
             </div>
           </Col>
