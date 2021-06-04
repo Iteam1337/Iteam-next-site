@@ -3,7 +3,7 @@ import Link from "next/link";
 import { rgba } from "polished";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Title, Section, Text, Badge } from "../../components/Core";
+import { Title, Section, Text, A } from "../../components/Core";
 import styled from "styled-components";
 
 const Card = styled.a`
@@ -20,10 +20,9 @@ const Card = styled.a`
   cursor: pointer;
   &:hover {
     box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
-    color: #0056b3 !important;
     text-decoration: none;
     .title {
-      color: #0056b3 !important;
+      color: ${({ theme }) => theme.colors.info};
     }
   }
 `;
@@ -74,11 +73,11 @@ const Roles = () => (
               <Title>Lediga tjänster</Title>
               <Text>
                 Kika igenom våra öppningar just nu,{" "}
-                <a href="mailto:internship@iteam.se">
+                <A color="info" href="mailto:internship@iteam.se">
                   anmäl intresse för praktik
-                </a>{" "}
+                </A>{" "}
                 eller{" "}
-                <a href="mailto:joinus@iteam.se">skicka en spontantansökan</a>{" "}
+                <A color="info" href="mailto:joinus@iteam.se">skicka en spontantansökan</A>{" "}
                 och berätta vad du drömmer om att göra ihop med oss
               </Text>
             </div>

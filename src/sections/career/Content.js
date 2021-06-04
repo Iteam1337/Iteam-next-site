@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import Gravatar from "react-gravatar";
-import { Title, Section, Box, Text, ImgContainer } from "../../components/Core";
+import { Title, Section, Box, Text, A } from "../../components/Core";
 import Quote from "../../components/Quote";
 
 import GlobalContext from "../../context/GlobalContext";
@@ -17,8 +17,6 @@ const Card = styled.div`
   padding: 35px;
   transition: 0.4s;
   border-radius: 10px;
-  }
-
 `;
 
 const Content = () => {
@@ -37,7 +35,7 @@ const Content = () => {
                 Developers, musikälskare, innovatörer, UX-designers, arkitekter,
                 wannabe-triathleter, agila coacher, vi är ett gäng med rötterna
                 i tekniken, internet och människan. Mer om oss alla finns{" "}
-                <a href="/about#people">här</a>
+                <A href="/about#people" color="info">här</A>
               </Text>
             </Col>
           </Row>
