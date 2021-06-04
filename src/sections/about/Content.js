@@ -38,7 +38,7 @@ Grunden handlar om att våga sätta igång. Att inte avvakta till att man har al
         <Row className="mt-5">
           <Col lg="4" sm="5" className="mb-4 ">
             <ContentImg>
-              <img src={imgContent1} alt="" className="img-fluid" />
+              <img src={imgContent1} alt="" className="img-fluid" style={{objectFit: 'cover', height: '100%'}}  />
             </ContentImg>
           </Col>
           <Col lg="8" sm="7" className="mb-4">
