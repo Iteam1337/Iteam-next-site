@@ -88,7 +88,7 @@ export const menuItems = [
     label: "Karriär",
   },
   {
-    name: "blog-regular",
+    name: "aktuellt",
     label: "Aktuellt",
   },
   { name: "about", label: "Om oss" },
