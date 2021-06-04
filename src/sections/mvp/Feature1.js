@@ -66,7 +66,9 @@ const Feature = () => (
               <Title color="light">Det är inte så svårt.</Title>
               <Text color="light" >
               Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text>
-              <Button mt={4}>Learn more</Button>
+              <a href="#book">
+                <Button mt={4}>Boka möte</Button>
+              </a>
             </Box>
           </Col>
           <Col md="8" lg="5" className="order-lg-1 mt-5 mt-lg-0">

@@ -7,7 +7,7 @@ import imgCtaBG from "../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg";
 
 const CTA = () => (
   <>
-    <Section bg="ash">
+    <Section bg="ash" id="book">
       <Container>
         <Row className="align-items-center">
           <Col lg={6} md={10} className="">
