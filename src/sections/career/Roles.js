@@ -37,11 +37,6 @@ const Location = styled.span`
   align-items: center;
 `;
 
-const BadgeStyled = styled(Badge)`
-  background-color: ${({ theme, bg }) => rgba(`${theme.colors[bg]}`, 0.15)};
-  color: ${({ theme, bg }) => theme.colors[bg]};
-  border: none;
-  font-weight: 300;
 `;
 
 const RolesCard = ({
@@ -59,7 +54,6 @@ const RolesCard = ({
         <Location>
           <i className="icon icon-pin-3 mr-1"></i> {location}
         </Location>
-        <BadgeStyled bg={color}>{type}</BadgeStyled>
       </div>
       <Title variant="card" className="title" fontWeight={500}>
         {title}
