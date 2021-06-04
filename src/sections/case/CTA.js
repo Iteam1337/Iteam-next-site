@@ -43,7 +43,9 @@ const CTA = () => (
               </Text>
             </Box>
             <Box>
-              <Button>Boka möte</Button>
+              <a href="/book">
+                <Button>Boka möte</Button>
+              </a>
             </Box>
           </Col>
         </Row>
