@@ -19,11 +19,11 @@ const LandingPage4 = () => {
         <GoogleAnalytics />
         <Hero />
         <Feature />
-        <Clients />
         <Content1 />
         <Content2 />
         <Testimonial />
-        <Fact />
+        {/* <Fact /> */}
+        <Clients />
         <Pricing />
         <Faq />
         <CTA />
