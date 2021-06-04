@@ -50,7 +50,10 @@ const Feature = () => (
               <Title color="light">Det är inte så svårt.</Title>
               <Text color="light" >
               {/* Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text> */}
-              Oavsett om du har ett problem du behöver lösa eller redan har en idé så hjälper vi dig. Vi börjar där du står och utgår ifrån det helt enkelt. Ibland gör vi en <a href="/designsprint">Designsprint</a> för att kickstarta samarbetet. Andra gånger gör vi research om användarbehov för att försäkra oss om att vi löser rätt problem.
+              Oavsett om du har ett problem du behöver lösa eller redan har en idé så hjälper vi dig. 
+              Vi börjar där du står och utgår ifrån det helt enkelt. 
+              Ibland gör vi en <a href="#design_sprint">Designsprint</a> för att kickstarta samarbetet. 
+              Andra gånger gör vi research om användarbehov för att försäkra oss om att vi löser rätt problem.
               </Text>
               <a href="#book">
                 <Button mt={4}>Boka möte</Button>

@@ -38,7 +38,7 @@ const ImageRight = styled(Box)`
 const Content2 = () => (
   <>
     {/* <!-- Content section 1 --> */}
-    <Section>
+    <Section id="design_sprint">
       <Container>
         <Row className="align-items-center">
           <Col lg="6" md="10" className="order-lg-2 mb-4">
