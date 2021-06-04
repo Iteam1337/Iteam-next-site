@@ -1,6 +1,5 @@
 // import App from 'next/app'
 import TagManager from "react-gtm-module";
-import ReactGA from "react-ga";
 import Layout from "../components/Layout";
 import { GlobalProvider } from "../context/GlobalContext";
 
@@ -25,11 +24,6 @@ const tagManagerArgs = {
 if (process.browser) {
   TagManager.initialize(tagManagerArgs);
 }
-const trackingId = "UA-2430046-1";
-
-ReactGA.initialize(trackingId);
-
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 const MyApp = ({ Component, pageProps, router }) => {
   if (router.pathname.match(/sign|reset|coming/)) {
