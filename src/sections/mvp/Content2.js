@@ -4,8 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
-import imgContentBig from "../../assets/image/jpeg/Mac-Plus-Lowres.jpg";
-import imgOval from "../../assets/image/png/l2-content3-oval.png";
+import imgDesignSprint from "../../assets/image/jpeg/design-sprint.jpeg";
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;
@@ -50,17 +49,8 @@ const Content2 = () => (
                 data-aos-duration="750"
                 data-aos-once="true"
               >
-                <img src={imgContentBig} alt="" className="img-fluid" />
+                <img src={imgDesignSprint} alt="" className="img-fluid" />
               </ImageRight>
-              <ImageBottom
-                bg="light"
-                data-aos="fade-right"
-                data-aos-duration="750"
-                data-aos-once="true"
-                data-aos-delay="500"
-              >
-                <img src={imgOval} alt="" className="img-fluid" />
-              </ImageBottom>
             </div>
           </Col>
           <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
@@ -72,10 +62,10 @@ const Content2 = () => (
               <div>
                 <Title>Man kommer inte ifrån legacy.</Title>
                 <Text mb={4}>
-                  Våra lösningar bygger oftast på någon form av integration mot underliggande system. Ibland så gamla som från 80-talet. Vi vet hur man tämjer gamla system.
+                  Våra lösningar bygger oftast på någon form av integration mot
+                  underliggande system. Ibland så gamla som från 80-talet. Vi
+                  vet hur man tämjer gamla system.
                 </Text>
-
-                <Button mt={3}>Get Started</Button>
               </div>
             </div>
           </Col>

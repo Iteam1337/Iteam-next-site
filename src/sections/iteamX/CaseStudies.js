@@ -134,7 +134,7 @@ const CaseCard = ({
         <img src={img} alt="" />
         <BtnContainer>
           <Button onClick={() => (window.location.href = link)}>
-            View Case Study
+            Läs case
           </Button>
         </BtnContainer>
       </div>

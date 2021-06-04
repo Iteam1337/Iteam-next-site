@@ -16,10 +16,6 @@ const BlogRegular = () => {
             <Row className="justify-content-center text-center">
               <Col lg="8">
                 <Title variant="hero">Aktuellt på Iteam</Title>
-                <Text>
-                  Create custom landing pages with Omega that converts more
-                  visitors than any website.
-                </Text>
               </Col>
             </Row>
           </Container>
