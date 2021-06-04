@@ -52,15 +52,6 @@ const Content2 = () => (
               >
                 <img src={imgContentBig} alt="" className="img-fluid" />
               </ImageRight>
-              <ImageBottom
-                bg="light"
-                data-aos="fade-right"
-                data-aos-duration="750"
-                data-aos-once="true"
-                data-aos-delay="500"
-              >
-                <img src={imgOval} alt="" className="img-fluid" />
-              </ImageBottom>
             </div>
           </Col>
           <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
@@ -72,10 +63,10 @@ const Content2 = () => (
               <div>
                 <Title>Man kommer inte ifrån legacy.</Title>
                 <Text mb={4}>
-                  Våra lösningar bygger oftast på någon form av integration mot underliggande system. Ibland så gamla som från 80-talet. Vi vet hur man tämjer gamla system.
+                  Våra lösningar bygger oftast på någon form av integration mot
+                  underliggande system. Ibland så gamla som från 80-talet. Vi
+                  vet hur man tämjer gamla system.
                 </Text>
-
-                <Button mt={3}>Get Started</Button>
               </div>
             </div>
           </Col>
