@@ -43,7 +43,7 @@ Grunden handlar om att våga sätta igång. Att inte avvakta till att man har al
           </Col>
           <Col lg="8" sm="7" className="mb-4">
             <ContentImg>
-              <img src={imgContent2} alt="" className="img-fluid" style={{contentFit: 'cover', height: '100%'}} />
+              <img src={imgContent2} alt="" className="img-fluid" style={{objectFit: 'cover', height: '100%'}} />
             </ContentImg>
           </Col>
         </Row>
