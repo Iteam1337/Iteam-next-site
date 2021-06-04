@@ -147,7 +147,7 @@ const Pricing = () => {
             </div>
 
             <Row>
-              <Col lg="6" className="mb-5">
+              <Col lg="12" className="mb-5 align-items-center">
                 <CardPricing>
                   <div className="mb-4">
                     <TitleSmall>Helt team</TitleSmall>
@@ -173,10 +173,12 @@ const Pricing = () => {
                       <li>Max tre dagar i veckan</li>
                     </ULStyled>
                   </div>
-                  <Button bg="secondary">Boka tid för intromöte</Button>
+                  <a href="/book">
+                    <Button bg="secondary">Boka tid för intromöte</Button>
+                  </a>
                 </CardPricing>
               </Col>
-              <Col lg="6" className="mb-4">
+              {/*<Col lg="6" className="mb-4">
                 <CardPricing>
                   <div className="mb-4">
                     <TitleSmall>Konsult</TitleSmall>
@@ -204,7 +206,7 @@ const Pricing = () => {
                   </div>
                   <Button bg="secondary">Boka tid för intromöte</Button>
                 </CardPricing>
-              </Col>
+              </Col>*/}
             </Row>
           </div>
         </Container>

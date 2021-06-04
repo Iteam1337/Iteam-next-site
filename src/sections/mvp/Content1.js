@@ -5,7 +5,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
-import imgRounded from "../../assets/image/png/l2-content1-oval.png";
 import imgHalf from "../../assets/image/jpeg/Radu-Lowres.jpg";
 
 const ImageHalfContainer = styled(Box)`
@@ -87,15 +86,6 @@ const Content1 = () => (
               <div className="h-100">
                 <img src={imgHalf} alt="" className="img-half img-fluid" />
               </div>
-              <ImageBottom
-                bg="light"
-                data-aos="fade-up"
-                data-aos-duration="750"
-                data-aos-once="true"
-                data-aos-delay="500"
-              >
-                <img src={imgRounded} alt="" className="img-fluid" />
-              </ImageBottom>
             </ImageHalfContainer>
           </Col>
         </Row>

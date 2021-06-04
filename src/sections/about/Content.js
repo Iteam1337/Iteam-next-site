@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box, Text } from "../../components/Core";
 
-import imgContent1 from "../../assets/image/jpeg/Daily-Vimla-Turing-1-Lowres.jpg";
+import imgContent1 from "../../assets/image/jpeg/_DSC6527_.jpg";
 import imgContent2 from "../../assets/image/jpeg/Lounge-Martin-Mikael-Christian-Lowres.jpg";
 
 const ContentImg = styled(Box)`
@@ -12,6 +12,7 @@ const ContentImg = styled(Box)`
   border-radius: 10px;
   overflow: hidden;
   max-height: 515px;
+  height: 100%;
 `;
 
 const Content = () => (
@@ -42,7 +43,7 @@ Grunden handlar om att våga sätta igång. Att inte avvakta till att man har al
           </Col>
           <Col lg="8" sm="7" className="mb-4">
             <ContentImg>
-              <img src={imgContent2} alt="" className="img-fluid" />
+              <img src={imgContent2} alt="" className="img-fluid" style={{objectFit: 'cover', height: '100%'}} />
             </ContentImg>
           </Col>
         </Row>

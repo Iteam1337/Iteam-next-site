@@ -17,6 +17,7 @@ const Card = styled.a`
   padding: 35px;
   transition: 0.4s;
   border-radius: 10px;
+  cursor: pointer;
   &:hover {
     box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
     color: #0056b3 !important;
@@ -33,14 +34,11 @@ const Location = styled.span`
   font-weight: 300;
   margin-right: 5px;
   display: flex;
-  align-items: center;
-`;
+  align-items: flex-start;
 
-const BadgeStyled = styled(Badge)`
-  background-color: ${({ theme, bg }) => `rgba(${theme.colors[bg]}, 0.15)`};
-  color: ${({ theme, bg }) => theme.colors[bg]};
-  border: none;
-  font-weight: 300;
+  > i {
+    margin-top: 4px;
+  }
 `;
 
 const RolesCard = ({
@@ -49,15 +47,15 @@ const RolesCard = ({
   location,
   type,
   children,
+  link,
   ...rest
 }) => (
-  <Link href="/">
+  <Link href={link}>
     <Card className="card-job top-only" {...rest}>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <Location>
-          <i className="icon icon-pin-3 mr-1"></i> {location}
+          <i className="icon icon-pin-3 mr-1" /> {location}
         </Location>
-        <BadgeStyled bg={color}>{type}</BadgeStyled>
       </div>
       <Title variant="card" className="title" fontWeight={500}>
         {title}
@@ -75,34 +73,34 @@ const Roles = () => (
             <div>
               <Title>Lediga tjänster</Title>
               <Text>
-                Kika igenom våra öppningar just nu, <a href="mailto:internship@iteam.se">anmäl intresse för praktik</a> eller <a href="mailto:joinus@iteam.se">skicka en spontantansökan</a> och berätta vad du drömmer om att göra ihop med oss
+                Kika igenom våra öppningar just nu,{" "}
+                <a href="mailto:internship@iteam.se">
+                  anmäl intresse för praktik
+                </a>{" "}
+                eller{" "}
+                <a href="mailto:joinus@iteam.se">skicka en spontantansökan</a>{" "}
+                och berätta vad du drömmer om att göra ihop med oss
               </Text>
             </div>
           </Col>
         </Row>
-        <Row className="mt-lg-5">
-          <Col lg="4" md="6" className="pt-4">
-            <RolesCard
-              color="warning"
-              title="Backendutvecklare Elixir"
-              type="Full-time"
-              location="Göteborg, Stockholm eller remote"
-            />
-          </Col>
+        <Row className="mt-lg-5 justify-content-center">
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
               color="primary"
-              title="Frontendutvecklare"
+              title="Head of Development"
               type="Full-time"
-              location="Göteborg, Stockholm eller remote"
+              location="Göteborg eller Stockholm"
+              link="/career/head-of-development"
             />
           </Col>
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
-              color="ash"
-              title="UX-designer"
+              color="warning"
+              title="Backend developer"
               type="Full-time"
               location="Göteborg, Stockholm eller remote"
+              link="/career/backend-developer"
             />
           </Col>
         </Row>

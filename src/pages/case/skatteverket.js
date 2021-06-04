@@ -18,10 +18,9 @@ const CaseStudyDetails = () => {
             <Row className="justify-content-center text-center">
               <Col lg="8">
                 <Box className="text-center" mb={4}>
-                  Skatteverket & Karios Future
+                  Skatteverket
                 </Box>
-                <Title variant="hero">Digitala kvitton</Title>
-                <Text>Säkra kvitton genom kryptoteknik</Text>
+                <Title variant="hero">Säkra kvitton genom kryptoteknik</Title>
               </Col>
             </Row>
           </Container>

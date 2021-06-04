@@ -8,7 +8,7 @@ import { Title, Section, Box, Text } from "../../components/Core";
 import { device, breakpoints } from "../../utils";
 
 import imgCustomer1 from "../../assets/image/jpeg/littorin.jpg";
-import imgCustomer2 from "../../assets/image/jpeg/testimonial-image-2.jpg";
+import imgCustomer2 from "../../assets/image/jpeg/TomAiraksinen.jpg";
 import imgQuote from "../../assets/image/png/quote-shape.png";
 
 const SliderStyled = styled(Slider)`

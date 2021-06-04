@@ -11,7 +11,7 @@ const CTA = () => (
         <Row className="justify-content-center">
           <Col md="8" lg="7">
             <Box className="text-center">
-              <Title color="light">Move Fast, Fix Things</Title>
+              <Title color="light">We move fast and fix things</Title>
               <Text mb={4} color="light" opacity={0.7}>
                 Jobbar du med oss på Iteam vet du att lösningen kommer bli bra, användbar och värdefull.
               </Text>

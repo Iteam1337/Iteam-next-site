@@ -31,6 +31,7 @@ const Contact1 = () => {
             <Row className="align-items-center">
               <Col lg="10">
                 <FormStyled
+                  id="form"
                   name="contact1"
                   method="post"
                   data-netlify="true"
