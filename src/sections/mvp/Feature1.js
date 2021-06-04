@@ -13,22 +13,6 @@ const FeatureCard = ({
 }) => (
   <Box width={"100%"} bg="light" p="30px" borderRadius={10} {...rest}>
     <div className="d-flex justify-content-between align-items-start">
-      <Box
-        size={69}
-        minWidth={69}
-        minHeight={69}
-        borderRadius="50%"
-        color={color}
-        fontSize="28px"
-        className="d-flex justify-content-center align-items-center"
-        mr="20px"
-        css={`
-          background-color: ${({ theme, color }) =>
-            rgba(theme.colors[color], 0.1)};
-        `}
-      >
-        <i className={`icon ${iconName}`}></i>
-      </Box>
       <div>
         <Text
           color="heading"
