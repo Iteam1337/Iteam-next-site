@@ -42,15 +42,12 @@ const OpeningDetails = () => {
                     engagera med open source-utveckling.
                     <br />
                     <br />
-                    Under våren har vi rekryterat fyra nya utvecklare och UX:are.
-                    Vi har också startat två riktigt 
+                    Under våren har vi startat två riktigt 
                     spännande nya samarbeten, med en streaming-tjänst i Stockholm 
                     och digital transporttjänst i Göteborg.  I Vinnova-projektet 
                     Predictive Movement arbetar vi med en AI-baserad tjänst för 
-                    att samordna transporter i glesbygd. 
-                    <br />
-                    <br />
-                    Nu söker vi dig som kommer vara en nyckelperson för att Iteam 
+                    att samordna transporter i glesbygd. Nu söker vi dig som kommer 
+                    vara en nyckelperson för att Iteam 
                     ska fortsätta vara en  partner i teknisk och
                     strategisk framkant, ett måste för hållbara digitala
                     lösningar i ett samhälle av idag.

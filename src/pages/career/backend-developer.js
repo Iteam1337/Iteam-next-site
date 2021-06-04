@@ -38,15 +38,12 @@ const OpeningDetails = () => {
                   engagera med open source-utveckling.
                   <br />
                   <br />
-                  Under våren har vi rekryterat fyra nya utvecklare och UX:are.
-                  Vi har också startat två riktigt 
+                  Under våren har vi startat två riktigt 
                   spännande nya samarbeten, med en streaming-tjänst i Stockholm 
                   och digital transporttjänst i Göteborg.  I Vinnova-projektet 
                   Predictive Movement arbetar vi med en AI-baserad tjänst för 
-                  att samordna transporter i glesbygd. 
-                  <br />
-                  <br />
-                  Nu söker vi dig som kommer vara en nyckelperson för att Iteam 
+                  att samordna transporter i glesbygd. Nu söker vi dig som kommer 
+                  vara en nyckelperson för att Iteam 
                   ska fortsätta vara en  partner i teknisk och
                   strategisk framkant, ett måste för hållbara digitala
                   lösningar i ett samhälle av idag.
@@ -76,11 +73,8 @@ const OpeningDetails = () => {
                 (and counting). I agila, tvärfunktionella team bygger du 
                 innovativa applikationer med hjälp av den senaste tekniken. 
                 Du utforskar och utvärderar nya tekniker och metoder, sprider 
-                din kunskap och omsätter den i praktiken - i ditt dagliga 
-                arbete och genom mentorskap. Vår tech-stack är i sin helhet 
-                Node.js, React, ReactNative, Typescript, Docker, Kubernetes, 
-                ElasticSearch, GraphQL, PostgreSQL, Elixir, RabbitMQ, men ser 
-                olika ut i våra olika team. Vana vid automatisering och 
+                din kunskap och omsätter den i praktiken - i ditt dagliga arbete 
+                och genom mentorskap. Vana vid automatisering och 
                 automatiserad testning är ett måste i alla våra uppdrag!
                 </Text>
               </Box>   
@@ -95,7 +89,6 @@ const OpeningDetails = () => {
                   <li>God förmåga att skriva kod som är testbar samt skriva automatiska tester</li>
                   <li>God förmåga att sätta upp en ny miljö, från källkod -> produktion (byggen, tester, separata miljöer, automatisk deployment osv)</li>
                   <li>God kunskap om integrationer och att bygga API:er</li>
-                  <li>Erfarenhet av att utvärdera ny teknik såsom språk, frameworks</li>
                   <li>4+ års erfarenhet av systemutveckling</li>
                   <li>1+ års erfarenhet av ledarskap (t.ex. coacha, mentorera, facilitera och leda grupper, hålla utbildning, tech lead)</li>
                   <li>Erfarenhet av agil, värdedriven utveckling</li>
