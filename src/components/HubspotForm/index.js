@@ -14,6 +14,7 @@ const FormStyled = styled.form`
   border-radius: 10px;
   background-color: #f7f7fb;
   width: 100%;
+  text-align: center;
 `;
 
 const HubspotForm = ({
