@@ -3,25 +3,24 @@ import styled from "styled-components";
 import { color, space, typography, shadow } from "styled-system";
 
 const Paragraph = styled.p`
+  margin-bottom: 0;
+  font-size: 21px;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 38px;
   ${color};
   ${space};
   ${typography};
   ${shadow};
-  font-weight: 400;
-  margin-bottom: 0;
-  font-size: 21px;
-  letter-spacing: normal;
-  line-height: 38px;
 `;
 
 const ParagraphSmall = styled(Paragraph)`
+  font-size: 16px;
+  line-height: 28px;
   ${color};
   ${space};
   ${typography};
   ${shadow};
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 28px;
 `;
 
 const Text = ({ variant, ...props }) => {

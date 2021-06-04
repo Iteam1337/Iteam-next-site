@@ -10,7 +10,7 @@ const globalStyle = createGlobalStyle`
   p, .p{
     color: ${({ theme }) => theme.colors.text};
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: -0.56px;
     line-height: 30px;
     margin-bottom: 0;
