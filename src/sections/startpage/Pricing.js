@@ -146,8 +146,9 @@ const Pricing = () => {
               </div>
             </div>
 
-            <Row>
-              <Col lg="12" className="mb-5 align-items-center">
+
+            <Row className="justify-content-center" >
+              <Col lg="6" className="mb-5 align-items-center" >
                 <CardPricing>
                   <div className="mb-4">
                     <TitleSmall>Helt team</TitleSmall>
