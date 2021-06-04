@@ -23,7 +23,7 @@ const SectionStyled = styled(Section)`
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.3)
     ),
-    /* bottom, image */ url(${imgL2HeroBg}) no-repeat;
+    /* bottom, image */ 
   background-size: cover;
   background-position: bottom left;
 
@@ -80,11 +80,11 @@ const Hero = () => {
               data-aos-duration="600"
               data-aos-delay="500"
               data-aos-once="true"
-            >
+            > Iteam MVP – När du vill bygga nytt
               <Box py={[null, null, null, 4]} pr={5} pt={[4, null]}>
                 <Title variant="hero">
-                  Utveckling av 
-                  <br /> nya tjänster
+                 Utveckling av
+                  <br /> nya digitala tjänster
                 </Title>
                 {/* <Text mb={4}>
                 Oavsett om du har ett problem du behöver lösa eller redan har en idé så hjälper vi dig. Vi börjar där du står och utgår ifrån det helt enkelt. Ibland gör vi en <a href="/designsprint">Designsprint</a> för att kickstarta samarbetet. Andra gånger gör vi research om användarbehov för att försäkra oss om att vi löser rätt problem.
