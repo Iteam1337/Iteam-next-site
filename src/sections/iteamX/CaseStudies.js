@@ -133,7 +133,9 @@ const CaseCard = ({
       <div className="img-container">
         <img src={img} alt="" />
         <BtnContainer>
-          <Button onClick={() => (window.location.href = link)}>Läs mer</Button>
+          <Button onClick={() => (window.location.href = link)}>
+            Läs case
+          </Button>
         </BtnContainer>
       </div>
       <TextContent bg={bg}>
