@@ -72,10 +72,9 @@ const OpeningDetails = () => {
                 Som utvecklare på Iteam kommer du att vara en av 12 utvecklare 
                 (and counting). I agila, tvärfunktionella team bygger du 
                 innovativa applikationer med hjälp av den senaste tekniken. 
-                Vår tech-stack är i sin helhet 
-                Node.js, React, ReactNative, Typescript, Docker, Kubernetes, 
-                ElasticSearch, GraphQL, PostgreSQL, Elixir, RabbitMQ, men ser 
-                olika ut i våra olika team. Vana vid automatisering och 
+                Du utforskar och utvärderar nya tekniker och metoder, sprider 
+                din kunskap och omsätter den i praktiken - i ditt dagliga arbete 
+                och genom mentorskap. Vana vid automatisering och 
                 automatiserad testning är ett måste i alla våra uppdrag!
                 </Text>
               </Box>   
