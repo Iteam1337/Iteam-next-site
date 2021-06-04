@@ -173,7 +173,9 @@ const Pricing = () => {
                       <li>Max tre dagar i veckan</li>
                     </ULStyled>
                   </div>
-                  <Button bg="secondary">Boka tid för intromöte</Button>
+                  <a href="/book">
+                    <Button bg="secondary">Boka tid för intromöte</Button>
+                  </a>
                 </CardPricing>
               </Col>
               {/*<Col lg="6" className="mb-4">
