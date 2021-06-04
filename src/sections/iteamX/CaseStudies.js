@@ -179,7 +179,7 @@ const CaseStudies = () => {
               >
                 <CaseCard
                   bg={i === 0 ? "secondary" : "light"}
-                  isDark={i === 0}
+                  isDark={false}
                   img={item.caseImg}
                   meta={item.tags}
                   title={item.title}
