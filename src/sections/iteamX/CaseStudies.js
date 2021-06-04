@@ -6,6 +6,7 @@ import { Title, Box, Text, Button } from "../../components/Core";
 import { device } from "../../utils";
 import imgCase1 from "../../assets/image/jpeg/l8-case-image-1.jpg";
 import imgCase2 from "../../assets/image/jpeg/l8-case-image-2.jpg";
+import { caseItems } from "../../data/caseItems";
 
 const CaseCardStyled = styled(Box)`
   width: 100%;
@@ -125,13 +126,16 @@ const CaseCard = ({
   meta = "",
   title = "",
   children = "",
+  link,
 }) => {
   return (
     <CaseCardStyled>
       <div className="img-container">
         <img src={img} alt="" />
         <BtnContainer>
-          <Button>View Case Study</Button>
+          <Button onClick={() => (window.location.href = link)}>
+            View Case Study
+          </Button>
         </BtnContainer>
       </div>
       <TextContent bg={bg}>
@@ -153,58 +157,44 @@ const CaseCard = ({
 };
 
 const CaseStudies = () => {
+  const XCase = caseItems.filter((item) => item.offer.includes("X"));
+
   return (
     <>
       {/* <!-- Content section --> */}
+      {}
+
       <Box bg="dark">
         <Container>
           <Row className="justify-content-center">
-            <Col
-              lg="6"
-              md="9"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-            >
-              <CaseCard
-                img={imgCase1}
-                meta={`AI, Kryptering, Egendata`}
-                title="Ansiktsigenkänning med bibehållen integritet"
+            {XCase.map((item, i) => (
+              <Col
+                key={i}
+                lg="6"
+                md="9"
+                className="mb-4"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-once="true"
               >
-                Lärare i Skellefteå kommun lägger cirka 16 000 timmar per år på 
-                närvaroregistrering, och har identifierat det som ett utmärkt område för 
-                effektivisering med digitala medel och AI. Kan man använda ansiktsigenkänning 
-                med bibehållen integritet?
-              </CaseCard>
-            </Col>
-            <Col
-              lg="6"
-              md="9"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="200"
-            >
-              <CaseCard
-                bg="light"
-                isDark={false}
-                img={imgCase2}
-                meta={`Blockkedjor, Kryptering`}
-                title="Säkra kvittohanteringen med kryptoteknik"
-              >
-                Sättet som digitala kvitton produceras och hanteras på idag underlättar 
-                för bedrägerier och försvårar skattekontroll. Kan man skapa ett digitalt fingeravtryck
-                för varje kvitto utan att samtidigt samla på sig för mycket data om människors beteenden?
-              </CaseCard>
-            </Col>
+                <CaseCard
+                  bg={i === 0 ? "secondary" : "light"}
+                  isDark={i === 0}
+                  img={item.caseImg}
+                  meta={item.tags}
+                  title={item.title}
+                  link={item.link}
+                >
+                  {item.intro}
+                </CaseCard>
+              </Col>
+            ))}
           </Row>
-          <Box className="text-center" pt={[4, null, null, null, 5]}>
+          {/* <Box className="text-center" pt={[4, null, null, null, 5]}>
             <Button variant="outline" color="light">
               Läs mer om våra Iteam X case
             </Button>
-          </Box>
+          </Box> */}
         </Container>
       </Box>
     </>

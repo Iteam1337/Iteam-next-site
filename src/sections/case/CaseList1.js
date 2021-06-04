@@ -14,8 +14,8 @@ const CaseList = () => (
         <Row>
           {caseItems.map((item, i) => (
             <Column key={i}>
-              <PostCard img={item.img} title={item.title} link={item.link}>
-                {item.subTitle}
+              <PostCard img={item.img} title={item.client} link={item.link}>
+                {item.intro}
               </PostCard>
             </Column>
           ))}
