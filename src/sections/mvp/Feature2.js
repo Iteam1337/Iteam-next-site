@@ -4,7 +4,15 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box } from "../../components/Core";
 
-const services = ["API", "Appar", "Plattformar"];
+const services = [
+  "API",
+  "Appar",
+  "Plattformar",
+  "Widgets",
+  "Interna portaler",
+  "Siter",
+  "Integrationer för nya tjänster",
+];
 
 const ContentCard = ({
   color = "primary",
@@ -80,88 +88,6 @@ const Feature2 = () => (
               <ContentCard title={service} color="primary" />
             </Col>
           ))}
-
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard title="Multiple Layouts" color="ash" />
-          </Col>
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard title="Mobile First Design" color="warning" />
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard title="Fully Responsive" color="ash" />
-          </Col>
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard title="Bootstrap 4 Framework" color="primary" />
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard title="Rich Documentation" color="ash" />
-          </Col>
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard title="Humanly Support" color="success" />
-          </Col>
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard title="Lifetime Updates" color="primary" />
-          </Col>
         </Row>
       </Container>
     </Section>
