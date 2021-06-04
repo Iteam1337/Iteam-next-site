@@ -9,7 +9,8 @@ import GlobalContext from "../../context/GlobalContext";
 
 const Card = styled.div`
   min-height: 100%;
-  box-shadow: 0 2px 4px rgba(14, 86, 124, 0.17);
+  box-shadow: 0px 42px 54px rgb(20 19 50 / 18%);
+  box-shadow: 0px 10px 80px rgb(20 19 50 / 15%);
   background-color: #ffffff;
   display: flex;
   justify-content: center;
