@@ -77,11 +77,7 @@ const Feature2 = () => (
               data-aos-once="true"
               data-aos-delay="50"
             >
-              <ContentCard
-                title={service}
-                color="primary"
-                iconName="icon-cards-2"
-              />
+              <ContentCard title={service} color="primary" />
             </Col>
           ))}
 
@@ -94,11 +90,7 @@ const Feature2 = () => (
             data-aos-once="true"
             data-aos-delay="50"
           >
-            <ContentCard
-              title="Multiple Layouts"
-              color="ash"
-              iconName="icon-layout-11"
-            />
+            <ContentCard title="Multiple Layouts" color="ash" />
           </Col>
           <Col
             lg="4"
@@ -109,11 +101,7 @@ const Feature2 = () => (
             data-aos-once="true"
             data-aos-delay="50"
           >
-            <ContentCard
-              title="Mobile First Design"
-              color="warning"
-              iconName="icon-phone-charging-3-2"
-            />
+            <ContentCard title="Mobile First Design" color="warning" />
           </Col>
         </Row>
         <Row className="justify-content-center">
@@ -126,11 +114,7 @@ const Feature2 = () => (
             data-aos-once="true"
             data-aos-delay="50"
           >
-            <ContentCard
-              title="Fully Responsive"
-              color="ash"
-              iconName="icon-sidebar-2"
-            />
+            <ContentCard title="Fully Responsive" color="ash" />
           </Col>
           <Col
             lg="4"
@@ -141,11 +125,7 @@ const Feature2 = () => (
             data-aos-once="true"
             data-aos-delay="50"
           >
-            <ContentCard
-              title="Bootstrap 4 Framework"
-              color="primary"
-              iconName="icon-grid-45"
-            />
+            <ContentCard title="Bootstrap 4 Framework" color="primary" />
           </Col>
         </Row>
         <Row className="justify-content-center">
@@ -158,11 +138,7 @@ const Feature2 = () => (
             data-aos-once="true"
             data-aos-delay="50"
           >
-            <ContentCard
-              title="Rich Documentation"
-              color="ash"
-              iconName="icon-bookmark-2-2"
-            />
+            <ContentCard title="Rich Documentation" color="ash" />
           </Col>
           <Col
             lg="4"
@@ -173,11 +149,7 @@ const Feature2 = () => (
             data-aos-once="true"
             data-aos-delay="50"
           >
-            <ContentCard
-              title="Humanly Support"
-              color="success"
-              iconName="icon-voice-recognition-2"
-            />
+            <ContentCard title="Humanly Support" color="success" />
           </Col>
           <Col
             lg="4"
@@ -188,11 +160,7 @@ const Feature2 = () => (
             data-aos-once="true"
             data-aos-delay="50"
           >
-            <ContentCard
-              title="Lifetime Updates"
-              color="primary"
-              iconName="icon-infinite"
-            />
+            <ContentCard title="Lifetime Updates" color="primary" />
           </Col>
         </Row>
       </Container>
