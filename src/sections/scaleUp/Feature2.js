@@ -6,8 +6,8 @@ import { Title, Section, Box } from "../../components/Core";
 
 const services = [
   "Affärsutveckling",
-  "DevOps",
   "Strategi",
+  "DevOps",
   "Automatiserad testning",
   "Agil kultur",
   "Agila arbetssätt",

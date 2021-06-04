@@ -12,7 +12,7 @@ import CTA from "../sections/mvp/CTA";
 const LandingPage2 = () => {
   return (
     <>
-      <PageWrapper >
+      <PageWrapper>
         <Hero />
         <Feature1 />
         <Content1 />

@@ -40,7 +40,7 @@ const HubspotForm = ({
       </Box>
       <input type="hidden" name="form-name" value={value} />
       <div
-        class="meetings-iframe-container"
+        className="meetings-iframe-container"
         data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
       />
     </FormStyled>
