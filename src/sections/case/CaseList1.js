@@ -26,10 +26,10 @@ const CaseList = () => (
           <Column>
             <PostCard
               img={imgCase2}
-              title="Tjejjouren Väst"
+              title="Stella - Tjejjouren Väst"
               link="/case/tjejjouren-vast"
             >
-              Appen Stella ger tjejer stöd dygnet runt
+              Mobilapp ger unga tjejer stöd dygnet runt
             </PostCard>
           </Column>
           <Column>
@@ -63,8 +63,8 @@ const CaseList = () => (
           <Column>
             <PostCard
               img={imgCase4}
-              title="Skatteverket & Karios Future"
-              link="/case/skatteverket-kairos-future"
+              title="Skatteverket"
+              link="/case/skatteverket"
             >
               Säkra kvitton genom kryptoteknik
             </PostCard>
