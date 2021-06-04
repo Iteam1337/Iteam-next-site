@@ -23,7 +23,7 @@ const CaseStudyDetails = () => {
                 <Title variant="hero">Utveckling av digitala tjänster</Title>
 
                 <Text>
-                  Vi rustar Sveriges bästa omställningsaktör för framtiden
+                  Vi rustar en av Sveriges omställningsaktörer för framtiden
                 </Text>
               </Col>
             </Row>

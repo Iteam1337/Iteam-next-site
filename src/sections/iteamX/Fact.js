@@ -26,7 +26,7 @@ const Fact = () => (
                 2012
               </Title>
               <Text color="lightShade">
-                Året då vi började använde NodeJS
+                Började vi med NodeJS
               </Text>
             </Box>
           </Col>
@@ -36,7 +36,7 @@ const Fact = () => (
                 2013
               </Title>
               <Text color="lightShade">
-                Året då vi började använda AI/ML
+                Började vi med AI/ML
               </Text>
             </Box>
           </Col>
@@ -46,7 +46,7 @@ const Fact = () => (
                 2016
               </Title>
               <Text color="lightShade">
-                Första AI-modellen i produktion.
+                Första AI-modellen i produktion
               </Text>
             </Box>
           </Col>
