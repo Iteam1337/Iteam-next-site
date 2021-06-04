@@ -60,11 +60,9 @@ const Content2 = () => (
               data-aos-once="true"
             >
               <div>
-                <Title>Man kommer inte ifrån legacy.</Title>
+                <Title>Se in i framtiden med Designsprint</Title>
                 <Text mb={4}>
-                  Våra lösningar bygger oftast på någon form av integration mot
-                  underliggande system. Ibland så gamla som från 80-talet. Vi
-                  vet hur man tämjer gamla system.
+                I en designsprint samlar vi ditt team för att fokusera på en utmaning. Vi skapar en gemensam förståelse för utmaningen och går från en idé till en testad prototyp på bara fyra dagar. Teamet får direkt feedback från användare och därmed en inblick i hur idéerna tas emot innan utvecklingen kommit igång.
                 </Text>
               </div>
             </div>

@@ -87,7 +87,7 @@ Vi har koll på de senaste teknikerna och vi vet hur man får gammal teknik att 
                     title="Användaren i centrum
 "
                   >
-Vi sätter alltid dina kunder och din verksamhet i centrum så att vi säkerställer att vi levererar något de vill ha. På så sätt skapar vi hela tiden värde för dig.
+Vi vet att nöjda användare är bra business. Därför sätter vi alltid dem i centrum och utgår från riktiga behov när vi tar fram nya lösningar.
                   </FeatureCard>
                 </Col>
                 <Col
