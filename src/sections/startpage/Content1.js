@@ -96,25 +96,10 @@ const Content1 = () => (
                   bara börja
                 </Title>
                 <Text mb={4}>
-                  Det som inte är i produktion skapar inget värde. Det är bara
-                  en kostnad. Därför tror vi inte på långa förarbeten som slutar
-                  i en rapport på någons skrivbord. Istället är vi helt
-                  övertygade om att för att komma igång behöver vi börja. Vi
-                  börjar genom att göra research kring era och era kunders
-                  behov, sätter upp en hypotes och utvecklar något litet. Sedan
-                  testar vi på riktiga kunder för att få nya insikter.
-                  Insikterna använder vi sedan för att bygga lite till, testa
-                  och få nya insikter. På detta sätt kommer tjänsten snabbt ut i
-                  produktion så att ni snabbt kan nå ut till era kunder och
-                  skapa värde på riktigt.
+                  Det som inte är i produktion skapar inget värde. Det är bara en kostnad. Därför tror vi inte på långa förarbeten som slutar i en rapport på någons skrivbord. Istället är vi övertygade om att för att komma igång behöver vi börja. Vi gör research kring er och era kunders behov, sätter upp hypoteser och utvecklar något litet. Därefter testar och utvecklar vi kontinuerligt utifrån nya insikter. På detta sätt kommer tjänsten snabbt ut i produktion och skapar användarnytta.
                 </Text>
 
-                <ULStyled>
-                  <li>Börja redan på måndag</li>
-                  <li>Tänk visionärt och småskaligt samtidigt</li>
-                  <li>Försök få helheten på plats först</li>
-                  <li>Iterera tillsammans med användarna</li>
-                </ULStyled>
+
               </div>
             </div>
           </Col>

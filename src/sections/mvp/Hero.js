@@ -88,7 +88,7 @@ const Hero = () => {
                   MVP: När du vill bygga något nytt.
                 </Title>
                 <Text mb={4}>
-                  Oavsett om du har ett problem du behöver lösa eller redan vet vad din MVP ska innehålla så hjälper vi dig. Vi börjar där du står och utgår ifrån det helt enkelt. Ibland gör vi en <a href="/designsprint">Designsprint</a> för att snabbt fatta stora beslut om vad vi behöver göra. Andra gånger börjar vi med research på era kunder för att validera er hypotes om vad som ska byggas.
+                Oavsett om du har ett problem du behöver lösa eller redan har en idé så hjälper vi dig. Vi börjar där du står och utgår ifrån det helt enkelt. Ibland gör vi en <a href="/designsprint">Designsprint</a> för att kickstarta samarbetet. Andra gånger gör vi research om användarbehov för att försäkra oss om att vi löser rätt problem.
                 </Text>
               </Box>
             </Col>

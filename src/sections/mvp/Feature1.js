@@ -99,7 +99,7 @@ Vi har koll på de senaste teknikerna och vi vet hur man får gammal teknik att 
                     title="Användaren i centrum
 "
                   >
-Vi sätter alltid dina kunder i centrum så att vi säkerställer att vi levererar något de vill ha. På så sätt skapar vi hela tiden värde för dig.
+Vi sätter alltid dina kunder och din verksamhet i centrum så att vi säkerställer att vi levererar något de vill ha. På så sätt skapar vi hela tiden värde för dig.
                   </FeatureCard>
                 </Col>
                 <Col
