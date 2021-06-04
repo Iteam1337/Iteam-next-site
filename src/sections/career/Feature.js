@@ -44,19 +44,6 @@ const OuterCircle = styled(Box)`
 const FeatureCard = ({ color = "primary", title, children, ...rest }) => (
   <Box width={"100%"} bg="light" {...rest}>
     <div className="d-flex justify-content-between align-items-start">
-      <Box
-        size={69}
-        minWidth={69}
-        minHeight={69}
-        borderRadius="50%"
-        color={color}
-        fontSize="28px"
-        className="d-flex justify-content-center align-items-center"
-        mr="20px"
-      >
-        <InnerCircle bg={color} />
-        <OuterCircle bg={color} />
-      </Box>
       <div>
         <Text
           color="heading"
