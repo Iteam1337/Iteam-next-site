@@ -201,9 +201,11 @@ const CaseStudies = () => {
             </Col>
           </Row>
           <Box className="text-center" pt={[4, null, null, null, 5]}>
-            <Button variant="outline" color="light">
-              Läs mer om våra Iteam X case
-            </Button>
+            <a href="/case">
+              <Button variant="outline" color="light">
+                Läs mer om våra Iteam X case
+              </Button>
+            </a>
           </Box>
         </Container>
       </Box>
