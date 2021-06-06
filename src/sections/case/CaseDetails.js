@@ -1,17 +1,19 @@
 import React from "react";
-import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Section, Box, Title, Text, Button, List } from "../../components/Core";
+import {
+  Section,
+  Box,
+  Title,
+  Text,
+  Button,
+  List,
+  ImgContainer,
+} from "../../components/Core";
 
 import imgCase1 from "../../assets/image/jpeg/case-details--details.jpg";
 import imgCase2 from "../../assets/image/jpeg/case-details-half-single.jpg";
 import imgCase3 from "../../assets/image/jpeg/case-details-half-single-2.jpg";
-
-const ImgContainer = styled(Box)`
-  border-radius: 10px;
-  overflow: hidden;
-`;
 
 const CaseDetails = () => (
   <>

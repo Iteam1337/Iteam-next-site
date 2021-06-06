@@ -18,10 +18,11 @@ const CaseStudyDetails = () => {
             <Row className="justify-content-center text-center">
               <Col lg="8">
                 <Box className="text-center" mb={4}>
-                  Tjejjouren Väst
+                  Stella - Tjejjouren Väst
                 </Box>
-                <Title variant="hero">Stella</Title>
-                <Text>Appen Stella ger tjejer stöd dygnet runt</Text>
+                <Title variant="hero">
+                  Mobilapp ger unga tjejer stöd dygnet runt
+                </Title>
               </Col>
             </Row>
           </Container>

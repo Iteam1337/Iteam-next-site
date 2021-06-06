@@ -63,9 +63,14 @@ const Content2 = () => (
               </Title>
               <Text>
                 De flesta projekt vi jobbar med innehåller ett API på ett eller annat sätt. Det är bra att lära sig vad ett API är:
-                API är ett standardiserat sätt för program att prata med varandra.
               </Text>
               <Box mt={4} pt={3}>
+                <ContentCard
+                  title="Ditt fönster till omvärlden"
+                  mb={4}
+                >
+                  API är som en digital meny för dina samarbetspartners när de ska kommunicera digitalt med er.
+                </ContentCard>
                 <ContentCard
                   title="Leder till snabbare utveckling"
                   mb={4}
@@ -74,9 +79,11 @@ const Content2 = () => (
                 </ContentCard>
                 <ContentCard
                   title="Kapslar in legacy"
+                  mb={4}
                 >
                   När man väl har ett API kan man enklare byta ut delar som tidigare var sammansvetsade med gränssnitten.
                 </ContentCard>
+                
               </Box>
             </Box>
           </Col>

@@ -29,9 +29,9 @@ const SectionStyled = styled(Section)`
 
 const ULStyled = styled.ul`
   list-style: none;
-  max-width: 350px;
   margin: 30px auto 0;
-  padding-left: 0;
+  padding: 40px;
+  text-align:left;
 
   @media ${device.sm} {
     display: flex;
@@ -57,9 +57,9 @@ const ULStyled = styled.ul`
       font-weight: 900;
       display: inline-block;
       font-size: 13px;
-      width: 30px;
+      width: 30px !important;
       height: 30px;
-      background-color: ${({ theme }) => rgba(theme.colors.secondary, 0.1)};
+      background-color: ${({ theme }) => rgba(theme.colors.secondary, 0.2)};
       display: flex;
       align-items: center;
       justify-content: center;
@@ -146,8 +146,9 @@ const Pricing = () => {
               </div>
             </div>
 
-            <Row>
-              <Col lg="6" className="mb-5">
+
+            <Row className="justify-content-center" >
+              <Col lg="6" className="mb-5 align-items-center" >
                 <CardPricing>
                   <div className="mb-4">
                     <TitleSmall>Helt team</TitleSmall>
@@ -165,18 +166,19 @@ const Pricing = () => {
                       <TimePer>/h</TimePer>
                     </div>
                     <Text fontSize="18px">per person</Text>
-                    <ULStyled>
-                      <li>Frontendutvecklare</li>
-                      <li>Backendutvecklare</li>
-                      <li>UX-designer</li>
-                      <li>Agil coach</li>
-                      <li>Max tre dagar i veckan</li>
+                    <ULStyled >
+                      <li>Kompetens inom ux, utveckling och teamfacilitering</li>
+                      <li> Arbetar med en avgränsad del av er verksamhet</li>
+                      <li> Stöd och coachning till dig som beställare</li>
+                      <li>2 eller 4 dagar/vecka</li>
                     </ULStyled>
                   </div>
-                  <Button bg="secondary">Boka tid för intromöte</Button>
+                  <a href="/book">
+                    <Button bg="primary">Boka tid för intromöte</Button>
+                  </a>
                 </CardPricing>
               </Col>
-              <Col lg="6" className="mb-4">
+              {/*<Col lg="6" className="mb-4">
                 <CardPricing>
                   <div className="mb-4">
                     <TitleSmall>Konsult</TitleSmall>
@@ -204,7 +206,7 @@ const Pricing = () => {
                   </div>
                   <Button bg="secondary">Boka tid för intromöte</Button>
                 </CardPricing>
-              </Col>
+              </Col>*/}
             </Row>
           </div>
         </Container>

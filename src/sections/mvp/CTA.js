@@ -7,7 +7,7 @@ import imgCtaBG from "../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg";
 
 const CTA = () => (
   <>
-    <Section bg="ash">
+    <Section bg="ash" id="book">
       <Container>
         <Row className="align-items-center">
           <Col lg={6} md={10} className="">
@@ -39,7 +39,8 @@ const CTA = () => (
             data-aos-delay="500"
           >
             <div className="">
-              <HubspotForm value="mvp" title="Boka in ett möte" />
+              <HubspotForm value="mvp" title="Hur kan vi hjälpa dig?" />
+              
             </div>
           </Col>
         </Row>

@@ -5,7 +5,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
-import imgRounded from "../../assets/image/png/l2-content1-oval.png";
 import imgHalf from "../../assets/image/jpeg/Radu-Lowres.jpg";
 
 const ImageHalfContainer = styled(Box)`
@@ -72,13 +71,18 @@ const Content1 = () => (
           >
             <Section py={[5, null, null, "190px"]}>
               <div className="omga-02__content-text section-title order-lg-1">
-                <Title>
-                  Ingen gillar att vänta
-                </Title>
+                <Title>Ingen gillar att vänta</Title>
                 <Text>
-                Vi hjälper dig definiera ett lagom scope för din MVP så att du kan lansera något nytt inom tre månader. För att göra det behöver du göra det svåraste som finns: välja bort. Vi har processer och metoder för hur du gör detta på ett strukturerat sätt. Dessutom hjälper vi dig kommunicera dina val och beslut internt så att alla är med på tåget.
+                  Vi hjälper dig definiera ett lagom scope för din MVP så att du
+                  kan lansera något nytt inom tre månader. För att göra det
+                  behöver du göra det svåraste som finns: välja bort. Vi har
+                  processer och metoder för hur du gör detta på ett strukturerat
+                  sätt. Dessutom hjälper vi dig kommunicera dina val och beslut
+                  internt så att alla är med på tåget.
                 </Text>
-                <Button mt={4}>Get Started</Button>
+                <a href="#book">
+                  <Button mt={4}>Kom igång</Button>
+                </a>
               </div>
             </Section>
           </Col>
@@ -87,15 +91,6 @@ const Content1 = () => (
               <div className="h-100">
                 <img src={imgHalf} alt="" className="img-half img-fluid" />
               </div>
-              <ImageBottom
-                bg="light"
-                data-aos="fade-up"
-                data-aos-duration="750"
-                data-aos-once="true"
-                data-aos-delay="500"
-              >
-                <img src={imgRounded} alt="" className="img-fluid" />
-              </ImageBottom>
             </ImageHalfContainer>
           </Col>
         </Row>
