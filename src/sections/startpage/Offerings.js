@@ -7,7 +7,8 @@ import { Title, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
 import svgCurve from "../../assets/image/svg/l1-curve-content2.svg";
-import imgContentMobile from "../../assets/image/png/content-img2--mobile.webp";
+import imgContentMobile from "../../assets/image/jpeg/Christian-Hopper-Lowres.jpg";
+import Link from 'next/link'
 
 const ShapeTop = styled(Box)`
   position: absolute;
@@ -36,6 +37,7 @@ const ContentCard = ({
   color = "primary",
   className,
   iconName,
+  href,
   title,
   children,
   ...rest
@@ -46,7 +48,6 @@ const ContentCard = ({
     border="1px solid"
     borderColor="border"
     p="20px"
-    borderRadius={10}
     className={`d-flex ${className}`}
     {...rest}
     css={`
@@ -56,34 +57,32 @@ const ContentCard = ({
         width: 360px;
         min-width: 360px;
       }
+      & a {
+        text-decoration: none;
+      }
+      &:hover {
+        box-shadow: 0 52px 54px rgba(25, 25, 27, 0.3);
+        border-radius: 10px;
+      }
+      &:hover i {
+        transform: translateX(10px);
+        opacity: 1;
+      }
     `}
   >
-    <Box
-      size={55}
-      minWidth={55}
-      borderRadius="50%"
-      color={color}
-      fontSize="28px"
-      className="d-flex justify-content-center align-items-center"
-      css={`
-        background-color: ${({ theme, color }) =>
-          rgba(theme.colors[color], 0.1)};
-      `}
-      mr={3}
-    >
-      <i className={`icon ${iconName}`}></i>
-    </Box>
     <div>
-      <Title variant="card" mb={0}>
-        {title}
-      </Title>
+      <a href={href}>
+        <Title variant="card" mb={0}>
+          {title}
+        </Title>
 
-      <Text>{children}</Text>
+        <Text>{children}</Text>
+      </a>
     </div>
   </Box>
 );
 
-const Content2 = () => (
+const Offerings = () => (
   <>
     {/* <!-- Content section 2 --> */}
     <Section bg="#f7f7fb" className="position-relative">
@@ -135,7 +134,7 @@ const Content2 = () => (
                 </div>
               </ShapeCard> */}
               <ShapeCard
-                bg="primary"
+                bg="secondary"
                 p="18px"
                 borderRadius={8}
                 className="d-flex align-items-start"
@@ -150,7 +149,7 @@ const Content2 = () => (
                   height="30px"
                   minHeight="30px"
                   bg="secondary"
-                  color="light"
+                  color="dark"
                   borderRadius="50%"
                   className="d-flex align-items-center justify-content-center"
                   mr={3}
@@ -161,16 +160,16 @@ const Content2 = () => (
 
                 <Box pr="40px">
                   <Text
-                    color="light"
+                    color="dark"
                     lineHeight="24px"
                     fontSize={1}
                     opacity={0.7}
                     mb={0}
                   >
-                    Deadline: Oct 29, 2020
+                    {new Date().toLocaleTimeString()}
                   </Text>
-                  <Title variant="card" color="light" fontWeight={300} mb={0}>
-                    You’ve got a new project from David!
+                  <Title variant="card" color="dark" fontWeight={300} mb={0}>
+                    Vi behöver en app innan jul, har ni ett team?
                   </Title>
                 </Box>
               </ShapeCard>
@@ -185,31 +184,34 @@ const Content2 = () => (
               <div className="content-text pl-lg--50">
                 <div className="section-title">
                   <Title>
-                    It’s everything you’ll <br className="d-none d-sm-block" />{" "}
-                    ever need.
+                    Vi erbjuder dig hjälp i alla stadier av ett projekt
                   </Title>
-                  <Text mb={4}>
-                    Create custom landing pages with Omega that converts more
-                    visitors than any website. With lots of unique blocks, you
-                    can easily build a page without coding.
-                  </Text>
                 </div>
                 <div className="mt-5">
                   <ContentCard
-                    title="50+ Unique Design Blocks"
+                    title="Iteam X"
                     color="primary"
-                    iconName="icon-cards-2"
+                    href="/iteamX"
                     mb={3}
                   >
-                    with Carefully Coded
+                    När du inte vet vad som är möjligt
+
                   </ContentCard>
                   <ContentCard
-                    title="Mobile First Design
-"
+                    title="Iteam MVP"
                     color="secondary"
-                    iconName="icon-phone-charging-3-2"
+                    href="/mvp"
+                    mb={3}
                   >
-                    on Every Devices
+                    När du vill bygga nytt
+                  </ContentCard>
+                  <ContentCard
+                    title="Iteam Scale-up"
+                    color="secondary"
+                    href="/scaleup"
+                    mb={3}
+                  >
+                    Öka tempot/utbilda dina team
                   </ContentCard>
                 </div>
               </div>
@@ -221,4 +223,4 @@ const Content2 = () => (
   </>
 );
 
-export default Content2;
+export default Offerings;

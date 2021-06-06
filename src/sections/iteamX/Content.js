@@ -75,7 +75,7 @@ const Content = () => {
             <Col lg="10">
               <div className="text-center">
                 <Title color="light">
-                  Våra team utgår från <Span color="secondary">en hypotes.</Span>{" "}
+                  Våra X team utgår från <Span color="secondary">en hypotes.</Span>{" "}
                   Den försöker vi därefter att motbevisa med hjälp av olika experiment.
                 </Title>
               </div>

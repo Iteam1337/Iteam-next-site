@@ -45,7 +45,7 @@ const DesignatedTeam = () => (
                 kan vi ändå sätta igång snabbt och bygger det viktigaste i en första version.
               </Text>
               <div className="mt-5">
-                <Link href="/book">
+                <Link href="/mvp#book">
                   <Button>Boka ett MVP team</Button>
                 </Link>
               </div>

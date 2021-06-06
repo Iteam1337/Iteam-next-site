@@ -103,7 +103,7 @@ const ModalVideo = (props) => {
         <div className={`h-100 d-flex align-items-center w-100`}>
           <DivStyled className={`${loading ? "loading" : "loaded"}`}>
             <ReactPlayer
-              url={`https://www.youtube.com/watch?v=zlInYm2JrFw`}
+              url={props.url}
               width="100%"
               height="100%"
               controls

@@ -3,5 +3,30 @@
     "source": "/medarbetare",
     "destination": "/about#medarbetare",
     "permanent": true
+  },
+  {
+    "source": "/erbjudanden",
+    "destination": "/mvp",
+    "permanent": true
+  },
+  {
+    "source": "/case/tsab",
+    "destination": "/case/",
+    "permanent": true
+  },
+  {
+    "source": "/case/skatteverket-kairos-future",
+    "destination": "/case/skatteverket",
+    "permanent": true
+  },
+  {
+    "source": "/case/seb-team",
+    "destination": "/case",
+    "permanent": true
+  },
+  {
+    "source": "/medarbetare/cln",
+    "destination": "/about",
+    "permanent": true
   }
 ]

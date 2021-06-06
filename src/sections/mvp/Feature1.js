@@ -18,7 +18,7 @@ const FeatureCard = ({
           color="heading"
           as="h3"
           fontSize={4}
-          fontWeight={500}
+          fontWeight={700}
           letterSpacing={-0.75}
           mb={2}
         >
@@ -74,7 +74,7 @@ const Feature = () => (
                     color="primary"
                     title="Teknik som funkar"
                   >
-Vi har koll på de senaste teknikerna och vi vet hur man får gammal teknik att fungera i den nya digitala världen.
+Vi har koll på de senaste teknikerna och vi vet hur man får gammal teknik att fungera ihop med ny.
                   </FeatureCard>
                 </Col>
                 <Col

@@ -41,7 +41,7 @@ const CTA = () => (
               <Title color="light">Bli del av teamet?</Title>
             </Box>
             <Box>
-              <a href="/career">
+              <a href="/karriar">
                 <Button>Se lediga tjänster</Button>
               </a>
             </Box>

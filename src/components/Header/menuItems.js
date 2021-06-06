@@ -83,7 +83,7 @@ export const menuItems = [
     label: "Case",
   },
   {
-    name: "career",
+    name: "karriar",
     label: "Karriär",
   },
   {
