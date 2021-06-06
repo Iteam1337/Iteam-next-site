@@ -63,7 +63,7 @@ const TeamCard = ({ email, name, title, phoneNumber, ...rest }) => (
 const Team = () => (
   <>
     {/* <!-- Team section --> */}
-    <Section className="position-relative pt-5" id="people">
+    <Section className="position-relative pt-5" id="medarbetare">
       <Container>
         <Row className="justify-content-center">
           <Col lg="6" className="text-center pb-3">
