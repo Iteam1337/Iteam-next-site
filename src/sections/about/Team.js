@@ -67,7 +67,7 @@ const Team = () => (
       <Container>
         <Row className="justify-content-center">
           <Col lg="6" className="text-center pb-3">
-            <div className="">
+            <div id="medarbetare" className="">
               <Title>Vadå ha kul?</Title>
               <Text>
                 Digitialisering är ett kreativt arbete och när vi får lösa svåra uppgifter och använda vår kompetens. Och ja, att få fira tillsammans när vi lyckas!{" "}
