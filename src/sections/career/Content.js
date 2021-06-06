@@ -36,7 +36,7 @@ const Content = () => {
                 Developers, musikälskare, innovatörer, UX-designers, arkitekter,
                 wannabe-triathleter, agila coacher, vi är ett gäng med rötterna
                 i tekniken, internet och människan. Mer om oss alla finns{" "}
-                <A href="/about#people" color="info">här</A>
+                <A href="/about#medarbetare" color="info">här</A>
               </Text>
             </Col>
           </Row>

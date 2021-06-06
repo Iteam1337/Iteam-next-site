@@ -193,7 +193,7 @@ const Footer = ({ isDark = true }) => {
           <CopyRightArea dark={isDark ? 1 : 0}>
             <Row className="align-items-center">
               <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
-                <p>&copy; 2021 Iteam, All Rights Reserved</p>
+                <p>&copy; 2021 Iteam, All Rights Reserved. Our <a href="/privacy">privacy policy</a>.</p>
               </Col>
               <Col sm="6" className="text-sm-right text-center">
                 <ul className="social-icons">

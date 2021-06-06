@@ -3,9 +3,9 @@ export const menuItems = [
     name: "erbjudande",
     label: "Erbjudanden",
     items: [
-      { name: "iteamX", label: "Iteam X" },
       { name: "mvp", label: "Iteam MVP" },
       { name: "scaleup", label: "Iteam Scale-up" },
+      { name: "iteamX", label: "Iteam X" },
       // { name: "education", label: "Iteam Education", items: [
       //   { name: "education", label: "Open Source utbildning" },
       //   { name: "whitepaper", label: "Agil coachning" },

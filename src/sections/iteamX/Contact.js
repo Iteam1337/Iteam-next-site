@@ -58,7 +58,7 @@ const Contact = () => (
             data-aos-once="true"
             data-aos-delay="500"
           >
-            <HubspotForm value="iteamX" title="Boka ett intromöte" />
+            <HubspotForm value="iteamX" title="Boka gratis rådgivningsmöte" />
           </Col>
         </Row>
       </Container>
