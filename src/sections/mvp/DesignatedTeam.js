@@ -5,13 +5,13 @@ import Link from 'next/link';
 
 import { Title, Button, Section, Text } from "../../components/Core";
 
-import imgContent from "../../assets/image/png/content3-img.png";
+import imgContent from "../../assets/image/jpeg/Rickard-Working-Lowres.jpg";
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid #242427;
 `;
 
-const Content3 = () => (
+const DesignatedTeam = () => (
   <>
     <SectionStyled bg="dark">
       <Container>
@@ -38,15 +38,15 @@ const Content3 = () => (
           >
             <div>
               <Title color="light">
-                Ett fredat team
+                Ett fredat team som ger en bra start
               </Title>
               <Text color="lightShade">
-                När du har fått ett uppdrag och dina befintliga utvecklare och designers är fullt upptagna med att bygga er befintliga verksamhet. 
-                Vi sätter igång snabbt och bygger starten och sedan lämnar vi över till dina utvecklare.
+                När du har fått ett uppdrag och dina befintliga utvecklare och designers är upptagna 
+                kan vi ändå sätta igång snabbt och bygger det viktigaste i en första version.
               </Text>
               <div className="mt-5">
                 <Link href="/book">
-                  <Button>Boka team</Button>
+                  <Button>Boka ett MVP team</Button>
                 </Link>
               </div>
             </div>
@@ -57,4 +57,4 @@ const Content3 = () => (
   </>
 );
 
-export default Content3;
+export default DesignatedTeam;

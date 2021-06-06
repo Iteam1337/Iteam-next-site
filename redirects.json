@@ -1,0 +1,7 @@
+[
+  {
+    "source": "/medarbetare",
+    "destination": "/about#medarbetare",
+    "permanent": true
+  }
+]
