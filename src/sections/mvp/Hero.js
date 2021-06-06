@@ -68,7 +68,8 @@ const Hero = () => {
         <Container
           css={`
             z-index: 10;
-            margin: 15px;
+            margin: 0px;
+            margin-top: 20px;
           `}
         >
           <Row>

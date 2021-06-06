@@ -105,7 +105,7 @@ Vi vet att nöjda användare är bra business. Därför sätter vi alltid dem i 
                     color="secondary"
                     title="Vi stöttar dig"
                   >
-                   Vi anpassar vår process till din organisation eftersom alla fungerar på olika sätt. Våra coacher, UX-strateger, affärsutvecklare och tekniska rådgivare stöttar dig och ger dig det du behöver.
+                   Vi anpassar vår process till din organisation eftersom alla fungerar på olika sätt. Våra coacher är vana vid att anpassa vår process.
                   </FeatureCard>
                 </Col>
               </Row>
