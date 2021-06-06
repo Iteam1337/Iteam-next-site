@@ -18,7 +18,7 @@ const FeatureCard = ({
           color="heading"
           as="h3"
           fontSize={4}
-          fontWeight={500}
+          fontWeight={800}
           letterSpacing={-0.75}
           mb={2}
         >
@@ -49,8 +49,8 @@ const Feature = () => (
             <Box>
               <Title color="light">Leapfrog as a service</Title>
               <Text color="light" >
-                Ibland behöver man nå nya höjder, nya affärer eller lösa problem som inte gick att lösa med gammal teknik.
-                De senaste åren har vi fått tillgång till så mycket ny teknik som kan förändra hela branscher och hela samhället. Vi stöttar dig.
+                Du vill gå om dina konkurrenter med ny teknik. När man ska jobba inom okända områden finns det sällan en plan eller färdiga processer att följa. 
+                Därför satsar vi på att skapa team som vågar utforska. Du får löpande se resultat och kan styra riktningen.
               </Text>
               <a href="#book">
                 <Button bg="secondary" color="dark" mt={4}>Boka ett X team</Button>
