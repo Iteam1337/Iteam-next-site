@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import PageWrapper from "../components/PageWrapper";
 import { Section, Title, Text } from "../components/Core";
 
-import BlogList from "../sections/blog/BlogList";
+import BlogList from "../sections/aktuellt/BlogList";
 
 const BlogRegular = () => {
   return (

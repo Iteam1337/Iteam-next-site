@@ -5,9 +5,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import PageWrapper from "../components/PageWrapper";
 import { Section, Title, Text, Box } from "../components/Core";
 
-import PostDetails from "../sections/blog/PostDetails";
-import Comments from "../sections/blog/Comments";
-import Sidebar from "../sections/blog/Sidebar";
+import PostDetails from "../sections/aktuellt/PostDetails";
+import Comments from "../sections/aktuellt/Comments";
+import Sidebar from "../sections/aktuellt/Sidebar";
 
 const BlogDetails = () => {
   return (
