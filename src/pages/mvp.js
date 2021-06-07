@@ -11,7 +11,7 @@ import ModalVideo from "../components/ModalVideo";
 import Testimonial from "../sections/startpage/Testimonial";
 import CTA from "../sections/mvp/CTA";
 
-const LandingPage2 = () => {
+const Mvp = () => {
   return (
     <>
       <PageWrapper >
@@ -28,4 +28,4 @@ const LandingPage2 = () => {
     </>
   );
 };
-export default LandingPage2;
+export default Mvp;

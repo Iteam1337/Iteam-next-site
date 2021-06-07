@@ -10,7 +10,7 @@ import Contact from "../sections/iteamX/Contact";
 
 import PageWrapper from "../components/PageWrapper";
 
-const LandingPage7 = () => {
+const IteamX = () => {
   return (
     <>
       <PageWrapper headerDark footerDark>
@@ -26,4 +26,4 @@ const LandingPage7 = () => {
     </>
   );
 };
-export default LandingPage7;
+export default IteamX;
