@@ -83,7 +83,7 @@ const OpeningDetails = () => {
                   Du behöver
                 </Title>
                 <ul style={{ listStyle: "disc", marginLeft: "3rem" }}>
-                  <li>Ha förmågan att förstå kundens affär och koppling till tekniken samt diskutera det med kund och kollegor</li>
+                  <li>Ha förmågan att förstå kundens affär och koppling till tekniken samt ta fram systemarkitektur tillsammans med teamet och kunden</li>
                   <li>God samarbetsförmåga (t.ex. parprogrammera, arbeta tvärfunktionellt, arbeta i team)</li>
                   <li>Goda kunskaper inom vår primära tech-stack (Node.js, Docker, Kubernetes)</li>
                   <li>God förmåga att skriva kod som är testbar samt skriva automatiska tester</li>

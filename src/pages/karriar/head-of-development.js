@@ -109,8 +109,8 @@ const OpeningDetails = () => {
                   </Title>
                   <ul style={{ listStyle: "disc", marginLeft: "3rem" }}>
                     <li>
-                      Ha förmågan att förstå kundens affär och koppling till
-                      tekniken samt diskutera det med kund och kollegor
+                      Ha förmågan att förstå kundens affär och koppling till tekniken 
+                      samt ta fram systemarkitektur tillsammans med teamet och kunden
                     </li>
                     <li>God samarbetsförmåga</li>
                     <li>
