@@ -49,7 +49,7 @@ const FeatureCard = ({ color = "primary", title, children, ...rest }) => (
           color="heading"
           as="h3"
           fontSize={4}
-          fontWeight={500}
+          fontWeight={800}
           letterSpacing={-0.75}
           mb={2}
         >

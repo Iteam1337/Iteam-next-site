@@ -1,10 +1,10 @@
 import React from "react";
 
 import PageWrapper from "../../components/PageWrapper";
-import Hero from "../../sections/career/Hero";
-import Content from "../../sections/career/Content";
-import Feature from "../../sections/career/Feature";
-import Roles from "../../sections/career/Roles";
+import Hero from "../../sections/karriar/Hero";
+import Content from "../../sections/karriar/Content";
+import Feature from "../../sections/karriar/Feature";
+import Roles from "../../sections/karriar/Roles";
 
 const Career = () => {
   return (

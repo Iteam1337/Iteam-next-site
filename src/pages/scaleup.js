@@ -1,36 +1,31 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-
 import PageWrapper from "../components/PageWrapper";
-import { Section, Title, Text } from "../components/Core";
+import Hero from "../sections/scaleup/Hero";
+import Feature1 from "../sections/scaleup/Feature1";
+import Content1 from "../sections/scaleup/Content1";
+import Feature2 from "../sections/scaleup/Feature2";
+import Content2 from "../sections/scaleup/Content2";
+import DesignatedTeam from "../sections/scaleup/DesignatedTeam";
+// import Testimonial from "../sections/scaleup/Testimonial";
+import ModalVideo from "../components/ModalVideo";
+import Testimonial from "../sections/startpage/Testimonial";
+import CTA from "../sections/scaleup/CTA";
 
-import PricingTable2 from "../sections/pricing/PricingTable2";
-import FAQ from "../sections/pricing/FAQ";
-
-const Pricing2 = () => {
+const ScaleUp = () => {
   return (
     <>
-      <PageWrapper footerDark>
-        <Section>
-          <div className="pt-5"></div>
-          <Container css={`
-            z-index: 10;
-            margin-left: 0px;
-          `}>
-            <Row className="">
-              <Col lg="7">
-                <Title variant="hero">Ibland behöver man förstärkning</Title>
-                <Text>
-                  Se oss som Mr Wolf - vi stöttar befintliga team som kanske kört fast eller behöver fler hjärnor.
-                </Text>
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        <PricingTable2 />
-        <FAQ />
+      <PageWrapper >
+        <Hero />
+        <Feature1 />
+        <Content1 />
+        <Feature2 />
+        <DesignatedTeam />
+        <ModalVideo url='https://www.youtube.com/watch?v=Iz-XLYvzXyU'></ModalVideo>
+        <Content2 />
+        <Testimonial />
+        <CTA />
       </PageWrapper>
     </>
   );
 };
-export default Pricing2;
+export default ScaleUp;

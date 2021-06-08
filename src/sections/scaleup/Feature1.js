@@ -47,16 +47,13 @@ const Feature = () => (
             data-aos-delay="500"
           >
             <Box>
-              <Title color="light">Det är inte svårt</Title>
+              <Title color="light">Våra kompetenser</Title>
               <Text color="light" >
               {/* Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text> */}
-              Oavsett om du har ett problem du behöver lösa eller redan har en idé så hjälper vi dig. 
-              Vi börjar där du står och utgår ifrån det helt enkelt. 
-              Ibland gör vi en <a href="#design_sprint">Designsprint</a> för att kickstarta samarbetet. 
-              Andra gånger gör vi research om användarbehov för att försäkra oss om att vi löser rätt problem.
+              Vi boostar teamet med kompetens inom era prioriterade områden. Våra konsulter är vana att snabbt onboardas till kundunik arkitektur och agila metoder. Vi blir snabbt en naturlig del av ert team!
               </Text>
               <a href="#book">
-                <Button mt={4}>Boka möte</Button>
+                <Button mt={4}>Kolla tillgänglighet</Button>
               </a>
             </Box>
           </Col>
@@ -72,9 +69,11 @@ const Feature = () => (
                 >
                   <FeatureCard
                     color="primary"
-                    title="Teknik som funkar"
+                    title="UX"
                   >
-Vi har koll på de senaste teknikerna och vi vet hur man får gammal teknik att fungera ihop med ny.
+                    Vi hjälper ert team att sätta användaren i centrum.
+
+                    
                   </FeatureCard>
                 </Col>
                 <Col
@@ -87,10 +86,9 @@ Vi har koll på de senaste teknikerna och vi vet hur man får gammal teknik att 
                 >
                   <FeatureCard
                     color="ash"
-                    title="Användaren i centrum
-"
+                    title="Agil coach"
                   >
-Vi vet att nöjda användare är bra business. Därför sätter vi alltid dem i centrum och utgår från riktiga behov när vi tar fram nya lösningar.
+                    Vi hjälper er att bygga högpresterande, välmående och autonoma team och organisationer.
                   </FeatureCard>
                 </Col>
                 <Col
@@ -103,9 +101,9 @@ Vi vet att nöjda användare är bra business. Därför sätter vi alltid dem i 
                 >
                   <FeatureCard
                     color="secondary"
-                    title="Vi stöttar dig"
+                    title="Tech"
                   >
-                   Vi anpassar vår process till din organisation eftersom alla fungerar på olika sätt. Våra coacher, UX-strateger, affärsutvecklare och tekniska rådgivare stöttar dig och ger dig det du behöver.
+                   Vi stärker upp med backend, frontend, fullstack, dev-ops och arkitekter.
                   </FeatureCard>
                 </Col>
               </Row>

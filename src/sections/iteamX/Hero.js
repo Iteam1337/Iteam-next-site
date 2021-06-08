@@ -22,7 +22,7 @@ const Hero = () => {
                 <Text
                   color="light"
                   data-aos="fade-up"
-                  data-aos-duration="1500"
+                  data-aos-duration="600"
                   data-aos-once="true"
                   data-aos-delay="700"
                 >
@@ -32,8 +32,8 @@ const Hero = () => {
                   my={4}
                   variant="hero"
                   color="light"
-                  data-aos="fade-up"
-                  data-aos-duration="1500"
+                  data-aos="fade-right"
+                  data-aos-duration="600"
                   data-aos-once="true"
                   data-aos-delay="1000"
                 >
@@ -44,7 +44,7 @@ const Hero = () => {
                 <Box
                   pt="12px"
                   data-aos="fade-up"
-                  data-aos-duration="1500"
+                  data-aos-duration="700"
                   data-aos-once="true"
                   data-aos-delay="1300"
                 >

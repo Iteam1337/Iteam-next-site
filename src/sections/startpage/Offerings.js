@@ -35,52 +35,47 @@ const ShapeCard = styled(Box)`
 
 const ContentCard = ({
   color = "primary",
-  className,
-  iconName,
-  href,
   title,
+  location,
+  type,
   children,
+  href,
   ...rest
 }) => (
-  <Box
-    width={360}
-    bg="light"
-    border="1px solid"
-    borderColor="border"
-    p="20px"
-    className={`d-flex ${className}`}
-    {...rest}
-    css={`
-      min-width: 100%;
-      width: 100%;
-      @media ${device.sm} {
-        width: 360px;
-        min-width: 360px;
-      }
-      & a {
-        text-decoration: none;
-      }
-      &:hover {
-        box-shadow: 0 52px 54px rgba(25, 25, 27, 0.3);
-        border-radius: 10px;
-      }
-      &:hover i {
-        transform: translateX(10px);
-        opacity: 1;
-      }
-    `}
-  >
-    <div>
-      <a href={href}>
-        <Title variant="card" mb={0}>
-          {title}
-        </Title>
-
-        <Text>{children}</Text>
-      </a>
-    </div>
-  </Box>
+  <Link href={href}>
+    <Card className="card-job top-only" {...rest}>
+      <div className="mb-3">
+      <Title variant="card" className="title">
+        {title}
+      </Title>
+      <Text>
+        {children}
+      </Text>
+      </div>
+    </Card>
+  </Link>
 );
+
+const Card = styled.a`
+  justify-content: flex-start;
+  box-shadow: 0 2px 4px rgba(14, 86, 124, 0.17);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.4s;
+  border-radius: 0px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
+    text-decoration: none;
+    .title {
+      color: ${({ theme }) => theme.colors.info};
+    }
+  }
+`;
 
 const Offerings = () => (
   <>
@@ -184,32 +179,26 @@ const Offerings = () => (
               <div className="content-text pl-lg--50">
                 <div className="section-title">
                   <Title>
-                    Vi erbjuder dig hjälp i alla stadier av ett projekt
+                    Våra erbjudanden
                   </Title>
                 </div>
                 <div className="mt-5">
                   <ContentCard
                     title="Iteam X"
-                    color="primary"
                     href="/iteamX"
-                    mb={3}
                   >
                     När du inte vet vad som är möjligt
 
                   </ContentCard>
                   <ContentCard
                     title="Iteam MVP"
-                    color="secondary"
                     href="/mvp"
-                    mb={3}
                   >
-                    När du vill bygga nytt
+                    När du vill bygga något nytt
                   </ContentCard>
                   <ContentCard
                     title="Iteam Scale-up"
-                    color="secondary"
                     href="/scaleup"
-                    mb={3}
                   >
                     Öka tempot/utbilda dina team
                   </ContentCard>

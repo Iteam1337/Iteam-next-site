@@ -7,7 +7,7 @@ import imgBg from '../../assets/image/jpeg/career-hero.jpeg'
 
 const SectionStyled = styled(Section)`
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.8)), 
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.127), rgba(0, 0, 0, 0.8)), 
                     url(${imgBg});
 `;
 
