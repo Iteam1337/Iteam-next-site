@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
-import imgDesignSprint from "../../assets/image/jpeg/design-sprint.jpeg";
+import imgDesignSprint from "../../assets/image/case/trr-laptop-transparent.png";
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;
@@ -56,14 +56,22 @@ const Content2 = () => (
           <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
             <div
               data-aos="fade-right"
-              data-aos-duration="750"
+              data-aos-duration="150"
               data-aos-once="true"
             >
               <div>
-                <Title>Agil Coach</Title>
+                <Title>Utveckling av digitala tjänster</Title>
                 <Text mb={4}>
-                I en designsprint samlar vi ditt team för att fokusera på en utmaning. Vi skapar en gemensam förståelse för utmaningen och går från en idé till en testad prototyp på bara fyra dagar. Teamet får direkt feedback från användare och därmed en inblick i hur idéerna tas emot innan utvecklingen kommit igång.
+                Vi hjälper TRR att ta en proaktiv roll på arbetsmarknaden och svara på kundernas behov om 
+                kompetensförsörjning. Detta kommer på sikt att resultera i en plattform där TRRs kundföretag 
+                kan ta del av hela TRRs erbjudande digitalt. 
                 </Text>
+
+                <Box>
+                  <a href="/case/trr">
+                    <Button>Läs mer om TRR</Button>
+                  </a>
+                </Box>
               </div>
             </div>
           </Col>

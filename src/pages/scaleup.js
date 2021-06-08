@@ -5,6 +5,7 @@ import Feature1 from "../sections/scaleup/Feature1";
 import Content1 from "../sections/scaleup/Content1";
 import UX from "../sections/scaleup/UX";
 import Tech from "../sections/scaleup/Tech";
+import AgileCoach from "../sections/scaleup/AgileCoach";
 import Content2 from "../sections/scaleup/Content2";
 import DesignatedTeam from "../sections/scaleup/DesignatedTeam";
 // import Testimonial from "../sections/scaleup/Testimonial";
@@ -25,6 +26,7 @@ const ScaleUp = () => {
         <Tech />
         <ModalVideo url='https://www.youtube.com/watch?v=Iz-XLYvzXyU'></ModalVideo>
         <Content2 />
+        <AgileCoach />
         <Testimonial />
         <Pricing />
         <CTA />

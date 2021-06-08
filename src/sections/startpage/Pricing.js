@@ -161,7 +161,7 @@ const Pricing = () => {
                           margin-bottom: 0 !important;
                         `}
                       >
-                        {timeMonthly ? 1200 : 1400}
+                        {timeMonthly ? 1400 : 1200}
                       </Title>
                       <TimePer>/h</TimePer>
                     </div>
