@@ -71,17 +71,15 @@ const Content1 = () => (
           >
             <Section py={[5, null, null, "190px"]}>
               <div className="omga-02__content-text section-title order-lg-1">
-                <Title>Ingen gillar att vänta</Title>
+                <Title>Konsult betyder rådgivare</Title>
                 <Text>
-                  Vi hjälper dig definiera ett lagom scope för din MVP så att du
-                  kan lansera något nytt inom tre månader. För att göra det
-                  behöver du göra det svåraste som finns: välja bort. Vi har
-                  processer och metoder för hur du gör detta på ett strukturerat
-                  sätt. Dessutom hjälper vi dig kommunicera dina val och beslut
-                  internt så att alla är med på tåget.
+                  I dag har nästan ordet konsult börjat betyda resurs. Det tycker vi är fel.
+                  En konsult kommer in med specifik kunskap och ska vara med så kort tid som möjligt och tillföra så stort värde som möjligt.
+                  Vi satsar mycket på lärande och väljer våra uppdrag med omsorg för att kunna använda ordet konsult med dess rätta betydelse.
+
                 </Text>
-                <a href="#book">
-                  <Button mt={4}>Kom igång</Button>
+                <a href="#pricing">
+                  <Button mt={4}>Se våra priser</Button>
                 </a>
               </div>
             </Section>

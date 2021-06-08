@@ -9,6 +9,7 @@ import DesignatedTeam from "../sections/scaleup/DesignatedTeam";
 // import Testimonial from "../sections/scaleup/Testimonial";
 import ModalVideo from "../components/ModalVideo";
 import Testimonial from "../sections/startpage/Testimonial";
+import Pricing from "../sections/startpage/Pricing";
 import CTA from "../sections/scaleup/CTA";
 
 const ScaleUp = () => {
@@ -16,13 +17,14 @@ const ScaleUp = () => {
     <>
       <PageWrapper >
         <Hero />
-        <Feature1 />
         <Content1 />
+        <Feature1 />
         <Feature2 />
         <DesignatedTeam />
         <ModalVideo url='https://www.youtube.com/watch?v=Iz-XLYvzXyU'></ModalVideo>
         <Content2 />
         <Testimonial />
+        <Pricing />
         <CTA />
       </PageWrapper>
     </>

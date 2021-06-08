@@ -126,7 +126,7 @@ const Pricing = () => {
         >
           <Row className="justify-content-center">
             <Col md="8" lg="9">
-              <div className=" text-center">
+              <div className=" text-center" id="pricing">
                 <Title>Våra enkla priser</Title>
                 <Text>
                   Vi vill göra det enkelt att jobba med oss{" "}
@@ -161,7 +161,7 @@ const Pricing = () => {
                           margin-bottom: 0 !important;
                         `}
                       >
-                        {timeMonthly ? 1400 : 1200}
+                        {timeMonthly ? 1200 : 1400}
                       </Title>
                       <TimePer>/h</TimePer>
                     </div>
