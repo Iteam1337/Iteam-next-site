@@ -103,7 +103,7 @@ const Feature = () => (
                     color="secondary"
                     title="Tech"
                   >
-                   Vi stärker upp med backend, frontend, fullstack, dev-ops och arkitekter.
+                   Vi stärker upp ditt team med backend, frontend, fullstack, dev-ops och arkitekter.
                   </FeatureCard>
                 </Col>
               </Row>
