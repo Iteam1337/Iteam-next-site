@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import { Title, Button, Section, Text } from "../../components/Core";
 
-import imgContent from "../../assets/image/jpeg/Rickard-Working-Lowres.jpg";
+import imgContent from "../../assets/image/jpeg/People-Working-2-Lowres.jpg";
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid #242427;
@@ -38,17 +38,13 @@ const DesignatedTeam = () => (
           >
             <div>
               <Title color="light">
-                Ett fredat team som ger en bra start
+                Ett team uppstår inte av en slump
               </Title>
               <Text color="lightShade">
-                När du har fått ett uppdrag och dina befintliga utvecklare och designers är upptagna 
-                kan vi ändå sätta igång snabbt och bygger det viktigaste i en första version.
+                Om du vill bygga digitala produkter på riktigt så behöver du lämna den traditioella projektmodellen med projektledare som 
+                designar och utvecklare som gör ut.
+                Bra team uppstår när det finns en långsiktighet, tydliga spelregler, uttalat syfte och trygghet för alla teammedlemmar att få leva ut sin potential.
               </Text>
-              <div className="mt-5">
-                <Link href="/mvp#book">
-                  <Button>Boka ett MVP team</Button>
-                </Link>
-              </div>
             </div>
           </Col>
         </Row>

@@ -60,7 +60,7 @@ const Content2 = () => (
               data-aos-once="true"
             >
               <div>
-                <Title>Se in i framtiden med Designsprint</Title>
+                <Title>Agil Coach</Title>
                 <Text mb={4}>
                 I en designsprint samlar vi ditt team för att fokusera på en utmaning. Vi skapar en gemensam förståelse för utmaningen och går från en idé till en testad prototyp på bara fyra dagar. Teamet får direkt feedback från användare och därmed en inblick i hur idéerna tas emot innan utvecklingen kommit igång.
                 </Text>
