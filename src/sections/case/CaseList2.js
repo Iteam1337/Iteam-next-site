@@ -5,7 +5,7 @@ import { Section } from "../../components/Core";
 import CaseCard from "../../components/CaseCard";
 
 import imgCase1 from "../../assets/image/png/Chat-Large.png";
-import imgCase2 from "../../assets/image/png/case-media-img-2.png";
+import imgCase2 from "../../assets/image/jpeg/christian-landgren.webp";
 
 const CaseList2 = () => (
   <>
@@ -24,10 +24,10 @@ const CaseList2 = () => (
           <Col lg="6" className="mb-5 mb-lg-0">
             <CaseCard
               img={imgCase2}
-              title="Brag Mobile App"
+              title="Christian Landgren"
             >
-              Throwing consider dwelling bachelor joy her proposal laughter.
-              Raptures returned disposed one entirely her men ham.
+              VD och grundare av Iteam sedan 1995. Programmerare, tech-entreprenör och rådgivare. 
+              En av Sveriges tyngsta opinionsbildare inom digitalisering enligt Dagens Opinion.
             </CaseCard>
           </Col>
         </Row>

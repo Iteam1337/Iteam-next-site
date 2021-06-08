@@ -53,10 +53,6 @@ const CaseCard = ({
       </Link>
     </ImageContainer>
     <CardText>
-      <BrandImage mb="16px">
-        <img src={imgBrand} alt="" className="img-fluid" />
-      </BrandImage>
-
       <Link href="/">
         <a>
           <TitleStyled variant="card" mb="12px">
