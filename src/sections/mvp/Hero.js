@@ -19,13 +19,16 @@ import imgL2HeroBg from "../../assets/image/jpeg/Jonna-Med-Team-Scrum-Board.jpg"
 
 const SectionStyled = styled(Section)`
   background: 
-      /* top, transparent black, faked with gradient */ linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.3)
-    ),
-    /* bottom, image */ 
+  /* top, transparent black, faked with gradient */ 
+  linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9), 
+    rgba(255, 255, 255, 0.4)
+  ),
+  /* bottom, image */
+  url(${imgL2HeroBg}) no-repeat center 20%;
   background-size: cover;
-  background-position: bottom left;
+  padding-top: 128px;
 
   @media ${device.lg} {
     background-position: center;
