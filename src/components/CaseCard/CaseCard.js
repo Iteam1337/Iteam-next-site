@@ -48,7 +48,7 @@ const CaseCard = ({
     <ImageContainer>
       <Link href="/">
         <a>
-          <img src={img} alt="" className="w-100 img-fluid" />
+          <img src={img} alt={title} className="w-100 img-fluid" />
         </a>
       </Link>
     </ImageContainer>

@@ -45,7 +45,7 @@ const Feature = () => (
             <FeatureCard title="Öppen källkod" iconImage={iconOpenSource}>
               Genom att använda öppen källkod, inte bara som kod utan också som filosofi
               i allt vi bygger så blir det enkelt för vem som helst att ansluta till teamet.
-              Dessutom blir det billigare.
+              Dessutom blir det billigare och säkrare.
             </FeatureCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-4">
