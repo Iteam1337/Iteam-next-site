@@ -70,7 +70,7 @@ const BlogDetails = ({ post, posts }) => {
             </Row>
           </Container>
         </Section>
-        <Comments />
+        {/* <Comments /> */}
       </PageWrapper>
     </>
   );

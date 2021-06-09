@@ -55,7 +55,7 @@ const BlogDetails = () => {
             </Row>
           </Container>
         </Section>
-        <Comments />
+        {/* <Comments /> */}
       </PageWrapper>
     </>
   );
