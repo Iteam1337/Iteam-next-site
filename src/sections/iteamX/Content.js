@@ -46,10 +46,10 @@ const ContentWidget = styled(Box)`
     border-radius: 10px;
     background-color: ${({ theme }) => theme.colors.secondary};
   }
-  &:hover i {
+  /* &:hover i {
     transform: translateX(10px);
     opacity: 1;
-  }
+  } */
 `;
 
 const ContentCard1 = ({ children = "" }) => {
