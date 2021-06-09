@@ -2,12 +2,14 @@
   {
     "fullname": "Iris Löthén",
     "email": "iris.lothen@iteam.se",
-    "title": "UX-Designer"
+    "title": "UX Designer",
+    "phoneNumber": "073-050 16 43"
   },
   {
     "username": "ilix",
     "email": "alexander@iteam.se",
-    "title": "Senior developer",
+    "title": "Backend Engineer",
+    "status": "Partner",
     "billing-active": 1,
     "fullname": "Alexander Czigler",
     "displayname": "alexander",
@@ -17,8 +19,8 @@
   {
     "username": "irony",
     "email": "christian.landgren@iteam.se",
-    "title": "VD & Grundare",
-    "status": "Owner",
+    "title": "CEO",
+    "status": "Founder",
     "billing-active": 1,
     "fullname": "Christian Landgren",
     "displayname": "irony",
@@ -38,8 +40,8 @@
   {
     "username": "hrn",
     "email": "hans.rollman@iteam.se",
-    "title": "Partner & CFO",
-    "status": "Primary Owner",
+    "title": "Head of Finance & Regional Manager Stockholm",
+    "status": "Partner",
     "billing-active": 1,
     "fullname": "Hans Rollman",
     "displayname": "hans",
@@ -49,7 +51,7 @@
   {
     "username": "ram",
     "email": "radu.achim@iteam.se",
-    "title": "Senior Developer",
+    "title": "Backend Engineer",
     "billing-active": 1,
     "fullname": "Radu Achim",
     "displayname": "Radu",
@@ -59,8 +61,8 @@
   {
     "username": "osiris",
     "email": "anders.bornholm@iteam.se",
-    "title": "Partner & Fullstack Engineer",
-    "status": "Owner",
+    "title": "Backend Engineer & Architect",
+    "status": "Partner",
     "billing-active": 1,
     "fullname": "Anders Norrback Bornholm",
     "displayname": "osiris",
@@ -70,8 +72,8 @@
   {
     "username": "mittistormen",
     "email": "johanna.grahn@iteam.se",
-    "title": "Partner & Regionansvarig",
-    "status": "Admin",
+    "title": "Head of People and Culture & Regional Manager Göteborg",
+    "status": "Partner",
     "billing-active": 1,
     "fullname": "Johanna Månsson Grahn",
     "displayname": "mittistormen",
@@ -81,7 +83,8 @@
   {
     "username": "mikaelnaeslund",
     "email": "mikael.naeslund@iteam.se",
-    "title": "Styrelseordförande",
+    "title": "Chairman of the Board",
+    "status": "Partner",
     "billing-active": 1,
     "fullname": "Mikael Naeslund",
     "displayname": "mikaelnaeslund",
@@ -90,8 +93,8 @@
   {
     "username": "mariasolscher",
     "email": "maria.solscher@iteam.se",
-    "title": "Partner & Säljchef (föräldraledig)",
-    "status": "Admin",
+    "title": "Head of Sales (föräldraledig)",
+    "status": "Partner",
     "billing-active": 1,
     "fullname": "Maria Sölscher",
     "displayname": "mariasolscher",
@@ -101,7 +104,7 @@
   {
     "username": "emmaklara",
     "email": "emma-klara.wachter@iteam.se",
-    "title": "Head of Team Coach",
+    "title": "Head of Agile Coaching",
     "billing-active": 1,
     "fullname": "Emma-Klara",
     "displayname": "emmaklara",
@@ -111,7 +114,8 @@
   {
     "username": "mikael",
     "email": "mikael.graborg@iteam.se",
-    "title": "Senior Developer",
+    "title": "Backend Engineer",
+    "status": "Partner",
     "billing-active": 0,
     "fullname": "Mikael Gråborg",
     "displayname": "mikael",
@@ -121,7 +125,7 @@
   {
     "username": "jonna",
     "email": "jonna.hjern@iteam.se",
-    "title": "CMO",
+    "title": "Head of Sales",
     "billing-active": 1,
     "fullname": "Jonna Hjern",
     "displayname": "Jonna",
@@ -131,7 +135,7 @@
   {
     "username": "simonlundell",
     "email": "simon.lundell@iteam.se",
-    "title": "Senior Developer",
+    "title": "Fullstack Engineer",
     "billing-active": 1,
     "fullname": "Simon Lundell",
     "displayname": "simonlundell",
@@ -141,8 +145,7 @@
   {
     "username": "fannynylund",
     "email": "fanny.nylund@iteam.se",
-    "title": "Agil coach",
-    "status": "Owner",
+    "title": "Agile Project Manager",
     "billing-active": 1,
     "fullname": "Fanny Willbjer-Schörling",
     "displayname": "fanny",
@@ -152,7 +155,7 @@
   {
     "username": "emil.ahlback",
     "email": "emil.ahlback@iteam.se",
-    "title": "Utvecklare",
+    "title": "Fullstack Engineer",
     "billing-active": 1,
     "fullname": "Emil Ahlbäck",
     "displayname": "mullsork",
@@ -161,7 +164,7 @@
   {
     "username": "rebecca",
     "email": "rebecca.noren@iteam.se",
-    "title": "Head of UX",
+    "title": "Head of UX Design",
     "billing-active": 1,
     "fullname": "Rebecca Norén",
     "displayname": "Rebecca",
@@ -170,7 +173,7 @@
   },
   {
     "username": "andreas.indal",
-    "title": "Senior Developer",
+    "title": "Fullstack Engineer",
     "email": "andreas.indal@iteam.se",
     "billing-active": 1,
     "fullname": "Andreas Alsterholm",
@@ -181,7 +184,7 @@
   {
     "username": "adam.naslund",
     "email": "adam.naslund@iteam.se",
-    "title": "Backend Engineer",
+    "title": "Backend Engineer & Security specialist",
     "billing-active": 1,
     "fullname": "Adam Näslund",
     "displayname": "Adam",
@@ -191,7 +194,7 @@
   {
     "username": "andreas.lundqvist",
     "email": "andreas.lundqvist@iteam.se",
-    "title": "Developer",
+    "title": "Frontend Engineer",
     "billing-active": 1,
     "fullname": "Andreas Lundqvist",
     "displayname": "lassekongo",
@@ -201,7 +204,7 @@
   {
     "username": "anna.l.moller",
     "email": "anna.l.moller@iteam.se",
-    "title": "UX-Designer",
+    "title": "UX Strategist",
     "billing-active": 1,
     "fullname": "Anna Lööf Möller",
     "displayname": "Anna",
@@ -211,7 +214,7 @@
   {
     "username": "stephanie.weaver",
     "email": "stephanie.weaver@iteam.se",
-    "title": "UX-Designer (föräldarledig)",
+    "title": "UX Designer (föräldarledig)",
     "billing-active": 0,
     "fullname": "Stephanie Weaver",
     "displayname": "Stephanie Weaver",
@@ -221,28 +224,31 @@
   {
     "username": "izabella.larsson",
     "email": "izabella.larsson@iteam.se",
-    "title": "Developer",
+    "title": "Frontend Engineer",
     "billing-active": 1,
     "fullname": "Izabella Larsson",
     "displayname": "Izabella Larsson",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "076-786 00 86"
   },
   {
     "username": "mikaela.lundsgard",
     "email": "mikaela.lundsgard@iteam.se",
-    "title": "Developer",
+    "title": "Frontend Engineer",
     "billing-active": 1,
     "fullname": "Mikaela Lundsgård",
     "displayname": "Mikaela Lundsgård",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "070-154 57 90"
   },
   {
     "username": "petronella.johansson",
     "email": "petronella.johansson@iteam.se",
-    "title": "UX-Designer",
+    "title": "UX Designer",
     "billing-active": 1,
     "fullname": "Petronella Johansson",
     "displayname": "Petronella Johansson",
-    "expiration-timestamp": ""
+    "expiration-timestamp": "",
+    "phoneNumber": "070-360 87 62"
   }
 ]
