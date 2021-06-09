@@ -6,7 +6,6 @@ import PageWrapper from "../../components/PageWrapper";
 import { Section, Title, Text, Box } from "../../components/Core";
 
 import PostDetails from "../../sections/aktuellt/PostDetails";
-import Comments from "../../sections/aktuellt/Comments";
 import Sidebar from "../../sections/aktuellt/Sidebar";
 
 import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts";
@@ -77,7 +76,6 @@ const BlogDetails = ({ post, posts }) => {
             </Row>
           </Container>
         </Section>
-        {/* <Comments /> */}
       </PageWrapper>
     </>
   );
