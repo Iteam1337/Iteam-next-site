@@ -52,10 +52,10 @@ const Feature2 = () => (
                 Tech
               </Title>
               <Text>
-                Vi hjälper ditt team att bygga tekniskt komplicerade backends, ibland med flera databaser, 
-                integrationer med andra interna och externa system, realtidssystem, händelsestyrda dataflöden och höga säkerhetskrav. 
-                Beroende på mognaden i teamets arbetssätt och erfarenhet kan vår roll vara autonomt team, ren 
-                resursförstärkning eller som mentorer som hjälper ett existerande team att nå sin fulla potential.
+                Vi hjälper ditt team att bygga lösningar med tekniskt komplicerade backends, responsiva webbtjänster och mobilappar.
+                Höga krav på användarvändlighet, realtidsintegrationer, händelsestyrda dataflöden och höga säkerhetskrav är
+                vanliga i våra projekt. Oavsett om vi är ett autonomt team eller förstärker ett existerande så är agila arbetssätt
+                och en automatiserad utvecklingsprocess med devops alltid närvarande.
               </Text>
             </Box>
           </Col>
