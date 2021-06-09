@@ -5,8 +5,19 @@ import PageWrapper from "../components/PageWrapper";
 import { Section, Title, Text } from "../components/Core";
 
 import BlogList from "../sections/aktuellt/BlogList";
+import { getSortedPostsData } from '../lib/posts'
 
-const BlogRegular = () => {
+export async function getStaticProps() {
+  console.log('getting blog posts')
+  const posts = getSortedPostsData();
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+export default function BlogRegular ({ posts }) {
   return (
     <>
       <PageWrapper footerDark>
@@ -20,9 +31,8 @@ const BlogRegular = () => {
             </Row>
           </Container>
         </Section>
-        <BlogList />
+        <BlogList posts={posts} />
       </PageWrapper>
     </>
   );
 };
-export default BlogRegular;
