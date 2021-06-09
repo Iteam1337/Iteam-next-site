@@ -7,7 +7,7 @@ import { rgba } from "polished";
 import { Title, Section, Box, Text } from "../../components/Core";
 import { device, breakpoints } from "../../utils";
 
-import imgCustomer1 from "../../assets/image/jpeg/Erika-Strandberg-Sveriges-Allmännytta.jpeg";
+import imgCustomer1 from "../../assets/image/jpeg/Erika-Strandberg-Sveriges-Allmannytta.jpeg";
 import imgCustomer2 from "../../assets/image/jpeg/TomAiraksinen.jpg";
 import imgCustomer3 from "../../assets/image/jpeg/littorin.jpg";
 import imgQuote from "../../assets/image/png/quote-shape.png";
