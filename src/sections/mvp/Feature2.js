@@ -1,5 +1,4 @@
 import React from "react";
-import { rgba } from "polished";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box } from "../../components/Core";
@@ -34,17 +33,7 @@ const Feature2 = () => (
         </Row>
         <Row className="justify-content-center">
           {services.map((service) => (
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="zoom-in"
-              data-aos-duration="750"
-              data-aos-once="true"
-              data-aos-delay="50"
-            >
-              <ContentCard title={service} color="primary" />
-            </Col>
+            <ContentCard title={service} />
           ))}
         </Row>
       </Container>
