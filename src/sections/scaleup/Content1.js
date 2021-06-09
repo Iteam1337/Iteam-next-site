@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
-import imgHalf from "../../assets/image/jpeg/Radu-Lowres.jpg";
+import imgHalf from "../../assets/image/jpeg/teamcoach.jpeg";
 
 const ImageHalfContainer = styled(Box)`
   position: static;
@@ -73,10 +73,12 @@ const Content1 = () => (
               <div className="omga-02__content-text section-title order-lg-1">
                 <Title>Konsult betyder rådgivare</Title>
                 <Text>
-                  I dag har nästan ordet konsult börjat betyda resurs. Det tycker vi är fel.
-                  En konsult kommer in med specifik kunskap och ska vara med så kort tid som möjligt och tillföra så stort värde som möjligt.
-                  Vi satsar mycket på lärande och väljer våra uppdrag med omsorg för att kunna använda ordet konsult med dess rätta betydelse.
-
+                  I dag har nästan ordet konsult börjat betyda resurs. Det
+                  tycker vi är fel. En konsult kommer in med specifik kunskap
+                  och ska vara med så kort tid som möjligt och tillföra så stort
+                  värde som möjligt. Vi satsar mycket på lärande och väljer våra
+                  uppdrag med omsorg för att kunna använda ordet konsult med
+                  dess rätta betydelse.
                 </Text>
                 <a href="#pricing">
                   <Button mt={4}>Se våra priser</Button>
