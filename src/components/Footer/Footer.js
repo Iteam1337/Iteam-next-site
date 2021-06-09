@@ -170,7 +170,7 @@ const Footer = ({ isDark = true }) => {
                       <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
                           <a href="/book">
-                            Boka möte
+                            Kontakt
                           </a>
                         </li>
                         <li>
