@@ -1,6 +1,8 @@
 import React from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
 
+import MetaTags from "../../components/MetaTags/MetaTags";
 import PageWrapper from "../../components/PageWrapper";
 import { Section, Title, Text, Box, ImgContainer } from "../../components/Core";
 import imgRole from "../../assets/image/jpeg/from-top.jpg";
@@ -9,6 +11,13 @@ const OpeningDetails = () => {
   return (
     <>
       <PageWrapper footerDark>
+        <MetaTags
+          title={"Iteam söker Head of Development!"}
+          description={
+            "Vi vet att världen är i ett viktigt skifte och att vi kan bidra. Det gör vi genom vår metod för att lyckas med komplexa projekt, genom att ta tillvara på egen innovation och lärande samt genom att hjälpa våra kunder samverka och engagera med open source-utveckling."
+          }
+          image={imgRole}
+        />
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
@@ -35,30 +44,29 @@ const OpeningDetails = () => {
                     Iteam söker Head of Development!
                   </Title>
                   <Text variant="small">
-                    Vi vet att världen är i ett viktigt skifte och att vi kan 
-                    bidra. Det gör vi genom vår metod för att lyckas med komplexa
-                    projekt, genom att ta tillvara på egen innovation och
-                    lärande samt genom att hjälpa våra kunder samverka och
+                    Vi vet att världen är i ett viktigt skifte och att vi kan
+                    bidra. Det gör vi genom vår metod för att lyckas med
+                    komplexa projekt, genom att ta tillvara på egen innovation
+                    och lärande samt genom att hjälpa våra kunder samverka och
                     engagera med open source-utveckling.
                     <br />
                     <br />
-                    Under våren har vi startat två riktigt 
-                    spännande nya samarbeten, med en streaming-tjänst i Stockholm 
-                    och digital transporttjänst i Göteborg.  I Vinnova-projektet 
-                    Predictive Movement arbetar vi med en AI-baserad tjänst för 
-                    att samordna transporter i glesbygd. Nu söker vi dig som kommer 
-                    vara en nyckelperson för att Iteam 
-                    ska fortsätta vara en  partner i teknisk och
-                    strategisk framkant, ett måste för hållbara digitala
-                    lösningar i ett samhälle av idag.
+                    Under våren har vi startat två riktigt spännande nya
+                    samarbeten, med en streaming-tjänst i Stockholm och digital
+                    transporttjänst i Göteborg. I Vinnova-projektet Predictive
+                    Movement arbetar vi med en AI-baserad tjänst för att
+                    samordna transporter i glesbygd. Nu söker vi dig som kommer
+                    vara en nyckelperson för att Iteam ska fortsätta vara en
+                    partner i teknisk och strategisk framkant, ett måste för
+                    hållbara digitala lösningar i ett samhälle av idag.
                     <br />
                     <br />
                     Iteam har funnits sedan 1995 och är ett värderingsstyrt
                     företag med högt i tak, familjär stämning och ett brinnande
                     intresse för teknik & människa, framtiden och ett hållbart
                     samhälle. Idag är vi 24 personer utspridda i Sverige och
-                    Paris. Distribuerade team har vi haft sedan 2016 och du kan 
-                    välja att tillhöra något av våra kontor i Stockholm eller 
+                    Paris. Distribuerade team har vi haft sedan 2016 och du kan
+                    välja att tillhöra något av våra kontor i Stockholm eller
                     Göteborg, eller också arbeta från en annan ort i Sverige.
                   </Text>
                 </Box>
@@ -96,10 +104,10 @@ const OpeningDetails = () => {
                     applikationer med hjälp av den senaste tekniken. Du
                     utforskar och utvärderar nya tekniker och metoder, sprider
                     din kunskap och omsätter den i praktiken - i ditt dagliga
-                    arbete och genom mentorskap. Vår tech-stack är i sin helhet 
-                    Node.js, React, ReactNative, Typescript, Docker, Kubernetes, 
-                    ElasticSearch, GraphQL, PostgreSQL, Elixir, RabbitMQ, men 
-                    ser olika ut i våra olika team. Vana vid automatisering och 
+                    arbete och genom mentorskap. Vår tech-stack är i sin helhet
+                    Node.js, React, ReactNative, Typescript, Docker, Kubernetes,
+                    ElasticSearch, GraphQL, PostgreSQL, Elixir, RabbitMQ, men
+                    ser olika ut i våra olika team. Vana vid automatisering och
                     automatiserad testning är ett måste i alla våra uppdrag!
                   </Text>
                 </Box>
@@ -114,8 +122,8 @@ const OpeningDetails = () => {
                     </li>
                     <li>God samarbetsförmåga</li>
                     <li>
-                      Goda kunskaper inom vår primära tech-stack
-                      (t.ex. Node.js, React, Docker/Kubernetes)
+                      Goda kunskaper inom vår primära tech-stack (t.ex. Node.js,
+                      React, Docker/Kubernetes)
                     </li>
                     <li>
                       Skriva kod som är testbar samt skriva automatiska tester
@@ -126,7 +134,8 @@ const OpeningDetails = () => {
                     </li>
                     <li>5+ års erfarenhet av utveckling</li>
                     <li>
-                      3+ års erfarenhet av ledarskap (t.ex. facilitering, leda grupper, hålla utbildning, kultur, tech lead)
+                      3+ års erfarenhet av ledarskap (t.ex. facilitering, leda
+                      grupper, hålla utbildning, kultur, tech lead)
                     </li>
                     <li>Erfarenhet av agil, värdedriven utveckling</li>
                     <li>Erfarenhet av konsultverksamhet</li>
@@ -143,7 +152,8 @@ const OpeningDetails = () => {
                       Source, Meetups)
                     </li>
                     <li>
-                      Goda kunskaper i något annat språk (t.ex. Elixir, Go, Python, .NET, Rust, Java)
+                      Goda kunskaper i något annat språk (t.ex. Elixir, Go,
+                      Python, .NET, Rust, Java)
                     </li>
                     <li>Erfarenhet av hypotesdriven utveckling</li>
                     <li>Erfarenhet av försäljning</li>
@@ -151,7 +161,8 @@ const OpeningDetails = () => {
                     <li>Förståelse för UX-design</li>
                     <li>Erfarenhet som agil coach eller scrum master</li>
                     <li>
-                      Kanske kan du något vi inte ens visste att vi behövde? Överraska oss!
+                      Kanske kan du något vi inte ens visste att vi behövde?
+                      Överraska oss!
                     </li>
                   </ul>
                 </Box>
@@ -160,16 +171,15 @@ const OpeningDetails = () => {
                     Ansökan
                   </Title>
                   <Text variant="small">
-                    Anställningsform: Tillsvidareanställning. 6 månaders provanställning, sedan fast anställning
+                    Anställningsform: Tillsvidareanställning. 6 månaders
+                    provanställning, sedan fast anställning
                     <br />
                     Start: Omgående
                     <br />
                     Plats: Göteborg eller Stockholm
                     <br />
                     Ansök genom att maila ditt CV & några rader om dig till{" "}
-                    <a href="mailto:joinus@iteam.se">
-                      joinus@iteam.se
-                    </a>
+                    <a href="mailto:joinus@iteam.se">joinus@iteam.se</a>
                   </Text>
                 </Box>
                 <Box pb={["40px", null, "65px"]}>
@@ -180,11 +190,12 @@ const OpeningDetails = () => {
                     Skicka din fråga till{" "}
                     <a href="mailto:johanna.grahn@iteam.se">
                       johanna.grahn@iteam.se
-                    </a> (Head of People and Culture)
-                    eller{" "}
+                    </a>{" "}
+                    (Head of People and Culture) eller{" "}
                     <a href="mailto:christian.landgren@iteam.se">
                       christian.landgren@iteam.se
-                    </a> (CEO)
+                    </a>{" "}
+                    (CEO)
                   </Text>
                 </Box>
               </Col>

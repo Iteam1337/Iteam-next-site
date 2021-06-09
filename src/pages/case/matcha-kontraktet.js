@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+import MetaTags from "../../components/MetaTags/MetaTags";
 import PageWrapper from "../../components/PageWrapper";
 import { Section, Title, Text, Box } from "../../components/Core";
 
@@ -12,6 +13,12 @@ const CaseStudyDetails = () => {
   return (
     <>
       <PageWrapper footerDark>
+        <MetaTags
+          title={" Sveriges Allmännytta"}
+          description={
+            "Tryggare boendemiljö med automatisk spårning av olaglig andrahandsuthyrning"
+          }
+        />
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
