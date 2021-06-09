@@ -5,7 +5,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Section, Box } from "../../components/Core";
 
 import { device } from "../../utils";
-import imgL2HeroBg from "../../assets/image/jpeg/Hans-Radu-Martin-Office-Lowres.jpg";
+// import imgL2HeroBg from "../../assets/image/jpeg/Hans-Radu-Martin-Office-Lowres.jpg";
+import imgL2HeroBg from "../../assets/image/jpeg/scale-up-hero.jpg";
 
 const SectionStyled = styled(Section)`
   /* top, transparent black, faked with gradient */
