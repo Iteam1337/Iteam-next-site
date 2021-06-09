@@ -10,13 +10,11 @@ import imgHeroTab from "../../assets/image/jpeg/Radu-Lowres.jpg";
 
 const SectionStyled = styled(Section)`
   background: 
-    /* top, transparent black, faked with gradient */ 
-    linear-gradient(
-      rgba(0, 0, 0, 0.7), 
+    /* top, transparent black, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.3)
     ),
-    /* bottom, image */
-    url(${imgHeroTab}) no-repeat center 20% fixed;
+    /* bottom, image */ url(${imgHeroTab}) no-repeat center 70% fixed;
   background-size: cover;
   padding-top: 128px;
 `;
@@ -42,11 +40,13 @@ const Hero = () => {
               >
                 <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                   <Title variant="hero" color="light">
-                    We move fast<br/>{" "}
-                    and fix things
+                    We move fast
+                    <br /> and fix things
                   </Title>
                   <Text mb={4} color="light">
-                    Vi digitaliserar företag och organisationer genom en välbeprövad och användarstyrd process med öppen källkod och teamwork.
+                    Vi digitaliserar företag och organisationer genom en
+                    välbeprövad och användarstyrd process med öppen källkod och
+                    teamwork.
                   </Text>
                 </Box>
               </div>
