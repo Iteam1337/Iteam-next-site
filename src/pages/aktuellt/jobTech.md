@@ -1,6 +1,7 @@
 ---
 title: "Tre snabba om #jobtech med Christian Landgren"
 date: "2021-03-10"
+image: "/images/christian-landgren.jpeg"
 ---
 
 Tre snabba med Christian Landgren, initiativtagare till den Öppna skolplattformen och VD för digitaliseringsbyrån Iteam, om betydelsen av #öppendata och #öppenkällkod för arbetsmarknaden.
