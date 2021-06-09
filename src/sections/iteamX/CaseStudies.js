@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 import { Title, Box, Text, Button } from "../../components/Core";
 import { device } from "../../utils";
 import { caseItems } from "../../data/caseItems";
 
-const CaseCardStyled = styled(Box)`
+const CaseCardStyled = styled(Card)`
   width: 100%;
   transition: 0.4s;
+  height: 100%;
+  border: none;
+  background-color: ${({ theme }) => theme.colors.dark};
 
   .img-container {
     position: relative;
@@ -69,6 +72,7 @@ const TextContent = styled(Box)`
   padding-bottom: 21px;
   padding-left: 20px;
   padding-right: 20px;
+  height: 100%;
 
   @media ${device.sm} {
     padding-top: 43px;
@@ -124,7 +128,7 @@ const CaseCard = ({
   isDark = true,
   bg = "secondary",
   img,
-  meta = "",
+  meta = [],
   title = "",
   children = "",
   link,
@@ -168,11 +172,9 @@ const CaseStudies = () => {
   return (
     <>
       {/* <!-- Content section --> */}
-      {}
-
       <Box bg="dark">
         <Container className="pt-5">
-          <Row className="justify-content-center">
+          <Row>
             {XCase.map((item, i) => (
               <Col
                 key={i}
