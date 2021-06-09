@@ -13,6 +13,4 @@ I rapporter om näringslivet i stort, konsultbranschen och om techbolagen i synn
 
 🤔 Vi har en företagskultur där vi regelbundet utvärderar och reflekterar kring våra normer och strukturer för att identifiera fler områden vi vill förbättra.
 
-lovelacemote
-
 <img src='../../assets/image/jpeg/lovelacemote.jpeg'/>
