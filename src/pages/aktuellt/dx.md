@@ -1,6 +1,8 @@
 ---
 title: "DX - upplevelsen som inte får glömmas"
 date: "2020-10-01"
+intro: Developer Experience - hur skapar man lösningar som utvecklare ❤️ älskar?
+image: /images/Developers.jpg
 ---
 
 Vikten av att prata om och ta hänsyn till användarupplevelsen är för de flesta av oss numera en självklarhet. Att utveckla någonting som uppfyller användarnas behov är en given grundsten till ett framgångsrikt projekt. 

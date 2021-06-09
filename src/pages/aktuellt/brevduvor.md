@@ -1,7 +1,8 @@
 ---
 title: "Drönare för medicinleveranser"
 date: "2020-09-03"
-image: /images/jpeg/Brevduvor.jpeg
+image: /images/Brevduvor.jpeg
+intro: Hur skulle samhället förändras om vi kunde få drönarleveranser till varje stuga?
 ---
 
 DN uppmärksammar vårt projekt Morgondagens brevduvor! I ett obemannat automatiserat hälsorum kan man både träffa läkare över videokonferens och ta prover på sig själv, och slipper göra en heldagsutflykt till närmaste stad. Proverna transporteras sen till närmaste sjukhus med självstyrande drönare, som också kan leverera mediciner direkt hem till patienten.

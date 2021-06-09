@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import PageWrapper from "../../components/PageWrapper";
 import { Section, Title, Text, Box } from "../../components/Core";
@@ -35,6 +36,12 @@ const BlogDetails = ({ post, posts }) => {
   return (
     <>
       <PageWrapper footerDark>
+        <Head>
+          <title>{post.title}</title>
+          <meta property="og:title" content={post.title} key="title" />
+          <meta property="og:description" content={post.intro} key="description" />
+          <meta property="og:image" content={post.image} key="image" />
+        </Head>
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
@@ -43,16 +50,16 @@ const BlogDetails = ({ post, posts }) => {
                 <Title variant="hero">{post.title}</Title>
                 <Box className="d-flex justify-content-center">
                   <Text mr={3}>
-                    <Link href="/">{post.date}</Link>
+                    <Link href="/aktuellt">{post.date}</Link>
                   </Text>
-                  <Text mr={3}>
+                  <Text>
                     {post.tags?.map((tag) => (
                       <Link href="/">
                         {tag}
                       </Link>
                     ))}
                   </Text>
-                  <Text>{post.author}</Text>
+                  <Text>{post.author && "av " + post.author}</Text>
                 </Box>
               </Col>
             </Row>
