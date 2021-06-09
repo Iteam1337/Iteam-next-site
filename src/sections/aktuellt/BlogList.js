@@ -18,7 +18,7 @@ export default function BlogList ({ posts })
               title={post.title}
               readMore
             >
-              {post.intro} <pre>{post.image}</pre>
+              {post.intro}
             </PostCard>
           </Col>)}
         </Row>
