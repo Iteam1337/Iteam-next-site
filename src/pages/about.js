@@ -4,6 +4,7 @@ import PageWrapper from "../components/PageWrapper";
 import Hero from "../sections/common/Hero";
 import Content from "../sections/about/Content";
 
+import MetaTags from "../components/MetaTags/MetaTags";
 import Team from "../sections/about/Team";
 import CTA from "../sections/about/CTA";
 
@@ -11,6 +12,14 @@ const About = () => {
   return (
     <>
       <PageWrapper>
+        <MetaTags
+          title={
+            "Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag."
+          }
+          description={
+            "Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag."
+          }
+        />
         <Hero title="Skapa värde, ha kul, göra något bra">
           Det är våra värderingar. De lever vi efter varje dag. <br />
           {/* Iteam startades 1995 med drömmen att förändra samhället till något bättre med teknik. 
