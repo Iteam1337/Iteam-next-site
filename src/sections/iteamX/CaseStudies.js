@@ -171,7 +171,7 @@ const CaseStudies = () => {
       {}
 
       <Box bg="dark">
-        <Container>
+        <Container className="pt-5">
           <Row className="justify-content-center">
             {XCase.map((item, i) => (
               <Col
