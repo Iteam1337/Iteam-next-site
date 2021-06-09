@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { Title, Box, Text, Span } from "../Core";
 import { device } from "../../utils";
+import Image from 'next/image'
 
 const Card = styled(Box)`
   border-radius: 10px 10px;
@@ -75,7 +76,7 @@ const PostCard = ({
       <ImageContainerHorizontal>
         <Link href={link}>
           <a className="w-100 h-100 d-flex">
-            <img src={img} alt="" className="w-100 img-fluid" />
+            <Image src={img} alt="" className="w-100 img-fluid" />
             {imgBrand && (
               <BrandImage>
                 <img src={imgBrand} alt="" className="img-fluid" />
@@ -88,7 +89,7 @@ const PostCard = ({
       <Box className="position-relative">
         <Link href={link}>
           <a className="w-100">
-            <img src={img} alt="" className="w-100 img-fluid" />
+            {img && <Image src={img} alt="" layout="fill" className="w-100 img-fluid" />}
             {imgBrand && (
               <BrandImage>
                 <img src={imgBrand} alt="" className="img-fluid" />
@@ -120,7 +121,7 @@ const PostCard = ({
         <Box>
           <Link href={link}>
             <a>
-              <Span color="primary">Continue Reading</Span>
+              <Span color="primary">Läs mer...</Span>
             </a>
           </Link>
         </Box>

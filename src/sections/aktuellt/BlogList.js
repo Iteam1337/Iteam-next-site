@@ -12,13 +12,13 @@ export default function BlogList ({ posts })
         <Row className="align-items-center justify-content-center">
           {posts?.map(post =>  <Col lg="4" className="mb-5">
             <PostCard
-              img={post.image? require(post.image) : null}
+              img={post.image}
               preTitle={post.date}
               link={`/aktuellt/${post.id}`}
               title={post.title}
               readMore
             >
-              {post.intro}
+              {post.intro} <pre>{post.image}</pre>
             </PostCard>
           </Col>)}
         </Row>
