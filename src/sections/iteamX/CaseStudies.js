@@ -4,8 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Box, Text, Button } from "../../components/Core";
 import { device } from "../../utils";
-import imgCase1 from "../../assets/image/jpeg/l8-case-image-1.jpg";
-import imgCase2 from "../../assets/image/jpeg/l8-case-image-2.jpg";
 import { caseItems } from "../../data/caseItems";
 
 const CaseCardStyled = styled(Box)`
@@ -151,7 +149,12 @@ const CaseCard = ({
             </g>
           </svg>
         </Shape>
-        <PreTitle color={isDark ? "lightShade" : "darkShade"}>{meta}</PreTitle>
+        <PreTitle color={isDark ? "lightShade" : "darkShade"}>
+          {meta.map((item, i) => {
+            if (i + 1 !== meta.length) return `${item}, `;
+            return `${item}`;
+          })}
+        </PreTitle>
         <TitleStyled color={isDark ? "light" : "dark"}>{title}</TitleStyled>
         <Text color={isDark ? "lightShade" : "darkShade"}>{children}</Text>
       </TextContent>

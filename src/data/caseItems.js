@@ -37,7 +37,7 @@ export const caseItems = [
     img: require("../assets/image/case/photo-1588075592446-265fd1e6e76f.webp"),
     caseImg: require("../assets/image/case/photo-1588075592446-265fd1e6e76f.webp"),
     offer: ["X"],
-    tags: ["AI, ", "Kryptering, ", "Egendata"],
+    tags: ["AI", "Kryptering", "Egendata"],
   },
   {
     title: "Säkra kvittohanteringen med kryptoteknik",
@@ -48,7 +48,7 @@ export const caseItems = [
     img: require("../assets/image/case/Digitala_kvitton.png"),
     caseImg: require("../assets/image/case/skatteverket.jpeg"),
     offer: ["X"],
-    tags: ["Blockkedjor, ", "Kryptering"],
+    tags: ["Blockkedjor", "Kryptering"],
   },
   {
     title: "Digital plattform som strategisk framtidssatsning",
