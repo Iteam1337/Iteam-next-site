@@ -51,7 +51,7 @@ const Hero = () => {
               {" "}
               Iteam Scale-Up – När ditt team behöver extra kraft
               <Box py={[null, null, null, 4]} pr={5} pt={[4, null]}>
-                <Title variant="hero">Ibland behöver man förstärkning</Title>
+                <Title variant="hero">Ibland behövs förstärkning</Title>
                 {/* <Text mb={4}>
                 Oavsett om du har ett problem du behöver lösa eller redan har en idé så hjälper vi dig. Vi börjar där du står och utgår ifrån det helt enkelt. Ibland gör vi en <a href="/designsprint">Designsprint</a> för att kickstarta samarbetet. Andra gånger gör vi research om användarbehov för att försäkra oss om att vi löser rätt problem.
                 </Text> */}
