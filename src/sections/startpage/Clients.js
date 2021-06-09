@@ -4,16 +4,16 @@ import { Container } from "react-bootstrap";
 
 import { Box } from "../../components/Core";
 
-import imgL1Brand1 from "../../assets/image/svg/vimla.svg";
-import imgL1Brand2 from "../../assets/image/svg/seb.svg";
-import imgL1Brand3 from "../../assets/image/svg/taxi-stockholm.svg";
-import imgL1Brand4 from "../../assets/image/png/Skatteverket.png";
-import imgL1Brand5 from "../../assets/image/svg/arbetsformedlingen.svg";
-import imgL1Brand6 from "../../assets/image/png/weopendata.png";
-import imgL1Brand7 from "../../assets/image/svg/gavagai.svg";
-import imgL1Brand8 from "../../assets/image/png/tjejjouren.png";
-import imgL1Brand9 from "../../assets/image/png/swedbank.png";
-import imgL1Brand10 from "../../assets/image/png/cdt.png";
+import imgL1Brand1 from "../../assets/image/svg/vimla.svg?inline";
+import imgL1Brand2 from "../../assets/image/svg/seb.svg?inline";
+import imgL1Brand3 from "../../assets/image/svg/taxi-stockholm.svg?inline";
+import imgL1Brand4 from "../../assets/image/png/Skatteverket.png?resize";
+import imgL1Brand5 from "../../assets/image/svg/arbetsformedlingen.svg?inline";
+import imgL1Brand6 from "../../assets/image/png/weopendata.png?resize";
+import imgL1Brand7 from "../../assets/image/svg/gavagai.svg?inline";
+import imgL1Brand8 from "../../assets/image/png/tjejjouren.png?resize";
+import imgL1Brand9 from "../../assets/image/png/swedbank.png?resize";
+import imgL1Brand10 from "../../assets/image/png/cdt.png?resize";
 
 const Brand = styled(Box)`
   opacity: 0.7;
