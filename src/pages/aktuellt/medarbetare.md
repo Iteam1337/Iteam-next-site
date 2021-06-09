@@ -10,7 +10,7 @@ Med Petronella, Iris, Mikaela och Emil växer vi både inom UX Design och utveck
 <img src='/images/Petronella.png' class="w-50 img-fluid"/>
 
 ## Petronella 
-Petronella kom till oss redan i februari. Hon är UX designer och kommer tidigare från Arbetsförmedlingen. Vi är så glada att ha dig här!
+Petronella kom till oss redan i februari. Hon är UX-designer och kommer tidigare från Arbetsförmedlingen. Vi är så glada att ha dig här!
 
 
 <img src='/images/Mikaela.png' class="w-50 img-fluid"/>
