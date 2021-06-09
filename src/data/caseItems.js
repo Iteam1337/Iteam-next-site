@@ -4,7 +4,7 @@ export const caseItems = [
     client: "Stella - Tjejjouren Väst",
     intro: "Mobilapp ger unga tjejer stöd dygnet runt",
     link: "/case/tjejjouren-vast",
-    img: require("../assets/image/jpeg/case-card-img-2.jpg"),
+    img: require("../assets/image/case/tjejjouren-thumbnail.jpeg"),
     offer: ["MVP"],
     tags: "",
   },
