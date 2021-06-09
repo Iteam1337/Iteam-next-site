@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box, Span } from "../../components/Core";
 import { device } from "../../utils";
+import ContentCard from "../../components/ContentCard";
 
 const SectionStyled = styled(Section)``;
 
@@ -51,7 +52,7 @@ const ContentWidget = styled(Box)`
   } */
 `;
 
-const ContentCard = ({ children = "" }) => {
+const ContentCard1 = ({ children = "" }) => {
   return (
     <ContentWidget>
       <div className="d-flex align-items-center">
@@ -95,17 +96,8 @@ const Content = () => {
             </Col>
           </Row>
           <Row className="justify-content-center">
-            {tech.map((word) => (
-              <Col
-                lg="4"
-                md="6"
-                className="mb-4"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-once="true"
-              >
-                <ContentCard>{word}</ContentCard>
-              </Col>
+            {tech.map((item) => (
+              <ContentCard title={item} dark />
             ))}
           </Row>
         </Container>

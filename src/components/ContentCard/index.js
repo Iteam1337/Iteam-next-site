@@ -1,53 +1,57 @@
 import React from "react";
+import { Col } from "react-bootstrap";
 import styled from "styled-components";
 import { Box, Title } from "../Core";
 
 const StyledBox = styled(Box)`
-  padding: 20px;
-  border: 1px solid rgba(20, 19, 19, 0.115);
+  padding: 25px 20px;
+  border-radius: 10px;
+  border: ${({ theme, dark }) =>
+    `1px solid ${dark ? "#2d2d30" : theme.colors.border}`};
+  background-color: ${({ theme, dark }) =>
+    dark ? theme.colors.dark : theme.colors.light};
   transition: all 0.3s ease-out;
+
   &:hover {
-    box-shadow: ${({ theme }) => `0 4px 20px ${theme.colors.shadow};`};
+    ${({ theme, dark }) =>
+      dark
+        ? `background-color: ${theme.colors.secondary} `
+        : `box-shadow: 0 4px 20px ${theme.colors.shadow};`};
+  }
+
+  h4 {
+    color: ${({ theme, dark }) =>
+      dark ? theme.colors.light : theme.colors.dark};
   }
 `;
 
-const ContentCard = ({
+const ContentCards = ({
   color = "primary",
-  theme = "light",
+  dark = false,
   className,
   iconName,
   title,
   children,
   ...rest
 }) => (
-  <>
+  <Col
+    lg="4"
+    md="6"
+    className="mb-4"
+    data-aos="zoom-in"
+    data-aos-duration="750"
+    data-aos-once="true"
+    data-aos-delay="50"
+  >
     <StyledBox
-      bg="light"
-      border="1px solid"
-      borderColor="border"
-      p="20px"
-      borderRadius={10}
+      dark={dark}
       className={`d-flex align-items-center justify-content-center ${className}`}
       {...rest}
     >
       <Title variant="card" mb={0}>
         {title}
       </Title>
-    </StyledBox>{" "}
-    {/* <Box
-      bg="light"
-      border="1px solid"
-      borderColor="border"
-      p="20px"
-      borderRadius={10}
-      className={`d-flex align-items-center justify-content-center ${className}`}
-      {...rest}
-    >
-      <Title variant="card" mb={0}>
-        {title}
-      </Title>
-    </Box> */}
-  </>
+    </StyledBox>
+  </Col>
 );
-
-export default ContentCard;
+export default ContentCards;
