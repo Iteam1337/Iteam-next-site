@@ -10,7 +10,7 @@ export const CardSidebar = ({ children, ...rest }) => (
 );
 
 export const Block = ({ children, ...rest }) => (
-  <Box borderBottom="1px solid #524f73" pt="20px" pb="13px" {...rest}>
+  <Box pt="20px" {...rest}>
     {children}
   </Box>
 );

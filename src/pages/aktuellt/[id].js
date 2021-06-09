@@ -8,7 +8,7 @@ import PostDetails from "../../sections/aktuellt/PostDetails";
 import Comments from "../../sections/aktuellt/Comments";
 import Sidebar from "../../sections/aktuellt/Sidebar";
 
-import { getAllPostIds, getPostData } from "../../lib/posts";
+import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts";
 
 // get path
 export async function getStaticPaths() {
@@ -22,14 +22,16 @@ export async function getStaticPaths() {
 // get data
 export async function getStaticProps({ params }) {
   const post = await getPostData(params.id);
+  const posts = await getSortedPostsData()
   return {
     props: {
       post,
+      posts
     },
   };
 }
 
-const BlogDetails = ({ post }) => {
+const BlogDetails = ({ post, posts }) => {
   return (
     <>
       <PageWrapper footerDark>
@@ -46,7 +48,7 @@ const BlogDetails = ({ post }) => {
                   <Text mr={3}>
                     {post.tags?.map((tag) => (
                       <Link href="/">
-                        <a>{tag}</a>
+                        {tag}
                       </Link>
                     ))}
                   </Text>
@@ -63,7 +65,7 @@ const BlogDetails = ({ post }) => {
                 <PostDetails post={post} />
               </Col>
               <Col lg="4" className="">
-                <Sidebar />
+                <Sidebar posts={posts} />
               </Col>
             </Row>
           </Container>
