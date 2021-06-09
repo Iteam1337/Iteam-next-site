@@ -19,6 +19,7 @@ const ImageContainerHorizontal = styled(Box)`
   overflow: hidden;
   position: relative;
   width: 100%;
+  height: 350px;
 
   @media ${device.md} {
     width: 100%;
@@ -39,8 +40,8 @@ const BrandImage = styled(Box)`
   bottom: 28px;
   left: 30px;
   border-radius: 8px;
-  border: 1px solid #eae9f2;
   overflow: hidden;
+  border: 1px solid #eae9f2;
 `;
 
 const CardText = styled(Box)`
@@ -54,6 +55,11 @@ const TitleStyled = styled(Title)`
   }
 `;
 
+const CoverImg = styled.img`
+  height: 320px;
+  object-fit: cover;
+`;
+
 const PostCard = ({
   horizontal = false,
   img,
@@ -62,7 +68,7 @@ const PostCard = ({
   title,
   children,
   readMore,
-  link = '',
+  link = "",
   ...rest
 }) => (
   <Card
@@ -73,7 +79,7 @@ const PostCard = ({
       <ImageContainerHorizontal>
         <Link href={link}>
           <a className="w-100 h-100 d-flex">
-            <img src={img} alt="" className="w-100 img-fluid" />
+            <CoverImg src={img} alt="" className="w-100" />
             {imgBrand && (
               <BrandImage>
                 <img src={imgBrand} alt="" className="img-fluid" />
@@ -86,7 +92,7 @@ const PostCard = ({
       <Box className="position-relative">
         <Link href={link}>
           <a className="w-100">
-            <img src={img} alt="" className="w-100 img-fluid" />
+            <CoverImg src={img} alt="" className="w-100" />
             {imgBrand && (
               <BrandImage>
                 <img src={imgBrand} alt="" className="img-fluid" />

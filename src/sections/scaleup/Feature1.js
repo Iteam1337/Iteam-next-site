@@ -48,9 +48,12 @@ const Feature = () => (
           >
             <Box>
               <Title color="light">Våra kompetenser</Title>
-              <Text color="light" >
-              {/* Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text> */}
-              Vi boostar teamet med kompetens inom era prioriterade områden. Våra konsulter är vana att snabbt onboardas till kundunik arkitektur och agila metoder. Vi blir snabbt en naturlig del av ert team!
+              <Text color="light">
+                {/* Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text> */}
+                Vi boostar teamet med kompetens inom era prioriterade områden.
+                Våra konsulter är vana att snabbt onboardas till kundunik
+                arkitektur och agila metoder. Vi blir snabbt en naturlig del av
+                ert team!
               </Text>
               <a href="#book">
                 <Button mt={4}>Kolla tillgänglighet</Button>
@@ -67,13 +70,8 @@ const Feature = () => (
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
-                  <FeatureCard
-                    color="primary"
-                    title="UX"
-                  >
+                  <FeatureCard color="primary" title=" Agil coach">
                     Vi hjälper ert team att sätta användaren i centrum.
-
-                    
                   </FeatureCard>
                 </Col>
                 <Col
@@ -84,11 +82,9 @@ const Feature = () => (
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
-                  <FeatureCard
-                    color="ash"
-                    title="Agil coach"
-                  >
-                    Vi hjälper er att bygga högpresterande, välmående och autonoma team och organisationer.
+                  <FeatureCard color="ash" title="Tech">
+                    Vi stärker upp ditt team med backend, frontend, fullstack,
+                    dev-ops och arkitekter.
                   </FeatureCard>
                 </Col>
                 <Col
@@ -99,11 +95,9 @@ const Feature = () => (
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
-                  <FeatureCard
-                    color="secondary"
-                    title="Tech"
-                  >
-                   Vi stärker upp ditt team med backend, frontend, fullstack, dev-ops och arkitekter.
+                  <FeatureCard color="secondary" title=" UX">
+                    Vi hjälper er att bygga högpresterande, välmående och
+                    autonoma team och organisationer.
                   </FeatureCard>
                 </Col>
               </Row>
