@@ -9,25 +9,23 @@ import imgHalf from "../../assets/image/jpeg/teamcoach.jpeg";
 
 const ImageHalfContainer = styled(Box)`
   position: static;
-  right: -260px;
   z-index: -1;
   height: 100%;
 
   .img-half {
     height: auto;
     @media ${device.lg} {
-      height: 100%;
+      height: 80%;
     }
   }
   @media ${device.lg} {
     position: absolute !important;
-    height: 100%;
-    right: -500px;
+    height: 80%;
+    margin-top: 30%;
   }
   @media ${device.xl} {
     position: absolute !important;
-    height: 100%;
-    right: -370px;
+    height: 80%;
   }
 `;
 
