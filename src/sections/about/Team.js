@@ -12,7 +12,7 @@ import imgU4 from "../../assets/image/jpeg/about-team-5.jpg";
 import imgU5 from "../../assets/image/jpeg/about-team-6.jpg";
 import imgU6 from "../../assets/image/jpeg/about-team-2.jpg";
 
-import team from './team.json'
+import team from "./team.json";
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -26,7 +26,15 @@ const CardImage = styled.div`
   margin-bottom: 29px;
 `;
 
-const TeamCard = ({ email, name, title, status, phoneNumber, ...rest }) => (
+const TeamCard = ({
+  email,
+  name,
+  title,
+  status,
+  phoneNumber,
+  username = "",
+  ...rest
+}) => (
   <Box
     className="text-center"
     pt="15px"
@@ -35,13 +43,11 @@ const TeamCard = ({ email, name, title, status, phoneNumber, ...rest }) => (
     mb={4}
     {...rest}
   >
-    <CardImage>
-      <Gravatar
-        email={email}
-        className="img-fluid"
-        size={200}
-        />
-    </CardImage>
+    <a href={`/about/${name.toLowerCase()}`}>
+      <CardImage>
+        <Gravatar email={email} className="img-fluid" size={200} />
+      </CardImage>
+    </a>
     <div className="text-center">
       <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
         {name}
@@ -80,7 +86,8 @@ const Team = () => (
             <div id="medarbetare" className="">
               <Title>Medarbetare</Title>
               <Text>
-                Här hittar du oss som jobbar på Iteam, tveka inte att höra av dig!
+                Här hittar du oss som jobbar på Iteam, tveka inte att höra av
+                dig!
               </Text>
             </div>
           </Col>
@@ -88,11 +95,17 @@ const Team = () => (
         <Row className="align-items-center justify-content-center">
           {team
             .sort((a, b) => a.fullname > b.fullname)
-            .map(({fullname, title, email, phoneNumber, status}) => 
+            .map(({ fullname, title, email, phoneNumber, status }) => (
               <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4" key={email}>
-                <TeamCard email={email} name={fullname} title={title} status={status} phoneNumber={phoneNumber} />
+                <TeamCard
+                  email={email}
+                  name={fullname}
+                  title={title}
+                  status={status}
+                  phoneNumber={phoneNumber}
+                />
               </Col>
-          )}
+            ))}
         </Row>
       </Container>
     </Section>
