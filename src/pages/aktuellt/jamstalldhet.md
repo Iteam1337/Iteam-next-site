@@ -15,4 +15,4 @@ I rapporter om näringslivet i stort, konsultbranschen och om techbolagen i synn
 
 lovelacemote
 
-<img href='../../assets/image/jpeg/lovelacemote.jpeg'/>
+<img src='../../assets/image/jpeg/lovelacemote.jpeg'/>
