@@ -8,12 +8,9 @@ import PostCard from "../../components/PostCard";
 import trrThumbnail from "../../assets/image/case/trr-case-phone.png";
 import imgCase1 from "../../assets/image/case/matcha-kontraktet1.jpg";
 import imgCase2 from "../../assets/image/jpeg/case-card-img-2.jpg";
-import imgCase3 from "../../assets/image/jpeg/case-card-img-3.jpg";
+import imgCase3 from "../../assets/image/case/tjejjouren-thumbnail.jpeg";
 import imgCase4 from "../../assets/image/case/Digitala_kvitton.png";
 import imgCase5 from "../../assets/image/case/vimla-case-phone.png";
-import imgBrand1 from "../../assets/image/jpeg/case-card-brand-img.jpg";
-import imgBrand2 from "../../assets/image/jpeg/case-card-brand-img-2.jpg";
-import imgBrand3 from "../../assets/image/jpeg/case-card-brand-img-3.jpg";
 
 const Column = (props) => <Col sm={6} lg={4} className="mb-4" {...props} />;
 
@@ -25,7 +22,7 @@ const CaseList = () => (
         <Row>
           <Column>
             <PostCard
-              img={imgCase2}
+              img={imgCase3}
               title="Tjejjouren Väst"
               link="/case/tjejjouren-vast"
             >
@@ -40,7 +37,6 @@ const CaseList = () => (
           <Column>
             <PostCard
               img={imgCase1}
-              imgBrand={imgBrand1}
               title="Matcha kontraktet"
               link="/case/matcha-kontraktet"
             >
@@ -50,8 +46,7 @@ const CaseList = () => (
           </Column>
           <Column>
             <PostCard
-              img={imgCase3}
-              imgBrand={imgBrand3}
+              img={imgCase2}
               title="Skellefteå ansiktsigenkänning"
               link="/case/skelleftea"
             >
