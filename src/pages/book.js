@@ -29,7 +29,7 @@ const Contact1 = () => {
         <Section>
           <Container>
             <Row className="align-items-center">
-              <Col lg="10">
+              <Col lg="5">
                 <FormStyled
                   id="form"
                   name="contact1"
@@ -41,16 +41,14 @@ const Contact1 = () => {
                   <input type="hidden" name="form-name" value="contact1" />
 
                   <Box mb={5}>
-                    <Title>Boka intromöte direkt i kalendern</Title>
+                    <Title>Boka möte i kalendern</Title>
                   </Box>
                   <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"></div>
 
                 </FormStyled>
               </Col>
-            </Row>
-            <Row className="align-items-center">
               <Col
-                lg={10}
+                lg={6}
                 className="offset-lg-1 order-lg-2 mt-5 mt-lg-0 pt-lg-5"
               >
                 <Box className="mb-5">
@@ -70,6 +68,7 @@ const Contact1 = () => {
                     Hans Rollman, COO
                     <Text><a href="callto:+46738133787">+46 738-1337 87</a></Text>
                   </Title>
+                  <a href="/about#medarbetare">Fler kontaktuppgifter...</a>
                 </Box>
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">
@@ -80,19 +79,17 @@ const Contact1 = () => {
                 </Box>
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">
-                    Besök oss och ta en kaffe
+                    Göteborg
                   </Title>
                   <Text>Järntorgsgatan 12-14</Text>
                   <Text>413 01 Göteborg</Text>
                 </Box>
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">
-                    Vi finns numera på många orter men utan kontor
+                    Stockholm
                   </Title>
-                  <Text>Stockholm</Text>
-                  <Text>Göteborg</Text>
-                  <Text>Skåne</Text>
-                  <Text>Fler?</Text>
+                  <Text>Järntorgsgatan 12-14</Text>
+                  <Text>413 01 Göteborg</Text>
                 </Box>
               </Col>
             </Row>

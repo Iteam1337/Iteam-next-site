@@ -450,7 +450,7 @@ const Header = ({ isDark = false }) => {
               onClick={gContext.toggleOffCanvas}
               dark={isDark ? 1 : 0}
             >
-              <i className="icon icon-menu-34 icon-burger d-block"></i>
+              <i className="icon icon-menu-34 icon-burger d-block fa-2x"></i>
             </ToggleButton>
           </nav>
         </Container>

@@ -6,8 +6,8 @@ import Slider from "react-slick";
 import { Title, Section, Box, Text } from "../../components/Core";
 import { breakpoints } from "../../utils";
 
-import imgC1 from "../../assets/image/jpeg/l1-customer2.jpg";
-import imgC2 from "../../assets/image/jpeg/l1-customer3.jpg";
+import imgC1 from "../../assets/image/case/TRR_logo_lila.svg";
+import imgC2 from "../../assets/image/case/skelleftea.jpg";
 
 const SliderStyled = styled(Slider)`
   .slick-dots {

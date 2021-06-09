@@ -126,7 +126,7 @@ const Pricing = () => {
         >
           <Row className="justify-content-center">
             <Col md="8" lg="9">
-              <div className=" text-center">
+              <div className=" text-center" id="pricing">
                 <Title>Våra enkla priser</Title>
                 <Text>
                   Vi vill göra det enkelt att jobba med oss{" "}
@@ -148,7 +148,7 @@ const Pricing = () => {
 
 
             <Row className="justify-content-center" >
-              <Col lg="6" className="mb-5 align-items-center" >
+              <Col lg="8" className="mb-5 align-items-center" >
                 <CardPricing>
                   <div className="mb-4">
                     <TitleSmall>Helt team</TitleSmall>
@@ -167,7 +167,7 @@ const Pricing = () => {
                     </div>
                     <Text fontSize="18px">per person</Text>
                     <ULStyled >
-                      <li>Kompetens inom ux, utveckling och teamfacilitering</li>
+                      <li>Kompetens inom UX, utveckling och teamfacilitering</li>
                       <li> Arbetar med en avgränsad del av er verksamhet</li>
                       <li> Stöd och coachning till dig som beställare</li>
                       <li>2 eller 4 dagar/vecka</li>

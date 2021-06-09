@@ -37,8 +37,15 @@ const Feature = () => (
       <Container>
         <Row className="justify-content-center">
           <Col lg="4" className="mb-5 mb-lg-4">
-            <FeatureCard title="Användarcentrerad process" iconImage={iconInsight}>
+            <FeatureCard title="Användarstyrd process" iconImage={iconInsight}>
             Vi involverar användarna tidigt och gör allt för att lära oss mer om de bakomliggande behoven. Det hjälper oss att prioritera och utveckla det som skapar värde för både dig och användarna.
+            </FeatureCard>
+          </Col>
+          <Col lg="4" className="mb-5 mb-lg-4">
+            <FeatureCard title="Öppen källkod" iconImage={iconOpenSource}>
+              Genom att använda öppen källkod, inte bara som kod utan också som filosofi
+              i allt vi bygger så blir det enkelt för vem som helst att ansluta till teamet.
+              Dessutom blir det billigare och säkrare.
             </FeatureCard>
           </Col>
           <Col lg="4" className="mb-5 mb-lg-4">
@@ -47,13 +54,6 @@ const Feature = () => (
               (därav vårt namn) och alltid med en agil coach så att teamet
               snabbt blir autonomt och du som kund får det
               stöd du behöver.
-            </FeatureCard>
-          </Col>
-          <Col lg="4" className="mb-5 mb-lg-4">
-            <FeatureCard title="Open Source" iconImage={iconOpenSource}>
-              Genom att använda öppen källkod, inte bara som kod utan också som filosofi
-              i allt vi bygger så blir det enkelt för vem som helst att ansluta till teamet.
-              Dessutom blir det billigare.
             </FeatureCard>
           </Col>
         </Row>

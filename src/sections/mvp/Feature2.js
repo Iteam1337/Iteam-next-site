@@ -10,8 +10,10 @@ const services = [
   "Plattformar",
   "Widgets",
   "Interna portaler",
-  "Siter",
+  "Webbapplikationer",
   "Integrationer för nya tjänster",
+  "Chatbottar",
+  "Automatiseringar",
 ];
 
 const ContentCard = ({

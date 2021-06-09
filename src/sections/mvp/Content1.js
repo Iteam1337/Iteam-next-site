@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 
-import imgHalf from "../../assets/image/jpeg/Radu-Lowres.jpg";
+import imgHalf from "../../assets/image/jpeg/Annie-Lowres.jpg";
 
 const ImageHalfContainer = styled(Box)`
   position: static;
@@ -27,7 +27,7 @@ const ImageHalfContainer = styled(Box)`
   @media ${device.xl} {
     position: absolute !important;
     height: 100%;
-    right: -370px;
+    right: -30px;
   }
 `;
 
@@ -71,7 +71,7 @@ const Content1 = () => (
           >
             <Section py={[5, null, null, "190px"]}>
               <div className="omga-02__content-text section-title order-lg-1">
-                <Title>Ingen gillar att vänta</Title>
+                <Title>Börja litet</Title>
                 <Text>
                   Vi hjälper dig definiera ett lagom scope för din MVP så att du
                   kan lansera något nytt inom tre månader. För att göra det

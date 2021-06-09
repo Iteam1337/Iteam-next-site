@@ -18,7 +18,7 @@ const FeatureCard = ({
           color="heading"
           as="h3"
           fontSize={4}
-          fontWeight={500}
+          fontWeight={700}
           letterSpacing={-0.75}
           mb={2}
         >
@@ -47,7 +47,7 @@ const Feature = () => (
             data-aos-delay="500"
           >
             <Box>
-              <Title color="light">Det är inte svårt</Title>
+              <Title color="light">Vi bygger din idé</Title>
               <Text color="light" >
               {/* Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text> */}
               Oavsett om du har ett problem du behöver lösa eller redan har en idé så hjälper vi dig. 
@@ -74,7 +74,7 @@ const Feature = () => (
                     color="primary"
                     title="Teknik som funkar"
                   >
-Vi har koll på de senaste teknikerna och vi vet hur man får gammal teknik att fungera i den nya digitala världen.
+Vi har koll på de senaste teknikerna och vi vet hur man får gammal teknik att fungera ihop med ny.
                   </FeatureCard>
                 </Col>
                 <Col
@@ -105,7 +105,7 @@ Vi vet att nöjda användare är bra business. Därför sätter vi alltid dem i 
                     color="secondary"
                     title="Vi stöttar dig"
                   >
-                   Vi anpassar vår process till din organisation eftersom alla fungerar på olika sätt. Våra coacher, UX-strateger, affärsutvecklare och tekniska rådgivare stöttar dig och ger dig det du behöver.
+                    Våra coacher har stor erfarenhet och finns här för dig. Vi blir ditt bollplank för tjänste- och produktutveckling och hjälper dig hitta rätt process framåt.
                   </FeatureCard>
                 </Col>
               </Row>

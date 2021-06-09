@@ -65,24 +65,37 @@ const ContentCard = ({ children = "" }) => {
   );
 };
 
+const tech = [
+  'Blockkedjor', 
+  'Applicerad AI',
+  'Data pipelines',
+  'Krypteringslösningar',
+  'Digitala tvillingar',
+  'Machine Learning',
+  'Drönarteknik',
+  'VR/AR',
+  'Datavisualisering',
+]
+
 const Content = () => {
   return (
     <>
       {/* <!-- Content section --> */}
       <SectionStyled bg="dark">
         <Container>
+          
           <Row className="justify-content-center mb-5">
             <Col lg="10">
               <div className="text-center">
                 <Title color="light">
-                  Våra team utgår från <Span color="secondary">en hypotes.</Span>{" "}
+                  Våra X team utgår från <Span color="secondary">en hypotes.</Span>{" "}
                   Den försöker vi därefter att motbevisa med hjälp av olika experiment.
                 </Title>
               </div>
             </Col>
           </Row>
           <Row className="justify-content-center">
-            <Col
+            {tech.map(word => <Col
               lg="4"
               md="6"
               className="mb-4"
@@ -90,63 +103,8 @@ const Content = () => {
               data-aos-duration="1000"
               data-aos-once="true"
             >
-              <ContentCard>Blockkedjor</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="200"
-            >
-              <ContentCard>AI</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="400"
-            >
-              <ContentCard>Data pipelines</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="600"
-            >
-              <ContentCard>Digital Twins</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="800"
-            >
-              <ContentCard>Machine Learning</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="1000"
-            >
-              <ContentCard>Drönare</ContentCard>
-            </Col>
+              <ContentCard>{word}</ContentCard>
+            </Col>)}
           </Row>
         </Container>
       </SectionStyled>

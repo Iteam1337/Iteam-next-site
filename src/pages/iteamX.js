@@ -2,19 +2,23 @@ import React from "react";
 import Hero from "../sections/iteamX/Hero";
 import Fact from "../sections/iteamX/Fact";
 import Content from "../sections/iteamX/Content";
+import Content2 from "../sections/iteamX/Content2";
+import Feature1 from "../sections/iteamX/Feature1";
 import CaseStudies from "../sections/iteamX/CaseStudies";
 import Reviews from "../sections/iteamX/Reviews";
 import Contact from "../sections/iteamX/Contact";
 
 import PageWrapper from "../components/PageWrapper";
 
-const LandingPage7 = () => {
+const IteamX = () => {
   return (
     <>
       <PageWrapper headerDark footerDark>
         <Hero />
         <Fact />
         <Content />
+        <Content2 />
+        <Feature1 />
         <CaseStudies />
         <Reviews />
         <Contact />
@@ -22,4 +26,4 @@ const LandingPage7 = () => {
     </>
   );
 };
-export default LandingPage7;
+export default IteamX;

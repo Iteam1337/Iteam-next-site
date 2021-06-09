@@ -4,6 +4,8 @@ import Feature from "../sections/startpage/Feature";
 import Clients from "../sections/startpage/Clients";
 import Content1 from "../sections/startpage/Content1";
 import Content2 from "../sections/startpage/Content2";
+import Offerings from "../sections/startpage/Offerings";
+import DesignatedTeam from "../sections/mvp/DesignatedTeam";
 import Testimonial from "../sections/startpage/Testimonial";
 import Fact from "../sections/startpage/Fact";
 import Pricing from "../sections/startpage/Pricing";
@@ -20,7 +22,9 @@ const LandingPage4 = () => {
         <Hero />
         <Feature />
         <Content1 />
+        <DesignatedTeam />
         <Content2 />
+        <Offerings />
         <Testimonial />
         {/* <Fact /> */}
         <Clients />
