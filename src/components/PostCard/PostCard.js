@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { Title, Box, Text, Span } from "../Core";
 import { device } from "../../utils";
+import Image from 'next/image'
 
 const Card = styled(Box)`
   border-radius: 10px 10px;
@@ -66,6 +67,8 @@ const PostCard = ({
   imgBrand,
   preTitle,
   title,
+  date,
+  intro,
   children,
   readMore,
   link = "",
@@ -106,7 +109,7 @@ const PostCard = ({
     <CardText>
       {preTitle && (
         <Text fontSize={2} lineHeight={1.75} mb="14px">
-          Jan 14, 2020
+          {preTitle}
         </Text>
       )}
 
@@ -124,7 +127,7 @@ const PostCard = ({
         <Box>
           <Link href={link}>
             <a>
-              <Span color="primary">Continue Reading</Span>
+              <Span color="primary">Läs mer...</Span>
             </a>
           </Link>
         </Box>

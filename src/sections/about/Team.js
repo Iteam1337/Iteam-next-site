@@ -77,7 +77,7 @@ const Team = () => (
       <Container>
         <Row className="justify-content-center">
           <Col lg="6" className="text-center pb-3">
-            <div className="">
+            <div id="medarbetare" className="">
               <Title>Medarbetare</Title>
               <Text>
                 Här hittar du oss som jobbar på Iteam, tveka inte att höra av dig!
