@@ -17,16 +17,16 @@ import CTA from "../sections/scaleup/CTA";
 const ScaleUp = () => {
   return (
     <>
-      <PageWrapper >
+      <PageWrapper>
         <Hero />
         <Content1 />
         <Feature1 />
-        <UX />
+        <AgileCoach />
         <DesignatedTeam />
         <Tech />
-        <ModalVideo url='https://www.youtube.com/watch?v=Iz-XLYvzXyU'></ModalVideo>
+        <ModalVideo url="https://www.youtube.com/watch?v=Iz-XLYvzXyU"></ModalVideo>
         <Content2 />
-        <AgileCoach />
+        <UX />
         <Testimonial />
         <Pricing />
         <CTA />
