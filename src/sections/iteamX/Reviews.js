@@ -68,36 +68,32 @@ const Reviews = () => {
           <Row className="justify-content-center mt-3">
             <Col lg="4" md="6" className="mb-5 mb-lg-0">
               <ContentCard
-                name="Troy Patrick"
-                company="CEO at CoWorks"
+                name="Patrik Fältström"
+                company="Forskningschef, Netnod"
                 image={imgR1}
                 imageBrand={imgB1}
               >
-                "You made it so simple. My new site is so much faster and easier
-                to work with than my old site. I just choose the page, make the
-                change and click save."
+                "Christian och Iteam har både koll på vad som går att bygga med senaste tekniken och tar ett stort ansvar för samhällsutvecklingen."
               </ContentCard>
             </Col>
             <Col lg="4" md="6" className="mb-5 mb-lg-0">
               <ContentCard
-                name="Paromita Haque"
-                company="CEO at CoWorks"
+                name="Aurore Belfrage"
+                company="Techdiplomat"
                 image={imgR2}
                 imageBrand={imgB2}
               >
-                "Simply the best. Better than all the rest. I’d recommend this
-                product to beginners and advanced users."
+                "Iteam är spännande... "
               </ContentCard>
             </Col>
             <Col lg="4" md="6" className="mb-5 mb-lg-0">
               <ContentCard
-                name="Trashee Habbard"
-                company="CEO at CoWorks"
+                name="Johanna Lindberg"
+                company="Forskare på LTU"
                 image={imgR3}
                 imageBrand={imgB3}
               >
-                "Must have book for students, who want to be Product Designer,
-                UX Designer, or Interaction Designer."
+                "Iteam är ett av Sveriges mest intressanta techföretag."
               </ContentCard>
             </Col>
           </Row>

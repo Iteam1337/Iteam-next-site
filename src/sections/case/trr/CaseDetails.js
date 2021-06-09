@@ -26,7 +26,7 @@ const CaseDetails = () => (
                 Vi hjälper TRR att ta en proaktiv roll på arbetsmarknaden och
                 svara på kundernas behov om kompetensförsörjning. Detta kommer
                 på sikt att resultera i en plattform där TRRs kundföretag kan ta
-                del av hela serviceerbjudandet. Syftet är att detta både ska
+                del av hela TRRs erbjuande digitalt. Syftet är att detta både ska
                 höja servicenivån och frigöra tid för TRRs medarbetare för att
                 prioritera personliga möten istället för administration. De
                 första stegen i denna resa är tjänster för att hitta nya
@@ -39,13 +39,9 @@ const CaseDetails = () => (
                 Tydliga mål och snabbrörlighet
               </Title>
               <Text variant="small">
-                Vårt arbete med att utveckla Kundplattformen genomsyras av
-                Design Thinking och ett hypotesdrivet arbetssätt där vi vägleds
-                av användarnas behov. Vi började med att identifiera
-                målgruppernas behov genom intervjustudier. Därefter definierades
-                Kundplattform effektmål som hjälpte oss att prioritera
-                funktioner som ska utvecklas. På så sätt synliggörs hela
-                resonemangskedjan, från de effekter vi vill uppnå till hur vi
+                Vårt arbete med utvecklingen genomsyras av ett hypotesdrivet arbetssätt där vi vägleds
+                av användarnas behov. Vi identifierar               målgruppernas behov genom intervjustudier, definierar effektmål och prioriterar de viktigaste behoven. Genom att arbeta målstyrt synliggörs hela
+                kedjan, från de effekter vi vill uppnå till hur vi
                 konkret tillgodoser behoven.
                 <br />
                 <br />

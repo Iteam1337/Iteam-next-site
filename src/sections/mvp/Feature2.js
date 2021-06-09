@@ -4,7 +4,17 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box } from "../../components/Core";
 
-const services = ["API", "Appar", "Plattformar"];
+const services = [
+  "API",
+  "Appar",
+  "Plattformar",
+  "Widgets",
+  "Interna portaler",
+  "Webbapplikationer",
+  "Integrationer för nya tjänster",
+  "Chatbottar",
+  "Automatiseringar",
+];
 
 const ContentCard = ({
   color = "primary",
@@ -59,9 +69,9 @@ const Feature2 = () => (
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
               <Title>
-                Vi bygger allt
+                Vi bygger det
                 <br />
-                du behöver.
+                du behöver
               </Title>
             </Box>
           </Col>
@@ -77,123 +87,9 @@ const Feature2 = () => (
               data-aos-once="true"
               data-aos-delay="50"
             >
-              <ContentCard
-                title={service}
-                color="primary"
-                iconName="icon-cards-2"
-              />
+              <ContentCard title={service} color="primary" />
             </Col>
           ))}
-
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard
-              title="Multiple Layouts"
-              color="ash"
-              iconName="icon-layout-11"
-            />
-          </Col>
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard
-              title="Mobile First Design"
-              color="warning"
-              iconName="icon-phone-charging-3-2"
-            />
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard
-              title="Fully Responsive"
-              color="ash"
-              iconName="icon-sidebar-2"
-            />
-          </Col>
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard
-              title="Bootstrap 4 Framework"
-              color="primary"
-              iconName="icon-grid-45"
-            />
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard
-              title="Rich Documentation"
-              color="ash"
-              iconName="icon-bookmark-2-2"
-            />
-          </Col>
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard
-              title="Humanly Support"
-              color="success"
-              iconName="icon-voice-recognition-2"
-            />
-          </Col>
-          <Col
-            lg="4"
-            md="6"
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="750"
-            data-aos-once="true"
-            data-aos-delay="50"
-          >
-            <ContentCard
-              title="Lifetime Updates"
-              color="primary"
-              iconName="icon-infinite"
-            />
-          </Col>
         </Row>
       </Container>
     </Section>

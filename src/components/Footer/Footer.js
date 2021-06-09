@@ -122,7 +122,7 @@ const Footer = ({ isDark = true }) => {
                       <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
                           <a href="https://maps.google.com/?q=Iteam, Järntorgsgatan, Göteborg" target="_blank">
-                          Järntorgsgatan 12-14
+                          Järntorgsgatan 12-14<br/>
                           413 01 Göteborg
                           </a>
                         </li>
@@ -132,7 +132,7 @@ const Footer = ({ isDark = true }) => {
                       </UlStyled>
                     </div>
                   </Col>
-                  <Col xs="6" lg="3">
+                  {/* <Col xs="6" lg="3">
                     <div className="mb-5 mb-lg-4">
                       <TitleStyled
                         variant="card"
@@ -158,7 +158,7 @@ const Footer = ({ isDark = true }) => {
                         </li>
                       </UlStyled>
                     </div>
-                  </Col>
+                  </Col> */}
                   <Col xs="6" lg="3">
                     <div className="mb-lg-4">
                       <TitleStyled
@@ -169,7 +169,7 @@ const Footer = ({ isDark = true }) => {
                       </TitleStyled>
                       <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
-                          <a href="/contact-1">
+                          <a href="/book">
                             Boka möte
                           </a>
                         </li>
@@ -193,22 +193,22 @@ const Footer = ({ isDark = true }) => {
           <CopyRightArea dark={isDark ? 1 : 0}>
             <Row className="align-items-center">
               <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
-                <p>&copy; 2021 Iteam, All Rights Reserved</p>
+                <p>&copy; 2021 Iteam, All Rights Reserved. Our <a href="/privacy">privacy policy</a>.</p>
               </Col>
               <Col sm="6" className="text-sm-right text-center">
                 <ul className="social-icons">
                   <li>
-                    <a href="/#" target="_blank">
+                    <a href="https://twitter.com/iteam1337" target="_blank">
                       <i className="icon icon-logo-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="/#" target="_blank">
+                    <a href="https://www.linkedin.com/company/iteam1337/" target="_blank">
                       <i className="icon icon-logo-linkedin"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="/#" target="_blank">
+                    <a href="https://facebook.com/iteam1337" target="_blank">
                       <i className="icon icon-logo-facebook"></i>
                     </a>
                   </li>

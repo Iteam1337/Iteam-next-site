@@ -5,10 +5,13 @@ import Feature1 from "../sections/mvp/Feature1";
 import Content1 from "../sections/mvp/Content1";
 import Feature2 from "../sections/mvp/Feature2";
 import Content2 from "../sections/mvp/Content2";
-import Testimonial from "../sections/mvp/Testimonial";
+import DesignatedTeam from "../sections/mvp/DesignatedTeam";
+// import Testimonial from "../sections/mvp/Testimonial";
+import ModalVideo from "../components/ModalVideo";
+import Testimonial from "../sections/startpage/Testimonial";
 import CTA from "../sections/mvp/CTA";
 
-const LandingPage2 = () => {
+const Mvp = () => {
   return (
     <>
       <PageWrapper >
@@ -16,6 +19,8 @@ const LandingPage2 = () => {
         <Feature1 />
         <Content1 />
         <Feature2 />
+        <DesignatedTeam />
+        <ModalVideo url='https://www.youtube.com/watch?v=Iz-XLYvzXyU'></ModalVideo>
         <Content2 />
         <Testimonial />
         <CTA />
@@ -23,4 +28,4 @@ const LandingPage2 = () => {
     </>
   );
 };
-export default LandingPage2;
+export default Mvp;

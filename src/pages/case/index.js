@@ -28,7 +28,7 @@ const CaseStudy = () => {
         </Section>
         <CaseList />
         <CaseList2 />
-        <CaseList />
+        {/* <CaseList /> */}
         <CTA />
       </PageWrapper>
     </>
