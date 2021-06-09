@@ -14,7 +14,7 @@ const SectionStyled = styled(Section)`
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.3)
     ),
-    /* bottom, image */ url(${imgHeroTab}) no-repeat center 70% fixed;
+    /* bottom, image */ url(${imgHeroTab}) no-repeat center 60% fixed;
   background-size: cover;
   padding-top: 128px;
 `;

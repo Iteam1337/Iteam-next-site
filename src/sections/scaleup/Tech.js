@@ -28,8 +28,8 @@ const Feature2 = () => (
           </Col>
         </Row>
         <Row className="justify-content-center">
-          {services.map((service) => (
-            <ContentCard title={service} />
+          {services.map((service, i) => (
+            <ContentCard title={service} key={i} />
           ))}
         </Row>
       </Container>

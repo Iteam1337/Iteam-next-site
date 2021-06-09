@@ -63,14 +63,15 @@ const Content2 = () => (
               <div>
                 <Title color="light">Hållbarhet med AI</Title>
                 <Text mb={4} color="light">
-                I projektet Predictive Movement utgår vi från hypotesen att det bör gå att optimera energiåtgången i vägnätet genom att använda sig
-                av AI och en blockkedja. 
+                  I projektet Predictive Movement utgår vi från hypotesen att
+                  det bör gå att optimera energiåtgången i vägnätet genom att
+                  använda sig av AI och en blockkedja.
                 </Text>
-                <Link href="https://predictivemovement.se">
+                <a href="https://predictivemovement.se">
                   <Button bg="secondary" color="dark">
                     Läs om Predictive Movement
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </Col>

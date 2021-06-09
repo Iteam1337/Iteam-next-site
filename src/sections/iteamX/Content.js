@@ -96,8 +96,8 @@ const Content = () => {
             </Col>
           </Row>
           <Row className="justify-content-center">
-            {tech.map((item) => (
-              <ContentCard title={item} dark />
+            {tech.map((item, i) => (
+              <ContentCard key={i} title={item} dark />
             ))}
           </Row>
         </Container>
