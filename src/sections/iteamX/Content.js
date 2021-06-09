@@ -45,10 +45,10 @@ const ContentWidget = styled(Box)`
     border-radius: 10px;
     background-color: ${({ theme }) => theme.colors.secondary};
   }
-  &:hover i {
+  /* &:hover i {
     transform: translateX(10px);
     opacity: 1;
-  }
+  } */
 `;
 
 const ContentCard = ({ children = "" }) => {
@@ -66,16 +66,16 @@ const ContentCard = ({ children = "" }) => {
 };
 
 const tech = [
-  'Blockkedjor', 
-  'Applicerad AI',
-  'Data pipelines',
-  'Krypteringslösningar',
-  'Digitala tvillingar',
-  'Machine Learning',
-  'Drönarteknik',
-  'VR/AR',
-  'Datavisualisering',
-]
+  "Blockkedjor",
+  "Applicerad AI",
+  "Data pipelines",
+  "Krypteringslösningar",
+  "Digitala tvillingar",
+  "Machine Learning",
+  "Drönarteknik",
+  "VR/AR",
+  "Datavisualisering",
+];
 
 const Content = () => {
   return (
@@ -83,28 +83,30 @@ const Content = () => {
       {/* <!-- Content section --> */}
       <SectionStyled bg="dark">
         <Container>
-          
           <Row className="justify-content-center mb-5">
             <Col lg="10">
               <div className="text-center">
                 <Title color="light">
-                  Våra X team utgår från <Span color="secondary">en hypotes.</Span>{" "}
-                  Den försöker vi därefter att motbevisa med hjälp av olika experiment.
+                  Våra X team utgår från{" "}
+                  <Span color="secondary">en hypotes.</Span> Den försöker vi
+                  därefter att motbevisa med hjälp av olika experiment.
                 </Title>
               </div>
             </Col>
           </Row>
           <Row className="justify-content-center">
-            {tech.map(word => <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-            >
-              <ContentCard>{word}</ContentCard>
-            </Col>)}
+            {tech.map((word) => (
+              <Col
+                lg="4"
+                md="6"
+                className="mb-4"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-once="true"
+              >
+                <ContentCard>{word}</ContentCard>
+              </Col>
+            ))}
           </Row>
         </Container>
       </SectionStyled>
