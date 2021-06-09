@@ -1,4 +1,5 @@
 import React from "react";
+import { Col } from "react-bootstrap";
 import styled from "styled-components";
 import { Box, Title } from "../Core";
 
@@ -24,7 +25,7 @@ const StyledBox = styled(Box)`
   }
 `;
 
-const ContentCard = ({
+const ContentCards = ({
   color = "primary",
   dark = false,
   className,
@@ -33,15 +34,24 @@ const ContentCard = ({
   children,
   ...rest
 }) => (
-  <StyledBox
-    dark={dark}
-    className={`d-flex align-items-center justify-content-center ${className}`}
-    {...rest}
+  <Col
+    lg="4"
+    md="6"
+    className="mb-4"
+    data-aos="zoom-in"
+    data-aos-duration="750"
+    data-aos-once="true"
+    data-aos-delay="50"
   >
-    <Title variant="card" mb={0}>
-      {title}
-    </Title>
-  </StyledBox>
+    <StyledBox
+      dark={dark}
+      className={`d-flex align-items-center justify-content-center ${className}`}
+      {...rest}
+    >
+      <Title variant="card" mb={0}>
+        {title}
+      </Title>
+    </StyledBox>
+  </Col>
 );
-
-export default ContentCard;
+export default ContentCards;

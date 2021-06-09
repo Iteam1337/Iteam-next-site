@@ -96,17 +96,8 @@ const Content = () => {
             </Col>
           </Row>
           <Row className="justify-content-center">
-            {tech.map((word) => (
-              <Col
-                lg="4"
-                md="6"
-                className="mb-4"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-once="true"
-              >
-                <ContentCard title={word} dark />
-              </Col>
+            {tech.map((item) => (
+              <ContentCard title={item} dark />
             ))}
           </Row>
         </Container>
