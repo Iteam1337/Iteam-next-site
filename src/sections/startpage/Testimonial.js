@@ -7,8 +7,9 @@ import { rgba } from "polished";
 import { Title, Section, Box, Text } from "../../components/Core";
 import { device, breakpoints } from "../../utils";
 
-import imgCustomer1 from "../../assets/image/jpeg/littorin.jpg";
+import imgCustomer1 from "../../assets/image/jpeg/Erika-Strandberg-Sveriges-Allmannytta.jpeg";
 import imgCustomer2 from "../../assets/image/jpeg/TomAiraksinen.jpg";
+import imgCustomer3 from "../../assets/image/jpeg/littorin.jpg";
 import imgQuote from "../../assets/image/png/quote-shape.png";
 
 const SliderStyled = styled(Slider)`
@@ -171,7 +172,8 @@ const Testimonial = () => {
               <div className="text">
                 <Title>Vi är stolta över våra kunder</Title>
                 <Text>
-                  Kreativitet kommer inte från krångliga avtal utan från samarbete och förtroende.
+                  Kreativitet kommer inte från krångliga avtal utan från
+                  samarbete och förtroende.
                 </Text>
               </div>
             </Col>
@@ -185,16 +187,22 @@ const Testimonial = () => {
                       <img src={imgCustomer1} alt="" />
                     </SliderImgContainer>
                     <SliderText>
-                      <Text color="dark" my={2} className="text-left">
-                      Vårt team på Iteam är mer som kollegor än leverantörer. Istället för att skriva en teknisk kravspecifikation, så samarbetar vi kontinuerligt för att utveckla funktionalitet.
+                      <Text color="dark" my={2}>
+                        Jag uppskattar Iteam för deras genuina engagemang, de är
+                        alltid intresserade av att bidra till vårt arbete i
+                        Digitaliseringsinitiativet och bygget av framtidens
+                        allmännytta.
                       </Text>
-                      <Title variant="card" mb={0} mt={3} className="text-left">
-                        Johan Littorin
+                      <Title variant="card" mb={0} mt={3}>
+                        Erika Strandberg
                       </Title>
-                      <Text variant="small">Grundare Vimla</Text>
+                      <Text variant="small">
+                        Lead Service Design, Sveriges allmännytta
+                      </Text>
                     </SliderText>
                   </SliderCard>
                 </SliderItem>
+
                 <SliderItem>
                   <SliderCard>
                     <SliderImgContainer>
@@ -202,12 +210,35 @@ const Testimonial = () => {
                     </SliderImgContainer>
                     <SliderText>
                       <Text color="dark" my={2}>
-                        Iteam-gänget var superbra att jobba med. Väldigt professionella och ansvarstagande. Jag kände inte heller att det var nån uppdelning mellan “våra” två utvecklare och konsulterna från Iteam, utan vi var verkligen ett team som jobbade mot samma mål: en riktigt grym app.
+                        Iteam-gänget var superbra att jobba med. Väldigt
+                        professionella och ansvarstagande. Jag kände inte heller
+                        att det var nån uppdelning mellan “våra” två utvecklare
+                        och konsulterna från Iteam, utan vi var verkligen ett
+                        team som jobbade mot samma mål: en riktigt grym app.
                       </Text>
                       <Title variant="card" mb={0} mt={3}>
                         Tom Airaksinen
                       </Title>
                       <Text variant="small">Produktägare på PE Accounting</Text>
+                    </SliderText>
+                  </SliderCard>
+                </SliderItem>
+                <SliderItem>
+                  <SliderCard>
+                    <SliderImgContainer>
+                      <img src={imgCustomer3} alt="" />
+                    </SliderImgContainer>
+                    <SliderText>
+                      <Text color="dark" my={2} className="text-left">
+                        Vårt team på Iteam är mer som kollegor än leverantörer.
+                        Istället för att skriva en teknisk kravspecifikation, så
+                        samarbetar vi kontinuerligt för att utveckla
+                        funktionalitet.
+                      </Text>
+                      <Title variant="card" mb={0} mt={3} className="text-left">
+                        Johan Littorin
+                      </Title>
+                      <Text variant="small">Grundare Vimla</Text>
                     </SliderText>
                   </SliderCard>
                 </SliderItem>
