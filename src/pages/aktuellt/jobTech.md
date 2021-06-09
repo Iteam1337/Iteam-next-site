@@ -1,6 +1,6 @@
 ---
-title: " Matching people and job through life"
-date: "2021-05-10"
+title: "Tre snabba om #jobtech med Christian Landgren"
+date: "2021-03-10"
 ---
 
 Tre snabba med Christian Landgren, initiativtagare till den Öppna skolplattformen och VD för digitaliseringsbyrån Iteam, om betydelsen av #öppendata och #öppenkällkod för arbetsmarknaden.
@@ -17,4 +17,4 @@ Varför är du själv intresserad av frågan kring öppen data?
 
 "Jag skulle vilja att vi breddar vår förståelse för öppen data, det har länge inneburit tråkig statisk data. När vi kan dela vår känsliga data på ett säkert sätt ökar värdet och intresset för den öppna datan. Det här var något vi utforskade i projektet Egendata tillsammans med Arbetsförmedlingen. Något jag hoppas kan fortsätta tas till nästa steg snart."
 
-<img src='../../assets/image/jpeg/chrille.jpeg'/>
+<img src='/images/christian-landgren.jpeg'/>
