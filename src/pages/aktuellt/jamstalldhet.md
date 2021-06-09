@@ -1,6 +1,7 @@
 ---
 title: "Jämställdhet på Iteam"
 date: "2021-05-10"
+image: "../../../assets/image/jpeg/lovelacemote.jpeg"
 ---
 
 2021 är vi ett techbolag med lika många kvinnor som män. Det tål att uppmärksammas! Vi är också stolta över att vår ledningsgrupp har en jämn fördelning 💥
@@ -12,5 +13,3 @@ I rapporter om näringslivet i stort, konsultbranschen och om techbolagen i synn
 🚸 Vi välkomnar barn på kontoret, övertid är sällsynt och vi arbetar i team så att vi inte behöver ta igen efter vabb. Det gör det möjligt att kombinera familjeliv med livet som konsult.
 
 🤔 Vi har en företagskultur där vi regelbundet utvärderar och reflekterar kring våra normer och strukturer för att identifiera fler områden vi vill förbättra.
-
-<img src='../../assets/image/jpeg/lovelacemote.jpeg'/>

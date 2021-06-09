@@ -1,6 +1,7 @@
 ---
 title: " Matching people and job through life"
 date: "2021-05-10"
+image: "../../../assets/image/jpeg/chrille.jpeg"
 ---
 
 Tre snabba med Christian Landgren, initiativtagare till den Öppna skolplattformen och VD för digitaliseringsbyrån Iteam, om betydelsen av #öppendata och #öppenkällkod för arbetsmarknaden.

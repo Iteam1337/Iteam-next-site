@@ -1,15 +1,14 @@
 ---
 title: "Iteam letar stockholmskontor"
 date: "2021-06-09"
+image: "../../../assets/image/jpeg/DSC6232.jpeg"
 ---
 
 Stockholm kliver ner från molnet och in i staden
 
 Snabb och trygg övergång till hemifrån-arbete
 Precis som hos många andra tjänsteföretag världen runt så har vi på Iteam - i spåren av Covid-19-pandemin - arbetat i stort sett uteslutande hemifrån i över ett år. På Iteam var vi otroligt snabba i att, direkt i mars 2020, från en dag till en annan växla från att jobba merparten av arbetstiden på kontor, till att jobba hemifrån. Digital mognad och tydlighet i arbetsprocesser gjorde att vi var väl förberedda. Vi tog vår dator och eventuell extra datorskärm under armen och gick hem. Svårare än så var det inte - alla arbetsverktyg var redan molnbaserade, vi identifierade oss digitalt för att komma in i bolagets tjänster. Vi signerade avtal, workshoppade och samarbetade sedan en god tid innan våren 2020 100% digitalt - så vi tappade ingen tid. Det var en skön känsla att så snabbt kunna dra sitt strå till stacken i att minska smittspridningen i landet.
-
 <img src='../../assets/image/jpeg/DSC6232.jpeg'/>
-
 Kontorslösa i stockholmsregionen
 Under 2021 så har vi faktiskt inte ens haft ett fysiskt kontor i stockholmsregionen - alltså inte ens ett folktomt kontor. Vi har istället förlitat oss på vårt helt underbara kontor i Göteborg dit vi kunde hänvisa all fysisk post, flytta bolagets registrerade postadress etc. På Göteborgskontoret har vi haft medarbetare på plats med jämna mellanrum för att vittja postlådan, ta hand om växter - men även för att jobba fokuserat i små team då vi där kunnat träffas i små grupper med bibehållen distans. Det skadar ju inte heller att göteborgskontoret har så underbar läge med vid utsikt över Järntorget och takåsarna i Masthugget.
 
