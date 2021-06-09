@@ -18,6 +18,9 @@ const CaseCardStyled = styled(Box)`
     img {
       border-radius: 8px 8px 0 0;
       max-width: 100%;
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
     }
   }
 
