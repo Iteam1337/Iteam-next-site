@@ -4,8 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Box, Text, Button } from "../../components/Core";
 import { device } from "../../utils";
-import imgCase1 from "../../assets/image/jpeg/l8-case-image-1.jpg";
-import imgCase2 from "../../assets/image/jpeg/l8-case-image-2.jpg";
 import { caseItems } from "../../data/caseItems";
 
 const CaseCardStyled = styled(Box)`
@@ -18,6 +16,9 @@ const CaseCardStyled = styled(Box)`
     img {
       border-radius: 8px 8px 0 0;
       max-width: 100%;
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
     }
   }
 
@@ -148,7 +149,12 @@ const CaseCard = ({
             </g>
           </svg>
         </Shape>
-        <PreTitle color={isDark ? "lightShade" : "darkShade"}>{meta}</PreTitle>
+        <PreTitle color={isDark ? "lightShade" : "darkShade"}>
+          {meta.map((item, i) => {
+            if (i + 1 !== meta.length) return `${item}, `;
+            return `${item}`;
+          })}
+        </PreTitle>
         <TitleStyled color={isDark ? "light" : "dark"}>{title}</TitleStyled>
         <Text color={isDark ? "lightShade" : "darkShade"}>{children}</Text>
       </TextContent>
@@ -165,7 +171,7 @@ const CaseStudies = () => {
       {}
 
       <Box bg="dark">
-        <Container>
+        <Container className="pt-5">
           <Row className="justify-content-center">
             {XCase.map((item, i) => (
               <Col
