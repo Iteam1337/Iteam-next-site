@@ -10,17 +10,22 @@ import DesignatedTeam from "../sections/mvp/DesignatedTeam";
 import ModalVideo from "../components/ModalVideo";
 import Testimonial from "../sections/startpage/Testimonial";
 import CTA from "../sections/mvp/CTA";
+import MetaTags from "../components/MetaTags/MetaTags";
 
 const Mvp = () => {
   return (
     <>
-      <PageWrapper >
+      <PageWrapper>
+        <MetaTags
+          title={"Iteam MVP – När du vill bygga nytt"}
+          description={"Utveckling av nya digitala tjänster"}
+        />
         <Hero />
         <Feature1 />
         <Content1 />
         <Feature2 />
         <DesignatedTeam />
-        <ModalVideo url='https://www.youtube.com/watch?v=Iz-XLYvzXyU'></ModalVideo>
+        <ModalVideo url="https://www.youtube.com/watch?v=Iz-XLYvzXyU"></ModalVideo>
         <Content2 />
         <Testimonial />
         <CTA />
