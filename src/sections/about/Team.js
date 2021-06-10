@@ -5,14 +5,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box, Text } from "../../components/Core";
 
-import imgU1 from "../../assets/image/jpeg/about-team-1.jpg";
-import imgU2 from "../../assets/image/jpeg/about-team-3.jpg";
-import imgU3 from "../../assets/image/jpeg/about-team-4.jpg";
-import imgU4 from "../../assets/image/jpeg/about-team-5.jpg";
-import imgU5 from "../../assets/image/jpeg/about-team-6.jpg";
-import imgU6 from "../../assets/image/jpeg/about-team-2.jpg";
-
 import team from "./team.json";
+import Link from "next/link";
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -33,6 +27,7 @@ const TeamCard = ({
   status,
   phoneNumber,
   username = "",
+  path,
   ...rest
 }) => (
   <Box
@@ -43,11 +38,11 @@ const TeamCard = ({
     mb={4}
     {...rest}
   >
-    <a href={`/about/${name.toLowerCase()}`}>
+    <Link href={path}>
       <CardImage>
         <Gravatar email={email} className="img-fluid" size={200} />
       </CardImage>
-    </a>
+    </Link>
     <div className="text-center">
       <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
         {name}
@@ -95,13 +90,14 @@ const Team = () => (
         <Row className="align-items-center justify-content-center">
           {team
             .sort((a, b) => a.fullname > b.fullname)
-            .map(({ fullname, title, email, phoneNumber, status }) => (
+            .map(({ fullname, title, email, phoneNumber, status, path }) => (
               <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4" key={email}>
                 <TeamCard
                   email={email}
                   name={fullname}
                   title={title}
                   status={status}
+                  path={path}
                   phoneNumber={phoneNumber}
                 />
               </Col>

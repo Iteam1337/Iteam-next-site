@@ -1,5 +1,6 @@
 [
   {
+    "path": "/about/iris-lothen",
     "fullname": "Iris Löthén",
     "email": "iris.lothen@iteam.se",
     "title": "UX Designer",
@@ -9,6 +10,7 @@
     "specialty": "Jag arbetar gärna med design som är tillgänglig för alla i samhället och ifrågasätter normer. Jag är även intresserad av grafisk design och visuell kommunikation."
   },
   {
+    "path": "/about/alexander-czigler",
     "username": "ilix",
     "email": "alexander@iteam.se",
     "title": "Backend Engineer",
@@ -23,6 +25,7 @@
     "specialty": "Älskar att lösa uppgifter som förutsätter att jag måste lära mig något nytt."
   },
   {
+    "path": "/about/christian-landgren",
     "username": "irony",
     "email": "christian.landgren@iteam.se",
     "title": "CEO",
@@ -37,6 +40,7 @@
     "specialty": "Entreprenörsrådgivning, Startups, Node.Js, NoSQL, HTML5, arkitektur."
   },
   {
+    "path": "/about/martin-loman",
     "username": "martinloman",
     "email": "martin.loman@iteam.se",
     "title": "Backend Engineer",
@@ -50,6 +54,7 @@
     "specialty": "Att få fart på SQL-frågor i SQL Server. Något jag får använda allt mer sällan nu för tiden."
   },
   {
+    "path": "/about/hans-rollman",
     "username": "hrn",
     "email": "hans.rollman@iteam.se",
     "title": "Head of Finance & Regional Manager Stockholm",
@@ -64,6 +69,7 @@
     "specialty": "Att organisera, strukturera och relatera information. Process- och organisationsanalys. Planering."
   },
   {
+    "path": "/about/radu-achim",
     "username": "ram",
     "email": "radu.achim@iteam.se",
     "title": "Backend Engineer",
@@ -77,6 +83,7 @@
     "specialty": "Javascript, C#"
   },
   {
+    "path": "/about/anders-bornholm",
     "username": "osiris",
     "email": "anders.bornholm@iteam.se",
     "title": "Backend Engineer & Architect",
@@ -91,6 +98,7 @@
     "specialty": "Konceptutveckling, C#, systemarkitektur, EPiServer, Node.js, AngularJS, single sign-on, integration"
   },
   {
+    "path": "/about/johanna-månsson-grahn",
     "username": "mittistormen",
     "email": "johanna.grahn@iteam.se",
     "title": "Head of People and Culture & Regional Manager Göteborg",
@@ -105,6 +113,7 @@
     "specialty": "Att skapa trygga team, agil systemutveckling och coachning, förändringsledning, API-utveckling, Node.js, .NET"
   },
   {
+    "path": "/about/mikael-naeslund",
     "username": "mikaelnaeslund",
     "email": "mikael.naeslund@iteam.se",
     "title": "Chairman of the Board",
@@ -118,6 +127,7 @@
     "specialty": ""
   },
   {
+    "path": "/about/maria-sölscher",
     "username": "mariasolscher",
     "email": "maria.solscher@iteam.se",
     "title": "Head of Sales (föräldraledig)",
@@ -132,6 +142,7 @@
     "specialty": "Planering, kommunikation, vända problem till spännande utmaningar, entusiasmering och relationer."
   },
   {
+    "path": "/about/emma-klara-wachter",
     "username": "emmaklara",
     "email": "emma-klara.wachter@iteam.se",
     "title": "Head of Agile Coaching",
@@ -145,6 +156,7 @@
     "specialty": "Agile methodology and mindset, copy writing and transcribing really fast."
   },
   {
+    "path": "/about/mikael-gråborg",
     "username": "mikael",
     "email": "mikael.graborg@iteam.se",
     "title": "Backend Engineer",
@@ -159,6 +171,7 @@
     "specialty": "React, Python, Ruby on Rails, Java"
   },
   {
+    "path": "/about/jonne-hjern",
     "username": "jonna",
     "email": "jonna.hjern@iteam.se",
     "title": "Head of Sales",
@@ -172,6 +185,7 @@
     "specialty": "Att genom mitt pedagogiska tänk hitta kundens unika frekvens för att kunna mötas, förstå varandra och vilja utvecklas tillsammans."
   },
   {
+    "path": "/about/simon-lundell",
     "username": "simonlundell",
     "email": "simon.lundell@iteam.se",
     "title": "Fullstack Engineer",
@@ -185,6 +199,7 @@
     "specialty": "JavaScript. Front-end. C#."
   },
   {
+    "path": "/about/fanny-nylund",
     "username": "fannynylund",
     "email": "fanny.nylund@iteam.se",
     "title": "Agile Project Manager",
@@ -198,6 +213,7 @@
     "specialty": "Ordning och reda, fokus och vilja att lära mig nya saker. Jag drivs av positiv energi och nyfikenhet. "
   },
   {
+    "path": "/about/emil-ahlback",
     "username": "emil.ahlback",
     "email": "emil.ahlback@iteam.se",
     "title": "Fullstack Engineer",
@@ -210,6 +226,7 @@
     "specialty": "Utforskning av affärsprocesser och modeller genom datamodellering."
   },
   {
+    "path": "/about/rebecca-norén",
     "username": "rebecca",
     "email": "rebecca.noren@iteam.se",
     "title": "Head of UX Design",
@@ -223,6 +240,7 @@
     "specialty": "Design! Jag drivs av att minska komplexiteten och skapa meningsfulla produkter för människor genom att använda UX-metoder. Bra design gör skillnad och löser problem för människor. Design är mer än bara ett visuellt utseende – det är också hur det fungerar och passar in i verkligheten."
   },
   {
+    "path": "/about/andreas-alsterholm",
     "username": "andreas.indal",
     "title": "Fullstack Engineer",
     "email": "andreas.indal@iteam.se",
@@ -236,6 +254,7 @@
     "specialty": "JavaScript."
   },
   {
+    "path": "/about/adam-näslund",
     "username": "adam.naslund",
     "email": "adam.naslund@iteam.se",
     "title": "Backend Engineer & Security specialist",
@@ -249,6 +268,7 @@
     "specialty": "IT-säkerhet, C++ och GNU/Linux."
   },
   {
+    "path": "/about/andreas-lundqvist",
     "username": "andreas.lundqvist",
     "email": "andreas.lundqvist@iteam.se",
     "title": "Frontend Engineer",
@@ -262,6 +282,7 @@
     "specialty": "Javascript, brödbakning och brödätning, sen har jag ett öga för färg & form."
   },
   {
+    "path": "/about/anna-lööf-möller",
     "username": "anna.l.moller",
     "email": "anna.l.moller@iteam.se",
     "title": "UX Strategist",
@@ -275,6 +296,7 @@
     "specialty": "Mina fortsatta hjärtefrågor är målgruppsfokus och hög användbarhet i kombination med stark varumärkesidentitet."
   },
   {
+    "path": "/about/stephanie-weaver",
     "username": "stephanie.weaver",
     "email": "stephanie.weaver@iteam.se",
     "title": "UX Designer (föräldarledig)",
@@ -288,6 +310,7 @@
     "specialty": "Jag har ett stort intresse för normkritisk design. Design som både ifrågasätter och utmanar rådande normer och inkluderar en större grupp människor, vilket  hjälper oss att skapa ännu bättre och mer socialt hållbara produkter och tjänster."
   },
   {
+    "path": "/about/izabella-larsson",
     "username": "izabella.larsson",
     "email": "izabella.larsson@iteam.se",
     "title": "Frontend Engineer",
@@ -301,6 +324,7 @@
     "specialty": "Javascript"
   },
   {
+    "path": "/about/mikaela-lundsgard",
     "username": "mikaela.lundsgard",
     "email": "mikaela.lundsgard@iteam.se",
     "title": "Frontend Engineer",
@@ -314,6 +338,7 @@
     "specialty": "JavaScript"
   },
   {
+    "path": "/about/petronella-johansson",
     "username": "petronella.johansson",
     "email": "petronella.johansson@iteam.se",
     "title": "UX Designer",

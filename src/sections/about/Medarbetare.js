@@ -6,7 +6,7 @@ const FadeIn = ({ direction, children }) => (
   <Col
     md={8}
     lg={6}
-    data-aos={`fade-${window.innerWidth < 992 ? "right" : direction}`}
+    data-aos={`fade-${direction}`}
     data-aos-duration="750"
     data-aos-once="true"
     data-aos-delay="500"
