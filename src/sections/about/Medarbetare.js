@@ -9,7 +9,7 @@ const FadeIn = ({ direction, children }) => (
     data-aos={`fade-${direction}`}
     data-aos-duration="750"
     data-aos-once="true"
-    data-aos-delay="500"
+    data-aos-delay="100"
   >
     {children}
   </Col>
