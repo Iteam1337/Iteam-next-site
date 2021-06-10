@@ -84,17 +84,21 @@ const BadgePost = ({ children }) => (
   </Badge>
 );
 
-const PostDetails = ({post}) => (
+const PostDetails = ({ post }) => (
   <>
     {/* <!-- Blog section --> */}
     <Post>
-      <div>
-        <img src={post.image} alt={post.title} />
-      </div>
+      {post.image && (
+        <div>
+          <img src={post.image} alt={post.title} />
+        </div>
+      )}
       <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
     </Post>
     <Box className="d-flex" mt={4}>
-      {post.tags?.map(tag => <BadgePost>{tag}</BadgePost> )}
+      {post.tags?.map((tag) => (
+        <BadgePost>{tag}</BadgePost>
+      ))}
     </Box>
   </>
 );

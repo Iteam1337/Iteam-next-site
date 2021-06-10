@@ -8,7 +8,11 @@ import { Section, Title, Text, Box } from "../../components/Core";
 import PostDetails from "../../sections/aktuellt/PostDetails";
 import Sidebar from "../../sections/aktuellt/Sidebar";
 
-import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts";
+import {
+  getAllPostIds,
+  getPostData,
+  getSortedPostsData,
+} from "../../lib/posts";
 
 // get path
 export async function getStaticPaths() {
@@ -22,11 +26,11 @@ export async function getStaticPaths() {
 // get data
 export async function getStaticProps({ params }) {
   const post = await getPostData(params.id);
-  const posts = await getSortedPostsData()
+  const posts = await getSortedPostsData();
   return {
     props: {
       post,
-      posts
+      posts,
     },
   };
 }
@@ -38,7 +42,11 @@ const BlogDetails = ({ post, posts }) => {
         <Head>
           <title>{post.title}</title>
           <meta property="og:title" content={post.title} key="title" />
-          <meta property="og:description" content={post.intro} key="description" />
+          <meta
+            property="og:description"
+            content={post.intro}
+            key="description"
+          />
           <meta property="og:image" content={post.image} key="image" />
         </Head>
         <Section className="pb-0">
@@ -53,9 +61,7 @@ const BlogDetails = ({ post, posts }) => {
                   </Text>
                   <Text>
                     {post.tags?.map((tag) => (
-                      <Link href="/">
-                        {tag}
-                      </Link>
+                      <Link href="/">{tag}</Link>
                     ))}
                   </Text>
                   <Text>{post.author && "av " + post.author}</Text>
