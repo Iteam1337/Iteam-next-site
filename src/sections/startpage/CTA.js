@@ -16,11 +16,11 @@ const CTA = () => (
                 Jobbar du med oss på Iteam vet du att lösningen kommer bli bra, användbar och värdefull.
               </Text> */}
               <div className="d-flex flex-column align-items-center pt-3">
-              <Box>
-              <a href="/book">
-                <Button>Boka möte</Button>
-              </a>
-            </Box>
+                <Box>
+                  <a href="/book">
+                    <Button>Boka möte</Button>
+                  </a>
+                </Box>
               </div>
             </Box>
           </Col>

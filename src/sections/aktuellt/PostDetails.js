@@ -42,6 +42,9 @@ const Post = styled(Box)`
   ul li {
     list-style-type: disc;
   }
+  a {
+    color: ${({ theme }) => theme.colors.info};
+  }
 
   blockquote {
     margin-bottom: 1.25rem;
@@ -84,7 +87,7 @@ const BadgePost = ({ children }) => (
   </Badge>
 );
 
-const PostDetails = ({post}) => (
+const PostDetails = ({ post }) => (
   <>
     {/* <!-- Blog section --> */}
     <Post>
@@ -94,7 +97,9 @@ const PostDetails = ({post}) => (
       <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
     </Post>
     <Box className="d-flex" mt={4}>
-      {post.tags?.map(tag => <BadgePost>{tag}</BadgePost> )}
+      {post.tags?.map((tag) => (
+        <BadgePost>{tag}</BadgePost>
+      ))}
     </Box>
   </>
 );

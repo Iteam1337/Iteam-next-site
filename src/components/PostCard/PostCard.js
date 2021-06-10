@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { Title, Box, Text, Span } from "../Core";
+import { Title, Box, Text, Span, Anchor } from "../Core";
 import { device } from "../../utils";
-import Image from 'next/image'
+import Image from "next/image";
 
 const Card = styled(Box)`
   border-radius: 10px 10px;
@@ -52,7 +52,7 @@ const CardText = styled(Box)`
 const TitleStyled = styled(Title)`
   transition: 0.3s;
   &:hover {
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.info};
   }
 `;
 
@@ -114,11 +114,11 @@ const PostCard = ({
       )}
 
       <Link href={link}>
-        <a>
+        <Anchor color="info">
           <TitleStyled variant="card" mb="14px">
             {title}
           </TitleStyled>
-        </a>
+        </Anchor>
       </Link>
       <Text fontSize={2} lineHeight={1.75} mb="16px">
         {children}
@@ -126,9 +126,9 @@ const PostCard = ({
       {readMore && (
         <Box>
           <Link href={link}>
-            <a>
-              <Span color="primary">Läs mer...</Span>
-            </a>
+            <Anchor color="info">
+              <Span color="info">Läs mer...</Span>
+            </Anchor>
           </Link>
         </Box>
       )}

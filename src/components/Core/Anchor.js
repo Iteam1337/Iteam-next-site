@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { color, space, typography, shadow } from "styled-system";
 
 const Anchor = styled.a`
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 300;
   letter-spacing: -0.66px;
   line-height: 35px;
@@ -15,7 +15,7 @@ const Anchor = styled.a`
   &:active,
   &.active {
     ${color};
-    text-decoration: none;
+    text-decoration: underline;
   }
 `;
 
