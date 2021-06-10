@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Title, Section, Text } from "../../components/Core";
+import { Title, Section, Text, Anchor } from "../../components/Core";
 
 const FadeIn = ({ direction, children }) => (
   <Col
@@ -35,10 +35,14 @@ const Medarbetare = ({ info }) => (
         </FadeIn>
         <FadeIn direction="left">
           <Text>
-            <a href={`tel:${info.phoneNumber}`}>{info.phoneNumber}</a>
+            <Anchor href={`tel:${info.phoneNumber}`} color="info">
+              {info.phoneNumber}
+            </Anchor>
           </Text>
           <Text>
-            <a href={`mailto:${info.email}`}>{info.email}</a>
+            <Anchor href={`mailto:${info.email}`} color="info">
+              {info.email}
+            </Anchor>
           </Text>
         </FadeIn>
       </Row>
