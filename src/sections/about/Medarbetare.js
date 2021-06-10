@@ -2,27 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Title, Section, Text, Anchor } from "../../components/Core";
 
-const FadeIn = ({ direction, children }) => (
-  <Col
-    md={8}
-    lg={6}
-    data-aos={`fade-${direction}`}
-    data-aos-duration="750"
-    data-aos-once="true"
-    data-aos-delay="100"
-  >
-    {children}
-  </Col>
-);
-
 const InfoSection = ({ text, title }) => (
   <Row className="py-5">
-    <FadeIn direction="right">
+    <Col md={8} lg={6}>
       <Title variant="card">{title}</Title>
-    </FadeIn>
-    <FadeIn direction="left">
+    </Col>
+    <Col md={8} lg={6}>
       <Text>{text}</Text>
-    </FadeIn>
+    </Col>
   </Row>
 );
 
@@ -30,10 +17,10 @@ const Medarbetare = ({ info }) => (
   <Container>
     <Section>
       <Row className="py-5">
-        <FadeIn direction="right">
+        <Col md={8} lg={6}>
           <Title variant="card">Kontakt</Title>
-        </FadeIn>
-        <FadeIn direction="left">
+        </Col>
+        <Col md={8} lg={6}>
           <Text>
             <Anchor href={`tel:${info.phoneNumber}`} color="info">
               {info.phoneNumber}
@@ -44,7 +31,7 @@ const Medarbetare = ({ info }) => (
               {info.email}
             </Anchor>
           </Text>
-        </FadeIn>
+        </Col>
       </Row>
       {info.why && (
         <InfoSection title="Varför jobbar du med teknik?" text={info.why} />
