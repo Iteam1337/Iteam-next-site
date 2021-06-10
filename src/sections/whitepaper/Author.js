@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box, Text, Span } from "../../components/Core";
 import { device } from "../../utils";
-import imgAuthor from "../../assets/image/jpeg/author.jpg";
 
 const SectionStyled = styled(Section)``;
 
@@ -32,11 +31,7 @@ const Fact = () => (
               <Title>About the author</Title>
             </div>
           </Col>
-          <Col lg="4" className="offset-lg-1 mb-4 mb-lg-0">
-            <Author>
-              <img src={imgAuthor} alt="Author" />
-            </Author>
-          </Col>
+          <Col lg="4" className="offset-lg-1 mb-4 mb-lg-0"></Col>
           <Col lg="7" className="pr-lg-5">
             <div className="author-text">
               <Title variant="card" fontSize="24px">

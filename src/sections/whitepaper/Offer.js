@@ -4,7 +4,6 @@ import { Container } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
-import imgOfferBook from "../../assets/image/png/l6-offer-book.png";
 
 const SectionStyled = styled(Section)`
   padding-bottom: 100px;
@@ -38,9 +37,6 @@ const Offer = () => (
       <Container>
         <OfferWrapper>
           <div className="d-flex flex-wrap">
-            <div className="widget-image">
-              <img src={imgOfferBook} alt="" className="img-fluid" />
-            </div>
             <div className="pt-3 pl-5">
               <Title variant="card" fontSize="24px" color="light" mb={3}>
                 Get a free chapter of this book

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { rgba } from "polished";
 import { Container, Row, Col } from "react-bootstrap";
@@ -112,22 +112,22 @@ const AuthorText = styled(Box)`
 
 const Hero = () => {
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = '//js.hsforms.net/forms/shell.js'
-    script.async = true
-    document.body.appendChild(script)
-  }, [])
+    const script = document.createElement("script");
+    script.src = "//js.hsforms.net/forms/shell.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
-  const form = useRef()
+  const form = useRef();
 
   const openForm = () => {
     hbspt.forms.create({
-      region: 'na1',
-      portalId: '5211588',
-      target: '#' + form.current.id,
-      formId: '7d3129b6-d7ff-48e7-8a84-4b69aa00e03c'
-    })
-  }
+      region: "na1",
+      portalId: "5211588",
+      target: "#" + form.current.id,
+      formId: "7d3129b6-d7ff-48e7-8a84-4b69aa00e03c",
+    });
+  };
 
   return (
     <>
@@ -170,7 +170,9 @@ const Hero = () => {
                     </ULStyled>
                   </Box>
                   <div className="d-flex flex-column align-items-start pt-2">
-                    <Button onClick={openForm} mb={2}>Ladda ner PDF</Button>
+                    <Button onClick={openForm} mb={2}>
+                      Ladda ner PDF
+                    </Button>
                     <div ref={form}></div>
 
                     <Text fontSize={"18px"} color="ash" fontWeight={500}>
