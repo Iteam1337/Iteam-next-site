@@ -3,23 +3,26 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Section, Box } from "../../components/Core";
 import PostCard from "../../components/PostCard";
 
-const Column = (props) => <Col sm={6} lg={4} className="mb-4" {...props} />;
-
-export default function BlogList ({ posts })
-{
+export default function BlogList({ posts }) {
   return (
     <Section className="position-relative">
       <Container>
-        <Row className="align-items-center justify-content-center">
-          {posts?.map(({image, date, id, title, intro,}) => (
-            <Column key={id}>
-              <PostCard img={image} title={title} preTitle={date} link={`/aktuellt/${id}`}>
-                {intro}
+        <Row className="justify-content-center">
+          {posts?.map((post, i) => (
+            <Col lg="4" className="mb-5" key={i}>
+              <PostCard
+                img={post.image}
+                preTitle={post.date}
+                link={`/aktuellt/${post.id}`}
+                title={post.title}
+                readMore
+              >
+                {post.intro}
               </PostCard>
-            </Column>
+            </Col>
           ))}
         </Row>
       </Container>
     </Section>
-  )
+  );
 }
