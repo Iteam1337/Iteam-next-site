@@ -18,7 +18,7 @@ const CTA = () => (
               <div className="d-flex flex-column align-items-center pt-3">
                 <Box>
                   <Button onClick={() => (window.location.href = "/book")}>
-                    Boka möte haha
+                    Boka möte
                   </Button>
                 </Box>
               </div>
