@@ -9,28 +9,32 @@ export async function getStaticPaths() {
     const name = path.split("/").slice(1)[0];
     return { params: { name } };
   });
+
   return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {
   const currentPath = `/about/${params.name}`;
   const coworker = team.find((c) => c.path === currentPath) || {
-    notfound: true,
+    notFound: true,
   };
+  if (coworker.notFound) return coworker;
   return { props: { coworker } };
 }
 
-const CoworkerPage = ({ coworker }) => (
-  <PageWrapper footerDark>
-    {coworker && (
-      <>
-        <Hero title={coworker.fullname} heroImage={coworker.heroImg}>
-          {coworker.title}
-        </Hero>
-        <Medarbetare info={coworker} />
-      </>
-    )}
-  </PageWrapper>
-);
+const CoworkerPage = ({ coworker }) => {
+  return (
+    <PageWrapper footerDark>
+      {coworker && (
+        <>
+          <Hero title={coworker.fullname} heroImage={coworker.heroImg}>
+            {coworker.title}
+          </Hero>
+          <Medarbetare info={coworker} />
+        </>
+      )}
+    </PageWrapper>
+  );
+};
 
 export default CoworkerPage;
