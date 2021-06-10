@@ -62,15 +62,16 @@ const Content2 = () => (
               <div>
                 <Title>Utveckling av digitala tjänster</Title>
                 <Text mb={4}>
-                Vi hjälper TRR att ta en proaktiv roll på arbetsmarknaden och svara på kundernas behov om 
-                kompetensförsörjning. Detta kommer på sikt att resultera i en plattform där TRRs kundföretag 
-                kan ta del av hela TRRs erbjudande digitalt. 
+                  Vi hjälper TRR att ta en proaktiv roll på arbetsmarknaden och
+                  svara på kundernas behov om kompetensförsörjning. Detta kommer
+                  på sikt att resultera i en plattform där TRRs kundföretag kan
+                  ta del av hela TRRs erbjudande digitalt.
                 </Text>
 
                 <Box>
-                  <a href="/case/trr">
-                    <Button>Läs mer om TRR</Button>
-                  </a>
+                  <Button onClick={() => (window.location.href = "/case/trr")}>
+                    Läs mer om TRR
+                  </Button>
                 </Box>
               </div>
             </div>

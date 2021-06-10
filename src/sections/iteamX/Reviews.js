@@ -5,11 +5,11 @@ import { Title, Section, Box, Text } from "../../components/Core";
 
 import imgB1 from "../../assets/image/png/testimonial-brand-logo-1.png";
 import imgB2 from "../../assets/image/png/testimonial-brand-logo-2.png";
-import imgB3 from "../../assets/image/png/testimonial-brand-3.png";
+import ltu from "../../assets/image/svg/ltu_logo_sv.svg";
 
 import imgR1 from "../../assets/image/jpeg/l8-testimonial-user-image-1.jpg";
 import imgR2 from "../../assets/image/jpeg/l8-testimonial-user-image-2.jpg";
-import imgR3 from "../../assets/image/jpeg/l8-testimonial-user-image-3.jpg";
+import johanna from "../../assets/image/jpeg/johanna_lindberg.jpg";
 
 const ContentCard = ({
   className,
@@ -32,7 +32,7 @@ const ContentCard = ({
     data-aos-once="true"
   >
     <Box className="text-center">
-      <img src={imageBrand} alt="" className="img-fluid" />
+      <img src={imageBrand} alt="" className="img-fluid" css={'filter: opacity(30%); height: 100px;'}/>
     </Box>
     <Text color="lightShade" mt={4} mb={3} className="text-center mb-0">
       {children}
@@ -44,6 +44,7 @@ const ContentCard = ({
           alt=""
           className="img-fluid"
           css={`
+            height: 100px;
             border-radius: 500px;
           `}
         />
@@ -66,7 +67,7 @@ const Reviews = () => {
       <Section bg="dark">
         <Container>
           <Row className="justify-content-center mt-3">
-            <Col lg="4" md="6" className="mb-5 mb-lg-0">
+            {/*<Col lg="4" md="6" className="mb-5 mb-lg-0">
               <ContentCard
                 name="Patrik Fältström"
                 company="Forskningschef, Netnod"
@@ -85,15 +86,15 @@ const Reviews = () => {
               >
                 "Iteam är spännande... "
               </ContentCard>
-            </Col>
+            </Col>*/}
             <Col lg="4" md="6" className="mb-5 mb-lg-0">
               <ContentCard
                 name="Johanna Lindberg"
                 company="Forskare på LTU"
-                image={imgR3}
-                imageBrand={imgB3}
+                image={johanna}
+                imageBrand={ltu}
               >
-                "Iteam är ett av Sveriges mest intressanta techföretag."
+                "Ni vet hur man sitter och har vilda idéer om lösningar på problem, men så börjar hindren torna upp sig. På Iteam använder de sig av de där hindren i sina lösningar, ju fler hinder ju bättre lösning. Otroligt kreativt att jobba med Iteam"
               </ContentCard>
             </Col>
           </Row>

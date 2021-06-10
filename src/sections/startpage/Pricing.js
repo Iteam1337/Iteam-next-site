@@ -31,7 +31,7 @@ const ULStyled = styled.ul`
   list-style: none;
   margin: 30px auto 0;
   padding: 40px;
-  text-align:left;
+  text-align: left;
 
   @media ${device.sm} {
     display: flex;
@@ -86,7 +86,7 @@ const CardPricing = styled(Box)`
 `;
 
 const TitleSmall = styled.h4`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.black};
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.5px;
@@ -130,7 +130,8 @@ const Pricing = () => {
                 <Title>Våra enkla priser</Title>
                 <Text>
                   Vi vill göra det enkelt att jobba med oss{" "}
-                  <br className="d-none d-md-block" /> därför har vi enkla och transparenta prislistor.
+                  <br className="d-none d-md-block" /> därför har vi enkla och
+                  transparenta prislistor.
                 </Text>
               </div>
             </Col>
@@ -146,9 +147,8 @@ const Pricing = () => {
               </div>
             </div>
 
-
-            <Row className="justify-content-center" >
-              <Col lg="8" className="mb-5 align-items-center" >
+            <Row className="justify-content-center">
+              <Col lg="8" className="mb-5 align-items-center">
                 <CardPricing>
                   <div className="mb-4">
                     <TitleSmall>Helt team</TitleSmall>
@@ -166,16 +166,21 @@ const Pricing = () => {
                       <TimePer>/h</TimePer>
                     </div>
                     <Text fontSize="18px">per person</Text>
-                    <ULStyled >
-                      <li>Kompetens inom UX, utveckling och teamfacilitering</li>
+                    <ULStyled>
+                      <li>
+                        Kompetens inom UX, utveckling och teamfacilitering
+                      </li>
                       <li> Arbetar med en avgränsad del av er verksamhet</li>
                       <li> Stöd och coachning till dig som beställare</li>
                       <li>2 eller 4 dagar/vecka</li>
                     </ULStyled>
                   </div>
-                  <a href="/book">
-                    <Button bg="primary">Boka tid för intromöte</Button>
-                  </a>
+                  <Button
+                    bg="primary"
+                    onClick={() => (window.location.href = "/book")}
+                  >
+                    Boka tid för intromöte
+                  </Button>
                 </CardPricing>
               </Col>
               {/*<Col lg="6" className="mb-4">

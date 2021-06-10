@@ -80,9 +80,12 @@ const Content1 = () => (
                   sätt. Dessutom hjälper vi dig kommunicera dina val och beslut
                   internt så att alla är med på tåget.
                 </Text>
-                <a href="#book">
-                  <Button mt={4}>Kom igång</Button>
-                </a>
+
+                <Button mt={4} onClick={() => (window.location.href = "#book")}>
+                  Kom igång
+                </Button>
+                {/* </a> */}
+                {/* <a href="#book"> */}
               </div>
             </Section>
           </Col>

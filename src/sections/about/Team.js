@@ -87,7 +87,7 @@ const Team = () => (
             </div>
           </Col>
         </Row>
-        <Row className="align-items-center justify-content-center">
+        <Row className="justify-content-center">
           {team
             .sort((a, b) => a.fullname > b.fullname)
             .map(({ fullname, title, email, phoneNumber, status, path }) => (

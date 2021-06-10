@@ -48,12 +48,17 @@ const Feature = () => (
           >
             <Box>
               <Title color="light">Leapfrog as a service</Title>
-              <Text color="light" >
-                Du vill gå om dina konkurrenter med ny teknik. När man ska jobba inom okända områden finns det sällan en plan eller färdiga processer att följa. 
-                Därför satsar vi på att skapa team som vågar utforska. Du får löpande se resultat och kan styra riktningen.
+              <Text color="light">
+                Du vill gå om dina konkurrenter med ny teknik. När man ska jobba
+                inom okända områden finns det sällan en plan eller färdiga
+                processer att följa. Därför satsar vi på att skapa team som
+                vågar utforska. Du får löpande se resultat och kan styra
+                riktningen.
               </Text>
-              <a href="#book">
-                <Button bg="secondary" color="dark" mt={4}>Boka ett X team</Button>
+              <a href="#sprintMeeting">
+                <Button bg="secondary" color="dark" mt={4}>
+                  Boka ett X team
+                </Button>
               </a>
             </Box>
           </Col>
@@ -67,10 +72,7 @@ const Feature = () => (
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
-                  <FeatureCard
-                    color="primary"
-                    title="Purpose"
-                  >
+                  <FeatureCard color="primary" title="Purpose">
                     Drivkraften i våra X team är alltid ett högre syfte.
                   </FeatureCard>
                 </Col>
@@ -82,10 +84,7 @@ const Feature = () => (
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
-                  <FeatureCard
-                    color="ash"
-                    title="Mastery"
-                  >
+                  <FeatureCard color="ash" title="Mastery">
                     Vi bygger rätt från början. Vi använder rätt verktyg.
                   </FeatureCard>
                 </Col>
@@ -97,11 +96,8 @@ const Feature = () => (
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
-                  <FeatureCard
-                    color="secondary"
-                    title="Autonomy"
-                  >
-                   Vi strävar efter att teamet ska kunna ta helt egna beslut.
+                  <FeatureCard color="secondary" title="Autonomy">
+                    Vi strävar efter att teamet ska kunna ta helt egna beslut.
                   </FeatureCard>
                 </Col>
               </Row>

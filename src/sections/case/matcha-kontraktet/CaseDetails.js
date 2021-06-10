@@ -7,6 +7,7 @@ import {
   Title,
   Text,
   ImgContainer,
+  Anchor,
 } from "../../../components/Core";
 
 import imgCase1 from "../../../assets/image/case/matcha-kontraktet1.jpg";
@@ -142,9 +143,9 @@ const CaseDetails = () => (
                 <br />
                 <br />
                 Du kan läsa mer om projektet hos{" "}
-                <a href="https://utveckling.allmannyttan.se">
+                <Anchor color="info" href="https://utveckling.allmannyttan.se">
                   Sveriges Allmännyttas Digitaliseringsinitiativ
-                </a>
+                </Anchor>
                 .
               </Text>
             </Box>

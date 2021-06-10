@@ -27,7 +27,6 @@ const Hero = () => {
         <div className="pt-5"></div>
         <Container
           css={`
-            margin: 0px;
           `}
         >
           <Row className="justify-content-center align-items-center position-relative">

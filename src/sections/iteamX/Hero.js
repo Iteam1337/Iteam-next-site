@@ -13,7 +13,6 @@ const Hero = () => {
           className="position-relative"
           css={`
             z-index: 10;
-            margin: 2px;
           `}
         >
           <Row>
@@ -37,8 +36,7 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1000"
                 >
-                  Experimentell utveckling{" "}
-                  <br className="d-none d-lg-block" />
+                  Experimentell utveckling <br className="d-none d-lg-block" />
                   med exponentiell teknik<Span color="secondary">.</Span>
                 </Title>
                 <Box
@@ -48,7 +46,11 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1300"
                 >
-                  <Button color="dark" bg="secondary">Boka en sprint</Button>
+                  <a href="#sprintMeeting">
+                    <Button color="dark" bg="secondary">
+                      Boka en sprint
+                    </Button>
+                  </a>
                 </Box>
               </Box>
             </Col>
