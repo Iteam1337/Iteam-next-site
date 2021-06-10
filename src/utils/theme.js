@@ -10,7 +10,7 @@ const defaultColors = {
   yellow: "#fedc5a",
   ash: "#141313",
   green: "#s",
-  info: "#0e567c",
+  info: " #668CFF",
 };
 
 const colors = {
