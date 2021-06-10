@@ -77,7 +77,7 @@ const Footer = ({ isDark = true }) => {
           >
             <Row className="justify-content-center">
               <Col lg="2" md="4">
-                <Logo white={isDark} vertical/>
+                <Logo white={isDark} vertical />
               </Col>
               <Col lg="10" md="8" className="mt-5 mt-lg-0">
                 <Row>
@@ -91,19 +91,28 @@ const Footer = ({ isDark = true }) => {
                       </TitleStyled>
                       <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
-                          <a href="https://facebook.com/iteam1337" target="_blank">
+                          <a
+                            href="https://facebook.com/iteam1337"
+                            target="_blank"
+                          >
                             <i className="icon icon-logo-facebook"></i>&nbsp;
                             Facebook
                           </a>
                         </li>
                         <li>
-                          <a href="https://twitter.com/iteam1337" target="_blank">
+                          <a
+                            href="https://twitter.com/iteam1337"
+                            target="_blank"
+                          >
                             <i className="icon icon-logo-twitter"></i>&nbsp;
                             Twitter
                           </a>
                         </li>
                         <li>
-                          <a href="https://instagram.com/iteam1337" target="_blank">
+                          <a
+                            href="https://instagram.com/iteam1337"
+                            target="_blank"
+                          >
                             <i className="icon icon-logo-instagram"></i>&nbsp;
                             Instagram
                           </a>
@@ -117,17 +126,24 @@ const Footer = ({ isDark = true }) => {
                         variant="card"
                         color={isDark ? "light" : "dark"}
                       >
-                        Besök oss<br/>
+                        Besök oss
+                        <br />
                       </TitleStyled>
                       <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
-                          <a href="https://maps.google.com/?q=Iteam, Järntorgsgatan, Göteborg" target="_blank">
-                          Järntorgsgatan 12-14<br/>
-                          413 01 Göteborg
+                          <a
+                            href="https://maps.google.com/?q=Iteam, Järntorgsgatan, Göteborg"
+                            target="_blank"
+                          >
+                            Järntorgsgatan 12-14
+                            <br />
+                            413 01 Göteborg
                           </a>
                         </li>
                         <li>
-                          <a href="https://ec.europa.eu/taxation_customs/vies/">VAT: SE556551692801</a>
+                          <a href="https://ec.europa.eu/taxation_customs/vies/">
+                            VAT: SE556551692801
+                          </a>
                         </li>
                       </UlStyled>
                     </div>
@@ -169,19 +185,13 @@ const Footer = ({ isDark = true }) => {
                       </TitleStyled>
                       <UlStyled color={isDark ? "light" : "dark"}>
                         <li>
-                          <a href="/book">
-                            Kontakt
-                          </a>
+                          <a href="/book">Kontakt</a>
                         </li>
                         <li>
-                          <a href="/career">
-                            Sök jobb
-                          </a>
+                          <a href="/karriar">Sök jobb</a>
                         </li>
                         <li>
-                          <a href="mailto:joinus@iteam.se">
-                            Spontanansökan
-                          </a>
+                          <a href="mailto:joinus@iteam.se">Spontanansökan</a>
                         </li>
                       </UlStyled>
                     </div>
@@ -193,7 +203,10 @@ const Footer = ({ isDark = true }) => {
           <CopyRightArea dark={isDark ? 1 : 0}>
             <Row className="align-items-center">
               <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
-                <p>&copy; 2021 Iteam, All Rights Reserved. Our <a href="/privacy">privacy policy</a>.</p>
+                <p>
+                  &copy; 2021 Iteam, All Rights Reserved. Our{" "}
+                  <a href="/privacy">privacy policy</a>.
+                </p>
               </Col>
               <Col sm="6" className="text-sm-right text-center">
                 <ul className="social-icons">
@@ -203,7 +216,10 @@ const Footer = ({ isDark = true }) => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/company/iteam1337/" target="_blank">
+                    <a
+                      href="https://www.linkedin.com/company/iteam1337/"
+                      target="_blank"
+                    >
                       <i className="icon icon-logo-linkedin"></i>
                     </a>
                   </li>

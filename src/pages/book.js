@@ -2,7 +2,15 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Title, Button, Section, Box, Text, Input } from "../components/Core";
+import {
+  Title,
+  Button,
+  Section,
+  Box,
+  Text,
+  Input,
+  Anchor,
+} from "../components/Core";
 
 import PageWrapper from "../components/PageWrapper";
 
@@ -11,20 +19,21 @@ import Hero from "../sections/common/Hero";
 const FormStyled = styled.form``;
 
 const Contact1 = () => {
-
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
-    script.async = true
-    document.body.appendChild(script)
-  }, [])
+    const script = document.createElement("script");
+    script.src =
+      "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <>
       <PageWrapper footerDark>
         <Hero title="Klart vi ska ses!">
-          Vi träffar gärna er och lyssnar in vad ni har för utmaningar som kan lösas med lite smart digitalisering. 
-          Nedan kan du enkelt boka in ett distansmöte direkt i din och vår kalender. 
+          Vi träffar gärna er och lyssnar in vad ni har för utmaningar som kan
+          lösas med lite smart digitalisering. Nedan kan du enkelt boka in ett
+          distansmöte direkt i din och vår kalender.
         </Hero>
         <Section>
           <Container>
@@ -43,8 +52,10 @@ const Contact1 = () => {
                   <Box mb={5}>
                     <Title>Boka möte i kalendern</Title>
                   </Box>
-                  <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"></div>
-
+                  <div
+                    class="meetings-iframe-container"
+                    data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
+                  ></div>
                 </FormStyled>
               </Col>
               <Col
@@ -58,17 +69,31 @@ const Contact1 = () => {
 
                   <Title variant="card" fontSize="18px">
                     Jonna Hjern, Försäljning
-                    <Text><a href="callto:+46729755366">+46-729-755 366</a></Text>
+                    <Text>
+                      <Anchor color="info" href="callto:+46729755366">
+                        +46-729-755 366
+                      </Anchor>
+                    </Text>
                   </Title>
                   <Title variant="card" fontSize="18px">
                     Christian Landgren, VD
-                    <Text><a href="callto:+46707755831">+46-707-755 831</a></Text>
+                    <Text>
+                      <Anchor color="info" href="callto:+46707755831">
+                        +46-707-755 831
+                      </Anchor>
+                    </Text>
                   </Title>
                   <Title variant="card" fontSize="18px">
                     Hans Rollman, COO
-                    <Text><a href="callto:+46738133787">+46 738-1337 87</a></Text>
+                    <Text>
+                      <Anchor color="info" href="callto:+46738133787">
+                        +46 738-1337 87
+                      </Anchor>
+                    </Text>
                   </Title>
-                  <a href="/about#medarbetare">Fler kontaktuppgifter...</a>
+                  <Anchor color="info" href="/about#medarbetare">
+                    Fler kontaktuppgifter...
+                  </Anchor>
                 </Box>
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">

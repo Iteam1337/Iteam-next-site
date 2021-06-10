@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import Gravatar from "react-gravatar";
-import { Title, Section, Box, Text, A } from "../../components/Core";
+import { Title, Section, Box, Text, Anchor } from "../../components/Core";
 import Quote from "../../components/Quote";
 
 import GlobalContext from "../../context/GlobalContext";
@@ -36,7 +36,9 @@ const Content = () => {
                 Developers, musikälskare, innovatörer, UX-designers, arkitekter,
                 wannabe-triathleter, agila coacher, vi är ett gäng med rötterna
                 i tekniken, internet och människan. Mer om oss alla finns{" "}
-                <A href="/about#medarbetare" color="info">här</A>
+                <Anchor href="/about#medarbetare" color="info">
+                  här
+                </Anchor>
               </Text>
             </Col>
           </Row>

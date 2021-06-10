@@ -1,7 +1,7 @@
 import Box from "./Box";
 import Title from "./Title";
 import Text from "./Text";
-import A from "./A";
+import Anchor from "./Anchor";
 import Badge from "./Badge";
 import Button from "./Button";
 import Section from "./Section";
@@ -18,7 +18,7 @@ export {
   Box,
   Title,
   Text,
-  A,
+  Anchor,
   Badge,
   Button,
   Section,
