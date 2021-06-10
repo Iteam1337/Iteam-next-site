@@ -22,7 +22,6 @@ const Hero = ({ title, children, ...rest }) => {
       >
         <Container css={`
             z-index: 10;
-            margin-left: 0px;
           `}>
           <Row>
             <Col lg="6">

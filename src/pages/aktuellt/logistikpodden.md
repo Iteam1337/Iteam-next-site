@@ -1,8 +1,8 @@
 ---
-title: "Om medverkan i logistikpodden"
+title: "Logistikpodden om Predictive Movement"
 date: "2021-06-03"
 image: "/images/logistikpodden.jpeg"
-intro: Lyssna på podd om framtidens transportsystem!
+intro: Hur kommer framtidens transportsystem fungera? Kan AI hjälpa miljön?
 ---
 
 ## Vart är framtiden på väg?
