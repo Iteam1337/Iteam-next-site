@@ -3,7 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import MetaTags from "../../components/MetaTags/MetaTags";
 import PageWrapper from "../../components/PageWrapper";
-import { Section, Title, Text, Box, ImgContainer } from "../../components/Core";
+import {
+  Section,
+  Title,
+  Text,
+  Box,
+  ImgContainer,
+  Anchor,
+} from "../../components/Core";
 import imgRole from "../../assets/image/jpeg/socks_top.jpg";
 
 const OpeningDetails = () => {
@@ -87,11 +94,28 @@ const OpeningDetails = () => {
                   Du behöver
                 </Title>
                 <ul style={{ listStyle: "disc", marginLeft: "3rem" }}>
-                  <li>Ha förmågan att förstå kundens affär och koppling till tekniken samt ta fram systemarkitektur tillsammans med teamet och kunden</li>
-                  <li>God samarbetsförmåga (t.ex. parprogrammera, arbeta tvärfunktionellt, arbeta i team)</li>
-                  <li>Goda kunskaper inom vår primära tech-stack (Node.js, Docker, Kubernetes)</li>
-                  <li>God förmåga att skriva kod som är testbar samt skriva automatiska tester</li>
-                  <li>God förmåga att sätta upp en ny miljö, från källkod -> produktion (byggen, tester, separata miljöer, automatisk deployment osv)</li>
+                  <li>
+                    Ha förmågan att förstå kundens affär och koppling till
+                    tekniken samt ta fram systemarkitektur tillsammans med
+                    teamet och kunden
+                  </li>
+                  <li>
+                    God samarbetsförmåga (t.ex. parprogrammera, arbeta
+                    tvärfunktionellt, arbeta i team)
+                  </li>
+                  <li>
+                    Goda kunskaper inom vår primära tech-stack (Node.js, Docker,
+                    Kubernetes)
+                  </li>
+                  <li>
+                    God förmåga att skriva kod som är testbar samt skriva
+                    automatiska tester
+                  </li>
+                  <li>
+                    God förmåga att sätta upp en ny miljö, från källkod ->
+                    produktion (byggen, tester, separata miljöer, automatisk
+                    deployment osv)
+                  </li>
                   <li>God kunskap om integrationer och att bygga API:er</li>
                   <li>4+ års erfarenhet av systemutveckling</li>
                   <li>
@@ -135,7 +159,10 @@ const OpeningDetails = () => {
                   Plats: Göteborg eller Stockholm eller Remote inom Sverige
                   <br />
                   Ansök genom att maila ditt CV & några rader om dig till{" "}
-                  <a href="mailto:joinus@iteam.se">joinus@iteam.se</a>
+                  <Anchor color="info" href="mailto:joinus@iteam.se">
+                    {" "}
+                    joinus@iteam.se{" "}
+                  </Anchor>
                 </Text>
               </Box>
               <Box pb={["40px", null, "65px"]}>
@@ -144,13 +171,16 @@ const OpeningDetails = () => {
                 </Title>
                 <Text variant="small">
                   Skicka din fråga till{" "}
-                  <a href="mailto:johanna.grahn@iteam.se">
-                    johanna.grahn@iteam.se
-                  </a>{" "}
+                  <Anchor color="info" href="mailto:johanna.grahn@iteam.se">
+                    johanna.grahn@iteam.se{" "}
+                  </Anchor>
                   (Head of People and Culture) eller{" "}
-                  <a href="mailto:emma-klara-wachter.iteam.se">
-                    emma-klara-wachter.iteam.se
-                  </a>{" "}
+                  <Anchor
+                    color="info"
+                    href="mailto:emma-klara-wachter.iteam.se"
+                  >
+                    emma-klara-wachter.iteam.se{" "}
+                  </Anchor>
                   (tf Head of Development)
                 </Text>
               </Box>

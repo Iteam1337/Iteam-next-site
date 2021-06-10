@@ -1,9 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { rgba } from "polished";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Title, Section, Text, A } from "../../components/Core";
+import { Title, Section, Text, Anchor } from "../../components/Core";
 import styled from "styled-components";
 
 const Card = styled.a`
@@ -73,11 +72,13 @@ const Roles = () => (
               <Title>Lediga tjänster</Title>
               <Text>
                 Kika igenom våra öppningar just nu,{" "}
-                <A color="info" href="mailto:internship@iteam.se">
+                <Anchor color="info" href="mailto:internship@iteam.se">
                   anmäl intresse för praktik
-                </A>{" "}
+                </Anchor>{" "}
                 eller{" "}
-                <A color="info" href="mailto:joinus@iteam.se">skicka en spontantansökan</A>{" "}
+                <Anchor color="info" href="mailto:joinus@iteam.se">
+                  skicka en spontantansökan
+                </Anchor>{" "}
                 och berätta vad du drömmer om att göra ihop med oss
               </Text>
             </div>

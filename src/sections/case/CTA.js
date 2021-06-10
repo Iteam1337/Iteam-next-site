@@ -37,7 +37,9 @@ const CTA = () => (
         <Row className="justify-content-center text-center">
           <Col lg="6">
             <Box mb={5} className="text-center">
-              <Title color="light">Nyfiken på vad vi kan göra tillsammans?</Title>
+              <Title color="light">
+                Nyfiken på vad vi kan göra tillsammans?
+              </Title>
             </Box>
             <Box>
               <a href="/book">

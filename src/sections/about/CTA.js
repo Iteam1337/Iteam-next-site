@@ -41,9 +41,9 @@ const CTA = () => (
               <Title color="light">Bli del av teamet?</Title>
             </Box>
             <Box>
-              <a href="/karriar">
-                <Button>Se lediga tjänster</Button>
-              </a>
+              <Button onClick={() => (window.location.href = "/karriar")}>
+                Se lediga tjänster
+              </Button>
             </Box>
           </Col>
         </Row>

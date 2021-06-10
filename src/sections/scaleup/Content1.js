@@ -78,9 +78,12 @@ const Content1 = () => (
                   uppdrag med omsorg för att kunna använda ordet konsult med
                   dess rätta betydelse.
                 </Text>
-                <a href="#pricing">
-                  <Button mt={4}>Se våra priser</Button>
-                </a>
+                <Button
+                  mt={4}
+                  onClick={() => (window.location.href = "#pricing")}
+                >
+                  Se våra priser
+                </Button>
               </div>
             </Section>
           </Col>

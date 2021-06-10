@@ -13,7 +13,6 @@ const Hero = () => {
           className="position-relative"
           css={`
             z-index: 10;
-            margin: 2px;
           `}
         >
           <Row>
