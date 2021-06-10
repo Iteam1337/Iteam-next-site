@@ -14,7 +14,7 @@ import { menuItems } from "./menuItems";
 
 const SiteHeader = styled.header`
   padding: 10px 0 10px 3px;
-  position: absolute !important;
+  position: fixed !important;
   top: 0;
   right: 0;
   width: 100%;
@@ -23,21 +23,17 @@ const SiteHeader = styled.header`
   .container {
     padding-left: 0;
   }
-
-  @media ${device.lg} {
-    position: fixed !important;
+  transition: 0.4s;
+  &.scrolling {
+    transform: translateY(-100%);
     transition: 0.4s;
-    &.scrolling {
-      transform: translateY(-100%);
-      transition: 0.4s;
-    }
-    &.reveal-header {
-      transform: translateY(0%);
-      box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
-      z-index: 9999;
-      background: ${({ dark, theme }) =>
-        dark ? theme.colors.dark : theme.colors.light};
-    }
+  }
+  &.reveal-header {
+    transform: translateY(0%);
+    box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
+    z-index: 9999;
+    background: ${({ dark, theme }) =>
+      dark ? theme.colors.dark : theme.colors.light};
   }
 
   /* Bounce To Left */
