@@ -6,10 +6,21 @@ import { Title, Section, Text } from "../../components/Core";
 
 const SectionStyled = styled(Section)`
   background: ${({ heroImage }) =>
-      heroImage
-        ? `url(${require(`../../assets/image/heros/${heroImage}`)})`
-        : "linear-gradient(147deg, rgba(141, 141, 236, 0.17) 0%, rgba(84, 84, 212, 0) 100%)"},
-    no-repeat center 60%;
+    heroImage
+      ? `linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1)
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    /* bottom, image */ url(${require(`../../assets/image/heros/${heroImage}`)}) no-repeat center 20%`
+      : "linear-gradient(147deg, rgba(141, 141, 236, 0.17) 0%, rgba(84, 84, 212, 0) 100%)"};
+  background-position: center;
   background-size: cover;
 `;
 
@@ -24,16 +35,15 @@ const Hero = ({ title, children, heroImage }) => (
       <Container
         css={`
           z-index: 10;
-          margin-left: 0px;
         `}
       >
         <Row>
           <Col lg="6">
             <div>
-              <Title color="light" variant="hero">
+              <Title color="dark" variant="hero">
                 {title}
               </Title>
-              <Text color="light">{children}</Text>
+              <Text color="dark">{children}</Text>
             </div>
           </Col>
         </Row>
