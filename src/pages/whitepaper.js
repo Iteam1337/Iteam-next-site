@@ -3,7 +3,6 @@ import Hero from "../sections/whitepaper/Hero";
 import Feature from "../sections/whitepaper/Feature";
 import Content from "../sections/whitepaper/Content";
 import Fact from "../sections/whitepaper/Fact";
-import Reviews from "../sections/whitepaper/Reviews";
 import Author from "../sections/whitepaper/Author";
 import Pricing from "../sections/whitepaper/Pricing/Pricing";
 import Offer from "../sections/whitepaper/Offer";
@@ -20,7 +19,6 @@ const LandingPage5 = () => {
         <Content />
         <Offer />
         <Fact />
-        <Reviews />
         <Author />
         <Pricing />
         <Faq />

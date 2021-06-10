@@ -1,6 +1,8 @@
 ---
 title: "Vad är öppen källkod och varför ska du bry dig?"
-date: "2021-06-01"
+date: "2021-06-10"
+image: "/images/fsfe.jpeg"
+intro: "Öppen källkod är mycket mer än bara gratis programvara. Det är en ideologi som rimmar väl med Sveriges och Europas värderingar"
 ---
 
 Många konsultfirmor har som affärsidé att låsa in sina kunder, både genom att låsa in data och låsa in källkod. Våra värderingar på Iteam är att Skapa värde, Ha kul och Göra något bra - och de värderingarna leder oss fram till att vi hellre hjälper våra kunder att få mer värde genom att bygga vidare på tidigare arbete - än att göra om samma jobb om och om igen. Det blir billigare, snabbare och bättre helt enkelt. Och vi kommer vidare i digitaliseringen istället för att stå kvar och stampa.
@@ -42,3 +44,7 @@ Större delaktighet. En demokrati är beroende av transparens för att förstå 
 Lättare onboarding. När ett projekt utvecklas med målet att källkoden ska vara öppen blir oftast kraven större på att det ska vara enkelt att kunna få igång koden på sin egen dator. Det gör faktiskt det lättare även för teamet självt när det kommer nya personer som ansluter till teamet. Det paketeras helt enkelt lite smidigare så att man inte behöver veta exakt allt om hur allt fungerar men ändå kan hjälpa till.
 Påverkar arbetsprocessen. När ett projekt utvecklas i det öppna så kommer även fler personer engagera sig tidigt (om det är ett projekt som engagerar). Denna typ av kontinuerligt samarbete ökar intelligensen i den totala gruppen och möjliggör mer specialiserad kunskap att bidra. Det kan till exempel handla om översättningar, exempeltexter, illustrationer som kan läggas in direkt i koden utan att behöva hamna i backlogs eller annan projekthantering.
 Kontakta gärna oss på Iteam om du är nyfiken på öppen källkod och digital innovation. Vi hjälper dig både med tekniken, skapa engagemang/community kring din tjänst och att hitta fram till en kultur av action, öppenhet och lärande i ditt team.
+
+## Vill du lära dig mer om öppen källkod? 
+
+<a href="/mvp">Boka ett MVP team</a> som hjälper dig att komma igång
