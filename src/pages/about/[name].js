@@ -1,7 +1,7 @@
 import React from "react";
 import PageWrapper from "../../components/PageWrapper";
 import Medarbetare from "../../sections/about/Medarbetare";
-import Hero from "../../sections/common/Hero";
+import Hero from "../../sections/about/CoworkerHero";
 import team from "../../sections/about/team.json";
 
 export async function getStaticPaths() {
@@ -24,10 +24,13 @@ const CoworkerPage = ({ coworker }) => (
   <PageWrapper footerDark>
     {coworker && (
       <>
-        <Hero title={coworker.fullname}>{coworker.title}</Hero>
+        <Hero title={coworker.fullname} heroImage={coworker.heroImg}>
+          {coworker.title}
+        </Hero>
         <Medarbetare info={coworker} />
       </>
     )}
   </PageWrapper>
 );
+
 export default CoworkerPage;
