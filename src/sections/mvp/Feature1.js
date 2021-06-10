@@ -63,9 +63,9 @@ const Feature = () => (
                 för att kickstarta samarbetet. Andra gånger gör vi research om
                 användarbehov för att försäkra oss om att vi löser rätt problem.
               </Text>
-              <a href="#book">
-                <Button mt={4}>Boka möte</Button>
-              </a>
+              <Button mt={4} onClick={() => (window.location.href = "#book")}>
+                Boka möte
+              </Button>
             </Box>
           </Col>
           <Col md="8" lg="5" className="order-lg-1 mt-5 mt-lg-0">

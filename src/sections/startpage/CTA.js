@@ -17,9 +17,9 @@ const CTA = () => (
               </Text> */}
               <div className="d-flex flex-column align-items-center pt-3">
                 <Box>
-                  <a href="/book">
-                    <Button>Boka möte</Button>
-                  </a>
+                  <Button onClick={() => (window.location.href = "/book")}>
+                    Boka möte haha
+                  </Button>
                 </Box>
               </div>
             </Box>

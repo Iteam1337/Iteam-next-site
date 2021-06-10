@@ -175,9 +175,12 @@ const Pricing = () => {
                       <li>2 eller 4 dagar/vecka</li>
                     </ULStyled>
                   </div>
-                  <a href="/book">
-                    <Button bg="primary">Boka tid för intromöte</Button>
-                  </a>
+                  <Button
+                    bg="primary"
+                    onClick={() => (window.location.href = "/book")}
+                  >
+                    Boka tid för intromöte
+                  </Button>
                 </CardPricing>
               </Col>
               {/*<Col lg="6" className="mb-4">
