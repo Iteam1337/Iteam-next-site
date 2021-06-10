@@ -20,6 +20,19 @@ const CardImage = styled.div`
   margin-bottom: 29px;
 `;
 
+const Wrapper = styled.div`
+  height: 330px;
+  &:hover {
+    cursor: pointer;
+    .image {
+      max-width: 170px;
+      min-width: 170px;
+      min-height: 170px;
+      max-height: 170px;
+    }
+  }
+`;
+
 const TeamCard = ({
   email,
   name,
@@ -38,36 +51,42 @@ const TeamCard = ({
     mb={4}
     {...rest}
   >
-    <Link href={path}>
-      <CardImage>
-        <Gravatar email={email} className="img-fluid" size={200} />
-      </CardImage>
-    </Link>
-    <div className="text-center">
-      <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
-        {name}
-      </Title>
-      <Text fontSize={2} lineHeight={1.75}>
-        {status}
-      </Text>
-      <Text fontSize={2} lineHeight={1.75}>
-        {title}
-      </Text>
-      {phoneNumber && (
-        <a href={`tel:${phoneNumber}`}>
-          <Text fontSize={1} lineHeight={1.25}>
-            {phoneNumber}
-          </Text>
-        </a>
-      )}
-      {email && (
-        <a href={`mailto:${email}`}>
-          <Text fontSize={1} lineHeight={1.25}>
-            {email}
-          </Text>
-        </a>
-      )}
-    </div>
+    <Wrapper>
+      <Link href={path}>
+        <div>
+          <CardImage className="image">
+            <Gravatar email={email} className="img-fluid" size={200} />
+          </CardImage>
+          <div className="text-center">
+            <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
+              {name}
+            </Title>
+            <Text fontSize={2} lineHeight={1.75}>
+              {status}
+            </Text>
+            <Text fontSize={2} lineHeight={1.75}>
+              {title}
+            </Text>
+          </div>
+        </div>
+      </Link>
+      <div className="text-center">
+        {phoneNumber && (
+          <a href={`tel:${phoneNumber}`}>
+            <Text fontSize={1} lineHeight={1.25}>
+              {phoneNumber}
+            </Text>
+          </a>
+        )}
+        {email && (
+          <a href={`mailto:${email}`}>
+            <Text fontSize={1} lineHeight={1.25}>
+              {email}
+            </Text>
+          </a>
+        )}
+      </div>
+    </Wrapper>
   </Box>
 );
 
