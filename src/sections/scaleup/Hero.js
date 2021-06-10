@@ -13,6 +13,11 @@ const SectionStyled = styled(Section)`
   background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1)
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.1)
     ),
@@ -34,7 +39,6 @@ const Hero = () => {
         <Container
           css={`
             z-index: 10;
-            margin: 0px;
             margin-top: 20px;
           `}
         >
@@ -51,7 +55,7 @@ const Hero = () => {
               {" "}
               Iteam Scale-Up – När ditt team behöver extra kraft
               <Box py={[null, null, null, 4]} pr={5} pt={[4, null]}>
-                <Title variant="hero">Ibland behöver man förstärkning</Title>
+                <Title variant="hero">Ibland behövs förstärkning</Title>
                 {/* <Text mb={4}>
                 Oavsett om du har ett problem du behöver lösa eller redan har en idé så hjälper vi dig. Vi börjar där du står och utgår ifrån det helt enkelt. Ibland gör vi en <a href="/designsprint">Designsprint</a> för att kickstarta samarbetet. Andra gånger gör vi research om användarbehov för att försäkra oss om att vi löser rätt problem.
                 </Text> */}

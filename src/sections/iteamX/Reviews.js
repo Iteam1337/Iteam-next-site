@@ -9,7 +9,7 @@ import imgB3 from "../../assets/image/png/testimonial-brand-3.png";
 
 import imgR1 from "../../assets/image/jpeg/l8-testimonial-user-image-1.jpg";
 import imgR2 from "../../assets/image/jpeg/l8-testimonial-user-image-2.jpg";
-import imgR3 from "../../assets/image/jpeg/l8-testimonial-user-image-3.jpg";
+import imgR3 from "../../assets/image/jpeg/johanna_lindberg.jpg";
 
 const ContentCard = ({
   className,
@@ -93,7 +93,7 @@ const Reviews = () => {
                 image={imgR3}
                 imageBrand={imgB3}
               >
-                "Iteam är ett av Sveriges mest intressanta techföretag."
+                "Ni vet hur man sitter och har vilda idéer om lösningar på problem, men så börjar hindren torna upp sig. På Iteam använder de sig av de där hindren i sina lösningar, ju fler hinder ju bättre lösning. Otroligt kreativt att jobba med Iteam"
               </ContentCard>
             </Col>
           </Row>

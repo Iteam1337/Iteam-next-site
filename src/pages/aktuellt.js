@@ -31,7 +31,7 @@ export default function BlogRegular({ posts }) {
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="8">
-                <Title variant="hero">Aktuellt på Iteam</Title>
+                <Title>Aktuellt på Iteam</Title>
               </Col>
             </Row>
           </Container>

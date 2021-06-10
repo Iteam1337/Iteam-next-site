@@ -2,7 +2,7 @@
 title: "Jämställdhet på Iteam"
 date: "2021-05-10"
 image: "/images/lovelacemote.jpeg"
-intro: Numera är vi 50% kvinnor på Iteam!
+intro: 2021 är Iteam ett techbolag med lika många kvinnor som män. Det tål att uppmärksammas! 
 ---
 
 2021 är vi ett techbolag med lika många kvinnor som män. Det tål att uppmärksammas! Vi är också stolta över att vår ledningsgrupp har en jämn fördelning 💥
