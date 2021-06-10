@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 import { Box, Badge } from "../../components/Core";
 
-import imgB1 from "../../assets/image/jpeg/blog-details-img-1.jpg";
 import iconQuote from "../../assets/image/png/quote-icon.png";
 
 const Post = styled(Box)`

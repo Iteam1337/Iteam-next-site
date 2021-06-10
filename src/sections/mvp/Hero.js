@@ -13,20 +13,16 @@ import {
 
 import { device } from "../../utils";
 
-import imgL2HeroOval1 from "../../assets/image/png/l2-hero-oval1.png";
-import imgL2HeroOval2 from "../../assets/image/png/l2-hero-oval2.png";
 import imgL2HeroBg from "../../assets/image/jpeg/Jonna-Med-Team-Scrum-Board.jpg";
 
 const SectionStyled = styled(Section)`
   background: 
-  /* top, transparent black, faked with gradient */ 
-  linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.9), 
-    rgba(255, 255, 255, 0.4)
-  ),
-  /* bottom, image */
-  url(${imgL2HeroBg}) no-repeat center 20%;
+  /* top, transparent black, faked with gradient */ linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.4)
+    ),
+    /* bottom, image */ url(${imgL2HeroBg}) no-repeat center 20%;
   background-size: cover;
   padding-top: 128px;
 
@@ -83,10 +79,12 @@ const Hero = () => {
               data-aos-duration="600"
               data-aos-delay="500"
               data-aos-once="true"
-            > Iteam MVP – När du vill bygga nytt
+            >
+              {" "}
+              Iteam MVP – När du vill bygga nytt
               <Box py={[null, null, null, 4]} pr={5} pt={[4, null]}>
                 <Title variant="hero">
-                 Utveckling av
+                  Utveckling av
                   <br /> nya digitala tjänster
                 </Title>
                 {/* <Text mb={4}>

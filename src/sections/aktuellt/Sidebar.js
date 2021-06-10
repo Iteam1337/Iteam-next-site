@@ -6,25 +6,21 @@ import {
   TitleSidebar,
   TitlePost,
   Date,
-  CatList,
-  CatListItem,
 } from "../../components/Sidebar";
-
-import InputSearch from "../../components/InputSearch";
 
 const Sidebar = ({ posts }) => {
   return (
     <>
       <CardSidebar>
         <TitleSidebar>Aktuellt</TitleSidebar>
-        {posts?.map(post => 
+        {posts?.map((post) => (
           <Block>
-          <TitlePost link={`/aktuellt/${post.id}`} >{post.title}</TitlePost>
-          <Date>{post.date}</Date>
+            <TitlePost link={`/aktuellt/${post.id}`}>{post.title}</TitlePost>
+            <Date>{post.date}</Date>
           </Block>
-        )}
+        ))}
       </CardSidebar>
-     {/*
+      {/*
       <CardSidebar>
         <TitleSidebar mb="28px">Categories</TitleSidebar>
         <CatList>
