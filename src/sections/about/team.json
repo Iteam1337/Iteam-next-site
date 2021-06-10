@@ -1,6 +1,6 @@
 [
   {
-    "hero-img": "hero-iris-lothen",
+    "heroImg": "hero-iris-lothen.jpeg",
     "path": "/about/iris-lothen",
     "fullname": "Iris Löthén",
     "email": "iris.lothen@iteam.se",
@@ -11,7 +11,7 @@
     "specialty": "Jag arbetar gärna med design som är tillgänglig för alla i samhället och ifrågasätter normer. Jag är även intresserad av grafisk design och visuell kommunikation."
   },
   {
-    "hero-img": "hero-alexander-czigler",
+    "heroImg": "hero-alexander-czigler.jpeg",
     "path": "/about/alexander-czigler",
     "username": "ilix",
     "email": "alexander@iteam.se",
@@ -27,7 +27,7 @@
     "specialty": "Älskar att lösa uppgifter som förutsätter att jag måste lära mig något nytt."
   },
   {
-    "hero-img": "hero-christian-landgren",
+    "heroImg": "hero-christian-landgren.jpeg",
     "path": "/about/christian-landgren",
     "username": "irony",
     "email": "christian.landgren@iteam.se",
@@ -43,7 +43,7 @@
     "specialty": "Entreprenörsrådgivning, Startups, Node.Js, NoSQL, HTML5, arkitektur."
   },
   {
-    "hero-img": "hero-martin-loman",
+    "heroImg": "hero-martin-loman.jpeg",
     "path": "/about/martin-loman",
     "username": "martinloman",
     "email": "martin.loman@iteam.se",
@@ -58,7 +58,7 @@
     "specialty": "Att få fart på SQL-frågor i SQL Server. Något jag får använda allt mer sällan nu för tiden."
   },
   {
-    "hero-img": "hero-hans-rollman",
+    "heroImg": "hero-hans-rollman.jpeg",
     "path": "/about/hans-rollman",
     "username": "hrn",
     "email": "hans.rollman@iteam.se",
@@ -74,7 +74,7 @@
     "specialty": "Att organisera, strukturera och relatera information. Process- och organisationsanalys. Planering."
   },
   {
-    "hero-img": "hero-radu-achim",
+    "heroImg": "hero-radu-achim.jpeg",
     "path": "/about/radu-achim",
     "username": "ram",
     "email": "radu.achim@iteam.se",
@@ -89,7 +89,7 @@
     "specialty": "Javascript, C#"
   },
   {
-    "hero-img": "hero-anders-bornholm",
+    "heroImg": "hero-anders-bornholm.jpeg",
     "path": "/about/anders-bornholm",
     "username": "osiris",
     "email": "anders.bornholm@iteam.se",
@@ -105,7 +105,7 @@
     "specialty": "Konceptutveckling, C#, systemarkitektur, EPiServer, Node.js, AngularJS, single sign-on, integration"
   },
   {
-    "hero-img": "hero-johanna-månsson-grahn",
+    "heroImg": "hero-johanna-månsson-grahn.jpeg",
     "path": "/about/johanna-månsson-grahn",
     "username": "mittistormen",
     "email": "johanna.grahn@iteam.se",
@@ -121,8 +121,8 @@
     "specialty": "Att skapa trygga team, agil systemutveckling och coachning, förändringsledning, API-utveckling, Node.js, .NET"
   },
   {
-    "hero-img": "",
-    "path": "/about/mikael-naeslund",
+    "heroImg": "",
+    "path": "/about/mikael-naeslund.jpeg",
     "username": "mikaelnaeslund",
     "email": "mikael.naeslund@iteam.se",
     "title": "Chairman of the Board",
@@ -136,7 +136,7 @@
     "specialty": ""
   },
   {
-    "hero-img": "hero-maria-sölscher",
+    "heroImg": "hero-maria-sölscher.jpeg",
     "path": "/about/maria-sölscher",
     "username": "mariasolscher",
     "email": "maria.solscher@iteam.se",
@@ -152,7 +152,7 @@
     "specialty": "Planering, kommunikation, vända problem till spännande utmaningar, entusiasmering och relationer."
   },
   {
-    "hero-img": "hero-emma-klara-wachter",
+    "heroImg": "hero-emma-klara-wachter.jpeg",
     "path": "/about/emma-klara-wachter",
     "username": "emmaklara",
     "email": "emma-klara.wachter@iteam.se",
@@ -167,7 +167,7 @@
     "specialty": "Agile methodology and mindset, copy writing and transcribing really fast."
   },
   {
-    "hero-img": "hero-mikael-gråborg",
+    "heroImg": "hero-mikael-gråborg.jpeg",
     "path": "/about/mikael-gråborg",
     "username": "mikael",
     "email": "mikael.graborg@iteam.se",
@@ -183,7 +183,7 @@
     "specialty": "React, Python, Ruby on Rails, Java"
   },
   {
-    "hero-img": "hero-jonna-hjern",
+    "heroImg": "hero-jonna-hjern.jpeg",
     "path": "/about/jonna-hjern",
     "username": "jonna",
     "email": "jonna.hjern@iteam.se",
@@ -198,7 +198,7 @@
     "specialty": "Att genom mitt pedagogiska tänk hitta kundens unika frekvens för att kunna mötas, förstå varandra och vilja utvecklas tillsammans."
   },
   {
-    "hero-img": "hero-simon-lundell",
+    "heroImg": "hero-simon-lundell.jpeg",
     "path": "/about/simon-lundell",
     "username": "simonlundell",
     "email": "simon.lundell@iteam.se",
@@ -213,7 +213,7 @@
     "specialty": "JavaScript. Front-end. C#."
   },
   {
-    "hero-img": "hero-fanny-willbjer-schörling",
+    "heroImg": "hero-fanny-willbjer-schörling.jpeg",
     "path": "/about/fanny-nylund",
     "username": "fannynylund",
     "email": "fanny.nylund@iteam.se",
@@ -228,7 +228,7 @@
     "specialty": "Ordning och reda, fokus och vilja att lära mig nya saker. Jag drivs av positiv energi och nyfikenhet. "
   },
   {
-    "hero-img": "hero-emil-ahlbäck",
+    "heroImg": "hero-emil-ahlbäck.jpeg",
     "path": "/about/emil-ahlback",
     "username": "emil.ahlback",
     "email": "emil.ahlback@iteam.se",
@@ -242,7 +242,7 @@
     "specialty": "Utforskning av affärsprocesser och modeller genom datamodellering."
   },
   {
-    "hero-img": "hero-rebecca-norén",
+    "heroImg": "hero-rebecca-norén.jpeg",
     "path": "/about/rebecca-norén",
     "username": "rebecca",
     "email": "rebecca.noren@iteam.se",
@@ -257,7 +257,7 @@
     "specialty": "Design! Jag drivs av att minska komplexiteten och skapa meningsfulla produkter för människor genom att använda UX-metoder. Bra design gör skillnad och löser problem för människor. Design är mer än bara ett visuellt utseende – det är också hur det fungerar och passar in i verkligheten."
   },
   {
-    "hero-img": "hero-andreas-alsterholm",
+    "heroImg": "hero-andreas-alsterholm.jpeg",
     "path": "/about/andreas-alsterholm",
     "username": "andreas.indal",
     "title": "Fullstack Engineer",
@@ -272,7 +272,7 @@
     "specialty": "JavaScript."
   },
   {
-    "hero-img": "hero-adam-näslund",
+    "heroImg": "hero-adam-näslund.jpeg",
     "path": "/about/adam-näslund",
     "username": "adam.naslund",
     "email": "adam.naslund@iteam.se",
@@ -287,7 +287,7 @@
     "specialty": "IT-säkerhet, C++ och GNU/Linux."
   },
   {
-    "hero-img": "hero-andreas-lundqvist",
+    "heroImg": "hero-andreas-lundqvist.jpeg",
     "path": "/about/andreas-lundqvist",
     "username": "andreas.lundqvist",
     "email": "andreas.lundqvist@iteam.se",
@@ -302,7 +302,7 @@
     "specialty": "Javascript, brödbakning och brödätning, sen har jag ett öga för färg & form."
   },
   {
-    "hero-img": "hero-anna-lööf-möller",
+    "heroImg": "hero-anna-lööf-möller.jpeg",
     "path": "/about/anna-lööf-möller",
     "username": "anna.l.moller",
     "email": "anna.l.moller@iteam.se",
@@ -317,7 +317,7 @@
     "specialty": "Mina fortsatta hjärtefrågor är målgruppsfokus och hög användbarhet i kombination med stark varumärkesidentitet."
   },
   {
-    "hero-img": "hero-stephanie-weaver",
+    "heroImg": "hero-stephanie-weaver.jpeg",
     "path": "/about/stephanie-weaver",
     "username": "stephanie.weaver",
     "email": "stephanie.weaver@iteam.se",
@@ -332,7 +332,7 @@
     "specialty": "Jag har ett stort intresse för normkritisk design. Design som både ifrågasätter och utmanar rådande normer och inkluderar en större grupp människor, vilket  hjälper oss att skapa ännu bättre och mer socialt hållbara produkter och tjänster."
   },
   {
-    "hero-img": "hero-izabella-larsson",
+    "heroImg": "hero-izabella-larsson.jpeg",
     "path": "/about/izabella-larsson",
     "username": "izabella.larsson",
     "email": "izabella.larsson@iteam.se",
@@ -347,7 +347,7 @@
     "specialty": "Javascript"
   },
   {
-    "hero-img": "hero-mikaela-lundsgård",
+    "heroImg": "hero-mikaela-lundsgård.jpeg",
     "path": "/about/mikaela-lundsgard",
     "username": "mikaela.lundsgard",
     "email": "mikaela.lundsgard@iteam.se",
@@ -362,7 +362,7 @@
     "specialty": "JavaScript"
   },
   {
-    "hero-img": "hero-petronella-johansson",
+    "heroImg": "hero-petronella-johansson.jpeg",
     "path": "/about/petronella-johansson",
     "username": "petronella.johansson",
     "email": "petronella.johansson@iteam.se",
