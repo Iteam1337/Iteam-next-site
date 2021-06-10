@@ -226,6 +226,7 @@
     "specialty": "Utforskning av affärsprocesser och modeller genom datamodellering."
   },
   {
+    "hero-img": "hero-rebecca-norén",
     "path": "/about/rebecca-norén",
     "username": "rebecca",
     "email": "rebecca.noren@iteam.se",
@@ -240,6 +241,7 @@
     "specialty": "Design! Jag drivs av att minska komplexiteten och skapa meningsfulla produkter för människor genom att använda UX-metoder. Bra design gör skillnad och löser problem för människor. Design är mer än bara ett visuellt utseende – det är också hur det fungerar och passar in i verkligheten."
   },
   {
+    "hero-img": "hero-andreas-alsterholm",
     "path": "/about/andreas-alsterholm",
     "username": "andreas.indal",
     "title": "Fullstack Engineer",
@@ -254,6 +256,7 @@
     "specialty": "JavaScript."
   },
   {
+    "hero-img": "hero-adam-näslund",
     "path": "/about/adam-näslund",
     "username": "adam.naslund",
     "email": "adam.naslund@iteam.se",
@@ -268,6 +271,7 @@
     "specialty": "IT-säkerhet, C++ och GNU/Linux."
   },
   {
+    "hero-img": "hero-andreas-lundqvist",
     "path": "/about/andreas-lundqvist",
     "username": "andreas.lundqvist",
     "email": "andreas.lundqvist@iteam.se",
@@ -282,6 +286,7 @@
     "specialty": "Javascript, brödbakning och brödätning, sen har jag ett öga för färg & form."
   },
   {
+    "hero-img": "hero-anna-lööf-möller",
     "path": "/about/anna-lööf-möller",
     "username": "anna.l.moller",
     "email": "anna.l.moller@iteam.se",
@@ -296,6 +301,7 @@
     "specialty": "Mina fortsatta hjärtefrågor är målgruppsfokus och hög användbarhet i kombination med stark varumärkesidentitet."
   },
   {
+    "hero-img": "hero-stephanie-weaver",
     "path": "/about/stephanie-weaver",
     "username": "stephanie.weaver",
     "email": "stephanie.weaver@iteam.se",
@@ -310,6 +316,7 @@
     "specialty": "Jag har ett stort intresse för normkritisk design. Design som både ifrågasätter och utmanar rådande normer och inkluderar en större grupp människor, vilket  hjälper oss att skapa ännu bättre och mer socialt hållbara produkter och tjänster."
   },
   {
+    "hero-img": "hero-izabella-larsson",
     "path": "/about/izabella-larsson",
     "username": "izabella.larsson",
     "email": "izabella.larsson@iteam.se",
@@ -324,6 +331,7 @@
     "specialty": "Javascript"
   },
   {
+    "hero-img": "hero-mikaela-lundsgård",
     "path": "/about/mikaela-lundsgard",
     "username": "mikaela.lundsgard",
     "email": "mikaela.lundsgard@iteam.se",
@@ -338,6 +346,7 @@
     "specialty": "JavaScript"
   },
   {
+    "hero-img": "hero-petronella-johansson",
     "path": "/about/petronella-johansson",
     "username": "petronella.johansson",
     "email": "petronella.johansson@iteam.se",
