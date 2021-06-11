@@ -97,7 +97,7 @@ const Roles = () => (
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
               color="warning"
-              title="Backend developer"
+              title="Backend engineer"
               type="Full-time"
               location="Göteborg, Stockholm eller remote"
               link="/karriar/backend-developer"
