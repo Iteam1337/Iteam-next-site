@@ -84,7 +84,8 @@ const Team = () => (
         </Row>
         <Row className="justify-content-center">
           {team
-            .sort((a, b) => a.fullname > b.fullname)
+            .slice()
+            .sort((a, b) => a.fullname.localeCompare(b.fullname))
             .map(({ fullname, title, email, phoneNumber, status }) => (
               <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4" key={email}>
                 <TeamCard
