@@ -13,11 +13,16 @@ import ModalVideo from "../components/ModalVideo";
 import Testimonial from "../sections/startpage/Testimonial";
 import Pricing from "../sections/startpage/Pricing";
 import CTA from "../sections/scaleup/CTA";
+import MetaTags from "../components/MetaTags/MetaTags";
 
 const ScaleUp = () => {
   return (
     <>
       <PageWrapper>
+        <MetaTags
+          title={"Iteam Scale-Up – När ditt team behöver extra kraft"}
+          description={"Ibland behöver man förstärkning"}
+        />
         <Hero />
         <Content1 />
         <Feature1 />

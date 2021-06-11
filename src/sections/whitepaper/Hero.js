@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
-import { rgba } from "polished";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useEffect, useRef } from "react"
+import styled from "styled-components"
+import { rgba } from "polished"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text, Span } from "../../components/Core";
+import { Title, Button, Section, Box, Text, Span } from "../../components/Core"
 
-import { device } from "../../utils";
+import { device } from "../../utils"
 
-import imgHero from "../../assets/image/png/l6-hero-image.png";
-import imgAuthor from "../../assets/image/jpeg/l6-author-image.jpg";
+import imgHero from "../../assets/image/png/l6-hero-image.png"
+import imgAuthor from "../../assets/image/jpeg/l6-author-image.jpg"
 
 const ImgRight = styled(Box)`
   max-width: 80%;
@@ -24,7 +24,7 @@ const ImgRight = styled(Box)`
     position: relative;
     left: -35px;
   }
-`;
+`
 
 const ULStyled = styled.ul`
   list-style: none;
@@ -66,7 +66,7 @@ const ULStyled = styled.ul`
       margin-right: 13px;
     }
   }
-`;
+`
 
 const BoxStyled = styled(Box)`
   border-bottom: 1px solid #eae9f2;
@@ -77,7 +77,7 @@ const BoxStyled = styled(Box)`
     padding-top: 90px;
     padding-bottom: 85px;
   }
-`;
+`
 
 const AuthorWidget = styled(Box)`
   display: flex;
@@ -91,7 +91,7 @@ const AuthorWidget = styled(Box)`
     padding-left: 90px;
     padding-right: 90px;
   }
-`;
+`
 
 const AuthorImage = styled(Box)`
   min-width: 111px;
@@ -99,7 +99,7 @@ const AuthorImage = styled(Box)`
   height: 111px;
   border-radius: 500px;
   overflow: hidden;
-`;
+`
 
 const AuthorText = styled(Box)`
   padding-top: 20px;
@@ -108,7 +108,7 @@ const AuthorText = styled(Box)`
     padding-left: 30px;
     padding-top: 0px;
   }
-`;
+`
 
 const Hero = () => {
   useEffect(() => {

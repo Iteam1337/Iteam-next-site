@@ -41,7 +41,9 @@ const Layout = ({ children, pageContext }) => {
   const [visibleLoader, setVisibleLoader] = useState(true);
 
   useLayoutEffect(() => {
-    AOS.init();
+    AOS.init({
+      disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    });
     setVisibleLoader(false);
   }, []);
 

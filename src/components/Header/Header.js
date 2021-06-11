@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
@@ -21,7 +21,7 @@ const SiteHeader = styled.header`
   z-index: 999;
 
   .container {
-    padding-left:0
+    padding-left: 0;
   }
 
   @media ${device.lg} {
@@ -55,7 +55,6 @@ const SiteHeader = styled.header`
   .navbar {
     padding: 0;
     align-items: flex-start;
-
   }
 
   .navbar-toggler {
@@ -107,7 +106,7 @@ const SiteHeader = styled.header`
     justify-content: center;
     border-radius: 5px;
     border: 1px solid #c31a12;
-    background: #FF3B5C;
+    background: #ff3b5c;
     color: #fff !important;
     font-family: "Roboto", sans-serif;
     font-size: 21px;
@@ -117,10 +116,8 @@ const SiteHeader = styled.header`
 `;
 
 const ToggleButton = styled.button`
-  color: ${({ dark, theme }) =>
-    dark ? '#fff' : '#000'} !important;
-  border-color: ${({ dark, theme }) =>
-    dark ? '#fff' : '#000'} !important;
+  color: ${({ dark, theme }) => (dark ? "#fff" : "#000")} !important;
+  border-color: ${({ dark, theme }) => (dark ? "#fff" : "#000")} !important;
 `;
 
 const Menu = styled.ul`
@@ -274,6 +271,9 @@ const Header = ({ isDark = false }) => {
   const [showScrolling, setShowScrolling] = useState(false);
   const [showReveal, setShowReveal] = useState(false);
 
+  const size = useWindowSize();
+  const isMobile = size.width < 622;
+
   useScrollPosition(({ prevPos, currPos }) => {
     if (currPos.y < 0) {
       setShowScrolling(true);
@@ -287,6 +287,31 @@ const Header = ({ isDark = false }) => {
     }
   });
 
+  function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        function handleResize() {
+          setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+          });
+        }
+
+        window.addEventListener("resize", handleResize);
+
+        handleResize();
+
+        return () => window.removeEventListener("resize", handleResize);
+      }
+    }, []);
+    return windowSize;
+  }
+
   return (
     <>
       <SiteHeader
@@ -299,7 +324,11 @@ const Header = ({ isDark = false }) => {
           <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
             {/* <!-- Brand Logo--> */}
             <div className="brand-logo">
-              <Logo vertical={!showReveal} white={isDark} />
+              {isMobile ? (
+                <Logo vertical={false} white={isDark} />
+              ) : (
+                <Logo vertical={!showReveal} white={isDark} />
+              )}
             </div>
             <div className="collapse navbar-collapse">
               <div className="navbar-nav ml-lg-auto mr-3">
@@ -464,4 +493,5 @@ const Header = ({ isDark = false }) => {
     </>
   );
 };
+
 export default Header;
