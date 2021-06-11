@@ -84,6 +84,7 @@ const MenuItem = ({
               onClick={() => {
                 if (gContext.visibleOffCanvas) {
                   gContext.toggleOffCanvas();
+                  document.body.style.overflow = "visible";
                 }
               }}
             >
@@ -95,6 +96,7 @@ const MenuItem = ({
                 onClick={() => {
                   if (gContext.visibleOffCanvas) {
                     gContext.toggleOffCanvas();
+                    document.body.style.overflow = "visible";
                   }
                 }}
               >

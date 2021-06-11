@@ -27,13 +27,13 @@ const SiteHeader = styled.header`
   &.scrolling {
     transform: translateY(-100%);
     transition: 0.4s;
-  }
+}
   &.reveal-header {
     transform: translateY(0%);
     box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
     z-index: 9999;
     background: ${({ dark, theme }) =>
-      dark ? theme.colors.dark : theme.colors.light};
+    dark ? theme.colors.dark : theme.colors.light};
   }
 
   /* Bounce To Left */
@@ -129,7 +129,7 @@ const Menu = styled.ul`
     > .nav-link {
       @media ${device.lg} {
         color: ${({ dark, theme }) =>
-          dark ? theme.colors.light : theme.colors.darkShade}!important;
+    dark ? theme.colors.light : theme.colors.darkShade}!important;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -270,6 +270,12 @@ const Header = ({ isDark = false }) => {
   const size = useWindowSize();
   const isMobile = size.width < 622;
 
+
+  const toggleMenu = () => {
+    gContext.toggleOffCanvas()
+    document.body.style.overflow = "hidden";
+  }
+
   useScrollPosition(({ prevPos, currPos }) => {
     if (currPos.y < 0) {
       setShowScrolling(true);
@@ -311,9 +317,8 @@ const Header = ({ isDark = false }) => {
   return (
     <>
       <SiteHeader
-        className={`sticky-header ${showScrolling ? "scrolling" : ""} ${
-          showReveal ? "reveal-header" : ""
-        }`}
+        className={`sticky-header ${showScrolling ? "scrolling" : ""} ${showReveal ? "reveal-header" : ""
+          }`}
         dark={isDark ? 1 : 0}
       >
         <Container fluid>
@@ -463,16 +468,15 @@ const Header = ({ isDark = false }) => {
               </div>
             </div>
             <ToggleButton
-              className={`navbar-toggler btn-close-off-canvas ml-3 ${
-                gContext.visibleOffCanvas ? "collapsed" : ""
-              }`}
+              className={`navbar-toggler btn-close-off-canvas ml-3 ${gContext.visibleOffCanvas ? "collapsed" : ""
+                }`}
               type="button"
               data-toggle="collapse"
               data-target="#mobile-menu"
               aria-controls="mobile-menu"
               aria-expanded="false"
               aria-label="Toggle navigation"
-              onClick={gContext.toggleOffCanvas}
+              onClick={toggleMenu}
               dark={isDark ? 1 : 0}
             >
               <i className="icon icon-menu-34 icon-burger d-block fa-2x"></i>
