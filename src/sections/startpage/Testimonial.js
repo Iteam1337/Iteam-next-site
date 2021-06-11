@@ -161,9 +161,7 @@ const Testimonial = () => {
     responsive: [
       {
         breakpoint: breakpoints.lg,
-        // settings: {
-        //   arrows: false,
-        // },
+
       },
     ],
   };
