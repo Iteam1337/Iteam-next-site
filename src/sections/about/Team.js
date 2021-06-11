@@ -108,6 +108,7 @@ const Team = () => (
         </Row>
         <Row className="justify-content-center">
           {team
+            .slice()
             .sort((a, b) => a.fullname > b.fullname)
             .map(({ fullname, title, email, phoneNumber, status, path }) => (
               <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4" key={email}>
