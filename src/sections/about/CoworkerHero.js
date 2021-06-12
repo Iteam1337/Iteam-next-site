@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Text } from "../../components/Core";
+import { Title, Section, Text } from "../../components/Core"
 
 const SectionStyled = styled(Section)`
   background: ${({ heroImage }) =>
@@ -22,7 +22,7 @@ const SectionStyled = styled(Section)`
       : "linear-gradient(147deg, rgba(141, 141, 236, 0.17) 0%, rgba(84, 84, 212, 0) 100%)"};
   background-position: center;
   background-size: cover;
-`;
+`
 
 const Hero = ({ title, children, heroImage }) => (
   <>
@@ -50,6 +50,6 @@ const Hero = ({ title, children, heroImage }) => (
       </Container>
     </SectionStyled>
   </>
-);
+)
 
-export default Hero;
+export default Hero

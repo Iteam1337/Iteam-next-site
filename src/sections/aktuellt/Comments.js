@@ -1,18 +1,11 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import {
-  Title,
-  Section,
-  Box,
-  Text,
-  Button,
-  Input,
-} from "../../components/Core";
+import { Title, Section, Box, Text, Button, Input } from "../../components/Core"
 
-import imgCustomer1 from "../../assets/image/jpeg/comment-user-1.jpg";
-import imgCustomer2 from "../../assets/image/jpeg/comment-user-2.jpg";
-import imgCustomer3 from "../../assets/image/jpeg/comment-user-3.jpg";
+import imgCustomer1 from "../../assets/image/jpeg/comment-user-1.jpg"
+import imgCustomer2 from "../../assets/image/jpeg/comment-user-2.jpg"
+import imgCustomer3 from "../../assets/image/jpeg/comment-user-3.jpg"
 
 const ContentCard = ({
   className,
@@ -47,7 +40,7 @@ const ContentCard = ({
       {children}
     </Text>
   </Box>
-);
+)
 
 const Comments = () => (
   <>
@@ -149,6 +142,6 @@ const Comments = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Comments;
+export default Comments

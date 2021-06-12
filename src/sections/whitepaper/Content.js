@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Text } from "../../components/Core";
-import { device } from "../../utils";
+import { Title, Section, Box, Text } from "../../components/Core"
+import { device } from "../../utils"
 
-const SectionStyled = styled(Section)``;
+const SectionStyled = styled(Section)``
 
 const ContentWidget = styled(Box)`
   border-radius: 10px;
@@ -25,7 +25,7 @@ const ContentWidget = styled(Box)`
   @media ${device.md} {
     min-height: 100%;
   }
-`;
+`
 
 const ContentWidgetIcon = styled(Box)`
   min-width: 30px;
@@ -39,7 +39,7 @@ const ContentWidgetIcon = styled(Box)`
   margin-right: 20px;
   color: ${({ theme }) => theme.colors.light};
   background-color: ${({ theme }) => theme.colors.secondary};
-`;
+`
 
 const ContentCard = ({ children = "" }) => {
   return (
@@ -53,8 +53,8 @@ const ContentCard = ({ children = "" }) => {
         </Title>
       </div>
     </ContentWidget>
-  );
-};
+  )
+}
 
 const Content = () => {
   return (
@@ -188,7 +188,7 @@ const Content = () => {
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content

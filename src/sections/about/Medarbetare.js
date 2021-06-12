@@ -1,6 +1,6 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Title, Section, Text, Anchor } from "../../components/Core";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
+import { Title, Section, Text, Anchor } from "../../components/Core"
 
 const InfoSection = ({ text, title }) => (
   <Row className="py-5">
@@ -11,7 +11,7 @@ const InfoSection = ({ text, title }) => (
       <Text>{text}</Text>
     </Col>
   </Row>
-);
+)
 
 const Medarbetare = ({ info }) => (
   <Container>
@@ -44,6 +44,6 @@ const Medarbetare = ({ info }) => (
       )}
     </Section>
   </Container>
-);
+)
 
-export default Medarbetare;
+export default Medarbetare

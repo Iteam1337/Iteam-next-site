@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container } from "react-bootstrap"
 
-import { Box } from "../../components/Core";
+import { Box } from "../../components/Core"
 
 const Brand = styled(Box)`
   opacity: 0.7;
@@ -10,7 +10,7 @@ const Brand = styled(Box)`
   &:hover {
     opacity: 1;
   }
-`;
+`
 
 const Clients = () => (
   <>
@@ -41,6 +41,6 @@ const Clients = () => (
       </Container>
     </Box>
   </>
-);
+)
 
-export default Clients;
+export default Clients

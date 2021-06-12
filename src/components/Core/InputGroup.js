@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { rgba } from "polished";
+import React from "react"
+import styled from "styled-components"
+import { rgba } from "polished"
 
-import Input from "./Input";
+import Input from "./Input"
 
 const InputGroupStyled = styled.div`
   position: relative;
-`;
+`
 
 const Icon = styled.div`
   position: absolute;
@@ -16,7 +16,7 @@ const Icon = styled.div`
   font-size: 19px;
   color: ${({ theme }) => rgba(theme.colors.dark, 0.4)};
   transform: translateY(-50%);
-`;
+`
 
 const InputGroup = ({
   type = "text",
@@ -37,7 +37,7 @@ const InputGroup = ({
       />
       <Icon className="d-flex align-items-center">{icon}</Icon>
     </InputGroupStyled>
-  );
-};
+  )
+}
 
-export default InputGroup;
+export default InputGroup

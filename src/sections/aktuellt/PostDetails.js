@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
-import { Box, Badge } from "../../components/Core";
+import { Box, Badge } from "../../components/Core"
 
-import iconQuote from "../../assets/image/png/quote-icon.png";
+import iconQuote from "../../assets/image/png/quote-icon.png"
 
 const Post = styled(Box)`
   overflow: hidden;
@@ -70,7 +70,7 @@ const Post = styled(Box)`
     margin-bottom: 2rem;
     display: block;
   }
-`;
+`
 
 const BadgePost = ({ children }) => (
   <Badge
@@ -84,7 +84,7 @@ const BadgePost = ({ children }) => (
   >
     {children}
   </Badge>
-);
+)
 
 const PostDetails = ({ post }) => (
   <>
@@ -103,6 +103,6 @@ const PostDetails = ({ post }) => (
       ))}
     </Box>
   </>
-);
+)
 
-export default PostDetails;
+export default PostDetails

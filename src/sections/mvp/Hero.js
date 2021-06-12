@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
 import {
   Title,
@@ -9,11 +9,11 @@ import {
   Box,
   Text,
   InputGroup,
-} from "../../components/Core";
+} from "../../components/Core"
 
-import { device } from "../../utils";
+import { device } from "../../utils"
 
-import imgL2HeroBg from "../../assets/image/jpeg/Jonna-Med-Team-Scrum-Board.jpg";
+import imgL2HeroBg from "../../assets/image/jpeg/Jonna-Med-Team-Scrum-Board.jpg"
 
 const SectionStyled = styled(Section)`
   background: 
@@ -29,7 +29,7 @@ const SectionStyled = styled(Section)`
   @media ${device.lg} {
     background-position: center;
   }
-`;
+`
 
 const ImageTop = styled(Box)`
   border: 10px solid transparent;
@@ -43,7 +43,7 @@ const ImageTop = styled(Box)`
   @media ${device.lg} {
     left: 2%;
   }
-`;
+`
 
 const ImageBottom = styled(Box)`
   position: absolute;
@@ -56,7 +56,7 @@ const ImageBottom = styled(Box)`
   @media ${device.xl} {
     right: -28%;
   }
-`;
+`
 
 const Hero = () => {
   return (
@@ -96,7 +96,7 @@ const Hero = () => {
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

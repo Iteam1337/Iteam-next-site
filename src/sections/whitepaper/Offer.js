@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
-import { device } from "../../utils";
+import { Title, Button, Section, Box, Text } from "../../components/Core"
+import { device } from "../../utils"
 
 const SectionStyled = styled(Section)`
   padding-bottom: 100px;
   padding-top: 0;
-`;
+`
 
 const OfferWrapper = styled(Box)`
   box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
@@ -17,7 +17,7 @@ const OfferWrapper = styled(Box)`
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 50px;
-`;
+`
 
 const BtnContainer = styled(Box)`
   margin-left: 45px;
@@ -28,7 +28,7 @@ const BtnContainer = styled(Box)`
     margin-top: auto;
     margin-bottom: auto;
   }
-`;
+`
 
 const Offer = () => (
   <>
@@ -54,6 +54,6 @@ const Offer = () => (
       </Container>
     </SectionStyled>
   </>
-);
+)
 
-export default Offer;
+export default Offer

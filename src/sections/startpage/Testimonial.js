@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import Slider from "react-slick";
-import { rgba } from "polished";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import Slider from "react-slick"
+import { rgba } from "polished"
 
-import { Title, Section, Box, Text } from "../../components/Core";
-import { device, breakpoints } from "../../utils";
+import { Title, Section, Box, Text } from "../../components/Core"
+import { device, breakpoints } from "../../utils"
 
-import imgCustomer1 from "../../assets/image/jpeg/Erika-Strandberg-Sveriges-Allmannytta.jpeg";
-import imgCustomer2 from "../../assets/image/jpeg/TomAiraksinen.jpg";
-import imgCustomer3 from "../../assets/image/jpeg/littorin.jpg";
-import imgQuote from "../../assets/image/png/quote-shape.png";
+import imgCustomer1 from "../../assets/image/jpeg/Erika-Strandberg-Sveriges-Allmannytta.jpeg"
+import imgCustomer2 from "../../assets/image/jpeg/TomAiraksinen.jpg"
+import imgCustomer3 from "../../assets/image/jpeg/littorin.jpg"
+import imgQuote from "../../assets/image/png/quote-shape.png"
 
 const SliderStyled = styled(Slider)`
   position: relative;
@@ -70,13 +70,13 @@ const SliderStyled = styled(Slider)`
       color: ${({ theme }) => theme.colors.secondary}!important;
     }
   }
-`;
+`
 
 const SliderItem = styled(Box)`
   &:focus {
     outline: none;
   }
-`;
+`
 
 const SliderCard = styled(Box)`
   border-radius: 10px;
@@ -97,7 +97,7 @@ const SliderCard = styled(Box)`
   @media ${device.lg} {
     margin: 60px 60px 100px 60px !important;
   }
-`;
+`
 
 const SliderImgContainer = styled(Box)`
   border-radius: 10px;
@@ -122,7 +122,7 @@ const SliderImgContainer = styled(Box)`
     max-width: 100%;
     width: auto;
   }
-`;
+`
 
 const SliderText = styled(Box)`
   text-align: left;
@@ -132,7 +132,7 @@ const SliderText = styled(Box)`
   justify-content: left;
   flex: auto;
   padding: 50px 30px 0px;
-`;
+`
 const SliderQuoteShape = styled(Box)`
   display: flex;
   justify-content: center;
@@ -142,7 +142,7 @@ const SliderQuoteShape = styled(Box)`
     padding-right: 30px;
     margin-bottom: 30px;
   }
-`;
+`
 
 const Testimonial = () => {
   const slickSettings = {
@@ -160,7 +160,7 @@ const Testimonial = () => {
         },
       },
     ],
-  };
+  }
 
   return (
     <>
@@ -248,7 +248,7 @@ const Testimonial = () => {
         </Container>
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default Testimonial;
+export default Testimonial

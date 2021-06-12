@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import {
   CardSidebar,
@@ -6,7 +6,7 @@ import {
   TitleSidebar,
   TitlePost,
   Date,
-} from "../../components/Sidebar";
+} from "../../components/Sidebar"
 
 const Sidebar = ({ posts }) => {
   return (
@@ -21,6 +21,6 @@ const Sidebar = ({ posts }) => {
         ))}
       </CardSidebar>
     </>
-  );
-};
-export default Sidebar;
+  )
+}
+export default Sidebar

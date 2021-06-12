@@ -1,10 +1,10 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import React from "react"
+import { Row, Col } from "react-bootstrap"
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa"
 
-import { Box } from "../../components/Core";
-import PostCard from "../../components/PostCard";
-import Pagination, { PageItem } from "../../components/Pagination";
+import { Box } from "../../components/Core"
+import PostCard from "../../components/PostCard"
+import Pagination, { PageItem } from "../../components/Pagination"
 
 const BlogList = ({ posts }) => (
   <>
@@ -40,6 +40,6 @@ const BlogList = ({ posts }) => (
       </Pagination>
     </Box>
   </>
-);
+)
 
-export default BlogList;
+export default BlogList

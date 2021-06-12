@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 import {
   color,
   background,
@@ -9,7 +9,7 @@ import {
   shadow,
   flexbox,
   layout,
-} from "styled-system";
+} from "styled-system"
 
 const ButtonSolid = styled.button`
   padding: 0.85rem 1.75rem;
@@ -57,7 +57,7 @@ const ButtonSolid = styled.button`
     transform: scaleX(1);
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   }
-`;
+`
 
 const ButtonOutline = styled(ButtonSolid)`
   background: transparent;
@@ -80,7 +80,7 @@ const ButtonOutline = styled(ButtonSolid)`
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     background: ${({ theme, color }) => theme.colors[color]};
   }
-`;
+`
 
 const Button = ({
   variant = "solid",
@@ -104,7 +104,7 @@ const Button = ({
       borderColor={color}
       {...rest}
     />
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

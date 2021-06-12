@@ -45,6 +45,6 @@ Lättare onboarding. När ett projekt utvecklas med målet att källkoden ska va
 Påverkar arbetsprocessen. När ett projekt utvecklas i det öppna så kommer även fler personer engagera sig tidigt (om det är ett projekt som engagerar). Denna typ av kontinuerligt samarbete ökar intelligensen i den totala gruppen och möjliggör mer specialiserad kunskap att bidra. Det kan till exempel handla om översättningar, exempeltexter, illustrationer som kan läggas in direkt i koden utan att behöva hamna i backlogs eller annan projekthantering.
 Kontakta gärna oss på Iteam om du är nyfiken på öppen källkod och digital innovation. Vi hjälper dig både med tekniken, skapa engagemang/community kring din tjänst och att hitta fram till en kultur av action, öppenhet och lärande i ditt team.
 
-## Vill du lära dig mer om öppen källkod? 
+## Vill du lära dig mer om öppen källkod?
 
 <a href="/mvp">Boka ett MVP team</a> som hjälper dig att komma igång

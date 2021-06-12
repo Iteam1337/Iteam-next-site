@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Text, Span } from "../../components/Core";
-import { device } from "../../utils";
+import { Title, Section, Box, Text, Span } from "../../components/Core"
+import { device } from "../../utils"
 
-const SectionStyled = styled(Section)``;
+const SectionStyled = styled(Section)``
 
 const Author = styled(Box)`
   min-width: 271px;
@@ -18,7 +18,7 @@ const Author = styled(Box)`
   @media ${device.lg} {
     margin-bottom: 0;
   }
-`;
+`
 
 const Fact = () => (
   <>
@@ -68,6 +68,6 @@ const Fact = () => (
       </Container>
     </SectionStyled>
   </>
-);
+)
 
-export default Fact;
+export default Fact

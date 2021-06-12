@@ -112,13 +112,13 @@ const AuthorText = styled(Box)`
 
 const Hero = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "//js.hsforms.net/forms/shell.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
+    const script = document.createElement("script")
+    script.src = "//js.hsforms.net/forms/shell.js"
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
 
-  const form = useRef();
+  const form = useRef()
 
   const openForm = () => {
     hbspt.forms.create({
@@ -126,8 +126,8 @@ const Hero = () => {
       portalId: "5211588",
       target: "#" + form.current.id,
       formId: "7d3129b6-d7ff-48e7-8a84-4b69aa00e03c",
-    });
-  };
+    })
+  }
 
   return (
     <>
@@ -222,7 +222,7 @@ const Hero = () => {
         </Container>
       </BoxStyled>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

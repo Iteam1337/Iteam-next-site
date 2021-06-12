@@ -1,5 +1,5 @@
-import { Component } from "react";
-import Head from "next/head";
+import { Component } from "react"
+import Head from "next/head"
 
 export default class extends Component {
   render() {
@@ -21,6 +21,6 @@ export default class extends Component {
           </Head>
         ) : null}
       </>
-    );
+    )
   }
 }

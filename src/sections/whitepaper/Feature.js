@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Box, Text } from "../../components/Core";
+import { Title, Box, Text } from "../../components/Core"
 
 const BoxStyled = styled(Box)`
   border-bottom: 1px solid #eae9f2;
-`;
+`
 
 const FeatureCard = ({ iconImage, title, children, ...rest }) => (
   <Box {...rest} className="d-flex flex-column align-items-center">
@@ -20,7 +20,7 @@ const FeatureCard = ({ iconImage, title, children, ...rest }) => (
       <Text variant="small">{children}</Text>
     </Box>
   </Box>
-);
+)
 
 const Feature = () => (
   <>
@@ -49,6 +49,6 @@ const Feature = () => (
       </Container>
     </BoxStyled>
   </>
-);
+)
 
-export default Feature;
+export default Feature

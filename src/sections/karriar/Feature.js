@@ -1,9 +1,9 @@
-import React from "react";
-import { rgba } from "polished";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { rgba } from "polished"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Section, Box, Text } from "../../components/Core";
-import styled, { keyframes } from "styled-components";
+import { Section, Box, Text } from "../../components/Core"
+import styled, { keyframes } from "styled-components"
 
 const animRippleOut = keyframes`
     100% {
@@ -13,13 +13,13 @@ const animRippleOut = keyframes`
       left: -12px;
       opacity: 0;
     }
-`;
+`
 
 const InnerCircle = styled(Box)`
   width: 14px;
   height: 14px;
   border-radius: 50%;
-`;
+`
 
 const OuterCircle = styled(Box)`
   width: 62px;
@@ -39,7 +39,7 @@ const OuterCircle = styled(Box)`
     top: 0;
     animation: ${animRippleOut} 1.2s linear 1s infinite;
   }
-`;
+`
 
 const FeatureCard = ({ color = "primary", title, children, ...rest }) => (
   <Box width={"100%"} bg="light" {...rest}>
@@ -61,7 +61,7 @@ const FeatureCard = ({ color = "primary", title, children, ...rest }) => (
       </div>
     </div>
   </Box>
-);
+)
 
 const Feature = () => (
   <>
@@ -111,6 +111,6 @@ const Feature = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Feature;
+export default Feature
