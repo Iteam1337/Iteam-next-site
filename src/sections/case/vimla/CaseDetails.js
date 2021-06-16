@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
 import {
   Section,
@@ -7,10 +7,10 @@ import {
   Title,
   Text,
   ImgContainer,
-} from "../../../components/Core";
-import Quote from "../../../components/Quote";
+} from "../../../components/Core"
+import Quote from "../../../components/Quote"
 
-import vimlaImg from "../../../assets/image/case/vimla-laptop-transparent.png";
+import vimlaImg from "../../../assets/image/case/vimla-laptop-transparent.png"
 
 const CaseDetails = () => (
   <>
@@ -120,6 +120,6 @@ const CaseDetails = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default CaseDetails;
+export default CaseDetails

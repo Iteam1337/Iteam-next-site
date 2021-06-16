@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
-import { Box } from "../Core";
+import { Box } from "../Core"
 
 const BoxInput = styled(Box)`
   display: flex;
@@ -31,7 +31,7 @@ const BoxInput = styled(Box)`
       background: transparent;
     }
   }
-`;
+`
 
 const InputSearch = (props) => {
   return (
@@ -47,6 +47,6 @@ const InputSearch = (props) => {
         />
       </BoxInput>
     </>
-  );
-};
-export default InputSearch;
+  )
+}
+export default InputSearch

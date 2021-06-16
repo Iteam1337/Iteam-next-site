@@ -1,16 +1,16 @@
-import React, { useState, useContext, useEffect } from "react";
-import styled from "styled-components";
-import { Container } from "react-bootstrap";
-import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import Link from "next/link";
+import React, { useState, useContext, useEffect } from "react"
+import styled from "styled-components"
+import { Container } from "react-bootstrap"
+import { useScrollPosition } from "@n8tb1t/use-scroll-position"
+import Link from "next/link"
 
-import GlobalContext from "../../context/GlobalContext";
-import Offcanvas from "../Offcanvas";
-import { Button } from "../Core";
-import NestedMenu from "../NestedMenu";
-import { device } from "../../utils";
-import Logo from "../Logo";
-import { menuItems } from "./menuItems";
+import GlobalContext from "../../context/GlobalContext"
+import Offcanvas from "../Offcanvas"
+import { Button } from "../Core"
+import NestedMenu from "../NestedMenu"
+import { device } from "../../utils"
+import Logo from "../Logo"
+import { menuItems } from "./menuItems"
 
 const SiteHeader = styled.header`
   padding: 10px 0 10px 3px;
@@ -109,12 +109,12 @@ const SiteHeader = styled.header`
     font-weight: 500;
     letter-spacing: -0.66px;
   }
-`;
+`
 
 const ToggleButton = styled.button`
   color: ${({ dark, theme }) => (dark ? "#fff" : "#000")} !important;
   border-color: ${({ dark, theme }) => (dark ? "#fff" : "#000")} !important;
-`;
+`
 
 const Menu = styled.ul`
   @media ${device.lg} {
@@ -158,7 +158,7 @@ const Menu = styled.ul`
       }
     }
   }
-`;
+`
 
 const MenuDropdown = styled.ul`
   list-style: none;
@@ -184,7 +184,7 @@ const MenuDropdown = styled.ul`
     border-top: ${({ theme }) => `3px solid ${theme.colors.secondary}`};
   }
   > .drop-menu-item {
-    color: '${({ theme }) => theme.colors.dark};'
+    color: '${({ theme }) => theme.colors.dark}';
     font-size: 16px;
     font-weight: 300;
     letter-spacing: -0.5px;
@@ -260,7 +260,7 @@ const MenuDropdown = styled.ul`
     left: auto;
     right: -90%;
   }
-`;
+`
 
 const CrossWrapper = styled.div`
     position: absolute;
@@ -270,37 +270,37 @@ const CrossWrapper = styled.div`
 `
 
 const Header = ({ isDark = false }) => {
-  const gContext = useContext(GlobalContext);
-  const [showScrolling, setShowScrolling] = useState(false);
-  const [showReveal, setShowReveal] = useState(false);
+  const gContext = useContext(GlobalContext)
+  const [showScrolling, setShowScrolling] = useState(false)
+  const [showReveal, setShowReveal] = useState(false)
 
-  const size = useWindowSize();
-  const isMobile = size.width < 622;
+  const size = useWindowSize()
+  const isMobile = size.width < 622
 
 
   const toggleMenu = () => {
     gContext.toggleOffCanvas()
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"
   }
 
   useScrollPosition(({ prevPos, currPos }) => {
     if (currPos.y < 0) {
-      setShowScrolling(true);
+      setShowScrolling(true)
     } else {
-      setShowScrolling(false);
+      setShowScrolling(false)
     }
     if (currPos.y < -300) {
-      setShowReveal(true);
+      setShowReveal(true)
     } else {
-      setShowReveal(false);
+      setShowReveal(false)
     }
-  });
+  })
 
   function useWindowSize() {
     const [windowSize, setWindowSize] = useState({
       width: undefined,
       height: undefined,
-    });
+    })
 
     useEffect(() => {
       if (typeof window !== "undefined") {
@@ -308,17 +308,17 @@ const Header = ({ isDark = false }) => {
           setWindowSize({
             width: window.innerWidth,
             height: window.innerHeight,
-          });
+          })
         }
 
-        window.addEventListener("resize", handleResize);
+        window.addEventListener("resize", handleResize)
 
-        handleResize();
+        handleResize()
 
-        return () => window.removeEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize)
       }
-    }, []);
-    return windowSize;
+    }, [])
+    return windowSize
   }
 
   return (
@@ -350,7 +350,7 @@ const Header = ({ isDark = false }) => {
                       { label, isExternal = false, name, items, ...rest },
                       index
                     ) => {
-                      const hasSubItems = Array.isArray(items);
+                      const hasSubItems = Array.isArray(items)
                       return (
                         <React.Fragment key={name + index}>
                           {hasSubItems ? (
@@ -372,7 +372,7 @@ const Header = ({ isDark = false }) => {
                                 {items.map((subItem, indexSub) => {
                                   const hasInnerSubItems = Array.isArray(
                                     subItem.items
-                                  );
+                                  )
                                   return (
                                     <React.Fragment
                                       key={subItem.name + indexSub}
@@ -440,7 +440,7 @@ const Header = ({ isDark = false }) => {
                                         </li>
                                       )}
                                     </React.Fragment>
-                                  );
+                                  )
                                 })}
                               </MenuDropdown>
                             </li>
@@ -469,7 +469,7 @@ const Header = ({ isDark = false }) => {
                             </li>
                           )}
                         </React.Fragment>
-                      );
+                      )
                     }
                   )}
                 </Menu>
@@ -499,7 +499,7 @@ const Header = ({ isDark = false }) => {
         onHideOffcanvas={gContext.toggleOffCanvas}
       >
         <CrossWrapper onClick={() => {
-          document.body.style.overflow = "visible";
+          document.body.style.overflow = "visible"
           gContext.toggleOffCanvas()
         }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="white" class="bi bi-x" viewBox="0 0 16 16">
@@ -509,7 +509,7 @@ const Header = ({ isDark = false }) => {
         <NestedMenu menuItems={menuItems} />
       </Offcanvas>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

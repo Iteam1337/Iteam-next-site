@@ -1,5 +1,5 @@
-import React from "react";
-import { Box } from "../Core";
+import React from "react"
+import { Box } from "../Core"
 
 const Rating = ({ numStar = 4.5, color = "secondary", ...rest }) => {
   return (
@@ -12,11 +12,11 @@ const Rating = ({ numStar = 4.5, color = "secondary", ...rest }) => {
             <i className="fas fa-star-half-alt mr-1" key={index}></i>
           ) : (
             <i className="far fa-star mr-1" key={index}></i>
-          );
+          )
         })}
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default Rating;
+export default Rating

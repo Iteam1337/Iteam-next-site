@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { rgba } from "polished";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { rgba } from "polished"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Text } from "../../components/Core";
-import { device } from "../../utils";
-import imgContent from "../../assets/image/jpeg/Johan-Christian-Working-Lowres.jpg";
+import { Title, Section, Text } from "../../components/Core"
+import { device } from "../../utils"
+import imgContent from "../../assets/image/jpeg/Johan-Christian-Working-Lowres.jpg"
 
 const ImgContainer = styled.div`
   margin-top: 50px;
@@ -22,7 +22,7 @@ const ImgContainer = styled.div`
   @media (min-width: 1400px) {
     transform: translate(15%, -50%);
   }
-`;
+`
 
 const ULStyled = styled.ul`
   list-style: none;
@@ -53,7 +53,7 @@ const ULStyled = styled.ul`
     display: flex;
     margin-bottom: 5px;
   }
-`;
+`
 
 const Content1 = () => (
   <>
@@ -96,10 +96,15 @@ const Content1 = () => (
                   bara börja
                 </Title>
                 <Text mb={4}>
-                  Det som inte är i produktion skapar inget värde, det är bara en kostnad. Därför tror vi inte på långa förarbeten som slutar i en rapport på någons skrivbord. Istället är vi övertygade om att för att komma igång behöver vi börja. Vi gör research kring era kunders behov, sätter upp hypoteser och utvecklar något litet. Därefter testar och utvecklar vi kontinuerligt utifrån nya insikter. På detta sätt kommer tjänsten snabbt ut i produktion och skapar användarnytta.
+                  Det som inte är i produktion skapar inget värde, det är bara
+                  en kostnad. Därför tror vi inte på långa förarbeten som slutar
+                  i en rapport på någons skrivbord. Istället är vi övertygade om
+                  att för att komma igång behöver vi börja. Vi gör research
+                  kring era kunders behov, sätter upp hypoteser och utvecklar
+                  något litet. Därefter testar och utvecklar vi kontinuerligt
+                  utifrån nya insikter. På detta sätt kommer tjänsten snabbt ut
+                  i produktion och skapar användarnytta.
                 </Text>
-
-
               </div>
             </div>
           </Col>
@@ -107,6 +112,6 @@ const Content1 = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Content1;
+export default Content1

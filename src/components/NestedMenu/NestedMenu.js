@@ -1,9 +1,9 @@
-import React, { useState, useContext } from "react";
-import styled from "styled-components";
-import { ListGroup, Collapse } from "react-bootstrap";
-import { FaAngleRight, FaAngleDown } from "react-icons/fa";
-import Link from "next/link";
-import GlobalContext from "../../context/GlobalContext";
+import React, { useState, useContext } from "react"
+import styled from "styled-components"
+import { ListGroup, Collapse } from "react-bootstrap"
+import { FaAngleRight, FaAngleDown } from "react-icons/fa"
+import Link from "next/link"
+import GlobalContext from "../../context/GlobalContext"
 
 const NestedMenuContainer = styled.div`
   a {
@@ -40,7 +40,7 @@ const NestedMenuContainer = styled.div`
   /* .list-group-flush:last-child .list-group-item:last-child {
     border-bottom-width: 1px;
   } */
-`;
+`
 
 const MenuItem = ({
   label,
@@ -51,10 +51,10 @@ const MenuItem = ({
   depth = 0,
   ...rest
 }) => {
-  const [open, setOpen] = useState(false);
-  const hasSubItems = Array.isArray(items);
+  const [open, setOpen] = useState(false)
+  const hasSubItems = Array.isArray(items)
 
-  const gContext = useContext(GlobalContext);
+  const gContext = useContext(GlobalContext)
 
   return (
     <>
@@ -83,8 +83,8 @@ const MenuItem = ({
               href={`${name}`}
               onClick={() => {
                 if (gContext.visibleOffCanvas) {
-                  gContext.toggleOffCanvas();
-                  document.body.style.overflow = "visible";
+                  gContext.toggleOffCanvas()
+                  document.body.style.overflow = "visible"
                 }
               }}
             >
@@ -95,8 +95,8 @@ const MenuItem = ({
               <a
                 onClick={() => {
                   if (gContext.visibleOffCanvas) {
-                    gContext.toggleOffCanvas();
-                    document.body.style.overflow = "visible";
+                    gContext.toggleOffCanvas()
+                    document.body.style.overflow = "visible"
                   }
                 }}
               >
@@ -122,8 +122,8 @@ const MenuItem = ({
         </Collapse>
       ) : null}
     </>
-  );
-};
+  )
+}
 
 const NestedMenu = ({ menuItems = defaultMenuItems }) => {
   return (
@@ -139,7 +139,7 @@ const NestedMenu = ({ menuItems = defaultMenuItems }) => {
         ))}
       </ListGroup>
     </NestedMenuContainer>
-  );
-};
+  )
+}
 
-export default NestedMenu;
+export default NestedMenu

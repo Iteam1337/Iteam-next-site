@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { saturate, lighten } from "polished";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { saturate, lighten } from "polished"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
+import { Title, Button, Section, Box, Text } from "../../components/Core"
 
-import { device } from "../../utils";
-import imgHeroTab from "../../assets/image/jpeg/Radu-Lowres.jpg";
+import { device } from "../../utils"
+import imgHeroTab from "../../assets/image/jpeg/Radu-Lowres.jpg"
 
 const SectionStyled = styled(Section)`
   background: 
@@ -17,7 +17,7 @@ const SectionStyled = styled(Section)`
     /* bottom, image */ url(${imgHeroTab}) no-repeat center 60% fixed;
   background-size: cover;
   padding-top: 128px;
-`;
+`
 
 const Hero = () => {
   return (
@@ -25,10 +25,7 @@ const Hero = () => {
       {/* <!-- Hero Area --> */}
       <SectionStyled className="position-relative">
         <div className="pt-5"></div>
-        <Container
-          css={`
-          `}
-        >
+        <Container css={``}>
           <Row className="justify-content-center align-items-center position-relative">
             <Col className="order-md-1">
               <div
@@ -54,7 +51,7 @@ const Hero = () => {
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

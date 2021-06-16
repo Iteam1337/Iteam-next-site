@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
-import { device } from "../../utils";
+import { Title, Button, Section, Box, Text } from "../../components/Core"
+import { device } from "../../utils"
 
-import imgHalf from "../../assets/image/jpeg/teamcoach.jpeg";
+import imgHalf from "../../assets/image/jpeg/teamcoach.jpeg"
 
 const ImageHalfContainer = styled(Box)`
   position: static;
@@ -27,7 +27,7 @@ const ImageHalfContainer = styled(Box)`
     position: absolute !important;
     height: 80%;
   }
-`;
+`
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;
@@ -52,7 +52,7 @@ const ImageBottom = styled(Box)`
     bottom: auto;
     max-width: 100%;
   }
-`;
+`
 
 const Content1 = () => (
   <>
@@ -98,6 +98,6 @@ const Content1 = () => (
       </Container>
     </div>
   </>
-);
+)
 
-export default Content1;
+export default Content1

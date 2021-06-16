@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Section, Text } from "../../components/Core";
+import { Title, Button, Section, Text } from "../../components/Core"
 
 const SectionStyled = styled(Section)`
   /* border-bottom: 1px solid #eae9f2; */
-`;
+`
 
 const CTA = () => (
   <>
@@ -35,6 +35,6 @@ const CTA = () => (
       </Container>
     </SectionStyled>
   </>
-);
+)
 
-export default CTA;
+export default CTA

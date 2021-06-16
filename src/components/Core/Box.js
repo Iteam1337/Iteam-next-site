@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import {
   color,
   space,
@@ -10,7 +10,7 @@ import {
   border,
   position,
   shadow,
-} from "styled-system";
+} from "styled-system"
 
 const Box = styled.div`
   box-sizing: border-box;
@@ -25,6 +25,6 @@ const Box = styled.div`
   ${border};
   ${position};
   ${shadow};
-`;
+`
 
-export default Box;
+export default Box

@@ -1,8 +1,8 @@
-import React from "react";
-import { rgba } from "polished";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { rgba } from "polished"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
+import { Title, Button, Section, Box, Text } from "../../components/Core"
 
 const FeatureCard = ({
   color = "primary",
@@ -30,7 +30,7 @@ const FeatureCard = ({
       </div>
     </div>
   </Box>
-);
+)
 
 const Feature = () => (
   <>
@@ -107,6 +107,6 @@ const Feature = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Feature;
+export default Feature

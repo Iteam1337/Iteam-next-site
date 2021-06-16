@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 import {
   color,
   background,
@@ -9,7 +9,7 @@ import {
   shadow,
   flexbox,
   layout,
-} from "styled-system";
+} from "styled-system"
 
 const BadgeSolid = styled.span`
   font-size: 13px;
@@ -29,7 +29,7 @@ const BadgeSolid = styled.span`
   ${shadow};
   ${flexbox};
   ${layout};
-`;
+`
 
 const Badge = ({ color = "light", bg = "primary", ...rest }) => {
   return (
@@ -40,7 +40,7 @@ const Badge = ({ color = "light", bg = "primary", ...rest }) => {
       bg={bg}
       {...rest}
     />
-  );
-};
+  )
+}
 
-export default Badge;
+export default Badge

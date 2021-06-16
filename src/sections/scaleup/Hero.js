@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box } from "../../components/Core";
+import { Title, Section, Box } from "../../components/Core"
 
-import { device } from "../../utils";
+import { device } from "../../utils"
 // import imgL2HeroBg from "../../assets/image/jpeg/Hans-Radu-Martin-Office-Lowres.jpg";
-import imgL2HeroBg from "../../assets/image/jpeg/scale-up-hero.jpg";
+import imgL2HeroBg from "../../assets/image/jpeg/scale-up-hero.jpg"
 
 const SectionStyled = styled(Section)`
   /* top, transparent black, faked with gradient */
@@ -28,7 +28,7 @@ const SectionStyled = styled(Section)`
   @media ${device.lg} {
     background-position: center;
   }
-`;
+`
 
 const Hero = () => {
   return (
@@ -65,7 +65,7 @@ const Hero = () => {
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

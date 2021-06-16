@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { device } from "../../utils";
+import React from "react"
+import styled from "styled-components"
+import { device } from "../../utils"
 
 const DivStyled = styled.div`
   padding: 50px 0;
@@ -10,7 +10,7 @@ const DivStyled = styled.div`
   @media ${device.lg} {
     padding: 100px 0;
   }
-`;
+`
 
 const DivStyledInside = styled(DivStyled)`
   padding: 50px 25px;
@@ -20,14 +20,14 @@ const DivStyledInside = styled(DivStyled)`
   @media ${device.lg} {
     padding: 80px 70px;
   }
-`;
+`
 
 const Section = ({ children, inside, ...rest }) => {
   return inside ? (
     <DivStyledInside {...rest}> {children}</DivStyledInside>
   ) : (
     <DivStyled {...rest}> {children}</DivStyled>
-  );
-};
+  )
+}
 
-export default Section;
+export default Section

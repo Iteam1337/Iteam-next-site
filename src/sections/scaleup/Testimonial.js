@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import Slider from "react-slick";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import Slider from "react-slick"
 
-import { Title, Section, Box, Text } from "../../components/Core";
-import { breakpoints } from "../../utils";
+import { Title, Section, Box, Text } from "../../components/Core"
+import { breakpoints } from "../../utils"
 
-import imgC1 from "../../assets/image/jpeg/l1-customer2.jpg";
-import imgC2 from "../../assets/image/jpeg/l1-customer3.jpg";
+import imgC1 from "../../assets/image/jpeg/l1-customer2.jpg"
+import imgC2 from "../../assets/image/jpeg/l1-customer3.jpg"
 
 const SliderStyled = styled(Slider)`
   .slick-dots {
@@ -37,7 +37,7 @@ const SliderStyled = styled(Slider)`
       }
     }
   }
-`;
+`
 
 const ContentCard = ({
   className,
@@ -77,7 +77,7 @@ const ContentCard = ({
       </div>
     </Box>
   </Box>
-);
+)
 
 const Testimonial = () => {
   const slickSettings = {
@@ -96,7 +96,7 @@ const Testimonial = () => {
         },
       },
     ],
-  };
+  }
 
   return (
     <>
@@ -224,7 +224,7 @@ const Testimonial = () => {
         </Container>
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default Testimonial;
+export default Testimonial

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "next/link";
-import { Title, Box, Text, Span, Anchor } from "../Core";
-import { device } from "../../utils";
-import Image from "next/image";
+import React from "react"
+import styled from "styled-components"
+import Link from "next/link"
+import { Title, Box, Text, Span, Anchor } from "../Core"
+import { device } from "../../utils"
+import Image from "next/image"
 
 const Card = styled(Box)`
   border-radius: 10px 10px;
@@ -14,7 +14,7 @@ const Card = styled(Box)`
   &:hover {
     box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
   }
-`;
+`
 
 const ImageContainerHorizontal = styled(Box)`
   overflow: hidden;
@@ -34,7 +34,7 @@ const ImageContainerHorizontal = styled(Box)`
     min-width: 350px;
     max-width: 350px;
   }
-`;
+`
 
 const BrandImage = styled(Box)`
   position: absolute;
@@ -43,23 +43,23 @@ const BrandImage = styled(Box)`
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #eae9f2;
-`;
+`
 
 const CardText = styled(Box)`
   padding: 30px;
-`;
+`
 
 const TitleStyled = styled(Title)`
   transition: 0.3s;
   &:hover {
     color: ${({ theme }) => theme.colors.info};
   }
-`;
+`
 
 const CoverImg = styled.img`
   height: 320px;
   object-fit: cover;
-`;
+`
 
 const PostCard = ({
   horizontal = false,
@@ -134,6 +134,6 @@ const PostCard = ({
       )}
     </CardText>
   </Card>
-);
+)
 
-export default PostCard;
+export default PostCard

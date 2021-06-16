@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Row, Col } from "react-bootstrap"
 
-import { Text, Box, Button, InputGroup } from "../../../components/Core";
+import { Text, Box, Button, InputGroup } from "../../../components/Core"
 
 const PricingCard = styled.div`
   border-radius: 10px;
@@ -41,7 +41,7 @@ const PricingCard = styled.div`
     line-height: 56px;
     margin-bottom: 30px;
   }
-`;
+`
 
 const Pricing = () => {
   return (
@@ -102,7 +102,7 @@ const Pricing = () => {
         </Col>
       </Row>
     </>
-  );
-};
+  )
+}
 
-export default Pricing;
+export default Pricing

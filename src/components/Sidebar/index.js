@@ -6,4 +6,4 @@ export {
   Date,
   CatList,
   CatListItem,
-} from "./Sidebar";
+} from "./Sidebar"

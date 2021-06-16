@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import MetaTags from "../../components/MetaTags/MetaTags";
-import PageWrapper from "../../components/PageWrapper";
+import MetaTags from "../../components/MetaTags/MetaTags"
+import PageWrapper from "../../components/PageWrapper"
 import {
   Section,
   Title,
@@ -10,14 +10,14 @@ import {
   Box,
   ImgContainer,
   Anchor,
-} from "../../components/Core";
-import imgRole from "../../assets/image/jpeg/socks_top.jpg";
+} from "../../components/Core"
+import imgRole from "../../assets/image/jpeg/socks_top.jpg"
 
 const OpeningDetails = () => {
   return (
     <PageWrapper footerDark>
       <MetaTags
-        title={"Iteam söker Backend Developer!"}
+        title={"Iteam söker Backend Engineer!"}
         description={
           "Vi vet att världen är i ett viktigt skifte och att vi kan bidra. Det gör vi genom vår metod för att lyckas med komplexa projekt, genom att ta tillvara på egen innovation och lärande samt genom att hjälpa våra kunder samverka och engagera med open source-utveckling."
         }
@@ -31,7 +31,7 @@ const OpeningDetails = () => {
               <Box className="text-center" mb={4}>
                 Ledig tjänst
               </Box>
-              <Title variant="hero">Backend developer</Title>
+              <Title variant="hero">Backend Engineer</Title>
             </Col>
           </Row>
         </Container>
@@ -43,7 +43,7 @@ const OpeningDetails = () => {
             <Col lg="12" xl="10" className="offset-xl-1">
               <Box pb={["40px", null, "65px"]}>
                 <Title variant="card" mb="18px">
-                  Iteam söker Backend Developer!
+                  Iteam söker Backend Engineer!
                 </Title>
                 <Text variant="small">
                   Vi vet att världen är i ett viktigt skifte och att vi kan
@@ -189,6 +189,6 @@ const OpeningDetails = () => {
         </Container>
       </Section>
     </PageWrapper>
-  );
-};
-export default OpeningDetails;
+  )
+}
+export default OpeningDetails

@@ -1,52 +1,52 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet";
+import React, { useState } from "react"
+import { Helmet } from "react-helmet"
 
-const GlobalContext = React.createContext();
+const GlobalContext = React.createContext()
 
 const GlobalProvider = ({ children }) => {
-  const [themeDark, setThemeDark] = useState(false);
-  const [videoModalVisible, setVideoModalVisible] = useState(false);
-  const [visibleOffCanvas, setVisibleOffCanvas] = useState(false);
-  const [headerDark, setHeaderDark] = useState(false);
-  const [footerDark, setFooterDark] = useState(true);
-  const [cartTotal, setCartTotal] = useState(3);
+  const [themeDark, setThemeDark] = useState(false)
+  const [videoModalVisible, setVideoModalVisible] = useState(false)
+  const [visibleOffCanvas, setVisibleOffCanvas] = useState(false)
+  const [headerDark, setHeaderDark] = useState(false)
+  const [footerDark, setFooterDark] = useState(true)
+  const [cartTotal, setCartTotal] = useState(3)
 
   const toggleTheme = () => {
-    setThemeDark(!themeDark);
-  };
+    setThemeDark(!themeDark)
+  }
 
   const toggleVideoModal = () => {
-    setVideoModalVisible(!videoModalVisible);
-  };
+    setVideoModalVisible(!videoModalVisible)
+  }
 
   const toggleOffCanvas = () => {
-    setVisibleOffCanvas(!visibleOffCanvas);
-  };
+    setVisibleOffCanvas(!visibleOffCanvas)
+  }
 
   const closeOffCanvas = () => {
-    setVisibleOffCanvas(false);
-  };
+    setVisibleOffCanvas(false)
+  }
 
   const goHeaderDark = () => {
-    setHeaderDark(true);
-  };
+    setHeaderDark(true)
+  }
   const goHeaderLight = () => {
-    setHeaderDark(false);
-  };
+    setHeaderDark(false)
+  }
 
   const goFooterDark = () => {
-    setFooterDark(true);
-  };
+    setFooterDark(true)
+  }
   const goFooterLight = () => {
-    setFooterDark(false);
-  };
+    setFooterDark(false)
+  }
 
   const incCartTotal = () => {
-    setCartTotal(cartTotal + 1);
-  };
+    setCartTotal(cartTotal + 1)
+  }
   const decCartTotal = () => {
-    setCartTotal(cartTotal - 1);
-  };
+    setCartTotal(cartTotal - 1)
+  }
 
   return (
     <GlobalContext.Provider
@@ -80,8 +80,8 @@ const GlobalProvider = ({ children }) => {
       </Helmet>
       {children}
     </GlobalContext.Provider>
-  );
-};
+  )
+}
 
-export default GlobalContext;
-export { GlobalProvider };
+export default GlobalContext
+export { GlobalProvider }

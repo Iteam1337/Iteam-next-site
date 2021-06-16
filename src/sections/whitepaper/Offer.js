@@ -1,15 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
-import { device } from "../../utils";
-import imgOfferBook from "../../assets/image/png/l6-offer-book.png";
+import { Title, Button, Section, Box, Text } from "../../components/Core"
+import { device } from "../../utils"
 
 const SectionStyled = styled(Section)`
   padding-bottom: 100px;
   padding-top: 0;
-`;
+`
 
 const OfferWrapper = styled(Box)`
   box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
@@ -18,7 +17,7 @@ const OfferWrapper = styled(Box)`
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 50px;
-`;
+`
 
 const BtnContainer = styled(Box)`
   margin-left: 45px;
@@ -29,7 +28,7 @@ const BtnContainer = styled(Box)`
     margin-top: auto;
     margin-bottom: auto;
   }
-`;
+`
 
 const Offer = () => (
   <>
@@ -38,9 +37,6 @@ const Offer = () => (
       <Container>
         <OfferWrapper>
           <div className="d-flex flex-wrap">
-            <div className="widget-image">
-              <img src={imgOfferBook} alt="" className="img-fluid" />
-            </div>
             <div className="pt-3 pl-5">
               <Title variant="card" fontSize="24px" color="light" mb={3}>
                 Get a free chapter of this book
@@ -58,6 +54,6 @@ const Offer = () => (
       </Container>
     </SectionStyled>
   </>
-);
+)
 
-export default Offer;
+export default Offer
