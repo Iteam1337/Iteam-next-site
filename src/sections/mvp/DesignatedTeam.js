@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
 import Link from "next/link"
+import Image from "next/image"
 
 import { Title, Button, Section, Text } from "../../components/Core"
 
@@ -24,7 +25,11 @@ const DesignatedTeam = () => (
                 data-aos-once="true"
                 data-aos-delay="500"
               >
-                <img src={imgContent} alt="" className="img-fluid" />
+                <Image
+                  width={445}
+                  height={296}
+                  layout="responsive"
+                  src={imgContent} alt="" className="img-fluid" />
               </div>
             </div>
           </Col>

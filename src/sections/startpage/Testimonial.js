@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
 import Slider from "react-slick"
 import { rgba } from "polished"
+import Image from "next/image"
 
 import { Title, Section, Box, Text } from "../../components/Core"
 import { device, breakpoints } from "../../utils"
@@ -187,7 +188,14 @@ const Testimonial = () => {
                 <SliderItem>
                   <SliderCard>
                     <SliderImgContainer>
-                      <img src={imgCustomer1} alt="" />
+                      <Image
+                        height={388}
+                        width={362}
+                        layout="responsive"
+                        src={imgCustomer1}
+                        alt="Erika Strandberg"
+                      />
+                      {/* <img src={imgCustomer1} alt="" /> */}
                     </SliderImgContainer>
                     <SliderText>
                       <Text color="dark" my={2}>
@@ -209,7 +217,13 @@ const Testimonial = () => {
                 <SliderItem>
                   <SliderCard>
                     <SliderImgContainer>
-                      <img src={imgCustomer2} alt="" />
+                      <Image
+                        height={379}
+                        width={315}
+                        layout="responsive"
+                        src={imgCustomer2}
+                        alt=" Tom Airaksinen"
+                      />
                     </SliderImgContainer>
                     <SliderText>
                       <Text color="dark" my={2}>
@@ -229,7 +243,13 @@ const Testimonial = () => {
                 <SliderItem>
                   <SliderCard>
                     <SliderImgContainer>
-                      <img src={imgCustomer3} alt="" />
+                      <Image
+                        height={315}
+                        width={315}
+                        layout="responsive"
+                        src={imgCustomer3}
+                        alt="Johan Littorin"
+                      />
                     </SliderImgContainer>
                     <SliderText>
                       <Text color="dark" my={2} className="text-left">
