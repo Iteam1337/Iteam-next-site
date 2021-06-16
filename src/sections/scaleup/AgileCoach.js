@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Text } from "../../components/Core";
-import ContentCard from "../../components/ContentCard";
+import { Title, Section, Box, Text } from "../../components/Core"
+import ContentCard from "../../components/ContentCard"
 
 const services = [
   "Agila principer och metoder",
@@ -10,7 +10,7 @@ const services = [
   "Design och facilitering",
   "1-1 coachning",
   "SAFe och agil skalning",
-];
+]
 
 const Feature2 = () => (
   <>
@@ -38,6 +38,6 @@ const Feature2 = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Feature2;
+export default Feature2

@@ -1,13 +1,13 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import MetaTags from "../../components/MetaTags/MetaTags";
-import PageWrapper from "../../components/PageWrapper";
-import { Section, Title, Text, Box } from "../../components/Core";
+import MetaTags from "../../components/MetaTags/MetaTags"
+import PageWrapper from "../../components/PageWrapper"
+import { Section, Title, Text, Box } from "../../components/Core"
 
-import CaseList from "../../sections/case/CaseList1";
-import CaseDetails from "../../sections/case/matcha-kontraktet/CaseDetails";
-import CTA from "../../sections/case/CTA";
+import CaseList from "../../sections/case/CaseList1"
+import CaseDetails from "../../sections/case/matcha-kontraktet/CaseDetails"
+import CTA from "../../sections/case/CTA"
 
 const CaseStudyDetails = () => {
   return (
@@ -41,6 +41,6 @@ const CaseStudyDetails = () => {
         <CTA />
       </PageWrapper>
     </>
-  );
-};
-export default CaseStudyDetails;
+  )
+}
+export default CaseStudyDetails

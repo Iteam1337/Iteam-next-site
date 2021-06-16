@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import PageWrapper from "../components/PageWrapper";
-import { Section, Title, Text, Box, List } from "../components/Core";
+import PageWrapper from "../components/PageWrapper"
+import { Section, Title, Text, Box, List } from "../components/Core"
 
 const TermsConditions = () => {
   return (
@@ -104,6 +104,6 @@ const TermsConditions = () => {
         </Section>
       </PageWrapper>
     </>
-  );
-};
-export default TermsConditions;
+  )
+}
+export default TermsConditions

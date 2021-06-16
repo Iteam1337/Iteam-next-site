@@ -1,5 +1,5 @@
-import Head from "next/head";
-import Logo from "../../../public/favicon.png";
+import Head from "next/head"
+import Logo from "../../../public/favicon.png"
 
 const MetaTags = ({ title, description, image }) => {
   return (
@@ -9,7 +9,7 @@ const MetaTags = ({ title, description, image }) => {
       <meta property="og:description" content={description} key="description" />
       <meta property="og:image" content={image ? image : Logo} key="image" />
     </Head>
-  );
-};
+  )
+}
 
-export default MetaTags;
+export default MetaTags

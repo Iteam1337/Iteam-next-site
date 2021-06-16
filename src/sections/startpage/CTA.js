@@ -1,7 +1,7 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Box, Text } from "../../components/Core";
+import { Title, Button, Box, Text } from "../../components/Core"
 
 const CTA = () => (
   <>
@@ -28,6 +28,6 @@ const CTA = () => (
       </Container>
     </Box>
   </>
-);
+)
 
-export default CTA;
+export default CTA

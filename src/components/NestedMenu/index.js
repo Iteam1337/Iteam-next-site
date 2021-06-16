@@ -1,1 +1,1 @@
-export { default } from "./NestedMenu";
+export { default } from "./NestedMenu"

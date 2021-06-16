@@ -1,9 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import Link from "next/link"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Text, Anchor } from "../../components/Core";
-import styled from "styled-components";
+import { Title, Section, Text, Anchor } from "../../components/Core"
+import styled from "styled-components"
 
 const Card = styled.a`
   justify-content: flex-start;
@@ -24,7 +24,7 @@ const Card = styled.a`
       color: ${({ theme }) => theme.colors.info};
     }
   }
-`;
+`
 
 const Location = styled.span`
   color: #8c97ac;
@@ -37,7 +37,7 @@ const Location = styled.span`
   > i {
     margin-top: 4px;
   }
-`;
+`
 
 const RolesCard = ({
   color = "primary",
@@ -60,7 +60,7 @@ const RolesCard = ({
       </Title>
     </Card>
   </Link>
-);
+)
 
 const Roles = () => (
   <>
@@ -97,7 +97,7 @@ const Roles = () => (
           <Col lg="4" md="6" className="pt-4">
             <RolesCard
               color="warning"
-              title="Backend engineer"
+              title="Backend developer"
               type="Full-time"
               location="Göteborg, Stockholm eller remote"
               link="/karriar/backend-developer"
@@ -107,6 +107,6 @@ const Roles = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Roles;
+export default Roles

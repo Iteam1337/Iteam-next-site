@@ -1,21 +1,14 @@
-import React, { useState, useContext } from "react";
-import styled from "styled-components";
+import React, { useState, useContext } from "react"
+import styled from "styled-components"
 
-import { Container, Row, Col, FormControl } from "react-bootstrap";
+import { Container, Row, Col, FormControl } from "react-bootstrap"
 
-import {
-  Title,
-  Button,
-  Section,
-  Box,
-  Text,
-  Badge,
-} from "../../components/Core";
-import GlobalContext from "../../context/GlobalContext";
+import { Title, Button, Section, Box, Text, Badge } from "../../components/Core"
+import GlobalContext from "../../context/GlobalContext"
 
-import imgHero from "../../assets/image/png/Sofa-Large.png";
+import imgHero from "../../assets/image/png/Sofa-Large.png"
 
-const ImgRight = styled(Box)``;
+const ImgRight = styled(Box)``
 
 const BoxPrice = styled(Box)`
   border-radius: 10px;
@@ -26,7 +19,7 @@ const BoxPrice = styled(Box)`
   padding-bottom: 10px;
   max-width: 322px;
   min-width: 322px;
-`;
+`
 
 const ProductQty = styled(Box)`
   min-width: 90px;
@@ -47,7 +40,7 @@ const ProductQty = styled(Box)`
       border: none !important;
     }
   }
-`;
+`
 
 const BtnGroup = styled(Box)`
   display: flex;
@@ -70,24 +63,24 @@ const BtnGroup = styled(Box)`
       outline: none;
     }
   }
-`;
+`
 
 const Hero = () => {
-  const gContext = useContext(GlobalContext);
-  const [qty, setQty] = useState(1);
-  const price = 5000;
+  const gContext = useContext(GlobalContext)
+  const [qty, setQty] = useState(1)
+  const price = 5000
 
   const handleIncQty = () => {
-    setQty(qty + 1);
-    gContext.incCartTotal();
-  };
+    setQty(qty + 1)
+    gContext.incCartTotal()
+  }
 
   const handleDecQty = () => {
     if (qty >= 1) {
-      setQty(qty - 1);
-      gContext.decCartTotal();
+      setQty(qty - 1)
+      gContext.decCartTotal()
     }
-  };
+  }
 
   return (
     <>
@@ -117,11 +110,12 @@ const Hero = () => {
               >
                 <Box pt={[4, null, null, 0]}>
                   <Title color="dark">
-                    Utbildning i öppen källkod och
-                    modern applikationsutveckling
+                    Utbildning i öppen källkod och modern applikationsutveckling
                   </Title>
                   <Text color="dark">
-                    Gå en distanskurs i modern applikationsutveckling med några av branschens bästa utvecklare, agila coacher och UX designers
+                    Gå en distanskurs i modern applikationsutveckling med några
+                    av branschens bästa utvecklare, agila coacher och UX
+                    designers
                   </Text>
 
                   <BoxPrice mt={4} mb={3}>
@@ -146,10 +140,13 @@ const Hero = () => {
                         <button onClick={handleDecQty}>-</button>
                       </BtnGroup>
                     </ProductQty>
-                    {qty < 5 ? <Text variant="small">Minst fem personer</Text> :
+                    {qty < 5 ? (
+                      <Text variant="small">Minst fem personer</Text>
+                    ) : (
                       <Button bg="warning" color="dark" mb={2}>
-                      Boka för {qty * price} kr
-                      </Button>}
+                        Boka för {qty * price} kr
+                      </Button>
+                    )}
                   </div>
                 </Box>
               </div>
@@ -158,7 +155,7 @@ const Hero = () => {
         </Container>
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

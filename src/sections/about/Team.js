@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import Gravatar from "react-gravatar";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import Gravatar from "react-gravatar"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Text } from "../../components/Core";
+import { Title, Section, Box, Text } from "../../components/Core"
 
-import team from "./team.json";
-import Link from "next/link";
+import team from "./team.json"
+import Link from "next/link"
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -18,7 +18,7 @@ const CardImage = styled.div`
   display: inline-flex;
   align-items: center;
   margin-bottom: 29px;
-`;
+`
 
 const Wrapper = styled.div`
   height: 330px;
@@ -31,7 +31,7 @@ const Wrapper = styled.div`
       max-height: 170px;
     }
   }
-`;
+`
 
 const TeamCard = ({
   email,
@@ -88,7 +88,7 @@ const TeamCard = ({
       </div>
     </Wrapper>
   </Box>
-);
+)
 
 const Team = () => (
   <>
@@ -126,6 +126,6 @@ const Team = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Team;
+export default Team

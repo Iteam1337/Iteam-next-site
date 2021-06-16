@@ -1,9 +1,9 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Section } from "../../components/Core";
-import HubspotForm from "../../components/HubspotForm";
-import imgCtaBG from "../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg";
+import { Section } from "../../components/Core"
+import HubspotForm from "../../components/HubspotForm"
+import imgCtaBG from "../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg"
 
 const CTA = () => (
   <>
@@ -40,13 +40,12 @@ const CTA = () => (
           >
             <div className="">
               <HubspotForm value="mvp" title="Hur kan vi hjälpa dig?" />
-              
             </div>
           </Col>
         </Row>
       </Container>
     </Section>
   </>
-);
+)
 
-export default CTA;
+export default CTA

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import { rgba } from "polished";
+import React, { useState } from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import { rgba } from "polished"
 
 import {
   Title,
@@ -11,8 +11,8 @@ import {
   Badge,
   Button,
   Switch,
-} from "../../components/Core";
-import { device } from "../../utils";
+} from "../../components/Core"
+import { device } from "../../utils"
 
 const SectionStyled = styled(Section)`
   position: relative;
@@ -25,7 +25,7 @@ const SectionStyled = styled(Section)`
     position: absolute;
     background: ${({ theme }) => theme.colors.dark}!important;
   }
-`;
+`
 
 const ULStyled = styled.ul`
   list-style: none;
@@ -70,7 +70,7 @@ const ULStyled = styled.ul`
       margin-right: 13px;
     }
   }
-`;
+`
 
 const CardPricing = styled(Box)`
   box-shadow: ${({ theme }) =>
@@ -83,7 +83,7 @@ const CardPricing = styled(Box)`
     width: 100% !important;
     border-radius: 0 0 10px 10px !important;
   }
-`;
+`
 
 const TitleSmall = styled.h4`
   color: ${({ theme }) => theme.colors.black};
@@ -91,7 +91,7 @@ const TitleSmall = styled.h4`
   font-weight: 300;
   letter-spacing: -0.5px;
   line-height: 28px;
-`;
+`
 
 const Currency = styled.span`
   color: ${({ theme }) => theme.colors.dark};
@@ -100,7 +100,7 @@ const Currency = styled.span`
   letter-spacing: -0.52px;
   line-height: 1;
   margin-bottom: 5px;
-`;
+`
 
 const TimePer = styled.span`
   color: ${({ theme }) => theme.colors.dark};
@@ -109,10 +109,10 @@ const TimePer = styled.span`
   letter-spacing: -0.52px;
   line-height: 1;
   margin-bottom: 5px;
-`;
+`
 
 const Pricing = () => {
-  const [timeMonthly, setTimeMonthly] = useState(true);
+  const [timeMonthly, setTimeMonthly] = useState(true)
 
   return (
     <>
@@ -217,7 +217,7 @@ const Pricing = () => {
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Pricing;
+export default Pricing

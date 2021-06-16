@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
-import { device } from "../../utils";
+import { Title, Button, Section, Box, Text } from "../../components/Core"
+import { device } from "../../utils"
 
-import imgContent from "../../assets/image/jpeg/Teacher-Christian.jpg";
+import imgContent from "../../assets/image/jpeg/Teacher-Christian.jpg"
 
 const ImgContainer = styled(Box)`
   position: absolute;
@@ -15,7 +15,7 @@ const ImgContainer = styled(Box)`
   @media ${device.xl} {
     right: -40%;
   }
-`;
+`
 
 const Content3 = () => {
   return (
@@ -35,7 +35,8 @@ const Content3 = () => {
               >
                 <Box>
                   <Title color="dark">
-                    Den här utbildningen borde vara obligatorisk i offentlig sektor
+                    Den här utbildningen borde vara obligatorisk i offentlig
+                    sektor
                   </Title>
                   <Text mb={4} color="dark" opacity={0.7}>
                     Create custom landing pages with Omega that convert more
@@ -54,7 +55,7 @@ const Content3 = () => {
         </Container>
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default Content3;
+export default Content3

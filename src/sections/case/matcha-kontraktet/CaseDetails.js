@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
 import {
   Section,
@@ -8,11 +8,11 @@ import {
   Text,
   ImgContainer,
   Anchor,
-} from "../../../components/Core";
+} from "../../../components/Core"
 
-import imgCase1 from "../../../assets/image/case/matcha-kontraktet1.jpg";
-import imgCase2 from "../../../assets/image/case/matcha-screenshot.png";
-import imgCase3 from "../../../assets/image/case/matcha-code.png";
+import imgCase1 from "../../../assets/image/case/matcha-kontraktet1.jpg"
+import imgCase2 from "../../../assets/image/case/matcha-screenshot.png"
+import imgCase3 from "../../../assets/image/case/matcha-code.png"
 
 const CaseDetails = () => (
   <>
@@ -152,6 +152,6 @@ const CaseDetails = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default CaseDetails;
+export default CaseDetails

@@ -59,4 +59,4 @@ export const caseItems = [
     offer: [],
     tags: [],
   },
-];
+]

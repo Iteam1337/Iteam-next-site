@@ -1,15 +1,14 @@
-import React from "react";
-import Hero from "../sections/whitepaper/Hero";
-import Feature from "../sections/whitepaper/Feature";
-import Content from "../sections/whitepaper/Content";
-import Fact from "../sections/whitepaper/Fact";
-import Reviews from "../sections/whitepaper/Reviews";
-import Author from "../sections/whitepaper/Author";
-import Pricing from "../sections/whitepaper/Pricing/Pricing";
-import Offer from "../sections/whitepaper/Offer";
-import Faq from "../sections/whitepaper/Faq";
-import CTA from "../sections/whitepaper/CTA";
-import PageWrapper from "../components/PageWrapper";
+import React from "react"
+import Hero from "../sections/whitepaper/Hero"
+import Feature from "../sections/whitepaper/Feature"
+import Content from "../sections/whitepaper/Content"
+import Fact from "../sections/whitepaper/Fact"
+import Author from "../sections/whitepaper/Author"
+import Pricing from "../sections/whitepaper/Pricing/Pricing"
+import Offer from "../sections/whitepaper/Offer"
+import Faq from "../sections/whitepaper/Faq"
+import CTA from "../sections/whitepaper/CTA"
+import PageWrapper from "../components/PageWrapper"
 
 const LandingPage5 = () => {
   return (
@@ -20,13 +19,12 @@ const LandingPage5 = () => {
         <Content />
         <Offer />
         <Fact />
-        <Reviews />
         <Author />
         <Pricing />
         <Faq />
         <CTA />
       </PageWrapper>
     </>
-  );
-};
-export default LandingPage5;
+  )
+}
+export default LandingPage5
