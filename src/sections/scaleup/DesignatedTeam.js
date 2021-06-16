@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
-import Link from "next/link"
+import Image from "next/image"
 
-import { Title, Button, Section, Text } from "../../components/Core"
+import { Title, Section, Text } from "../../components/Core"
 
 import imgContent from "../../assets/image/jpeg/People-Working-2-Lowres.jpg"
 
@@ -24,7 +24,13 @@ const DesignatedTeam = () => (
                 data-aos-once="true"
                 data-aos-delay="500"
               >
-                <img src={imgContent} alt="" className="img-fluid" />
+                <Image
+                  height={296}
+                  width={445}
+                  layout="responsive"
+                  src={imgContent}
+                  alt="Folk som jobbar vid sina datorer"
+                />
               </div>
             </div>
           </Col>
