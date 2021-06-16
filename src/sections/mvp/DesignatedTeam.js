@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import Link from "next/link";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import Link from "next/link"
 
-import { Title, Button, Section, Text } from "../../components/Core";
+import { Title, Button, Section, Text } from "../../components/Core"
 
-import imgContent from "../../assets/image/jpeg/Rickard-Working-Lowres.jpg";
+import imgContent from "../../assets/image/jpeg/Rickard-Working-Lowres.jpg"
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid #242427;
-`;
+`
 
 const DesignatedTeam = () => (
   <>
@@ -54,6 +54,6 @@ const DesignatedTeam = () => (
       </Container>
     </SectionStyled>
   </>
-);
+)
 
-export default DesignatedTeam;
+export default DesignatedTeam

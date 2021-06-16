@@ -1,14 +1,14 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { rgba } from "polished";
-import styled from "styled-components";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
+import { rgba } from "polished"
+import styled from "styled-components"
 
-import { Title, Section, Box, Text } from "../../components/Core";
-import { device } from "../../utils";
+import { Title, Section, Box, Text } from "../../components/Core"
+import { device } from "../../utils"
 
-import svgCurve from "../../assets/image/svg/l1-curve-content2.svg";
-import imgContentMobile from "../../assets/image/jpeg/Christian-Hopper-Lowres.jpg";
-import Link from 'next/link'
+import svgCurve from "../../assets/image/svg/l1-curve-content2.svg"
+import imgContentMobile from "../../assets/image/jpeg/Christian-Hopper-Lowres.jpg"
+import Link from "next/link"
 
 const ShapeTop = styled(Box)`
   position: absolute;
@@ -17,7 +17,7 @@ const ShapeTop = styled(Box)`
   img {
     min-width: 100%;
   }
-`;
+`
 
 const ShapeCard = styled(Box)`
   width: 305px;
@@ -31,7 +31,7 @@ const ShapeCard = styled(Box)`
     transform: scale(1);
     left: -14%;
   }
-`;
+`
 
 const ContentCard = ({
   color = "primary",
@@ -45,16 +45,14 @@ const ContentCard = ({
   <Link href={href}>
     <Card className="card-job top-only" {...rest}>
       <div className="mb-3">
-      <Title variant="card" className="title">
-        {title}
-      </Title>
-      <Text>
-        {children}
-      </Text>
+        <Title variant="card" className="title">
+          {title}
+        </Title>
+        <Text>{children}</Text>
       </div>
     </Card>
   </Link>
-);
+)
 
 const Card = styled.a`
   justify-content: flex-start;
@@ -75,7 +73,7 @@ const Card = styled.a`
       color: ${({ theme }) => theme.colors.info};
     }
   }
-`;
+`
 
 const Offerings = () => (
   <>
@@ -178,28 +176,16 @@ const Offerings = () => (
             >
               <div className="content-text pl-lg--50">
                 <div className="section-title">
-                  <Title>
-                    Våra erbjudanden
-                  </Title>
+                  <Title>Våra erbjudanden</Title>
                 </div>
                 <div className="mt-5">
-                  <ContentCard
-                    title="Iteam X"
-                    href="/iteamX"
-                  >
+                  <ContentCard title="Iteam X" href="/iteamX">
                     När du inte vet vad som är möjligt
-
                   </ContentCard>
-                  <ContentCard
-                    title="Iteam MVP"
-                    href="/mvp"
-                  >
+                  <ContentCard title="Iteam MVP" href="/mvp">
                     När du vill bygga något nytt
                   </ContentCard>
-                  <ContentCard
-                    title="Iteam Scale-up"
-                    href="/scaleup"
-                  >
+                  <ContentCard title="Iteam Scale-up" href="/scaleup">
                     Öka tempot/utbilda dina team
                   </ContentCard>
                 </div>
@@ -210,6 +196,6 @@ const Offerings = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Offerings;
+export default Offerings

@@ -1,11 +1,11 @@
-import React from "react";
-import { rgba } from "polished";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { rgba } from "polished"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Text } from "../../components/Core";
-import ContentCard from "../../components/ContentCard";
+import { Title, Section, Box, Text } from "../../components/Core"
+import ContentCard from "../../components/ContentCard"
 
-const services = ["Backend", "Frontend", "Fullstack", "Arkitektur", "Devops"];
+const services = ["Backend", "Frontend", "Fullstack", "Arkitektur", "Devops"]
 
 const Feature2 = () => (
   <>
@@ -35,6 +35,6 @@ const Feature2 = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Feature2;
+export default Feature2

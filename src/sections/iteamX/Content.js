@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Span } from "../../components/Core";
-import { device } from "../../utils";
-import ContentCard from "../../components/ContentCard";
+import { Title, Section, Box, Span } from "../../components/Core"
+import { device } from "../../utils"
+import ContentCard from "../../components/ContentCard"
 
-const SectionStyled = styled(Section)``;
+const SectionStyled = styled(Section)``
 
 const ContentWidget = styled(Box)`
   border-radius: 10px;
@@ -50,7 +50,7 @@ const ContentWidget = styled(Box)`
     transform: translateX(10px);
     opacity: 1;
   } */
-`;
+`
 
 const ContentCard1 = ({ children = "" }) => {
   return (
@@ -63,8 +63,8 @@ const ContentCard1 = ({ children = "" }) => {
 
       <i className="fas fa-chevron-circle-right"></i>
     </ContentWidget>
-  );
-};
+  )
+}
 
 const tech = [
   "Blockkedjor",
@@ -76,7 +76,7 @@ const tech = [
   "Drönarteknik",
   "VR/AR",
   "Datavisualisering",
-];
+]
 
 const Content = () => {
   return (
@@ -103,7 +103,7 @@ const Content = () => {
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content

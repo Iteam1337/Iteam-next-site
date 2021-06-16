@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Text } from "../../../components/Core";
+import { Title, Section, Text } from "../../../components/Core"
 
-import PricingTable from "./PricingTable1";
+import PricingTable from "./PricingTable1"
 
 const SectionStyled = styled(Section)`
   position: relative;
-`;
+`
 
 const Pricing = () => {
   return (
@@ -39,7 +39,7 @@ const Pricing = () => {
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Pricing;
+export default Pricing

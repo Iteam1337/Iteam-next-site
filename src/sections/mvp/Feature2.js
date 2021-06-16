@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box } from "../../components/Core";
-import ContentCard from "../../components/ContentCard";
+import { Title, Section, Box } from "../../components/Core"
+import ContentCard from "../../components/ContentCard"
 
 const services = [
   "API",
@@ -14,7 +14,7 @@ const services = [
   "Integrationer för nya tjänster",
   "Chatbottar",
   "Automatiseringar",
-];
+]
 
 const Feature2 = () => (
   <>
@@ -39,6 +39,6 @@ const Feature2 = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Feature2;
+export default Feature2

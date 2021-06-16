@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
 import {
   Section,
@@ -7,9 +7,9 @@ import {
   Title,
   Text,
   ImgContainer,
-} from "../../../components/Core";
+} from "../../../components/Core"
 
-import imgCase1 from "../../../assets/image/case/skatteverket.jpeg";
+import imgCase1 from "../../../assets/image/case/skatteverket.jpeg"
 
 const CaseDetails = () => (
   <>
@@ -105,6 +105,6 @@ const CaseDetails = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default CaseDetails;
+export default CaseDetails

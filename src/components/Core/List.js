@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const List = styled.ul`
   li {
@@ -23,6 +23,6 @@ const List = styled.ul`
       margin-top: 10px;
     }
   }
-`;
+`
 
-export default List;
+export default List

@@ -1,25 +1,25 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react"
 
-import GlobalContext from "../../context/GlobalContext";
+import GlobalContext from "../../context/GlobalContext"
 
 const PageWrapper = ({ children, headerDark = false, footerDark = false }) => {
-  const gContext = useContext(GlobalContext);
+  const gContext = useContext(GlobalContext)
 
   useEffect(() => {
     if (headerDark) {
-      gContext.goHeaderDark();
+      gContext.goHeaderDark()
     } else {
-      gContext.goHeaderLight();
+      gContext.goHeaderLight()
     }
 
     if (footerDark) {
-      gContext.goFooterDark();
+      gContext.goFooterDark()
     } else {
-      gContext.goFooterLight();
+      gContext.goFooterLight()
     }
-  }, [gContext, headerDark, footerDark]);
+  }, [gContext, headerDark, footerDark])
 
-  return <>{children}</>;
-};
+  return <>{children}</>
+}
 
-export default PageWrapper;
+export default PageWrapper

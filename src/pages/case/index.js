@@ -1,12 +1,12 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import PageWrapper from "../../components/PageWrapper";
-import { Section, Title, Text } from "../../components/Core";
+import PageWrapper from "../../components/PageWrapper"
+import { Section, Title, Text } from "../../components/Core"
 
-import CaseList from "../../sections/case/CaseList1";
-import CaseList2 from "../../sections/case/CaseList2";
-import CTA from "../../sections/case/CTA";
+import CaseList from "../../sections/case/CaseList1"
+import CaseList2 from "../../sections/case/CaseList2"
+import CTA from "../../sections/case/CTA"
 
 const CaseStudy = () => {
   return (
@@ -32,6 +32,6 @@ const CaseStudy = () => {
         <CTA />
       </PageWrapper>
     </>
-  );
-};
-export default CaseStudy;
+  )
+}
+export default CaseStudy

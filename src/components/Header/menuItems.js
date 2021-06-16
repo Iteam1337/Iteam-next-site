@@ -91,4 +91,4 @@ export const menuItems = [
     label: "Aktuellt",
   },
   { name: "about", label: "Om oss" },
-];
+]

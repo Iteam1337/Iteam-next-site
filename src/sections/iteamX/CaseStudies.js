@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col, Card } from "react-bootstrap"
 
-import { Title, Box, Text, Button } from "../../components/Core";
-import { device } from "../../utils";
-import { caseItems } from "../../data/caseItems";
+import { Title, Box, Text, Button } from "../../components/Core"
+import { device } from "../../utils"
+import { caseItems } from "../../data/caseItems"
 
 const CaseCardStyled = styled(Card)`
   width: 100%;
@@ -32,7 +32,7 @@ const CaseCardStyled = styled(Card)`
     transform: translateX(10px);
     opacity: 1;
   }
-`;
+`
 
 const BtnContainer = styled(Box)`
   position: absolute;
@@ -60,7 +60,7 @@ const BtnContainer = styled(Box)`
       padding: 0.85rem 1.75rem;
     }
   }
-`;
+`
 
 const TextContent = styled(Box)`
   position: relative;
@@ -80,7 +80,7 @@ const TextContent = styled(Box)`
     padding-left: 38px;
     padding-right: 38px;
   }
-`;
+`
 
 const Shape = styled(Box)`
   background: initial;
@@ -102,7 +102,7 @@ const Shape = styled(Box)`
       transition: 0.4s;
     }
   }
-`;
+`
 
 const PreTitle = styled(Text)`
   font-size: 16px;
@@ -110,7 +110,7 @@ const PreTitle = styled(Text)`
   letter-spacing: -0.5px;
   line-height: 28px;
   margin-bottom: 22px;
-`;
+`
 
 const TitleStyled = styled(Title)`
   letter-spacing: -1.06px;
@@ -122,7 +122,7 @@ const TitleStyled = styled(Title)`
     font-size: 34px;
     font-weight: 700;
   }
-`;
+`
 
 const CaseCard = ({
   isDark = true,
@@ -155,19 +155,19 @@ const CaseCard = ({
         </Shape>
         <PreTitle color={isDark ? "lightShade" : "darkShade"}>
           {meta.map((item, i) => {
-            if (i + 1 !== meta.length) return `${item}, `;
-            return `${item}`;
+            if (i + 1 !== meta.length) return `${item}, `
+            return `${item}`
           })}
         </PreTitle>
         <TitleStyled color={isDark ? "light" : "dark"}>{title}</TitleStyled>
         <Text color={isDark ? "lightShade" : "darkShade"}>{children}</Text>
       </TextContent>
     </CaseCardStyled>
-  );
-};
+  )
+}
 
 const CaseStudies = () => {
-  const XCase = caseItems.filter((item) => item.offer.includes("X"));
+  const XCase = caseItems.filter((item) => item.offer.includes("X"))
 
   return (
     <>
@@ -206,7 +206,7 @@ const CaseStudies = () => {
         </Container>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default CaseStudies;
+export default CaseStudies

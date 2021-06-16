@@ -5,9 +5,13 @@ Generated using nucleoapp.com
 
 -------------------------------- */
 @font-face {
-  font-family: 'Grayic';
-  src: url('../fonts/Grayic.eot');
-  src: url('../fonts/Grayic.eot') format('embedded-opentype'), url('../fonts/Grayic.woff2') format('woff2'), url('../fonts/Grayic.woff') format('woff'), url('../fonts/Grayic.ttf') format('truetype'), url('../fonts/Grayic.svg') format('svg');
+  font-family: "Grayic";
+  src: url("../fonts/Grayic.eot");
+  src: url("../fonts/Grayic.eot") format("embedded-opentype"),
+    url("../fonts/Grayic.woff2") format("woff2"),
+    url("../fonts/Grayic.woff") format("woff"),
+    url("../fonts/Grayic.ttf") format("truetype"),
+    url("../fonts/Grayic.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +20,7 @@ Generated using nucleoapp.com
 -------------------------*/
 .icon {
   display: inline-block;
-  font: normal normal normal 1em/1 'Grayic';
+  font: normal normal normal 1em/1 "Grayic";
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -1145,4 +1149,3 @@ Generated using nucleoapp.com
 .icon-logo-slack::before {
   content: "\eafa";
 }
-

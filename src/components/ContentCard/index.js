@@ -1,7 +1,7 @@
-import React from "react";
-import { Col } from "react-bootstrap";
-import styled from "styled-components";
-import { Box, Title } from "../Core";
+import React from "react"
+import { Col } from "react-bootstrap"
+import styled from "styled-components"
+import { Box, Title } from "../Core"
 
 const StyledBox = styled(Box)`
   padding: 25px 20px;
@@ -23,7 +23,7 @@ const StyledBox = styled(Box)`
     color: ${({ theme, dark }) =>
       dark ? theme.colors.light : theme.colors.dark};
   }
-`;
+`
 
 const ContentCards = ({
   color = "primary",
@@ -53,5 +53,5 @@ const ContentCards = ({
       </Title>
     </StyledBox>
   </Col>
-);
-export default ContentCards;
+)
+export default ContentCards

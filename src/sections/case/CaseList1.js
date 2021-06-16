@@ -1,11 +1,11 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { caseItems } from "../../data/caseItems";
-import { Section } from "../../components/Core";
-import PostCard from "../../components/PostCard";
+import { caseItems } from "../../data/caseItems"
+import { Section } from "../../components/Core"
+import PostCard from "../../components/PostCard"
 
-const Column = (props) => <Col sm={6} lg={4} className="mb-4" {...props} />;
+const Column = (props) => <Col sm={6} lg={4} className="mb-4" {...props} />
 const CaseList = () => (
   <>
     {/* <!-- Feature section --> */}
@@ -23,6 +23,6 @@ const CaseList = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default CaseList;
+export default CaseList

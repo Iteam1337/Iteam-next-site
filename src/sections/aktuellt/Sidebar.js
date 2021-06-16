@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import {
   CardSidebar,
@@ -6,11 +6,7 @@ import {
   TitleSidebar,
   TitlePost,
   Date,
-  CatList,
-  CatListItem,
-} from "../../components/Sidebar";
-
-import InputSearch from "../../components/InputSearch";
+} from "../../components/Sidebar"
 
 const Sidebar = ({ posts }) => {
   return (
@@ -25,6 +21,6 @@ const Sidebar = ({ posts }) => {
         ))}
       </CardSidebar>
     </>
-  );
-};
-export default Sidebar;
+  )
+}
+export default Sidebar

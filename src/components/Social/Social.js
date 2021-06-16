@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaGithub,
-} from "react-icons/fa";
-import { Button } from "react-bootstrap";
+} from "react-icons/fa"
+import { Button } from "react-bootstrap"
 
 const icons = {
   Facebook: <FaFacebookF />,
@@ -15,7 +15,7 @@ const icons = {
   Instagram: <FaInstagram />,
   LinkedIn: <FaLinkedinIn />,
   Github: <FaGithub />,
-};
+}
 
 const SocialContainer = styled.div`
   .btn {
@@ -41,7 +41,7 @@ const SocialContainer = styled.div`
       }
     }
   }
-`;
+`
 
 const Social = ({ items, outline, inverse, className, ...rest }) => {
   return (
@@ -61,7 +61,7 @@ const Social = ({ items, outline, inverse, className, ...rest }) => {
         </div>
       ))}
     </SocialContainer>
-  );
-};
+  )
+}
 
-export default Social;
+export default Social

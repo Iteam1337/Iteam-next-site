@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 
-import PageWrapper from "../../components/PageWrapper";
-import Hero from "../../sections/karriar/Hero";
-import Content from "../../sections/karriar/Content";
-import Feature from "../../sections/karriar/Feature";
-import Roles from "../../sections/karriar/Roles";
+import PageWrapper from "../../components/PageWrapper"
+import Hero from "../../sections/karriar/Hero"
+import Content from "../../sections/karriar/Content"
+import Feature from "../../sections/karriar/Feature"
+import Roles from "../../sections/karriar/Roles"
 
 const Career = () => {
   return (
@@ -19,6 +19,6 @@ const Career = () => {
         <Roles />
       </PageWrapper>
     </>
-  );
-};
-export default Career;
+  )
+}
+export default Career

@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const QuoteMark = styled.div`
   font-size: 2.5rem;
@@ -7,7 +7,7 @@ const QuoteMark = styled.div`
   color: #999;
   margin-right: 1rem;
   margin-top: -0.5rem;
-`;
+`
 
 const BlockQuote = styled.blockquote`
   box-sizing: border-box;
@@ -17,7 +17,7 @@ const BlockQuote = styled.blockquote`
   font-style: italic;
   display: flex;
   flex-direction: row;
-`;
+`
 
 export default function Quote({ author = "", authorTitle = "", text }) {
   return (
@@ -40,5 +40,5 @@ export default function Quote({ author = "", authorTitle = "", text }) {
         )}
       </div>
     </BlockQuote>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { rgba } from "polished";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
+import { rgba } from "polished"
 
-import { Title, Section, Box, Text } from "../../components/Core";
-import { device } from "../../utils";
+import { Title, Section, Box, Text } from "../../components/Core"
+import { device } from "../../utils"
 
-import imgContent from "../../assets/image/png/Floppy-disk-Large.png";
+import imgContent from "../../assets/image/png/Floppy-disk-Large.png"
 
 const ContentCard = ({
   color = "primary",
@@ -56,7 +56,7 @@ const ContentCard = ({
       <Text>{children}</Text>
     </div>
   </Box>
-);
+)
 
 const Content2 = () => (
   <>
@@ -86,9 +86,10 @@ const Content2 = () => (
                     källkod?
                   </Title>
                   <Text mb={4}>
-                    Lär dig begreppen, koncepten och arbetssätten. Betyder öppen källkod att 
-                    systemet blir sårbart eller osäkert? Kan man verkligen tjäna pengar på öppen källkod?
-                    Lär dig GIT och Github även om du inte programmerar. 
+                    Lär dig begreppen, koncepten och arbetssätten. Betyder öppen
+                    källkod att systemet blir sårbart eller osäkert? Kan man
+                    verkligen tjäna pengar på öppen källkod? Lär dig GIT och
+                    Github även om du inte programmerar.
                   </Text>
                 </div>
                 <div className="mt-5">
@@ -121,6 +122,6 @@ const Content2 = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Content2;
+export default Content2

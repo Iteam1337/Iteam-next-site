@@ -1,16 +1,16 @@
-import React, { useState, useContext } from "react";
-import styled from "styled-components";
-import { Container } from "react-bootstrap";
-import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import Link from "next/link";
+import React, { useState, useContext, useEffect } from "react"
+import styled from "styled-components"
+import { Container } from "react-bootstrap"
+import { useScrollPosition } from "@n8tb1t/use-scroll-position"
+import Link from "next/link"
 
-import GlobalContext from "../../context/GlobalContext";
-import Offcanvas from "../Offcanvas";
-import { Button } from "../Core";
-import NestedMenu from "../NestedMenu";
-import { device } from "../../utils";
-import Logo from "../Logo";
-import { menuItems } from "./menuItems";
+import GlobalContext from "../../context/GlobalContext"
+import Offcanvas from "../Offcanvas"
+import { Button } from "../Core"
+import NestedMenu from "../NestedMenu"
+import { device } from "../../utils"
+import Logo from "../Logo"
+import { menuItems } from "./menuItems"
 
 const SiteHeader = styled.header`
   padding: 10px 0 10px 3px;
@@ -21,7 +21,7 @@ const SiteHeader = styled.header`
   z-index: 999;
 
   .container {
-    padding-left:0
+    padding-left: 0;
   }
 
   @media ${device.lg} {
@@ -55,7 +55,6 @@ const SiteHeader = styled.header`
   .navbar {
     padding: 0;
     align-items: flex-start;
-
   }
 
   .navbar-toggler {
@@ -107,21 +106,19 @@ const SiteHeader = styled.header`
     justify-content: center;
     border-radius: 5px;
     border: 1px solid #c31a12;
-    background: #FF3B5C;
+    background: #ff3b5c;
     color: #fff !important;
     font-family: "Roboto", sans-serif;
     font-size: 21px;
     font-weight: 500;
     letter-spacing: -0.66px;
   }
-`;
+`
 
 const ToggleButton = styled.button`
-  color: ${({ dark, theme }) =>
-    dark ? '#fff' : '#000'} !important;
-  border-color: ${({ dark, theme }) =>
-    dark ? '#fff' : '#000'} !important;
-`;
+  color: ${({ dark, theme }) => (dark ? "#fff" : "#000")} !important;
+  border-color: ${({ dark, theme }) => (dark ? "#fff" : "#000")} !important;
+`
 
 const Menu = styled.ul`
   @media ${device.lg} {
@@ -165,7 +162,7 @@ const Menu = styled.ul`
       }
     }
   }
-`;
+`
 
 const MenuDropdown = styled.ul`
   list-style: none;
@@ -267,25 +264,53 @@ const MenuDropdown = styled.ul`
     left: auto;
     right: -90%;
   }
-`;
+`
 
 const Header = ({ isDark = false }) => {
-  const gContext = useContext(GlobalContext);
-  const [showScrolling, setShowScrolling] = useState(false);
-  const [showReveal, setShowReveal] = useState(false);
+  const gContext = useContext(GlobalContext)
+  const [showScrolling, setShowScrolling] = useState(false)
+  const [showReveal, setShowReveal] = useState(false)
+
+  const size = useWindowSize()
+  const isMobile = size.width < 622
 
   useScrollPosition(({ prevPos, currPos }) => {
     if (currPos.y < 0) {
-      setShowScrolling(true);
+      setShowScrolling(true)
     } else {
-      setShowScrolling(false);
+      setShowScrolling(false)
     }
     if (currPos.y < -300) {
-      setShowReveal(true);
+      setShowReveal(true)
     } else {
-      setShowReveal(false);
+      setShowReveal(false)
     }
-  });
+  })
+
+  function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    })
+
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        function handleResize() {
+          setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+          })
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        handleResize()
+
+        return () => window.removeEventListener("resize", handleResize)
+      }
+    }, [])
+    return windowSize
+  }
 
   return (
     <>
@@ -299,7 +324,11 @@ const Header = ({ isDark = false }) => {
           <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
             {/* <!-- Brand Logo--> */}
             <div className="brand-logo">
-              <Logo vertical={!showReveal} white={isDark} />
+              {isMobile ? (
+                <Logo vertical={false} white={isDark} />
+              ) : (
+                <Logo vertical={!showReveal} white={isDark} />
+              )}
             </div>
             <div className="collapse navbar-collapse">
               <div className="navbar-nav ml-lg-auto mr-3">
@@ -312,7 +341,7 @@ const Header = ({ isDark = false }) => {
                       { label, isExternal = false, name, items, ...rest },
                       index
                     ) => {
-                      const hasSubItems = Array.isArray(items);
+                      const hasSubItems = Array.isArray(items)
                       return (
                         <React.Fragment key={name + index}>
                           {hasSubItems ? (
@@ -334,7 +363,7 @@ const Header = ({ isDark = false }) => {
                                 {items.map((subItem, indexSub) => {
                                   const hasInnerSubItems = Array.isArray(
                                     subItem.items
-                                  );
+                                  )
                                   return (
                                     <React.Fragment
                                       key={subItem.name + indexSub}
@@ -402,7 +431,7 @@ const Header = ({ isDark = false }) => {
                                         </li>
                                       )}
                                     </React.Fragment>
-                                  );
+                                  )
                                 })}
                               </MenuDropdown>
                             </li>
@@ -431,7 +460,7 @@ const Header = ({ isDark = false }) => {
                             </li>
                           )}
                         </React.Fragment>
-                      );
+                      )
                     }
                   )}
                 </Menu>
@@ -462,6 +491,7 @@ const Header = ({ isDark = false }) => {
         <NestedMenu menuItems={menuItems} />
       </Offcanvas>
     </>
-  );
-};
-export default Header;
+  )
+}
+
+export default Header
