@@ -1,57 +1,28 @@
 import React from "react"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
+import Image from "next/image"
 
-import { Title, Button, Section, Box, Text } from "../../components/Core"
+import { Title, Button, Section, Text } from "../../components/Core"
 import { device } from "../../utils"
 
 import imgHalf from "../../assets/image/jpeg/teamcoach.jpeg"
 
-const ImageHalfContainer = styled(Box)`
-  position: static;
-  z-index: -1;
-  height: 100%;
+const ImageWrapper = styled.div`
+margin-top: 2rem;
 
-  .img-half {
-    height: auto;
-    @media ${device.lg} {
-      height: 80%;
-    }
+  @media ${device.md}{
+    margin-top: 2rem;
   }
+
   @media ${device.lg} {
-    position: absolute !important;
-    height: 80%;
+      margin-top: 50%;
+  }
+
+  @media ${device.xl} {
     margin-top: 30%;
   }
-  @media ${device.xl} {
-    position: absolute !important;
-    height: 80%;
-  }
-`
 
-const ImageBottom = styled(Box)`
-  border: 10px solid transparent;
-  box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
-  position: absolute;
-  left: 15px;
-  bottom: 10%;
-  border-radius: 50%;
-  overflow: hidden;
-  max-width: 50%;
-
-  @media ${device.sm} {
-    bottom: 15%;
-    left: 0;
-  }
-  @media ${device.md} {
-    max-width: 50%;
-  }
-  @media ${device.lg} {
-    top: 55%;
-    left: -95px;
-    bottom: auto;
-    max-width: 100%;
-  }
 `
 
 const Content1 = () => (
@@ -88,16 +59,22 @@ const Content1 = () => (
             </Section>
           </Col>
           <Col md={8} lg={6} className="position-relative mb-5 mb-lg-0">
-            <ImageHalfContainer>
-              <div className="h-100">
-                <img src={imgHalf} alt="" className="img-half img-fluid" />
-              </div>
-            </ImageHalfContainer>
+            <ImageWrapper>
+              <Image
+                height={556}
+                width={490}
+                layout="responsive"
+                src={imgHalf}
+                alt="Två personer som pratar med varandra"
+              />
+            </ImageWrapper>
+
           </Col>
         </Row>
       </Container>
     </div>
   </>
 )
+
 
 export default Content1
