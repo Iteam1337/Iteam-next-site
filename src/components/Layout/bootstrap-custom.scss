@@ -39,3 +39,13 @@ $headings-font-family: $font-family-base;
 .modal-backdrop {
   z-index: 99999 !important;
 }
+
+// Consistent with components/core/A.js
+a {
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 600;
+  letter-spacing: -1px;
+}

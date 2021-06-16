@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Pagination as BSPagination } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Pagination as BSPagination } from "react-bootstrap"
 
 const PaginationStyled = styled(BSPagination)`
   .page-item {
@@ -26,18 +26,18 @@ const PaginationStyled = styled(BSPagination)`
       box-shadow: none;
     }
   }
-`;
+`
 
 const Pagination = (props) => (
   <>
     <PaginationStyled {...props} />
   </>
-);
+)
 
-export default Pagination;
+export default Pagination
 
 export const PageItem = (props) => (
   <>
     <PaginationStyled.Item {...props} />
   </>
-);
+)

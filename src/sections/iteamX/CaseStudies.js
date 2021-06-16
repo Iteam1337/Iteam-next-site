@@ -1,15 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col, Card } from "react-bootstrap"
 
-import { Title, Box, Text, Button } from "../../components/Core";
-import { device } from "../../utils";
-import imgCase1 from "../../assets/image/jpeg/l8-case-image-1.jpg";
-import imgCase2 from "../../assets/image/jpeg/l8-case-image-2.jpg";
+import { Title, Box, Text, Button } from "../../components/Core"
+import { device } from "../../utils"
+import { caseItems } from "../../data/caseItems"
 
-const CaseCardStyled = styled(Box)`
+const CaseCardStyled = styled(Card)`
   width: 100%;
   transition: 0.4s;
+  height: 100%;
+  border: none;
+  background-color: ${({ theme }) => theme.colors.dark};
 
   .img-container {
     position: relative;
@@ -17,6 +19,9 @@ const CaseCardStyled = styled(Box)`
     img {
       border-radius: 8px 8px 0 0;
       max-width: 100%;
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
     }
   }
 
@@ -27,7 +32,7 @@ const CaseCardStyled = styled(Box)`
     transform: translateX(10px);
     opacity: 1;
   }
-`;
+`
 
 const BtnContainer = styled(Box)`
   position: absolute;
@@ -55,7 +60,7 @@ const BtnContainer = styled(Box)`
       padding: 0.85rem 1.75rem;
     }
   }
-`;
+`
 
 const TextContent = styled(Box)`
   position: relative;
@@ -67,6 +72,7 @@ const TextContent = styled(Box)`
   padding-bottom: 21px;
   padding-left: 20px;
   padding-right: 20px;
+  height: 100%;
 
   @media ${device.sm} {
     padding-top: 43px;
@@ -74,7 +80,7 @@ const TextContent = styled(Box)`
     padding-left: 38px;
     padding-right: 38px;
   }
-`;
+`
 
 const Shape = styled(Box)`
   background: initial;
@@ -96,7 +102,7 @@ const Shape = styled(Box)`
       transition: 0.4s;
     }
   }
-`;
+`
 
 const PreTitle = styled(Text)`
   font-size: 16px;
@@ -104,7 +110,7 @@ const PreTitle = styled(Text)`
   letter-spacing: -0.5px;
   line-height: 28px;
   margin-bottom: 22px;
-`;
+`
 
 const TitleStyled = styled(Title)`
   letter-spacing: -1.06px;
@@ -116,22 +122,25 @@ const TitleStyled = styled(Title)`
     font-size: 34px;
     font-weight: 700;
   }
-`;
+`
 
 const CaseCard = ({
   isDark = true,
   bg = "secondary",
   img,
-  meta = "",
+  meta = [],
   title = "",
   children = "",
+  link,
 }) => {
   return (
     <CaseCardStyled>
       <div className="img-container">
         <img src={img} alt="" />
         <BtnContainer>
-          <Button>View Case Study</Button>
+          <Button onClick={() => (window.location.href = link)}>
+            Läs case
+          </Button>
         </BtnContainer>
       </div>
       <TextContent bg={bg}>
@@ -144,71 +153,60 @@ const CaseCard = ({
             </g>
           </svg>
         </Shape>
-        <PreTitle color={isDark ? "lightShade" : "darkShade"}>{meta}</PreTitle>
+        <PreTitle color={isDark ? "lightShade" : "darkShade"}>
+          {meta.map((item, i) => {
+            if (i + 1 !== meta.length) return `${item}, `
+            return `${item}`
+          })}
+        </PreTitle>
         <TitleStyled color={isDark ? "light" : "dark"}>{title}</TitleStyled>
         <Text color={isDark ? "lightShade" : "darkShade"}>{children}</Text>
       </TextContent>
     </CaseCardStyled>
-  );
-};
+  )
+}
 
 const CaseStudies = () => {
+  const XCase = caseItems.filter((item) => item.offer.includes("X"))
+
   return (
     <>
       {/* <!-- Content section --> */}
       <Box bg="dark">
-        <Container>
-          <Row className="justify-content-center">
-            <Col
-              lg="6"
-              md="9"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-            >
-              <CaseCard
-                img={imgCase1}
-                meta={`AI, Kryptering, Egendata`}
-                title="Ansiktsigenkänning med bibehållen integritet"
+        <Container className="pt-5">
+          <Row>
+            {XCase.map((item, i) => (
+              <Col
+                key={i}
+                lg="6"
+                md="9"
+                className="mb-4"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-once="true"
               >
-                Lärare i Skellefteå kommun lägger cirka 16 000 timmar per år på 
-                närvaroregistrering, och har identifierat det som ett utmärkt område för 
-                effektivisering med digitala medel och AI. Kan man använda ansiktsigenkänning 
-                med bibehållen integritet?
-              </CaseCard>
-            </Col>
-            <Col
-              lg="6"
-              md="9"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="200"
-            >
-              <CaseCard
-                bg="light"
-                isDark={false}
-                img={imgCase2}
-                meta={`Blockkedjor, Kryptering`}
-                title="Säkra kvittohanteringen med kryptoteknik"
-              >
-                Sättet som digitala kvitton produceras och hanteras på idag underlättar 
-                för bedrägerier och försvårar skattekontroll. Kan man skapa ett digitalt fingeravtryck
-                för varje kvitto utan att samtidigt samla på sig för mycket data om människors beteenden?
-              </CaseCard>
-            </Col>
+                <CaseCard
+                  bg={i === 0 ? "secondary" : "light"}
+                  isDark={false}
+                  img={item.caseImg}
+                  meta={item.tags}
+                  title={item.title}
+                  link={item.link}
+                >
+                  {item.intro}
+                </CaseCard>
+              </Col>
+            ))}
           </Row>
-          <Box className="text-center" pt={[4, null, null, null, 5]}>
+          {/* <Box className="text-center" pt={[4, null, null, null, 5]}>
             <Button variant="outline" color="light">
               Läs mer om våra Iteam X case
             </Button>
-          </Box>
+          </Box> */}
         </Container>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default CaseStudies;
+export default CaseStudies

@@ -1,7 +1,7 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text, Span } from "../../components/Core";
+import { Title, Button, Section, Box, Text, Span } from "../../components/Core"
 
 const Hero = () => {
   return (
@@ -13,7 +13,6 @@ const Hero = () => {
           className="position-relative"
           css={`
             z-index: 10;
-            margin: 2px;
           `}
         >
           <Row>
@@ -22,7 +21,7 @@ const Hero = () => {
                 <Text
                   color="light"
                   data-aos="fade-up"
-                  data-aos-duration="1500"
+                  data-aos-duration="600"
                   data-aos-once="true"
                   data-aos-delay="700"
                 >
@@ -32,23 +31,26 @@ const Hero = () => {
                   my={4}
                   variant="hero"
                   color="light"
-                  data-aos="fade-up"
-                  data-aos-duration="1500"
+                  data-aos="fade-right"
+                  data-aos-duration="600"
                   data-aos-once="true"
                   data-aos-delay="1000"
                 >
-                  Experimentell utveckling{" "}
-                  <br className="d-none d-lg-block" />
+                  Experimentell utveckling <br className="d-none d-lg-block" />
                   med exponentiell teknik<Span color="secondary">.</Span>
                 </Title>
                 <Box
                   pt="12px"
                   data-aos="fade-up"
-                  data-aos-duration="1500"
+                  data-aos-duration="700"
                   data-aos-once="true"
                   data-aos-delay="1300"
                 >
-                  <Button color="dark" bg="secondary">Boka en sprint</Button>
+                  <a href="#sprintMeeting">
+                    <Button color="dark" bg="secondary">
+                      Boka en sprint
+                    </Button>
+                  </a>
                 </Box>
               </Box>
             </Col>
@@ -56,7 +58,7 @@ const Hero = () => {
         </Container>
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

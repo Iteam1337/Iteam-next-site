@@ -1,9 +1,9 @@
-import React from "react";
-import styled, { keyframes } from "styled-components";
-import GoogleMapReact from "google-map-react";
+import React from "react"
+import styled, { keyframes } from "styled-components"
+import GoogleMapReact from "google-map-react"
 
-import { device } from "../../utils";
-import iconPin from "../../assets/image/svg/map-marker.svg";
+import { device } from "../../utils"
+import iconPin from "../../assets/image/svg/map-marker.svg"
 
 const keyBounce = keyframes`
 
@@ -14,7 +14,7 @@ const keyBounce = keyframes`
     transform: translateY(-20px);
   }
 
-`;
+`
 
 const MapStyled = styled.div`
   width: 100%;
@@ -37,19 +37,19 @@ const MapStyled = styled.div`
     height: 100%;
     width: 47%;
   }
-`;
+`
 
 const LocationPin = () => (
   <div className="pin">
     <img src={iconPin} className="pin-icon" alt="" />
   </div>
-);
+)
 
 const MapGoogle = () => {
   const location = {
     lat: 23.761226,
     lng: 90.420766,
-  };
+  }
 
   return (
     <>
@@ -64,7 +64,7 @@ const MapGoogle = () => {
         </GoogleMapReact>
       </MapStyled>
     </>
-  );
-};
+  )
+}
 
-export default MapGoogle;
+export default MapGoogle

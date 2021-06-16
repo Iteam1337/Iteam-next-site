@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "next/link";
-import { Title, Box, Text } from "../Core";
+import React from "react"
+import styled from "styled-components"
+import Link from "next/link"
+import { Title, Box, Text } from "../Core"
 
 const Card = styled(Box)`
   border-radius: 0;
   overflow: hidden;
-`;
+`
 
 const ImageContainer = styled(Box)`
   max-width: 210px;
@@ -14,7 +14,7 @@ const ImageContainer = styled(Box)`
   overflow: hidden;
   position: relative;
   width: 100%;
-`;
+`
 
 const BrandImage = styled(Box)`
   overflow: hidden;
@@ -22,18 +22,18 @@ const BrandImage = styled(Box)`
     border-radius: 0px;
     border: 1px solid #eae9f2;
   }
-`;
+`
 
 const CardText = styled(Box)`
   padding-left: 30px;
-`;
+`
 
 const TitleStyled = styled(Title)`
   transition: 0.3s;
   &:hover {
     color: ${({ theme }) => theme.colors.secondary};
   }
-`;
+`
 
 const CaseCard = ({
   img,
@@ -48,15 +48,11 @@ const CaseCard = ({
     <ImageContainer>
       <Link href="/">
         <a>
-          <img src={img} alt="" className="w-100 img-fluid" />
+          <img src={img} alt={title} className="w-100 img-fluid" />
         </a>
       </Link>
     </ImageContainer>
     <CardText>
-      <BrandImage mb="16px">
-        <img src={imgBrand} alt="" className="img-fluid" />
-      </BrandImage>
-
       <Link href="/">
         <a>
           <TitleStyled variant="card" mb="12px">
@@ -69,6 +65,6 @@ const CaseCard = ({
       </Text>
     </CardText>
   </Card>
-);
+)
 
-export default CaseCard;
+export default CaseCard

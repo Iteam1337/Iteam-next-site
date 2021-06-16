@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from "react"
+import styled from "styled-components"
 import {
   space,
   border,
@@ -7,7 +7,7 @@ import {
   shadow,
   flexbox,
   layout,
-} from "styled-system";
+} from "styled-system"
 
 const SwitchStyled = styled.div`
   display: inline-block;
@@ -27,7 +27,7 @@ const SwitchStyled = styled.div`
   ${shadow};
   ${flexbox};
   ${layout};
-`;
+`
 
 const Round = styled.span`
   width: 21px;
@@ -42,15 +42,15 @@ const Round = styled.span`
   transition: 0.4s;
   border-radius: 500px;
   pointer-events: none;
-`;
+`
 
 const Switch = ({ bg = "secondary", onClick = () => {}, ...rest }) => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false)
 
   const handleSwitch = () => {
-    setActive(!active);
-    onClick();
-  };
+    setActive(!active)
+    onClick()
+  }
 
   return (
     <SwitchStyled
@@ -61,7 +61,7 @@ const Switch = ({ bg = "secondary", onClick = () => {}, ...rest }) => {
     >
       <Round active={active ? 1 : 0} />
     </SwitchStyled>
-  );
-};
+  )
+}
 
-export default Switch;
+export default Switch

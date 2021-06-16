@@ -1,27 +1,33 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import PageWrapper from "../../components/PageWrapper";
-import { Section, Title, Text, Box } from "../../components/Core";
+import PageWrapper from "../../components/PageWrapper"
+import { Section, Title, Text, Box } from "../../components/Core"
 
-import CaseList from "../../sections/case/CaseList1";
-import CaseDetails from "../../sections/case/tjejjouren-vast/CaseDetails";
-import CTA from "../../sections/case/CTA";
+import MetaTags from "../../components/MetaTags/MetaTags"
+import CaseList from "../../sections/case/CaseList1"
+import CaseDetails from "../../sections/case/tjejjouren-vast/CaseDetails"
+import CTA from "../../sections/case/CTA"
 
 const CaseStudyDetails = () => {
   return (
     <>
       <PageWrapper footerDark>
+        <MetaTags
+          title={"Stella - Tjejjouren Väst"}
+          description={" Mobilapp ger unga tjejer stöd dygnet runt"}
+        />
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="8">
                 <Box className="text-center" mb={4}>
-                  Tjejjouren Väst
+                  Stella - Tjejjouren Väst
                 </Box>
-                <Title variant="hero">Stella</Title>
-                <Text>Appen Stella ger tjejer stöd dygnet runt</Text>
+                <Title variant="hero">
+                  Mobilapp ger unga tjejer stöd dygnet runt
+                </Title>
               </Col>
             </Row>
           </Container>
@@ -31,6 +37,6 @@ const CaseStudyDetails = () => {
         <CTA />
       </PageWrapper>
     </>
-  );
-};
-export default CaseStudyDetails;
+  )
+}
+export default CaseStudyDetails

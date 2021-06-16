@@ -1,18 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import Gravatar from "react-gravatar";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import Gravatar from "react-gravatar"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Text } from "../../components/Core";
+import { Title, Section, Box, Text } from "../../components/Core"
 
-import imgU1 from "../../assets/image/jpeg/about-team-1.jpg";
-import imgU2 from "../../assets/image/jpeg/about-team-3.jpg";
-import imgU3 from "../../assets/image/jpeg/about-team-4.jpg";
-import imgU4 from "../../assets/image/jpeg/about-team-5.jpg";
-import imgU5 from "../../assets/image/jpeg/about-team-6.jpg";
-import imgU6 from "../../assets/image/jpeg/about-team-2.jpg";
-
-import team from './team.json'
+import team from "./team.json"
+import Link from "next/link"
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -24,9 +18,31 @@ const CardImage = styled.div`
   display: inline-flex;
   align-items: center;
   margin-bottom: 29px;
-`;
+`
 
-const TeamCard = ({ email, name, title, phoneNumber, ...rest }) => (
+const Wrapper = styled.div`
+  height: 330px;
+  &:hover {
+    cursor: pointer;
+    .image {
+      max-width: 170px;
+      min-width: 170px;
+      min-height: 170px;
+      max-height: 170px;
+    }
+  }
+`
+
+const TeamCard = ({
+  email,
+  name,
+  title,
+  status,
+  phoneNumber,
+  username = "",
+  path,
+  ...rest
+}) => (
   <Box
     className="text-center"
     pt="15px"
@@ -35,58 +51,81 @@ const TeamCard = ({ email, name, title, phoneNumber, ...rest }) => (
     mb={4}
     {...rest}
   >
-    <CardImage>
-      <Gravatar
-        email={email}
-        className="img-fluid"
-        size={200}
-        />
-    </CardImage>
-    <div className="text-center">
-      <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
-        {name}
-      </Title>
-      <Text fontSize={2} lineHeight={1.75}>
-        {title}
-      </Text>
-      {phoneNumber && (
-        <a href={`tel:${phoneNumber}`}>
-          <Text fontSize={1} lineHeight={1.25}>
-            {phoneNumber}
-          </Text>
-        </a>
-      )}
-    </div>
+    <Wrapper>
+      <Link href={path}>
+        <div>
+          <CardImage className="image">
+            <Gravatar email={email} className="img-fluid" size={200} />
+          </CardImage>
+          <div className="text-center">
+            <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
+              {name}
+            </Title>
+            <Text fontSize={2} lineHeight={1.75}>
+              {status}
+            </Text>
+            <Text fontSize={2} lineHeight={1.75}>
+              {title}
+            </Text>
+          </div>
+        </div>
+      </Link>
+      <div className="text-center">
+        {phoneNumber && (
+          <a href={`tel:${phoneNumber}`}>
+            <Text fontSize={1} lineHeight={1.25}>
+              {phoneNumber}
+            </Text>
+          </a>
+        )}
+        {email && (
+          <a href={`mailto:${email}`}>
+            <Text fontSize={1} lineHeight={1.25}>
+              {email}
+            </Text>
+          </a>
+        )}
+      </div>
+    </Wrapper>
   </Box>
-);
+)
 
 const Team = () => (
   <>
     {/* <!-- Team section --> */}
-    <Section className="position-relative pt-5">
+    <Section className="position-relative pt-5" id="medarbetare">
       <Container>
         <Row className="justify-content-center">
           <Col lg="6" className="text-center pb-3">
-            <div className="">
-              <Title>Vadå ha kul?</Title>
+            <div id="medarbetare" className="">
+              <Title>Medarbetare</Title>
               <Text>
-                Digitialisering är ett kreativt arbete och när vi får lösa svåra uppgifter och använda vår kompetens. Och ja, att få fira tillsammans när vi lyckas!{" "}
+                Här hittar du oss som jobbar på Iteam, tveka inte att höra av
+                dig!
               </Text>
             </div>
           </Col>
         </Row>
-        <Row className="align-items-center justify-content-center">
+        <Row className="justify-content-center">
           {team
+            .slice()
             .sort((a, b) => a.fullname > b.fullname)
-            .map(({fullname, title, email, phoneNumber}) => 
+            .map(({ fullname, title, email, phoneNumber, status, path }) => (
               <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4" key={email}>
-                <TeamCard email={email} name={fullname} title={title} phoneNumber={phoneNumber} />
+                <TeamCard
+                  email={email}
+                  name={fullname}
+                  title={title}
+                  status={status}
+                  path={path}
+                  phoneNumber={phoneNumber}
+                />
               </Col>
-          )}
+            ))}
         </Row>
       </Container>
     </Section>
   </>
-);
+)
 
-export default Team;
+export default Team

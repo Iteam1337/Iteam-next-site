@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Section, Box, Title, Text } from "../../../components/Core";
-import Quote from "../../../components/Quote";
+import {
+  Section,
+  Box,
+  Title,
+  Text,
+  ImgContainer,
+} from "../../../components/Core"
+import Quote from "../../../components/Quote"
 
-import vimlaImg from "../../../assets/image/case/vimla-laptop-transparent.png";
-
-const ImgContainer = styled(Box)`
-  border-radius: 10px;
-  overflow: hidden;
-`;
+import vimlaImg from "../../../assets/image/case/vimla-laptop-transparent.png"
 
 const CaseDetails = () => (
   <>
@@ -58,22 +58,24 @@ const CaseDetails = () => (
               <Text variant="small">
                 På samma sätt som Vimla vill knyta sina kunder närmare sig och
                 gör de till medlemmar ville de arbeta nära sina leverantörer.
-                <Row className="mt-5">
-                  <Col lg="12" xl="10" className="offset-xl-1 pt-4">
-                    <Box pb={["40px", null, "65px"]}>
-                      <Quote
-                        text={`Vi känner att vårt team på Iteam är mer som kollegor än
+              </Text>
+              <Row className="mt-5">
+                <Col lg="12" xl="10" className="offset-xl-1 pt-4">
+                  <Box pb={["40px", null, "65px"]}>
+                    <Quote
+                      text={`Vi känner att vårt team på Iteam är mer som kollegor än
                 leverantörer. Istället för att skriva en teknisk
                 kravspecifikation att arbeta efter, så samarbetar vi
                 kontinuerligt för att utveckla funktionalitet. Detta arbetssätt
                 har gjort att vi kommit mycket längre än vi nånsin kunnat tro
                 eftersom det varit så effektivt.`}
-                        author=" Johan Littorin"
-                        authorTitle="Grundare och chef för Vimla"
-                      />
-                    </Box>
-                  </Col>
-                </Row>
+                      author=" Johan Littorin"
+                      authorTitle="Grundare och chef för Vimla"
+                    />
+                  </Box>
+                </Col>
+              </Row>
+              <Text variant="small">
                 En viktig komponent i Vimlas digitala plattform som Iteam har
                 utvecklat är medlemsappen. I den medlemmar kan hantera sitt
                 abonnemang - få full översikt över fakturor, utnyttja surfmängd,
@@ -118,6 +120,6 @@ const CaseDetails = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default CaseDetails;
+export default CaseDetails

@@ -1,11 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Span } from "../../components/Core";
-import { device } from "../../utils";
+import { Title, Section, Box, Span } from "../../components/Core"
+import { device } from "../../utils"
+import ContentCard from "../../components/ContentCard"
 
-const SectionStyled = styled(Section)``;
+const SectionStyled = styled(Section)``
 
 const ContentWidget = styled(Box)`
   border-radius: 10px;
@@ -45,13 +46,13 @@ const ContentWidget = styled(Box)`
     border-radius: 10px;
     background-color: ${({ theme }) => theme.colors.secondary};
   }
-  &:hover i {
+  /* &:hover i {
     transform: translateX(10px);
     opacity: 1;
-  }
-`;
+  } */
+`
 
-const ContentCard = ({ children = "" }) => {
+const ContentCard1 = ({ children = "" }) => {
   return (
     <ContentWidget>
       <div className="d-flex align-items-center">
@@ -62,8 +63,20 @@ const ContentCard = ({ children = "" }) => {
 
       <i className="fas fa-chevron-circle-right"></i>
     </ContentWidget>
-  );
-};
+  )
+}
+
+const tech = [
+  "Blockkedjor",
+  "Applicerad AI",
+  "Data pipelines",
+  "Krypteringslösningar",
+  "Digitala tvillingar",
+  "Machine Learning",
+  "Drönarteknik",
+  "VR/AR",
+  "Datavisualisering",
+]
 
 const Content = () => {
   return (
@@ -75,83 +88,22 @@ const Content = () => {
             <Col lg="10">
               <div className="text-center">
                 <Title color="light">
-                  Våra team utgår från <Span color="secondary">en hypotes.</Span>{" "}
-                  Den försöker vi därefter att motbevisa med hjälp av olika experiment.
+                  Våra X team utgår från{" "}
+                  <Span color="secondary">en hypotes.</Span> Den försöker vi
+                  därefter att motbevisa med hjälp av olika experiment.
                 </Title>
               </div>
             </Col>
           </Row>
           <Row className="justify-content-center">
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-            >
-              <ContentCard>Blockkedjor</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="200"
-            >
-              <ContentCard>AI</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="400"
-            >
-              <ContentCard>Data pipelines</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="600"
-            >
-              <ContentCard>Digital Twins</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="800"
-            >
-              <ContentCard>Machine Learning</ContentCard>
-            </Col>
-            <Col
-              lg="4"
-              md="6"
-              className="mb-4"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-delay="1000"
-            >
-              <ContentCard>Drönare</ContentCard>
-            </Col>
+            {tech.map((item, i) => (
+              <ContentCard key={i} title={item} dark />
+            ))}
           </Row>
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import { rgba } from "polished";
+import React, { useState } from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import { rgba } from "polished"
 
 import {
   Title,
@@ -11,8 +11,8 @@ import {
   Badge,
   Button,
   Switch,
-} from "../../components/Core";
-import { device } from "../../utils";
+} from "../../components/Core"
+import { device } from "../../utils"
 
 const SectionStyled = styled(Section)`
   position: relative;
@@ -25,13 +25,13 @@ const SectionStyled = styled(Section)`
     position: absolute;
     background: ${({ theme }) => theme.colors.dark}!important;
   }
-`;
+`
 
 const ULStyled = styled.ul`
   list-style: none;
-  max-width: 350px;
   margin: 30px auto 0;
-  padding-left: 0;
+  padding: 40px;
+  text-align: left;
 
   @media ${device.sm} {
     display: flex;
@@ -57,9 +57,9 @@ const ULStyled = styled.ul`
       font-weight: 900;
       display: inline-block;
       font-size: 13px;
-      width: 30px;
+      width: 30px !important;
       height: 30px;
-      background-color: ${({ theme }) => rgba(theme.colors.secondary, 0.1)};
+      background-color: ${({ theme }) => rgba(theme.colors.secondary, 0.2)};
       display: flex;
       align-items: center;
       justify-content: center;
@@ -70,7 +70,7 @@ const ULStyled = styled.ul`
       margin-right: 13px;
     }
   }
-`;
+`
 
 const CardPricing = styled(Box)`
   box-shadow: ${({ theme }) =>
@@ -83,15 +83,15 @@ const CardPricing = styled(Box)`
     width: 100% !important;
     border-radius: 0 0 10px 10px !important;
   }
-`;
+`
 
 const TitleSmall = styled.h4`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.black};
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.5px;
   line-height: 28px;
-`;
+`
 
 const Currency = styled.span`
   color: ${({ theme }) => theme.colors.dark};
@@ -100,7 +100,7 @@ const Currency = styled.span`
   letter-spacing: -0.52px;
   line-height: 1;
   margin-bottom: 5px;
-`;
+`
 
 const TimePer = styled.span`
   color: ${({ theme }) => theme.colors.dark};
@@ -109,10 +109,10 @@ const TimePer = styled.span`
   letter-spacing: -0.52px;
   line-height: 1;
   margin-bottom: 5px;
-`;
+`
 
 const Pricing = () => {
-  const [timeMonthly, setTimeMonthly] = useState(true);
+  const [timeMonthly, setTimeMonthly] = useState(true)
 
   return (
     <>
@@ -126,11 +126,12 @@ const Pricing = () => {
         >
           <Row className="justify-content-center">
             <Col md="8" lg="9">
-              <div className=" text-center">
+              <div className=" text-center" id="pricing">
                 <Title>Våra enkla priser</Title>
                 <Text>
                   Vi vill göra det enkelt att jobba med oss{" "}
-                  <br className="d-none d-md-block" /> därför har vi enkla och transparenta prislistor.
+                  <br className="d-none d-md-block" /> därför har vi enkla och
+                  transparenta prislistor.
                 </Text>
               </div>
             </Col>
@@ -146,8 +147,8 @@ const Pricing = () => {
               </div>
             </div>
 
-            <Row>
-              <Col lg="6" className="mb-5">
+            <Row className="justify-content-center">
+              <Col lg="8" className="mb-5 align-items-center">
                 <CardPricing>
                   <div className="mb-4">
                     <TitleSmall>Helt team</TitleSmall>
@@ -166,17 +167,23 @@ const Pricing = () => {
                     </div>
                     <Text fontSize="18px">per person</Text>
                     <ULStyled>
-                      <li>Frontendutvecklare</li>
-                      <li>Backendutvecklare</li>
-                      <li>UX-designer</li>
-                      <li>Agil coach</li>
-                      <li>Max tre dagar i veckan</li>
+                      <li>
+                        Kompetens inom UX, utveckling och teamfacilitering
+                      </li>
+                      <li> Arbetar med en avgränsad del av er verksamhet</li>
+                      <li> Stöd och coachning till dig som beställare</li>
+                      <li>2 eller 4 dagar/vecka</li>
                     </ULStyled>
                   </div>
-                  <Button bg="secondary">Boka tid för intromöte</Button>
+                  <Button
+                    bg="primary"
+                    onClick={() => (window.location.href = "/book")}
+                  >
+                    Boka tid för intromöte
+                  </Button>
                 </CardPricing>
               </Col>
-              <Col lg="6" className="mb-4">
+              {/*<Col lg="6" className="mb-4">
                 <CardPricing>
                   <div className="mb-4">
                     <TitleSmall>Konsult</TitleSmall>
@@ -204,13 +211,13 @@ const Pricing = () => {
                   </div>
                   <Button bg="secondary">Boka tid för intromöte</Button>
                 </CardPricing>
-              </Col>
+              </Col>*/}
             </Row>
           </div>
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Pricing;
+export default Pricing

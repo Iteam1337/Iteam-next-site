@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
 import {
   Title,
@@ -9,30 +9,27 @@ import {
   Box,
   Text,
   InputGroup,
-} from "../../components/Core";
+} from "../../components/Core"
 
-import { device } from "../../utils";
+import { device } from "../../utils"
 
-import imgL2HeroOval1 from "../../assets/image/png/l2-hero-oval1.png";
-import imgL2HeroOval2 from "../../assets/image/png/l2-hero-oval2.png";
-import imgL2HeroBg from "../../assets/image/jpeg/Jonna-Med-Team-Scrum-Board.jpg";
+import imgL2HeroBg from "../../assets/image/jpeg/Jonna-Med-Team-Scrum-Board.jpg"
 
 const SectionStyled = styled(Section)`
   background: 
-      /* top, transparent black, faked with gradient */ 
-      linear-gradient(
-        rgba(255, 255, 255, 0.7), 
-        rgba(255, 255, 255, 0.3)
-      ),
-      /* bottom, image */
-      url(${imgL2HeroBg}) no-repeat;
+  /* top, transparent black, faked with gradient */ linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.4)
+    ),
+    /* bottom, image */ url(${imgL2HeroBg}) no-repeat center 20%;
   background-size: cover;
-  background-position: bottom left;
+  padding-top: 128px;
 
   @media ${device.lg} {
     background-position: center;
   }
-`;
+`
 
 const ImageTop = styled(Box)`
   border: 10px solid transparent;
@@ -46,7 +43,7 @@ const ImageTop = styled(Box)`
   @media ${device.lg} {
     left: 2%;
   }
-`;
+`
 
 const ImageBottom = styled(Box)`
   position: absolute;
@@ -59,7 +56,7 @@ const ImageBottom = styled(Box)`
   @media ${device.xl} {
     right: -28%;
   }
-`;
+`
 
 const Hero = () => {
   return (
@@ -69,11 +66,11 @@ const Hero = () => {
         <div className="pt-5"></div>
         <Container
           css={`
-          z-index: 10;
-          margin: 15px;
-        `}>
+            z-index: 10;
+            margin-top: 20px;
+          `}
+        >
           <Row>
-            
             <Col
               md="9"
               lg="7"
@@ -83,20 +80,23 @@ const Hero = () => {
               data-aos-delay="500"
               data-aos-once="true"
             >
+              {" "}
+              Iteam MVP – När du vill bygga nytt
               <Box py={[null, null, null, 4]} pr={5} pt={[4, null]}>
                 <Title variant="hero">
-                  MVP: När du vill bygga något nytt.
+                  Utveckling av
+                  <br /> nya digitala tjänster
                 </Title>
-                <Text mb={4}>
-                  Oavsett om du har ett problem du behöver lösa eller redan vet vad din MVP ska innehålla så hjälper vi dig. Vi börjar där du står och utgår ifrån det helt enkelt. Ibland gör vi en <a href="/designsprint">Designsprint</a> för att snabbt fatta stora beslut om vad vi behöver göra. Andra gånger börjar vi med research på era kunder för att validera er hypotes om vad som ska byggas.
-                </Text>
+                {/* <Text mb={4}>
+                Oavsett om du har ett problem du behöver lösa eller redan har en idé så hjälper vi dig. Vi börjar där du står och utgår ifrån det helt enkelt. Ibland gör vi en <a href="/designsprint">Designsprint</a> för att kickstarta samarbetet. Andra gånger gör vi research om användarbehov för att försäkra oss om att vi löser rätt problem.
+                </Text> */}
               </Box>
             </Col>
           </Row>
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

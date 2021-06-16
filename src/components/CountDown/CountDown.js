@@ -1,7 +1,7 @@
-import React from "react";
-import ReactCountdown from "react-countdown";
+import React from "react"
+import ReactCountdown from "react-countdown"
 
-import { Box, Text, Title } from "../Core";
+import { Box, Text, Title } from "../Core"
 
 const CardTime = ({ label, time }) => (
   <Box
@@ -27,7 +27,7 @@ const CardTime = ({ label, time }) => (
       {label}
     </Text>
   </Box>
-);
+)
 
 const renderer = ({ days, hours, minutes, seconds }) => (
   <Box maxWidth="340px" mx="auto" className="d-flex justify-content-center">
@@ -36,10 +36,10 @@ const renderer = ({ days, hours, minutes, seconds }) => (
     <CardTime label="Minutes" time={minutes} />
     <CardTime label="Seconds" time={seconds} />
   </Box>
-);
+)
 
 const CountDown = ({ date }) => (
   <ReactCountdown date={date} renderer={renderer} />
-);
+)
 
-export default CountDown;
+export default CountDown

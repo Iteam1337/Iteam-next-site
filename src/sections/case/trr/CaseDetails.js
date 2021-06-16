@@ -1,16 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Section, Box, Title, Text } from "../../../components/Core";
-import Quote from '../../../components/Quote';
+import {
+  Section,
+  Box,
+  Title,
+  Text,
+  ImgContainer,
+  Anchor,
+} from "../../../components/Core"
+import Quote from "../../../components/Quote"
 
-import imgCase2 from "../../../assets/image/case/trr-laptop-transparent.png";
-
-const ImgContainer = styled(Box)`
-  border-radius: 10px;
-  overflow: hidden;
-`;
+import imgCase2 from "../../../assets/image/case/trr-laptop-transparent.png"
 
 const CaseDetails = () => (
   <>
@@ -26,9 +27,9 @@ const CaseDetails = () => (
                 Vi hjälper TRR att ta en proaktiv roll på arbetsmarknaden och
                 svara på kundernas behov om kompetensförsörjning. Detta kommer
                 på sikt att resultera i en plattform där TRRs kundföretag kan ta
-                del av hela serviceerbjudandet. Syftet är att detta både ska
-                höja servicenivån och frigöra tid för TRRs medarbetare för att
-                prioritera personliga möten istället för administration. De
+                del av hela TRRs erbjuande digitalt. Syftet är att detta både
+                ska höja servicenivån och frigöra tid för TRRs medarbetare för
+                att prioritera personliga möten istället för administration. De
                 första stegen i denna resa är tjänster för att hitta nya
                 rekryteringar utifrån unika kravprofiler samt stöd och
                 rådgivning vid omställning.
@@ -39,14 +40,12 @@ const CaseDetails = () => (
                 Tydliga mål och snabbrörlighet
               </Title>
               <Text variant="small">
-                Vårt arbete med att utveckla Kundplattformen genomsyras av
-                Design Thinking och ett hypotesdrivet arbetssätt där vi vägleds
-                av användarnas behov. Vi började med att identifiera
-                målgruppernas behov genom intervjustudier. Därefter definierades
-                Kundplattform effektmål som hjälpte oss att prioritera
-                funktioner som ska utvecklas. På så sätt synliggörs hela
-                resonemangskedjan, från de effekter vi vill uppnå till hur vi
-                konkret tillgodoser behoven.
+                Vårt arbete med utvecklingen genomsyras av ett hypotesdrivet
+                arbetssätt där vi vägleds av användarnas behov. Vi identifierar
+                målgruppernas behov genom intervjustudier, definierar effektmål
+                och prioriterar de viktigaste behoven. Genom att arbeta målstyrt
+                synliggörs hela kedjan, från de effekter vi vill uppnå till hur
+                vi konkret tillgodoser behoven.
                 <br />
                 <br />
                 Utvecklingen av funktionalitet har sedan skett i korta cykler.
@@ -115,7 +114,11 @@ const CaseDetails = () => (
                 ska vara så kvalitativ, effektiv och meningsfull som möjligt.
                 TRR ägs av parterna på den privata arbetsmarknaden,
                 arbetsgivarförbunden inom Svenskt Näringsliv och fackförbunden
-                inom PTK. Läs mer på <a href="https://www.trr.se/">trr.se</a>.
+                inom PTK. Läs mer på{" "}
+                <Anchor color="info" href="https://www.trr.se/">
+                  trr.se
+                </Anchor>
+                .
               </Text>
             </Box>
           </Col>
@@ -123,6 +126,6 @@ const CaseDetails = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default CaseDetails;
+export default CaseDetails

@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { rgba } from "polished";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { rgba } from "polished"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Text } from "../../components/Core";
-import { device } from "../../utils";
-import imgContent from "../../assets/image/jpeg/Johan-Christian-Working-Lowres.jpg";
+import { Title, Section, Text } from "../../components/Core"
+import { device } from "../../utils"
+import imgContent from "../../assets/image/jpeg/Johan-Christian-Working-Lowres.jpg"
 
 const ImgContainer = styled.div`
   margin-top: 50px;
@@ -22,7 +22,7 @@ const ImgContainer = styled.div`
   @media (min-width: 1400px) {
     transform: translate(15%, -50%);
   }
-`;
+`
 
 const ULStyled = styled.ul`
   list-style: none;
@@ -52,26 +52,8 @@ const ULStyled = styled.ul`
     line-height: 50px;
     display: flex;
     margin-bottom: 5px;
-
-    &:before {
-      content: "\f00c";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      display: inline-block;
-      font-size: 13px;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 500px;
-      color: ${({ theme }) => theme.colors.secondary};
-      position: relative;
-      top: 9px;
-      margin-right: 13px;
-    }
   }
-`;
+`
 
 const Content1 = () => (
   <>
@@ -93,7 +75,7 @@ const Content1 = () => (
                 data-aos-duration="600"
                 data-aos-once="true"
                 css={`
-                  margin-right:-800px;
+                  margin-right: -800px;
                   box-shadow: ${({ theme }) =>
                     `0 12px 84px ${theme.colors.shadow}`};
                   border-radius: 0;
@@ -110,26 +92,19 @@ const Content1 = () => (
               <div>
                 <Title>
                   Börja genom{" "}
-                  <br className="d-none d-sm-block d-md-none d-lg-block" />{" "}
-                  att bara börja
+                  <br className="d-none d-sm-block d-md-none d-lg-block" /> att
+                  bara börja
                 </Title>
                 <Text mb={4}>
-                  Det som inte är i produktion skapar inget värde. Det är bara en kostnad. 
-                  Därför tror vi inte på långa förarbeten som slutar i en rapport på någons skrivbord. 
-                  Istället är vi helt övertygade om att för att komma igång behöver vi börja. 
-                  Vi börjar genom att göra research kring era och era kunders behov, sätter upp en
-                  hypotes och utvecklar något litet. Sedan testar vi på riktiga kunder för att få nya insikter. 
-                  Insikterna använder vi sedan för att bygga lite till, testa och få nya insikter. 
-                  På detta sätt kommer tjänsten snabbt ut i produktion så att ni snabbt kan nå ut till era 
-                  kunder och skapa värde på riktigt.
+                  Det som inte är i produktion skapar inget värde, det är bara
+                  en kostnad. Därför tror vi inte på långa förarbeten som slutar
+                  i en rapport på någons skrivbord. Istället är vi övertygade om
+                  att för att komma igång behöver vi börja. Vi gör research
+                  kring era kunders behov, sätter upp hypoteser och utvecklar
+                  något litet. Därefter testar och utvecklar vi kontinuerligt
+                  utifrån nya insikter. På detta sätt kommer tjänsten snabbt ut
+                  i produktion och skapar användarnytta.
                 </Text>
-
-                <ULStyled>
-                  <li>Börja redan på måndag</li>
-                  <li>Tänk visionärt och småskaligt samtidigt</li>
-                  <li>Försök få helheten på plats först</li>
-                  <li>Iterera tillsammans med användarna</li>
-                </ULStyled>
               </div>
             </div>
           </Col>
@@ -137,6 +112,6 @@ const Content1 = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Content1;
+export default Content1

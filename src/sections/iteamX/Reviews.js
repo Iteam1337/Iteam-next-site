@@ -1,15 +1,15 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Text } from "../../components/Core";
+import { Title, Section, Box, Text } from "../../components/Core"
 
-import imgB1 from "../../assets/image/png/testimonial-brand-logo-1.png";
-import imgB2 from "../../assets/image/png/testimonial-brand-logo-2.png";
-import imgB3 from "../../assets/image/png/testimonial-brand-3.png";
+import imgB1 from "../../assets/image/png/testimonial-brand-logo-1.png"
+import imgB2 from "../../assets/image/png/testimonial-brand-logo-2.png"
+import ltu from "../../assets/image/svg/ltu_logo_sv.svg"
 
-import imgR1 from "../../assets/image/jpeg/l8-testimonial-user-image-1.jpg";
-import imgR2 from "../../assets/image/jpeg/l8-testimonial-user-image-2.jpg";
-import imgR3 from "../../assets/image/jpeg/l8-testimonial-user-image-3.jpg";
+import imgR1 from "../../assets/image/jpeg/l8-testimonial-user-image-1.jpg"
+import imgR2 from "../../assets/image/jpeg/l8-testimonial-user-image-2.jpg"
+import johanna from "../../assets/image/jpeg/johanna_lindberg.jpg"
 
 const ContentCard = ({
   className,
@@ -32,7 +32,12 @@ const ContentCard = ({
     data-aos-once="true"
   >
     <Box className="text-center">
-      <img src={imageBrand} alt="" className="img-fluid" />
+      <img
+        src={imageBrand}
+        alt=""
+        className="img-fluid"
+        css={"filter: opacity(30%); height: 100px;"}
+      />
     </Box>
     <Text color="lightShade" mt={4} mb={3} className="text-center mb-0">
       {children}
@@ -44,6 +49,7 @@ const ContentCard = ({
           alt=""
           className="img-fluid"
           css={`
+            height: 100px;
             border-radius: 500px;
           `}
         />
@@ -58,7 +64,7 @@ const ContentCard = ({
       </Box>
     </Box>
   </Box>
-);
+)
 
 const Reviews = () => {
   return (
@@ -66,45 +72,44 @@ const Reviews = () => {
       <Section bg="dark">
         <Container>
           <Row className="justify-content-center mt-3">
-            <Col lg="4" md="6" className="mb-5 mb-lg-0">
+            {/*<Col lg="4" md="6" className="mb-5 mb-lg-0">
               <ContentCard
-                name="Troy Patrick"
-                company="CEO at CoWorks"
+                name="Patrik Fältström"
+                company="Forskningschef, Netnod"
                 image={imgR1}
                 imageBrand={imgB1}
               >
-                "You made it so simple. My new site is so much faster and easier
-                to work with than my old site. I just choose the page, make the
-                change and click save."
+                "Christian och Iteam har både koll på vad som går att bygga med senaste tekniken och tar ett stort ansvar för samhällsutvecklingen."
               </ContentCard>
             </Col>
             <Col lg="4" md="6" className="mb-5 mb-lg-0">
               <ContentCard
-                name="Paromita Haque"
-                company="CEO at CoWorks"
+                name="Aurore Belfrage"
+                company="Techdiplomat"
                 image={imgR2}
                 imageBrand={imgB2}
               >
-                "Simply the best. Better than all the rest. I’d recommend this
-                product to beginners and advanced users."
+                "Iteam är spännande... "
               </ContentCard>
-            </Col>
+            </Col>*/}
             <Col lg="4" md="6" className="mb-5 mb-lg-0">
               <ContentCard
-                name="Trashee Habbard"
-                company="CEO at CoWorks"
-                image={imgR3}
-                imageBrand={imgB3}
+                name="Johanna Lindberg"
+                company="Forskare på LTU"
+                image={johanna}
+                imageBrand={ltu}
               >
-                "Must have book for students, who want to be Product Designer,
-                UX Designer, or Interaction Designer."
+                "Ni vet hur man sitter och har vilda idéer om lösningar på
+                problem, men så börjar hindren torna upp sig. På Iteam använder
+                de sig av de där hindren i sina lösningar, ju fler hinder ju
+                bättre lösning. Otroligt kreativt att jobba med Iteam"
               </ContentCard>
             </Col>
           </Row>
         </Container>
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews
