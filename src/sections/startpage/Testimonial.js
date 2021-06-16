@@ -197,7 +197,7 @@ const Testimonial = () => {
                         Erika Strandberg
                       </Title>
                       <Text variant="small">
-                        Lead Service Design, Sveriges allmännytta
+                        Lead Service Design, Allmännyttans Digitaliseringsinitiativ
                       </Text>
                     </SliderText>
                   </SliderCard>
