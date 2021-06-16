@@ -45,8 +45,10 @@ const SliderStyled = styled(Slider)`
     &:before {
       content: "\f060";
     }
-    @media ${device.md} {
-      margin-left: 60px;
+    margin-left: -6px;
+  
+  @media ${device.lg}{
+    margin-left: 40px;
     }
   }
 
@@ -57,8 +59,9 @@ const SliderStyled = styled(Slider)`
     &:before {
       content: "\f061";
     }
-    @media ${device.md} {
-      margin-right: 60px;
+    margin-right: -6px;
+    @media ${device.lg}{
+      margin-right: 40px;
     }
   }
 
@@ -155,9 +158,9 @@ const Testimonial = () => {
     responsive: [
       {
         breakpoint: breakpoints.lg,
-        settings: {
-          arrows: false,
-        },
+        // settings: {
+        //   arrows: false,
+        // },
       },
     ],
   }
