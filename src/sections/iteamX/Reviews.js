@@ -1,15 +1,15 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Text } from "../../components/Core";
+import { Title, Section, Box, Text } from "../../components/Core"
 
-import imgB1 from "../../assets/image/png/testimonial-brand-logo-1.png";
-import imgB2 from "../../assets/image/png/testimonial-brand-logo-2.png";
-import ltu from "../../assets/image/svg/ltu_logo_sv.svg";
+import imgB1 from "../../assets/image/png/testimonial-brand-logo-1.png"
+import imgB2 from "../../assets/image/png/testimonial-brand-logo-2.png"
+import ltu from "../../assets/image/svg/ltu_logo_sv.svg"
 
-import imgR1 from "../../assets/image/jpeg/l8-testimonial-user-image-1.jpg";
-import imgR2 from "../../assets/image/jpeg/l8-testimonial-user-image-2.jpg";
-import johanna from "../../assets/image/jpeg/johanna_lindberg.jpg";
+import imgR1 from "../../assets/image/jpeg/l8-testimonial-user-image-1.jpg"
+import imgR2 from "../../assets/image/jpeg/l8-testimonial-user-image-2.jpg"
+import johanna from "../../assets/image/jpeg/johanna_lindberg.jpg"
 
 const ContentCard = ({
   className,
@@ -32,7 +32,12 @@ const ContentCard = ({
     data-aos-once="true"
   >
     <Box className="text-center">
-      <img src={imageBrand} alt="" className="img-fluid" css={'filter: opacity(30%); height: 100px;'}/>
+      <img
+        src={imageBrand}
+        alt=""
+        className="img-fluid"
+        css={"filter: opacity(30%); height: 100px;"}
+      />
     </Box>
     <Text color="lightShade" mt={4} mb={3} className="text-center mb-0">
       {children}
@@ -59,7 +64,7 @@ const ContentCard = ({
       </Box>
     </Box>
   </Box>
-);
+)
 
 const Reviews = () => {
   return (
@@ -94,14 +99,17 @@ const Reviews = () => {
                 image={johanna}
                 imageBrand={ltu}
               >
-                "Ni vet hur man sitter och har vilda idéer om lösningar på problem, men så börjar hindren torna upp sig. På Iteam använder de sig av de där hindren i sina lösningar, ju fler hinder ju bättre lösning. Otroligt kreativt att jobba med Iteam"
+                "Ni vet hur man sitter och har vilda idéer om lösningar på
+                problem, men så börjar hindren torna upp sig. På Iteam använder
+                de sig av de där hindren i sina lösningar, ju fler hinder ju
+                bättre lösning. Otroligt kreativt att jobba med Iteam"
               </ContentCard>
             </Col>
           </Row>
         </Container>
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

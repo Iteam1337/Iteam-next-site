@@ -1,9 +1,9 @@
-import React, { useState, useContext } from "react";
-import ReactPlayer from "react-player";
-import styled from "styled-components";
-import { Modal } from "react-bootstrap";
-import GlobalContext from "../../context/GlobalContext";
-import { device } from "../../utils";
+import React, { useState, useContext } from "react"
+import ReactPlayer from "react-player"
+import styled from "styled-components"
+import { Modal } from "react-bootstrap"
+import GlobalContext from "../../context/GlobalContext"
+import { device } from "../../utils"
 
 const ModalStyled = styled(Modal)`
   .modal-dialog {
@@ -24,7 +24,7 @@ const ModalStyled = styled(Modal)`
       padding-top: 30px;
     }
   }
-`;
+`
 
 const DivStyled = styled.div`
   margin: 0 auto;
@@ -41,7 +41,7 @@ const DivStyled = styled.div`
     opacity: 1;
     visibility: visible;
   }
-`;
+`
 
 const CloseWrapper = styled.div`
   cursor: pointer;
@@ -58,7 +58,7 @@ const CloseWrapper = styled.div`
   @media ${device.md} {
     right: 2rem;
   }
-`;
+`
 
 const CloseButton = (props) => (
   <CloseWrapper {...props}>
@@ -78,16 +78,16 @@ const CloseButton = (props) => (
       ></path>
     </svg>
   </CloseWrapper>
-);
+)
 
 const ModalVideo = (props) => {
-  const [loading, setLoading] = useState(true);
-  const gContext = useContext(GlobalContext);
+  const [loading, setLoading] = useState(true)
+  const gContext = useContext(GlobalContext)
 
   const handleClose = () => {
-    setLoading(true);
-    gContext.toggleVideoModal();
-  };
+    setLoading(true)
+    gContext.toggleVideoModal()
+  }
 
   return (
     <ModalStyled
@@ -108,14 +108,14 @@ const ModalVideo = (props) => {
               height="100%"
               controls
               onReady={() => {
-                setLoading(false);
+                setLoading(false)
               }}
             />
           </DivStyled>
         </div>
       </Modal.Body>
     </ModalStyled>
-  );
-};
+  )
+}
 
-export default ModalVideo;
+export default ModalVideo

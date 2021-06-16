@@ -1,8 +1,8 @@
-import React from "react";
-import { rgba } from "polished";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { rgba } from "polished"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
+import { Title, Button, Section, Box, Text } from "../../components/Core"
 
 const FeatureCard = ({
   color = "primary",
@@ -30,7 +30,7 @@ const FeatureCard = ({
       </div>
     </div>
   </Box>
-);
+)
 
 const Feature = () => (
   <>
@@ -71,9 +71,7 @@ const Feature = () => (
                   data-aos-delay="50"
                 >
                   <FeatureCard color="primary" title=" Agil coach">
-                    Vi hjälper er att bygga högpresterande, välmående och
-                    autonoma team och organisationer.
-
+                    Vi hjälper ert team att sätta användaren i centrum.
                   </FeatureCard>
                 </Col>
                 <Col
@@ -98,7 +96,8 @@ const Feature = () => (
                   data-aos-delay="50"
                 >
                   <FeatureCard color="secondary" title=" UX">
-                    Vi hjälper ert team att sätta användaren i centrum.
+                    Vi hjälper er att bygga högpresterande, välmående och
+                    autonoma team och organisationer.
                   </FeatureCard>
                 </Col>
               </Row>
@@ -108,6 +107,6 @@ const Feature = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Feature;
+export default Feature

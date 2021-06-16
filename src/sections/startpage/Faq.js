@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Section, Box, Text } from "../../components/Core";
+import { Title, Section, Box, Text } from "../../components/Core"
 
 const SectionStyled = styled(Section)`
   padding-top: 90px;
-`;
+`
 
 const FaqCard = styled(Box)`
   padding-left: 55px;
@@ -32,7 +32,7 @@ const FaqCard = styled(Box)`
   a {
     color: ${({ theme }) => theme.colors.light} !important;
   }
-`;
+`
 
 const FaqTitle = styled(Title)`
   color: ${({ theme }) => theme.colors.light};
@@ -41,7 +41,7 @@ const FaqTitle = styled(Title)`
   letter-spacing: -0.75px;
   margin-bottom: 24px;
   line-height: 2rem;
-`;
+`
 
 const Faq = () => (
   <>
@@ -110,6 +110,6 @@ const Faq = () => (
       </Container>
     </SectionStyled>
   </>
-);
+)
 
-export default Faq;
+export default Faq

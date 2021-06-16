@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import { Title, Box } from "../Core";
-import Logo from "../Logo";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import { Title, Box } from "../Core"
+import Logo from "../Logo"
 
 const TitleStyled = styled(Title)`
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.5px;
   margin-bottom: 22px;
-`;
+`
 
 const UlStyled = styled.ul`
   margin: 0;
@@ -25,7 +25,7 @@ const UlStyled = styled.ul`
       }
     }
   }
-`;
+`
 
 const CopyRightArea = styled.div`
   border-top: ${({ dark, theme }) =>
@@ -62,7 +62,7 @@ const CopyRightArea = styled.div`
       }
     }
   }
-`;
+`
 
 const Footer = ({ isDark = true }) => {
   return (
@@ -235,7 +235,7 @@ const Footer = ({ isDark = true }) => {
         </Container>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

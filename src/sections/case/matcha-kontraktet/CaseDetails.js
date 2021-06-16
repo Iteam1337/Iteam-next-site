@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 
 import {
   Section,
@@ -8,11 +8,11 @@ import {
   Text,
   ImgContainer,
   Anchor,
-} from "../../../components/Core";
+} from "../../../components/Core"
 
-import imgCase1 from "../../../assets/image/case/matcha-kontraktet1.jpg";
-import imgCase2 from "../../../assets/image/case/matcha-screenshot.png";
-import imgCase3 from "../../../assets/image/case/matcha-code.png";
+import imgCase1 from "../../../assets/image/case/matcha-kontraktet1.jpg"
+import imgCase2 from "../../../assets/image/case/matcha-screenshot.png"
+import imgCase3 from "../../../assets/image/case/matcha-code.png"
 
 const CaseDetails = () => (
   <>
@@ -32,15 +32,16 @@ const CaseDetails = () => (
                 Sveriges Allmännytta samlar Sveriges 300 kommunala bostadsbolag.
                 Cirka 100 av dessa deltar i Digitaliseringsinitiativet som är en
                 gemensam satsning för att förstärka och accelerera
-                medlemsbolagens digitalisering. En av utmaningarna i bolagens
-                digitalisering är inlåsning i deras
-                fastighetsadministrationssystem. Sveriges Allmännytta har varit
-                drivande i projeketet fastAPI, en gemensam API-standard för
-                fastighetssystem oavsett leverantör, som ska minska inlåsningen
-                och möjliggöra integrationer och nya tjänster.
+                medlemsbolagens digitalisering.
+                En stor utmaning i bolagens digitalisering är de omfattande
+                inlåsningseffekterna i branschen. Sveriges Allmännyttan har
+                därför varit drivande i utvecklingen av en branschgemensam
+                öppen API-standard, fastAPI. FastAPI ska möjliggöra utbyte av
+                information mellan system oavsett leverantör, vilket möjliggör
+                integrationer mellan system och nya tjänster.
                 <br />
                 <br />
-                För att öka implementationstakten i fastAPI och locka till sig
+                För att öka förståelsen för och därigenom användningen av fastAPI och locka till sig
                 fler tredjepartsutvecklare gav Sveriges Allmännytta Iteam i
                 uppdrag att göra en nulägesanalys av fastAPI, och att skapa en
                 tillämpning baserad på fastAPI åt ett av de medlemsbolag som
@@ -52,23 +53,20 @@ const CaseDetails = () => (
                 Utvärdering och användning av fastAPI
               </Title>
               <Text variant="small">
-                En viktig del av analysen av fastAPI handlade om developer
-                experience, DX. Under processen att både lära sig fastAPI och
-                bedöma enkelheten i att använda de identifierade vi ett relativt
-                stort antal onödiga trösklar som bör åtgärdas i fastAPI för att
-                skapa en kortare startsträcka och snabbare förståelse hos
-                utvecklare som ska börja utveckla tillämpningar.
+                En viktig del av analysen av fastAPI handlade om developer experience,
+                DX. Under processen att både lära sig fastAPI och bedöma enkelheten i
+                att använda de identifierade vi ett antal trösklar som kommer kunna
+                åtgärdas för att skapa en kortare startsträcka och snabbare förståelse
+                hos utvecklare som ska börja utveckla tillämpningar.
+
                 <br />
                 <br />
-                Utmaningen i uppdragets andra halva, att skapa en värdefull
-                tillämpning för ett medlemsföretag, låg i att det relativt
-                omfattande fastAPI:et bara finns delvis implementerat hos
-                medlemsbolagen. I den version som finns tillgänglig erbjuds bara
-                läsmöjligheter till de mest grundläggande affärsentiteterna, som
-                kontrakt, hyresgäster och lägenheter. Många av de
-                tillämpningsidéer som finns hos medlemsbolagen handlar t.ex. om
-                felanmälan och ärenden, vilket finns i senare versioner av
-                fastAPI som ännu inte implementerats av leverantörerna.
+                Utmaningen i uppdragets andra halva var att skapa en värdefull
+                tillämpning för ett medlemsföretag. Detta i syfte att i förlängningen
+                öka intresset för att beställa, kravställa och använda fastAPI hos medlemsbolagen.
+                I uppdraget utgick vi från en version av fastAPI med läsmöjligheter bara till de mest
+                grundläggande affärsentiteterna, som kontrakt, hyresgäster och lägenheter. Många av de tillämpningsidéer som finns hos medlemsbolagen handlar t.ex. om felanmälan och ärenden, vilket finns i senare versioner av fastAPI. Genom att visa på nyttoeffekter redan med grundläggande funktionalitet och möjlighet att kombinera information från olika system ökar intresset hos både bostadsbolag och systemleverantörer att vidareutveckla API:et.
+
               </Text>
             </Box>
             <Box pb={["40px", null, "65px"]}>
@@ -144,7 +142,7 @@ const CaseDetails = () => (
                 <br />
                 Du kan läsa mer om projektet hos{" "}
                 <Anchor target="_blank" color="info" href="https://utveckling.allmannyttan.se">
-                  Sveriges Allmännyttas Digitaliseringsinitiativ
+                  Allmännyttas Utvecklingsportal
                 </Anchor>
                 .
               </Text>
@@ -154,6 +152,6 @@ const CaseDetails = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default CaseDetails;
+export default CaseDetails

@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap"
 
-import MetaTags from "../../components/MetaTags/MetaTags";
-import PageWrapper from "../../components/PageWrapper";
+import MetaTags from "../../components/MetaTags/MetaTags"
+import PageWrapper from "../../components/PageWrapper"
 import {
   Section,
   Title,
@@ -11,8 +11,8 @@ import {
   Box,
   ImgContainer,
   Anchor,
-} from "../../components/Core";
-import imgRole from "../../assets/image/jpeg/from-top.jpg";
+} from "../../components/Core"
+import imgRole from "../../assets/image/jpeg/from-top.jpg"
 
 const OpeningDetails = () => {
   return (
@@ -217,6 +217,6 @@ const OpeningDetails = () => {
         </Section>
       </PageWrapper>
     </>
-  );
-};
-export default OpeningDetails;
+  )
+}
+export default OpeningDetails

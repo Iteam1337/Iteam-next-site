@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
-import { device } from "../../utils";
-import imgDesignSprint from "../../assets/image/case/trr-laptop-transparent.png";
+import { Title, Button, Section, Box, Text } from "../../components/Core"
+import { device } from "../../utils"
+import imgDesignSprint from "../../assets/image/case/trr-laptop-transparent.png"
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;
@@ -26,14 +26,14 @@ const ImageBottom = styled(Box)`
   @media ${device.xl} {
     left: 8%;
   }
-`;
+`
 
 const ImageRight = styled(Box)`
   img {
     box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
     border-radius: 10px;
   }
-`;
+`
 
 const Content2 = () => (
   <>
@@ -80,6 +80,6 @@ const Content2 = () => (
       </Container>
     </Section>
   </>
-);
+)
 
-export default Content2;
+export default Content2

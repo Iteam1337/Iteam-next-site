@@ -1,6 +1,6 @@
-const withOptimizedImages = require("next-optimized-images");
-const withFonts = require("next-fonts");
-const redirects = require('./redirects.json')
+const withOptimizedImages = require("next-optimized-images")
+const withFonts = require("next-fonts")
+const redirects = require("./redirects.json")
 
 module.exports = withFonts(
   withOptimizedImages({
@@ -13,16 +13,16 @@ module.exports = withFonts(
       // Fixes npm packages that depend on `fs` module
       if (!isServer) {
         config.node = {
-          fs: 'empty'
+          fs: "empty",
         }
       }
-  
+
       config.module.rules.push({
         test: /\.md$/,
-        use: 'raw-loader',
+        use: "raw-loader",
       })
 
       return config
-    }
+    },
   })
-);
+)

@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import Link from 'next/link';
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import Link from "next/link"
 
-import { Title, Button, Section, Text } from "../../components/Core";
+import { Title, Button, Section, Text } from "../../components/Core"
 
-import imgContent from "../../assets/image/jpeg/People-Working-2-Lowres.jpg";
+import imgContent from "../../assets/image/jpeg/People-Working-2-Lowres.jpg"
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid #242427;
-`;
+`
 
 const DesignatedTeam = () => (
   <>
@@ -37,13 +37,13 @@ const DesignatedTeam = () => (
             data-aos-once="true"
           >
             <div>
-              <Title color="light">
-                Ett team uppstår inte av en slump
-              </Title>
+              <Title color="light">Ett team uppstår inte av en slump</Title>
               <Text color="lightShade">
-                Om du vill bygga digitala produkter på riktigt så behöver du lämna den traditioella projektmodellen med projektledare som 
-                designar och utvecklare som gör ut.
-                Bra team uppstår när det finns en långsiktighet, tydliga spelregler, uttalat syfte och trygghet för alla teammedlemmar att få leva ut sin potential.
+                Om du vill bygga digitala produkter på riktigt så behöver du
+                lämna den traditioella projektmodellen med projektledare som
+                designar och utvecklare som gör ut. Bra team uppstår när det
+                finns en långsiktighet, tydliga spelregler, uttalat syfte och
+                trygghet för alla teammedlemmar att få leva ut sin potential.
               </Text>
             </div>
           </Col>
@@ -51,6 +51,6 @@ const DesignatedTeam = () => (
       </Container>
     </SectionStyled>
   </>
-);
+)
 
-export default DesignatedTeam;
+export default DesignatedTeam

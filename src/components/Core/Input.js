@@ -1,13 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import {
-  color,
-  space,
-  typography,
-  shadow,
-  layout,
-  border,
-} from "styled-system";
+import React from "react"
+import styled from "styled-components"
+import { color, space, typography, shadow, layout, border } from "styled-system"
 
 const InputSolid = styled.input`
   font-size: 18px;
@@ -31,7 +24,7 @@ const InputSolid = styled.input`
     outline: 0;
     box-shadow: none;
   }
-`;
+`
 
 const InputAnimation = styled.div`
   position: relative;
@@ -79,7 +72,7 @@ const InputAnimation = styled.div`
     transition: 0.4s;
     pointer-events: none;
   }
-`;
+`
 
 const Input = ({
   variant = "solid",
@@ -103,7 +96,7 @@ const Input = ({
       focusColor={focusColor}
       {...rest}
     />
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

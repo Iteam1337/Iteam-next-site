@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import Slider from "react-slick";
-import { rgba } from "polished";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import Slider from "react-slick"
+import { rgba } from "polished"
 
-import { Title, Section, Box, Text } from "../../components/Core";
-import { device, breakpoints } from "../../utils";
+import { Title, Section, Box, Text } from "../../components/Core"
+import { device, breakpoints } from "../../utils"
 
-const SectionStyled = styled(Section)``;
+const SectionStyled = styled(Section)``
 
 const SliderStyled = styled(Slider)`
   position: relative;
@@ -68,13 +68,13 @@ const SliderStyled = styled(Slider)`
       color: ${({ theme }) => theme.colors.secondary}!important;
     }
   }
-`;
+`
 
 const SliderItem = styled(Box)`
   &:focus {
     outline: none;
   }
-`;
+`
 
 const SliderCard = styled(Box)`
   border-radius: 10px;
@@ -109,7 +109,7 @@ const SliderCard = styled(Box)`
     padding-right: 120px;
     padding-left: 120px;
   }
-`;
+`
 
 const NumberBlock = styled(Box)`
   min-width: 215px;
@@ -127,7 +127,7 @@ const NumberBlock = styled(Box)`
     font-weight: 900;
     letter-spacing: -4.38px;
   }
-`;
+`
 
 const SliderText = styled(Box)`
   display: flex;
@@ -146,7 +146,7 @@ const SliderText = styled(Box)`
   @media ${device.lg} {
     padding-left: 120px;
   }
-`;
+`
 
 const Testimonial = () => {
   const slickSettings = {
@@ -164,7 +164,7 @@ const Testimonial = () => {
         },
       },
     ],
-  };
+  }
 
   return (
     <>
@@ -176,9 +176,9 @@ const Testimonial = () => {
               <div className="text-center">
                 <Title>Innehåll i PDF:en</Title>
                 <Text>
-                  Vi har samlat vår erfarenhet och bjuder nu {" "}
-                  på detta kostnadsfritt till dig som är produktägare 
-                  för team som du vill ska bli xx och yy.
+                  Vi har samlat vår erfarenhet och bjuder nu på detta
+                  kostnadsfritt till dig som är produktägare för team som du
+                  vill ska bli xx och yy.
                 </Text>
               </div>
             </Col>
@@ -272,7 +272,7 @@ const Testimonial = () => {
         </Container>
       </SectionStyled>
     </>
-  );
-};
+  )
+}
 
-export default Testimonial;
+export default Testimonial
