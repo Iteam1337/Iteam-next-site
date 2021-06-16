@@ -2,7 +2,7 @@
 title: "Vad är öppen källkod och varför ska du bry dig?"
 date: "2021-06-10"
 image: "/images/fsfe.jpeg"
-intro: "Öppen källkod är mycket mer än bara gratis programvara. Det är en ideologi som rimmar väl med Sveriges och Europas värderingar"
+intro: "Öppen källkod är mycket mer än bara gratis programvara. Det är en filosofi som rimmar väl med demokratins värderingar."
 ---
 
 Många konsultfirmor har som affärsidé att låsa in sina kunder, både genom att låsa in data och låsa in källkod. Våra värderingar på Iteam är att Skapa värde, Ha kul och Göra något bra - och de värderingarna leder oss fram till att vi hellre hjälper våra kunder att få mer värde genom att bygga vidare på tidigare arbete - än att göra om samma jobb om och om igen. Det blir billigare, snabbare och bättre helt enkelt. Och vi kommer vidare i digitaliseringen istället för att stå kvar och stampa.
