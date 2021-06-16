@@ -143,7 +143,7 @@ const CaseDetails = () => (
                 <br />
                 <br />
                 Du kan läsa mer om projektet hos{" "}
-                <Anchor color="info" href="https://utveckling.allmannyttan.se">
+                <Anchor target="_blank" color="info" href="https://utveckling.allmannyttan.se">
                   Sveriges Allmännyttas Digitaliseringsinitiativ
                 </Anchor>
                 .

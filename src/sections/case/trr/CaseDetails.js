@@ -115,7 +115,7 @@ const CaseDetails = () => (
                 TRR ägs av parterna på den privata arbetsmarknaden,
                 arbetsgivarförbunden inom Svenskt Näringsliv och fackförbunden
                 inom PTK. Läs mer på{" "}
-                <Anchor color="info" href="https://www.trr.se/">
+                <Anchor target="_blank" color="info" href="https://www.trr.se/">
                   trr.se
                 </Anchor>
                 .

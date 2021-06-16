@@ -16,6 +16,9 @@ const Anchor = styled.a`
     ${color};
     text-decoration: underline;
   }
+  &:visited{
+    ${color};
+  }
 `;
 
 const A = ({ href = "#", ...props }) => {
