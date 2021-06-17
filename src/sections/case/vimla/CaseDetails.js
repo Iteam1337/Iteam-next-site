@@ -1,5 +1,6 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
+import Image from "next/image"
 
 import {
   Section,
@@ -47,11 +48,17 @@ const CaseDetails = () => (
               </Text>
             </Box>
             <Box>
-              <ImgContainer className="text-center" pb={["50px", null, "75px"]}>
-                <img src={vimlaImg} alt="" className="img-fluid" />
+              <ImgContainer className="text-center" >
+                <Image
+                  height={209}
+                  width={345}
+                  layout="responsive"
+                  src={vimlaImg}
+                  alt="Vimla"
+                />
               </ImgContainer>
             </Box>
-            <Box pb={["40px", null, "65px"]}>
+            <Box style={{ marginTop: '1rem' }} pb={["40px", null, "65px"]}>
               <Title variant="card" mb="18px">
                 Unika relationer
               </Title>

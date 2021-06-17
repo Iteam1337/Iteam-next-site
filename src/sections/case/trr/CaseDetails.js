@@ -1,5 +1,6 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
+import Image from "next/image"
 
 import {
   Section,
@@ -57,7 +58,13 @@ const CaseDetails = () => (
 
             <Box>
               <ImgContainer className="text-center" pb={["50px", null, "75px"]}>
-                <img src={imgCase2} alt="" className="img-fluid" />
+                <Image
+                  height={303}
+                  width={460}
+                  layout="responsive"
+                  src={imgCase2}
+                  alt="TRR"
+                />
               </ImgContainer>
             </Box>
             <Box pb={["40px", null, "65px"]}>

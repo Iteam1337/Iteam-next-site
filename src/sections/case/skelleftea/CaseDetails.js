@@ -1,5 +1,6 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
+import Image from "next/image"
 
 import {
   Section,
@@ -16,12 +17,18 @@ const CaseDetails = () => (
   <>
     <Section className="position-relative" borderBottom="1px solid #eae9f2;">
       <Container>
-        <ImgContainer className="text-center" pb={["50px", null, "75px"]}>
-          <img src={imgCase1} alt="" className="img-fluid" />
-          <i>Bild: Unsplash, tagen i Atlanta, Georgia</i>
+        <ImgContainer className="text-center">
+          <Image
+            height={229}
+            width={345}
+            layout="responsive"
+            src={imgCase1}
+            alt="Skolklass"
+          />
         </ImgContainer>
+        <i>Bild: Unsplash, tagen i Atlanta, Georgia</i>
 
-        <Row>
+        <Row style={{ marginTop: '2rem' }}>
           <Col lg="12" xl="10" className="offset-xl-1">
             <Box pb={["40px", null, "65px"]}>
               <Text mb="18px">
