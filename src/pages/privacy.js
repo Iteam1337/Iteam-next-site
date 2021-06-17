@@ -45,10 +45,10 @@ const Privacy = () => {
                   </Text>
                   <List>
                     <li>Du själv lämnar dessa till oss, exempelvis i samband med att du blir kund hos oss.</li>
-                    <li>Du själv lämnar des till oss i samband med frivilliga användartester, workshops eller liknande tillställningar</li>
+                    <li>Du själv lämnar dessa till oss i samband med frivilliga användartester, workshops eller liknande tillställningar.</li>
                     <li>Du själv lämnar dessa till oss, exempelvis i samband med att registrerar dig till våra event, i kontakt försäljning, i kontakt via e-post, brev eller via kontaktformulär.</li>
-                    <li>Du själv lämnar dina uppgifter till en leverantör och samarbetspartners som i sin tur har ditt medgivande att dela dina personuppgifter med oss</li>
-                    <li>Vi förbehåller oss också rätten att inhämta uppgifter om dig från andra källor, så kallade tredje part. De uppgifter vi samlar in från tredje part (ex Creditsafe, SPAR m.fl.) kan vara exempelvis namn, kontaktuppgifter, bolagsengagemang och demografisk data från offentliga källor, kreditvärdighet från banker eller kreditvärderingsinstitut.</li>
+                    <li>Du själv lämnar dina uppgifter till en leverantör och samarbetspartners som i sin tur har ditt medgivande att dela dina personuppgifter med oss.</li>
+                    <li>Vi förbehåller oss också rätten att inhämta uppgifter från tredje part (ex Creditsafe, SPAR, UC m.fl.) Dessa uppgifter är exempelvis namn, kontaktuppgifter, bolagsengagemang och demografisk data, kreditvärdighet.</li>
                   </List>
                 </Box>
                 <Box mt={["40px", null, "50px"]}>
@@ -69,7 +69,7 @@ const Privacy = () => {
                       Information om köpta produkter/tjänster och betalningshistorik
                     </li>
                     <li>
-                      Besöksinformation på icke-inloggade och inloggade tjänster, det vill säga din användargenererade data, data rörande vilken enhet som används och viss interaktionsdata.
+                      Besöksinformation på icke-inloggade och inloggade tjänster, det vill säga din användargenererade data, data rörande vilken enhet som används och viss interaktionsdata
                     </li>
                   </List>
                 </Box>
