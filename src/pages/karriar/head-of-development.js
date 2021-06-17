@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 
 import { Container, Row, Col } from "react-bootstrap"
 
@@ -79,11 +80,16 @@ const OpeningDetails = () => {
                 </Box>
                 <ImgContainer
                   className="text-center"
-                  pb={["50px", null, "75px"]}
                 >
-                  <img src={imgRole} alt="" className="img-fluid" />
+                  <Image
+                    height={230}
+                    width={345}
+                    layout="responsive"
+                    src={imgRole}
+                    alt=""
+                  />
                 </ImgContainer>
-                <Box pb={["40px", null, "65px"]}>
+                <Box style={{ marginTop: '1rem' }} pb={["40px", null, "65px"]}>
                   <Title variant="card" mb="18px">
                     Rollen
                   </Title>
