@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Link from "next/link"
+import Image from "next/image"
 import { Title, Box, Text } from "../Core"
 
 const Card = styled(Box)`
@@ -48,7 +49,13 @@ const CaseCard = ({
     <ImageContainer>
       <Link href="/">
         <a>
-          <img src={img} alt={title} className="w-100 img-fluid" />
+          <Image
+            height={254}
+            width={203}
+            layout="responsive"
+            src={img}
+            alt={title}
+          />
         </a>
       </Link>
     </ImageContainer>

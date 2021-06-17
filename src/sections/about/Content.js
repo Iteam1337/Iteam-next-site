@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
+import Image from "next/image"
+
 
 import { Title, Section, Box, Text } from "../../components/Core"
 
@@ -43,21 +45,25 @@ const Content = () => (
         <Row className="mt-5">
           <Col lg="4" sm="5" className="mb-4 ">
             <ContentImg>
-              <img
+              <Image
+                height={515}
+                width={350}
+                layout="responsive"
                 src={imgContent1}
                 alt=""
-                className="img-fluid"
-                style={{ objectFit: "cover", height: "100%" }}
+                objectFit="cover"
               />
             </ContentImg>
           </Col>
           <Col lg="8" sm="7" className="mb-4">
             <ContentImg>
-              <img
+              <Image
+                height={515}
+                width={730}
+                layout="responsive"
                 src={imgContent2}
                 alt=""
-                className="img-fluid"
-                style={{ objectFit: "cover", height: "100%" }}
+                objectFit="cover"
               />
             </ContentImg>
           </Col>

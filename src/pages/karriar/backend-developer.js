@@ -81,7 +81,6 @@ const OpeningDetails = () => {
                   src={imgRole}
                   alt=""
                 />
-                {/* <img src={imgRole} alt="" className="img-fluid" /> */}
               </ImgContainer>
               <Box style={{ marginTop: '1rem' }} pb={["40px", null, "65px"]}>
                 <Title variant="card" mb="18px">
