@@ -6,6 +6,7 @@ import { Title, Button, Section, Box, Text } from "../../components/Core"
 import { device } from "../../utils"
 import imgPM from "../../assets/image/case/predictive-movement.png"
 import Link from "next/link"
+import Image from "next/image"
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;
@@ -50,7 +51,13 @@ const Content2 = () => (
                 data-aos-duration="750"
                 data-aos-once="true"
               >
-                <img src={imgPM} alt="" className="img-fluid" />
+                <Image
+                  height={324}
+                  width={540}
+                  layout="responsive"
+                  src={imgPM}
+                  alt="Predictive Movement"
+                />
               </ImageRight>
             </div>
           </Col>
