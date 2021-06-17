@@ -9,6 +9,11 @@ module.exports = withFonts(
     async redirects() {
       return redirects
     },
+    exportPathMap: function() {
+      return {
+        '/': { page: '/' }
+      };
+    },
     webpack: (config, { isServer }) => {
       // Fixes npm packages that depend on `fs` module
       if (!isServer) {
