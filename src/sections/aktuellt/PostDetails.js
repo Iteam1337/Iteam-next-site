@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Image from "next/image"
 
 import { Box, Badge } from "../../components/Core"
 
@@ -92,7 +93,14 @@ const PostDetails = ({ post }) => (
     <Post>
       {post.image && (
         <div>
-          <img src={post.image} alt={post.title} />
+          <Image
+            height={209}
+            width={345}
+            layout="responsive"
+            src={post.image}
+            alt={post.title}
+            objectFit="cover"
+          />
         </div>
       )}
       <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
