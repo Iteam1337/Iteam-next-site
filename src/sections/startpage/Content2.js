@@ -76,6 +76,10 @@ const Content2 = () => (
                   När man väl har ett API kan man enklare byta ut delar som
                   tidigare var sammansvetsade med gränssnitten.
                 </ContentCard>
+
+                <Text>
+                <a href="/aktuellt/api">Läs mer om API</a>
+              </Text>
               </Box>
             </Box>
           </Col>
