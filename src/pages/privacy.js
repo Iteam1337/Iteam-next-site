@@ -192,7 +192,7 @@ const Privacy = () => {
                 <Box mt={["40px", null, "50px"]}>
                   <Text variant="small">
                     Har du frågor om personuppgiftshantering och datasäkerhet, kontakta oss på {" "}
-                    <Anchor color="info" href="mailto:privacy@iteam.se">privacy@iteam.se</Anchor>
+                    <Anchor color="info" href="mailto:privacy@iteam.se">privacy@iteam.se.</Anchor>
                   </Text>
                 </Box>
 
