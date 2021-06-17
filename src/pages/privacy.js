@@ -178,14 +178,14 @@ const Privacy = () => {
                   <List>
                     <li>Du har rätt att få information om i vilka personuppgifter vi innehar om dig.</li>
                     <li>Du har rätt att begära rättelse av dina personuppgifter om information om dom är felaktiga.</li>
-                    <li>Du har rätt att få dina personuppgifter raderade om behandlingen grundar sig enbart på ditt samtycke och du återkallar samtycket, om uppgifterna inte längre behövs för de ändamål som de behandlats för eller om radering krävs för att uppfylla en rättslig skyldighet</li>
+                    <li>Du har rätt att få dina personuppgifter raderade om behandlingen grundar sig enbart på ditt samtycke och du återkallar samtycket, om uppgifterna inte längre behövs för de ändamål som de behandlats för eller om radering krävs för att uppfylla en rättslig skyldighet.</li>
                   </List>
                 </Box>
 
                 <Box mt={["40px", null, "50px"]}>
                   <Text variant="small">
                     Har du frågor om personuppgiftshantering och datasäkerhet, kontakta oss på {" "}
-                    <Anchor color="info" href="mailto:privacy@iteam.se">privacy@iteam.se</Anchor>
+                    <Anchor color="info" href="mailto:privacy@iteam.se">privacy@iteam.se.</Anchor>
                   </Text>
                 </Box>
 
