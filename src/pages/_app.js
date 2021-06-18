@@ -1,4 +1,5 @@
 // import App from 'next/app'
+import React, { useEffect } from 'react'
 import Layout from "../components/Layout"
 import { GlobalProvider } from "../context/GlobalContext"
 import { useRouter } from 'next/router'
@@ -15,17 +16,17 @@ import "../assets/fonts/fontawesome-5/css/all.css"
 
 const MyApp = ({ Component, pageProps, router }) => {
 
-  const useRouter = useRouter()
+  const nextRouter = useRouter()
 
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url)
     }
-    useRouter.events.on('routeChangeComplete', handleRouteChange)
+    nextRouter.events.on('routeChangeComplete', handleRouteChange)
     return () => {
-      useRouter.events.off('routeChangeComplete', handleRouteChange)
+      nextRouter.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [useRouter.events])
+  }, [nextRouter.events])
 
 
   if (router.pathname.match(/sign|reset|coming/)) {
