@@ -7,6 +7,7 @@ import { Section, Title, Text, Box } from "../../components/Core"
 
 import PostDetails from "../../sections/aktuellt/PostDetails"
 import Sidebar from "../../sections/aktuellt/Sidebar"
+import BlogList from "../../sections/aktuellt/BlogList"
 
 import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts"
 
@@ -78,6 +79,8 @@ const BlogDetails = ({ post, posts }) => {
             </Row>
           </Container>
         </Section>
+        <BlogList posts={posts} />
+
       </PageWrapper>
     </>
   )
