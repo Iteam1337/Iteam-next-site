@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import styled from "styled-components"
 
-import { Title, Section, Box, Text } from "../../components/Core"
+import { Title, Section, Box, Text, Anchor } from "../../components/Core"
 import { device } from "../../utils"
 
 import imgMobile from "../../assets/image/jpeg/Kristina-Fanny-Maria-Lowres.jpg"
@@ -76,6 +76,10 @@ const Content2 = () => (
                   När man väl har ett API kan man enklare byta ut delar som
                   tidigare var sammansvetsade med gränssnitten.
                 </ContentCard>
+
+                <Text>
+                  <Anchor color="info" href="/aktuellt/api">Läs mer om API</Anchor>
+                </Text>
               </Box>
             </Box>
           </Col>

@@ -12,13 +12,11 @@ import Pricing from "../sections/startpage/Pricing"
 import Faq from "../sections/startpage/Faq"
 import CTA from "../sections/startpage/CTA"
 import PageWrapper from "../components/PageWrapper"
-import GoogleAnalytics from "../components/GoogleAnalytics/GoogleAnalytics"
 
 const LandingPage4 = () => {
   return (
     <>
       <PageWrapper headerDark footerDark>
-        <GoogleAnalytics />
         <Hero />
         <Feature />
         <Content1 />

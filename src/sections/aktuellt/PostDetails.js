@@ -34,12 +34,20 @@ const Post = styled(Box)`
     margin-bottom: 1.25rem;
     color: ${({ theme }) => theme.colors.heading} !important;
   }
+  ul li {
+    list-style: disc outside none;
+    margin-left: 1em;
+    font-weight:300;
+    font-size: 18px;
+    margin-bottom: 17px;
+    letter-spacing: -0.56px;
+    line-height: 30px;
+  }
   ol li {
     list-style-type: decimal;
   }
 
-  ul li {
-    list-style-type: disc;
+
   }
   a {
     color: ${({ theme }) => theme.colors.info};
