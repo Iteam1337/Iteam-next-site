@@ -11,11 +11,11 @@ Ett API är en strukturerad, dokumenterad och säker **anslutningspunkt till ett
 
 ### Olika sorters API:er
 
-Ordet API används för relativt många olika sorters gränssnitt mellan applikationer, system och plattformar. Bluetooth är en sorts API som beskriver hur mobila enheter ska kommunicera med varandra, ett annat API är det som en dator använder för att kommunicera med sitt grafikkort. 
+Ordet API används för relativt många olika sorters gränssnitt mellan applikationer, system och plattformar. Bluetooth är en sorts API som beskriver hur mobila enheter ska kommunicera med varandra, ett annat API är det som en dator använder för att kommunicera med sitt grafikkort.
 
 När man pratar om API I dagligt tal och i media menar man dock nästan alltid ett **API till en applikation eller ett system som nås via internet**. Det är också den sortens API som den här texten handlar om. Ett sådant API kan erbjuda funktioner för att hämta information, men också för att utföra aktiviteter - t.ex. beställa en tjänst eller vara, skicka in en anmälan, ändra uppgifter för en användare eller starta en process av något slag.
 
-Ett API är en del av ett system. Även om det kan upplevas som att ett API är något som ligger mellan olika system så är det en del av något av de system som är ihopkopplade. Den som äger systemet som har API:et äger och kontrollerar alltså också API:et och hur det får användas. Ibland har består en hopkoppling av system av flera API:er där de olika systemen har varsitt API. 
+Ett API är en del av ett system. Även om det kan upplevas som att ett API är något som ligger mellan olika system så är det en del av något av de system som är ihopkopplade. Den som äger systemet som har API:et äger och kontrollerar alltså också API:et och hur det får användas. Ibland har består en hopkoppling av system av flera API:er där de olika systemen har varsitt API.
 
 ## Öppna och stängda API:er
 
@@ -29,16 +29,16 @@ Definitionen av öppna och stängda API:er är inte entydig, och vissa menar att
 
 API:er kan vara stora och små, sammanslagna eller uppdelade. Här är några exempel på öppna API:er från myndigheter och företag:
 
- * [Skatteverket](https://www.skatteverket.se/apierochoppnadata) har en mängd API:er både för att hämta statistik och för att genomföra olika ärenden som att ändra folkbokföringsadress och lämna in skattedeklarationer.
- * Flera kollektivtrafikbolag erbjuder tillsammans API:er via [Trafiklab](https://www.trafiklab.se/) för hållplatser, tidtabeller, realtidsinformation för alla och för att köpa biljetter.
- * [Google](https://developers.google.com/apis-explorer) har mängder av API:er, t.ex. Maps som gör att man kan använda Google Maps i sin egen webbtjänst.
- * [Facebook](https://developers.facebook.com/docs/apis-and-sdks/) har ett API som bland annat gör att man kan bygga in delning och skapande av inlägg från andra appar.
- * [Bolagsverket](https://bolagsverket.se/om/oss/api-pa-bolagsverket/api-1.11642) har ett API för att registrera ändringar i bostadsrättsföreningars styrelser
- * [Stripe](https://stripe.com/docs/api) har ett API för kortbetalningar som man kan använda när man bygger en webbshop.
+- [Skatteverket](https://www.skatteverket.se/apierochoppnadata) har en mängd API:er både för att hämta statistik och för att genomföra olika ärenden som att ändra folkbokföringsadress och lämna in skattedeklarationer.
+- Flera kollektivtrafikbolag erbjuder tillsammans API:er via [Trafiklab](https://www.trafiklab.se/) för hållplatser, tidtabeller, realtidsinformation för alla och för att köpa biljetter.
+- [Google](https://developers.google.com/apis-explorer) har mängder av API:er, t.ex. Maps som gör att man kan använda Google Maps i sin egen webbtjänst.
+- [Facebook](https://developers.facebook.com/docs/apis-and-sdks/) har ett API som bland annat gör att man kan bygga in delning och skapande av inlägg från andra appar.
+- [Bolagsverket](https://bolagsverket.se/om/oss/api-pa-bolagsverket/api-1.11642) har ett API för att registrera ändringar i bostadsrättsföreningars styrelser
+- [Stripe](https://stripe.com/docs/api) har ett API för kortbetalningar som man kan använda när man bygger en webbshop.
 
 ## Vad kan man göra med ett API?
 
-Med ett API kan man koppla ihop ett system med ett annat. Det kan låta som något tekniskt och inte särskilt relevant för en vanlig användare. Men API:er är grunden för automatisering. Ett sätt att tänka på kraften i API:er är genom tänka på mashups - kombinationer av tjänster som redan finns. 
+Med ett API kan man koppla ihop ett system med ett annat. Det kan låta som något tekniskt och inte särskilt relevant för en vanlig användare. Men API:er är grunden för automatisering. Ett sätt att tänka på kraften i API:er är genom tänka på mashups - kombinationer av tjänster som redan finns.
 
 Om Försäkringskassan och din kommuns skolförvaltning hade öppna API:er skulle man kunna bygga en app som samtidigt sjukanmäler ditt barn i skolan och anmäler VAB till Försäkringskassan i ett och samma moment, kanske via telefonens röstassistent. Varken Försäkringskassan eller kommunen skulle behöva leda ett sånt projekt eller ens vara inblandade utöver att godkänna användning av API:erna.
 
