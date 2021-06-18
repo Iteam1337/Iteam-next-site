@@ -37,8 +37,11 @@ const Post = styled(Box)`
   ul li {
     list-style: disc outside none;
     margin-left: 1em;
-    font-weight:100;
+    font-weight:300;
+    font-size: 18px;
     margin-bottom: 17px;
+    letter-spacing: -0.56px;
+    line-height: 30px;
   }
   ol li {
     list-style-type: decimal;
