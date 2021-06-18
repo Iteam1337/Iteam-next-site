@@ -18,7 +18,6 @@ const LandingPage4 = () => {
   return (
     <>
       <PageWrapper headerDark footerDark>
-        <GoogleAnalytics />
         <Hero />
         <Feature />
         <Content1 />
