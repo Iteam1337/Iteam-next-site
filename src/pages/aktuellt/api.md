@@ -57,3 +57,5 @@ Inom delar av näringslivet kan idén om ett API verka hotfullt. Vid första anb
 I takt med kundernas digitaliseringsmognad så ökar också förväntningarna på att alla system ska kunna fungera som byggblock i en organisations digitala plattform. System utan ett API kan inte spela den rollen. Utan ett API kan plötsligt den som ville låsa in sina kunder istället själv bli utelåst, med ett API kan man bli en ovärderlig kugge i de större hjul som utgörs av kundernas digitala plattformar.
 
 ![](/images/apiplattform.png)
+
+Licens: [CC-BY](https://creativecommons.org/licenses/by/4.0/)
