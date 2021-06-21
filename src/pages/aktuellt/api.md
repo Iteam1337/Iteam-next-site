@@ -7,7 +7,7 @@ intro: "De flesta vet vad BNP är men få vet vad ett API är. Båda är komplic
 
 ## Introduktion
 
-Ett API är en strukturerad, dokumenterad och säker **anslutningspunkt till ett system som är avsett för andra system**. På samma sätt som en människa kommunicerar med ett system via ett grafiskt gränssnitt som har vyer, listor och, knappar så kommunicerar ett system med ett annat via ett API som har anrop och bestämda dataformat. Förkortningen API betyder Application Programming Interface, vilket också visar på släktskapet med UI - User Interface (d.v.s. det grafiska gränssnittet avsett för människor).
+Ett API är en strukturerad, dokumenterad och säker **anslutningspunkt till ett system som är avsedd för andra system**. På samma sätt som en människa kommunicerar med ett system via ett grafiskt gränssnitt som har vyer, listor och, knappar så kommunicerar ett system med ett annat via ett API som har anrop och bestämda dataformat. Förkortningen API betyder Application Programming Interface, vilket också visar på släktskapet med UI - User Interface (d.v.s. det grafiska gränssnittet avsett för människor).
 
 ### Olika sorters API:er
 
