@@ -35,6 +35,11 @@ API:er kan vara stora och små, sammanslagna eller uppdelade. Här är några ex
 - [Facebook](https://developers.facebook.com/docs/apis-and-sdks/) har ett API som bland annat gör att man kan bygga in delning och skapande av inlägg från andra appar.
 - [Bolagsverket](https://bolagsverket.se/om/oss/api-pa-bolagsverket/api-1.11642) har ett API för att registrera ändringar i bostadsrättsföreningars styrelser
 - [Stripe](https://stripe.com/docs/api) har ett API för kortbetalningar som man kan använda när man bygger en webbshop.
+- Banker, vissa myndigheter (som centralbanker) och finansiella institut måste, enligt EU-direktivet [PSD2](https://www.fi.se/sv/bank/andra-betaltjanstdirektivet-psd-2/), erbjuda API:er för konton, betalningar och transaktioner. Exempel:
+  - [SEB](https://developer.sebgroup.com/)
+  - [Handelsbanken](https://developer.handelsbanken.com/)
+  - [Swedbank](https://developer.handelsbanken.com/)
+  - [Nordea](https://developer.nordeaopenbanking.com/)
 
 ## Vad kan man göra med ett API?
 
