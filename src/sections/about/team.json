@@ -256,21 +256,6 @@
     "specialty": "Planering, kommunikation, vända problem till spännande utmaningar, entusiasmering och relationer."
   },
   {
-    "heroImg": "hero-martin-loman.jpeg",
-    "path": "/about/martin-loman",
-    "username": "martinloman",
-    "email": "martin.loman@iteam.se",
-    "title": "Backend Engineer",
-    "billing-active": 1,
-    "fullname": "Martin Loman",
-    "displayname": "martinloman",
-    "expiration-timestamp": "",
-    "phoneNumber": "070-722 70 24",
-    "why": "Äpplet föll inte långt från trädet den här gången. Jag gillar de klara regler för problemlösning som tekniken sätter. Den skapar ibland hinder men också mängder av nya möjligheter. Jag slutar aldrig att utmanas.",
-    "background": "Datateknik på KTH, examen -99. Då var det glada dagar. Jag överlevde kraschen och har gjort 15+ år som IT-konsult inom systemutveckling.",
-    "specialty": "Att få fart på SQL-frågor i SQL Server. Något jag får använda allt mer sällan nu för tiden."
-  },
-  {
     "heroImg": "hero-mikael-gråborg.jpeg",
     "path": "/about/mikael-gråborg",
     "username": "mikael",
@@ -315,21 +300,6 @@
     "why": "Att undersöka, rita, bygga och testa sig fram till olika lösningar är något jag alltid sysslat med, ofta med fokus på både form och funktion.  och det är fortfarande kärnan i mitt teknikintresse. För mig är teknik ett verktyg för att lösa alla möjliga typer av problem och att få jobba med hela processen, från problem till lösning är det jag gillar mest! ",
     "background": "Civilingenjörsutbildning i Teknisk design, med stort fokus på designprocessen, research och konceptutveckling. Där väcktes mitt intresse för användarcentrerad design och digitala upplevelser och lösningar. Sen dess har jag arbetat som UX-designer inom bland annat fordon och hotellbranschen med allt från tjänste- till UI-design.",
     "specialty": "Mina styrkor ligger i att stanna upp och lyfta blicken. Varför gör vi det här och vad är det vi försöker lösa? Jag vill förstå helhetsbilden kring användarens behov och problem så att vi ser till att lösa rätt sak och har en tydlig riktning. "
-  },
-  {
-    "heroImg": "hero-radu-achim.jpeg",
-    "path": "/about/radu-achim",
-    "username": "ram",
-    "email": "radu.achim@iteam.se",
-    "title": "Backend Engineer",
-    "billing-active": 1,
-    "fullname": "Radu Achim",
-    "displayname": "Radu",
-    "expiration-timestamp": "",
-    "phoneNumber": "070-810 99 38",
-    "why": "Första gången jag fick en dator i mina händer var jag sju år gammal och sedan dess har jag gameat i hela mitt liv. Vid något tillfälle blev jag nyfiken på hur datorerna fungerar och jag upptäckte att programmering var den mest intressanta aspekten av hela processen.",
-    "background": "UPT Timisoara, Facultatea de Automatica si Calculatoare",
-    "specialty": "Javascript, C#"
   },
   {
     "heroImg": "hero-rebecca-noren.jpeg",
