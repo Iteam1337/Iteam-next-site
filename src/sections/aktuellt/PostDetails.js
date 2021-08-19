@@ -37,7 +37,7 @@ const Post = styled(Box)`
   ul li {
     list-style: disc outside none;
     margin-left: 1em;
-    font-weight:300;
+    font-weight:400;
     font-size: 18px;
     margin-bottom: 17px;
     letter-spacing: -0.56px;
@@ -45,6 +45,10 @@ const Post = styled(Box)`
   }
   ol li {
     list-style-type: decimal;
+  }
+  
+  p {
+    font-weight: 400;
   }
 
 
