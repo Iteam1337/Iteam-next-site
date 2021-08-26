@@ -15,25 +15,27 @@ const GlitchHero = () => {
   return (
     <>
       <Canvas id="hero-canvas" />
-      <Container css={`position: absolute; top: -20px; left: 0; bottom: 0; right: 0;`}>
-        <TextContainer>
-          <Link href="/aktuellt/roliga-nyheter">
-            <ClickableArea>
-              <Title variant="hero" color="light">
-                Boom! Vi växer och 
-                <br />har massor att berätta
-              </Title>
-              <Text mb={4} color="light">
-                <TextBg>
-                  Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin.
-                  Det attraherar både kunder och smarta medarbetare.
-                </TextBg>
-              </Text>
-                <Button css={`margin-top: 20px`} bg="secondary" color="dark">Träffa våra nya kollegor</Button>
-            </ClickableArea>
-          </Link>
-        </TextContainer>
-      </Container>
+      <Wrapper>
+        <Container css={`position: absolute; top: 0; left: 0; bottom: 0; right: 0;`}>
+          <TextContainer>
+            <Link href="/aktuellt/roliga-nyheter">
+              <ClickableArea>
+                <Title variant="hero" color="light">
+                  Boom! Vi växer och 
+                  <br />har massor att berätta
+                </Title>
+                <Text mb={4} color="light">
+                  <TextBg>
+                    Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin.
+                    Det attraherar både kunder och smarta medarbetare.
+                  </TextBg>
+                </Text>
+                  <Button css={`margin-top: 20px`} bg="secondary" color="dark">Träffa våra nya kollegor</Button>
+              </ClickableArea>
+            </Link>
+          </TextContainer>
+        </Container>
+      </Wrapper>
     </>
   )
 }
@@ -41,7 +43,7 @@ const GlitchHero = () => {
 const Wrapper = styled.div`
   @media (min-width: 1000px) {
     position: absolute;
-    top: -80px;
+    top: -20px;
     left: 0;
     right: 0;
     bottom: 0;
