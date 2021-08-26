@@ -1130,7 +1130,6 @@
   dependencies:
     "anymatch" "~3.1.1"
     "braces" "~3.0.2"
-    "fsevents" "~2.3.1"
     "glob-parent" "~5.1.0"
     "is-binary-path" "~2.1.0"
     "is-glob" "~4.0.1"
@@ -3560,7 +3559,12 @@
     "raw-loader" "^2.0.0"
     "url-loader" "^1.1.2"
 
-"next@^10.0.0":
+"next-seo@^4.26.0":
+  "integrity" "sha512-5TqywQ3XAwqdmEU1AyNZjR7WdDKFTkDD8aBtgQelPvzBUEy8i0mTjtiw+09jhiHFNik6FqS8uPKCaYcY6jRgSQ=="
+  "resolved" "https://registry.npmjs.org/next-seo/-/next-seo-4.26.0.tgz"
+  "version" "4.26.0"
+
+"next@^10.0.0", "next@^8.1.1-canary.54 || >=9.0.0":
   "integrity" "sha512-dkM1mIfnORtGyzw/Yme8RdqNxlCMZyi4Lqj56F01/yHbe1ZtOaJ0cyqqRB4RGiPhjGGh0319f8ddjDyO1605Ow=="
   "resolved" "https://registry.npmjs.org/next/-/next-10.2.3.tgz"
   "version" "10.2.3"
@@ -4310,7 +4314,7 @@
   dependencies:
     "prop-types" "^15.7.2"
 
-"react-dom@16.13.1":
+"react-dom@>=16.0.0", "react-dom@16.13.1":
   "integrity" "sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.13.1.tgz"
   "version" "16.13.1"
@@ -4463,7 +4467,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@16.13.1":
+"react@>=16.0.0", "react@16.13.1":
   "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.13.1.tgz"
   "version" "16.13.1"
@@ -5282,6 +5286,11 @@
   dependencies:
     "temp-dir" "^1.0.0"
     "uuid" "^3.0.1"
+
+"three@^0.84.0":
+  "integrity" "sha1-lb6FpVoPoAKqYl7VWRMJV9z/2Rg="
+  "resolved" "https://registry.npmjs.org/three/-/three-0.84.0.tgz"
+  "version" "0.84.0"
 
 "through@^2.3.8":
   "integrity" "sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU="

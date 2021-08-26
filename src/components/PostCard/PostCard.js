@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Link from "next/link"
 import { Title, Box, Text, Span, Anchor } from "../Core"
 import { device } from "../../utils"
-import Image from "next/image"
 
 const Card = styled(Box)`
   border-radius: 10px 10px;
