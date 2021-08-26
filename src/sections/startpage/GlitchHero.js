@@ -20,13 +20,12 @@ const GlitchHero = () => {
           <Link href="/aktuellt/roliga-nyheter">
             <ClickableArea>
               <Title variant="hero" color="light">
-                Hej vi har roliga
-                <br />nyheter att berätta!
+                Hej! Vi har roliga
+                <br />nyheter att berätta.
               </Title>
               <Text mb={4} color="light">
                 <TextBg>
-                  Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin.
-                  Tryck här för att läsa mer!
+                Vi växer och blir fler både på kundsidan och på Iteam. Klicka här för att träffa våra nya kollegor och läsa varför.
                 </TextBg>
               </Text>
             </ClickableArea>
