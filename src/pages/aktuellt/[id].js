@@ -8,6 +8,7 @@ import { Section, Title, Text, Box } from "../../components/Core"
 import PostDetails from "../../sections/aktuellt/PostDetails"
 import Sidebar from "../../sections/aktuellt/Sidebar"
 import BlogList from "../../sections/aktuellt/BlogList"
+import { NextSeo } from 'next-seo'
 
 import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts"
 
@@ -35,17 +36,32 @@ export async function getStaticProps({ params }) {
 const BlogDetails = ({ post, posts }) => {
   return (
     <>
+      <NextSeo
+        title={post.title}
+        titleTemplate='%s | Aktuellt på Iteam'
+        description={post.intro}
+        image={post.image}
+        openGraph={{
+          title: post.title,
+          description: post.intro,
+          images: [
+            {
+              url: post.image,
+              alt: post.title,
+            }
+          ],
+          site_name: 'Iteam',
+        }}
+        twitter={{
+          title: post.title,
+          description: post.intro,
+          image: post.image,
+          handle: '@iteam1337',
+          site: '@iteam1337',
+          cardType: 'summary_large_image',
+        }}
+      />
       <PageWrapper footerDark>
-        <Head>
-          <title>{post.title}</title>
-          <meta property="og:title" content={post.title} key="title" />
-          <meta
-            property="og:description"
-            content={post.intro}
-            key="description"
-          />
-          <meta property="og:image" content={post.image} key="image" />
-        </Head>
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
