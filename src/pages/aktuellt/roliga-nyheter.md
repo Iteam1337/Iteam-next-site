@@ -9,7 +9,7 @@ Under våren lanserade vi våra nya erbjudanden [X](/iteamX), [MVP](/mvp) och [S
 
 Vår senaste rekrytering är Erik Hellman, vår nya Utvecklingschef sedan mitten av augusti. Erik säger:
 
-> <span style="font-size: 1.1em">Med fokus på digitalisering som ger större samhällsnytta och riktigt värde för användarna så ser jag fram emot att få arbeta med de frågor som ger mig drivkraft.</span>
+> <span style="font-size: 1.1em">*Med fokus på digitalisering som ger större samhällsnytta och riktigt värde för användarna så ser jag fram emot att få arbeta med de frågor som ger mig drivkraft.*</span>
 
 ## Här är Iteams nya stjärnor
 
