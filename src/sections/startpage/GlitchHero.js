@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { Container } from "react-bootstrap"
 
 import { Title, Text } from "../../components/Core"
-import heroImg from '../../assets/image/jpeg/new_colleagues.jpg'
+import heroImg from '../../assets/image/jpeg/new_colleagues_grayscale.jpeg'
 
 const GlitchHero = () => {
   useEffect(() => {
