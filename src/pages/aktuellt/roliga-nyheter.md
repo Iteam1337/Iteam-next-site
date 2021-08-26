@@ -1,9 +1,11 @@
 ---
-title: "Nu är vi fler som är redo att hjälpa dig"
+title: "Hållbar digitalisering attraherar både kompetens och kunder"
 date: "2021-08-25"
 image: "/images/new_colleagues.jpg"
 intro: Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin
 ---
+
+Pandemiåret 2020 var tufft även för oss. Vi använde dock tiden till att formera oss till de utmaningar som vi vet att hela samhället behöver ta sig an nu. Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin. Vi kommer fortsätta växa och vill du ha ett team som både har hjärtat och hjärnan på rätt ställe så tvecka inte att [höra av dig](/book) eller vill du [också göra skillnad?](/karriar). 
 
 Under våren lanserade vi våra nya erbjudanden [X](/iteamX), [MVP](/mvp) och [Scale-up](/scaleup) som tydliggör att vi jobbar användardrivet både med senaste tekniken och som extra hjärnor och hjärtan i befintliga team. Att förbättra samhället med hjälp av digital teknik är något som visar sig attrahera nya kunder så väl som fantastiska kollegor och vi har redan välkomnat flera under året.
 

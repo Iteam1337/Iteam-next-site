@@ -4,7 +4,7 @@ import * as THREE from "three"
 import styled from "styled-components"
 import { Container } from "react-bootstrap"
 
-import { Title, Text } from "../../components/Core"
+import { Title, Text, Button } from "../../components/Core"
 import heroImg from '../../assets/image/jpeg/new_colleagues.jpg'
 
 const GlitchHero = () => {
@@ -15,25 +15,25 @@ const GlitchHero = () => {
   return (
     <>
       <Canvas id="hero-canvas" />
-      <Wrapper>
-        <Container css={`position: absolute; top: 0; left: 0; bottom: 0; right: 0;`}>
-          <TextContainer>
-            <Link href="/aktuellt/roliga-nyheter">
-              <ClickableArea>
-                <Title variant="hero" color="light">
-                  Hej! Vi har roliga
-                  <br />nyheter att berätta.
-                </Title>
-                <Text mb={4} color="light">
-                  <TextBg>
-                  Vi växer och blir fler både på kundsidan och på Iteam. Klicka här för att träffa våra nya kollegor och läsa varför.
-                  </TextBg>
-                </Text>
-              </ClickableArea>
-            </Link>
-          </TextContainer>
-        </Container>
-      </Wrapper>
+      <Container css={`position: absolute; top: -20px; left: 0; bottom: 0; right: 0;`}>
+        <TextContainer>
+          <Link href="/aktuellt/roliga-nyheter">
+            <ClickableArea>
+              <Title variant="hero" color="light">
+                Boom! Vi växer och 
+                <br />har massor att berätta
+              </Title>
+              <Text mb={4} color="light">
+                <TextBg>
+                  Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin.
+                  Det attraherar både kunder och smarta medarbetare.
+                </TextBg>
+              </Text>
+                <Button css={`margin-top: 20px`} bg="secondary" color="dark">Träffa våra nya kollegor</Button>
+            </ClickableArea>
+          </Link>
+        </TextContainer>
+      </Container>
     </>
   )
 }
@@ -60,7 +60,7 @@ const Canvas = styled.canvas`
 
 const TextBg = styled.div`
   display: inline;
-  background: rgba(0,0,0,.4);
+  background: rgba(0,0,0,.6);
   padding: 8px;
   white-space:pre-wrap;
   box-decoration-break: clone;
