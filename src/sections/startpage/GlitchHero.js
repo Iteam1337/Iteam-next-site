@@ -20,7 +20,7 @@ const GlitchHero = () => {
           <Link href="/aktuellt/roliga-nyheter">
             <ClickableArea>
               <Title variant="hero" color="light">
-                Boom! Vi växer och 
+                Hej! Vi växer och 
                 <br />har massor att berätta
               </Title>
               <Text mb={4} color="light">
@@ -29,7 +29,7 @@ const GlitchHero = () => {
                   Det attraherar både kunder och smarta medarbetare.
                 </TextBg>
               </Text>
-                <Button>Kolla här!</Button>
+                <Button>Boom!</Button>
             </ClickableArea>
           </Link>
         </TextContainer>
