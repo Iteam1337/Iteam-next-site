@@ -15,26 +15,38 @@ const GlitchHero = () => {
   return (
     <>
       <Canvas id="hero-canvas" />
-      <Container css={`position: absolute; top: -80px; left: 0; bottom: 0; right: 0;`}>
-        <TextContainer>
-          <Link href="/aktuellt/roliga-nyheter">
-            <ClickableArea>
-              <Title variant="hero" color="light">
-                Hej! Vi har roliga
-                <br />nyheter att berätta.
-              </Title>
-              <Text mb={4} color="light">
-                <TextBg>
-                Vi växer och blir fler både på kundsidan och på Iteam. Klicka här för att träffa våra nya kollegor och läsa varför.
-                </TextBg>
-              </Text>
-            </ClickableArea>
-          </Link>
-        </TextContainer>
-      </Container>
+      <Wrapper>
+        <Container css={`position: absolute; top: 0; left: 0; bottom: 0; right: 0;`}>
+          <TextContainer>
+            <Link href="/aktuellt/roliga-nyheter">
+              <ClickableArea>
+                <Title variant="hero" color="light">
+                  Hej! Vi har roliga
+                  <br />nyheter att berätta.
+                </Title>
+                <Text mb={4} color="light">
+                  <TextBg>
+                  Vi växer och blir fler både på kundsidan och på Iteam. Klicka här för att träffa våra nya kollegor och läsa varför.
+                  </TextBg>
+                </Text>
+              </ClickableArea>
+            </Link>
+          </TextContainer>
+        </Container>
+      </Wrapper>
     </>
   )
 }
+
+const Wrapper = styled.div`
+  @media (min-width: 1000px) {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+`
 
 const ClickableArea = styled.div`
   cursor: pointer;
