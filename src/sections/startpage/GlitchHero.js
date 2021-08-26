@@ -4,8 +4,8 @@ import * as THREE from "three"
 import styled from "styled-components"
 import { Container } from "react-bootstrap"
 
-import { Title, Text } from "../../components/Core"
-import heroImg from '../../assets/image/jpeg/new_colleagues_grayscale.jpeg'
+import { Title, Text, Button } from "../../components/Core"
+import heroImg from '../../assets/image/jpeg/new_colleagues_pink.jpg'
 
 const GlitchHero = () => {
   useEffect(() => {
@@ -15,20 +15,21 @@ const GlitchHero = () => {
   return (
     <>
       <Canvas id="hero-canvas" />
-      <Container css={`position: absolute; top: -80px; left: 0; bottom: 0; right: 0;`}>
+      <Container css={`position: absolute; top: 0px; left: 0; bottom: 0; right: 0;`}>
         <TextContainer>
           <Link href="/aktuellt/roliga-nyheter">
             <ClickableArea>
               <Title variant="hero" color="light">
-                Hej vi har roliga
-                <br />nyheter att berätta!
+                Boom! Vi växer och 
+                <br />har massor att berätta
               </Title>
               <Text mb={4} color="light">
                 <TextBg>
                   Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin.
-                  Tryck här för att läsa mer!
+                  Det attraherar både kunder och smarta medarbetare.
                 </TextBg>
               </Text>
+                <Button>Kolla här!</Button>
             </ClickableArea>
           </Link>
         </TextContainer>
