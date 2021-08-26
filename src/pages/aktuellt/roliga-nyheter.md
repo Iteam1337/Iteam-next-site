@@ -5,7 +5,7 @@ image: "/images/new_colleagues.jpg"
 intro: Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin
 ---
 
-Pandemiåret 2020 var tufft även för oss. Vi använde dock tiden till att formera oss till de utmaningar som vi vet att hela samhället behöver ta sig an nu. Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin. Vi kommer fortsätta växa och vill du ha ett team som både har hjärtat och hjärnan på rätt ställe så tvecka inte att [höra av dig](/book) eller vill du [också göra skillnad?](/karriar). 
+Pandemiåret 2020 var tufft även för oss. Vi använde dock tiden till att formera oss till de utmaningar som vi vet att hela samhället behöver ta sig an nu. Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin.
 
 Under våren lanserade vi våra nya erbjudanden [X](/iteamX), [MVP](/mvp) och [Scale-up](/scaleup) som tydliggör att vi jobbar användardrivet både med senaste tekniken och som extra hjärnor och hjärtan i befintliga team. Att förbättra samhället med hjälp av digital teknik är något som visar sig attrahera nya kunder så väl som fantastiska kollegor och vi har redan välkomnat flera under året.
 
@@ -14,6 +14,14 @@ Vår senaste rekrytering är Erik Hellman, vår nya Utvecklingschef sedan mitten
 > <span style="font-size: 1.1em">*Med fokus på digitalisering som ger större samhällsnytta och riktigt värde för användarna så ser jag fram emot att få arbeta med de frågor som ger mig drivkraft.*</span>
 
 ## Här är Iteams nya stjärnor
+
+![Erik](/images/people/erik.jpg)
+
+#### Erik Hellman, Head of Development
+
+Med sin långa erfarenhet inom systemutveckling har Erik det övergripande ansvaret för våra utvecklare och de tekniska lösningarna i våra kundprojekt. Han trivs med att skapa långsiktiga och hållbara lösningar, agera mentor när det behövs, och hitta enkla lösningar på komplexa problem. En ovärderlig tillgång i alla projekt!
+
+<br><br>
 
 ![Mikaela](/images/people/mikaela.jpg)
 
@@ -60,14 +68,6 @@ Maria har erfarenhet både från stora och små företag runt om i världen. Hon
 #### Anders Ytterström, Fullstackutvecklare
 
 Anders har lång erfarenhet av webbutveckling från såväl byråer som SaaS-bolag. Hans passion är att tillgodose användarcentrerade behov och att skapa mjukvara som inkluderar så många som möjligt. En styrka i varje team!
-
-<br><br>
-
-![Erik](/images/people/erik.jpg)
-
-#### Erik Hellman, Head of Development
-
-Med sin långa erfarenhet inom systemutveckling har Erik det övergripande ansvaret för våra utvecklare och de tekniska lösningarna i våra kundprojekt. Han trivs med att skapa långsiktiga och hållbara lösningar, agera mentor när det behövs, och hitta enkla lösningar på komplexa problem. En ovärderlig tillgång i alla projekt!
 
 <br><br>
 
