@@ -137,6 +137,21 @@
     "specialty": "Att kunna läsa av och förstå situationer och människor. Och så kan jag transkribera supersnabbt!"
   },
   {
+    "heroImg": "hero-erik-hellman.jpeg",
+    "path": "/about/erik-hellman",
+    "username": "erik.hellman",
+    "email": "erik.hellman@iteam.se",
+    "title": "Head of Development",
+    "billing-active": 1,
+    "fullname": "Erik Hellman",
+    "displayname": "erikhellman",
+    "expiration-timestamp": "",
+    "phoneNumber": "0705-777 477",
+    "why": "Ända sen min far tog hem en PC på tidigt 80-tal så har jag haft stort intresse av allt kring datorer. Jag kom i kontakt med Internet innan de flesta hört talas om det och blev på så vis tidigt varse om vilka möjligheter vi har. Att utforska nya möjligheter med teknik är fortfarande bland det mest spännande jag vet.",
+    "background": "Lärde mig programmering av min far när jag var runt 9 år gammal. Läste Programvaruteknik på Blekinge Tekniska Högskola.",
+    "specialty": "Långsiktigt tänkade kring teknikval och mjukvarudesign. Fokus på användarnytta och tillgänglighetsanpassning. Lång erfarenhet av att bygga mobilappar."
+  },  
+  {
     "heroImg": "hero-fanny-willbjer-schörling.jpeg",
     "path": "/about/fanny-willbjer-schörling",
     "username": "fannynylund",
