@@ -135,14 +135,16 @@ const Footer = ({ isDark = true }) => {
                             href="https://maps.google.com/?q=Iteam, Järntorgsgatan, Göteborg"
                             target="_blank"
                           >
-                            Järntorgsgatan 12-14
+                            Iteam Solutions AB
+                              <br />
+                              Järntorgsgatan 12
                             <br />
                             413 01 Göteborg
                           </a>
                         </li>
                         <li>
-                          <a href="https://ec.europa.eu/taxation_customs/vies/">
-                            VAT: SE556551692801
+                          <a href="https://www.allabolag.se/5565516928/iteam-solutions-aktiebolag">
+                            Org nr: 556551-6928
                           </a>
                         </li>
                       </UlStyled>
