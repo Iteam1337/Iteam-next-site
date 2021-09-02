@@ -71,7 +71,8 @@ const Feature = () => (
                   data-aos-delay="50"
                 >
                   <FeatureCard color="primary" title=" Agil coach">
-                    Vi hjälper ert team att sätta användaren i centrum.
+                    Vi hjälper er att bygga högpresterande, välmående och
+                    autonoma team och organisationer.
                   </FeatureCard>
                 </Col>
                 <Col
@@ -95,9 +96,8 @@ const Feature = () => (
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
-                  <FeatureCard color="secondary" title=" UX">
-                    Vi hjälper er att bygga högpresterande, välmående och
-                    autonoma team och organisationer.
+                  <FeatureCard color="secondary" title="UX">
+                    Vi hjälper ert team att sätta användaren i centrum.
                   </FeatureCard>
                 </Col>
               </Row>
