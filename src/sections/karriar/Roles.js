@@ -94,6 +94,15 @@ const Roles = () => (
               link="/karriar/backend-developer"
             />
           </Col>
+          <Col lg="4" md="6" className="pt-4">
+            <RolesCard
+              color="warning"
+              title="UX Designer"
+              type="Full-time"
+              location="Göteborg, Stockholm eller remote"
+              link="/karriar/ux-designer"
+            />
+          </Col>
         </Row>
       </Container>
     </Section>
