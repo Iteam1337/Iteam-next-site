@@ -20,7 +20,10 @@ if (process.browser) {
 }
 
 const MyApp = ({ Component, pageProps, router }) => {
-  if (router.pathname.match(/sign|reset|coming/)) {
+  if (
+    router.pathname.match(/sign|reset|coming/) &&
+    !router.pathname.match("design")
+  ) {
     return (
       <GlobalProvider>
         <Layout pageContext={{ layout: "bare" }}>
