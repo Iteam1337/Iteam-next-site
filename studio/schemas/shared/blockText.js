@@ -1,10 +1,13 @@
 export default {
-  type: '',
-
-  //    fi {
-  //   title: 'Text',
-  //   name: 'blockText',
-  //   type: 'array',
-  //   of: [{ type: 'block' }],
-  //     }
+  type: 'document',
+  name: 'blockText',
+  title: 'Text',
+  fields: [
+    {
+      title: 'Text',
+      name: 'blockText',
+      type: 'array',
+      of: [{ type: 'block' }],
+    },
+  ],
 };
