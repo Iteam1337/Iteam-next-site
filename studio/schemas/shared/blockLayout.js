@@ -6,7 +6,7 @@ export default {
   of: [
     { type: 'image' },
     {
-      type: 'blockText',
+      type: 'text',
     },
   ],
 };

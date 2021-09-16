@@ -1,16 +1,15 @@
 export default {
-    name: 'casePage',
+    name: 'casePost',
     type: 'document',
-    title: 'Case',
+    title: 'Lägg till nytt case',
     fields: [
-        { type: 'title', name: 'title' },
-        { type: 'text', name: 'subtitle', title: 'Undertitel' },
+        { type: 'previewCard', name: 'previewCard', title: 'Förhandsvisning' },
     ],
     preview: {
         select: {
             title: 'pageName'
         },
-        prepare({ name = 'add-case' }) {
+        prepare({ name = 'case' }) {
             const path = `/${name}`
             return {
                 path,
