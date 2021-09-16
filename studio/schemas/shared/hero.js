@@ -5,13 +5,17 @@ export default {
   fields: [
     {
       name: 'heroTitle',
-      title: 'Hero Title',
+      title: 'Title',
       type: 'string',
+      validation: (Rules) =>
+        Rules.required().error('Du behöver sätta en titel!'),
     },
     {
       name: 'heroSubTitle',
-      title: 'Hero Subtitle',
+      title: 'Subtitle',
       type: 'string',
+      validation: (Rules) =>
+        Rules.required().error('En subtitel kan vara snyggt att ha också'),
     },
     {
       name: 'heroCta',
