@@ -13,6 +13,7 @@ import casePage from './pages/casePage'
 import casePost from './pages/casePost'
 import title from './shared/title'
 import imageCard from './shared/imageCard';
+import titleWithCTA from './shared/titleWithCTA'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -31,6 +32,7 @@ export default createSchema({
     casePage,
     casePost,
     title,
-    imageCard
+    imageCard,
+    titleWithCTA
   ]),
 });

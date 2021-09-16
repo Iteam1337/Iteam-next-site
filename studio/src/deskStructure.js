@@ -8,10 +8,7 @@ export default () =>
                 .title('Sidor')
                 .child(
                     S.list()
-                        // Sets a title for our new list
                         .title('Sidor')
-                        // Add items to the array
-                        // Each will pull one of our new singletons
                         .items([
                             S.listItem()
                                 .title('Case')
@@ -20,19 +17,19 @@ export default () =>
                                         .title('Case')
                                         .items([
                                             S.listItem()
-                                                .title('Case')
+                                                .title('Case landningssida')
                                                 .child(
                                                     S.document().schemaType('casePage').documentId('casePage')
                                                 ),
+                                            S.divider(),
                                             S.listItem()
-                                                .title('Lägg till nytt case')
+                                                .title('Case')
                                                 .child(
-                                                    S.document()
-                                                        .schemaType('casePost')
-                                                        .documentId('casePost')
+                                                    S.documentTypeList('casePost').title('Alla case')
                                                 )
                                         ])
                                 ),
+                            S.divider(),
                             S.listItem()
                                 .title('Startsidan')
                                 .child(
@@ -47,6 +44,6 @@ export default () =>
             // We also need to remove the new singletons from the main list
             ...S.documentTypeListItems().filter(
                 (listItem) =>
-                    !['casePage', 'casePost', 'startPage', 'hero', 'cta'].includes(listItem.getId())
+                    !['casePage', 'casePost', 'startPage', 'hero', 'cta', 'imageCard', 'mediaTypes', 'titleWithCTA'].includes(listItem.getId())
             ),
         ]);
