@@ -3,8 +3,10 @@ export default {
     type: 'document',
     title: 'Case',
     fields: [
-        { type: 'title', name: 'title' },
-        { type: 'text', name: 'subtitle', title: 'Undertitel' },
+        { type: 'title', name: 'title', title: 'Rubrik' },
+        { type: 'string', name: 'subtitle', title: 'Underrubrik', validation: (Rules) => Rules.required().error('Du behöver ange en rubrik') },
+        { type: 'imageCard', name: 'imageCardOne', title: 'Kort' },
+        { type: 'imageCard', name: 'imageCardTwo', title: 'Kort' }
     ],
     preview: {
         select: {

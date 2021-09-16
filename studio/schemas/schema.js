@@ -8,11 +8,11 @@ import cta from './shared/cta';
 import hero from './shared/hero';
 import mediaTypes from './shared/mediaTypes';
 import blockLayout from './shared/blockLayout';
-// import blockText from './shared/blockText';
+import blockText from './shared/blockText';
 import casePage from './pages/casePage'
 import casePost from './pages/casePost'
 import title from './shared/title'
-import previewCard from './shared/previewCard';
+import imageCard from './shared/imageCard';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,10 +27,10 @@ export default createSchema({
     hero,
     mediaTypes,
     blockLayout,
-    // blockText,
+    blockText,
     casePage,
     casePost,
     title,
-    previewCard
+    imageCard
   ]),
 });

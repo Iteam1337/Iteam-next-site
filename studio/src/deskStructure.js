@@ -14,7 +14,7 @@ export default () =>
                         // Each will pull one of our new singletons
                         .items([
                             S.listItem()
-                                .title('Case sidan')
+                                .title('Case')
                                 .child(
                                     S.list()
                                         .title('Case')
