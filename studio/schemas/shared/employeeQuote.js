@@ -11,21 +11,21 @@ export default {
       name: 'name',
       title: 'Namn på anställd',
       validation: (Rules) =>
-        Rules.required().error('Du behöver ange ett namn på en anställd'),
+        Rules.required().error('Du behöver ange ett namn på en anställd.'),
     },
     {
       type: 'string',
-      name: 'position',
-      title: 'Position',
+      name: 'role',
+      title: 'Roll',
       validation: (Rules) =>
-        Rules.required().error('Ange vilken position den anställda har'),
+        Rules.required().error('Ange vilken roll den anställda har.'),
     },
 
     {
       type: 'blockText',
       name: 'qoute',
       title: 'Citat från anställd',
-      validation: (Rules) => Rules.required().error('Glöm inte citatet'),
+      validation: (Rules) => Rules.required().error('Glöm inte citatet.'),
     },
     {
       type: 'imageWithAlt',
@@ -33,7 +33,7 @@ export default {
       title: 'Bild på anställd',
       validation: (Rules) =>
         Rules.required().error(
-          'Glöm inte att lägga in en bild på den anställda'
+          'Glöm inte att lägga in en bild på den anställda.'
         ),
     },
   ],

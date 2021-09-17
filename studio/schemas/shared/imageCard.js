@@ -2,6 +2,9 @@ export default {
   name: 'imageCard',
   type: 'document',
   title: 'test',
+  options: {
+    collapsible: true,
+  },
   fields: [
     {
       title: 'Rubrik',

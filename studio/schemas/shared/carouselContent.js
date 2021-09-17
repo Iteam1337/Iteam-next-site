@@ -10,8 +10,8 @@ export default {
     },
     {
       type: 'string',
-      name: 'position',
-      title: 'Position',
+      name: 'role',
+      title: 'Roll',
     },
     {
       type: 'text',

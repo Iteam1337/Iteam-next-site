@@ -27,6 +27,8 @@ import careerPage from './pages/careerPage';
 import employeeQuote from './shared/employeeQuote';
 import openPositions from './pages/openPositions';
 import openings from './shared/openings';
+import layoutImages from './shared/layoutImages';
+import coworker from './pages/coworker';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -60,5 +62,7 @@ export default createSchema({
     employeeQuote,
     openPositions,
     openings,
+    layoutImages,
+    coworker,
   ]),
 });

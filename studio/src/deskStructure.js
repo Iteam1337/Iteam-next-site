@@ -96,13 +96,13 @@ export default () =>
                             .documentId('aboutPage')
                             .title('Om oss landningssida')
                         ),
-                      // S.divider(),
-                      // S.listItem()
-                      //   .title('Nyheter')
-                      //   .icon(FaRegFolderOpen)
-                      //   .child(
-                      //     S.documentTypeList('newsPost').title('Alla nyheter')
-                      //   ),
+                      S.divider(),
+                      S.listItem()
+                        .title('Medarbetare')
+                        .icon(FaRegFolderOpen)
+                        .child(
+                          S.documentTypeList('coworker').title('Alla medarbetare')
+                        ),
                     ])
                 ),
               S.divider(),
@@ -124,11 +124,11 @@ export default () =>
                         ),
                       S.divider(),
                       S.listItem()
-                        .title('Öppna positioner')
+                        .title('Öppna tjänster')
                         .icon(FaRegFolderOpen)
                         .child(
                           S.documentTypeList('openPositions').title(
-                            'Öppna positioner'
+                            'Öppna tjänster'
                           )
                         ),
                     ])

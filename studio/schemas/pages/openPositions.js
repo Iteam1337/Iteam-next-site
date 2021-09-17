@@ -1,7 +1,7 @@
 export default {
   name: 'openPositions',
   type: 'document',
-  title: 'Lägg till en position',
+  title: 'Lägg till en tjänst',
   fields: [
     {
       type: 'string',

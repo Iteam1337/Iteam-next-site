@@ -25,7 +25,7 @@ export default {
       title: 'Referens',
       description:
         'Här sätter du vart man ska ledas om man klickar på knappen.',
-      to: [{ type: 'startPage' }, { type: 'casePage' }, { type: 'casePost' }],
+      to: [{ type: 'startPage' }, { type: 'casePage' }, { type: 'casePost' }, { type: 'careerPage' }],
     },
   ],
 };
