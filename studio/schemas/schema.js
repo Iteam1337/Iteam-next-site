@@ -23,6 +23,11 @@ import newsPage from './pages/newsPage';
 import newsPost from './pages/newsPost';
 import about from './pages/about';
 import titleWithText from './shared/titleWithText';
+import careerPage from './pages/careerPage';
+import employeeQuote from './shared/employeeQuote';
+import openPositions from './pages/openPositions';
+import openings from './shared/openings';
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -50,6 +55,10 @@ export default createSchema({
     newsPage,
     newsPost,
     about,
-    titleWithText
+    titleWithText,
+    careerPage,
+    employeeQuote,
+    openPositions,
+    openings,
   ]),
 });

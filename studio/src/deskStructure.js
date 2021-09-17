@@ -4,6 +4,7 @@ import {
   FaRegFolderOpen,
   FaRegFileImage,
   FaRegClone,
+  FaRegFolder,
 } from 'react-icons/fa';
 
 export default () =>
@@ -18,8 +19,18 @@ export default () =>
             .title('Sidor')
             .items([
               S.listItem()
-                .title('Case')
+                .title('Startsidan')
                 .icon(FaRegFileImage)
+                .child(
+                  S.document()
+                    .title('Startsidan')
+                    .schemaType('startPage')
+                    .documentId('startPage')
+                ),
+              S.divider(),
+              S.listItem()
+                .title('Case')
+                .icon(FaRegFolder)
                 .child(
                   S.list()
                     .title('Case')
@@ -45,7 +56,7 @@ export default () =>
               S.divider(),
               S.listItem()
                 .title('Aktuellt')
-                .icon(FaRegFileImage)
+                .icon(FaRegFolder)
                 .child(
                   S.list()
                     .title('Aktuellt')
@@ -71,7 +82,7 @@ export default () =>
               S.divider(),
               S.listItem()
                 .title('Om oss')
-                .icon(FaRegFileImage)
+                .icon(FaRegFolder)
                 .child(
                   S.list()
                     .title('Om oss')
@@ -96,13 +107,31 @@ export default () =>
                 ),
               S.divider(),
               S.listItem()
-                .title('Startsidan')
-                .icon(FaRegFileImage)
+                .title('Karriär')
+                .icon(FaRegFolder)
                 .child(
-                  S.document()
-                    .title('Startsidan')
-                    .schemaType('startPage')
-                    .documentId('startPage')
+                  S.list()
+                    .title('Karriär')
+                    .items([
+                      S.listItem()
+                        .title('Karriär landningssida')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('careerPage')
+                            .documentId('careerPage')
+                            .title('Karrriär landningssida')
+                        ),
+                      S.divider(),
+                      S.listItem()
+                        .title('Öppna positioner')
+                        .icon(FaRegFolderOpen)
+                        .child(
+                          S.documentTypeList('openPositions').title(
+                            'Öppna positioner'
+                          )
+                        ),
+                    ])
                 ),
             ])
         ),
@@ -126,7 +155,8 @@ export default () =>
             'carouselContent',
             'newsPage',
             'newsPost',
-            'titleWithText'
+            'titleWithText',
+            'careerPage',
           ].includes(listItem.getId())
       ),
     ]);
