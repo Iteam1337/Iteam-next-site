@@ -68,7 +68,32 @@ export default () =>
                         ),
                     ])
                 ),
-
+              S.divider(),
+              S.listItem()
+                .title('Om oss')
+                .icon(FaRegFileImage)
+                .child(
+                  S.list()
+                    .title('Om oss')
+                    .items([
+                      S.listItem()
+                        .title('Om oss landningssida')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('aboutPage')
+                            .documentId('aboutPage')
+                            .title('Om oss landningssida')
+                        ),
+                      // S.divider(),
+                      // S.listItem()
+                      //   .title('Nyheter')
+                      //   .icon(FaRegFolderOpen)
+                      //   .child(
+                      //     S.documentTypeList('newsPost').title('Alla nyheter')
+                      //   ),
+                    ])
+                ),
               S.divider(),
               S.listItem()
                 .title('Startsidan')
@@ -99,6 +124,9 @@ export default () =>
             'textGrid',
             'carousel',
             'carouselContent',
+            'newsPage',
+            'newsPost',
+            'titleWithText'
           ].includes(listItem.getId())
       ),
     ]);

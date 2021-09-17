@@ -21,7 +21,8 @@ import carousel from './shared/carousel';
 import carouselContent from './shared/carouselContent';
 import newsPage from './pages/newsPage';
 import newsPost from './pages/newsPost';
-
+import about from './pages/about';
+import titleWithText from './shared/titleWithText';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -47,6 +48,8 @@ export default createSchema({
     carousel,
     carouselContent,
     newsPage,
-    newsPost
+    newsPost,
+    about,
+    titleWithText
   ]),
 });
