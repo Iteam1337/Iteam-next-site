@@ -15,7 +15,7 @@ export default {
     {
       name: 'title',
       type: 'string',
-      description: 'Om du vill har en CTA så kan du namnge den här',
+      description: 'Ange text till CTA',
       title: 'Text på knappen',
     },
     {

@@ -12,6 +12,7 @@ export default {
         list: [
           { title: 'Bild', value: 'image' },
           { title: 'Video', value: 'video' },
+          { title: 'Bakgrunsfärg', value: 'color' }
         ],
       },
     },
@@ -28,5 +29,12 @@ export default {
       type: 'string',
       hidden: ({ parent }) => parent?.mediaType !== 'video',
     },
+    {
+      name: 'color',
+      title: 'Bakgrundsfärg',
+      type: 'colorPicker',
+      description: 'Välj bakgrundsfärg till din hero här',
+      hidden: ({ parent }) => parent?.mediaType !== 'color',
+    }
   ],
 };
