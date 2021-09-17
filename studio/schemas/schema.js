@@ -29,7 +29,7 @@ import openPositions from './pages/openPositions';
 import openings from './shared/openings';
 import layoutImages from './shared/layoutImages';
 import coworker from './pages/coworker';
-
+import footer from './modules/footer';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -64,5 +64,6 @@ export default createSchema({
     openings,
     layoutImages,
     coworker,
+    footer
   ]),
 });

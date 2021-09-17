@@ -6,11 +6,13 @@ import {
   FaRegClone,
   FaRegFolder,
 } from 'react-icons/fa';
+import title from '../schemas/shared/title';
 
 export default () =>
   S.list()
     .title('Innehåll')
     .items([
+
       S.listItem()
         .title('Sidor')
         .icon(FaRegClone)
@@ -133,9 +135,28 @@ export default () =>
                         ),
                     ])
                 ),
-            ])
+            ]),
         ),
+      S.listItem()
+        .title('Moduler')
+        .child(
+          S.list()
+            .title('Moduler')
+            .items([
+              S.listItem()
+                .title('Footer')
+                .icon(FaRegFileImage)
+                .child(
+                  S.document()
+                    .title('Footer')
+                    .schemaType('footer')
+                    .documentId('footer')
 
+                )
+            ])
+
+        )
+      ,
       // We also need to remove the new singletons from the main list
       ...S.documentTypeListItems().filter(
         (listItem) =>
@@ -157,6 +178,9 @@ export default () =>
             'newsPost',
             'titleWithText',
             'careerPage',
+            'aboutPage',
+            'footer',
+            'coworker'
           ].includes(listItem.getId())
       ),
     ]);

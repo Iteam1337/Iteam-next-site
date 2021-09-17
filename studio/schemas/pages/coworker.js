@@ -24,7 +24,7 @@ export default {
         { type: 'string', name: 'whyTech', title: 'Varför Jobbar du med teknik?', initialValue: 'Varför jobbar du med teknik?' },
         {
             type: 'blockText', name: 'answerTech', title: 'Varför jobbar du med teknik?', validation: (Rules) =>
-                Rules.required().error('Du behöver svara på varför jobbar med teknik.'),
+                Rules.required().error('Du behöver svara på varför jobbar med teknik'),
         },
         { type: 'string', name: 'background', title: 'Bakgrund', initialValue: 'Bakgrund' },
         {
