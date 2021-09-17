@@ -29,6 +29,7 @@ export default () =>
                         .icon(FaRegFileAlt)
                         .child(
                           S.document()
+                            .title('Landningssida')
                             .schemaType('casePage')
                             .documentId('casePage')
                         ),

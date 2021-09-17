@@ -1,15 +1,16 @@
 export default {
   name: 'mediaTypes',
-  title: 'MediaTypes',
+  title: 'Media',
   type: 'document',
   fields: [
     {
       name: 'mediaType',
       type: 'string',
       initialValue: 'image',
+      title: 'Val av media',
       options: {
         list: [
-          { title: 'Image', value: 'image' },
+          { title: 'Bild', value: 'image' },
           { title: 'Video', value: 'video' },
         ],
       },
@@ -17,8 +18,8 @@ export default {
 
     {
       name: 'image',
-      title: 'Hero Bild',
-      type: 'image',
+      title: 'Bild',
+      type: 'imageWithAlt',
       hidden: ({ parent }) => parent?.mediaType !== 'image',
     },
     {

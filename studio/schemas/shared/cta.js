@@ -2,17 +2,21 @@ export default {
   name: 'cta',
   type: 'document',
   title: 'Cta',
-  validation: (Rules) =>
-    Rules.custom((fields) => {
-      if (fields.title && !fields.url)
-        return 'Lägg till en url om du vill att knappen ska leda någonstans.';
+  validation: (Rule) =>
+    Rule.custom((fields) => {
+      if (fields?.title && !fields?.reference)
+        return 'Lägg till en referens för vart din knapp ska leda';
+      if (!fields?.title && fields?.reference)
+        return 'Lägg till en text till din knapp';
+
       return true;
     }),
   fields: [
     {
-      name: 'Title',
+      name: 'title',
       type: 'string',
-      description: 'Om du vill har en CTA i heron så kan du namnge den här',
+      description: 'Om du vill har en CTA så kan du namnge den här',
+      title: 'Text på knappen',
     },
     {
       name: 'reference',
@@ -22,8 +26,6 @@ export default {
       description:
         'Här sätter du vart man ska ledas om man klickar på knappen.',
       to: [{ type: 'startPage' }, { type: 'casePage' }, { type: 'casePost' }],
-      validation: (Rules) =>
-        Rules.warning('En subtitel kan vara snyggt att ha också'),
     },
   ],
 };

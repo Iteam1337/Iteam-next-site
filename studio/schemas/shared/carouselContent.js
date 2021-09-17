@@ -21,6 +21,7 @@ export default {
     {
       type: 'imageWithAlt',
       name: 'image',
+      title: 'Bild',
     },
   ],
 };

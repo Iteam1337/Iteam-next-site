@@ -5,28 +5,30 @@ export default {
   fields: [
     {
       name: 'heroTitle',
-      title: 'Title',
+      title: 'Titel',
       type: 'string',
       validation: (Rules) =>
         Rules.required().error('Du behöver sätta en titel!'),
     },
     {
       name: 'heroSubTitle',
-      title: 'Subtitle',
-      type: 'string',
+      title: 'Underrubrik',
+      type: 'text',
       validation: (Rules) =>
         Rules.required().error('En subtitel kan vara snyggt att ha också'),
     },
     {
       name: 'heroCta',
-      title: 'Hero Call to action',
+      title: 'Call to action',
       type: 'cta',
     },
 
     {
       name: 'mediaTypes',
-      title: 'Hero MediaType',
+      title: 'Media',
       type: 'mediaTypes',
+      description:
+        'Här kan du lägga in vad du vill ha för hero genom att välja mellan att använda en bild eller länka till en video.',
     },
   ],
 };

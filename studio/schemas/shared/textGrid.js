@@ -1,7 +1,7 @@
 export default {
   type: 'document',
   name: 'textGrid',
-  title: 'Texter i column',
+  title: 'Flera texter',
   fields: [
     {
       name: 'texts',
