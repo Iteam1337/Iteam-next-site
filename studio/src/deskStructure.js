@@ -29,9 +29,9 @@ export default () =>
                         .icon(FaRegFileAlt)
                         .child(
                           S.document()
-                            .title('Landningssida')
                             .schemaType('casePage')
                             .documentId('casePage')
+                            .title('Case landningssida')
                         ),
                       S.divider(),
                       S.listItem()
@@ -42,6 +42,33 @@ export default () =>
                         ),
                     ])
                 ),
+              S.divider(),
+              S.listItem()
+                .title('Aktuellt')
+                .icon(FaRegFileImage)
+                .child(
+                  S.list()
+                    .title('Aktuellt')
+                    .items([
+                      S.listItem()
+                        .title('Aktuellt landningssida')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('newsPage')
+                            .documentId('newsPage')
+                            .title('Akuellt landningssida')
+                        ),
+                      S.divider(),
+                      S.listItem()
+                        .title('Nyheter')
+                        .icon(FaRegFolderOpen)
+                        .child(
+                          S.documentTypeList('newsPost').title('Alla nyheter')
+                        ),
+                    ])
+                ),
+
               S.divider(),
               S.listItem()
                 .title('Startsidan')

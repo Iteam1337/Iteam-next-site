@@ -19,6 +19,8 @@ import textWithImage from './shared/textWithImage';
 import textGrid from './shared/textGrid';
 import carousel from './shared/carousel';
 import carouselContent from './shared/carouselContent';
+import newsPage from './pages/newsPage';
+import newsPost from './pages/newsPost';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -44,5 +46,7 @@ export default createSchema({
     textGrid,
     carousel,
     carouselContent,
+    newsPage,
+    newsPost
   ]),
 });
