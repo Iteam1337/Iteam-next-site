@@ -4,6 +4,15 @@ export default {
   title: 'Flera texter',
   fields: [
     {
+      type: 'string',
+      name: 'title',
+      title: 'Titel',
+      initialValue: 'Flera texter',
+      readOnly: true,
+      description: 'En fast titel för den här sektionen',
+    },
+
+    {
       name: 'texts',
       title: 'Texter',
       type: 'array',

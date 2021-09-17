@@ -1,7 +1,10 @@
 export default {
   name: 'hero',
-  type: 'document',
+  type: 'object',
   title: 'Hero',
+  options: {
+    collapsible: true,
+  },
   fields: [
     {
       name: 'heroTitle',
@@ -15,7 +18,7 @@ export default {
       title: 'Underrubrik',
       type: 'text',
       validation: (Rules) =>
-        Rules.required().error('En subtitel kan vara snyggt att ha också.'),
+        Rules.required().error('En underrubrik kan vara snyggt att ha också.'),
     },
     {
       name: 'heroCta',
