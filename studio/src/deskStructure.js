@@ -31,6 +31,26 @@ export default () =>
                 ),
               S.divider(),
               S.listItem()
+                .title('Erbjudanden')
+                .icon(FaRegFolder)
+                .child(
+                  S.list()
+                    .title('Erbjudanden')
+                    .items([
+                      S.listItem()
+                        .title('Iteam MVP')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('iteamMvp')
+                            .documentId('iteamMvp')
+                            .title('Iteam MVP')
+                        ),
+                      S.divider(),
+                    ])
+                ),
+              S.divider(),
+              S.listItem()
                 .title('Case')
                 .icon(FaRegFolder)
                 .child(
@@ -103,7 +123,9 @@ export default () =>
                         .title('Medarbetare')
                         .icon(FaRegFolderOpen)
                         .child(
-                          S.documentTypeList('coworker').title('Alla medarbetare')
+                          S.documentTypeList('coworker').title(
+                            'Alla medarbetare'
+                          )
                         ),
                     ])
                 ),
@@ -176,7 +198,7 @@ export default () =>
             'carouselContent',
             'newsPage',
             'newsPost',
-            'titleWithText',
+            'section',
             'careerPage',
             'aboutPage',
             'footer',

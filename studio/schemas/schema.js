@@ -22,7 +22,7 @@ import carouselContent from './shared/carouselContent';
 import newsPage from './pages/newsPage';
 import newsPost from './pages/newsPost';
 import about from './pages/about';
-import titleWithText from './shared/titleWithText';
+import section from './shared/sections/section';
 import careerPage from './pages/careerPage';
 import employeeQuote from './shared/employeeQuote';
 import openPositions from './pages/openPositions';
@@ -30,6 +30,11 @@ import openings from './shared/openings';
 import layoutImages from './shared/layoutImages';
 import coworker from './pages/coworker';
 import footer from './modules/footer';
+import iteamMvp from './pages/iteamMvp';
+import sectionWithImageAndCta from './shared/sections/sectionWithImageAndCta';
+import sectionWithCtaAndTextGrid from './shared/sections/sectionWithCtaAndTextGrid';
+import textWithTags from './shared/textWithTags';
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -57,13 +62,17 @@ export default createSchema({
     newsPage,
     newsPost,
     about,
-    titleWithText,
+    section,
     careerPage,
     employeeQuote,
     openPositions,
     openings,
     layoutImages,
     coworker,
-    footer
+    footer,
+    iteamMvp,
+    sectionWithImageAndCta,
+    sectionWithCtaAndTextGrid,
+    textWithTags,
   ]),
 });

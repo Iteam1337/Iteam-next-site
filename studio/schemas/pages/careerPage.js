@@ -4,7 +4,7 @@ export default {
   title: 'Karriär',
   fields: [
     { type: 'hero', name: 'hero' },
-    { type: 'titleWithText', name: 'titleWithText' },
+    { type: 'section', name: 'section' },
     {
       type: 'employeeQuote',
       name: 'employeeQuote',
