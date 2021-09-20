@@ -345,5 +345,20 @@
     "why": "Genom teknik får jag chans att skapa, utvecklas och leka! Teknik är ett fantastiskt verktyg att använda för att koppla samman människor och för att lösa problem på kreativa sätt.",
     "background": "Jag har en kandidatexamen i medieteknik, och innan dess arbetade jag som projektledare och producent inom evenemangsbranschen.",
     "specialty": "Jag har ett stort intresse för normkritisk design. Design som både ifrågasätter och utmanar rådande normer och inkluderar en större grupp människor, vilket  hjälper oss att skapa ännu bättre och mer socialt hållbara produkter och tjänster."
+  },
+  {
+    "heroImg": "hero-anders-ytterstrom.jpeg",
+    "path": "/about/anders-ytterstrom",
+    "username": "madr",
+    "email": "anders.ytterstrom@iteam.se",
+    "title": "Fullstack Engineer",
+    "billing-active": 1,
+    "fullname": "Anders Ytterström",
+    "displayname": "Anders Ytterström",
+    "expiration-timestamp": "",
+    "phoneNumber": "072-445 10 70",
+    "why": "Teknik möjliggör fler interaktioner, meningsutbyten och relationer mellan människor. Världen känns både större och mindre på samma gång sedan informationsteknikens intåg i vår tillvaro. Det är också ett sätt att vara kreativ och skapande, som jag verkligen gillar. Mycket tidigt visste jag med stor säkerhet att jag skulle jobba med IT eller musik: den senare blev istället ett livslångt intresse.",
+    "background": "Webbdesign vid Mittuniversitetet. På Internet sedan 1998. Tidigare erfarenheter ifrån SaaS-bolag, fullservice-byråer och webbhandel.",
+    "specialty": "Webbstandarder, Tillgänglighet, Progressive enhancement, Stilguider/Designsystem, JavaScript, Python/Django, Elixir/Phoenix."
   }
 ]
