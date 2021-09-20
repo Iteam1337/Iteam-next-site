@@ -1,7 +1,7 @@
 export default {
   type: 'document',
   name: 'sectionWithImage',
-  title: 'Text with image',
+  title: 'Text med bild',
   fields: [
     {
       type: 'title',

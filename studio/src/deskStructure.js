@@ -47,6 +47,15 @@ export default () =>
                             .title('Iteam MVP')
                         ),
                       S.divider(),
+                      S.listItem()
+                        .title('Iteam Scale-up')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('scaleUp')
+                            .documentId('scaleUp')
+                            .title('Iteam Scale-up')
+                        ),
                     ])
                 ),
               S.divider(),
@@ -202,7 +211,8 @@ export default () =>
             'careerPage',
             'aboutPage',
             'footer',
-            'coworker'
+            'coworker',
+            'scaleUpForm'
           ].includes(listItem.getId())
       ),
     ]);

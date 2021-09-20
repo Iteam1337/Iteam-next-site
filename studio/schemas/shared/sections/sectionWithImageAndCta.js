@@ -1,11 +1,16 @@
 export default {
   type: 'document',
   name: 'sectionWithImageAndCta',
-  title: 'Text with image and cta',
+  title: 'Text med bild och cta',
   fields: [
     {
       type: 'title',
       name: 'title',
+    },
+    {
+      type: 'cta',
+      name: 'cta',
+      title: 'Knapp'
     },
     {
       type: 'blockText',
