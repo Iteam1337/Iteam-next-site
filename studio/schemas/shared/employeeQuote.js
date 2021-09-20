@@ -33,7 +33,7 @@ export default {
       title: 'Bild på anställd',
       validation: (Rules) =>
         Rules.required().error(
-          'Glöm inte att lägga in en bild på den anställda.'
+          'Lägg in en bild på den anställda.'
         ),
     },
   ],

@@ -11,21 +11,21 @@ export default {
       name: 'title',
       type: 'title',
       validation: (Rules) =>
-        Rules.required().error('Du behöver ange en rubrik'),
+        Rules.required().error('Ange en rubrik.'),
     },
     {
       title: 'Text',
       name: 'description',
       type: 'text',
       validation: (Rules) =>
-        Rules.required().error('Du behöver ange en beskrivning'),
+        Rules.required().error('Ange en beskrivning.'),
     },
     {
       title: 'Bild',
       name: 'image',
       type: 'image',
       validation: (Rules) =>
-        Rules.required().error('Du behöver lägga in en bild'),
+        Rules.required().error('Lägg in en bild.'),
     },
   ],
 };

@@ -8,7 +8,7 @@ export default {
   validation: (Rule) =>
     Rule.custom((fields) => {
       if (fields?.asset && !fields?.alt)
-        return 'Glöm inte att lägga in en alternativ text för bilden';
+        return 'Lägg in en alternativ text för bilden.';
 
       return true;
     }),

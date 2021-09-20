@@ -10,8 +10,8 @@ export default {
       initialValue: 'Flera texter',
       readOnly: true,
       description: 'En fast rubrik för den här sektionen',
+      hidden: true
     },
-
     {
       name: 'texts',
       title: 'Texter',
@@ -20,7 +20,7 @@ export default {
         'Här kan flera texter läggas till, de kommer att visas i ett gird',
       of: [
         {
-          type: 'blockText',
+          type: 'section',
         },
       ],
     },
