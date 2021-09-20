@@ -11,6 +11,10 @@ export default {
         Rules.required().error('Du behöver lägga in en rubrik'),
     },
     {
+      type: 'defaultSlug',
+      name: 'slug',
+    },
+    {
       type: 'date',
       name: 'date',
       title: 'Datum',

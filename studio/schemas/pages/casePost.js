@@ -11,6 +11,10 @@ export default {
         Rules.required().error('Du behöver ange ett företag'),
     },
     { type: 'title', name: 'title', title: 'Rubrik' },
+    {
+      type: 'defaultSlug',
+      name: 'slug',
+    },
     { type: 'string', name: 'subtitle', title: 'Underrubrik' },
     {
       name: 'typeOfCase',
