@@ -2,6 +2,9 @@ export default {
   type: 'document',
   name: 'textWithTags',
   title: 'Text med tags',
+  options: {
+    collapsible: true,
+  },
   fields: [
     {
       type: 'string',
@@ -12,7 +15,7 @@ export default {
       name: 'keywords',
       type: 'array',
       title: 'Keywords',
-      description: 'Lägg till keywords som du vill associera med denna sida.',
+      description: 'Lägg till flera olika områden som vi jobbar inom',
       of: [{ type: 'string' }],
       options: {
         layout: 'tags',

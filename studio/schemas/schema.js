@@ -35,6 +35,7 @@ import sectionWithImageAndCta from './shared/sections/sectionWithImageAndCta';
 import sectionWithCtaAndTextGrid from './shared/sections/sectionWithCtaAndTextGrid';
 import textWithTags from './shared/textWithTags';
 import sectionWithImage from './shared/sections/SectionWithImage';
+import iteamX from './pages/iteamX';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -76,5 +77,6 @@ export default createSchema({
     sectionWithCtaAndTextGrid,
     textWithTags,
     sectionWithImage,
+    iteamX,
   ]),
 });

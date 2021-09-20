@@ -12,7 +12,6 @@ export default () =>
   S.list()
     .title('Innehåll')
     .items([
-
       S.listItem()
         .title('Sidor')
         .icon(FaRegClone)
@@ -45,6 +44,16 @@ export default () =>
                             .schemaType('iteamMvp')
                             .documentId('iteamMvp')
                             .title('Iteam MVP')
+                        ),
+                      S.divider(),
+                      S.listItem()
+                        .title('Iteam X')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('iteamX')
+                            .documentId('iteamX')
+                            .title('Iteam X')
                         ),
                       S.divider(),
                     ])
@@ -157,7 +166,7 @@ export default () =>
                         ),
                     ])
                 ),
-            ]),
+            ])
         ),
       S.listItem()
         .title('Moduler')
@@ -173,12 +182,9 @@ export default () =>
                     .title('Footer')
                     .schemaType('footer')
                     .documentId('footer')
-
-                )
+                ),
             ])
-
-        )
-      ,
+        ),
       // We also need to remove the new singletons from the main list
       ...S.documentTypeListItems().filter(
         (listItem) =>
@@ -202,7 +208,7 @@ export default () =>
             'careerPage',
             'aboutPage',
             'footer',
-            'coworker'
+            'coworker',
           ].includes(listItem.getId())
       ),
     ]);
