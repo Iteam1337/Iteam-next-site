@@ -37,6 +37,7 @@ import textWithTags from './shared/textWithTags';
 import sectionWithImage from './shared/sections/SectionWithImage';
 import scaleUp from './pages/scaleUp';
 import scaleUpForm from './shared/scaleUpForm';
+import iteamX from './pages/iteamX';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -79,6 +80,7 @@ export default createSchema({
     textWithTags,
     sectionWithImage,
     scaleUp,
-    scaleUpForm
+    scaleUpForm,
+    iteamX,
   ]),
 });

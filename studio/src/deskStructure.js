@@ -12,7 +12,6 @@ export default () =>
   S.list()
     .title('Innehåll')
     .items([
-
       S.listItem()
         .title('Sidor')
         .icon(FaRegClone)
@@ -56,6 +55,17 @@ export default () =>
                             .documentId('scaleUp')
                             .title('Iteam Scale-up')
                         ),
+                      S.divider(),
+                      S.listItem()
+                        .title('Iteam X')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('iteamX')
+                            .documentId('iteamX')
+                            .title('Iteam X')
+                        ),
+                      S.divider(),
                     ])
                 ),
               S.divider(),
@@ -166,7 +176,7 @@ export default () =>
                         ),
                     ])
                 ),
-            ]),
+            ])
         ),
       S.listItem()
         .title('Moduler')
@@ -182,12 +192,9 @@ export default () =>
                     .title('Footer')
                     .schemaType('footer')
                     .documentId('footer')
-
-                )
+                ),
             ])
-
-        )
-      ,
+        ),
       // We also need to remove the new singletons from the main list
       ...S.documentTypeListItems().filter(
         (listItem) =>
@@ -212,7 +219,17 @@ export default () =>
             'aboutPage',
             'footer',
             'coworker',
-            'scaleUpForm'
+            'scaleUpForm',
+            'employeeQuote',
+            'openings',
+            'sectionWithImageAndCta',
+            'sectionWithCtaAndTextGrid',
+            'textWithTags',
+            'sectionWithImage',
+            'iteamMvp',
+            'iteamX',
+            'openPositions',
+            'scaleUp',
           ].includes(listItem.getId())
       ),
     ]);
