@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^2.19.0",
     "aos": "^3.0.0-beta.6",
     "babel-plugin-transform-define": "^2.0.0",
     "bootstrap": "^4.5.0",
