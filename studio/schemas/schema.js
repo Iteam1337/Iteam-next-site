@@ -17,11 +17,10 @@ import titleWithCTA from './shared/titleWithCTA';
 import imageWithAlt from './shared/imageWithAlt';
 import textWithImage from './shared/textWithImage';
 import textGrid from './shared/textGrid';
-import carousel from './shared/carousel';
-import carouselContent from './shared/carouselContent';
+import carousel from './modules/carousel';
 import newsPage from './pages/newsPage';
 import newsPost from './pages/newsPost';
-import about from './pages/about';
+import aboutPage from './pages/aboutPage';
 import section from './shared/sections/section';
 import careerPage from './pages/careerPage';
 import employeeQuote from './shared/employeeQuote';
@@ -30,14 +29,14 @@ import openings from './shared/openings';
 import layoutImages from './shared/layoutImages';
 import coworker from './pages/coworker';
 import footer from './modules/footer';
-import iteamMvp from './pages/iteamMvp';
+import mvpPage from './pages/mvpPage';
 import sectionWithImageAndCta from './shared/sections/sectionWithImageAndCta';
 import sectionWithCtaAndTextGrid from './shared/sections/sectionWithCtaAndTextGrid';
 import textWithTags from './shared/textWithTags';
 import sectionWithImage from './shared/sections/SectionWithImage';
-import scaleUp from './pages/scaleUp';
-import scaleUpForm from './shared/scaleUpForm';
-import iteamX from './pages/iteamX';
+import scaleUpPage from './pages/scaleUpPage';
+import ourPricing from './modules/ourPricing';
+import xPage from './pages/xPage';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -62,10 +61,9 @@ export default createSchema({
     textWithImage,
     textGrid,
     carousel,
-    carouselContent,
     newsPage,
     newsPost,
-    about,
+    aboutPage,
     section,
     careerPage,
     employeeQuote,
@@ -74,13 +72,13 @@ export default createSchema({
     layoutImages,
     coworker,
     footer,
-    iteamMvp,
+    mvpPage,
     sectionWithImageAndCta,
     sectionWithCtaAndTextGrid,
     textWithTags,
     sectionWithImage,
-    scaleUp,
-    scaleUpForm,
-    iteamX,
+    scaleUpPage,
+    ourPricing,
+    xPage,
   ]),
 });

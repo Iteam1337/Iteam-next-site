@@ -9,7 +9,7 @@ export default {
       title: 'Titel',
       initialValue: 'Flera texter',
       readOnly: true,
-      description: 'En fast titel för den här sektionen',
+      description: 'En fast rubrik för den här sektionen',
     },
 
     {

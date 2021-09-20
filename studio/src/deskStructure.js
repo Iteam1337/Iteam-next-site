@@ -41,8 +41,8 @@ export default () =>
                         .icon(FaRegFileAlt)
                         .child(
                           S.document()
-                            .schemaType('iteamMvp')
-                            .documentId('iteamMvp')
+                            .schemaType('mvpPage')
+                            .documentId('mvpPage')
                             .title('Iteam MVP')
                         ),
                       S.divider(),
@@ -51,8 +51,8 @@ export default () =>
                         .icon(FaRegFileAlt)
                         .child(
                           S.document()
-                            .schemaType('scaleUp')
-                            .documentId('scaleUp')
+                            .schemaType('scaleUpPage')
+                            .documentId('scaleUpPage')
                             .title('Iteam Scale-up')
                         ),
                       S.divider(),
@@ -61,8 +61,8 @@ export default () =>
                         .icon(FaRegFileAlt)
                         .child(
                           S.document()
-                            .schemaType('iteamX')
-                            .documentId('iteamX')
+                            .schemaType('xPage')
+                            .documentId('xPage')
                             .title('Iteam X')
                         ),
                       S.divider(),
@@ -193,6 +193,24 @@ export default () =>
                     .schemaType('footer')
                     .documentId('footer')
                 ),
+              S.listItem()
+                .title('Karusell')
+                .icon(FaRegFileImage)
+                .child(
+                  S.document()
+                    .title('Karusell')
+                    .schemaType('carousel')
+                    .documentId('carousel')
+                ),
+              S.listItem()
+                .title('Våra priser')
+                .icon(FaRegFileImage)
+                .child(
+                  S.document()
+                    .title('Våra priser')
+                    .schemaType('ourPricing')
+                    .documentId('ourPricing')
+                ),
             ])
         ),
       // We also need to remove the new singletons from the main list
@@ -211,7 +229,6 @@ export default () =>
             'textWithImage',
             'textGrid',
             'carousel',
-            'carouselContent',
             'newsPage',
             'newsPost',
             'section',
@@ -219,17 +236,17 @@ export default () =>
             'aboutPage',
             'footer',
             'coworker',
-            'scaleUpForm',
+            'ourPricing',
             'employeeQuote',
             'openings',
             'sectionWithImageAndCta',
             'sectionWithCtaAndTextGrid',
             'textWithTags',
             'sectionWithImage',
-            'iteamMvp',
-            'iteamX',
+            'mvpPage',
+            'xPage',
             'openPositions',
-            'scaleUp',
+            'scaleUpPage',
           ].includes(listItem.getId())
       ),
     ]);

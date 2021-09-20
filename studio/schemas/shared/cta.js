@@ -15,7 +15,7 @@ export default {
     {
       name: 'title',
       type: 'string',
-      description: 'Ange text till CTA',
+      description: 'Ange text till CTA.',
       title: 'Text på knappen',
     },
     {
@@ -25,7 +25,20 @@ export default {
       title: 'Referens',
       description:
         'Här sätter du vart man ska ledas om man klickar på knappen.',
-      to: [{ type: 'startPage' }, { type: 'casePage' }, { type: 'casePost' }, { type: 'careerPage' }],
+      to: [
+        { type: 'startPage' },
+        { type: 'casePage' },
+        { type: 'casePost' },
+        { type: 'careerPage' },
+        { type: 'mvpPage' },
+        { type: 'xPage' },
+        { type: 'scaleUpPage' },
+        { type: 'coworker' },
+        { type: 'openPositions' },
+        { type: 'aboutPage' },
+        { type: 'newsPost' },
+        { type: 'newsPage' },
+      ],
     },
   ],
 };

@@ -1,13 +1,13 @@
 export default {
-  name: 'iteamMvp',
+  name: 'mvpPage',
   type: 'document',
   title: 'Om oss',
   fields: [
-    { type: 'hero', name: 'hero', title: 'Lägg till hero' },
+    { type: 'hero', name: 'hero' },
     {
       type: 'sectionWithCtaAndTextGrid',
       name: 'sectionWithCtaAndTextGrid',
-      title: 'Sektion för titel, text, cta och text grid',
+      title: 'Sektion med rubrik, text, cta och text grid',
       options: {
         collapsible: true,
       },
@@ -15,7 +15,7 @@ export default {
     {
       type: 'sectionWithImageAndCta',
       name: 'sectionWithImageAndCta',
-      title: 'Sektion för titel, text, cta och bild',
+      title: 'Sektion med rubrik, text, cta och bild',
       options: {
         collapsible: true,
       },
@@ -23,11 +23,12 @@ export default {
     {
       type: 'textWithTags',
       name: 'textWithTags',
+      title: 'Text med taggar',
     },
     {
       type: 'sectionWithImageAndCta',
       name: 'sectionWithImageAndCta2',
-      title: 'Sektion för titel, text, cta och bild',
+      title: 'Sektion med rubrik, text, cta och bild',
       options: {
         collapsible: true,
       },
@@ -35,7 +36,7 @@ export default {
     {
       type: 'sectionWithImage',
       name: 'sectionWithImage',
-      title: 'Sektion med title, text och bild',
+      title: 'Sektion med rubrik, text och bild',
       options: {
         collapsible: true,
       },

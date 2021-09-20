@@ -18,7 +18,7 @@ export default {
       description: 'Vart bör denna personen jobba ifrån',
       initialValue: 'Göteborg, Stockholm eller remote',
       validation: (Rules) =>
-        Rules.required().error('Du behöver lägga in en titel på vem vi söker'),
+        Rules.required().error('Du behöver lägga in en rubrik på vem vi söker'),
     },
     {
       type: 'blockText',

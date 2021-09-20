@@ -1,9 +1,9 @@
 export default {
-  name: 'iteamX',
+  name: 'xPage',
   type: 'document',
   title: 'Om oss',
   fields: [
-    { type: 'hero', name: 'hero', title: 'Lägg till hero' },
+    { type: 'hero', name: 'hero' },
     {
       type: 'textGrid',
       name: 'textGrid',
@@ -15,12 +15,12 @@ export default {
     {
       type: 'textWithTags',
       name: 'textWithTags',
-      title: 'Text med flera olika taggar',
+      title: 'Text med taggar',
     },
     {
       type: 'sectionWithImageAndCta',
       name: 'sectionWithImageAndCta',
-      title: 'Sektion för titel, text, cta och bild',
+      title: 'Sektion med rubrik, text, cta och bild',
       options: {
         collapsible: true,
       },
@@ -28,7 +28,7 @@ export default {
     {
       type: 'sectionWithCtaAndTextGrid',
       name: 'sectionWithCtaAndTextGrid',
-      title: 'Sektion för titel, text, cta och text grid',
+      title: 'Sektion med rubrik, text, cta och text grid',
       options: {
         collapsible: true,
       },
