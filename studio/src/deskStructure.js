@@ -209,6 +209,15 @@ export default () =>
             'aboutPage',
             'footer',
             'coworker',
+            'employeeQuote',
+            'openings',
+            'sectionWithImageAndCta',
+            'sectionWithCtaAndTextGrid',
+            'textWithTags',
+            'sectionWithImage',
+            'iteamMvp',
+            'iteamX',
+            'openPositions',
           ].includes(listItem.getId())
       ),
     ]);
