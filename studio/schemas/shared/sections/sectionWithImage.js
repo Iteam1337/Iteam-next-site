@@ -1,7 +1,7 @@
 export default {
   type: 'document',
-  name: 'sectionWithImageAndCta',
-  title: 'Text with image and cta',
+  name: 'sectionWithImage',
+  title: 'Text with image',
   fields: [
     {
       type: 'title',

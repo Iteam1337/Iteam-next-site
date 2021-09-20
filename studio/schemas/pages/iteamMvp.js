@@ -24,5 +24,21 @@ export default {
       type: 'textWithTags',
       name: 'textWithTags',
     },
+    {
+      type: 'sectionWithImageAndCta',
+      name: 'sectionWithImageAndCta2',
+      title: 'Sektion för titel, text, cta och bild',
+      options: {
+        collapsible: true,
+      },
+    },
+    {
+      type: 'sectionWithImage',
+      name: 'sectionWithImage',
+      title: 'Sektion med title, text och bild',
+      options: {
+        collapsible: true,
+      },
+    },
   ],
 };
