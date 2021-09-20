@@ -9,7 +9,7 @@ export default {
             title: 'Följ oss',
             initalValue: 'Följ oss',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange text för följ oss.'),
         },
         {
             type: 'string',
@@ -17,14 +17,14 @@ export default {
             title: 'Facebook',
             initalValue: 'Facebook',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange text för facebook.'),
         },
         {
             type: 'string',
             name: 'facebookLink',
             title: 'Länk till Facebook',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange länk till facebook.'),
         },
         {
             type: 'string',
@@ -32,14 +32,14 @@ export default {
             title: 'Twitter',
             initalValue: 'Twitter',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange text för twitter.'),
         },
         {
             type: 'string',
             name: 'twitterLink',
             title: 'Länk till Twitter',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange länk till twitter.'),
         },
         {
             type: 'string',
@@ -47,14 +47,14 @@ export default {
             title: 'Instagram',
             initalValue: 'Instagram',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange text för instagram.'),
         },
         {
             type: 'string',
             name: 'instagramLink',
             title: 'Länk till Instagram',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange lännk till instagram.'),
         },
         {
             type: 'string',
@@ -62,35 +62,35 @@ export default {
             title: 'Besök oss',
             initalValue: 'Besök oss',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange text till besök oss.'),
         },
         {
             type: 'blockText',
             name: 'address',
             title: 'Adress till Iteam',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Fyll i adress till Iteam.'),
         },
         {
             type: 'string',
             name: 'addressLink',
             title: 'Länk till google maps för adressen',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('En länk till google maps saknas här.'),
         },
         {
             type: 'string',
             name: 'orgNumber',
             title: 'Organisationsnummer',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange organisationsnummer här.'),
         },
         {
             type: 'string',
             name: 'orgNumberLink',
             title: 'Länk till organisationsnummer',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Fyll i en länk till organisationsnummret.'),
         },
         {
             type: 'string',
@@ -98,7 +98,7 @@ export default {
             title: 'Kontakta oss',
             initalValue: 'Kontakta oss',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Text för kontakta oss.'),
         },
         {
             type: 'string',
@@ -106,14 +106,14 @@ export default {
             title: 'Kontakt',
             initalValue: 'Kontakt',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Text för kontakt.'),
         },
         {
             type: 'string',
             name: 'contactLink',
             title: 'Länk till Kontakt',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Lägg in en länk till kontakt här.'),
         },
         {
             type: 'string',
@@ -121,14 +121,14 @@ export default {
             title: 'Sök jobb',
             initalValue: 'Sök jobb',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange text för sök jobb här.'),
         },
         {
             type: 'string',
             name: 'applyForJobLink',
             title: 'Länk till Sök jobb',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Lägg in en länk till sök jobb.'),
         },
         {
             type: 'string',
@@ -136,14 +136,14 @@ export default {
             title: 'Spontanansökan',
             initalValue: 'Spontanansökan',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Text för spontanansökan.'),
         },
         {
             type: 'string',
             name: 'mailToApplyJob',
             title: 'Mailadress för spontanansökan',
             validation: (Rules) =>
-                Rules.required().error('Du behöver fylla i det här fältet'),
+                Rules.required().error('Ange länk till spontanansökan här.'),
         },
     ]
 }

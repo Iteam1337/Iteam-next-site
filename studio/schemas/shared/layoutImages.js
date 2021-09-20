@@ -7,5 +7,5 @@ export default {
         { type: 'imageWithAlt' },
     ],
     description:
-        'Här kan du ladda upp bilder som kommer visas i samma sektion.',
+        'Här kan du ladda upp bilder som kommer att visas i samma sektion.',
 };

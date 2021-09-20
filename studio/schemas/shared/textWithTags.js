@@ -10,6 +10,8 @@ export default {
       type: 'string',
       name: 'title',
       title: 'Rubrik',
+      validation: (Rules) =>
+        Rules.required().error('Ange en rubrik.'),
     },
     {
       type: 'blockText',
