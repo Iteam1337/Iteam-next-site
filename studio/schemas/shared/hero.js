@@ -7,21 +7,21 @@ export default {
   },
   fields: [
     {
-      name: 'heroTitle',
+      name: 'title',
       title: 'Titel',
       type: 'string',
       validation: (Rules) =>
         Rules.required().error('Du behöver sätta en rubrik.'),
     },
     {
-      name: 'heroSubTitle',
+      name: 'subtitle',
       title: 'Underrubrik',
       type: 'text',
       validation: (Rules) =>
         Rules.required().error('En underrubrik kan vara snyggt att ha också.'),
     },
     {
-      name: 'heroCta',
+      name: 'cta',
       title: 'Call to action',
       type: 'cta',
       description:
