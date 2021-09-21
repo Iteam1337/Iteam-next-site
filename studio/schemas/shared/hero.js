@@ -28,7 +28,7 @@ export default {
         'Om du vill ha en CTA på hero sektionen så fyller du i det här.',
     },
     {
-      name: 'mediaTypes',
+      name: 'mediaType',
       title: 'Media',
       type: 'mediaTypes',
       description:
