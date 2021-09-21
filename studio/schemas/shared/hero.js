@@ -30,7 +30,7 @@ export default {
     {
       name: 'mediaType',
       title: 'Media',
-      type: 'mediaTypes',
+      type: 'mediaType',
       description:
         'Här kan du lägga in vad du vill ha för hero genom att välja mellan att använda en bild, länka till en video eller välja en bakgrundsfärg.',
       validation: (Rules) =>
