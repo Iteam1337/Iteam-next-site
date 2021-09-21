@@ -7,30 +7,30 @@ export default {
   },
   fields: [
     {
-      name: 'heroTitle',
+      name: 'title',
       title: 'Titel',
       type: 'string',
       validation: (Rules) =>
         Rules.required().error('Du behöver sätta en rubrik.'),
     },
     {
-      name: 'heroSubTitle',
+      name: 'subtitle',
       title: 'Underrubrik',
       type: 'text',
       validation: (Rules) =>
         Rules.required().error('En underrubrik kan vara snyggt att ha också.'),
     },
     {
-      name: 'heroCta',
+      name: 'cta',
       title: 'Call to action',
       type: 'cta',
       description:
         'Om du vill ha en CTA på hero sektionen så fyller du i det här.',
     },
     {
-      name: 'mediaTypes',
+      name: 'mediaType',
       title: 'Media',
-      type: 'mediaTypes',
+      type: 'mediaType',
       description:
         'Här kan du lägga in vad du vill ha för hero genom att välja mellan att använda en bild, länka till en video eller välja en bakgrundsfärg.',
       validation: (Rules) =>

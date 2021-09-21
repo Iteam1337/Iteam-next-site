@@ -7,8 +7,10 @@ import Content from "../../sections/about/Content"
 import MetaTags from "../../components/MetaTags/MetaTags"
 import Team from "../../sections/about/Team"
 import CTA from "../../sections/about/CTA"
+import client from "./../../../src/sanity-client"
 
-const About = () => {
+const About = ({ aboutPage }) => {
+  console.log("props", aboutPage)
   return (
     <>
       <PageWrapper>
@@ -20,13 +22,7 @@ const About = () => {
             "Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag."
           }
         />
-        <Hero title="Skapa värde, ha kul, göra något bra">
-          Det är våra värderingar. De lever vi efter varje dag. <br />
-          {/* Iteam startades 1995 med drömmen att förändra samhället till något bättre med teknik. 
-          Det har vi hållit på med sedan dess.
-          För oss betyder det att inte bygga appar för apparnas skull. Vi fixar inte problem som inte behöver fixas. 
-          Däremot är världen full av problem som vi kan lösa. Ibland handlar det om att underlätta vardagen för småbarnsföräldrar, ibland om att förändra globala logistiksystem. */}
-        </Hero>
+        <Hero content={aboutPage.hero} />
         <Content />
         <Team />
         <CTA />
@@ -34,4 +30,12 @@ const About = () => {
     </>
   )
 }
+
+About.getInitialProps = async () => ({
+  aboutPage: await client.fetch(`
+  *[_type == 'aboutPage'][0] {
+    ...
+   }
+  `),
+})
 export default About

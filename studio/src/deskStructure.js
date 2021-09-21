@@ -223,7 +223,7 @@ export default () =>
             'hero',
             'cta',
             'imageCard',
-            'mediaTypes',
+            'mediaType',
             'titleWithCTA',
             'blockText',
             'textWithImage',
