@@ -15,7 +15,7 @@ const Sidebar = ({ posts }) => {
         <TitleSidebar>Aktuellt</TitleSidebar>
         {posts?.map((post) => (
           <Block>
-            <TitlePost link={`/aktuellt/${post.id}`}>{post.title}</TitlePost>
+            <TitlePost link={`/aktuellt/${post.slug.current}`}>{post.title}</TitlePost>
             <Date>{post.date}</Date>
           </Block>
         ))}
