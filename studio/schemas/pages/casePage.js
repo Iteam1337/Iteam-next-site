@@ -15,7 +15,7 @@ export default {
       title: 'Case startsida',
       slug: 'slug',
     },
-    prepare({ title = 'Case startsida', slug = {}, name = 'case' }) {
+    prepare({ title = 'Case startsida', slug = {}, name = 'casePage' }) {
       const path = `/${name}/${slug.current}`;
       return {
         path,

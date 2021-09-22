@@ -3,9 +3,9 @@ import styled from "styled-components"
 import Link from "next/link"
 import { Title, Box, Text, Span, Anchor } from "../Core"
 import { device } from "../../utils"
-import client from '../../sanity-client'
-import { useNextSanityImage } from 'next-sanity-image';
-import Img from 'next/image';
+import client from "../../sanity-client"
+import { useNextSanityImage } from "next-sanity-image"
+import Img from "next/image"
 
 const Card = styled(Box)`
   border-radius: 10px 10px;
@@ -60,11 +60,10 @@ const TitleStyled = styled(Title)`
 
 const CoverImg = styled.img`
   height: 320px;
-  object-fit: ${props => props.scale ? 'scale-down' : 'cover'};
+  object-fit: ${(props) => (props.scale ? "scale-down" : "cover")};
 `
 
 const PostCard = ({
-  horizontal = false,
   img,
   imgBrand,
   preTitle,
@@ -76,47 +75,27 @@ const PostCard = ({
   link = "",
   ...rest
 }) => {
-  const imageProps = useNextSanityImage(
-    client,
-    img.asset._ref
-  );
+  const imageProps = useNextSanityImage(client, img.asset._ref)
   return (
-    <Card
-      className={horizontal ? "d-flex flex-column flex-md-row" : "h-100"}
-      {...rest}
-    >
-      {horizontal ? (
-        <ImageContainerHorizontal>
-          <Link href={link}>
-            <a className="w-100 h-100 d-flex">
-              <Img {...imageProps} layout="responsive" sizes="(max-width: 800px) 100vw, 800px" alt={img.alt} />
-              {/* <CoverImg src={img} alt="" className="w-100" /> */}
-              {imgBrand && (
-                <BrandImage>
-                  <img src={imgBrand} alt="" className="img-fluid" />
-                </BrandImage>
-              )}
-            </a>
-          </Link>
-        </ImageContainerHorizontal>
-      ) : (
-        <Box className="position-relative">
-          <Link href={link}>
-            <a className="w-100">
-              <div style={{ width: '348px', height: '320px', objectFit: 'cover', position: 'relative' }}>
-                <Img {...imageProps} layout="fill" alt={img.alt} />
-              </div>
-              {/* <CoverImg scale={img === '/images/api1.png'} src={img} alt="" className="w-100" /> */}
-              {imgBrand && (
-                <BrandImage>
-                  <img src={imgBrand} alt="" className="img-fluid" />
-                </BrandImage>
-              )}
-            </a>
-          </Link>
-        </Box>
-      )
-      }
+    <Card className="h-100" {...rest}>
+      <Box className="position-relative">
+        <Link href={link}>
+          <a className="w-100">
+            <Img
+              {...imageProps}
+              objectFit="cover"
+              alt={img.alt}
+              width="348px"
+              height="320px"
+            />
+            {imgBrand && (
+              <BrandImage>
+                <img src={imgBrand} alt="" className="img-fluid" />
+              </BrandImage>
+            )}
+          </a>
+        </Link>
+      </Box>
 
       <CardText>
         {preTitle && (
@@ -145,7 +124,7 @@ const PostCard = ({
           </Box>
         )}
       </CardText>
-    </Card >
+    </Card>
   )
 }
 

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 import { device } from "../../utils"
 
 const Paragraph = styled.p`
@@ -8,12 +8,6 @@ const Paragraph = styled.p`
   letter-spacing: -0.56px;
   line-height: 30px;
   text-align: left;
-
-  @media ${device.sm} {
-    font-size: 23px;
-    line-height: 32px;
-  }
-
 `
 
 const ParagraphThin = styled.p`
@@ -70,10 +64,15 @@ const H3 = styled.h3`
   line-height: 1.2;
 `
 
+const Anchor = styled.a`
+  color: rgb(102, 140, 255);
+`
+
 export default {
   Paragraph,
   ParagraphThin,
   H1,
   H2,
-  H3
+  H3,
+  Anchor,
 }
