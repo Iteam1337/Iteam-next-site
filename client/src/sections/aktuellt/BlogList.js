@@ -17,7 +17,7 @@ export default function BlogList({ posts }) {
                 title={post.title}
                 readMore
               >
-                {post.imageCard.description}
+                {post.intro}
               </PostCard>
             </Col>
           ))}

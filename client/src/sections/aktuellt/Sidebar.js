@@ -13,8 +13,8 @@ const Sidebar = ({ posts }) => {
     <>
       <CardSidebar>
         <TitleSidebar>Aktuellt</TitleSidebar>
-        {posts?.map((post) => (
-          <Block>
+        {posts?.map((post, i) => (
+          <Block key={i}>
             <TitlePost link={`/aktuellt/${post.slug.current}`}>{post.title}</TitlePost>
             <Date>{post.date}</Date>
           </Block>

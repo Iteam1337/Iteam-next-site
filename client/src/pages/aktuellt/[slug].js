@@ -11,7 +11,7 @@ import Sidebar from "../../sections/aktuellt/Sidebar"
 import BlogList from "../../sections/aktuellt/BlogList"
 import { NextSeo } from 'next-seo'
 
-import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts"
+// import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts"
 import BlockContent from "../../components/BlockContent"
 import Typography from '../../components/Typography'
 import { device } from '../../utils'
@@ -44,7 +44,7 @@ const BlogDetails = ({ post, posts }) => {
     console.log('posts', posts)
     return (
         <>
-            <NextSeo
+            {/* <NextSeo
                 title={post.title}
                 titleTemplate='%s | Aktuellt på Iteam'
                 description={post.imageCard.description}
@@ -68,7 +68,7 @@ const BlogDetails = ({ post, posts }) => {
                     site: '@iteam1337',
                     cardType: 'summary_large_image',
                 }}
-            />
+            /> */}
             <PageWrapper footerDark>
                 <Section className="pb-0">
                     <div className="pt-5"></div>
