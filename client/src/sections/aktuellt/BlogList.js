@@ -11,13 +11,13 @@ export default function BlogList({ posts }) {
           {posts?.map((post, i) => (
             <Col lg="4" className="mb-5" key={i}>
               <PostCard
-                img={post.image}
+                img={post.imageCard.image}
                 preTitle={post.date}
                 link={`/aktuellt/${post.id}`}
                 title={post.title}
                 readMore
               >
-                {post.intro}
+                {post.imageCard.description}
               </PostCard>
             </Col>
           ))}

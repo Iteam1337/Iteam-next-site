@@ -40,11 +40,9 @@ import { device } from '../../utils'
 
 
 const BlogDetails = ({ post, posts }) => {
-    console.log('post', post)
-    console.log('posts', posts)
     return (
         <>
-            {/* <NextSeo
+            <NextSeo
                 title={post.title}
                 titleTemplate='%s | Aktuellt på Iteam'
                 description={post.imageCard.description}
@@ -68,25 +66,24 @@ const BlogDetails = ({ post, posts }) => {
                     site: '@iteam1337',
                     cardType: 'summary_large_image',
                 }}
-            /> */}
+            />
             <PageWrapper footerDark>
                 <Section className="pb-0">
                     <div className="pt-5"></div>
                     <Container>
                         <Row className="justify-content-center text-center">
                             <Col lg="12">
-                                <Typography.H1>{post.title}</Typography.H1>
-                                <Text mr={3}>
-                                    <Typography.ParagraphThin>{post.date}</Typography.ParagraphThin>
-                                </Text>
+                                <Title variant="hero">{post.title}</Title>
                                 <Box className="d-flex justify-content-center">
-                                    <BlockContent blocks={post.blockText.blockText} />
-                                    {/* <Text>
+                                    <Text mr={3}>
+                                        <p>{post.date}</p>
+                                    </Text>
+                                    <Text>
                                         {post.tags?.map((tag) => (
                                             <Link href="/">{tag}</Link>
                                         ))}
                                     </Text>
-                                        */}
+                                    <Text>{post.author && "av " + post.author}</Text>
                                 </Box>
                             </Col>
                         </Row>
@@ -96,16 +93,15 @@ const BlogDetails = ({ post, posts }) => {
                     <Container>
                         <Row>
                             <Col lg="8" className="mb-5">
-                                <PostDetails post={post} />
+                                <BlockContent blocks={post.blockText.blockText} />
                             </Col>
-                            <Col lg="4" className="">
+                            <Col lg="4" className="" style={{ marginTop: '2.3rem' }}>
                                 <Sidebar posts={posts} />
                             </Col>
                         </Row>
                     </Container>
                 </Section>
                 <BlogList posts={posts} />
-
             </PageWrapper>
         </>
     )
