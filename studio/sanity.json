@@ -12,7 +12,9 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "color-picker"
+    "color-picker",
+    "@sanity/dashboard",
+    "vercel-deploy"
   ],
   "env": {
     "development": {
