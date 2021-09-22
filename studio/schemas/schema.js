@@ -33,7 +33,7 @@ import mvpPage from './pages/mvpPage';
 import sectionWithImageAndCta from './shared/sections/sectionWithImageAndCta';
 import sectionWithCtaAndTextGrid from './shared/sections/sectionWithCtaAndTextGrid';
 import textWithTags from './shared/textWithTags';
-import sectionWithImage from './shared/sections/SectionWithImage';
+import sectionWithImage from './shared/sections/sectionWithImage';
 import scaleUpPage from './pages/scaleUpPage';
 import ourPricing from './modules/ourPricing';
 import xPage from './pages/xPage';
