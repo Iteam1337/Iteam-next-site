@@ -1,5 +1,3 @@
-import imageWithAlt from "./imageWithAlt";
-
 export default {
   type: 'document',
   name: 'blockText',

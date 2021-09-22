@@ -16,6 +16,7 @@
   "dependencies": {
     "@sanity/base": "^2.19.0",
     "@sanity/core": "^2.19.2",
+    "@sanity/dashboard": "^2.20.0",
     "@sanity/default-layout": "^2.19.0",
     "@sanity/default-login": "^2.19.0",
     "@sanity/desk-tool": "^2.19.0",
@@ -25,9 +26,12 @@
     "react-dom": "^17.0",
     "react-icons": "^4.2.0",
     "sanity-plugin-color-picker": "^1.0.3",
+    "sanity-plugin-vercel-deploy": "^2.0.1",
     "styled-components": "^5.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@sanity/cli": "^2.20.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Iteam1337/Iteam-next-site.git"
