@@ -52,20 +52,28 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-    font-weight: 600;
-    letter-spacing: -1px;
-    margin-top: 2.25rem;
-    margin-bottom: 1.25rem;
-    color: black;
-    font-size: 32px;
-    text-align: left;
-    line-height: 1.2;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-top: 2.25rem;
+  margin-bottom: 1.25rem;
+  color: black;
+  text-align: left;
+  line-height: 1.2;
 `
-
+const H3 = styled.h3`
+  font-size: 28px;
+  margin: 36px 0 20px;
+  color: black;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.2;
+`
 
 export default {
   Paragraph,
   ParagraphThin,
   H1,
-  H2
+  H2,
+  H3
 }

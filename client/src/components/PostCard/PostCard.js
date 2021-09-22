@@ -3,6 +3,9 @@ import styled from "styled-components"
 import Link from "next/link"
 import { Title, Box, Text, Span, Anchor } from "../Core"
 import { device } from "../../utils"
+import client from '../../sanity-client'
+import { useNextSanityImage } from 'next-sanity-image';
+import Img from 'next/image';
 
 const Card = styled(Box)`
   border-radius: 10px 10px;
@@ -72,67 +75,78 @@ const PostCard = ({
   readMore,
   link = "",
   ...rest
-}) => (
-  <Card
-    className={horizontal ? "d-flex flex-column flex-md-row" : "h-100"}
-    {...rest}
-  >
-    {horizontal ? (
-      <ImageContainerHorizontal>
-        <Link href={link}>
-          <a className="w-100 h-100 d-flex">
-            <CoverImg src={img} alt="" className="w-100" />
-            {imgBrand && (
-              <BrandImage>
-                <img src={imgBrand} alt="" className="img-fluid" />
-              </BrandImage>
-            )}
-          </a>
-        </Link>
-      </ImageContainerHorizontal>
-    ) : (
-      <Box className="position-relative">
-        <Link href={link}>
-          <a className="w-100">
-            <CoverImg scale={img === '/images/api1.png'} src={img} alt="" className="w-100" />
-            {imgBrand && (
-              <BrandImage>
-                <img src={imgBrand} alt="" className="img-fluid" />
-              </BrandImage>
-            )}
-          </a>
-        </Link>
-      </Box>
-    )}
-
-    <CardText>
-      {preTitle && (
-        <Text fontSize={2} lineHeight={1.75} mb="14px">
-          {preTitle}
-        </Text>
-      )}
-
-      <Link href={link}>
-        <Anchor color="info">
-          <TitleStyled variant="card" mb="14px">
-            {title}
-          </TitleStyled>
-        </Anchor>
-      </Link>
-      <Text fontSize={2} lineHeight={1.75} mb="16px">
-        {children}
-      </Text>
-      {readMore && (
-        <Box>
+}) => {
+  const imageProps = useNextSanityImage(
+    client,
+    img.asset._ref
+  );
+  return (
+    <Card
+      className={horizontal ? "d-flex flex-column flex-md-row" : "h-100"}
+      {...rest}
+    >
+      {horizontal ? (
+        <ImageContainerHorizontal>
           <Link href={link}>
-            <Anchor color="info">
-              <Span color="info">Läs mer...</Span>
-            </Anchor>
+            <a className="w-100 h-100 d-flex">
+              <Img {...imageProps} layout="responsive" sizes="(max-width: 800px) 100vw, 800px" alt={img.alt} />
+              {/* <CoverImg src={img} alt="" className="w-100" /> */}
+              {imgBrand && (
+                <BrandImage>
+                  <img src={imgBrand} alt="" className="img-fluid" />
+                </BrandImage>
+              )}
+            </a>
+          </Link>
+        </ImageContainerHorizontal>
+      ) : (
+        <Box className="position-relative">
+          <Link href={link}>
+            <a className="w-100">
+              <div style={{ width: '348px', height: '320px', objectFit: 'cover', position: 'relative' }}>
+                <Img {...imageProps} layout="fill" alt={img.alt} />
+              </div>
+              {/* <CoverImg scale={img === '/images/api1.png'} src={img} alt="" className="w-100" /> */}
+              {imgBrand && (
+                <BrandImage>
+                  <img src={imgBrand} alt="" className="img-fluid" />
+                </BrandImage>
+              )}
+            </a>
           </Link>
         </Box>
-      )}
-    </CardText>
-  </Card>
-)
+      )
+      }
+
+      <CardText>
+        {preTitle && (
+          <Text fontSize={2} lineHeight={1.75} mb="14px">
+            {preTitle}
+          </Text>
+        )}
+
+        <Link href={link}>
+          <Anchor color="info">
+            <TitleStyled variant="card" mb="14px">
+              {title}
+            </TitleStyled>
+          </Anchor>
+        </Link>
+        <Text fontSize={2} lineHeight={1.75} mb="16px">
+          {children}
+        </Text>
+        {readMore && (
+          <Box>
+            <Link href={link}>
+              <Anchor color="info">
+                <Span color="info">Läs mer...</Span>
+              </Anchor>
+            </Link>
+          </Box>
+        )}
+      </CardText>
+    </Card >
+  )
+}
 
 export default PostCard
