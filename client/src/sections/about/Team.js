@@ -90,14 +90,17 @@ const TeamCard = ({
   </Box>
 )
 
-const Team = () => {
-
-  const sortedTeam = team
-    .sort(function (a, b) {
-      if (a.fullname < b.fullname) { return -1; }
-      if (a.fullname > b.fullname) { return 1; }
-      return 0;
-    })
+const Team = ({ content }) => {
+  console.log("contne, coowokre", content)
+  const sortedTeam = team.sort(function (a, b) {
+    if (a.fullname < b.fullname) {
+      return -1
+    }
+    if (a.fullname > b.fullname) {
+      return 1
+    }
+    return 0
+  })
 
   return (
     <>
@@ -107,27 +110,26 @@ const Team = () => {
           <Row className="justify-content-center">
             <Col lg="6" className="text-center pb-3">
               <div id="medarbetare" className="">
-                <Title>Medarbetare</Title>
-                <Text>
-                  Här hittar du oss som jobbar på Iteam, tveka inte att höra av
-                  dig!
-                </Text>
+                <Title>{content.title}</Title>
+                <Text>{content.subtitle}</Text>
               </div>
             </Col>
           </Row>
           <Row className="justify-content-center">
-            {sortedTeam.map(({ fullname, title, email, phoneNumber, status, path }) => (
-              <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4" key={email}>
-                <TeamCard
-                  email={email}
-                  name={fullname}
-                  title={title}
-                  status={status}
-                  path={path}
-                  phoneNumber={phoneNumber}
-                />
-              </Col>
-            ))}
+            {sortedTeam.map(
+              ({ fullname, title, email, phoneNumber, status, path }) => (
+                <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4" key={email}>
+                  <TeamCard
+                    email={email}
+                    name={fullname}
+                    title={title}
+                    status={status}
+                    path={path}
+                    phoneNumber={phoneNumber}
+                  />
+                </Col>
+              )
+            )}
           </Row>
         </Container>
       </Section>

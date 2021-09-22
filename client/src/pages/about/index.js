@@ -10,6 +10,7 @@ import CTA from "../../sections/about/CTA"
 import client from "./../../../src/sanity-client"
 
 const About = ({ aboutPage }) => {
+  const { hero, coworkersSection, ...rest } = aboutPage
   console.log("props", aboutPage)
   return (
     <>
@@ -22,9 +23,9 @@ const About = ({ aboutPage }) => {
             "Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag."
           }
         />
-        <Hero content={aboutPage.hero} />
-        <Content />
-        <Team />
+        <Hero content={hero} />
+        <Content content={rest} />
+        <Team content={coworkersSection} />
         <CTA />
       </PageWrapper>
     </>

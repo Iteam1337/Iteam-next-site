@@ -6,8 +6,19 @@ export default {
     { type: 'hero', name: 'hero' },
     { type: 'section', name: 'section', title: 'Rubrik och tillhörande text' },
     { type: 'layoutImages', name: 'layoutImages', title: 'Ladda upp bilder' },
-    { type: 'title', name: 'title', title: 'Rubrik för medarbetare' },
-    { type: 'string', name: 'subTitle', title: 'Underrubrik för medarbetare' },
+    {
+      type: 'object',
+      name: 'coworkersSection',
+      title: 'Medarberate',
+      fields: [
+        { type: 'title', name: 'title', title: 'Rubrik för medarbetare' },
+        {
+          type: 'string',
+          name: 'subtitle',
+          title: 'Underrubrik för medarbetare',
+        },
+      ],
+    },
     {
       type: 'titleWithCTA',
       name: 'titleWithCTA',
