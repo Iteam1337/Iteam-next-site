@@ -13,6 +13,8 @@ import { NextSeo } from 'next-seo'
 
 import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts"
 import BlockContent from "../../components/BlockContent"
+import Typography from '../../components/Typography'
+import { device } from '../../utils'
 
 // // get path
 // export async function getStaticPaths() {
@@ -37,49 +39,48 @@ import BlockContent from "../../components/BlockContent"
 
 
 
-const BlogDetails = (post) => {
+const BlogDetails = ({ post, posts }) => {
     console.log('post', post)
+    console.log('posts', posts)
     return (
         <>
-            {/* <NextSeo
+            <NextSeo
                 title={post.title}
                 titleTemplate='%s | Aktuellt på Iteam'
-                description={post.intro}
-                image={post.image}
+                description={post.imageCard.description}
+                // image={post.imageCard.image}
                 openGraph={{
                     title: post.title,
-                    description: post.intro,
-                    images: [
-                        {
-                            url: post.image,
-                            alt: post.title,
-                        }
-                    ],
+                    description: post.imageCard.description,
+                    // images: [
+                    //     {
+                    //         url: post.image,
+                    //         alt: post.title,
+                    //     }
+                    // ],
                     site_name: 'Iteam',
                 }}
                 twitter={{
                     title: post.title,
-                    description: post.intro,
-                    image: post.image,
+                    description: post.imageCard.description,
+                    // image: post.image,
                     handle: '@iteam1337',
                     site: '@iteam1337',
                     cardType: 'summary_large_image',
                 }}
-                /> */}
+            />
             <PageWrapper footerDark>
                 <Section className="pb-0">
                     <div className="pt-5"></div>
                     <Container>
                         <Row className="justify-content-center text-center">
                             <Col lg="12">
-                                <Title variant="hero">{post.title}</Title>
+                                <Typography.H1>{post.title}</Typography.H1>
                                 <Text mr={3}>
-                                    <p>{post.date}</p>
+                                    <Typography.ParagraphThin>{post.date}</Typography.ParagraphThin>
                                 </Text>
                                 <Box className="d-flex justify-content-center">
-                                    <Text>
-                                        <BlockContent blocks={post.blockText.blockText} />
-                                    </Text>
+                                    <BlockContent blocks={post.blockText.blockText} />
                                     {/* <Text>
                                         {post.tags?.map((tag) => (
                                             <Link href="/">{tag}</Link>
@@ -94,25 +95,31 @@ const BlogDetails = (post) => {
                 <Section className="pb-0">
                     <Container>
                         <Row>
-                            {/* <Col lg="8" className="mb-5">
+                            <Col lg="8" className="mb-5">
                                 <PostDetails post={post} />
                             </Col>
                             <Col lg="4" className="">
                                 <Sidebar posts={posts} />
-                            </Col> */}
+                            </Col>
                         </Row>
                     </Container>
                 </Section>
-                {/* <BlogList posts={posts} /> */}
+                <BlogList posts={posts} />
 
             </PageWrapper>
         </>
     )
 }
+
 BlogDetails.getInitialProps = async function (context) {
     const { slug = "" } = context.query
-    return await client.fetch(`
+    const post = await client.fetch(`
       *[_type == "newsPost" && slug.current == $slug][0]
     `, { slug })
+
+    const posts = await client.fetch(`
+    *[_type == "newsPost"]`)
+
+    return { post, posts }
 }
 export default BlogDetails

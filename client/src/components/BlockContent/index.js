@@ -1,5 +1,7 @@
 import React from 'react'
 import BaseBlockContent from '@sanity/block-content-to-react'
+import Title from '../Core/Title'
+import Typography from '../Typography'
 
 const serializers = (withAnchor) => ({
     types: {
@@ -7,22 +9,22 @@ const serializers = (withAnchor) => ({
             switch (node.style) {
                 case 'h1':
                     return (
-                        <h1 withAnchor={withAnchor}>{children}</h1>
+                        <Typography.H1>{children}</Typography.H1>
                     )
                 case 'h2':
                     return (
-                        <h2 withAnchor={withAnchor}>{children}</h2>
+                        <Typography.H2>{children}</Typography.H2>
                     )
                 case 'h3':
                     return (
-                        <h3 withAnchor={withAnchor}>{children}</h3>
+                        <h3>{children}</h3>
                     )
                 case 'h4':
                     return (
-                        <h4 withAnchor={withAnchor}>{children}</h4>
+                        <Title.CardTitle>{children}</Title.CardTitle>
                     )
                 case 'normal':
-                    return <p>{children}</p>
+                    return <Typography.Paragraph>{children}</Typography.Paragraph>
                 default:
                     console.warn('Unhandled in portable text serializer: ', node)
                     return <p></p>
