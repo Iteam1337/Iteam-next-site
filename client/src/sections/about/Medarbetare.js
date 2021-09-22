@@ -33,14 +33,14 @@ const Medarbetare = ({ info }) => (
           </Text>
         </Col>
       </Row>
-      {info.why && (
-        <InfoSection title="Varför jobbar du med teknik?" text={info.why} />
+      {info.answerTech && (
+        <InfoSection title={info.whyTech} text={info.answerTech} />
       )}
       {info.background && (
-        <InfoSection title="Bakgrund" text={info.background} />
+        <InfoSection title={info.background} text={info.backgroundAnswer} />
       )}
-      {info.specialty && (
-        <InfoSection title=" Specialistkompetens" text={info.specialty} />
+      {info.competenceAnswer && (
+        <InfoSection title={info.competence} text={info.competenceAnswer} />
       )}
     </Section>
   </Container>

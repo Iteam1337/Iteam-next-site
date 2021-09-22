@@ -9,9 +9,8 @@ import Team from "../../sections/about/Team"
 import CTA from "../../sections/about/CTA"
 import client from "./../../../src/sanity-client"
 
-const About = ({ aboutPage }) => {
-  const { hero, coworkersSection, ...rest } = aboutPage
-  console.log("props", aboutPage)
+const About = ({ aboutPage, coworkers }) => {
+  const { hero, coworkersSection, titleWithCTA, ...rest } = aboutPage
   return (
     <>
       <PageWrapper>
@@ -25,8 +24,8 @@ const About = ({ aboutPage }) => {
         />
         <Hero content={hero} />
         <Content content={rest} />
-        <Team content={coworkersSection} />
-        <CTA />
+        <Team content={coworkersSection} coworkers={coworkers} />
+        <CTA content={titleWithCTA} />
       </PageWrapper>
     </>
   )
@@ -38,5 +37,11 @@ About.getInitialProps = async () => ({
     ...
    }
   `),
+  coworkers: await client.fetch(`
+  *[_type == 'coworker'] {
+    phoneNumber, email, fullname, status, role, slug
+   }
+  `),
 })
+
 export default About
