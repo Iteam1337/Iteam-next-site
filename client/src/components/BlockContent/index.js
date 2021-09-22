@@ -2,6 +2,10 @@ import React from 'react'
 import BaseBlockContent from '@sanity/block-content-to-react'
 import Title from '../Core/Title'
 import Typography from '../Typography'
+import client from '../../sanity-client'
+import { useNextSanityImage } from 'next-sanity-image';
+import Img from 'next/image';
+
 
 const serializers = (withAnchor) => ({
     types: {
@@ -17,7 +21,7 @@ const serializers = (withAnchor) => ({
                     )
                 case 'h3':
                     return (
-                        <h3>{children}</h3>
+                        <Typography.H3>{children}</Typography.H3>
                     )
                 case 'h4':
                     return (
@@ -30,11 +34,23 @@ const serializers = (withAnchor) => ({
                     return <p></p>
             }
         },
+        imageWithAlt: ({ node }) => {
+            const imageProps = useNextSanityImage(
+                client,
+                node.asset._ref
+            );
+            return (
+                <Img {...imageProps} layout="responsive" sizes="(max-width: 800px) 100vw, 800px" alt={node.alt} />
+            );
+
+        }
+
+
     },
     list: ({ type, children }) => {
         switch (type) {
             case 'bullet':
-                return <ul>{children}</ul>
+                return <ul style={{ listStyleType: 'disc' }}>{children}</ul>
             case 'number':
                 return <ol>{children}</ol>
             default:
@@ -44,7 +60,7 @@ const serializers = (withAnchor) => ({
     },
     listItem: ({ children }) => (
         <li>
-            <p>{children}</p>
+            <Typography.Paragraph>{children}</Typography.Paragraph>
         </li>
     ),
 })
