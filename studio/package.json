@@ -29,7 +29,9 @@
     "sanity-plugin-vercel-deploy": "^2.0.1",
     "styled-components": "^5.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@sanity/cli": "^2.20.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Iteam1337/Iteam-next-site.git"
