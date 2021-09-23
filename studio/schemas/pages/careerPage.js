@@ -19,4 +19,20 @@ export default {
         'Lägg in en rubrik och underribrik för våra ansökningar. Under dessa kommer vi att visa länkar till de öppningar vi har just nu',
     },
   ],
+
+  preview: {
+    select: {
+      title: 'section.title',
+      subtitle: 'section',
+    },
+    prepare({ title = 'Karriar', name = 'karriar' }) {
+      const path = `/${name}`;
+      return {
+        path,
+        name,
+        title,
+        subtitle: path,
+      };
+    },
+  },
 };

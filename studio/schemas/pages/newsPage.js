@@ -9,4 +9,19 @@ export default {
       title: 'Rubrik',
     },
   ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'title',
+    },
+    prepare({ title = 'Aktuellt', name = 'aktuellt' }) {
+      const path = `/${name}`;
+      return {
+        path,
+        name,
+        title,
+        subtitle: path,
+      };
+    },
+  },
 };

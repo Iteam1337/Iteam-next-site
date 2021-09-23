@@ -100,4 +100,21 @@ export default {
         Rules.required().error('Vad är din specialistkompetens?'),
     },
   ],
+
+  preview: {
+    select: {
+      title: 'fullname',
+      slug: 'slug',
+      subtitle: 'description',
+    },
+    prepare({ title = 'No name', slug = {}, name = 'about' }) {
+      const path = `/${name}/${slug.current}`;
+
+      return {
+        path,
+        title,
+        subtitle: path,
+      };
+    },
+  },
 };

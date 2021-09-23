@@ -12,6 +12,10 @@ export default {
         Rules.required().error('Du behöver lägga in en rubrik'),
     },
     {
+      type: 'defaultSlug',
+      name: 'slug',
+    },
+    {
       type: 'title',
       name: 'position',
       title: 'Plats',
@@ -30,11 +34,20 @@ export default {
         Rules.required().error('Du behöver lägga in ansökan'),
     },
   ],
-  prepare({ name = 'karriär' }) {
-    const path = `/${name}`;
-    return {
-      path,
-      title,
-    };
+  preview: {
+    select: {
+      title: 'title',
+      slug: 'slug',
+      subtitle: 'position',
+    },
+    prepare({ title = 'No name', slug = {}, name = 'karriar' }) {
+      const path = `/${name}/${slug.current}`;
+
+      return {
+        path,
+        title,
+        subtitle: path,
+      };
+    },
   },
 };

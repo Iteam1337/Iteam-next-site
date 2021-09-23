@@ -26,4 +26,20 @@ export default {
       validation: (Rules) => Rules.required().error('Lägg in en CTA sektion.'),
     },
   ],
+
+  preview: {
+    select: {
+      title: 'section.title',
+      subtitle: 'section',
+    },
+    prepare({ title = 'Om oss', name = 'about' }) {
+      const path = `/${name}`;
+      return {
+        path,
+        name,
+        title,
+        subtitle: path,
+      };
+    },
+  },
 };

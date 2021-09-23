@@ -62,12 +62,21 @@ export default {
       ],
     },
   ],
-  prepare({ name = 'case' }) {
-    const path = `/${name}`;
-    return {
-      path,
-      name,
-      title,
-    };
+
+  preview: {
+    select: {
+      title: 'title',
+      slug: 'slug',
+      subtitle: 'subtitle',
+    },
+    prepare({ title = 'No name', slug = {}, name = 'case' }) {
+      const path = `/${name}/${slug.current}`;
+
+      return {
+        path,
+        title,
+        subtitle: path,
+      };
+    },
   },
 };

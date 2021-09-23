@@ -42,4 +42,20 @@ export default {
       },
     },
   ],
+
+  preview: {
+    select: {
+      title: 'hero.title',
+      subtitle: 'hero.subtitle',
+    },
+    prepare({ title = 'Iteam MVP', name = 'mvp' }) {
+      const path = `/${name}`;
+      return {
+        path,
+        name,
+        title,
+        subtitle: path,
+      };
+    },
+  },
 };

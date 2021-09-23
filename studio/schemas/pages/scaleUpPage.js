@@ -65,4 +65,20 @@ export default {
       },
     },
   ],
+
+  preview: {
+    select: {
+      title: 'hero.title',
+      subtitle: 'hero.subtitle',
+    },
+    prepare({ title = 'Iteam Scale-up', name = 'scaleup' }) {
+      const path = `/${name}`;
+      return {
+        path,
+        name,
+        title,
+        subtitle: path,
+      };
+    },
+  },
 };

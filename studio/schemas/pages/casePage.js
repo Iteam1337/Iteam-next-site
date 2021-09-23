@@ -12,14 +12,16 @@ export default {
 
   preview: {
     select: {
-      title: 'Case startsida',
-      slug: 'slug',
+      title: 'title',
+      subtitle: 'title',
     },
-    prepare({ title = 'Case startsida', slug = {}, name = 'casePage' }) {
-      const path = `/${name}/${slug.current}`;
+    prepare({ title = 'Case', name = 'case' }) {
+      const path = `/${name}`;
       return {
         path,
+        name,
         title,
+        subtitle: path,
       };
     },
   },

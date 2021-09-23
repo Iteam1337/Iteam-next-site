@@ -69,4 +69,20 @@ export default {
       ],
     },
   ],
+
+  preview: {
+    select: {
+      title: 'hero.title',
+      subtitle: 'hero.subtitle',
+    },
+    prepare({ title = 'Iteam X', name = 'iteamX' }) {
+      const path = `/${name}`;
+      return {
+        path,
+        name,
+        title,
+        subtitle: path,
+      };
+    },
+  },
 };

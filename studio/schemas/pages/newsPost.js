@@ -48,12 +48,20 @@ export default {
       ],
     },
   ],
-  prepare({ name = 'aktuellt' }) {
-    const path = `/${name}`;
-    return {
-      path,
-      name,
-      title,
-    };
+  preview: {
+    select: {
+      title: 'title',
+      slug: 'slug',
+      subtitle: 'blockText',
+    },
+    prepare({ title = 'No name', slug = {}, name = 'aktuellt' }) {
+      const path = `/${name}/${slug.current}`;
+
+      return {
+        path,
+        title,
+        subtitle: path,
+      };
+    },
   },
 };
