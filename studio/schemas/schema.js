@@ -36,8 +36,9 @@ import textWithTags from './shared/textWithTags';
 import sectionWithImage from './shared/sections/SectionWithImage';
 import scaleUpPage from './pages/scaleUpPage';
 import ourPricing from './modules/ourPricing';
-import xPage from './pages/xPage';
 import slug from './shared/slug';
+import xPage from './pages/xPage';
+import internalLink from './shared/internalLink';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -79,7 +80,8 @@ export default createSchema({
     sectionWithImage,
     scaleUpPage,
     ourPricing,
-    xPage,
     slug,
+    xPage,
+    internalLink,
   ]),
 });
