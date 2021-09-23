@@ -42,12 +42,14 @@ const Content = ({ content }) => (
           </Col>
           <Col lg="8" sm="7" className="mb-4">
             <ContentImg>
-              <img
-                src={urlFor(content.layoutImages[1].asset._ref)}
-                alt={content.layoutImages[1].alt}
-                className="img-fluid"
-                style={{ objectFit: "cover", height: "100%" }}
-              />
+              {content.layoutImages[1] && (
+                <img
+                  src={urlFor(content.layoutImages[1].asset._ref)}
+                  alt={content.layoutImages[1].alt}
+                  className="img-fluid"
+                  style={{ objectFit: "cover", height: "100%" }}
+                />
+              )}
             </ContentImg>
           </Col>
         </Row>
