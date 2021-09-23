@@ -13,7 +13,7 @@ export default function BlogList({ posts }) {
               <PostCard
                 img={post.imageCard.image}
                 preTitle={post.date}
-                link={`/aktuellt/${post.id}`}
+                link={`/aktuellt/${post.slug.current}`}
                 title={post.title}
                 readMore
               >

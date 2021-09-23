@@ -2,31 +2,39 @@ import React from "react"
 import PageWrapper from "../../components/PageWrapper"
 import Medarbetare from "../../sections/about/Medarbetare"
 import Hero from "../../sections/about/CoworkerHero"
-import sanityClient from "../../sanity-client"
+import team from "../../sections/about/team.json"
+
+export async function getStaticPaths() {
+  const paths = team.map(({ path }) => {
+    const name = path.split("/").slice(1)[0]
+    return { params: { name } }
+  })
+
+  return { paths, fallback: true }
+}
+
+export async function getStaticProps({ params }) {
+  const currentPath = `/about/${params.name}`
+  const coworker = team.find((c) => c.path === currentPath) || {
+    notFound: true,
+  }
+  if (coworker.notFound) return coworker
+  return { props: { coworker } }
+}
 
 const CoworkerPage = ({ coworker }) => {
-  const { fullname, heroImage, role, ...rest } = coworker
-
   return (
     <PageWrapper footerDark>
       {coworker && (
         <>
-          <Hero title={fullname} heroImage={heroImage}>
-            {role}
+          <Hero title={coworker.fullname} heroImage={coworker.heroImg}>
+            {coworker.title}
           </Hero>
-          <Medarbetare info={rest} />
+          <Medarbetare info={coworker} />
         </>
       )}
     </PageWrapper>
   )
 }
-
-CoworkerPage.getInitialProps = async () => ({
-  coworker: await sanityClient.fetch(`
-  *[_type == 'coworker'][0] {
-    ...
-   }
-  `),
-})
 
 export default CoworkerPage

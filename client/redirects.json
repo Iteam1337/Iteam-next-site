@@ -45,11 +45,6 @@
     "permanent": true
   },
   {
-    "source": "/medarbetare/ail",
-    "destination": "/about/andreas-alsterholm",
-    "permanent": true
-  },
-  {
     "source": "/medarbetare/alt",
     "destination": "/about/andreas-lundqvist",
     "permanent": true
