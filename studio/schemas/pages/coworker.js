@@ -55,8 +55,8 @@ export default {
       title: 'Status',
       options: {
         list: [
-          { title: 'Partner', value: 'partner' },
-          { title: 'Founder', value: 'founder' },
+          { title: 'Partner', value: 'Partner' },
+          { title: 'Founder', value: 'Founder' },
         ],
       },
     },
