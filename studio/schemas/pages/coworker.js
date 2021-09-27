@@ -7,7 +7,7 @@ export default {
       type: 'imageWithAlt',
       name: 'heroImage',
       title: 'Hero Bild',
-      validation: (Rules) => Rules.required().error('Välj en bakgrundsbild'),
+      // validation: (Rules) => Rules.required().error('Välj en bakgrundsbild'),
     },
     {
       type: 'string',
@@ -70,8 +70,8 @@ export default {
       type: 'text',
       name: 'answerTech',
       title: 'Varför jobbar du med teknik?',
-      validation: (Rules) =>
-        Rules.required().error('Du behöver svara på varför jobbar med teknik'),
+      // validation: (Rules) =>
+      //   Rules.required().error('Du behöver svara på varför jobbar med teknik'),
     },
     {
       type: 'string',
@@ -83,8 +83,8 @@ export default {
       type: 'text',
       name: 'backgroundAnswer',
       title: 'Bakgrund',
-      validation: (Rules) =>
-        Rules.required().error('Berätta lite om din bakgrund'),
+      //   validation: (Rules) =>
+      //     Rules.required().error('Berätta lite om din bakgrund'),
     },
     {
       type: 'string',
@@ -96,8 +96,8 @@ export default {
       type: 'text',
       name: 'competenceAnswer',
       title: 'Specialistkompetens',
-      validation: (Rules) =>
-        Rules.required().error('Vad är din specialistkompetens?'),
+      //   validation: (Rules) =>
+      //     Rules.required().error('Vad är din specialistkompetens?'),
     },
   ],
 
