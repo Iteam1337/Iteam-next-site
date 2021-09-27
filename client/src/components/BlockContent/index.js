@@ -5,6 +5,7 @@ import Typography from "../Typography"
 import client from "../../sanity-client"
 import { useNextSanityImage } from "next-sanity-image"
 import Img from "next/image"
+import { Text } from "../Core"
 
 const serializers = (withAnchor) => ({
   types: {
@@ -17,9 +18,11 @@ const serializers = (withAnchor) => ({
         case "h3":
           return <Typography.H3>{children}</Typography.H3>
         case "h4":
-          return <Title.CardTitle>{children}</Title.CardTitle>
+          return <Title variant="card">{children}</Title>
         case "normal":
           return <Typography.Paragraph>{children}</Typography.Paragraph>
+        case "subtitle":
+          return <Text>{children}</Text>
         default:
           console.warn("Unhandled in portable text serializer: ", node)
           return <p></p>
@@ -67,7 +70,6 @@ const serializers = (withAnchor) => ({
 })
 
 const BlockContent = ({ blocks = [], withAnchor = false }) => {
-  console.log("blocks", blocks)
   return (
     <BaseBlockContent blocks={blocks} serializers={serializers(withAnchor)} />
   )
