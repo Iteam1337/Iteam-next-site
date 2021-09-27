@@ -6,10 +6,13 @@ import { Title, Section, Text } from "../../components/Core"
 import { hexToRGBA } from "../../utils/helpers"
 
 const SectionStyled = styled(Section)`
-  background-image: ${({ color }) => `linear-gradient(
+  background-image: ${({ color }) =>
+    color
+      ? `linear-gradient(
     147deg, rgba(${hexToRGBA(color)}, 0.17) 0%,
-    rgba(84, 84, 212, 0) 100%
-  )`};
+    rgba(84, 84, 212, 0) 100% 
+  )`
+      : "linear-gradient(147deg, rgba(141, 141, 236, 0.17) 0%, rgba(84, 84, 212, 0) 100%)"};
 `
 
 const MediaType = ({ mediaType, children }) => {
@@ -26,12 +29,19 @@ const MediaType = ({ mediaType, children }) => {
       )
 
     default:
-      break
+      return (
+        <SectionStyled
+          pt={["120px!important", null, "190px!important"]}
+          pb={["50px!important", null, "180px!important"]}
+        >
+          {children}
+        </SectionStyled>
+      )
   }
 }
 
 const Hero = ({ content }) => {
-  const { title, subtitle, cta, mediaType } = content
+  const { title, subtitle, cta, mediaType = { type: "" } } = content
   return (
     <>
       <MediaType mediaType={mediaType}>
