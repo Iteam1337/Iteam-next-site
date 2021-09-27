@@ -13,3 +13,26 @@ export const hexToRGBA = (hex) => {
 export const urlFor = (source) => {
   return imageUrlBuilder(client).image(source).url()
 }
+
+export const buildInternalUrl = (reference) => {
+  if (reference.slug) {
+    return `${getRouteNameFromPageType(reference._type)}/${
+      reference.slug.current
+    }`
+  }
+
+  return getRouteNameFromPageType(reference._type)
+}
+
+export const getRouteNameFromPageType = (contentType) => {
+  switch (contentType) {
+    case "careerPage":
+      return "karriar"
+    case "about":
+      return "about"
+    case "coworker":
+      return "about"
+    default:
+      return "404"
+  }
+}

@@ -62,6 +62,7 @@ export default {
           },
           styles: [
             { title: 'Normal', value: 'normal' },
+            { title: 'Subtitle', value: 'subtitle' },
             { title: 'H2', value: 'h2' },
             { title: 'H3', value: 'h3' },
             { title: 'H4', value: 'h4' },

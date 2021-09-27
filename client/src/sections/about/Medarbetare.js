@@ -36,7 +36,7 @@ const Medarbetare = ({ info }) => (
       {info.answerTech && (
         <InfoSection title={info.whyTech} text={info.answerTech} />
       )}
-      {info.background && (
+      {info.backgroundAnswer && (
         <InfoSection title={info.background} text={info.backgroundAnswer} />
       )}
       {info.competenceAnswer && (

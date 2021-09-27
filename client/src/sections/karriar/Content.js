@@ -50,7 +50,7 @@ const Content = () => {
                   <Gravatar
                     email="izabella.larsson@iteam.se"
                     className="img-fluid"
-                    size="200"
+                    size={200}
                     className="rounded-circle"
                   />
                 </Col>
@@ -61,7 +61,7 @@ const Content = () => {
                     förändra och förbättra vardagen för människor. Men också att
                     det är en branch som hela tiden utvecklas, man blir aldrig
                     riktigt fullärd utan det finns alltid mer att lära sig."
-                    author=" Izabella Larsson"
+                    author="Izabella Larsson"
                     authorTitle="Utvecklare"
                   />
                 </Col>
