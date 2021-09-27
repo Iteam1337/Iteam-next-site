@@ -24,13 +24,12 @@ module.exports = withFonts(
 
       return config
     },
-    webpack5: false,
-
+    // webpack5: false,
   })
 )
 
-module.exports = {
-  images: {
-    domains: ['cdn.sanity.io']
-  }
-}
+// module.exports = {
+//   images: {
+//     domains: ['cdn.sanity.io']
+//   }
+// }
