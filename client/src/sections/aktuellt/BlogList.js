@@ -8,19 +8,22 @@ export default function BlogList({ posts }) {
     <Section className="position-relative">
       <Container>
         <Row className="justify-content-center">
-          {posts?.map((post, i) => (
-            <Col lg="4" className="mb-5" key={i}>
-              <PostCard
-                img={post.imageCard.image}
-                preTitle={post.date}
-                link={`/aktuellt/${post.slug.current}`}
-                title={post.title}
-                readMore
-              >
-                {post.imageCard.description}
-              </PostCard>
-            </Col>
-          ))}
+          {posts?.map((post, i) => {
+            const { imageCard, slug, date, title } = post
+            return (
+              <Col lg="4" className="mb-5" key={i}>
+                <PostCard
+                  img={imageCard.image}
+                  preTitle={date}
+                  link={`/aktuellt/${slug.current}`}
+                  title={title}
+                  readMore
+                >
+                  {imageCard.description}
+                </PostCard>
+              </Col>
+            )
+          })}
         </Row>
       </Container>
     </Section>

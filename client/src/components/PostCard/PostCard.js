@@ -88,11 +88,11 @@ const PostCard = ({
               width="348px"
               height="320px"
             />
-            {imgBrand && (
+            {/* {imgBrand && (
               <BrandImage>
                 <img src={imgBrand} alt="" className="img-fluid" />
               </BrandImage>
-            )}
+            )} */}
           </a>
         </Link>
       </Box>
