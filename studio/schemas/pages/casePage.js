@@ -4,9 +4,9 @@ export default {
   title: 'Case',
   fields: [
     { type: 'title', name: 'title', title: 'Rubrik' },
-    { type: 'string', name: 'subtitle', title: 'Underrubrik' },
-    { type: 'imageCard', name: 'imageCardOne', title: 'Kort' },
-    { type: 'imageCard', name: 'imageCardTwo', title: 'Kort' },
+    { type: 'string', name: 'subTitle', title: 'Underrubrik' },
+    { type: 'sectionWithCtaTitle', name: 'sectionWithImageOne', title: 'Kort' },
+    { type: 'sectionWithCtaTitle', name: 'sectionWithImageTwo', title: 'Kort' },
     { type: 'titleWithCTA', name: 'titleWithCTA', title: 'Text med CTA knapp' },
   ],
 

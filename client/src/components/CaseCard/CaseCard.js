@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Link from "next/link"
 import { Title, Box, Text } from "../Core"
+import { buildInternalUrl } from "../../utils/helpers"
 
 const Card = styled(Box)`
   border-radius: 0;
@@ -42,29 +43,35 @@ const CaseCard = ({
   title,
   children,
   readMore,
+  reference,
   ...rest
-}) => (
-  <Card className="d-flex" {...rest}>
-    <ImageContainer>
-      <Link href="/">
-        <a>
-          <img src={img} alt={title} className="w-100 img-fluid" />
-        </a>
-      </Link>
-    </ImageContainer>
-    <CardText>
-      <Link href="/">
-        <a>
+}) => {
+  console.log('ref', reference)
+  return (
+    <Card className="d-flex" {...rest}>
+      <ImageContainer>
+        <Link href="/">
+          <a>
+            <img src={img} alt={title} className="w-100 img-fluid" />
+          </a>
+        </Link>
+      </ImageContainer>
+      <CardText>
+        <a onClick={() =>
+        (window.location.href = buildInternalUrl(
+          reference
+        ))
+        } style={{ cursor: 'pointer' }}>
           <TitleStyled variant="card" mb="12px">
             {title}
           </TitleStyled>
         </a>
-      </Link>
-      <Text fontSize={2} lineHeight={1.75} mb="0">
-        {children}
-      </Text>
-    </CardText>
-  </Card>
-)
+        <Text fontSize={2} lineHeight={1.75} mb="0">
+          {children}
+        </Text>
+      </CardText>
+    </Card >
+  )
+}
 
 export default CaseCard
