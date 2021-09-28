@@ -81,13 +81,9 @@ const PostCard = ({
       <Box className="position-relative">
         <Link href={link}>
           <a className="w-100">
-            <Img
-              {...imageProps}
-              objectFit="cover"
-              alt={img.alt}
-              width="348px"
-              height="320px"
-            />
+
+            <CoverImg {...imageProps} alt={img.alt} className="w-100" />
+
             {/* {imgBrand && (
               <BrandImage>
                 <img src={imgBrand} alt="" className="img-fluid" />

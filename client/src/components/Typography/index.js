@@ -10,7 +10,9 @@ const Paragraph = styled.p`
   text-align: left;
   color: black;
 `
-
+const QuoteParagraph = styled(Paragraph)`
+font-size: 19.5px;
+`
 const ParagraphThin = styled.p`
   margin: 20px 0;
   font-size: 18px;
@@ -20,7 +22,6 @@ const ParagraphThin = styled.p`
   text-align: center;
 
 `
-
 const H1 = styled.h1`
   font-weight: 700;
   font-size: 50px;
@@ -83,7 +84,6 @@ const QuoteMark = styled.div`
   margin-right: 1rem;
   margin-top: -0.5rem;
 `
-
 const BlockQuote = styled.blockquote`
   box-sizing: border-box;
   min-width: 0;
@@ -105,5 +105,6 @@ export default {
   H4,
   Anchor,
   QuoteMark,
-  BlockQuote
+  BlockQuote,
+  QuoteParagraph
 }

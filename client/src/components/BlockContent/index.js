@@ -26,7 +26,7 @@ const serializers = (withAnchor) => ({
           return (
             <Typography.BlockQuote>
               <Typography.QuoteMark aria-hidden="true">&ldquo;</Typography.QuoteMark>
-              <Typography.Paragraph>{children}</Typography.Paragraph>
+              <Typography.QuoteParagraph>{children}</Typography.QuoteParagraph>
             </Typography.BlockQuote>
           )
         default:
