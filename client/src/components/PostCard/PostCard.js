@@ -82,7 +82,7 @@ const PostCard = ({
         <Link href={link}>
           <a className="w-100">
 
-            <CoverImg {...imageProps} alt={img.alt} className="w-100" />
+            <CoverImg {...imageProps} scale={img.asset._ref === "image-114b3733ce819368828659f5a8990039c68519a0-1120x318-png"} alt={img.alt} className="w-100" />
 
             {/* {imgBrand && (
               <BrandImage>
