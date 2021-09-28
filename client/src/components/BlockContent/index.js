@@ -6,6 +6,8 @@ import client from "../../sanity-client"
 import { useNextSanityImage } from "next-sanity-image"
 import Img from "next/image"
 
+
+
 const serializers = (withAnchor) => ({
   types: {
     block: ({ node, children }) => {
@@ -17,9 +19,16 @@ const serializers = (withAnchor) => ({
         case "h3":
           return <Typography.H3>{children}</Typography.H3>
         case "h4":
-          return <Title.CardTitle>{children}</Title.CardTitle>
+          return <Typography.H4>{children}</Typography.H4>
         case "normal":
           return <Typography.Paragraph>{children}</Typography.Paragraph>
+        case "blockquote":
+          return (
+            <Typography.BlockQuote>
+              <Typography.QuoteMark aria-hidden="true">&ldquo;</Typography.QuoteMark>
+              <Typography.Paragraph>{children}</Typography.Paragraph>
+            </Typography.BlockQuote>
+          )
         default:
           console.warn("Unhandled in portable text serializer: ", node)
           return <p></p>
@@ -63,7 +72,7 @@ const serializers = (withAnchor) => ({
     <li>
       <Typography.Paragraph>{children}</Typography.Paragraph>
     </li>
-  ),
+  )
 })
 
 const BlockContent = ({ blocks = [], withAnchor = false }) => {

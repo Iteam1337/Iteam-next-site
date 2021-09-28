@@ -6,22 +6,23 @@ import { Section, Title, Text } from "../../components/Core"
 
 import MetaTags from "../../components/MetaTags/MetaTags"
 import BlogList from "../../sections/aktuellt/BlogList"
-import { getSortedPostsData } from "../../lib/posts"
-import { groq } from "next-sanity"
 import client from "../../sanity-client"
+import { groq } from "next-sanity"
 
-// export async function getStaticProps() {
-//   console.log("getting blog posts")
-//   const posts = getSortedPostsData()
-//   return {
-//     props: {
-//       posts,
-//     },
-//   }
-// }
 
 export default function BlogRegular({ newsPage, newsPosts }) {
   const { title } = newsPage
+
+
+  const sortedNewsPosts = newsPosts.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1
+    } else {
+      return -1
+    }
+  })
+
+
   return (
     <>
       <PageWrapper footerDark>
@@ -39,7 +40,7 @@ export default function BlogRegular({ newsPage, newsPosts }) {
             </Row>
           </Container>
         </Section>
-        <BlogList posts={newsPosts} />
+        <BlogList posts={sortedNewsPosts} />
       </PageWrapper>
     </>
   )

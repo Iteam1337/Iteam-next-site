@@ -12,33 +12,9 @@ import Sidebar from "../../sections/aktuellt/Sidebar"
 import BlogList from "../../sections/aktuellt/BlogList"
 import { NextSeo } from 'next-seo'
 
-// import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts"
 import BlockContent from "../../components/BlockContent"
 import Typography from '../../components/Typography'
 import { device } from '../../utils'
-
-// // get path
-// export async function getStaticPaths() {
-//     const paths = getAllPostIds()
-//     return {
-//         paths,
-//         fallback: false,
-//     }
-// }
-
-// // get data
-// export async function getStaticProps({ params }) {
-//     const post = await getPostData(params.id)
-//     const posts = await getSortedPostsData()
-//     return {
-//         props: {
-//             post,
-//             posts,
-//         },
-//     }
-// }
-
-
 
 const BlogDetails = ({ post, posts }) => {
     return (
