@@ -53,7 +53,7 @@ const newsPageQuery = groq`
   }`
 
 const newsPostsQuery = groq`
-  *[_type == 'newsPost']
+  *[_type == 'newsPost' && !(_id in path('drafts.**'))]
   {
   title,
    imageCard,
