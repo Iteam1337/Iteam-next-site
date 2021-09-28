@@ -54,7 +54,7 @@ export default {
                     title: 'Referens',
                     description:
                       'Länk till någon av de andra posterna på sidan, t.ex ett projekt eller en nyhet.',
-                    to: [{ type: 'newsPost' }, { type: 'casePost' }],
+                    to: [{ type: 'newsPost' }, { type: 'casePost' }, { type: 'mvpPage' }, { type: 'xPage' }, { type: 'scaleUpPage' }],
                   },
                 ],
               },
@@ -66,6 +66,7 @@ export default {
             { title: 'H2', value: 'h2' },
             { title: 'H3', value: 'h3' },
             { title: 'H4', value: 'h4' },
+            { title: 'Quote', value: 'blockquote' },
           ],
         },
         { type: 'imageWithAlt' },

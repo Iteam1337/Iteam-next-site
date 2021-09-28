@@ -4,40 +4,18 @@ import Head from "next/head"
 import { Container, Row, Col } from "react-bootstrap"
 import PageWrapper from "../../components/PageWrapper"
 import { Section, Title, Text, Box } from "../../components/Core"
-import client from './../../../src/sanity-client'
+import { groq } from "next-sanity"
+import client from "../../sanity-client"
 
 import PostDetails from "../../sections/aktuellt/PostDetails"
 import Sidebar from "../../sections/aktuellt/Sidebar"
 import BlogList from "../../sections/aktuellt/BlogList"
 import { NextSeo } from 'next-seo'
 
-// import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/posts"
 import BlockContent from "../../components/BlockContent"
 import Typography from '../../components/Typography'
 import { device } from '../../utils'
-
-// // get path
-// export async function getStaticPaths() {
-//     const paths = getAllPostIds()
-//     return {
-//         paths,
-//         fallback: false,
-//     }
-// }
-
-// // get data
-// export async function getStaticProps({ params }) {
-//     const post = await getPostData(params.id)
-//     const posts = await getSortedPostsData()
-//     return {
-//         props: {
-//             post,
-//             posts,
-//         },
-//     }
-// }
-
-
+import { urlFor } from "../../utils/helpers"
 
 const BlogDetails = ({ post, posts }) => {
     return (
@@ -46,22 +24,22 @@ const BlogDetails = ({ post, posts }) => {
                 title={post.title}
                 titleTemplate='%s | Aktuellt på Iteam'
                 description={post.imageCard.description}
-                // image={post.imageCard.image}
+                image={urlFor(post.imageCard.image.asset._ref)}
                 openGraph={{
                     title: post.title,
                     description: post.imageCard.description,
-                    // images: [
-                    //     {
-                    //         url: post.image,
-                    //         alt: post.title,
-                    //     }
-                    // ],
+                    images: [
+                        {
+                            url: urlFor(post.imageCard.image.asset._ref),
+                            alt: post.imageCard.image.alt,
+                        }
+                    ],
                     site_name: 'Iteam',
                 }}
                 twitter={{
                     title: post.title,
                     description: post.imageCard.description,
-                    // image: post.image,
+                    image: urlFor(post.imageCard.image.asset._ref),
                     handle: '@iteam1337',
                     site: '@iteam1337',
                     cardType: 'summary_large_image',
@@ -107,15 +85,39 @@ const BlogDetails = ({ post, posts }) => {
     )
 }
 
-BlogDetails.getInitialProps = async function (context) {
-    const { slug = "" } = context.query
-    const post = await client.fetch(`
-      *[_type == "newsPost" && slug.current == $slug][0]
-    `, { slug })
+const newsPostsQuery = groq`
+  *[_type == 'newsPost'] {
+    ...,
+   }
+`
 
-    const posts = await client.fetch(`
-    *[_type == "newsPost"]`)
+const newsPostQuery = groq`
+    *[_type == "newsPost" && slug.current == $slug][0] {
+    ...,
+    }
+`
 
-    return { post, posts }
+export async function getStaticProps(context) {
+    const newsPost = await client.fetch(newsPostQuery, {
+        slug: context.params.slug,
+    })
+    const newsPosts = await client.fetch(newsPostsQuery)
+
+    return {
+        props: {
+            post: newsPost,
+            posts: newsPosts
+        },
+    }
 }
+
+export const getStaticPaths = async () => {
+    const pages = (await client.fetch(newsPostsQuery)) || []
+    const paths = pages.map((page) => ({
+        params: { slug: page.slug.current },
+    }))
+    return { paths, fallback: false }
+}
+
+
 export default BlogDetails

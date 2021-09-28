@@ -34,7 +34,11 @@ export default {
       title: 'Förhandsvisning',
       validation: (Rules) =>
         Rules.required().error('Du behöver lägga in en förhandsvisning'),
+      options: {
+        collapsible: true,
+      },
     },
+
   ],
   orderings: [
     {

@@ -48,7 +48,18 @@ export default {
         layout: 'tags',
       },
     },
-    { type: 'imageCard', name: 'imageCard', title: 'Förhandsvisning' },
+    {
+      type: 'object',
+      name: 'preview',
+      title: 'Förhandsvisning',
+      options: {
+        collapsible: true,
+      },
+      fields: [
+        { type: 'title', name: 'title', title: 'Rubrik till förhandsvisning' },
+        { type: 'imageCard', name: 'imageCard', title: 'Förhandsvisning' },
+      ]
+    },
   ],
   orderings: [
     {

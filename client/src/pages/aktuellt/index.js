@@ -6,38 +6,69 @@ import { Section, Title, Text } from "../../components/Core"
 
 import MetaTags from "../../components/MetaTags/MetaTags"
 import BlogList from "../../sections/aktuellt/BlogList"
-import { getSortedPostsData } from "../../lib/posts"
+import client from "../../sanity-client"
+import { groq } from "next-sanity"
 
-export async function getStaticProps() {
-  console.log("getting blog posts")
-  const posts = getSortedPostsData()
-  return {
-    props: {
-      posts,
-    },
-  }
-}
 
-export default function BlogRegular({ posts }) {
+export default function BlogRegular({ newsPage, newsPosts }) {
+  const { title } = newsPage
+
+
+  const sortedNewsPosts = newsPosts.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1
+    } else {
+      return -1
+    }
+  })
+
+
   return (
     <>
       <PageWrapper footerDark>
         <MetaTags
-          title={"Aktuellt på Iteam"}
-          description={"Aktuellt på Iteam"}
+          title={title}
+          description={title}
         />
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="8">
-                <Title>Aktuellt på Iteam</Title>
+                <Title>{title}</Title>
               </Col>
             </Row>
           </Container>
         </Section>
-        <BlogList posts={posts} />
+        <BlogList posts={sortedNewsPosts} />
       </PageWrapper>
     </>
   )
+}
+
+const newsPageQuery = groq`
+  *[_type == 'newsPage'][0] 
+  {
+    title
+  }`
+
+const newsPostsQuery = groq`
+  *[_type == 'newsPost']
+  {
+  title,
+   imageCard,
+   slug,
+   date
+  }`
+
+
+export async function getStaticProps() {
+  const newsPage = await client.fetch(newsPageQuery)
+  const newsPosts = await client.fetch(newsPostsQuery)
+  return {
+    props: {
+      newsPage,
+      newsPosts
+    }
+  }
 }
