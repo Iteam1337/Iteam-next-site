@@ -1,15 +1,12 @@
 import React from "react"
 import BaseBlockContent from "@sanity/block-content-to-react"
-import Title from "../Core/Title"
 import Typography from "../Typography"
 import client from "../../sanity-client"
 import { useNextSanityImage } from "next-sanity-image"
 import Img from "next/image"
 import { Text } from "../Core"
 
-
-
-const serializers = (withAnchor) => ({
+const serializers = (withAnchor, variant) => ({
   types: {
     block: ({ node, children }) => {
       switch (node.style) {
@@ -22,11 +19,17 @@ const serializers = (withAnchor) => ({
         case "h4":
           return <Typography.H4>{children}</Typography.H4>
         case "normal":
-          return <Typography.Paragraph>{children}</Typography.Paragraph>
+          return (
+            <Typography.Paragraph variant={variant}>
+              {children}
+            </Typography.Paragraph>
+          )
         case "blockquote":
           return (
             <Typography.BlockQuote>
-              <Typography.QuoteMark aria-hidden="true">&ldquo;</Typography.QuoteMark>
+              <Typography.QuoteMark aria-hidden="true">
+                &ldquo;
+              </Typography.QuoteMark>
               <Typography.QuoteParagraph>{children}</Typography.QuoteParagraph>
             </Typography.BlockQuote>
           )
@@ -73,14 +76,21 @@ const serializers = (withAnchor) => ({
   },
   listItem: ({ children }) => (
     <li>
-      <Typography.Paragraph>{children}</Typography.Paragraph>
+      <Typography.Paragraph variant={variant}>{children}</Typography.Paragraph>
     </li>
-  )
+  ),
 })
 
-const BlockContent = ({ blocks = [], withAnchor = false }) => {
+const BlockContent = ({
+  blocks = [],
+  withAnchor = false,
+  variant = "normal",
+}) => {
   return (
-    <BaseBlockContent blocks={blocks} serializers={serializers(withAnchor)} />
+    <BaseBlockContent
+      blocks={blocks}
+      serializers={serializers(withAnchor, variant)}
+    />
   )
 }
 

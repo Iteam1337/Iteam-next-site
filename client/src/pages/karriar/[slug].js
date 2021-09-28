@@ -36,7 +36,7 @@ const OpeningDetails = ({ openPosition }) => {
         <Container>
           <Row>
             <Col lg="12" xl="10" className="offset-xl-1">
-              <BlockContent blocks={blockText.blockText} />
+              <BlockContent variant="thin" blocks={blockText.blockText} />
             </Col>
           </Row>
         </Container>
