@@ -26,15 +26,17 @@ const Contact1 = () => {
     script.async = true
     document.body.appendChild(script)
   }, [])
-
+  const content = { title: "" }
   return (
     <>
       <PageWrapper footerDark>
-        <Hero title="Klart vi ska ses!">
-          Vi träffar gärna er och lyssnar in vad ni har för utmaningar som kan
-          lösas med lite smart digitalisering. Nedan kan du enkelt boka in ett
-          distansmöte direkt i din och vår kalender.
-        </Hero>
+        <Hero
+          content={{
+            title: "Klart vi ska ses!",
+            subtitle:
+              "Vi träffar gärna er och lyssnar in vad ni har för utmaningar som kan lösas med lite smart digitalisering. Nedan kan du enkelt boka in ett distansmöte direkt i din och vår kalender.",
+          }}
+        />
         <Section>
           <Container>
             <Row className="align-items-center">

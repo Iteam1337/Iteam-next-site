@@ -30,26 +30,34 @@ const Content = ({ content }) => (
           </Col>
         </Row>
         <Row className="mt-5">
-          <Col lg="4" sm="5" className="mb-4 ">
-            <ContentImg>
-              <img
-                src={urlFor(content.layoutImages[0].asset._ref)}
-                alt={content.layoutImages[0].alt}
-                className="img-fluid"
-                style={{ objectFit: "cover", height: "100%" }}
-              />
-            </ContentImg>
-          </Col>
-          <Col lg="8" sm="7" className="mb-4">
-            <ContentImg>
-              <img
-                src={urlFor(content.layoutImages[1].asset._ref)}
-                alt={content.layoutImages[1].alt}
-                className="img-fluid"
-                style={{ objectFit: "cover", height: "100%" }}
-              />
-            </ContentImg>
-          </Col>
+          {content.layoutImages.map((image, index) => {
+            if (index % 2 == 0) {
+              return (
+                <Col lg="4" sm="5" className="mb-4" key={index}>
+                  <ContentImg>
+                    <img
+                      src={urlFor(image.asset._ref)}
+                      alt={image.alt}
+                      className="img-fluid"
+                      style={{ objectFit: "cover", height: "100%" }}
+                    />
+                  </ContentImg>
+                </Col>
+              )
+            }
+            return (
+              <Col lg="8" sm="7" className="mb-4" key={index}>
+                <ContentImg>
+                  <img
+                    src={urlFor(image.asset._ref)}
+                    alt={image.alt}
+                    className="img-fluid"
+                    style={{ objectFit: "cover", height: "100%" }}
+                  />
+                </ContentImg>
+              </Col>
+            )
+          })}
         </Row>
       </Container>
     </Section>

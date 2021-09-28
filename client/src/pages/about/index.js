@@ -8,6 +8,7 @@ import MetaTags from "../../components/MetaTags/MetaTags"
 import Team from "../../sections/about/Team"
 import CTA from "../../sections/about/CTA"
 import client from "./../../../src/sanity-client"
+import { groq } from "next-sanity"
 
 const About = ({ aboutPage, coworkers }) => {
   const { hero, coworkersSection, titleWithCTA, ...rest } = aboutPage
@@ -31,17 +32,39 @@ const About = ({ aboutPage, coworkers }) => {
   )
 }
 
-About.getInitialProps = async () => ({
-  aboutPage: await client.fetch(`
-  *[_type == 'aboutPage'][0] {
-    ...
-   }
-  `),
-  coworkers: await client.fetch(`
+const aboutPageQuery = groq`
+*[_type == 'aboutPage'][0] {
+  ..., 
+  titleWithCTA {
+    ...,
+  	cta {
+      ...,
+  		reference-> {
+        _type,
+        slug {
+          current
+        }
+      }
+    }
+  }
+ }
+`
+
+const coworkerQuery = groq`
   *[_type == 'coworker'] {
     phoneNumber, email, fullname, status, role, slug
    }
-  `),
-})
+`
+
+export async function getStaticProps() {
+  const aboutPage = await client.fetch(aboutPageQuery)
+  const coworkers = await client.fetch(coworkerQuery)
+  return {
+    props: {
+      aboutPage,
+      coworkers,
+    },
+  }
+}
 
 export default About

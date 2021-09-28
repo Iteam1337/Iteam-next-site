@@ -31,7 +31,7 @@ const Hero = ({ title, children, heroImage }) => (
       pt={["120px!important", null, "190px!important"]}
       pb={["50px!important", null, "180px!important"]}
       bg="dark"
-      heroImage={urlFor(heroImage.asset._ref)}
+      heroImage={heroImage && urlFor(heroImage.asset._ref)}
     >
       <Container
         css={`

@@ -5,6 +5,7 @@ import Typography from "../Typography"
 import client from "../../sanity-client"
 import { useNextSanityImage } from "next-sanity-image"
 import Img from "next/image"
+import { Text } from "../Core"
 
 
 
@@ -29,6 +30,8 @@ const serializers = (withAnchor) => ({
               <Typography.QuoteParagraph>{children}</Typography.QuoteParagraph>
             </Typography.BlockQuote>
           )
+        case "subtitle":
+          return <Text>{children}</Text>
         default:
           console.warn("Unhandled in portable text serializer: ", node)
           return <p></p>
@@ -76,7 +79,6 @@ const serializers = (withAnchor) => ({
 })
 
 const BlockContent = ({ blocks = [], withAnchor = false }) => {
-  console.log("blocks", blocks)
   return (
     <BaseBlockContent blocks={blocks} serializers={serializers(withAnchor)} />
   )
