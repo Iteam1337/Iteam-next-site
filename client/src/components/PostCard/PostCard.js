@@ -101,11 +101,13 @@ const PostCard = ({
         )}
 
         <Link href={link}>
+          <>
           <Anchor color="info">
             <TitleStyled variant="card" mb="14px">
               {title}
             </TitleStyled>
           </Anchor>
+          </>
         </Link>
         <Text fontSize={2} lineHeight={1.75} mb="16px">
           {children}
@@ -113,9 +115,11 @@ const PostCard = ({
         {readMore && (
           <Box>
             <Link href={link}>
+              <>
               <Anchor color="info">
                 <Span color="info">Läs mer...</Span>
               </Anchor>
+              </>
             </Link>
           </Box>
         )}
