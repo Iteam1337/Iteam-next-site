@@ -15,6 +15,7 @@ import { NextSeo } from 'next-seo'
 import BlockContent from "../../components/BlockContent"
 import Typography from '../../components/Typography'
 import { device } from '../../utils'
+import { urlFor } from "../../utils/helpers"
 
 const BlogDetails = ({ post, posts }) => {
     return (
@@ -23,22 +24,22 @@ const BlogDetails = ({ post, posts }) => {
                 title={post.title}
                 titleTemplate='%s | Aktuellt på Iteam'
                 description={post.imageCard.description}
-                // image={post.imageCard.image}
+                image={urlFor(post.imageCard.image.asset._ref)}
                 openGraph={{
                     title: post.title,
                     description: post.imageCard.description,
-                    // images: [
-                    //     {
-                    //         url: post.image,
-                    //         alt: post.title,
-                    //     }
-                    // ],
+                    images: [
+                        {
+                            url: urlFor(post.imageCard.image.asset._ref),
+                            alt: post.imageCard.image.alt,
+                        }
+                    ],
                     site_name: 'Iteam',
                 }}
                 twitter={{
                     title: post.title,
                     description: post.imageCard.description,
-                    // image: post.image,
+                    image: urlFor(post.imageCard.image.asset._ref),
                     handle: '@iteam1337',
                     site: '@iteam1337',
                     cardType: 'summary_large_image',
