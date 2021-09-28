@@ -11,9 +11,7 @@ import client from "../../sanity-client"
 import { groq } from "next-sanity"
 
 const CaseStudy = ({ casePage, casePosts }) => {
-
   const sectionCards = [casePage.sectionWithImageOne, casePage.sectionWithImageTwo]
-
   return (
     <>
       <PageWrapper footerDark>
