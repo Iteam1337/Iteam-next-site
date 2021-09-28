@@ -60,7 +60,7 @@ const TitleStyled = styled(Title)`
 
 const CoverImg = styled.img`
   height: 320px;
-  object-fit: ${(props) => (props.scale ? "scale-down" : "cover")};
+  object-fit: ${props => props.scale};
 `
 
 const PostCard = ({
@@ -81,9 +81,7 @@ const PostCard = ({
       <Box className="position-relative">
         <Link href={link}>
           <a className="w-100">
-
-            <CoverImg {...imageProps} alt={img.alt} className="w-100" />
-
+            <CoverImg {...imageProps} scale={img.asset._ref == 'image-114b3733ce819368828659f5a8990039c68519a0-1120x318-png' ? "scale-down" : "cover"} alt={img.alt} className="w-100" />
             {/* {imgBrand && (
               <BrandImage>
                 <img src={imgBrand} alt="" className="img-fluid" />
