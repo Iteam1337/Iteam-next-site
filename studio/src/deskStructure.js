@@ -178,41 +178,41 @@ export default () =>
                 ),
             ])
         ),
-      S.listItem()
-        .title('Moduler')
-        .child(
-          S.list()
-            .title('Moduler')
-            .items([
-              S.listItem()
-                .title('Footer')
-                .icon(FaRegFileImage)
-                .child(
-                  S.document()
-                    .title('Footer')
-                    .schemaType('footer')
-                    .documentId('footer')
-                ),
-              S.listItem()
-                .title('Karusell')
-                .icon(FaRegFileImage)
-                .child(
-                  S.document()
-                    .title('Karusell')
-                    .schemaType('carousel')
-                    .documentId('carousel')
-                ),
-              S.listItem()
-                .title('Våra priser')
-                .icon(FaRegFileImage)
-                .child(
-                  S.document()
-                    .title('Våra priser')
-                    .schemaType('ourPricing')
-                    .documentId('ourPricing')
-                ),
-            ])
-        ),
+      // S.listItem()
+      //   .title('Moduler')
+      //   .child(
+      //     S.list()
+      //       .title('Moduler')
+      //       .items([
+      //         S.listItem()
+      //           .title('Footer')
+      //           .icon(FaRegFileImage)
+      //           .child(
+      //             S.document()
+      //               .title('Footer')
+      //               .schemaType('footer')
+      //               .documentId('footer')
+      //           ),
+      //         S.listItem()
+      //           .title('Karusell')
+      //           .icon(FaRegFileImage)
+      //           .child(
+      //             S.document()
+      //               .title('Karusell')
+      //               .schemaType('carousel')
+      //               .documentId('carousel')
+      //           ),
+      //         S.listItem()
+      //           .title('Våra priser')
+      //           .icon(FaRegFileImage)
+      //           .child(
+      //             S.document()
+      //               .title('Våra priser')
+      //               .schemaType('ourPricing')
+      //               .documentId('ourPricing')
+      //           ),
+      //       ])
+      //   ),
       // We also need to remove the new singletons from the main list
       ...S.documentTypeListItems().filter(
         (listItem) =>
