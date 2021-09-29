@@ -1,10 +1,10 @@
 export default {
-  name: 'mediaTypes',
+  name: 'mediaType',
   title: 'Media',
   type: 'document',
   fields: [
     {
-      name: 'mediaType',
+      name: 'type',
       type: 'string',
       initialValue: 'image',
       title: 'Val av media',
@@ -12,7 +12,7 @@ export default {
         list: [
           { title: 'Bild', value: 'image' },
           { title: 'Video', value: 'video' },
-          { title: 'Bakgrunsfärg', value: 'color' }
+          { title: 'Bakgrunsfärg', value: 'color' },
         ],
       },
     },
@@ -21,20 +21,20 @@ export default {
       name: 'image',
       title: 'Bild',
       type: 'imageWithAlt',
-      hidden: ({ parent }) => parent?.mediaType !== 'image',
+      hidden: ({ parent }) => parent?.type !== 'image',
     },
     {
       name: 'video',
       title: 'Video url',
       type: 'string',
-      hidden: ({ parent }) => parent?.mediaType !== 'video',
+      hidden: ({ parent }) => parent?.type !== 'video',
     },
     {
       name: 'color',
       title: 'Bakgrundsfärg',
       type: 'colorPicker',
       description: 'Välj bakgrundsfärg till din hero här',
-      hidden: ({ parent }) => parent?.mediaType !== 'color',
-    }
+      hidden: ({ parent }) => parent?.type !== 'color',
+    },
   ],
 };

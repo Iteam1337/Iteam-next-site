@@ -19,38 +19,40 @@ const RightCard = styled(Box)`
   right: -275px;
 `
 
-const CTA = () => (
-  <>
-    {/* <!-- CTA section --> */}
-    <Section bg="dark" className="position-relative">
-      <LeftCard
-        data-aos="fade-right"
-        data-aos-duration="750"
-        data-aos-once="true"
-      >
-        <img src={imgOval} alt="" className="img-fluid" />
-      </LeftCard>
-      <RightCard>
-        <img src={svgCurve} alt="" className="img-fluid" />
-      </RightCard>
-      <Container>
-        <Row className="justify-content-center text-center">
-          <Col lg="6">
-            <Box mb={5} className="text-center">
-              <Title color="light">
-                Nyfiken på vad vi kan göra tillsammans?
-              </Title>
-            </Box>
-            <Box>
-              <a href="/book">
-                <Button>Boka möte</Button>
-              </a>
-            </Box>
-          </Col>
-        </Row>
-      </Container>
-    </Section>
-  </>
-)
+const CTA = ({ text }) => {
+  return (
+    <>
+      {/* <!-- CTA section --> */}
+      <Section bg="dark" className="position-relative">
+        <LeftCard
+          data-aos="fade-right"
+          data-aos-duration="750"
+          data-aos-once="true"
+        >
+          <img src={imgOval} alt="" className="img-fluid" />
+        </LeftCard>
+        <RightCard>
+          <img src={svgCurve} alt="" className="img-fluid" />
+        </RightCard>
+        <Container>
+          <Row className="justify-content-center text-center">
+            <Col lg="6">
+              <Box mb={5} className="text-center">
+                <Title color="light">
+                  {text.title}
+                </Title>
+              </Box>
+              <Box>
+                <a href="/book">
+                  <Button>{text.cta.title}</Button>
+                </a>
+              </Box>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+    </>
+  )
+}
 
 export default CTA

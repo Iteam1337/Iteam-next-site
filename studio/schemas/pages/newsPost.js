@@ -11,6 +11,10 @@ export default {
         Rules.required().error('Du behöver lägga in en rubrik'),
     },
     {
+      type: 'defaultSlug',
+      name: 'slug',
+    },
+    {
       type: 'date',
       name: 'date',
       title: 'Datum',
@@ -30,7 +34,11 @@ export default {
       title: 'Förhandsvisning',
       validation: (Rules) =>
         Rules.required().error('Du behöver lägga in en förhandsvisning'),
+      options: {
+        collapsible: true,
+      },
     },
+
   ],
   orderings: [
     {
@@ -44,12 +52,20 @@ export default {
       ],
     },
   ],
-  prepare({ name = 'aktuellt' }) {
-    const path = `/${name}`;
-    return {
-      path,
-      name,
-      title,
-    };
+  preview: {
+    select: {
+      title: 'title',
+      slug: 'slug',
+      subtitle: 'blockText',
+    },
+    prepare({ title = 'No name', slug = {}, name = 'aktuellt' }) {
+      const path = `/${name}/${slug.current}`;
+
+      return {
+        path,
+        title,
+        subtitle: path,
+      };
+    },
   },
 };

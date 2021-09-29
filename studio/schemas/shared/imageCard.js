@@ -2,19 +2,9 @@ export default {
   name: 'imageCard',
   type: 'document',
   title: 'test',
-  options: {
-    collapsible: true,
-  },
   fields: [
     {
-      title: 'Rubrik',
-      name: 'title',
-      type: 'title',
-      validation: (Rules) =>
-        Rules.required().error('Ange en rubrik.'),
-    },
-    {
-      title: 'Text',
+      title: 'Kortare text för förhandsvisning',
       name: 'description',
       type: 'text',
       validation: (Rules) =>
@@ -23,7 +13,7 @@ export default {
     {
       title: 'Bild',
       name: 'image',
-      type: 'image',
+      type: 'imageWithAlt',
       validation: (Rules) =>
         Rules.required().error('Lägg in en bild.'),
     },

@@ -6,7 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import startPage from './pages/startPage';
 import cta from './shared/cta';
 import hero from './shared/hero';
-import mediaTypes from './shared/mediaTypes';
+import mediaType from './shared/mediaType';
 import layout from './shared/layout';
 import blockText from './shared/blockText';
 import casePage from './pages/casePage';
@@ -36,8 +36,9 @@ import textWithTags from './shared/textWithTags';
 import sectionWithImage from './shared/sections/sectionWithImage';
 import scaleUpPage from './pages/scaleUpPage';
 import ourPricing from './modules/ourPricing';
+import slug from './shared/slug';
 import xPage from './pages/xPage';
-
+import metaTags from './shared/metaTags';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -49,7 +50,7 @@ export default createSchema({
     startPage,
     cta,
     hero,
-    mediaTypes,
+    mediaType,
     layout,
     blockText,
     casePage,
@@ -79,6 +80,8 @@ export default createSchema({
     sectionWithImage,
     scaleUpPage,
     ourPricing,
+    slug,
     xPage,
+    metaTags,
   ]),
 });

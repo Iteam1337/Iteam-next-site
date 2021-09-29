@@ -100,4 +100,20 @@ export default {
       ],
     },
   ],
+
+  preview: {
+    select: {
+      title: 'pageName',
+      subtitle: 'description',
+    },
+    prepare({ title = 'Startsida', name = 'startpage' }) {
+      const path = `/`;
+      return {
+        path,
+        name,
+        title,
+        subtitle: path,
+      };
+    },
+  },
 };

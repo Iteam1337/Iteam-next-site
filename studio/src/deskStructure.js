@@ -223,7 +223,7 @@ export default () =>
             'hero',
             'cta',
             'imageCard',
-            'mediaTypes',
+            'mediaType',
             'titleWithCTA',
             'blockText',
             'textWithImage',
@@ -247,6 +247,7 @@ export default () =>
             'xPage',
             'openPositions',
             'scaleUpPage',
+            'metaTags',
           ].includes(listItem.getId())
       ),
     ]);

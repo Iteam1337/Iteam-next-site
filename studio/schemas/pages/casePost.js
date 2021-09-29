@@ -10,6 +10,18 @@ export default {
       validation: (Rules) =>
         Rules.required().error('Du behöver ange ett företag'),
     },
+    {
+      name: 'slug',
+      type: 'slug',
+      title: 'Slug',
+      description:
+        'Används för att döpa urlen. Ska vara samma som titlen men med bindessträck istället för mellanslag.',
+      validation: (Rules) => [Rules.required().error('Ange en slug.')],
+      options: {
+        source: 'company',
+        maxLength: 96,
+      },
+    },
     { type: 'title', name: 'title', title: 'Rubrik' },
     { type: 'string', name: 'subtitle', title: 'Underrubrik' },
     {
@@ -44,7 +56,18 @@ export default {
         layout: 'tags',
       },
     },
-    { type: 'imageCard', name: 'imageCard', title: 'Förhandsvisning' },
+    {
+      type: 'object',
+      name: 'preview',
+      title: 'Förhandsvisning',
+      options: {
+        collapsible: true,
+      },
+      fields: [
+        { type: 'title', name: 'title', title: 'Rubrik till förhandsvisning' },
+        { type: 'imageCard', name: 'imageCard', title: 'Förhandsvisning' },
+      ],
+    },
   ],
   orderings: [
     {
@@ -58,12 +81,21 @@ export default {
       ],
     },
   ],
-  prepare({ name = 'case' }) {
-    const path = `/${name}`;
-    return {
-      path,
-      name,
-      title,
-    };
+
+  preview: {
+    select: {
+      title: 'title',
+      slug: 'slug',
+      subtitle: 'subtitle',
+    },
+    prepare({ title = 'No name', slug = {}, name = 'case' }) {
+      const path = `/${name}/${slug.current}`;
+
+      return {
+        path,
+        title,
+        subtitle: path,
+      };
+    },
   },
 };

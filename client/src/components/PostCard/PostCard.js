@@ -3,6 +3,8 @@ import styled from "styled-components"
 import Link from "next/link"
 import { Title, Box, Text, Span, Anchor } from "../Core"
 import { device } from "../../utils"
+import client from "../../sanity-client"
+import { useNextSanityImage } from "next-sanity-image"
 
 const Card = styled(Box)`
   border-radius: 10px 10px;
@@ -13,35 +15,6 @@ const Card = styled(Box)`
   &:hover {
     box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
   }
-`
-
-const ImageContainerHorizontal = styled(Box)`
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 350px;
-
-  @media ${device.md} {
-    width: 100%;
-    min-width: 350px;
-    max-width: 350px;
-  }
-  @media ${device.lg} {
-    min-width: 265px;
-  }
-  @media ${device.xl} {
-    min-width: 350px;
-    max-width: 350px;
-  }
-`
-
-const BrandImage = styled(Box)`
-  position: absolute;
-  bottom: 28px;
-  left: 30px;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #eae9f2;
 `
 
 const CardText = styled(Box)`
@@ -57,11 +30,10 @@ const TitleStyled = styled(Title)`
 
 const CoverImg = styled.img`
   height: 320px;
-  object-fit: ${props => props.scale ? 'scale-down' : 'cover'};
+  object-fit: ${props => props.scale};
 `
 
 const PostCard = ({
-  horizontal = false,
   img,
   imgBrand,
   preTitle,
@@ -72,67 +44,51 @@ const PostCard = ({
   readMore,
   link = "",
   ...rest
-}) => (
-  <Card
-    className={horizontal ? "d-flex flex-column flex-md-row" : "h-100"}
-    {...rest}
-  >
-    {horizontal ? (
-      <ImageContainerHorizontal>
-        <Link href={link}>
-          <a className="w-100 h-100 d-flex">
-            <CoverImg src={img} alt="" className="w-100" />
-            {imgBrand && (
-              <BrandImage>
-                <img src={imgBrand} alt="" className="img-fluid" />
-              </BrandImage>
-            )}
-          </a>
-        </Link>
-      </ImageContainerHorizontal>
-    ) : (
+}) => {
+  const imageProps = useNextSanityImage(client, img.asset._ref)
+  return (
+    <Card className="h-100" {...rest}>
       <Box className="position-relative">
         <Link href={link}>
           <a className="w-100">
-            <CoverImg scale={img === '/images/api1.png'} src={img} alt="" className="w-100" />
-            {imgBrand && (
-              <BrandImage>
-                <img src={imgBrand} alt="" className="img-fluid" />
-              </BrandImage>
-            )}
+            <CoverImg {...imageProps} scale={img.asset._ref == 'image-114b3733ce819368828659f5a8990039c68519a0-1120x318-png' ? "scale-down" : "cover"} alt={img.alt} className="w-100" />
           </a>
         </Link>
       </Box>
-    )}
 
-    <CardText>
-      {preTitle && (
-        <Text fontSize={2} lineHeight={1.75} mb="14px">
-          {preTitle}
-        </Text>
-      )}
+      <CardText>
+        {preTitle && (
+          <Text fontSize={2} lineHeight={1.75} mb="14px">
+            {preTitle}
+          </Text>
+        )}
 
-      <Link href={link}>
-        <Anchor color="info">
-          <TitleStyled variant="card" mb="14px">
-            {title}
-          </TitleStyled>
-        </Anchor>
-      </Link>
-      <Text fontSize={2} lineHeight={1.75} mb="16px">
-        {children}
-      </Text>
-      {readMore && (
-        <Box>
-          <Link href={link}>
+        <Link href={link}>
+          <a>
             <Anchor color="info">
-              <Span color="info">Läs mer...</Span>
+              <TitleStyled variant="card" mb="14px">
+                {title}
+              </TitleStyled>
             </Anchor>
-          </Link>
-        </Box>
-      )}
-    </CardText>
-  </Card>
-)
+          </a>
+        </Link>
+        <Text fontSize={2} lineHeight={1.75} mb="16px">
+          {children}
+        </Text>
+        {readMore && (
+          <Box>
+            <Link href={link}>
+              <a>
+                <Anchor color="info">
+                  <Span color="info">Läs mer...</Span>
+                </Anchor>
+              </a>
+            </Link>
+          </Box>
+        )}
+      </CardText>
+    </Card>
+  )
+}
 
 export default PostCard

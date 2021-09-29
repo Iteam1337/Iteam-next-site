@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
 
 import { Title, Section, Text } from "../../components/Core"
+import { urlFor } from "../../utils/helpers"
 
 const SectionStyled = styled(Section)`
   background: ${({ heroImage }) =>
@@ -18,7 +19,7 @@ const SectionStyled = styled(Section)`
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.1)
     ),
-    /* bottom, image */ url(${require(`../../assets/image/heros/${heroImage}`)}) no-repeat center 20%`
+    /* bottom, image */ url(${heroImage}) no-repeat center 20%`
       : "linear-gradient(147deg, rgba(141, 141, 236, 0.17) 0%, rgba(84, 84, 212, 0) 100%)"};
   background-position: center;
   background-size: cover;
@@ -30,7 +31,7 @@ const Hero = ({ title, children, heroImage }) => (
       pt={["120px!important", null, "190px!important"]}
       pb={["50px!important", null, "180px!important"]}
       bg="dark"
-      heroImage={heroImage}
+      heroImage={heroImage && urlFor(heroImage.asset._ref)}
     >
       <Container
         css={`

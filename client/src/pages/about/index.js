@@ -7,8 +7,11 @@ import Content from "../../sections/about/Content"
 import MetaTags from "../../components/MetaTags/MetaTags"
 import Team from "../../sections/about/Team"
 import CTA from "../../sections/about/CTA"
+import client from "./../../../src/sanity-client"
+import { groq } from "next-sanity"
 
-const About = () => {
+const About = ({ aboutPage, coworkers }) => {
+  const { hero, coworkersSection, titleWithCTA, ...rest } = aboutPage
   return (
     <>
       <PageWrapper>
@@ -20,18 +23,48 @@ const About = () => {
             "Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag."
           }
         />
-        <Hero title="Skapa värde, ha kul, göra något bra">
-          Det är våra värderingar. De lever vi efter varje dag. <br />
-          {/* Iteam startades 1995 med drömmen att förändra samhället till något bättre med teknik. 
-          Det har vi hållit på med sedan dess.
-          För oss betyder det att inte bygga appar för apparnas skull. Vi fixar inte problem som inte behöver fixas. 
-          Däremot är världen full av problem som vi kan lösa. Ibland handlar det om att underlätta vardagen för småbarnsföräldrar, ibland om att förändra globala logistiksystem. */}
-        </Hero>
-        <Content />
-        <Team />
-        <CTA />
+        <Hero content={hero} />
+        <Content content={rest} />
+        <Team content={coworkersSection} coworkers={coworkers} />
+        <CTA content={titleWithCTA} />
       </PageWrapper>
     </>
   )
 }
+
+const aboutPageQuery = groq`
+*[_type == 'aboutPage'][0] {
+  ..., 
+  titleWithCTA {
+    ...,
+  	cta {
+      ...,
+  		reference-> {
+        _type,
+        slug {
+          current
+        }
+      }
+    }
+  }
+ }
+`
+
+const coworkerQuery = groq`
+  *[_type == 'coworker' && !(_id in path('drafts.**'))] {
+    phoneNumber, email, fullname, status, role, slug
+   }
+`
+
+export async function getStaticProps() {
+  const aboutPage = await client.fetch(aboutPageQuery)
+  const coworkers = await client.fetch(coworkerQuery)
+  return {
+    props: {
+      aboutPage,
+      coworkers,
+    },
+  }
+}
+
 export default About
