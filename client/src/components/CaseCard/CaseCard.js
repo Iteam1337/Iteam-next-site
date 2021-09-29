@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import Link from "next/link"
 import { Title, Box, Text } from "../Core"
+import BlockContent from "../../components/BlockContent"
 
 const Card = styled(Box)`
   border-radius: 0;
@@ -16,23 +16,13 @@ const ImageContainer = styled(Box)`
   width: 100%;
 `
 
-const BrandImage = styled(Box)`
-  overflow: hidden;
-  img {
-    border-radius: 0px;
-    border: 1px solid #eae9f2;
-  }
-`
-
 const CardText = styled(Box)`
   padding-left: 30px;
 `
 
 const TitleStyled = styled(Title)`
   transition: 0.3s;
-  &:hover {
-    color: ${({ theme }) => theme.colors.secondary};
-  }
+
 `
 
 const CaseCard = ({
@@ -42,29 +32,26 @@ const CaseCard = ({
   title,
   children,
   readMore,
+  alt,
+  blocks,
   ...rest
-}) => (
-  <Card className="d-flex" {...rest}>
-    <ImageContainer>
-      <Link href="/">
-        <a>
-          <img src={img} alt={title} className="w-100 img-fluid" />
-        </a>
-      </Link>
-    </ImageContainer>
-    <CardText>
-      <Link href="/">
-        <a>
-          <TitleStyled variant="card" mb="12px">
-            {title}
-          </TitleStyled>
-        </a>
-      </Link>
-      <Text fontSize={2} lineHeight={1.75} mb="0">
-        {children}
-      </Text>
-    </CardText>
-  </Card>
-)
+}) => {
+  return (
+    <Card className="d-flex" {...rest}>
+      <ImageContainer>
+        <img src={img} alt={alt} className="w-100 img-fluid" />
+      </ImageContainer>
+      <CardText>
+        <TitleStyled variant="card" mb="12px">
+
+          {title}
+        </TitleStyled>
+        <Text fontSize={2} lineHeight={1.75} mb="0">
+          <BlockContent variant='thin' blocks={blocks.blockText} />
+        </Text>
+      </CardText>
+    </Card >
+  )
+}
 
 export default CaseCard

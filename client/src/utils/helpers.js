@@ -16,9 +16,8 @@ export const urlFor = (source) => {
 
 export const buildInternalUrl = (reference) => {
   if (reference.slug) {
-    return `${getRouteNameFromPageType(reference._type)}/${
-      reference.slug.current
-    }`
+    return `${getRouteNameFromPageType(reference._type)}/${reference.slug.current
+      }`
   }
 
   return getRouteNameFromPageType(reference._type)
@@ -26,6 +25,10 @@ export const buildInternalUrl = (reference) => {
 
 export const getRouteNameFromPageType = (contentType) => {
   switch (contentType) {
+    case "mvpPage":
+      return "mvp"
+    case "xPage":
+      return "iteamX"
     case "careerPage":
       return "karriar"
     case "about":

@@ -47,13 +47,13 @@ export default function BlogRegular({ newsPage, newsPosts }) {
 }
 
 const newsPageQuery = groq`
-  *[_type == 'newsPage'][0] 
+  *[_type == 'newsPage' && !(_id in path('drafts.**'))][0] 
   {
     title
   }`
 
 const newsPostsQuery = groq`
-  *[_type == 'newsPost' && !(_id in path('drafts.**'))]
+  *[_type == 'newsPost'&& !(_id in path('drafts.**'))]
   {
   title,
    imageCard,

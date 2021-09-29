@@ -10,11 +10,19 @@ export default {
       validation: (Rules) =>
         Rules.required().error('Du behöver ange ett företag'),
     },
-    { type: 'title', name: 'title', title: 'Rubrik' },
     {
-      type: 'defaultSlug',
       name: 'slug',
+      type: 'slug',
+      title: 'Slug',
+      description:
+        'Används för att döpa urlen. Ska vara samma som titlen men med bindessträck istället för mellanslag.',
+      validation: (Rules) => [Rules.required().error('Ange en slug.')],
+      options: {
+        source: 'company',
+        maxLength: 96,
+      },
     },
+    { type: 'title', name: 'title', title: 'Rubrik' },
     { type: 'string', name: 'subtitle', title: 'Underrubrik' },
     {
       name: 'typeOfCase',
@@ -58,7 +66,7 @@ export default {
       fields: [
         { type: 'title', name: 'title', title: 'Rubrik till förhandsvisning' },
         { type: 'imageCard', name: 'imageCard', title: 'Förhandsvisning' },
-      ]
+      ],
     },
   ],
   orderings: [
