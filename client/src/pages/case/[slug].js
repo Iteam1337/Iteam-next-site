@@ -85,34 +85,34 @@ const BlogDetails = ({ post, posts }) => {
     )
 }
 
-const newsPostsQuery = groq`
-  *[_type == 'newsPost' && !(_id in path('drafts.**'))] {
+const casePostsQuery = groq`
+  *[_type == 'casePost' && !(_id in path('drafts.**'))] {
     ...,
    }
 `
 
-const newsPostQuery = groq`
-    *[_type == "newsPost" && slug.current == $slug][0] {
+const casePostQuery = groq`
+    *[_type == "casePost" && slug.current == $slug][0] {
     ...,
     }
 `
 
 export async function getStaticProps(context) {
-    const newsPost = await client.fetch(newsPostQuery, {
+    const casePost = await client.fetch(casePostQuery, {
         slug: context.params.slug,
     })
-    const newsPosts = await client.fetch(newsPostsQuery)
+    const casePosts = await client.fetch(casePostsQuery)
 
     return {
         props: {
-            post: newsPost,
-            posts: newsPosts
+            post: casePost,
+            posts: casePosts
         },
     }
 }
 
 export const getStaticPaths = async () => {
-    const pages = (await client.fetch(newsPostsQuery)) || []
+    const pages = (await client.fetch(casePostsQuery)) || []
     const paths = pages.map((page) => ({
         params: { slug: page.slug.current },
     }))

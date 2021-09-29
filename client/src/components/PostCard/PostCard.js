@@ -76,6 +76,7 @@ const PostCard = ({
   ...rest
 }) => {
   const imageProps = useNextSanityImage(client, img.asset._ref)
+  console.log('link', link)
   return (
     <Card className="h-100" {...rest}>
       <Box className="position-relative">
@@ -100,11 +101,11 @@ const PostCard = ({
 
         <Link href={link}>
           <>
-          <Anchor color="info">
-            <TitleStyled variant="card" mb="14px">
-              {title}
-            </TitleStyled>
-          </Anchor>
+            <Anchor color="info">
+              <TitleStyled variant="card" mb="14px">
+                {title}
+              </TitleStyled>
+            </Anchor>
           </>
         </Link>
         <Text fontSize={2} lineHeight={1.75} mb="16px">
@@ -114,9 +115,9 @@ const PostCard = ({
           <Box>
             <Link href={link}>
               <>
-              <Anchor color="info">
-                <Span color="info">Läs mer...</Span>
-              </Anchor>
+                <Anchor color="info">
+                  <Span color="info">Läs mer...</Span>
+                </Anchor>
               </>
             </Link>
           </Box>
