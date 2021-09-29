@@ -40,7 +40,7 @@ const BlogDetails = ({ post, posts, casePage }) => {
                         <Col lg="12" xl="10" className="offset-xl-1">
                             <Box pb={["40px", null, "65px"]}>
 
-                                <BlockContent blocks={post.blockText.blockText} />
+                                <BlockContent variant='thin' blocks={post.blockText.blockText} />
                             </Box>
 
                         </Col>

@@ -22,9 +22,7 @@ const CardText = styled(Box)`
 
 const TitleStyled = styled(Title)`
   transition: 0.3s;
-  &:hover {
-    color: ${({ theme }) => theme.colors.secondary};
-  }
+
 `
 
 const CaseCard = ({
@@ -45,10 +43,11 @@ const CaseCard = ({
       </ImageContainer>
       <CardText>
         <TitleStyled variant="card" mb="12px">
+
           {title}
         </TitleStyled>
         <Text fontSize={2} lineHeight={1.75} mb="0">
-          <BlockContent blocks={blocks.blockText} />
+          <BlockContent variant='thin' blocks={blocks.blockText} />
         </Text>
       </CardText>
     </Card >
