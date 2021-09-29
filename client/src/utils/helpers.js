@@ -20,7 +20,7 @@ export const buildInternalUrl = (reference) => {
       }`
   }
 
-  return getRouteNameFromPageType(reference._ref)
+  return getRouteNameFromPageType(reference._type)
 }
 
 export const getRouteNameFromPageType = (contentType) => {
