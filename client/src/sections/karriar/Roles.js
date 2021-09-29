@@ -62,7 +62,7 @@ const RolesCard = ({
   </Link>
 )
 
-const Roles = () => (
+const Roles = ({ openPositions }) => (
   <>
     <Section bg="#f7f7fb">
       <Container>
@@ -85,24 +85,17 @@ const Roles = () => (
           </Col>
         </Row>
         <Row className="mt-lg-5 justify-content-center">
-          <Col lg="4" md="6" className="pt-4">
-            <RolesCard
-              color="warning"
-              title="Backend developer"
-              type="Full-time"
-              location="Göteborg, Stockholm eller remote"
-              link="/karriar/backend-developer"
-            />
-          </Col>
-          <Col lg="4" md="6" className="pt-4">
-            <RolesCard
-              color="warning"
-              title="UX Designer"
-              type="Full-time"
-              location="Göteborg, Stockholm eller remote"
-              link="/karriar/ux-designer"
-            />
-          </Col>
+          {openPositions.map((openPosition, index) => (
+            <Col lg="4" md="6" className="pt-4" key={index}>
+              <RolesCard
+                color="warning"
+                title={openPosition.title}
+                type="Full-time"
+                location={openPosition.position}
+                link={`/karriar/${openPosition.slug.current}`}
+              />
+            </Col>
+          ))}
         </Row>
       </Container>
     </Section>

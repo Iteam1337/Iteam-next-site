@@ -33,6 +33,10 @@ export default {
       validation: (Rules) =>
         Rules.required().error('Du behöver lägga in ansökan'),
     },
+    {
+      type: 'metaTags',
+      name: 'metaTags',
+    },
   ],
   preview: {
     select: {

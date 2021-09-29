@@ -4,14 +4,14 @@ import { device } from "../../utils"
 const Paragraph = styled.p`
   margin: 20px 0;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: ${({ variant }) => (variant == "thin" ? 300 : 500)};
   letter-spacing: -0.56px;
   line-height: 30px;
   text-align: left;
-  color: black;
+  color: #19191b;
 `
 const QuoteParagraph = styled(Paragraph)`
-font-size: 19.5px;
+  font-size: 19.5px;
 `
 const ParagraphThin = styled.p`
   margin: 20px 0;
@@ -20,7 +20,6 @@ const ParagraphThin = styled.p`
   letter-spacing: -0.56px;
   line-height: 35px;
   text-align: center;
-
 `
 const H1 = styled.h1`
   font-weight: 700;
@@ -94,8 +93,6 @@ const BlockQuote = styled.blockquote`
   flex-direction: row;
 `
 
-
-
 export default {
   Paragraph,
   ParagraphThin,
@@ -106,5 +103,5 @@ export default {
   Anchor,
   QuoteMark,
   BlockQuote,
-  QuoteParagraph
+  QuoteParagraph,
 }

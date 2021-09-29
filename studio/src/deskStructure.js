@@ -247,6 +247,7 @@ export default () =>
             'xPage',
             'openPositions',
             'scaleUpPage',
+            'metaTags',
           ].includes(listItem.getId())
       ),
     ]);
