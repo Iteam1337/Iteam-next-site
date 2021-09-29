@@ -9,10 +9,8 @@ import CaseList2 from "../../sections/case/CaseList2"
 import CTA from "../../sections/case/CTA"
 import client from "../../sanity-client"
 import { groq } from "next-sanity"
-import PostCard from "../../components/PostCard"
 
 const CaseStudy = ({ casePage, casePosts }) => {
-  const Column = (props) => <Col sm={6} lg={4} className="mb-4" {...props} />
   const sectionCards = [casePage.sectionWithImageOne, casePage.sectionWithImageTwo]
 
   return (
@@ -31,30 +29,7 @@ const CaseStudy = ({ casePage, casePosts }) => {
             </Row>
           </Container>
         </Section>
-        {/* <CaseList /> */}
-
-
-        <>
-          {/* <!-- Feature section --> */}
-          <Section className="position-relative">
-            <Container>
-              <Row>
-                {casePosts.map((item, i) => {
-                  console.log('item', item)
-                  return (
-                    // <p>hej</p>
-                    <Column key={i}>
-                      <PostCard img={item.preview.imageCard.image} title={item.preview.title} link={`/case/${item.slug.current}`} readMore>
-                        {item.preview.imageCard.description}
-                      </PostCard>
-                    </Column>
-                  )
-                })}
-              </Row>
-            </Container>
-          </Section>
-        </>
-
+        <CaseList posts={casePosts} />
         <CaseList2 sectionCards={sectionCards} />
         <CTA text={casePage.titleWithCTA} />
       </PageWrapper>
