@@ -52,7 +52,7 @@ const aboutPageQuery = groq`
 
 const coworkerQuery = groq`
   *[_type == 'coworker' && !(_id in path('drafts.**'))] {
-    phoneNumber, email, fullname, status, role, slug
+    phoneNumber, email, fullname, status, role, slug, profilePic
    }
 `
 
