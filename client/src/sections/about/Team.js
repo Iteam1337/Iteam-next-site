@@ -35,7 +35,6 @@ const Wrapper = styled.div`
 const TeamCard = ({ coworker }) => {
   const { phoneNumber, email, fullname, status, role, slug, profilePic } =
     coworker
-  console.log(profilePic)
   return (
     <Box className="text-center" pt="15px" px="30px" borderRadius={10} mb={4}>
       <Wrapper>
