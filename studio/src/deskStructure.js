@@ -1,4 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder';
+import Iframe from 'sanity-plugin-iframe-pane'
 import {
   FaRegFileAlt,
   FaRegFolderOpen,
@@ -7,6 +8,20 @@ import {
   FaRegFolder,
 } from 'react-icons/fa';
 import title from '../schemas/shared/title';
+import resolveProductionUrl from '../resolveProductionUrl';
+
+export const getDefaultDocumentNode = () => {
+  return S.document().views([
+    S.view.form(),
+    S.view
+      .component(Iframe)
+      .options({
+        url: (doc) => resolveProductionUrl(doc)
+      })
+      .title('Preview'),
+  ])
+}
+
 
 export default () =>
   S.list()
