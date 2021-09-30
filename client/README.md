@@ -1,11 +1,13 @@
-# Iteam new website 2021
-
-![Vercel](https://vercelbadge.vercel.app/api/iteam1337/iteam-next-site)
-
-Hi! This is Iteam's official website based on Next.JS. Look around and if you find any issues or have suggestions, please feel free to file an issue or pull request.
-
+# Client Next js
 ## How to get started
 
     npm i
     npm run dev
     open http://localhost:3000
+
+## .env
+
+If you change to run the CMS from the production dataset you need to add a .env.development 
+```
+SANITY_READ_DATA_TOKEN=<your token/found in last pass>
+```
