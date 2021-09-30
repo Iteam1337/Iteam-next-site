@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import { Title, Section, Box, Text } from "../../components/Core"
 import Link from "next/link"
+import { urlFor } from "../../utils/helpers"
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -32,14 +33,25 @@ const Wrapper = styled.div`
 `
 
 const TeamCard = ({ coworker }) => {
-  const { phoneNumber, email, fullname, status, role, slug } = coworker
+  const { phoneNumber, email, fullname, status, role, slug, profilePic } =
+    coworker
+  console.log(profilePic)
   return (
     <Box className="text-center" pt="15px" px="30px" borderRadius={10} mb={4}>
       <Wrapper>
         <Link href={`/about/${slug.current}`}>
           <div>
             <CardImage className="image">
-              <Gravatar email={email} className="img-fluid" size={200} />
+              {profilePic ? (
+                <img
+                  src={urlFor(profilePic.image.asset._ref)}
+                  alt={`Profilbild på ${fullname}`}
+                  className="img-fluid"
+                  style={{ width: 200, height: 200, objectFit: "cover" }}
+                />
+              ) : (
+                <Gravatar email={email} className="img-fluid" size={200} />
+              )}
             </CardImage>
             <div className="text-center">
               <Title

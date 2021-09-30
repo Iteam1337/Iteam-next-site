@@ -10,6 +10,22 @@ export default {
       // validation: (Rules) => Rules.required().error('Välj en bakgrundsbild'),
     },
     {
+      type: 'object',
+      name: 'profilePic',
+      title: 'Bild på medarbetaren',
+      description:
+        'Här kan du lägga till en profilbild om du vet med dig att medarbetaren inte har en gravatar.',
+      options: {
+        collapsible: true,
+      },
+      fields: [
+        {
+          type: 'image',
+          name: 'image',
+        },
+      ],
+    },
+    {
       type: 'string',
       name: 'fullname',
       title: 'Namn',
