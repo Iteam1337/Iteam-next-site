@@ -7,7 +7,7 @@ export default {
       type: 'string',
       name: 'title',
       title: 'Titel',
-      description: 'Vilken prosition är det vi söker??',
+      description: 'Ange vilken tjänst vi söker',
       validation: (Rules) =>
         Rules.required().error('Du behöver lägga in en rubrik'),
     },
