@@ -7,7 +7,7 @@ export default {
       type: 'string',
       name: 'title',
       title: 'Titel',
-      description: 'Ange vilken tjänst vi söker',
+      description: 'Ange vilken tjänst vi söker.',
       validation: (Rules) =>
         Rules.required().error('Du behöver lägga in en rubrik'),
     },
@@ -19,7 +19,7 @@ export default {
       type: 'title',
       name: 'position',
       title: 'Plats',
-      description: 'Vart bör denna personen jobba ifrån',
+      description: 'Vart bör denna personen jobba ifrån.',
       initialValue: 'Göteborg, Stockholm eller remote',
       validation: (Rules) =>
         Rules.required().error('Du behöver lägga in en rubrik på vem vi söker'),
@@ -29,7 +29,7 @@ export default {
       name: 'blockText',
       title: 'Ansökan',
       description:
-        'Beskriv vem det är vi är ute efter och vilka erfarenheter som vi söker',
+        'Beskriv vem det är vi är ute efter och vilka erfarenheter som vi söker.',
       validation: (Rules) =>
         Rules.required().error('Du behöver lägga in ansökan'),
     },
