@@ -14,7 +14,9 @@
     "@sanity/desk-tool",
     "color-picker",
     "@sanity/dashboard",
-    "vercel-deploy"
+    "vercel-deploy",
+    "@sanity/production-preview",
+    "iframe-pane"
   ],
   "env": {
     "development": {
@@ -32,6 +34,10 @@
     {
       "name": "part:@sanity/desk-tool/structure",
       "path": "./src/deskStructure.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveProductionUrl.js"
     }
   ]
 }

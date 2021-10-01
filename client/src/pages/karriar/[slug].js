@@ -8,16 +8,28 @@ import { groq } from "next-sanity"
 import client from "../../sanity-client"
 import BlockContent from "../../components/BlockContent"
 import { urlFor } from "../../utils/helpers"
+import { usePreviewSubscription } from '../../lib/sanity'
+import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
 
-const OpeningDetails = ({ openPosition }) => {
-  const { title, blockText, metaTags } = openPosition
+const OpeningDetails = ({ data, preview = false }) => {
+
+  const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
+    params: data?.queryParams ?? {},
+    initialData: data?.post,
+    enabled: preview,
+  })
+
+  const post = filterDataToSingleItem(previewData, preview)
+
+  const { title, blockText, metaTags } = post
   return (
     <PageWrapper footerDark>
-      <MetaTags
+      {metaTags && <MetaTags
         title={metaTags.title}
         description={metaTags.description}
         image={urlFor(metaTags.imageWithAlt.asset._ref)}
-      />
+      />}
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>
@@ -26,7 +38,7 @@ const OpeningDetails = ({ openPosition }) => {
               <Box className="text-center" mb={4}>
                 Ledig tjänst
               </Box>
-              <Title variant="hero">{title}</Title>
+              <Title variant="hero">{title && title}</Title>
             </Col>
           </Row>
         </Container>
@@ -36,7 +48,7 @@ const OpeningDetails = ({ openPosition }) => {
         <Container>
           <Row>
             <Col lg="12" xl="10" className="offset-xl-1">
-              <BlockContent variant="thin" blocks={blockText.blockText} />
+              {blockText && <BlockContent variant="thin" blocks={blockText.blockText} />}
             </Col>
           </Row>
         </Container>
@@ -56,16 +68,19 @@ const openPositionQuery = groq`
     ...,
     }
 `
+export async function getStaticProps({ params, preview = false }) {
+  const queryParams = { slug: params.slug }
+  const data = await getClient(preview).fetch(openPositionQuery, queryParams)
 
-export async function getStaticProps(context) {
-  const openPosition = await client.fetch(openPositionQuery, {
-    slug: context.params.slug,
-  })
+  if (!data) return { notFound: true }
+
+  const post = filterDataToSingleItem(data, preview)
 
   return {
     props: {
-      openPosition,
-    },
+      preview,
+      data: { post, openPositionQuery, queryParams }
+    }
   }
 }
 

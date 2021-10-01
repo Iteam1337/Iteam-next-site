@@ -4,12 +4,23 @@ import Medarbetare from "../../sections/about/Medarbetare"
 import Hero from "../../sections/about/CoworkerHero"
 import { groq } from "next-sanity"
 import client from "../../sanity-client"
+import { usePreviewSubscription } from '../../lib/sanity'
+import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
 
-const CoworkerPage = ({ coworker }) => {
-  const { fullname, heroImage, role, ...rest } = coworker
+const CoworkerPage = ({ data, preview = false }) => {
+
+  const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
+    params: data?.queryParams ?? {},
+    initialData: data?.post,
+    enabled: preview,
+  })
+  const post = filterDataToSingleItem(previewData, preview)
+  const { fullname, heroImage, role, ...rest } = post
+
   return (
     <PageWrapper footerDark>
-      {coworker && (
+      {post && (
         <>
           <Hero title={fullname} heroImage={heroImage}>
             {role}
@@ -33,14 +44,19 @@ const coworkerQuery = groq`
  }
 `
 
-export async function getStaticProps(context) {
-  const coworker = await client.fetch(coworkerQuery, {
-    slug: context.params.name,
-  })
+export async function getStaticProps({ params, preview = false }) {
+  const queryParams = { slug: params.name }
+  const data = await getClient(preview).fetch(coworkerQuery, queryParams)
+
+  if (!data) return { notFound: true }
+
+  const post = filterDataToSingleItem(data, preview)
+
   return {
     props: {
-      coworker,
-    },
+      preview,
+      data: { post, coworkerQuery, queryParams }
+    }
   }
 }
 

@@ -16,48 +16,61 @@ import BlockContent from "../../components/BlockContent"
 import Typography from '../../components/Typography'
 import { device } from '../../utils'
 import { urlFor } from "../../utils/helpers"
+import { usePreviewSubscription } from '../../lib/sanity'
+import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
 
-const BlogDetails = ({ post, posts }) => {
+const BlogDetails = ({ data, preview = false }) => {
+
+    const { data: previewData } = usePreviewSubscription(data?.newsPostQuery, {
+        params: data?.queryParams ?? {},
+        initialData: data?.post,
+        enabled: preview,
+    })
+
+    const post = filterDataToSingleItem(previewData, preview)
     return (
         <>
-            <NextSeo
-                title={post.title}
-                titleTemplate='%s | Aktuellt på Iteam'
-                description={post.imageCard.description}
-                image={urlFor(post.imageCard.image.asset._ref)}
-                openGraph={{
-                    title: post.title,
-                    description: post.imageCard.description,
-                    images: [
-                        {
-                            url: urlFor(post.imageCard.image.asset._ref),
-                            alt: post.imageCard.image.alt,
-                        }
-                    ],
-                    site_name: 'Iteam',
-                }}
-                twitter={{
-                    title: post.title,
-                    description: post.imageCard.description,
-                    image: urlFor(post.imageCard.image.asset._ref),
-                    handle: '@iteam1337',
-                    site: '@iteam1337',
-                    cardType: 'summary_large_image',
-                }}
-            />
+            {post &&
+                <NextSeo
+                    title={post.title}
+                    titleTemplate='%s | Aktuellt på Iteam'
+                    description={post.imageCard.description}
+                    image={urlFor(post.imageCard.image.asset._ref)}
+                    openGraph={{
+                        title: post.title,
+                        description: post.imageCard.description,
+                        images: [
+                            {
+                                url: urlFor(post.imageCard.image.asset._ref),
+                                alt: post.imageCard.image.alt,
+                            }
+                        ],
+                        site_name: 'Iteam',
+                    }}
+                    twitter={{
+                        title: post.title,
+                        description: post.imageCard.description,
+                        image: urlFor(post.imageCard.image.asset._ref),
+                        handle: '@iteam1337',
+                        site: '@iteam1337',
+                        cardType: 'summary_large_image',
+                    }}
+                />
+            }
             <PageWrapper footerDark>
                 <Section className="pb-0">
                     <div className="pt-5"></div>
                     <Container>
                         <Row className="justify-content-center text-center">
                             <Col lg="12">
-                                <Title variant="hero">{post.title}</Title>
+                                <Title variant="hero">{post?.title && post.title}</Title>
                                 <Box className="d-flex justify-content-center">
                                     <Text mr={3}>
-                                        <p>{post.date}</p>
+                                        <p>{post?.date && post.date}</p>
                                     </Text>
                                     <Text>
-                                        {post.tags?.map((tag) => (
+                                        {post?.tags && post.tags?.map((tag) => (
                                             <Link href="/">{tag}</Link>
                                         ))}
                                     </Text>
@@ -71,15 +84,15 @@ const BlogDetails = ({ post, posts }) => {
                     <Container>
                         <Row>
                             <Col lg="8" className="mb-5">
-                                <BlockContent blocks={post.blockText.blockText} />
+                                {post?.blockText?.blockText && <BlockContent blocks={post.blockText.blockText} />}
                             </Col>
                             <Col lg="4" className="" style={{ marginTop: '2.3rem' }}>
-                                <Sidebar posts={posts} />
+                                {data?.posts && <Sidebar posts={data.posts} />}
                             </Col>
                         </Row>
                     </Container>
                 </Section>
-                <BlogList posts={posts} />
+                {data?.posts && <BlogList posts={data.posts} />}
             </PageWrapper>
         </>
     )
@@ -97,17 +110,19 @@ const newsPostQuery = groq`
     }
 `
 
-export async function getStaticProps(context) {
-    const newsPost = await client.fetch(newsPostQuery, {
-        slug: context.params.slug,
-    })
-    const newsPosts = await client.fetch(newsPostsQuery)
+export async function getStaticProps({ params, preview = false }) {
+    const queryParams = { slug: params.slug }
+    const data = await getClient(preview).fetch(newsPostQuery, queryParams)
+    const posts = await getClient(preview).fetch(newsPostsQuery)
+    if (!data) return { notFound: true }
+
+    const post = filterDataToSingleItem(data, preview)
 
     return {
         props: {
-            post: newsPost,
-            posts: newsPosts
-        },
+            preview,
+            data: { post, posts, newsPostQuery, queryParams }
+        }
     }
 }
 
