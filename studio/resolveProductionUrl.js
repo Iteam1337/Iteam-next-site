@@ -1,5 +1,5 @@
 
-const remoteUrl = `https://iteam.se/`
+const remoteUrl = `https://iteam.se`
 const localUrl = `http://localhost:3000`
 
 export default function resolveProductionUrl(doc) {
