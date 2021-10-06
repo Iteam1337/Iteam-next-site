@@ -32,7 +32,7 @@ const Medarbetare = ({ info, fullname }) => (
             </Anchor>
           </Text>
           <Text>
-            {Object.entries(info.socialMedia).map(([key, value], index) => {
+            {info.socialMedia && Object.entries(info.socialMedia).map(([key, value], index) => {
               return (
                 <Fragment key={index}>
                   {index !== 0 && " | "}
