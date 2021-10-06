@@ -66,31 +66,59 @@ export default {
         Rules.required().error('Du behöver fylla i en mailadress'),
     },
     {
-      type: 'url',
-      name: 'twitter',
-      title: 'Länk till Twitter',
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ['http', 'https'],
-        }),
-    },
-    {
-      type: 'url',
-      name: 'github',
-      title: 'Länk till Github',
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ['http', 'https'],
-        }),
-    },
-    {
-      type: 'url',
-      name: 'website',
-      title: 'Länk till personlig webbsida',
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ['http', 'https'],
-        }),
+      type: 'object',
+      name: 'socialMedia',
+      options: {
+        collapsible: true,
+      },
+      fields: [
+        {
+          type: 'url',
+          name: 'linkedin',
+          title: 'Länk till Linkedin',
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ['http', 'https'],
+            }),
+        },
+        {
+          type: 'url',
+          name: 'github',
+          title: 'Länk till GitHub',
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ['http', 'https'],
+            }),
+        },
+        {
+          type: 'url',
+          name: 'twitter',
+          title: 'Länk till Twitter',
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ['http', 'https'],
+            }),
+        },
+        {
+          type: 'url',
+          name: 'instagram',
+          title: 'Länk till Instagram',
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ['http', 'https'],
+            }),
+        },
+
+        {
+          type: 'url',
+          name: 'website',
+          title: 'Länk till personlig webbsida',
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ['http', 'https'],
+            }),
+        },
+      ],
     },
     {
       type: 'string',
