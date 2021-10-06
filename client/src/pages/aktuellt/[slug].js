@@ -7,7 +7,6 @@ import { Section, Title, Text, Box } from "../../components/Core"
 import { groq } from "next-sanity"
 import client from "../../sanity-client"
 
-import PostDetails from "../../sections/aktuellt/PostDetails"
 import Sidebar from "../../sections/aktuellt/Sidebar"
 import BlogList from "../../sections/aktuellt/BlogList"
 import { NextSeo } from 'next-seo'
