@@ -1,5 +1,4 @@
 import React from "react"
-
 import PageWrapper from "../../components/PageWrapper"
 import Hero from "../../sections/karriar/Hero"
 import Content from "../../sections/karriar/Content"

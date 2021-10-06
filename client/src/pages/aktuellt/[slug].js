@@ -1,19 +1,14 @@
 import React from "react"
 import Link from "next/link"
-import Head from "next/head"
 import { Container, Row, Col } from "react-bootstrap"
 import PageWrapper from "../../components/PageWrapper"
 import { Section, Title, Text, Box } from "../../components/Core"
 import { groq } from "next-sanity"
 import client from "../../sanity-client"
-
 import Sidebar from "../../sections/aktuellt/Sidebar"
 import BlogList from "../../sections/aktuellt/BlogList"
 import { NextSeo } from 'next-seo'
-
 import BlockContent from "../../components/BlockContent"
-import Typography from '../../components/Typography'
-import { device } from '../../utils'
 import { urlFor } from "../../utils/helpers"
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
