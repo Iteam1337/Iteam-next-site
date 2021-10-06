@@ -10,7 +10,7 @@ import { filterDataToSingleItem } from '../../utils/helpers'
 
 const CoworkerPage = ({ data, preview = false }) => {
 
-  const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
+  const { data: previewData } = usePreviewSubscription(data?.coworkerQuery, {
     params: data?.queryParams ?? {},
     initialData: data?.post,
     enabled: preview,
