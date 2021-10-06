@@ -1,6 +1,7 @@
 import React, { Fragment } from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { Title, Section, Text, Anchor } from "../../components/Core"
+import { formatPhoneNumber } from "../../utils/helpers"
 
 const InfoSection = ({ text, title }) => (
   <Row className="py-5">
@@ -23,7 +24,7 @@ const Medarbetare = ({ info, fullname }) => (
         <Col md={8} lg={6}>
           <Text>
             <Anchor href={`tel:${info.phoneNumber}`} color="info">
-              {info.phoneNumber}
+              {formatPhoneNumber(info.phoneNumber)}
             </Anchor>
           </Text>
           <Text>
@@ -32,30 +33,31 @@ const Medarbetare = ({ info, fullname }) => (
             </Anchor>
           </Text>
           <Text>
-            {info.socialMedia && Object.entries(info.socialMedia).map(([key, value], index) => {
-              return (
-                <Fragment key={index}>
-                  {index !== 0 && " | "}
-                  {key !== "website" ? (
-                    <Anchor
-                      href={value}
-                      color="info"
-                      aria-label={`${key} - ${fullname}`}
-                    >
-                      <i
-                        className={`fab fa-${key}`}
-                        aria-hidden="true"
-                        title={`${key} - ${fullname}`}
-                      />
-                    </Anchor>
-                  ) : (
-                    <Anchor href={value} color="info">
-                      <i className="fas fa-globe" alt="tesdtyin" />
-                    </Anchor>
-                  )}
-                </Fragment>
-              )
-            })}
+            {info.socialMedia &&
+              Object.entries(info.socialMedia).map(([key, value], index) => {
+                return (
+                  <Fragment key={index}>
+                    {index !== 0 && " | "}
+                    {key !== "website" ? (
+                      <Anchor
+                        href={value}
+                        color="info"
+                        aria-label={`${key} - ${fullname}`}
+                      >
+                        <i
+                          className={`fab fa-${key}`}
+                          aria-hidden="true"
+                          title={`${key} - ${fullname}`}
+                        />
+                      </Anchor>
+                    ) : (
+                      <Anchor href={value} color="info">
+                        <i className="fas fa-globe" alt="tesdtyin" />
+                      </Anchor>
+                    )}
+                  </Fragment>
+                )
+              })}
           </Text>
         </Col>
       </Row>
