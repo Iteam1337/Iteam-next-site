@@ -22,11 +22,13 @@ const Medarbetare = ({ info, fullname }) => (
           <Title variant="card">Kontakt</Title>
         </Col>
         <Col md={8} lg={6}>
-          <Text>
-            <Anchor href={`tel:${info.phoneNumber}`} color="info">
-              {formatPhoneNumber(info.phoneNumber)}
-            </Anchor>
-          </Text>
+          {info.phoneNumber && (
+            <Text>
+              <Anchor href={`tel:${info.phoneNumber}`} color="info">
+                {formatPhoneNumber(info.phoneNumber)}
+              </Anchor>
+            </Text>
+          )}
           <Text>
             <Anchor href={`mailto:${info.email}`} color="info">
               {info.email}
