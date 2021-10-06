@@ -1,4 +1,4 @@
-const remoteUrl = `https://iteam.se/`
+const remoteUrl = `https://iteam.se`
 const localUrl = `http://localhost:3000`
 const previewSecret = '1iyD685T7kOS'
 
