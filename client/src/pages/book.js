@@ -1,14 +1,18 @@
-import React, { useEffect } from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
-import { Title, Section, Box, Text, Anchor } from "../components/Core"
-import PageWrapper from "../components/PageWrapper"
-import Hero from "../sections/common/Hero"
-import { usePreviewSubscription } from "../lib/sanity"
-import { getClient } from "../lib/sanity.server"
-import { filterDataToSingleItem, formatPhoneNumber } from "../utils/helpers"
-import { groq } from "next-sanity"
-import BlockContent from "../components/BlockContent"
+import React, { useEffect } from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Title, Section, Box, Text, Anchor } from '../components/Core'
+import PageWrapper from '../components/PageWrapper'
+import Hero from '../sections/common/Hero'
+import { usePreviewSubscription } from '../lib/sanity'
+import { getClient } from '../lib/sanity.server'
+import {
+  buildInternalUrl,
+  filterDataToSingleItem,
+  formatPhoneNumber,
+} from '../utils/helpers'
+import { groq } from 'next-sanity'
+import BlockContent from '../components/BlockContent'
 
 const FormStyled = styled.form``
 
@@ -21,9 +25,9 @@ const Book = ({ data, preview = false }) => {
   const page = filterDataToSingleItem(previewData, preview)
 
   useEffect(() => {
-    const script = document.createElement("script")
+    const script = document.createElement('script')
     script.src =
-      "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
+      'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
     script.async = true
     document.body.appendChild(script)
   }, [])
@@ -76,8 +80,13 @@ const Book = ({ data, preview = false }) => {
                       </Text>
                     </Title>
                   ))}
-                  <Anchor color="info" href="/about#medarbetare">
-                    Fler kontaktuppgifter...
+                  <Anchor
+                    color="info"
+                    href={`${buildInternalUrl(
+                      page.call.cta.reference
+                    )}#medarbetare`}
+                  >
+                    {page.call.cta.title}
                   </Anchor>
                 </Box>
                 <Box className="mb-5">
@@ -114,11 +123,20 @@ const bookPageQuery = groq`
   ...,
   call {
     ...,
+    cta {
+      title,
+      reference -> {
+        _type,
+        slug {
+          current,
+        }
+      }
+    },
     contactPersons[] -> {
       fullname,
       phoneNumber,
       role,
-    }
+    } 
   }
 }`
 

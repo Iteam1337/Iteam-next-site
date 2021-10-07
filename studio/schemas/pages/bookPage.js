@@ -24,6 +24,7 @@ export default {
           description:
             'Här kan du lägga in flera kontaktpersoner som är relevanta för sidan.',
         },
+        { type: 'cta', name: 'cta' },
       ],
     },
     {

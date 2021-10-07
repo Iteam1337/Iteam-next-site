@@ -33,7 +33,7 @@ export const getRouteNameFromPageType = (contentType) => {
       return 'iteamX'
     case 'careerPage':
       return 'karriar'
-    case "aboutPage'":
+    case 'aboutPage':
       return 'about'
     case 'coworker':
       return 'about'
