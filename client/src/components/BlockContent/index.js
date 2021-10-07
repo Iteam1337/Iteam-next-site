@@ -5,6 +5,7 @@ import client from "../../sanity-client"
 import { useNextSanityImage } from "next-sanity-image"
 import Img from "next/image"
 import { Text } from "../Core"
+import { buildInternalUrl } from "../../utils/helpers"
 
 const serializers = (withAnchor, variant) => ({
   types: {
@@ -58,6 +59,8 @@ const serializers = (withAnchor, variant) => ({
         {children}
       </Typography.Anchor>
     ),
+    internalLink: ({ mark, children }) =>
+      (<Typography.Anchor href={buildInternalUrl(mark.reference)}>{children}</Typography.Anchor>)
   },
   list: ({ type, children }) => {
     switch (type) {

@@ -18,11 +18,9 @@ export const urlFor = (source) => {
 
 export const buildInternalUrl = (reference) => {
   if (reference.slug) {
-    return `${getRouteNameFromPageType(reference._type)}/${
-      reference.slug.current
-    }`
+    return `${getRouteNameFromPageType(reference._type)}/${reference.slug.current
+      }`
   }
-
   return getRouteNameFromPageType(reference._type)
 }
 
@@ -34,10 +32,12 @@ export const getRouteNameFromPageType = (contentType) => {
       return "iteamX"
     case "careerPage":
       return "karriar"
-    case "about":
+    case "aboutPage'":
       return "about"
     case "coworker":
       return "about"
+    case "newsPost":
+      return "aktuellt"
     default:
       return "404"
   }

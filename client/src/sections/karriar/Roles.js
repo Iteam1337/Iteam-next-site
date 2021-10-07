@@ -1,9 +1,9 @@
 import React from "react"
 import Link from "next/link"
 import { Container, Row, Col } from "react-bootstrap"
-
-import { Title, Section, Text, Anchor } from "../../components/Core"
+import { Title, Section } from "../../components/Core"
 import styled from "styled-components"
+import BlockContent from '../../components/BlockContent'
 
 const Card = styled.a`
   justify-content: flex-start;
@@ -62,25 +62,15 @@ const RolesCard = ({
   </Link>
 )
 
-const Roles = ({ openPositions }) => (
+const Roles = ({ content, openPositions }) => (
   <>
     <Section bg="#f7f7fb">
       <Container>
         <Row className="justify-content-center">
           <Col lg="6" className="text-center">
             <div>
-              <Title>Lediga tjänster</Title>
-              <Text>
-                Kika igenom våra öppningar just nu,{" "}
-                <Anchor color="info" href="mailto:internship@iteam.se">
-                  anmäl intresse för praktik
-                </Anchor>{" "}
-                eller{" "}
-                <Anchor color="info" href="mailto:joinus@iteam.se">
-                  skicka en spontantansökan
-                </Anchor>{" "}
-                och berätta vad du drömmer om att göra ihop med oss
-              </Text>
+              <Title>{content.title}</Title>
+              <BlockContent variant='thin' blocks={content.subtitle.blockText} />
             </div>
           </Col>
         </Row>

@@ -11,7 +11,7 @@ export default {
         Rules.required().error('Ange en rubrik.'),
     },
     {
-      type: 'string',
+      type: 'blockText',
       name: 'subtitle',
       title: 'Underrubrik',
       validation: (Rules) =>

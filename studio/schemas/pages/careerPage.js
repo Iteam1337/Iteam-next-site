@@ -5,11 +5,6 @@ export default {
   fields: [
     { type: 'hero', name: 'hero' },
     { type: 'section', name: 'section' },
-    {
-      type: 'employeeQuote',
-      name: 'employeeQuote',
-      title: 'Citat från anställd',
-    },
     { type: 'textGrid', name: 'textGrid' },
     {
       type: 'openings',
