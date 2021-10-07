@@ -1,11 +1,10 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
 import Gravatar from "react-gravatar"
 import { Title, Section, Box, Text, Anchor } from "../../components/Core"
 import Quote from "../../components/Quote"
-
-import GlobalContext from "../../context/GlobalContext"
+import BlockContent from "../../components/BlockContent"
 
 const Card = styled.div`
   min-height: 100%;
@@ -20,29 +19,19 @@ const Card = styled.div`
   border-radius: 10px;
 `
 
-const Content = () => {
+const Content = ({ content }) => {
   return (
     <>
       <Section>
         <Container>
-          <Row className="justify-content-center pb-5 mb-5">
-            <Col lg="6" sm="1">
-              <Title variant="hero" className="mb-0">
-                Här är vårt team
-              </Title>
+          <Row className="justify-content-center pb-4">
+            <Col lg="6">
+              <Title variant="hero">{content.title}</Title>
             </Col>
-            <Col lg="6" className="pl-lg-5 d-flex align-items-end">
-              <Text>
-                Developers, musikälskare, innovatörer, UX-designers, arkitekter,
-                wannabe-triathleter, agila coacher, vi är ett gäng med rötterna
-                i tekniken, internet och människan. Mer om oss alla finns{" "}
-                <Anchor href="/about#medarbetare" color="info">
-                  här
-                </Anchor>
-              </Text>
+            <Col lg="6" className="pl-lg-5">
+              <BlockContent blocks={content.blockText.blockText} />
             </Col>
           </Row>
-
           <Box>
             <Card>
               <Row className="justify-content-center align-items-center">

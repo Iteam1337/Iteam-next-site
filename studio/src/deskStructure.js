@@ -171,16 +171,16 @@ export default () =>
                   S.list()
                     .title('Karriär')
                     .items([
-                      // S.listItem()
-                      //   .title('Karriär landningssida')
-                      //   .icon(FaRegFileAlt)
-                      //   .child(
-                      //     S.document()
-                      //       .schemaType('careerPage')
-                      //       .documentId('careerPage')
-                      //       .title('Karrriär landningssida')
-                      //   ),
-                      // S.divider(),
+                      S.listItem()
+                        .title('Karriär landningssida')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('careerPage')
+                            .documentId('careerPage')
+                            .title('Karrriär landningssida')
+                        ),
+                      S.divider(),
                       S.listItem()
                         .title('Öppna tjänster')
                         .icon(FaRegFolderOpen)
@@ -252,7 +252,6 @@ export default () =>
             'footer',
             'coworker',
             'ourPricing',
-            'employeeQuote',
             'openings',
             'sectionWithImageAndCta',
             'sectionWithCtaAndTextGrid',
