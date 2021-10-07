@@ -36,6 +36,9 @@ export default {
     {
       type: 'metaTags',
       name: 'metaTags',
+      options: {
+        collapsible: true,
+      },
     },
   ],
   preview: {
