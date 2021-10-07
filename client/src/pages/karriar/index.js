@@ -8,15 +8,16 @@ import Roles from "../../sections/karriar/Roles"
 import { groq } from "next-sanity"
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
 
 const Career = ({ data, preview = false }) => {
-  const { data: previewData } = usePreviewSubscription(data?.openPositionQuery, {
-    params: data?.queryParams ?? {},
-    initialData: data?.post,
+  const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
+    initialData: data?.careerPage,
     enabled: preview,
   })
 
-  const { hero, openings, section, textGrid } = data.careerPage
+  const post = filterDataToSingleItem(previewData, preview)
+  const { hero, openings, section, textGrid } = post
 
   return (
     <>
@@ -37,8 +38,8 @@ const openPositionsQuery = groq`
 `
 
 const careerPageQuery = groq`
- *[_type == 'careerPage'&& !(_id in path('drafts.**'))][0]{
-hero, openings, textGrid,
+ *[_type == 'careerPage']{
+  hero, openings, textGrid, _id,
    section{
      title,
      blockText{
@@ -77,21 +78,4 @@ export async function getStaticProps({ preview = false }) {
   }
 }
 
-// export const getStaticPaths = async () => {
-//   const pages = (await client.fetch(openPositionsQuery)) || []
-//   const paths = pages.map((page) => ({
-//     params: { slug: page.slug.current },
-//   }))
-//   return { paths, fallback: false }
-// }
-
-
-// export async function getStaticProps() {
-//   const openPositions = await client.fetch(openPositionsQuery)
-//   return {
-//     props: {
-//       openPositions,
-//     },
-//   }
-// }
 export default Career

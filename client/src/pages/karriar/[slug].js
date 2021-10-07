@@ -15,11 +15,9 @@ import { filterDataToSingleItem } from '../../utils/helpers'
 const OpeningDetails = ({ data, preview = false }) => {
 
   const { data: previewData } = usePreviewSubscription(data?.openPositionQuery, {
-    params: data?.queryParams ?? {},
     initialData: data?.post,
     enabled: preview,
   })
-
   const post = filterDataToSingleItem(previewData, preview)
 
   const { title, blockText, metaTags } = post

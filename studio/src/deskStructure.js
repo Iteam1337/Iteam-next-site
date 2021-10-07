@@ -179,6 +179,17 @@ export default () =>
                             .schemaType('careerPage')
                             .documentId('careerPage')
                             .title('Karrriär landningssida')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => {
+                                    return (resolveProductionUrl(doc))
+                                  }
+                                })
+                                .title('Preview'),
+                            ])
                         ),
                       S.divider(),
                       S.listItem()
