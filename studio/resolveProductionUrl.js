@@ -19,17 +19,24 @@ export default function resolveProductionUrl(doc) {
             route = `case`;
             break;
         case 'openPositions':
+        case 'careerPage':
             route = `karriar`;
             break;
+
         default:
             break;
     }
+
     previewUrl.pathname = `/api/preview`;
     previewUrl.searchParams.append(`secret`, previewSecret);
+
+
     previewUrl.searchParams.append(
-        `slug`,
-        `${route}/${doc?.slug?.current}` ?? `/`
+        'slug',
+        `${route}/${doc?.slug?.current ?? ''}`
     );
 
     return previewUrl.toString();
+
+
 }
