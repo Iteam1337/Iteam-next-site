@@ -1,5 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder';
-import Iframe from 'sanity-plugin-iframe-pane'
+import Iframe from 'sanity-plugin-iframe-pane';
 import {
   FaRegFileAlt,
   FaRegFolderOpen,
@@ -16,12 +16,11 @@ export const getDefaultDocumentNode = () => {
     S.view
       .component(Iframe)
       .options({
-        url: (doc) => resolveProductionUrl(doc)
+        url: (doc) => resolveProductionUrl(doc),
       })
       .title('Preview'),
-  ])
-}
-
+  ]);
+};
 
 export default () =>
   S.list()
@@ -43,6 +42,7 @@ export default () =>
               //       .schemaType('startPage')
               //       .documentId('startPage')
               //   ),
+              // S.divider(),
               // S.divider(),
               // S.listItem()
               //   .title('Erbjudanden')
@@ -83,7 +83,7 @@ export default () =>
               //         S.divider(),
               //       ])
               // ),
-              S.divider(),
+              // S.divider(),
               S.listItem()
                 .title('Case')
                 .icon(FaRegFolder)
@@ -202,6 +202,25 @@ export default () =>
                         ),
                     ])
                 ),
+              S.divider(),
+              S.listItem()
+                .title('Book')
+                .icon(FaRegFileAlt)
+                .child(
+                  S.document()
+                    .title('Book')
+                    .schemaType('bookPage')
+                    .documentId('bookPage')
+                    .views([
+                      S.view.form(),
+                      S.view
+                        .component(Iframe)
+                        .options({
+                          url: (doc) => resolveProductionUrl(doc),
+                        })
+                        .title('Preview'),
+                    ])
+                ),
             ])
         ),
       // S.listItem()
@@ -273,6 +292,7 @@ export default () =>
             'openPositions',
             'scaleUpPage',
             'metaTags',
+            'bookPage',
           ].includes(listItem.getId())
       ),
     ]);

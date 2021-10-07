@@ -1,42 +1,41 @@
-const remoteUrl = `https://iteam.se`
-const localUrl = `http://localhost:3000`
-const previewSecret = '1iyD685T7kOS'
+const remoteUrl = 'https://iteam.se';
+const localUrl = 'http://localhost:3000';
+const previewSecret = '1iyD685T7kOS';
 
 export default function resolveProductionUrl(doc) {
-    const baseUrl =
-        window.location.hostname === 'localhost' ? localUrl : remoteUrl;
-    const previewUrl = new URL(baseUrl);
+  const baseUrl =
+    window.location.hostname === 'localhost' ? localUrl : remoteUrl;
+  const previewUrl = new URL(baseUrl);
 
-    let route = '/';
-    switch (doc._type) {
-        case 'newsPost':
-            route = `aktuellt`;
-            break;
-        case 'coworker':
-            route = `about`;
-            break;
-        case 'casePost':
-            route = `case`;
-            break;
-        case 'openPositions':
-        case 'careerPage':
-            route = `karriar`;
-            break;
+  let route = '/';
+  switch (doc._type) {
+    case 'newsPost':
+      route = 'aktuellt';
+      break;
+    case 'coworker':
+      route = 'about';
+      break;
+    case 'casePost':
+      route = 'case';
+      break;
+    case 'openPositions':
+      route = 'karriar';
+      break;
+    case 'careerPage':
+      route = `karriar`;
+      break;
+    case 'bookPage':
+      route = 'book';
+      break;
+    default:
+      break;
+  }
+  previewUrl.pathname = '/api/preview';
+  previewUrl.searchParams.append('secret', previewSecret);
+  previewUrl.searchParams.append(
+    'slug',
+    `${route}/${doc?.slug?.current ?? ''}`
+  );
 
-        default:
-            break;
-    }
-
-    previewUrl.pathname = `/api/preview`;
-    previewUrl.searchParams.append(`secret`, previewSecret);
-
-
-    previewUrl.searchParams.append(
-        'slug',
-        `${route}/${doc?.slug?.current ?? ''}`
-    );
-
-    return previewUrl.toString();
-
-
+  return previewUrl.toString();
 }

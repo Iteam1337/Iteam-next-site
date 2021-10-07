@@ -38,6 +38,8 @@ import ourPricing from './modules/ourPricing';
 import slug from './shared/slug';
 import xPage from './pages/xPage';
 import metaTags from './shared/metaTags';
+import bookPage from './pages/bookPage';
+import defaultReference from './shared/reference';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -81,5 +83,7 @@ export default createSchema({
     slug,
     xPage,
     metaTags,
+    bookPage,
+    defaultReference,
   ]),
 });
