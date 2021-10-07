@@ -2571,6 +2571,11 @@
     "pify" "^3.0.0"
     "slash" "^1.0.0"
 
+"google-libphonenumber@^3.2.24":
+  "integrity" "sha512-5Z3dZTgwacTjALlkRK5hTIjGLwTCJGNZtmWgnhpb1Z6XEBYGsXbJGsr9+MheP/2mAk/ssOvpvMXKEZISWeytcA=="
+  "resolved" "https://registry.npmjs.org/google-libphonenumber/-/google-libphonenumber-3.2.24.tgz"
+  "version" "3.2.24"
+
 "google-map-react@^1.1.7":
   "integrity" "sha512-OWwfvVlJG3aQbDZOezWPzT7b8uqk5iMya5yEfBcfGYBFONna5UYCWZl49/cS0j1DPigtwtN0YCzPKjXMQHOUeA=="
   "resolved" "https://registry.npmjs.org/google-map-react/-/google-map-react-1.1.7.tgz"
@@ -4880,7 +4885,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^17.0.2", "react@>=16.13", "react@>=16.3.0":
+"react@^17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

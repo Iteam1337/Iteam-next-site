@@ -19,7 +19,6 @@ const OpeningDetails = ({ data, preview = false }) => {
     initialData: data?.post,
     enabled: preview,
   })
-
   const post = filterDataToSingleItem(previewData, preview)
 
   const { title, blockText, metaTags } = post

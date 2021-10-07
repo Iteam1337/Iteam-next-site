@@ -21,6 +21,9 @@ export default function resolveProductionUrl(doc) {
     case 'openPositions':
       route = 'karriar';
       break;
+    case 'careerPage':
+      route = `karriar`;
+      break;
     case 'bookPage':
       route = 'book';
       break;

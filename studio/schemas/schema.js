@@ -23,7 +23,6 @@ import newsPost from './pages/newsPost';
 import aboutPage from './pages/aboutPage';
 import section from './shared/sections/section';
 import careerPage from './pages/careerPage';
-import employeeQuote from './shared/employeeQuote';
 import openPositions from './pages/openPositions';
 import openings from './shared/openings';
 import layoutImages from './shared/layoutImages';
@@ -69,7 +68,6 @@ export default createSchema({
     aboutPage,
     section,
     careerPage,
-    employeeQuote,
     openPositions,
     openings,
     layoutImages,

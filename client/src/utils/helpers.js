@@ -1,10 +1,10 @@
-import imageUrlBuilder from "@sanity/image-url"
-import client from "../sanity-client"
-const PNF = require("google-libphonenumber").PhoneNumberFormat
-const phoneUtil = require("google-libphonenumber").PhoneNumberUtil.getInstance()
+import imageUrlBuilder from '@sanity/image-url'
+import client from '../sanity-client'
+const PNF = require('google-libphonenumber').PhoneNumberFormat
+const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance()
 
 export const hexToRGBA = (hex) => {
-  hex = hex.replace("#", "")
+  hex = hex.replace('#', '')
   const r = parseInt(hex.substring(0, 2), 16)
   const g = parseInt(hex.substring(2, 4), 16)
   const b = parseInt(hex.substring(4, 6), 16)
@@ -22,26 +22,27 @@ export const buildInternalUrl = (reference) => {
       reference.slug.current
     }`
   }
-
   return getRouteNameFromPageType(reference._type)
 }
 
 export const getRouteNameFromPageType = (contentType) => {
   switch (contentType) {
-    case "mvpPage":
-      return "mvp"
-    case "xPage":
-      return "iteamX"
-    case "careerPage":
-      return "karriar"
-    case "about":
-      return "about"
-    case "coworker":
-      return "about"
-    case "bookPage":
-      return "book"
+    case 'mvpPage':
+      return 'mvp'
+    case 'xPage':
+      return 'iteamX'
+    case 'careerPage':
+      return 'karriar'
+    case "aboutPage'":
+      return 'about'
+    case 'coworker':
+      return 'about'
+    case 'bookPage':
+      return 'book'
+    case 'newsPost':
+      return 'aktuellt'
     default:
-      return "404"
+      return '404'
   }
 }
 
@@ -59,6 +60,6 @@ export const filterDataToSingleItem = (data, preview) => {
 }
 
 export const formatPhoneNumber = (phoneNumber) => {
-  const number = phoneUtil.parseAndKeepRawInput(phoneNumber, "SE")
+  const number = phoneUtil.parseAndKeepRawInput(phoneNumber, 'SE')
   return phoneUtil.format(number, PNF.NATIONAL)
 }
