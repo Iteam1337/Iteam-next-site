@@ -1,5 +1,4 @@
 import React from "react"
-
 import PageWrapper from "../../components/PageWrapper"
 import Hero from '../../sections/common/Hero'
 import Content from "../../sections/karriar/Content"
@@ -68,12 +67,10 @@ export async function getStaticProps({ preview = false }) {
 
   if (!openPositions) return { notFound: true }
 
-  // const post = filterDataToSingleItem(data, preview)
-
   return {
     props: {
       preview,
-      data: { openPositions, careerPage, openPositionsQuery }
+      data: { openPositions, careerPage, careerPageQuery }
     }
   }
 }
