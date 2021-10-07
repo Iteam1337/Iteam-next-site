@@ -17,5 +17,6 @@ export default {
     { type: 'scaleUpPage' },
     { type: 'startPage' },
     { type: 'xPage' },
+    { type: 'bookPage' },
   ],
 };
