@@ -200,6 +200,15 @@ export default () =>
                     .title('Book')
                     .schemaType('bookPage')
                     .documentId('bookPage')
+                    .views([
+                      S.view.form(),
+                      S.view
+                        .component(Iframe)
+                        .options({
+                          url: (doc) => resolveProductionUrl(doc),
+                        })
+                        .title('Preview'),
+                    ])
                 ),
             ])
         ),

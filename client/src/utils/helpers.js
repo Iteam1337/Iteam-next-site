@@ -38,6 +38,8 @@ export const getRouteNameFromPageType = (contentType) => {
       return "about"
     case "coworker":
       return "about"
+    case "bookPage":
+      return "book"
     default:
       return "404"
   }

@@ -6,7 +6,7 @@ import PageWrapper from "../components/PageWrapper"
 import Hero from "../sections/common/Hero"
 import { usePreviewSubscription } from "../lib/sanity"
 import { getClient } from "../lib/sanity.server"
-import { formatPhoneNumber } from "../utils/helpers"
+import { filterDataToSingleItem, formatPhoneNumber } from "../utils/helpers"
 import { groq } from "next-sanity"
 import BlockContent from "../components/BlockContent"
 
@@ -14,10 +14,11 @@ const FormStyled = styled.form``
 
 const Book = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.bookPageQuery, {
-    params: data?.queryParams ?? {},
-    initialData: data?.page,
+    initialData: data?.bookPage,
     enabled: preview,
   })
+
+  const page = filterDataToSingleItem(previewData, preview)
 
   useEffect(() => {
     const script = document.createElement("script")
@@ -30,7 +31,7 @@ const Book = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper footerDark>
-        <Hero content={data.hero} />
+        <Hero content={page.hero} />
         <Section>
           <Container>
             <Row className="align-items-center">
@@ -46,7 +47,7 @@ const Book = ({ data, preview = false }) => {
                   <input type="hidden" name="form-name" value="contact1" />
 
                   <Box mb={5}>
-                    <Title>{data.title}</Title>
+                    <Title>{page.title}</Title>
                   </Box>
                   <div
                     className="meetings-iframe-container"
@@ -60,9 +61,9 @@ const Book = ({ data, preview = false }) => {
               >
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">
-                    {data.call.title}
+                    {page.call.title}
                   </Title>
-                  {data.call.contactPersons.map((contact, index) => (
+                  {page.call.contactPersons.map((contact, index) => (
                     <Title variant="card" fontSize="18px" key={index}>
                       {contact.fullname}, {contact.role}
                       <Text>
@@ -81,9 +82,9 @@ const Book = ({ data, preview = false }) => {
                 </Box>
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">
-                    {data.mail.title}
+                    {page.mail.title}
                   </Title>
-                  {data.mail.emails.map((email, index) => (
+                  {page.mail.emails.map((email, index) => (
                     <Text key={index}>
                       <Anchor color="info" href={`mailto:${email}`}>
                         {email}
@@ -91,8 +92,8 @@ const Book = ({ data, preview = false }) => {
                     </Text>
                   ))}
                 </Box>
-                {data.visit.address.map((item) => (
-                  <Box className="mb-5">
+                {page.visit.address.map((item, index) => (
+                  <Box className="mb-5" key={index}>
                     <Title variant="card" fontSize="24px">
                       {item.title}
                     </Title>
@@ -109,7 +110,7 @@ const Book = ({ data, preview = false }) => {
 }
 
 const bookPageQuery = groq`
-*[_id == 'bookPage'][0]{
+*[_id == 'bookPage'] {
   ...,
   call {
     ...,
@@ -121,15 +122,13 @@ const bookPageQuery = groq`
   }
 }`
 
-export async function getStaticProps({ params, preview = false }) {
-  const data = await getClient(preview).fetch(bookPageQuery)
-
-  if (!data) return { notFound: true }
+export async function getStaticProps({ preview = false }) {
+  const bookPage = await getClient(preview).fetch(bookPageQuery)
 
   return {
     props: {
       preview,
-      data,
+      data: { bookPage, bookPageQuery },
     },
   }
 }
