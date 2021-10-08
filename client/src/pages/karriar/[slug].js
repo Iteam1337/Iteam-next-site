@@ -1,6 +1,5 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
-
 import MetaTags from "../../components/MetaTags/MetaTags"
 import PageWrapper from "../../components/PageWrapper"
 import { Section, Title, Box } from "../../components/Core"

@@ -1,20 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
-import Head from 'next/head'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Title, Text, Box } from '../../components/Core'
 import { groq } from 'next-sanity'
 import client from '../../sanity-client'
 
-import PostDetails from '../../sections/aktuellt/PostDetails'
 import Sidebar from '../../sections/aktuellt/Sidebar'
 import BlogList from '../../sections/aktuellt/BlogList'
 import { NextSeo } from 'next-seo'
 
 import BlockContent from '../../components/BlockContent'
-import Typography from '../../components/Typography'
-import { device } from '../../utils'
 import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
@@ -40,7 +36,7 @@ const BlogDetails = ({ data, preview = false }) => {
           }
           image={urlFor(
             post?.metaTags?.imageWithAlt?.asset._ref ??
-              post?.preview?.imageCard?.image.asset._ref
+            post?.preview?.imageCard?.image.asset._ref
           )}
           openGraph={{
             title: post?.metaTags?.title ?? post.title,
@@ -50,7 +46,7 @@ const BlogDetails = ({ data, preview = false }) => {
               {
                 url: urlFor(
                   post?.metaTags?.imageWithAlt?.asset._ref ??
-                    post?.preview?.imageCard?.image.asset._ref
+                  post?.preview?.imageCard?.image.asset._ref
                 ),
               },
             ],
@@ -62,7 +58,7 @@ const BlogDetails = ({ data, preview = false }) => {
               post?.metaTags?.description ?? post?.imageCard?.description,
             image: urlFor(
               post?.metaTags?.imageWithAlt?.asset._ref ??
-                post?.preview?.imageCard?.image.asset._ref
+              post?.preview?.imageCard?.image.asset._ref
             ),
             handle: '@iteam1337',
             site: '@iteam1337',

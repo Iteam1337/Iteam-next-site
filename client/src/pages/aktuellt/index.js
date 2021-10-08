@@ -1,14 +1,11 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
-
 import PageWrapper from "../../components/PageWrapper"
 import { Section, Title, Text } from "../../components/Core"
-
 import MetaTags from "../../components/MetaTags/MetaTags"
 import BlogList from "../../sections/aktuellt/BlogList"
 import client from "../../sanity-client"
 import { groq } from "next-sanity"
-
 
 export default function BlogRegular({ newsPage, newsPosts }) {
   const { title } = newsPage
@@ -21,7 +18,6 @@ export default function BlogRegular({ newsPage, newsPosts }) {
       return -1
     }
   })
-
 
   return (
     <>

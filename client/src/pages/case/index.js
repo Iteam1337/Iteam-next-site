@@ -1,9 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
-
 import PageWrapper from "../../components/PageWrapper"
 import { Section, Title, Text } from "../../components/Core"
-
 import CaseList from "../../sections/case/CaseList1"
 import CaseList2 from "../../sections/case/CaseList2"
 import CTA from "../../sections/case/CTA"
