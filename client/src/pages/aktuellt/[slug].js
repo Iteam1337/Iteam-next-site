@@ -36,7 +36,7 @@ const BlogDetails = ({ data, preview = false }) => {
           }
           image={urlFor(
             post?.metaTags?.imageWithAlt?.asset._ref ??
-            post?.preview?.imageCard?.image.asset._ref
+              post?.preview?.imageCard?.image.asset._ref
           )}
           openGraph={{
             title: post?.metaTags?.title ?? post.title,
@@ -46,7 +46,7 @@ const BlogDetails = ({ data, preview = false }) => {
               {
                 url: urlFor(
                   post?.metaTags?.imageWithAlt?.asset._ref ??
-                  post?.preview?.imageCard?.image.asset._ref
+                    post?.preview?.imageCard?.image.asset._ref
                 ),
               },
             ],
@@ -58,7 +58,7 @@ const BlogDetails = ({ data, preview = false }) => {
               post?.metaTags?.description ?? post?.imageCard?.description,
             image: urlFor(
               post?.metaTags?.imageWithAlt?.asset._ref ??
-              post?.preview?.imageCard?.image.asset._ref
+                post?.preview?.imageCard?.image.asset._ref
             ),
             handle: '@iteam1337',
             site: '@iteam1337',
@@ -116,6 +116,22 @@ const newsPostsQuery = groq`
 const newsPostQuery = groq`
     *[_type == "newsPost" && slug.current == $slug][0] {
     ...,
+    blockText{
+      blockText []{
+       ...,
+       markDefs[]{
+         ...,
+         _type == "internalLink" => {
+           reference-> {
+             _type,
+             slug {
+               current
+             }
+           }
+         }
+       }
+     }
+    }
     }
 `
 

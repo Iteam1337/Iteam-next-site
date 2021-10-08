@@ -78,6 +78,22 @@ const casePageQuery = groq`
 *[_type == 'casePage' && !(_id in path('drafts.**'))][1]{
 titleWithCTA {
     ...,
+    blockText{
+      blockText []{
+       ...,
+       markDefs[]{
+         ...,
+         _type == "internalLink" => {
+           reference-> {
+             _type,
+             slug {
+               current
+             }
+           }
+         }
+       }
+     }
+    },
     cta {
         ...,
         reference-> {
