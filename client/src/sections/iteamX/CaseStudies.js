@@ -1,10 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col, Card } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col, Card } from 'react-bootstrap'
 
-import { Title, Box, Text, Button } from "../../components/Core"
-import { device } from "../../utils"
-import { caseItems } from "../../data/caseItems"
+import { Title, Box, Text, Button } from '../../components/Core'
+import { device } from '../../utils'
+import sanityClient from '../../sanity-client'
+import { useNextSanityImage } from 'next-sanity-image'
 
 const CaseCardStyled = styled(Card)`
   width: 100%;
@@ -124,21 +125,19 @@ const TitleStyled = styled(Title)`
   }
 `
 
-const CaseCard = ({
-  isDark = true,
-  bg = "secondary",
-  img,
-  meta = [],
-  title = "",
-  children = "",
-  link,
-}) => {
+const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
+  const imageProps = useNextSanityImage(
+    sanityClient,
+    data.preview.imageCard.image.asset._ref
+  )
   return (
     <CaseCardStyled>
       <div className="img-container">
-        <img src={img} alt="" />
+        <img {...imageProps} alt="" />
         <BtnContainer>
-          <Button onClick={() => (window.location.href = link)}>
+          <Button
+            onClick={() => (window.location.href = `case/${data.slug.current}`)}
+          >
             Läs case
           </Button>
         </BtnContainer>
@@ -153,29 +152,28 @@ const CaseCard = ({
             </g>
           </svg>
         </Shape>
-        <PreTitle color={isDark ? "lightShade" : "darkShade"}>
-          {meta.map((item, i) => {
-            if (i + 1 !== meta.length) return `${item}, `
-            return `${item}`
-          })}
+        <PreTitle color={isDark ? 'lightShade' : 'darkShade'}>
+          {data.preview.title}
         </PreTitle>
-        <TitleStyled color={isDark ? "light" : "dark"}>{title}</TitleStyled>
-        <Text color={isDark ? "lightShade" : "darkShade"}>{children}</Text>
+        <TitleStyled color={isDark ? 'light' : 'dark'}>
+          {data.title}
+        </TitleStyled>
+        <Text color={isDark ? 'lightShade' : 'darkShade'}>
+          {data.preview.imageCard.description}
+        </Text>
       </TextContent>
     </CaseCardStyled>
   )
 }
 
-const CaseStudies = () => {
-  const XCase = caseItems.filter((item) => item.offer.includes("X"))
-
+const CaseStudies = ({ cases }) => {
   return (
     <>
       {/* <!-- Content section --> */}
       <Box bg="dark">
         <Container className="pt-5">
           <Row>
-            {XCase.map((item, i) => (
+            {cases.map((item, i) => (
               <Col
                 key={i}
                 lg="6"
@@ -186,15 +184,10 @@ const CaseStudies = () => {
                 data-aos-once="true"
               >
                 <CaseCard
-                  bg={i === 0 ? "secondary" : "light"}
+                  bg={i === 0 ? 'secondary' : 'light'}
                   isDark={false}
-                  img={item.caseImg}
-                  meta={item.tags}
-                  title={item.title}
-                  link={item.link}
-                >
-                  {item.intro}
-                </CaseCard>
+                  data={item}
+                />
               </Col>
             ))}
           </Row>
