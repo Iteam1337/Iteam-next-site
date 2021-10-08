@@ -16,13 +16,16 @@ const Career = ({ data, preview = false }) => {
   })
 
   const post = filterDataToSingleItem(previewData, preview)
-  const { hero, openings, section, textGrid } = post
+  const { hero, openings, section, textGrid, coworkerCarouselOne, coworkerCarouselTwo } = post
+
+  const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
+  var carousel = coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
 
   return (
     <>
       <PageWrapper headerDark footerDark>
         <Hero content={hero} />
-        <Content content={section} />
+        <Content content={section} carousel={carousel} />
         <Feature content={textGrid} />
         <Roles content={openings} openPositions={data.openPositions} />
       </PageWrapper>
@@ -38,7 +41,23 @@ const openPositionsQuery = groq`
 
 const careerPageQuery = groq`
  *[_type == 'careerPage']{
-  hero, openings, textGrid, _id,
+  hero, 
+  openings, 
+  textGrid, 
+  _id, 
+  coworkerCarouselOne[] -> {
+  fullname,
+  role,
+  whyTech,
+  answerTech, 
+  email,
+  } , coworkerCarouselTwo[] -> {
+  fullname,
+  role,
+  whyTech,
+  answerTech,
+  email
+  },
    section{
      title,
      blockText{
