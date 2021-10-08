@@ -99,7 +99,6 @@ const BlockContent = ({
   withAnchor = false,
   variant = 'normal',
 }) => {
-  console.log('blocks', blocks)
   return (
     <BaseBlockContent
       blocks={blocks}
