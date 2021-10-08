@@ -1,31 +1,31 @@
-import React from "react"
-import BaseBlockContent from "@sanity/block-content-to-react"
-import Typography from "../Typography"
-import client from "../../sanity-client"
-import { useNextSanityImage } from "next-sanity-image"
-import Img from "next/image"
-import { Text } from "../Core"
-import { buildInternalUrl } from "../../utils/helpers"
+import React from 'react'
+import BaseBlockContent from '@sanity/block-content-to-react'
+import Typography from '../Typography'
+import client from '../../sanity-client'
+import { useNextSanityImage } from 'next-sanity-image'
+import Img from 'next/image'
+import { Text } from '../Core'
+import { buildInternalUrl } from '../../utils/helpers'
 
 const serializers = (withAnchor, variant) => ({
   types: {
     block: ({ node, children }) => {
       switch (node.style) {
-        case "h1":
+        case 'h1':
           return <Typography.H1>{children}</Typography.H1>
-        case "h2":
+        case 'h2':
           return <Typography.H2>{children}</Typography.H2>
-        case "h3":
+        case 'h3':
           return <Typography.H3>{children}</Typography.H3>
-        case "h4":
+        case 'h4':
           return <Typography.H4>{children}</Typography.H4>
-        case "normal":
+        case 'normal':
           return (
             <Typography.Paragraph variant={variant}>
               {children}
             </Typography.Paragraph>
           )
-        case "blockquote":
+        case 'blockquote':
           return (
             <Typography.BlockQuote>
               <Typography.QuoteMark aria-hidden="true">
@@ -34,10 +34,10 @@ const serializers = (withAnchor, variant) => ({
               <Typography.QuoteParagraph>{children}</Typography.QuoteParagraph>
             </Typography.BlockQuote>
           )
-        case "subtitle":
+        case 'subtitle':
           return <Text>{children}</Text>
         default:
-          console.warn("Unhandled in portable text serializer: ", node)
+          console.warn('Unhandled in portable text serializer: ', node)
           return <p></p>
       }
     },
@@ -54,26 +54,36 @@ const serializers = (withAnchor, variant) => ({
     },
   },
   marks: {
-    link: ({ mark, children }) => (
-      <Typography.Anchor href={mark.href} target="_blank" rel="noreferrer">
-        {children}
-      </Typography.Anchor>
-    ),
-    internalLink: ({ mark, children }) =>
-      (<Typography.Anchor href={buildInternalUrl(mark.reference)}>{children}</Typography.Anchor>)
+    internalLink: ({ mark, children }) => {
+      return (
+        <Typography.Anchor href={buildInternalUrl(mark.reference)}>
+          {children}
+        </Typography.Anchor>
+      )
+    },
+    link: ({ mark, children }) => {
+      const { blank, href } = mark
+      return blank ? (
+        <Typography.Anchor href={href} target="_blank" rel="noreferrer">
+          {children}
+        </Typography.Anchor>
+      ) : (
+        <Typography.Anchor href={href}>{children}</Typography.Anchor>
+      )
+    },
   },
   list: ({ type, children }) => {
     switch (type) {
-      case "bullet":
+      case 'bullet':
         return (
-          <ul style={{ listStyleType: "disc", paddingLeft: "2rem" }}>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '2rem' }}>
             {children}
           </ul>
         )
-      case "number":
-        return <ol style={{ paddingLeft: "2rem" }}>{children}</ol>
+      case 'number':
+        return <ol style={{ paddingLeft: '2rem' }}>{children}</ol>
       default:
-        console.warn("Unhandled in portable text serializer: ", type)
+        console.warn('Unhandled in portable text serializer: ', type)
         return <ul></ul>
     }
   },
@@ -87,8 +97,9 @@ const serializers = (withAnchor, variant) => ({
 const BlockContent = ({
   blocks = [],
   withAnchor = false,
-  variant = "normal",
+  variant = 'normal',
 }) => {
+  console.log('blocks', blocks)
   return (
     <BaseBlockContent
       blocks={blocks}
