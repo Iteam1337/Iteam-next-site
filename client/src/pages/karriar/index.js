@@ -19,7 +19,7 @@ const Career = ({ data, preview = false }) => {
   const { hero, openings, section, textGrid, coworkerCarouselOne, coworkerCarouselTwo } = post
 
   const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
-  var carousel = coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  const carousel = coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
 
   return (
     <>

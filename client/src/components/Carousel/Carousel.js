@@ -72,6 +72,7 @@ position: relative;
 `
 
 const SliderItem = styled(Box)`
+padding: 30px;
 &:focus {
   outline: none;
 }
@@ -85,7 +86,6 @@ box-shadow: ${({ theme }) =>
         `0 52px 54px ${rgba(theme.colors.shadow, 0.125)}`};
 display: flex;
 flex-direction: column;
-padding: 20px;
 align-items: center;
 @media ${device.sm} {
   padding: 35px 35px 20px 35px;
@@ -95,6 +95,8 @@ align-items: center;
   flex-direction: row;
 }
 @media ${device.lg} {
+    padding: 0 0 30px 30px; 
+
   margin: 60px 60px 100px 60px !important;
 }
 `
@@ -102,8 +104,6 @@ align-items: center;
 const SliderImgContainer = styled(Box)`
 border-radius: 10px;
 overflow: hidden;
-
-padding: 0 30px;
 
 @media ${device.sm} {
   min-width: 315px;
@@ -131,7 +131,7 @@ flex-direction: column;
 align-items: left;
 justify-content: left;
 flex: auto;
-padding: 50px 30px 0px;
+padding: 80px 30px 0px;
 `
 
 const Carousel = ({ content }) => {
@@ -155,9 +155,9 @@ const Carousel = ({ content }) => {
             <Row className="justify-content-center">
                 <Col lg="12" xl="11">
                     <SliderStyled {...slickSettings}>
-                        {content.map((person) => {
+                        {content.map((person, i) => {
                             return (
-                                <SliderItem>
+                                <SliderItem key={i}>
                                     <SliderCard>
                                         <SliderImgContainer>
                                             <Gravatar
