@@ -1,69 +1,72 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import PageWrapper from "../../components/PageWrapper"
-import { Section, Title, Text, Box } from "../../components/Core"
-import { groq } from "next-sanity"
-import client from "../../sanity-client"
-import BlockContent from "../../components/BlockContent"
-import MetaTags from "../../components/MetaTags/MetaTags"
-import CaseList from "../../sections/case/CaseList1"
-import CTA from "../../sections/case/CTA"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import PageWrapper from '../../components/PageWrapper'
+import { Section, Title, Text, Box } from '../../components/Core'
+import { groq } from 'next-sanity'
+import client from '../../sanity-client'
+import BlockContent from '../../components/BlockContent'
+import MetaTags from '../../components/MetaTags/MetaTags'
+import CaseList from '../../sections/case/CaseList1'
+import CTA from '../../sections/case/CTA'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
+import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 
 const BlogDetails = ({ data, preview = false }) => {
-    const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
-        params: data?.queryParams ?? {},
-        initialData: data?.post,
-        enabled: preview,
-    })
+  const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
+    params: data?.queryParams ?? {},
+    initialData: data?.post,
+    enabled: preview,
+  })
 
-    const post = filterDataToSingleItem(previewData, preview)
-
-    return (
-        <PageWrapper footerDark>
-            <MetaTags
-                title={" Sveriges Allmännytta"}
-                description={
-                    "Tryggare boendemiljö med automatisk spårning av olaglig andrahandsuthyrning"
-                }
-            />
-            <Section className="pb-0">
-                <div className="pt-5"></div>
-                <Container>
-                    <Row className="justify-content-center text-center">
-                        <Col lg="8">
-                            <Box className="text-center" mb={4}>
-                                {post?.company && post.company}
-                            </Box>
-                            <Title variant="hero">{post?.title && post.title}</Title>
-                            <Text>
-                                {post?.subtitle && post.subtitle}
-                            </Text>
-                        </Col>
-                    </Row>
-                </Container>
-            </Section>
-            <Section className="position-relative" borderBottom="1px solid #eae9f2;">
-                <Container>
-                    <Row>
-                        <Col lg="12" xl="10" className="offset-xl-1">
-                            <Box pb={["40px", null, "65px"]}>
-
-                                {post?.blockText?.blockText && <BlockContent variant='thin' blocks={post.blockText.blockText} />}
-                            </Box>
-
-                        </Col>
-                    </Row>
-                </Container>
-            </Section>
-            {data?.posts && <CaseList posts={data.posts} />}
-            {data?.page?.titleWithCTA && <CTA text={data.page.titleWithCTA} />}
-        </PageWrapper>
-    )
+  const post = filterDataToSingleItem(previewData, preview)
+  return (
+    <PageWrapper footerDark>
+      <MetaTags
+        title={post?.metaTags?.title ?? post?.preview?.title}
+        description={
+          post?.metaTags?.description ?? post?.preview?.imageCard?.description
+        }
+        image={urlFor(
+          post?.metaTags?.imageWithAlt?.asset._ref ??
+            post?.preview?.imageCard?.image.asset._ref
+        )}
+      />
+      <Section className="pb-0">
+        <div className="pt-5"></div>
+        <Container>
+          <Row className="justify-content-center text-center">
+            <Col lg="8">
+              <Box className="text-center" mb={4}>
+                {post?.company && post.company}
+              </Box>
+              <Title variant="hero">{post?.title && post.title}</Title>
+              <Text>{post?.subtitle && post.subtitle}</Text>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+      <Section className="position-relative" borderBottom="1px solid #eae9f2;">
+        <Container>
+          <Row>
+            <Col lg="12" xl="10" className="offset-xl-1">
+              <Box pb={['40px', null, '65px']}>
+                {post?.blockText?.blockText && (
+                  <BlockContent
+                    variant="thin"
+                    blocks={post.blockText.blockText}
+                  />
+                )}
+              </Box>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+      {data?.posts && <CaseList posts={data.posts} />}
+      {data?.page?.titleWithCTA && <CTA text={data.page.titleWithCTA} />}
+    </PageWrapper>
+  )
 }
-
 
 const casePostsQuery = groq`
 *[_type == 'casePost' && !(_id in path('drafts.**'))] {
@@ -93,33 +96,40 @@ const casePostQuery = groq`
     company,
     title,
     subtitle, 
+    metaTags, 
+    preview
 }`
 
 export async function getStaticProps({ params, preview = false }) {
-    const queryParams = { slug: params.slug }
-    const data = await getClient(preview).fetch(casePostQuery, queryParams)
-    const posts = await getClient(preview).fetch(casePostsQuery)
-    const page = await getClient(preview).fetch(casePageQuery)
+  const queryParams = { slug: params.slug }
+  const data = await getClient(preview).fetch(casePostQuery, queryParams)
+  const posts = await getClient(preview).fetch(casePostsQuery)
+  const page = await getClient(preview).fetch(casePageQuery)
 
-    if (!data) return { notFound: true }
+  if (!data) return { notFound: true }
 
-    const post = filterDataToSingleItem(data, preview)
+  const post = filterDataToSingleItem(data, preview)
 
-    return {
-        props: {
-            preview,
-            data: { post, posts, page, casePostQuery, queryParams }
-        }
-    }
+  return {
+    props: {
+      preview,
+      data: {
+        post,
+        posts,
+        page,
+        casePostQuery,
+        queryParams,
+      },
+    },
+  }
 }
 
 export const getStaticPaths = async () => {
-    const pages = await getClient().fetch(casePostsQuery)
-    return {
-        paths: pages.map((slug) => `/case/${slug.current}`),
-        fallback: true,
-    }
+  const pages = await getClient().fetch(casePostsQuery)
+  return {
+    paths: pages.map((slug) => `/case/${slug.current}`),
+    fallback: true,
+  }
 }
-
 
 export default BlogDetails

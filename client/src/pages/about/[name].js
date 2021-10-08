@@ -4,9 +4,9 @@ import Medarbetare from "../../sections/about/Medarbetare"
 import Hero from "../../sections/about/CoworkerHero"
 import { groq } from "next-sanity"
 import client from "../../sanity-client"
-import { usePreviewSubscription } from '../../lib/sanity'
-import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
+import { usePreviewSubscription } from "../../lib/sanity"
+import { getClient } from "../../lib/sanity.server"
+import { filterDataToSingleItem } from "../../utils/helpers"
 
 const CoworkerPage = ({ data, preview = false }) => {
 
@@ -25,7 +25,7 @@ const CoworkerPage = ({ data, preview = false }) => {
           <Hero title={fullname} heroImage={heroImage}>
             {role}
           </Hero>
-          <Medarbetare info={rest} />
+          <Medarbetare info={rest} fullname={fullname} />
         </>
       )}
     </PageWrapper>
@@ -55,8 +55,8 @@ export async function getStaticProps({ params, preview = false }) {
   return {
     props: {
       preview,
-      data: { post, coworkerQuery, queryParams }
-    }
+      data: { post, coworkerQuery, queryParams },
+    },
   }
 }
 

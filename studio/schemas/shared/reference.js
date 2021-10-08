@@ -1,0 +1,22 @@
+export default {
+  name: 'defaultReference',
+  type: 'reference',
+  weak: true,
+  title: 'Referens',
+  description: 'Lägg till referens till en sida',
+  to: [
+    { type: 'aboutPage' },
+    { type: 'careerPage' },
+    { type: 'casePage' },
+    { type: 'casePost' },
+    { type: 'coworker' },
+    { type: 'mvpPage' },
+    { type: 'newsPage' },
+    { type: 'newsPost' },
+    { type: 'openPositions' },
+    { type: 'scaleUpPage' },
+    { type: 'startPage' },
+    { type: 'xPage' },
+    { type: 'bookPage' },
+  ],
+};

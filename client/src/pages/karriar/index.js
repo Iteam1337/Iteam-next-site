@@ -1,23 +1,30 @@
 import React from "react"
 import PageWrapper from "../../components/PageWrapper"
-import Hero from "../../sections/karriar/Hero"
+import Hero from '../../sections/common/Hero'
 import Content from "../../sections/karriar/Content"
 import Feature from "../../sections/karriar/Feature"
 import Roles from "../../sections/karriar/Roles"
-import client from "./../../../src/sanity-client"
 import { groq } from "next-sanity"
+import { usePreviewSubscription } from '../../lib/sanity'
+import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
 
-const Career = ({ openPositions }) => {
+const Career = ({ data, preview = false }) => {
+  const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
+    initialData: data?.careerPage,
+    enabled: preview,
+  })
+
+  const post = filterDataToSingleItem(previewData, preview)
+  const { hero, openings, section, textGrid } = post
+
   return (
     <>
       <PageWrapper headerDark footerDark>
-        <Hero title="Kom in i värmen">
-          Vi söker dig som älskar att lära nytt och att lösa komplexa problem
-          med digitala lösningar som skapar värde på riktigt.
-        </Hero>
-        <Content />
-        <Feature />
-        <Roles openPositions={openPositions} />
+        <Hero content={hero} />
+        <Content content={section} />
+        <Feature content={textGrid} />
+        <Roles content={openings} openPositions={data.openPositions} />
       </PageWrapper>
     </>
   )
@@ -29,12 +36,43 @@ const openPositionsQuery = groq`
    }
 `
 
-export async function getStaticProps() {
-  const openPositions = await client.fetch(openPositionsQuery)
+const careerPageQuery = groq`
+ *[_type == 'careerPage']{
+  hero, openings, textGrid, _id,
+   section{
+     title,
+     blockText{
+       blockText []{
+        ...,
+        markDefs[]{
+          ...,
+          _type == "internalLink" => {
+            reference-> {
+              _type,
+              slug {
+                current
+              }
+            }
+          }
+        }
+      }
+     }
+   }
+ }
+`
+
+export async function getStaticProps({ preview = false }) {
+  const openPositions = await getClient(preview).fetch(openPositionsQuery)
+  const careerPage = await getClient(preview).fetch(careerPageQuery)
+
+  if (!openPositions) return { notFound: true }
+
   return {
     props: {
-      openPositions,
-    },
+      preview,
+      data: { openPositions, careerPage, careerPageQuery }
+    }
   }
 }
+
 export default Career

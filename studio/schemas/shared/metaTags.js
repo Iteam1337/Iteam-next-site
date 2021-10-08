@@ -13,7 +13,7 @@ export default {
       name: 'description',
       validation: (Rules) =>
         Rules.required().error(
-          'Ange en besktivning som används som meta data.'
+          'Ange en beskrivning som används som meta data.'
         ),
     },
     {

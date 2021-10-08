@@ -1,42 +1,41 @@
-import React, { useEffect } from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
-
+import React, { useEffect } from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Title, Section, Box, Text, Anchor } from '../components/Core'
+import PageWrapper from '../components/PageWrapper'
+import Hero from '../sections/common/Hero'
+import { usePreviewSubscription } from '../lib/sanity'
+import { getClient } from '../lib/sanity.server'
 import {
-  Title,
-  Button,
-  Section,
-  Box,
-  Text,
-  Input,
-  Anchor,
-} from "../components/Core"
-
-import PageWrapper from "../components/PageWrapper"
-
-import Hero from "../sections/common/Hero"
+  buildInternalUrl,
+  filterDataToSingleItem,
+  formatPhoneNumber,
+} from '../utils/helpers'
+import { groq } from 'next-sanity'
+import BlockContent from '../components/BlockContent'
 
 const FormStyled = styled.form``
 
-const Contact1 = () => {
+const Book = ({ data, preview = false }) => {
+  const { data: previewData } = usePreviewSubscription(data?.bookPageQuery, {
+    initialData: data?.bookPage,
+    enabled: preview,
+  })
+
+  const page = filterDataToSingleItem(previewData, preview)
+
   useEffect(() => {
-    const script = document.createElement("script")
+    const script = document.createElement('script')
     script.src =
-      "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
+      'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
     script.async = true
     document.body.appendChild(script)
   }, [])
-  const content = { title: "" }
+
   return (
     <>
       <PageWrapper footerDark>
-        <Hero
-          content={{
-            title: "Klart vi ska ses!",
-            subtitle:
-              "Vi träffar gärna er och lyssnar in vad ni har för utmaningar som kan lösas med lite smart digitalisering. Nedan kan du enkelt boka in ett distansmöte direkt i din och vår kalender.",
-          }}
-        />
+        <Hero content={page.hero} />
         <Section>
           <Container>
             <Row className="align-items-center">
@@ -52,10 +51,10 @@ const Contact1 = () => {
                   <input type="hidden" name="form-name" value="contact1" />
 
                   <Box mb={5}>
-                    <Title>Boka möte i kalendern</Title>
+                    <Title>{page.title}</Title>
                   </Box>
                   <div
-                    class="meetings-iframe-container"
+                    className="meetings-iframe-container"
                     data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
                   ></div>
                 </FormStyled>
@@ -66,58 +65,50 @@ const Contact1 = () => {
               >
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">
-                    Ring oss
+                    {page.call.title}
                   </Title>
-
-                  <Title variant="card" fontSize="18px">
-                    Jonna Hjern, Försäljning
-                    <Text>
-                      <Anchor color="info" href="callto:+46729755366">
-                        +46-729-755 366
-                      </Anchor>
-                    </Text>
-                  </Title>
-                  <Title variant="card" fontSize="18px">
-                    Christian Landgren, VD
-                    <Text>
-                      <Anchor color="info" href="callto:+46707755831">
-                        +46-707-755 831
-                      </Anchor>
-                    </Text>
-                  </Title>
-                  <Title variant="card" fontSize="18px">
-                    Hans Rollman, COO
-                    <Text>
-                      <Anchor color="info" href="callto:+46738133787">
-                        +46 738-1337 87
-                      </Anchor>
-                    </Text>
-                  </Title>
-                  <Anchor color="info" href="/about#medarbetare">
-                    Fler kontaktuppgifter...
+                  {page.call.contactPersons.map((contact, index) => (
+                    <Title variant="card" fontSize="18px" key={index}>
+                      {contact.fullname}, {contact.role}
+                      <Text>
+                        <Anchor
+                          color="info"
+                          href={`callto:${contact.phoneNumber}`}
+                        >
+                          {formatPhoneNumber(contact.phoneNumber)}
+                        </Anchor>
+                      </Text>
+                    </Title>
+                  ))}
+                  <Anchor
+                    color="info"
+                    href={`${buildInternalUrl(
+                      page.call.cta.reference
+                    )}#medarbetare`}
+                  >
+                    {page.call.cta.title}
                   </Anchor>
                 </Box>
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">
-                    Maila?
+                    {page.mail.title}
                   </Title>
-                  <Text>info@iteam.se</Text>
-                  <Text>joinus@iteam.se</Text>
+                  {page.mail.emails.map((email, index) => (
+                    <Text key={index}>
+                      <Anchor color="info" href={`mailto:${email}`}>
+                        {email}
+                      </Anchor>
+                    </Text>
+                  ))}
                 </Box>
-                <Box className="mb-5">
-                  <Title variant="card" fontSize="24px">
-                    Göteborg
-                  </Title>
-                  <Text>Järntorgsgatan 12-14</Text>
-                  <Text>413 01 Göteborg</Text>
-                </Box>
-                <Box className="mb-5">
-                  <Title variant="card" fontSize="24px">
-                    Stockholm
-                  </Title>
-                  <Text>Järntorgsgatan 12-14</Text>
-                  <Text>413 01 Göteborg</Text>
-                </Box>
+                {page.visit.address.map((item, index) => (
+                  <Box className="mb-5" key={index}>
+                    <Title variant="card" fontSize="24px">
+                      {item.title}
+                    </Title>
+                    <BlockContent blocks={item.blockText.blockText} />
+                  </Box>
+                ))}
               </Col>
             </Row>
           </Container>
@@ -126,4 +117,37 @@ const Contact1 = () => {
     </>
   )
 }
-export default Contact1
+
+const bookPageQuery = groq`
+*[_id == 'bookPage'] {
+  ...,
+  call {
+    ...,
+    cta {
+      title,
+      reference -> {
+        _type,
+        slug {
+          current,
+        }
+      }
+    },
+    contactPersons[] -> {
+      fullname,
+      phoneNumber,
+      role,
+    } 
+  }
+}`
+
+export async function getStaticProps({ preview = false }) {
+  const bookPage = await getClient(preview).fetch(bookPageQuery)
+
+  return {
+    props: {
+      preview,
+      data: { bookPage, bookPageQuery },
+    },
+  }
+}
+export default Book

@@ -68,6 +68,13 @@ export default {
         { type: 'imageCard', name: 'imageCard', title: 'Förhandsvisning' },
       ],
     },
+    {
+      type: 'metaTags',
+      name: 'metaTags',
+      options: {
+        collapsible: true,
+      },
+    },
   ],
   orderings: [
     {

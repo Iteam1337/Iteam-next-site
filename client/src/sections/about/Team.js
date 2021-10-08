@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import { Title, Section, Box, Text } from "../../components/Core"
 import Link from "next/link"
-import { urlFor } from "../../utils/helpers"
+import { formatPhoneNumber, urlFor } from "../../utils/helpers"
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -74,7 +74,7 @@ const TeamCard = ({ coworker }) => {
           {phoneNumber && (
             <a href={`tel:${phoneNumber}`}>
               <Text fontSize={1} lineHeight={1.25}>
-                {phoneNumber}
+                {formatPhoneNumber(phoneNumber)}
               </Text>
             </a>
           )}
