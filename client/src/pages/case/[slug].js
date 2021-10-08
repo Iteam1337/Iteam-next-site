@@ -20,7 +20,6 @@ const BlogDetails = ({ data, preview = false }) => {
   })
 
   const post = filterDataToSingleItem(previewData, preview)
-  console.log('post', post)
   return (
     <PageWrapper footerDark>
       <MetaTags
