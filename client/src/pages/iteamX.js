@@ -35,7 +35,7 @@ const IteamX = ({ data }) => {
 }
 
 const filteredCasePostQuery = groq`
- *[_type=='casePost' && typeOfCase == 'x'] {
+ *[_type=='casePost' && typeOfCase == 'x'][0..1] {
    title,
  	slug, 
    preview {
