@@ -27,7 +27,7 @@ const OpeningDetails = ({ data, preview = false }) => {
 
   return (
     <PageWrapper footerDark>
-      {metaTags && (
+      {post && (
         <NextSeo
           title={metaTags?.title ?? post.title}
           titleTemplate="%s | Aktuellt på Iteam"
