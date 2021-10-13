@@ -13,7 +13,7 @@ import resolveProductionUrl from '../resolveProductionUrl'
 import SocialPreview from 'part:social-preview/component'
 
 export const getDefaultDocumentNode = ({ schemaType }) => {
-  if (['openPositions'].includes(schemaType)) {
+  if (['openPositions', 'casePost', 'newsPost'].includes(schemaType)) {
     return S.document().views([
       S.view.form(),
       S.view
@@ -33,7 +33,7 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
                 title: doc.metaTags.title,
                 description: doc.metaTags.description,
                 ogImage: doc.metaTags.imageWithAlt.asset,
-                siteUrl: 'https://iteam.se/karriar/' + doc.slug.current,
+                siteUrl: 'https://iteam.se/',
               }
             },
           })
