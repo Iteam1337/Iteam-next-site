@@ -1458,6 +1458,11 @@
   resolved "https://registry.npmjs.org/@sanity/icons/-/icons-1.2.1.tgz#0dcef7d0c0ea965acffbccb825d9da6ccaa53330"
   integrity sha512-dDXvyRIppU6OD8dNPBdd8LVBaIw5n5TrVOZ6AvT5pCoDswXlFQinoea5Fe4Huk26C+IZfe8d++P4tctnQPG8Vw==
 
+"@sanity/image-url@^0.140.22":
+  version "0.140.22"
+  resolved "https://registry.npmjs.org/@sanity/image-url/-/image-url-0.140.22.tgz#7a65f56bb751f7b1c5dfacfadd34ee10fc4f0fde"
+  integrity sha512-CAmQZnj+KM7FSEYiWlIGDit072syicYuAw0w7R2ctMzHiZ4p9mE/g6dBnYqrqFUrw2J+GpJgPt+RVspKP8vdqA==
+
 "@sanity/image-url@^1.0.1":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@sanity/image-url/-/image-url-1.0.1.tgz"
@@ -8587,6 +8592,13 @@ sanity-plugin-iframe-pane@^1.0.8:
     "@sanity/icons" "^1.2.1"
     "@sanity/ui" "^0.36.12"
     prop-types "15.7.2"
+
+sanity-plugin-social-preview@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/sanity-plugin-social-preview/-/sanity-plugin-social-preview-0.1.5.tgz#4f1f10e9078b9906b6d0924f99f7c79d379efb07"
+  integrity sha512-xHmFcEYlNQI3E3ICCBi+cc4m1YkYymOq9I7VFJRGm9ggrHWeq+ZOG50jDDVwX5sFXWQh/aWr91RmYJgPqMkS3A==
+  dependencies:
+    "@sanity/image-url" "^0.140.22"
 
 sanity-plugin-vercel-deploy@^2.0.1:
   version "2.0.1"
