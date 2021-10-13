@@ -51,12 +51,14 @@ const careerPageQuery = groq`
   whyTech,
   answerTech, 
   email,
+  _type,
   } , coworkerCarouselTwo[] -> {
   fullname,
   role,
   whyTech,
   answerTech,
-  email
+  email,
+  _type,
   },
    section{
      title,
