@@ -20,18 +20,49 @@ const BlogDetails = ({ data, preview = false }) => {
   })
 
   const post = filterDataToSingleItem(previewData, preview)
+  const { metaTags } = post
   return (
     <PageWrapper footerDark>
-      <MetaTags
-        title={post?.metaTags?.title ?? post?.preview?.title}
-        description={
-          post?.metaTags?.description ?? post?.preview?.imageCard?.description
-        }
-        image={urlFor(
-          post?.metaTags?.imageWithAlt?.asset._ref ??
-            post?.preview?.imageCard?.image.asset._ref
-        )}
-      />
+      {metaTags && (
+        <NextSeo
+          title={metaTags?.title ?? post.title}
+          titleTemplate="%s | Aktuellt på Iteam"
+          description={
+            metaTags?.description ?? post?.preview?.imageCard?.description
+          }
+          image={urlFor(
+            metaTags?.imageWithAlt?.asset._ref ??
+              post?.preview?.imageCard?.image.asset._ref
+          )}
+          openGraph={{
+            title: metaTags?.title ?? post.title,
+            description:
+              metaTags?.description ?? post?.preview?.imageCard?.description,
+            images: [
+              {
+                url: urlFor(
+                  metaTags?.imageWithAlt?.asset._ref ??
+                    post?.preview?.imageCard?.image.asset._ref
+                ),
+              },
+            ],
+            site_name: 'Iteam',
+          }}
+          twitter={{
+            title: metaTags?.title ?? post.title,
+            description:
+              metaTags?.description ?? post?.preview?.imageCard?.description,
+            image: urlFor(
+              metaTags?.imageWithAlt?.asset._ref ??
+                post?.preview?.imageCard?.image.asset._ref
+            ),
+            handle: '@iteam1337',
+            site: '@iteam1337',
+            cardType: 'summary_large_image',
+          }}
+        />
+      )}
+
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>
