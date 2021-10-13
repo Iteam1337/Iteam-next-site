@@ -14,7 +14,7 @@ const DefaultContent = ({ data, carousel }) => {
       <Clients clients={data.clients} />
       <Pricing />
       <Faq content={data.faq} />
-      <CTA />
+      <CTA content={data.titleWithCta} />
     </>
   )
 }
