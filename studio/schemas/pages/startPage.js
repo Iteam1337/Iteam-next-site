@@ -73,6 +73,19 @@ export default {
             },
           ],
         },
+
+        {
+          type: 'array',
+          name: 'clients',
+          title: 'Kunder',
+          description:
+            'Här lägger vi in logotyper till kunder vi har arbetat med.',
+          options: {
+            layout: 'grid',
+          },
+          of: [{ type: 'imageWithAlt', name: 'logotype', title: 'Logotype' }],
+        },
+
         {
           type: 'array',
           name: 'faq',
