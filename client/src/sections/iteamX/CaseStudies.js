@@ -153,7 +153,11 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
           </svg>
         </Shape>
         <PreTitle color={isDark ? 'lightShade' : 'darkShade'}>
-          {data.preview.title}
+          {data.tags
+            ? data.tags.map(
+                (tag, i) => `${tag}${i < data.tags.length - 1 ? ', ' : ''} `
+              )
+            : data.title}
         </PreTitle>
         <TitleStyled color={isDark ? 'light' : 'dark'}>
           {data.title}
