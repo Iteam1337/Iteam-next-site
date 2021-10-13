@@ -13,13 +13,12 @@ import resolveProductionUrl from '../resolveProductionUrl'
 import SocialPreview from 'part:social-preview/component'
 
 export const getDefaultDocumentNode = ({ schemaType }) => {
-  if (['openPositions'].includes(schemaType)) {
+  if (['openPositions', 'casePost', 'newsPost'].includes(schemaType)) {
     return S.document().views([
       S.view.form(),
       S.view
         .component(
           SocialPreview({
-            // Overwrite prepareFunction to pick the right fields
             prepareFunction: (
               doc /* this object is the currently active document */
             ) => {
