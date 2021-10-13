@@ -5,6 +5,23 @@ export default {
   fields: [
     { type: 'hero', name: 'hero' },
     { type: 'section', name: 'section' },
+
+    {
+      name: 'coworkerCarouselOne',
+      title: 'Medarbetarkarusell',
+      type: 'array',
+      of: [{ type: 'defaultReference' }],
+      description:
+        'Här kan du välja vilka som kommer visas i medarbetarkarusellen där bild, titel och svaret på frågan "Varför jobbar du med teknik?" syns. En av dessa karuseller kommer att slumpas fram varje gång man går in på karriärssidan.',
+    },
+    {
+      name: 'coworkerCarouselTwo',
+      title: 'Medarbetarkarusell',
+      type: 'array',
+      of: [{ type: 'defaultReference' }],
+      description:
+        'Här kan du välja vilka som kommer visas i medarbetarkarusellen där bild, titel och svaret på frågan "Varför jobbar du med teknik?" syns. En av dessa karuseller kommer att slumpas fram varje gång man går in på karriärssidan.',
+    },
     { type: 'textGrid', name: 'textGrid' },
     {
       type: 'openings',
