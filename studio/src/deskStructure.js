@@ -26,7 +26,7 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
                 title: doc.metaTags.title,
                 description: doc.metaTags.description,
                 ogImage: doc.metaTags.imageWithAlt.asset,
-                siteUrl: 'https://iteam.se/karriar/' + doc.slug.current,
+                siteUrl: 'https://iteam.se/',
               }
             },
           })
