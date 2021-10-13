@@ -97,7 +97,7 @@ export default {
               name: 'faq',
               fields: [
                 { type: 'string', name: 'title', title: 'Frågeställning' },
-                { type: 'blockText', name: 'blocktext' },
+                { type: 'blockText', name: 'blockText' },
               ],
             },
           ],

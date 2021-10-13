@@ -44,7 +44,6 @@ const FaqTitle = styled(Title)`
 `
 
 const Faq = ({ content }) => {
-  console.log('faq', content)
   return (
     <>
       {/* <!-- Faq section --> */}
@@ -59,7 +58,7 @@ const Faq = ({ content }) => {
                       <FaqTitle>{faq.title}</FaqTitle>
                       <Text variant="small" color="light" opacity={0.7}>
                         <BlockContent
-                          blocks={faq.blocktext.blockText}
+                          blocks={faq.blockText.blockText}
                           color="light"
                         />
                       </Text>

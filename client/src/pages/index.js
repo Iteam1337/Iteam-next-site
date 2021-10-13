@@ -19,6 +19,7 @@ const StartPage = ({ data, preview = false, carousel }) => {
   })
 
   const page = filterDataToSingleItem(previewData, preview)
+
   return (
     <>
       <PageWrapper headerDark footerDark>
@@ -37,6 +38,28 @@ const StartPage = ({ data, preview = false, carousel }) => {
 const startPageQuery = groq`
 *[_id == 'startPage'] {
   ...,
+  defaultLayout {
+    ...,
+    faq[] {
+      ...,
+      blockText {
+        blockText [] {
+          ...,
+          markDefs[] {
+            ...,
+            _type == "internalLink" => {
+              reference-> {
+                _type,
+                slug {
+                  current
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }`
 
 const carouselQuery = groq`
