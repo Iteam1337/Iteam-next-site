@@ -1,14 +1,15 @@
-import styled from "styled-components"
-import { device } from "../../utils"
+import styled from 'styled-components'
+import { device } from '../../utils'
 
 const Paragraph = styled.p`
   margin: 20px 0;
   font-size: 18px;
-  font-weight: ${({ variant }) => (variant == "thin" ? 300 : 500)};
+  font-weight: ${({ variant }) => (variant == 'thin' ? 300 : 500)};
   letter-spacing: -0.56px;
   line-height: 30px;
   text-align: left;
-  color: #19191b;
+  color: ${({ color }) =>
+    color == 'light' ? 'rgba(255,255,255, 0.7)' : '#19191b'};
 `
 const QuoteParagraph = styled(Paragraph)`
   font-size: 19.5px;

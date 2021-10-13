@@ -7,7 +7,7 @@ import Img from 'next/image'
 import { Text } from '../Core'
 import { buildInternalUrl } from '../../utils/helpers'
 
-const serializers = (withAnchor, variant) => ({
+const serializers = (withAnchor, variant, color) => ({
   types: {
     block: ({ node, children }) => {
       switch (node.style) {
@@ -21,7 +21,7 @@ const serializers = (withAnchor, variant) => ({
           return <Typography.H4>{children}</Typography.H4>
         case 'normal':
           return (
-            <Typography.Paragraph variant={variant}>
+            <Typography.Paragraph variant={variant} color={color}>
               {children}
             </Typography.Paragraph>
           )
@@ -98,11 +98,12 @@ const BlockContent = ({
   blocks = [],
   withAnchor = false,
   variant = 'normal',
+  color = '',
 }) => {
   return (
     <BaseBlockContent
       blocks={blocks}
-      serializers={serializers(withAnchor, variant)}
+      serializers={serializers(withAnchor, variant, color)}
     />
   )
 }
