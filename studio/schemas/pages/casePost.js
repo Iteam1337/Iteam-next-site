@@ -60,6 +60,8 @@ export default {
       type: 'object',
       name: 'preview',
       title: 'Förhandsvisning',
+      validation: (Rules) =>
+        Rules.required().error('Du behöver lägga in en förhandsvisning'),
       options: {
         collapsible: true,
       },
@@ -96,13 +98,13 @@ export default {
       subtitle: 'subtitle',
     },
     prepare({ title = 'No name', slug = {}, name = 'case' }) {
-      const path = `/${name}/${slug.current}`;
+      const path = `/${name}/${slug.current}`
 
       return {
         path,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}
