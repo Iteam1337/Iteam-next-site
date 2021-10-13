@@ -1,13 +1,15 @@
-import React from "react"
-import PageWrapper from "../../components/PageWrapper"
+import React from 'react'
+import PageWrapper from '../../components/PageWrapper'
 import Hero from '../../sections/common/Hero'
-import Content from "../../sections/karriar/Content"
-import Feature from "../../sections/karriar/Feature"
-import Roles from "../../sections/karriar/Roles"
-import { groq } from "next-sanity"
+import Content from '../../sections/karriar/Content'
+import Feature from '../../sections/karriar/Feature'
+import Roles from '../../sections/karriar/Roles'
+import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import { NextSeo } from 'next-seo'
+import { urlFor } from '../../utils/helpers'
 
 const Career = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
@@ -16,13 +18,48 @@ const Career = ({ data, preview = false }) => {
   })
 
   const post = filterDataToSingleItem(previewData, preview)
-  const { hero, openings, section, textGrid, coworkerCarouselOne, coworkerCarouselTwo } = post
+  const {
+    hero,
+    openings,
+    section,
+    textGrid,
+    coworkerCarouselOne,
+    coworkerCarouselTwo,
+    metaTags,
+  } = post
 
   const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
-  const carousel = coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  const carousel =
+    coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
 
   return (
     <>
+      {metaTags && (
+        <NextSeo
+          title={metaTags.title}
+          titleTemplate="%s | Aktellt på Iteam"
+          description={metaTags?.description}
+          image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+          openGraph={{
+            title: metaTags?.title,
+            description: metaTags?.description,
+            images: [
+              {
+                url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+              },
+            ],
+            site_name: 'Iteam',
+          }}
+          twitter={{
+            title: metaTags?.title,
+            description: metaTags?.description,
+            image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+            handle: '@iteam1337',
+            site: '@iteam1337',
+            cardType: 'summary_large_image',
+          }}
+        />
+      )}
       <PageWrapper headerDark footerDark>
         <Hero content={hero} />
         <Content content={section} carousel={carousel} />
@@ -41,6 +78,7 @@ const openPositionsQuery = groq`
 
 const careerPageQuery = groq`
  *[_type == 'careerPage']{
+  metaTags,
   hero, 
   openings, 
   textGrid, 
@@ -89,8 +127,8 @@ export async function getStaticProps({ preview = false }) {
   return {
     props: {
       preview,
-      data: { openPositions, careerPage, careerPageQuery }
-    }
+      data: { openPositions, careerPage, careerPageQuery },
+    },
   }
 }
 

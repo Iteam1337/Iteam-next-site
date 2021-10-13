@@ -1,26 +1,47 @@
-import React from "react"
-import PageWrapper from "../../components/PageWrapper"
-import Hero from "../../sections/common/Hero"
-import Content from "../../sections/about/Content"
-import MetaTags from "../../components/MetaTags/MetaTags"
-import Team from "../../sections/about/Team"
-import CTA from "../../sections/about/CTA"
-import client from "./../../../src/sanity-client"
-import { groq } from "next-sanity"
+import React from 'react'
+import PageWrapper from '../../components/PageWrapper'
+import Hero from '../../sections/common/Hero'
+import Content from '../../sections/about/Content'
+import MetaTags from '../../components/MetaTags/MetaTags'
+import Team from '../../sections/about/Team'
+import CTA from '../../sections/about/CTA'
+import client from './../../../src/sanity-client'
+import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+import { urlFor } from '../../utils/helpers'
 
 const About = ({ aboutPage, coworkers }) => {
-  const { hero, coworkersSection, titleWithCTA, ...rest } = aboutPage
+  const { hero, coworkersSection, titleWithCTA, metaTags, ...rest } = aboutPage
   return (
     <>
       <PageWrapper>
-        <MetaTags
-          title={
-            "Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag."
-          }
-          description={
-            "Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag."
-          }
-        />
+        {metaTags && (
+          <NextSeo
+            title={metaTags.title}
+            titleTemplate="%s | Aktellt på Iteam"
+            description={metaTags?.description}
+            image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+            openGraph={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              images: [
+                {
+                  url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+                },
+              ],
+              site_name: 'Iteam',
+            }}
+            twitter={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+              handle: '@iteam1337',
+              site: '@iteam1337',
+              cardType: 'summary_large_image',
+            }}
+          />
+        )}
+
         <Hero content={hero} />
         <Content content={rest} />
         <Team content={coworkersSection} coworkers={coworkers} />
@@ -33,6 +54,7 @@ const About = ({ aboutPage, coworkers }) => {
 const aboutPageQuery = groq`
 *[_type == 'aboutPage'][0] {
   ..., 
+  metaTags,
   titleWithCTA {
     ...,
   	cta {

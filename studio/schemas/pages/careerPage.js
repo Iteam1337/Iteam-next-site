@@ -30,6 +30,13 @@ export default {
       description:
         'Lägg in en rubrik och underribrik för våra ansökningar. Under dessa kommer vi att visa länkar till de öppningar vi har just nu',
     },
+    {
+      type: 'metaTags',
+      name: 'metaTags',
+      options: {
+        collapsible: true,
+      },
+    },
   ],
 
   preview: {
@@ -38,13 +45,13 @@ export default {
       subtitle: 'section',
     },
     prepare({ title = 'Karriar', name = 'karriar' }) {
-      const path = `/${name}`;
+      const path = `/${name}`
       return {
         path,
         name,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}
