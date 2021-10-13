@@ -1,15 +1,28 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import PageWrapper from "../../components/PageWrapper"
-import { Section, Title, Text } from "../../components/Core"
-import CaseList from "../../sections/case/CaseList1"
-import CaseList2 from "../../sections/case/CaseList2"
-import CTA from "../../sections/case/CTA"
-import client from "../../sanity-client"
-import { groq } from "next-sanity"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import PageWrapper from '../../components/PageWrapper'
+import { Section, Title, Text } from '../../components/Core'
+import CaseList from '../../sections/case/CaseList1'
+import CaseList2 from '../../sections/case/CaseList2'
+import CTA from '../../sections/case/CTA'
+import client from '../../sanity-client'
+import { groq } from 'next-sanity'
+import { usePreviewSubscription } from '../../lib/sanity'
+import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
 
-const CaseStudy = ({ casePage, casePosts }) => {
-  const sectionCards = [casePage.sectionWithImageOne, casePage.sectionWithImageTwo]
+const CaseStudy = ({ data, preview = false }) => {
+  const { data: previewData } = usePreviewSubscription(data?.casePageQuery, {
+    initialData: data?.casePage,
+    enabled: preview,
+  })
+
+  const casePage = filterDataToSingleItem(previewData, preview)
+
+  const sectionCards = [
+    casePage?.sectionWithImageOne,
+    casePage?.sectionWithImageTwo,
+  ]
 
   return (
     <>
@@ -20,14 +33,12 @@ const CaseStudy = ({ casePage, casePosts }) => {
             <Row className="justify-content-center text-center">
               <Col lg="6">
                 <Title variant="hero">{casePage.title}</Title>
-                <Text>
-                  {casePage.subTitle}
-                </Text>
+                <Text>{casePage.subTitle}</Text>
               </Col>
             </Row>
           </Container>
         </Section>
-        <CaseList posts={casePosts} />
+        <CaseList posts={data.casePosts} />
         <CaseList2 sectionCards={sectionCards} />
         <CTA text={casePage.titleWithCTA} />
       </PageWrapper>
@@ -59,15 +70,28 @@ const casePostsQuery = groq`
 ...,
   }`
 
+export async function getStaticProps({ preview = false }) {
+  const casePage = await getClient(preview).fetch(casePageQuery)
+  const casePosts = await getClient(preview).fetch(casePostsQuery)
 
-export async function getStaticProps() {
-  const casePage = await client.fetch(casePageQuery)
-  const casePosts = await client.fetch(casePostsQuery)
+  if (!casePage) return { notFound: true }
+
   return {
     props: {
-      casePage,
-      casePosts
-    }
+      preview,
+      data: { casePage, casePosts, casePageQuery },
+    },
   }
 }
+
+// export async function getStaticProps() {
+//   const casePage = await client.fetch(casePageQuery)
+//   const casePosts = await client.fetch(casePostsQuery)
+//   return {
+//     props: {
+//       casePage,
+//       casePosts,
+//     },
+//   }
+// }
 export default CaseStudy
