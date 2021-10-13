@@ -10,6 +10,7 @@ import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import { NextSeo } from 'next-seo'
 
 const OpeningDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(
@@ -23,13 +24,33 @@ const OpeningDetails = ({ data, preview = false }) => {
   const post = filterDataToSingleItem(previewData, preview)
 
   const { title, blockText, metaTags } = post
+
   return (
     <PageWrapper footerDark>
-      {metaTags && (
-        <MetaTags
-          title={metaTags.title}
-          description={metaTags.description}
-          image={urlFor(metaTags.imageWithAlt.asset._ref)}
+      {post && (
+        <NextSeo
+          title={metaTags?.title ?? post.title}
+          titleTemplate="%s | Aktuellt på Iteam"
+          description={metaTags?.description}
+          image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+          openGraph={{
+            title: metaTags?.title ?? post.title,
+            description: metaTags?.description,
+            images: [
+              {
+                url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+              },
+            ],
+            site_name: 'Iteam',
+          }}
+          twitter={{
+            title: metaTags?.title ?? post.title,
+            description: metaTags?.description,
+            image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+            handle: '@iteam1337',
+            site: '@iteam1337',
+            cardType: 'summary_large_image',
+          }}
         />
       )}
       <Section className="pb-0">
