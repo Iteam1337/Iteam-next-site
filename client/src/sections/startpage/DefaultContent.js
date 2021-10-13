@@ -7,7 +7,6 @@ import Pricing from './Pricing'
 import Testimonial from './Testimonial'
 
 const DefaultContent = ({ data, carousel }) => {
-  console.log(carousel)
   return (
     <>
       <Offerings data={data.ourOffers} />
