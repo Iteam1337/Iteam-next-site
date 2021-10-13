@@ -5,7 +5,6 @@ import { Section, Title, Text } from '../../components/Core'
 import CaseList from '../../sections/case/CaseList1'
 import CaseList2 from '../../sections/case/CaseList2'
 import CTA from '../../sections/case/CTA'
-import client from '../../sanity-client'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
@@ -32,15 +31,17 @@ const CaseStudy = ({ data, preview = false }) => {
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="6">
-                <Title variant="hero">{casePage.title}</Title>
-                <Text>{casePage.subTitle}</Text>
+                <Title variant="hero">
+                  {casePage?.title && casePage.title}
+                </Title>
+                <Text>{casePage?.subTitle && casePage.subTitle}</Text>
               </Col>
             </Row>
           </Container>
         </Section>
-        <CaseList posts={data.casePosts} />
-        <CaseList2 sectionCards={sectionCards} />
-        <CTA text={casePage.titleWithCTA} />
+        <CaseList posts={data?.casePosts && data.casePosts} />
+        <CaseList2 sectionCards={sectionCards && sectionCards} />
+        <CTA text={casePage?.titleWithCTA && casePage.titleWithCTA} />
       </PageWrapper>
     </>
   )
@@ -84,14 +85,4 @@ export async function getStaticProps({ preview = false }) {
   }
 }
 
-// export async function getStaticProps() {
-//   const casePage = await client.fetch(casePageQuery)
-//   const casePosts = await client.fetch(casePostsQuery)
-//   return {
-//     props: {
-//       casePage,
-//       casePosts,
-//     },
-//   }
-// }
 export default CaseStudy

@@ -10,6 +10,7 @@ export default function resolveProductionUrl(doc) {
   let route = '/'
   switch (doc._type) {
     case 'newsPost':
+    case 'newsPage':
       route = 'aktuellt'
       break
     case 'coworker':
