@@ -72,6 +72,15 @@ export default () =>
                     .title('Startsidan')
                     .schemaType('startPage')
                     .documentId('startPage')
+                    .views([
+                      S.view.form(),
+                      S.view
+                        .component(Iframe)
+                        .options({
+                          url: (doc) => resolveProductionUrl(doc),
+                        })
+                        .title('Preview'),
+                    ])
                 ),
               S.divider(),
               // S.divider(),
