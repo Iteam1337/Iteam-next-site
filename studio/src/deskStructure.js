@@ -1,16 +1,47 @@
-import S from '@sanity/desk-tool/structure-builder';
-import Iframe from 'sanity-plugin-iframe-pane';
+import S from '@sanity/desk-tool/structure-builder'
+import Iframe from 'sanity-plugin-iframe-pane'
 import {
   FaRegFileAlt,
   FaRegFolderOpen,
   FaRegFileImage,
   FaRegClone,
   FaRegFolder,
-} from 'react-icons/fa';
-import title from '../schemas/shared/title';
-import resolveProductionUrl from '../resolveProductionUrl';
+} from 'react-icons/fa'
+import title from '../schemas/shared/title'
+import resolveProductionUrl from '../resolveProductionUrl'
 
-export const getDefaultDocumentNode = () => {
+import SocialPreview from 'part:social-preview/component'
+
+export const getDefaultDocumentNode = ({ schemaType }) => {
+  if (['openPositions'].includes(schemaType)) {
+    return S.document().views([
+      S.view.form(),
+      S.view
+        .component(
+          SocialPreview({
+            // Overwrite prepareFunction to pick the right fields
+            prepareFunction: (
+              doc /* this object is the currently active document */
+            ) => {
+              return {
+                title: doc.metaTags.title,
+                description: doc.metaTags.description,
+                ogImage: doc.metaTags.imageWithAlt.asset,
+                siteUrl: 'https://iteam.se/karriar/' + doc.slug.current,
+              }
+            },
+          })
+        )
+        .title('Social & SEO'),
+      S.view
+        .component(Iframe)
+        .options({
+          url: (doc) => resolveProductionUrl(doc),
+        })
+        .title('Preview'),
+    ])
+  }
+
   return S.document().views([
     S.view.form(),
     S.view
@@ -19,8 +50,8 @@ export const getDefaultDocumentNode = () => {
         url: (doc) => resolveProductionUrl(doc),
       })
       .title('Preview'),
-  ]);
-};
+  ])
+}
 
 export default () =>
   S.list()
@@ -185,8 +216,8 @@ export default () =>
                                 .component(Iframe)
                                 .options({
                                   url: (doc) => {
-                                    return (resolveProductionUrl(doc))
-                                  }
+                                    return resolveProductionUrl(doc)
+                                  },
                                 })
                                 .title('Preview'),
                             ])
@@ -295,4 +326,4 @@ export default () =>
             'bookPage',
           ].includes(listItem.getId())
       ),
-    ]);
+    ])
