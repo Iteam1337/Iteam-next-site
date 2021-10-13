@@ -1,7 +1,6 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import styled from "styled-components"
-
 import PageWrapper from "../components/PageWrapper"
 import { Section, Title, Text, Box, List, Anchor } from "../components/Core"
 

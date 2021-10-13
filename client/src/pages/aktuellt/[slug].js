@@ -1,20 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
-import Head from 'next/head'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Title, Text, Box } from '../../components/Core'
 import { groq } from 'next-sanity'
 import client from '../../sanity-client'
 
-import PostDetails from '../../sections/aktuellt/PostDetails'
 import Sidebar from '../../sections/aktuellt/Sidebar'
 import BlogList from '../../sections/aktuellt/BlogList'
 import { NextSeo } from 'next-seo'
 
 import BlockContent from '../../components/BlockContent'
-import Typography from '../../components/Typography'
-import { device } from '../../utils'
 import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
@@ -120,6 +116,22 @@ const newsPostsQuery = groq`
 const newsPostQuery = groq`
     *[_type == "newsPost" && slug.current == $slug][0] {
     ...,
+    blockText{
+      blockText []{
+       ...,
+       markDefs[]{
+         ...,
+         _type == "internalLink" => {
+           reference-> {
+             _type,
+             slug {
+               current
+             }
+           }
+         }
+       }
+     }
+    }
     }
 `
 
