@@ -50,7 +50,7 @@ export default {
       type: 'array',
       title: 'Taggar',
       description:
-        'Lägg in olika taggar som relaterar till projektet. t.ex AI, React, Research och analys, Design, ',
+        'Lägg in olika taggar som relaterar till projektet, när du lagt in en tagg klickar på enter för att lägga in nästa. T.ex AI, React och Design. ',
       of: [{ type: 'string' }],
       options: {
         layout: 'tags',
@@ -96,13 +96,13 @@ export default {
       subtitle: 'subtitle',
     },
     prepare({ title = 'No name', slug = {}, name = 'case' }) {
-      const path = `/${name}/${slug.current}`;
+      const path = `/${name}/${slug.current}`
 
       return {
         path,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}
