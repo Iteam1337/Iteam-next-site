@@ -32,7 +32,7 @@ export default {
           fields: [
             {
               type: 'string',
-              name: 'name',
+              name: 'fullname',
               title: 'Namn',
             },
             {

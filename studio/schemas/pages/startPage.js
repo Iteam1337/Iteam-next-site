@@ -10,7 +10,10 @@ export default {
       name: 'defaultLayout',
       title: 'Default layout',
       description:
-        'Denna delen är fast layout som inte struktureras om. Den är placerad i slutet av startsidan.',
+        'Denna delen är fast layout som inte struktureras om. Den är placerad i slutet av startsidan. Karusellen över kunder och "Våra priser" ligger här också, de kan redigeras under Moduler',
+      options: {
+        collapsible: true,
+      },
       fields: [
         {
           type: 'document',
@@ -28,7 +31,7 @@ export default {
               of: [
                 {
                   type: 'document',
-                  name: 'faq',
+                  name: 'offers',
                   fields: [
                     {
                       type: 'string',
@@ -39,6 +42,10 @@ export default {
                       type: 'string',
                       name: 'subtitle',
                       title: 'Kort beskrivning',
+                    },
+                    {
+                      type: 'defaultReference',
+                      name: 'reference',
                     },
                   ],
                 },
@@ -61,13 +68,6 @@ export default {
                   type: 'text',
                   name: 'text',
                   title: 'Text',
-                },
-                {
-                  type: 'datetime',
-                  name: 'datetime',
-                  title: 'Datum och tid',
-                  description:
-                    'Visas som att ett meddelande har skickats vid den utsädda tiden.',
                 },
               ],
             },
@@ -93,9 +93,6 @@ export default {
           type: 'titleWithCTA',
           name: 'titleWithCta',
           title: 'Rubrik med en CTA',
-          options: {
-            collapsible: false,
-          },
         },
       ],
     },
@@ -107,13 +104,13 @@ export default {
       subtitle: 'description',
     },
     prepare({ title = 'Startsida', name = 'startpage' }) {
-      const path = `/`;
+      const path = `/`
       return {
         path,
         name,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}
