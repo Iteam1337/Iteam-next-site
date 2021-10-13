@@ -91,6 +91,22 @@ const openPositionsQuery = groq`
 const openPositionQuery = groq`
     *[_type == "openPositions" && slug.current == $slug][0] {
     ...,
+    blockText{
+      blockText []{
+       ...,
+       markDefs[]{
+         ...,
+         _type == "internalLink" => {
+           reference-> {
+             _type,
+             slug {
+               current
+             }
+           }
+         }
+       }
+     }
+    }
     }
 `
 export async function getStaticProps({ params, preview = false }) {

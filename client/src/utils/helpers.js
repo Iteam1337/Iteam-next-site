@@ -22,7 +22,9 @@ export const buildInternalUrl = (reference) => {
       reference.slug.current
     }`
   }
-  return getRouteNameFromPageType(reference._type)
+  return `/${getRouteNameFromPageType(
+    reference._ref ? reference._ref : reference._type
+  )}`
 }
 
 export const getRouteNameFromPageType = (contentType) => {
@@ -31,6 +33,8 @@ export const getRouteNameFromPageType = (contentType) => {
       return 'mvp'
     case 'xPage':
       return 'iteamX'
+    case 'scaleUpPage':
+      return 'scaleup'
     case 'careerPage':
       return 'karriar'
     case 'aboutPage':

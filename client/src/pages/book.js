@@ -121,6 +121,22 @@ const Book = ({ data, preview = false }) => {
 const bookPageQuery = groq`
 *[_id == 'bookPage'] {
   ...,
+  blockText{
+    blockText []{
+     ...,
+     markDefs[]{
+       ...,
+       _type == "internalLink" => {
+         reference-> {
+           _type,
+           slug {
+             current
+           }
+         }
+       }
+     }
+   }
+  },
   call {
     ...,
     cta {
