@@ -27,8 +27,7 @@ const Career = ({ data, preview = false }) => {
   } = post
 
   const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
-  const carousel =
-    coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  const carousel = coworkerCarousel[0]
   const shuffledCarousel = shuffleArray(carousel)
 
   return (
