@@ -1,15 +1,16 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import PageWrapper from "../../components/PageWrapper"
-import { Section, Title, Text } from "../../components/Core"
-import MetaTags from "../../components/MetaTags/MetaTags"
-import BlogList from "../../sections/aktuellt/BlogList"
-import client from "../../sanity-client"
-import { groq } from "next-sanity"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import PageWrapper from '../../components/PageWrapper'
+import { Section, Title, Text } from '../../components/Core'
+import MetaTags from '../../components/MetaTags/MetaTags'
+import BlogList from '../../sections/aktuellt/BlogList'
+import client from '../../sanity-client'
+import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+import { urlFor } from '../../utils/helpers'
 
 export default function BlogRegular({ newsPage, newsPosts }) {
-  const { title } = newsPage
-
+  const { title, metaTags } = newsPage
 
   const sortedNewsPosts = newsPosts.sort((a, b) => {
     if (a.date < b.date) {
@@ -22,10 +23,33 @@ export default function BlogRegular({ newsPage, newsPosts }) {
   return (
     <>
       <PageWrapper footerDark>
-        <MetaTags
-          title={title}
-          description={title}
-        />
+        {metaTags && (
+          <NextSeo
+            title={metaTags.title}
+            titleTemplate="%s | Aktellt på Iteam"
+            description={metaTags?.description}
+            image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+            openGraph={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              images: [
+                {
+                  url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+                },
+              ],
+              site_name: 'Iteam',
+            }}
+            twitter={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+              handle: '@iteam1337',
+              site: '@iteam1337',
+              cardType: 'summary_large_image',
+            }}
+          />
+        )}
+        <MetaTags title={title} description={title} />
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
@@ -45,7 +69,8 @@ export default function BlogRegular({ newsPage, newsPosts }) {
 const newsPageQuery = groq`
   *[_type == 'newsPage' && !(_id in path('drafts.**'))][0] 
   {
-    title
+    title,
+    metaTags
   }`
 
 const newsPostsQuery = groq`
@@ -57,14 +82,13 @@ const newsPostsQuery = groq`
    date
   }`
 
-
 export async function getStaticProps() {
   const newsPage = await client.fetch(newsPageQuery)
   const newsPosts = await client.fetch(newsPostsQuery)
   return {
     props: {
       newsPage,
-      newsPosts
-    }
+      newsPosts,
+    },
   }
 }
