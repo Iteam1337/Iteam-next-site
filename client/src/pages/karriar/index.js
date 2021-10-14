@@ -27,14 +27,15 @@ const Career = ({ data, preview = false }) => {
   } = post
 
   const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
-  const carousel = coworkerCarousel[0]
-  const shuffledCarousel = shuffleArray(carousel)
+  // const carousel =
+  //   coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  // const shuffledCarousel = shuffleArray(carousel)
 
   return (
     <>
       <PageWrapper headerDark footerDark>
         <Hero content={hero} />
-        <Content content={section} carousel={shuffledCarousel} />
+        <Content content={section} carousel={coworkerCarousel} />
         <Feature content={textGrid} />
         <Roles content={openings} openPositions={data.openPositions} />
       </PageWrapper>

@@ -6,6 +6,7 @@ import { Title, Box, Text } from '../../components/Core'
 import Slider from 'react-slick'
 import { device, breakpoints } from '../../utils'
 import { rgba } from 'polished'
+import { shuffleArray } from '../../utils/helpers'
 
 const SliderStyled = styled(Slider)`
   position: relative;
@@ -147,13 +148,15 @@ const Carousel = ({ content }) => {
       },
     ],
   }
-
+  const carousel = content[Math.floor(Math.random() * content.length)]
+  const shuffledCarousel = shuffleArray(carousel)
   return (
     <Container>
       <Row className="justify-content-center">
         <Col lg="12" xl="11">
           <SliderStyled {...slickSettings}>
-            {content.map((person, i) => {
+            {shuffledCarousel.map((person, i) => {
+              console.log('person', person)
               return (
                 <SliderItem key={i}>
                   <SliderCard>
