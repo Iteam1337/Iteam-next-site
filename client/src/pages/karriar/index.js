@@ -1,13 +1,14 @@
-import React from "react"
-import PageWrapper from "../../components/PageWrapper"
+import React from 'react'
+import PageWrapper from '../../components/PageWrapper'
 import Hero from '../../sections/common/Hero'
-import Content from "../../sections/karriar/Content"
-import Feature from "../../sections/karriar/Feature"
-import Roles from "../../sections/karriar/Roles"
-import { groq } from "next-sanity"
+import Content from '../../sections/karriar/Content'
+import Feature from '../../sections/karriar/Feature'
+import Roles from '../../sections/karriar/Roles'
+import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import { shuffleArray } from '../../utils/helpers'
 
 const Career = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
@@ -16,16 +17,25 @@ const Career = ({ data, preview = false }) => {
   })
 
   const post = filterDataToSingleItem(previewData, preview)
-  const { hero, openings, section, textGrid, coworkerCarouselOne, coworkerCarouselTwo } = post
+  const {
+    hero,
+    openings,
+    section,
+    textGrid,
+    coworkerCarouselOne,
+    coworkerCarouselTwo,
+  } = post
 
   const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
-  const carousel = coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  const carousel =
+    coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  const shuffledCarousel = shuffleArray(carousel)
 
   return (
     <>
       <PageWrapper headerDark footerDark>
         <Hero content={hero} />
-        <Content content={section} carousel={carousel} />
+        <Content content={section} carousel={shuffledCarousel} />
         <Feature content={textGrid} />
         <Roles content={openings} openPositions={data.openPositions} />
       </PageWrapper>
@@ -89,8 +99,8 @@ export async function getStaticProps({ preview = false }) {
   return {
     props: {
       preview,
-      data: { openPositions, careerPage, careerPageQuery }
-    }
+      data: { openPositions, careerPage, careerPageQuery },
+    },
   }
 }
 
