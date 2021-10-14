@@ -1,9 +1,9 @@
-import React, { useState, useContext } from "react"
-import styled from "styled-components"
-import { ListGroup, Collapse } from "react-bootstrap"
-import { FaAngleRight, FaAngleDown } from "react-icons/fa"
-import Link from "next/link"
-import GlobalContext from "../../context/GlobalContext"
+import React, { useState, useContext } from 'react'
+import styled from 'styled-components'
+import { ListGroup, Collapse } from 'react-bootstrap'
+import { FaAngleRight, FaAngleDown } from 'react-icons/fa'
+import Link from 'next/link'
+import GlobalContext from '../../context/GlobalContext'
 
 const NestedMenuContainer = styled.div`
   a {
@@ -84,6 +84,7 @@ const MenuItem = ({
               onClick={() => {
                 if (gContext.visibleOffCanvas) {
                   gContext.toggleOffCanvas()
+                  document.body.style.overflow = 'visible'
                 }
               }}
             >
@@ -95,6 +96,7 @@ const MenuItem = ({
                 onClick={() => {
                   if (gContext.visibleOffCanvas) {
                     gContext.toggleOffCanvas()
+                    document.body.style.overflow = 'visible'
                   }
                 }}
               >
