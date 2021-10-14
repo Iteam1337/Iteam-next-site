@@ -11,7 +11,7 @@ import { filterDataToSingleItem } from '../../utils/helpers'
 
 export default function BlogRegular({ data, preview = false }) {
   const { data: previewData } = usePreviewSubscription(data?.newsPageQuery, {
-    initialData: data?.careerPage,
+    initialData: data?.newsPage,
     enabled: preview,
   })
 
