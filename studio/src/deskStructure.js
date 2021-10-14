@@ -17,6 +17,12 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
     return S.document().views([
       S.view.form(),
       S.view
+        .component(Iframe)
+        .options({
+          url: (doc) => resolveProductionUrl(doc),
+        })
+        .title('Förhandsvisning'),
+      S.view
         .component(
           SocialPreview({
             prepareFunction: (
@@ -31,13 +37,7 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
             },
           })
         )
-        .title('Social & SEO'),
-      S.view
-        .component(Iframe)
-        .options({
-          url: (doc) => resolveProductionUrl(doc),
-        })
-        .title('Preview'),
+        .title('Förhandsvisning för delning på sociala medier'),
     ])
   }
 
@@ -48,7 +48,7 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
       .options({
         url: (doc) => resolveProductionUrl(doc),
       })
-      .title('Preview'),
+      .title('Förhandsvisning'),
   ])
 }
 
@@ -129,6 +129,15 @@ export default () =>
                             .schemaType('casePage')
                             .documentId('casePage')
                             .title('Case landningssida')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
                         ),
                       S.divider(),
                       S.listItem()
@@ -155,6 +164,15 @@ export default () =>
                             .schemaType('newsPage')
                             .documentId('newsPage')
                             .title('Akuellt landningssida')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
                         ),
                       S.divider(),
                       S.listItem()
@@ -181,6 +199,15 @@ export default () =>
                             .schemaType('aboutPage')
                             .documentId('aboutPage')
                             .title('Om oss landningssida')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
                         ),
                       S.divider(),
                       S.listItem()
@@ -214,11 +241,9 @@ export default () =>
                               S.view
                                 .component(Iframe)
                                 .options({
-                                  url: (doc) => {
-                                    return resolveProductionUrl(doc)
-                                  },
+                                  url: (doc) => resolveProductionUrl(doc),
                                 })
-                                .title('Preview'),
+                                .title('Förhandsvisning'),
                             ])
                         ),
                       S.divider(),
@@ -248,7 +273,7 @@ export default () =>
                         .options({
                           url: (doc) => resolveProductionUrl(doc),
                         })
-                        .title('Preview'),
+                        .title('Förhandsvisning'),
                     ])
                 ),
             ])

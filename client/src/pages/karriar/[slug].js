@@ -1,33 +1,58 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import MetaTags from "../../components/MetaTags/MetaTags"
-import PageWrapper from "../../components/PageWrapper"
-import { Section, Title, Box } from "../../components/Core"
-import { groq } from "next-sanity"
-import client from "../../sanity-client"
-import BlockContent from "../../components/BlockContent"
-import { urlFor } from "../../utils/helpers"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import MetaTags from '../../components/MetaTags/MetaTags'
+import PageWrapper from '../../components/PageWrapper'
+import { Section, Title, Box } from '../../components/Core'
+import { groq } from 'next-sanity'
+import client from '../../sanity-client'
+import BlockContent from '../../components/BlockContent'
+import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import { NextSeo } from 'next-seo'
 
 const OpeningDetails = ({ data, preview = false }) => {
-
-  const { data: previewData } = usePreviewSubscription(data?.openPositionQuery, {
-    params: data?.queryParams ?? {},
-    initialData: data?.post,
-    enabled: preview,
-  })
+  const { data: previewData } = usePreviewSubscription(
+    data?.openPositionQuery,
+    {
+      params: data?.queryParams ?? {},
+      initialData: data?.post,
+      enabled: preview,
+    }
+  )
   const post = filterDataToSingleItem(previewData, preview)
 
   const { title, blockText, metaTags } = post
+
   return (
     <PageWrapper footerDark>
-      {metaTags && <MetaTags
-        title={metaTags.title}
-        description={metaTags.description}
-        image={urlFor(metaTags.imageWithAlt.asset._ref)}
-      />}
+      {post && (
+        <NextSeo
+          title={metaTags?.title ?? post.title}
+          titleTemplate="%s | Aktuellt på Iteam"
+          description={metaTags?.description}
+          image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+          openGraph={{
+            title: metaTags?.title ?? post.title,
+            description: metaTags?.description,
+            images: [
+              {
+                url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+              },
+            ],
+            site_name: 'Iteam',
+          }}
+          twitter={{
+            title: metaTags?.title ?? post.title,
+            description: metaTags?.description,
+            image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+            handle: '@iteam1337',
+            site: '@iteam1337',
+            cardType: 'summary_large_image',
+          }}
+        />
+      )}
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>
@@ -46,7 +71,9 @@ const OpeningDetails = ({ data, preview = false }) => {
         <Container>
           <Row>
             <Col lg="12" xl="10" className="offset-xl-1">
-              {blockText && <BlockContent variant="thin" blocks={blockText.blockText} />}
+              {blockText && (
+                <BlockContent variant="thin" blocks={blockText.blockText} />
+              )}
             </Col>
           </Row>
         </Container>
@@ -64,6 +91,22 @@ const openPositionsQuery = groq`
 const openPositionQuery = groq`
     *[_type == "openPositions" && slug.current == $slug][0] {
     ...,
+    blockText{
+      blockText []{
+       ...,
+       markDefs[]{
+         ...,
+         _type == "internalLink" => {
+           reference-> {
+             _type,
+             slug {
+               current
+             }
+           }
+         }
+       }
+     }
+    }
     }
 `
 export async function getStaticProps({ params, preview = false }) {
@@ -77,8 +120,8 @@ export async function getStaticProps({ params, preview = false }) {
   return {
     props: {
       preview,
-      data: { post, openPositionQuery, queryParams }
-    }
+      data: { post, openPositionQuery, queryParams },
+    },
   }
 }
 

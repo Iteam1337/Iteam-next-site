@@ -27,7 +27,7 @@ const BlogDetails = ({ data, preview = false }) => {
           title={post?.metaTags?.title ?? post.title}
           titleTemplate="%s | Aktuellt på Iteam"
           description={
-            post?.metaTags?.description ?? post?.imageCard?.description
+            post?.metaTags?.description ?? post?.preview?.imageCard?.description
           }
           image={urlFor(
             post?.metaTags?.imageWithAlt?.asset._ref ??
@@ -36,7 +36,8 @@ const BlogDetails = ({ data, preview = false }) => {
           openGraph={{
             title: post?.metaTags?.title ?? post.title,
             description:
-              post?.metaTags?.description ?? post?.imageCard?.description,
+              post?.metaTags?.description ??
+              post?.preview?.imageCard?.description,
             images: [
               {
                 url: urlFor(
@@ -50,7 +51,8 @@ const BlogDetails = ({ data, preview = false }) => {
           twitter={{
             title: post?.metaTags?.title ?? post.title,
             description:
-              post?.metaTags?.description ?? post?.imageCard?.description,
+              post?.metaTags?.description ??
+              post?.preview?.imageCard?.description,
             image: urlFor(
               post?.metaTags?.imageWithAlt?.asset._ref ??
                 post?.preview?.imageCard?.image.asset._ref
@@ -107,6 +109,22 @@ const casePageQuery = groq`
 *[_type == 'casePage' && !(_id in path('drafts.**'))][1]{
 titleWithCTA {
     ...,
+    blockText{
+      blockText []{
+       ...,
+       markDefs[]{
+         ...,
+         _type == "internalLink" => {
+           reference-> {
+             _type,
+             slug {
+               current
+             }
+           }
+         }
+       }
+     }
+    },
     cta {
         ...,
         reference-> {

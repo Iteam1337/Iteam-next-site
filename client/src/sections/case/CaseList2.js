@@ -1,12 +1,11 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Section } from "../../components/Core"
-import CaseCard from "../../components/CaseCard"
-import { urlFor } from "../../utils/helpers"
+import { Section } from '../../components/Core'
+import CaseCard from '../../components/CaseCard'
+import { urlFor } from '../../utils/helpers'
 
 const CaseList2 = ({ sectionCards }) => {
-
   return (
     <>
       {/* <!-- Feature section --> */}
