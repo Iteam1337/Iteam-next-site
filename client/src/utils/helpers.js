@@ -1,4 +1,3 @@
-import imageUrlBuilder from '@sanity/image-url'
 import { createImageUrlBuilder } from 'next-sanity'
 import client from '../sanity-client'
 const PNF = require('google-libphonenumber').PhoneNumberFormat
@@ -59,9 +58,15 @@ export const getRouteNameFromPageType = (contentType) => {
 export const filterDataToSingleItem = (data, preview) => {
   if (!Array.isArray(data)) return data
 
-  return data.length > 1 && preview
-    ? data.filter((item) => item._id.startsWith(`drafts.`)).slice(-1)[0]
-    : data.slice(-1)[0]
+  if (data.length === 1) {
+    return data[0]
+  }
+
+  if (preview) {
+    return data.find((item) => item._id.startsWith('drafts.')) || data[0]
+  }
+
+  return data[0]
 }
 
 export const formatPhoneNumber = (phoneNumber) => {
