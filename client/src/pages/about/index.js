@@ -2,15 +2,22 @@ import React from 'react'
 import PageWrapper from '../../components/PageWrapper'
 import Hero from '../../sections/common/Hero'
 import Content from '../../sections/about/Content'
-import MetaTags from '../../components/MetaTags/MetaTags'
 import Team from '../../sections/about/Team'
 import CTA from '../../sections/about/CTA'
-import client from './../../../src/sanity-client'
 import { groq } from 'next-sanity'
+import { usePreviewSubscription } from '../../lib/sanity'
+import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
 import { urlFor } from '../../utils/helpers'
 
-const About = ({ aboutPage, coworkers }) => {
+const About = ({ data, preview = false }) => {
+  const { data: previewData } = usePreviewSubscription(data?.aboutPageQuery, {
+    initialData: data?.aboutPage,
+    enabled: preview,
+  })
+
+  const aboutPage = filterDataToSingleItem(previewData, preview)
   const { hero, coworkersSection, titleWithCTA, metaTags, ...rest } = aboutPage
   return (
     <>
@@ -41,11 +48,13 @@ const About = ({ aboutPage, coworkers }) => {
             }}
           />
         )}
-
-        <Hero content={hero} />
-        <Content content={rest} />
-        <Team content={coworkersSection} coworkers={coworkers} />
-        <CTA content={titleWithCTA} />
+        <Hero content={hero && hero} />
+        <Content content={rest && rest} />
+        <Team
+          content={coworkersSection && coworkersSection}
+          coworkers={data?.coworkers && data.coworkers}
+        />
+        <CTA content={titleWithCTA && titleWithCTA} />
       </PageWrapper>
     </>
   )
@@ -76,13 +85,16 @@ const coworkerQuery = groq`
    }
 `
 
-export async function getStaticProps() {
-  const aboutPage = await client.fetch(aboutPageQuery)
-  const coworkers = await client.fetch(coworkerQuery)
+export async function getStaticProps({ preview = false }) {
+  const aboutPage = await getClient(preview).fetch(aboutPageQuery)
+  const coworkers = await getClient(preview).fetch(coworkerQuery)
+
+  if (!aboutPage) return { notFound: true }
+
   return {
     props: {
-      aboutPage,
-      coworkers,
+      preview,
+      data: { aboutPage, coworkers, aboutPageQuery },
     },
   }
 }

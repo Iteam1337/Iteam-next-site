@@ -4,21 +4,28 @@ import PageWrapper from '../../components/PageWrapper'
 import { Section, Title, Text } from '../../components/Core'
 import MetaTags from '../../components/MetaTags/MetaTags'
 import BlogList from '../../sections/aktuellt/BlogList'
-import client from '../../sanity-client'
 import { groq } from 'next-sanity'
-import { NextSeo } from 'next-seo'
-import { urlFor } from '../../utils/helpers'
+import { usePreviewSubscription } from '../../lib/sanity'
+import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
 
-export default function BlogRegular({ newsPage, newsPosts }) {
-  const { title, metaTags } = newsPage
+export default function BlogRegular({ data, preview = false }) {
+  const { data: previewData } = usePreviewSubscription(data?.newsPageQuery, {
+    initialData: data?.newsPage,
+    enabled: preview,
+  })
 
-  const sortedNewsPosts = newsPosts.sort((a, b) => {
+  const newsPage = filterDataToSingleItem(previewData, preview)
+
+  const sortedNewsPosts = data.newsPosts.sort((a, b) => {
     if (a.date < b.date) {
       return 1
     } else {
       return -1
     }
   })
+
+  const { metaTags, title } = newsPage
 
   return (
     <>
@@ -49,18 +56,17 @@ export default function BlogRegular({ newsPage, newsPosts }) {
             }}
           />
         )}
-        <MetaTags title={title} description={title} />
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="8">
-                <Title>{title}</Title>
+                <Title>{title && title}</Title>
               </Col>
             </Row>
           </Container>
         </Section>
-        <BlogList posts={sortedNewsPosts} />
+        <BlogList posts={sortedNewsPosts && sortedNewsPosts} />
       </PageWrapper>
     </>
   )
@@ -82,13 +88,16 @@ const newsPostsQuery = groq`
    date
   }`
 
-export async function getStaticProps() {
-  const newsPage = await client.fetch(newsPageQuery)
-  const newsPosts = await client.fetch(newsPostsQuery)
+export async function getStaticProps({ preview = false }) {
+  const newsPosts = await getClient(preview).fetch(newsPostsQuery)
+  const newsPage = await getClient(preview).fetch(newsPageQuery)
+
+  if (!newsPage) return { notFound: true }
+
   return {
     props: {
-      newsPage,
-      newsPosts,
+      preview,
+      data: { newsPosts, newsPage, newsPageQuery },
     },
   }
 }
