@@ -5,12 +5,12 @@ import { Section, Title, Text, Box } from '../../components/Core'
 import { groq } from 'next-sanity'
 import client from '../../sanity-client'
 import BlockContent from '../../components/BlockContent'
-import MetaTags from '../../components/MetaTags/MetaTags'
 import CaseList from '../../sections/case/CaseList1'
 import CTA from '../../sections/case/CTA'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
+import { NextSeo } from 'next-seo'
 
 const BlogDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
@@ -22,16 +22,45 @@ const BlogDetails = ({ data, preview = false }) => {
   const post = filterDataToSingleItem(previewData, preview)
   return (
     <PageWrapper footerDark>
-      <MetaTags
-        title={post?.metaTags?.title ?? post?.preview?.title}
-        description={
-          post?.metaTags?.description ?? post?.preview?.imageCard?.description
-        }
-        image={urlFor(
-          post?.metaTags?.imageWithAlt?.asset._ref ??
-            post?.preview?.imageCard?.image.asset._ref
-        )}
-      />
+      {post && (
+        <NextSeo
+          title={post?.metaTags?.title ?? post.title}
+          titleTemplate="%s | Aktuellt på Iteam"
+          description={
+            post?.metaTags?.description ?? post?.imageCard?.description
+          }
+          image={urlFor(
+            post?.metaTags?.imageWithAlt?.asset._ref ??
+              post?.preview?.imageCard?.image.asset._ref
+          )}
+          openGraph={{
+            title: post?.metaTags?.title ?? post.title,
+            description:
+              post?.metaTags?.description ?? post?.imageCard?.description,
+            images: [
+              {
+                url: urlFor(
+                  post?.metaTags?.imageWithAlt?.asset._ref ??
+                    post?.preview?.imageCard?.image.asset._ref
+                ),
+              },
+            ],
+            site_name: 'Iteam',
+          }}
+          twitter={{
+            title: post?.metaTags?.title ?? post.title,
+            description:
+              post?.metaTags?.description ?? post?.imageCard?.description,
+            image: urlFor(
+              post?.metaTags?.imageWithAlt?.asset._ref ??
+                post?.preview?.imageCard?.image.asset._ref
+            ),
+            handle: '@iteam1337',
+            site: '@iteam1337',
+            cardType: 'summary_large_image',
+          }}
+        />
+      )}
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>
