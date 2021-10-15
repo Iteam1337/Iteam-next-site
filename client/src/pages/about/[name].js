@@ -55,7 +55,7 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export const getStaticPaths = async () => {
-  const query = groq`*[_type == 'casePost' && defined(slug.current)][].slug.current`
+  const query = groq`*[_type == 'coworker' && defined(slug.current)][].slug.current`
   const pages = await getClient().fetch(query)
   return {
     paths: pages.map((slug) => `/about/${slug}`),
