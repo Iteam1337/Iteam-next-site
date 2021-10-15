@@ -33,7 +33,7 @@ const CoworkerPage = ({ data, preview = false }) => {
 }
 
 const coworkerQuery = groq`
-*[_type == 'coworker' && slug.current == $slug][0] {
+*[_type == 'coworker' && slug.current == $slug] {
   ...,
  }
 `
