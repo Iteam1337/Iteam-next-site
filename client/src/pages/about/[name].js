@@ -3,7 +3,6 @@ import PageWrapper from '../../components/PageWrapper'
 import Medarbetare from '../../sections/about/Medarbetare'
 import Hero from '../../sections/about/CoworkerHero'
 import { groq } from 'next-sanity'
-import client from '../../sanity-client'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
@@ -32,12 +31,6 @@ const CoworkerPage = ({ data, preview = false }) => {
     </PageWrapper>
   )
 }
-
-const coworkersQuery = groq`
-  *[_type == 'coworker'] {
-    ...,
-   }
-`
 
 const coworkerQuery = groq`
 *[_type == 'coworker' && slug.current == $slug][0] {
