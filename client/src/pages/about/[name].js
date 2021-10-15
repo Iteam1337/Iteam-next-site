@@ -1,15 +1,15 @@
-import React from "react"
-import PageWrapper from "../../components/PageWrapper"
-import Medarbetare from "../../sections/about/Medarbetare"
-import Hero from "../../sections/about/CoworkerHero"
-import { groq } from "next-sanity"
-import client from "../../sanity-client"
-import { usePreviewSubscription } from "../../lib/sanity"
-import { getClient } from "../../lib/sanity.server"
-import { filterDataToSingleItem } from "../../utils/helpers"
+import React from 'react'
+import PageWrapper from '../../components/PageWrapper'
+import Medarbetare from '../../sections/about/Medarbetare'
+import Hero from '../../sections/about/CoworkerHero'
+import { groq } from 'next-sanity'
+import client from '../../sanity-client'
+import { usePreviewSubscription } from '../../lib/sanity'
+import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
+import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const CoworkerPage = ({ data, preview = false }) => {
-
   const { data: previewData } = usePreviewSubscription(data?.coworkerQuery, {
     params: data?.queryParams ?? {},
     initialData: data?.post,
@@ -20,6 +20,7 @@ const CoworkerPage = ({ data, preview = false }) => {
 
   return (
     <PageWrapper footerDark>
+      {preview && <ExitPreviewButton />}
       {post && (
         <>
           <Hero title={fullname} heroImage={heroImage}>
@@ -61,11 +62,12 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export const getStaticPaths = async () => {
-  const pages = (await client.fetch(coworkersQuery)) || []
-  const paths = pages.map((page) => ({
-    params: { name: page.slug.current },
-  }))
-  return { paths, fallback: false }
+  const query = groq`*[_type == 'casePost' && defined(slug.current)][].slug.current`
+  const pages = await getClient().fetch(query)
+  return {
+    paths: pages.map((slug) => `/about/${slug}`),
+    fallback: true,
+  }
 }
 
 export default CoworkerPage
