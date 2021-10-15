@@ -64,6 +64,13 @@ export default {
         collapsible: true,
       },
     },
+    {
+      type: 'metaTags',
+      name: 'metaTags',
+      options: {
+        collapsible: true,
+      },
+    },
   ],
 
   preview: {
@@ -72,13 +79,13 @@ export default {
       subtitle: 'hero.subtitle',
     },
     prepare({ title = 'Iteam Scale-up', name = 'scaleup' }) {
-      const path = `/${name}`;
+      const path = `/${name}`
       return {
         path,
         name,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}

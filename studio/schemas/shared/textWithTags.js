@@ -10,8 +10,7 @@ export default {
       type: 'string',
       name: 'title',
       title: 'Rubrik',
-      validation: (Rules) =>
-        Rules.required().error('Ange en rubrik.'),
+      validation: (Rules) => Rules.required().error('Ange en rubrik.'),
     },
     {
       type: 'blockText',
@@ -22,11 +21,12 @@ export default {
       name: 'keywords',
       type: 'array',
       title: 'Keywords',
-      description: 'Lägg till flera olika områden som vi jobbar inom',
+      description:
+        'Lägg till flera olika områden som vi jobbar inom. Klicka enter när du lagt till en tagg och vill lägga till en ny.',
       of: [{ type: 'string' }],
       options: {
         layout: 'tags',
       },
     },
   ],
-};
+}
