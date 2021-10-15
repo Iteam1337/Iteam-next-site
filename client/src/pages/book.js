@@ -35,7 +35,8 @@ const Book = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper footerDark>
-        <Hero content={page.hero} />
+        {preview && <ExitPreviewButton />}
+        <Hero content={page?.hero && page.hero} />
         <Section>
           <Container>
             <Row className="align-items-center">
@@ -51,7 +52,7 @@ const Book = ({ data, preview = false }) => {
                   <input type="hidden" name="form-name" value="contact1" />
 
                   <Box mb={5}>
-                    <Title>{page.title}</Title>
+                    <Title>{page?.title && page.title}</Title>
                   </Box>
                   <div
                     className="meetings-iframe-container"
@@ -65,50 +66,53 @@ const Book = ({ data, preview = false }) => {
               >
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">
-                    {page.call.title}
+                    {page?.call?.title && page.call.title}
                   </Title>
-                  {page.call.contactPersons.map((contact, index) => (
-                    <Title variant="card" fontSize="18px" key={index}>
-                      {contact.fullname}, {contact.role}
-                      <Text>
-                        <Anchor
-                          color="info"
-                          href={`callto:${contact.phoneNumber}`}
-                        >
-                          {formatPhoneNumber(contact.phoneNumber)}
-                        </Anchor>
-                      </Text>
-                    </Title>
-                  ))}
+                  {page?.call?.contactPersons &&
+                    page.call.contactPersons.map((contact, index) => (
+                      <Title variant="card" fontSize="18px" key={index}>
+                        {contact.fullname}, {contact.role}
+                        <Text>
+                          <Anchor
+                            color="info"
+                            href={`callto:${contact.phoneNumber}`}
+                          >
+                            {formatPhoneNumber(contact.phoneNumber)}
+                          </Anchor>
+                        </Text>
+                      </Title>
+                    ))}
                   <Anchor
                     color="info"
                     href={`${buildInternalUrl(
-                      page.call.cta.reference
+                      page?.call?.cta?.reference && page.call.cta.reference
                     )}#medarbetare`}
                   >
-                    {page.call.cta.title}
+                    {page?.call?.cta?.title && page.call.cta.title}
                   </Anchor>
                 </Box>
                 <Box className="mb-5">
                   <Title variant="card" fontSize="24px">
-                    {page.mail.title}
+                    {page?.mail?.title && page.mail.title}
                   </Title>
-                  {page.mail.emails.map((email, index) => (
-                    <Text key={index}>
-                      <Anchor color="info" href={`mailto:${email}`}>
-                        {email}
-                      </Anchor>
-                    </Text>
-                  ))}
+                  {page?.mail?.emails &&
+                    page.mail.emails.map((email, index) => (
+                      <Text key={index}>
+                        <Anchor color="info" href={`mailto:${email}`}>
+                          {email}
+                        </Anchor>
+                      </Text>
+                    ))}
                 </Box>
-                {page.visit.address.map((item, index) => (
-                  <Box className="mb-5" key={index}>
-                    <Title variant="card" fontSize="24px">
-                      {item.title}
-                    </Title>
-                    <BlockContent blocks={item.blockText.blockText} />
-                  </Box>
-                ))}
+                {page?.visit?.address &&
+                  page.visit.address.map((item, index) => (
+                    <Box className="mb-5" key={index}>
+                      <Title variant="card" fontSize="24px">
+                        {item.title}
+                      </Title>
+                      <BlockContent blocks={item.blockText.blockText} />
+                    </Box>
+                  ))}
               </Col>
             </Row>
           </Container>
@@ -119,7 +123,7 @@ const Book = ({ data, preview = false }) => {
 }
 
 const bookPageQuery = groq`
-*[_id == 'bookPage'] {
+*[_type == 'bookPage'] {
   ...,
   blockText{
     blockText []{
@@ -158,7 +162,7 @@ const bookPageQuery = groq`
 
 export async function getStaticProps({ preview = false }) {
   const bookPage = await getClient(preview).fetch(bookPageQuery)
-
+  if (!bookPage) return { notFound: true }
   return {
     props: {
       preview,
