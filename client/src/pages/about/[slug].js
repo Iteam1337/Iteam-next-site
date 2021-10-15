@@ -39,7 +39,7 @@ const coworkerQuery = groq`
 `
 
 export async function getStaticProps({ params, preview = false }) {
-  const queryParams = { slug: params.name }
+  const queryParams = { slug: params.slug }
   const data = await getClient(preview).fetch(coworkerQuery, queryParams)
 
   if (!data) return { notFound: true }
