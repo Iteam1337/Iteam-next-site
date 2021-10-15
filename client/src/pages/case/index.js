@@ -36,7 +36,7 @@ const CaseStudy = ({ data, preview = false }) => {
                 <Title variant="hero">
                   {casePage?.title && casePage.title}
                 </Title>
-                <Text>{casePage?.subTitle && casePage.subTitle}</Text>
+                <Text>{casePage?.subtitle && casePage.subtitle}</Text>
               </Col>
             </Row>
           </Container>
@@ -50,8 +50,7 @@ const CaseStudy = ({ data, preview = false }) => {
 }
 
 const casePageQuery = groq`
-  *[_id == 'casePage']
-  {
+  *[_type == 'casePage'] {
   ...,
   titleWithCTA {
     ...,
@@ -74,15 +73,15 @@ const casePostsQuery = groq`
   }`
 
 export async function getStaticProps({ preview = false }) {
-  const page = await getClient(preview).fetch(casePageQuery)
   const casePosts = await getClient(preview).fetch(casePostsQuery)
+  const page = await getClient(preview).fetch(casePageQuery)
 
   if (!casePosts) return { notFound: true }
 
   return {
     props: {
       preview,
-      data: { page, casePosts, casePageQuery },
+      data: { casePosts, page, casePageQuery },
     },
   }
 }
