@@ -100,6 +100,15 @@ export default () =>
                             .schemaType('scaleUpPage')
                             .documentId('scaleUpPage')
                             .title('Iteam Scale-up')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
                         ),
                       // S.divider(),
                       // S.listItem()

@@ -5,7 +5,6 @@ import Content1 from '../sections/scaleup/Content1'
 import Role from '../sections/scaleup/Role'
 import Content2 from '../sections/scaleup/Content2'
 import DesignatedTeam from '../sections/scaleup/DesignatedTeam'
-// import Testimonial from "../sections/scaleup/Testimonial";
 import ModalVideo from '../components/ModalVideo'
 import Testimonial from '../sections/startpage/Testimonial'
 import Pricing from '../sections/startpage/Pricing'
