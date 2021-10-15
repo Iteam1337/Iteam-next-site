@@ -13,6 +13,7 @@ import {
 } from '../utils/helpers'
 import { groq } from 'next-sanity'
 import BlockContent from '../components/BlockContent'
+import ExitPreviewButton from '../components/ExitPreviewButton'
 
 const FormStyled = styled.form``
 
