@@ -169,7 +169,6 @@ export async function getStaticProps({ params, preview = false }) {
   const casePage = await getClient(preview).fetch(casePageQuery)
 
   if (!data) return { notFound: true }
-  // if (!data.post) return { notFound: true }
 
   const post = filterDataToSingleItem(data, preview)
   const page = filterDataToSingleItem(casePage, preview)
@@ -189,9 +188,11 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export const getStaticPaths = async () => {
-  const pages = await getClient().fetch(casePostsQuery)
+  const query = groq`*[_type == 'casePost' && defined(slug.current)][].slug.current
+  `
+  const pages = await getClient().fetch(query)
   return {
-    paths: pages.map((slug) => `/case/${slug.current}`),
+    paths: pages.map((slug) => `/case/${slug}`),
     fallback: true,
   }
 }
