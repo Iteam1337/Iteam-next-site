@@ -15,17 +15,19 @@ const CoworkerPage = ({ data, preview = false }) => {
     enabled: preview,
   })
   const post = filterDataToSingleItem(previewData, preview)
-  const { fullname, heroImage, role, ...rest } = post
 
   return (
     <PageWrapper footerDark>
       {preview && <ExitPreviewButton />}
       {post && (
         <>
-          <Hero title={fullname} heroImage={heroImage}>
-            {role}
+          <Hero
+            title={post?.fullname ?? post.fullname}
+            heroImage={post?.heroImage ?? post.heroImage}
+          >
+            {post?.role ?? post.role}
           </Hero>
-          <Medarbetare info={rest} fullname={fullname} />
+          <Medarbetare info={post ?? post} />
         </>
       )}
     </PageWrapper>
