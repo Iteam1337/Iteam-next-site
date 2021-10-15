@@ -74,12 +74,11 @@ const casePostsQuery = groq`
   }`
 
 export async function getStaticProps({ preview = false }) {
-  const casePage = await getClient(preview).fetch(casePageQuery)
+  const page = await getClient(preview).fetch(casePageQuery)
   const casePosts = await getClient(preview).fetch(casePostsQuery)
 
-  if (!casePage) return { notFound: true }
+  if (!casePosts) return { notFound: true }
 
-  const page = filterDataToSingleItem(casePage, preview)
   return {
     props: {
       preview,
