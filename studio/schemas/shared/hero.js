@@ -36,13 +36,5 @@ export default {
       validation: (Rules) =>
         Rules.required().error('Välj vad för typ av hero du vill ha.'),
     },
-    {
-      name: 'lightGradient',
-      title: 'Ljus gradient och svart text över hero bild.',
-      type: 'boolean',
-      initialValue: true,
-      description:
-        'Välj här om du vill ha en ljus eller mörk gradient över hero bilden. Om du väljer ljus kommer texten att bli mörk och virse versa. Ljus är default.',
-    },
   ],
 }

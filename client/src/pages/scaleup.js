@@ -20,11 +20,12 @@ import { urlFor } from '../utils/helpers'
 
 const ScaleUp = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.scaleUpPageQuery, {
-    initialData: data?.newsPage,
+    initialData: data?.scaleUp,
     enabled: preview,
   })
 
   const scaleUpPage = filterDataToSingleItem(previewData, preview)
+
   return (
     <>
       <PageWrapper>
@@ -99,7 +100,7 @@ const ScaleUp = ({ data, preview = false }) => {
 }
 
 const scaleUpPageQuery = groq`
-  *[_type == 'scaleUpPage' && !(_id in path('drafts.**'))][0] 
+  *[_type == 'scaleUpPage']
   {
     ...,
     sectionWithImageAndCtaFirst{
