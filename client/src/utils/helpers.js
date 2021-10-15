@@ -1,4 +1,4 @@
-import { createImageUrlBuilder } from 'next-sanity'
+import imageUrlBuilder from '@sanity/image-url'
 import client from '../sanity-client'
 const PNF = require('google-libphonenumber').PhoneNumberFormat
 const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance()
@@ -13,7 +13,7 @@ export const hexToRGBA = (hex) => {
 }
 
 export const urlFor = (source) => {
-  return createImageUrlBuilder(client).image(source)
+  return imageUrlBuilder(client).image(source).url()
 }
 
 export const buildInternalUrl = (reference) => {
