@@ -80,7 +80,7 @@ const BlogDetails = ({ data, preview = false }) => {
                     {post?.tags &&
                       post.tags?.map((tag) => <Link href="/">{tag}</Link>)}
                   </Text>
-                  <Text>{post.author && 'av ' + post.author}</Text>
+                  <Text>{post?.author && 'av ' + post.author}</Text>
                 </Box>
               </Col>
             </Row>
