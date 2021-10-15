@@ -2,9 +2,7 @@ import React from 'react'
 import PageWrapper from '../components/PageWrapper'
 import Feature1 from '../sections/scaleup/Feature1'
 import Content1 from '../sections/scaleup/Content1'
-import UX from '../sections/scaleup/UX'
-import Tech from '../sections/scaleup/Tech'
-import AgileCoach from '../sections/scaleup/AgileCoach'
+import Role from '../sections/scaleup/Role'
 import Content2 from '../sections/scaleup/Content2'
 import DesignatedTeam from '../sections/scaleup/DesignatedTeam'
 // import Testimonial from "../sections/scaleup/Testimonial";
@@ -12,7 +10,6 @@ import ModalVideo from '../components/ModalVideo'
 import Testimonial from '../sections/startpage/Testimonial'
 import Pricing from '../sections/startpage/Pricing'
 import CTA from '../sections/scaleup/CTA'
-import MetaTags from '../components/MetaTags/MetaTags'
 import { groq } from 'next-sanity'
 import { getClient } from '../lib/sanity.server'
 import { filterDataToSingleItem } from '../utils/helpers'
@@ -79,12 +76,20 @@ const ScaleUp = ({ data, preview = false }) => {
         {scaleUpPage?.sectionWithCtaAndTextGrid && (
           <Feature1 content={scaleUpPage.sectionWithCtaAndTextGrid} />
         )}
-        <AgileCoach />
-        <DesignatedTeam />
-        <Tech />
+        {scaleUpPage?.textWithTagsFirst && (
+          <Role content={scaleUpPage.textWithTagsFirst} />
+        )}
+        {scaleUpPage?.sectionWithImage && (
+          <DesignatedTeam content={scaleUpPage.sectionWithImage} />
+        )}
+        {scaleUpPage?.textWithTagsSecond && (
+          <Role content={scaleUpPage.textWithTagsSecond} />
+        )}
         <ModalVideo url="https://www.youtube.com/watch?v=Iz-XLYvzXyU"></ModalVideo>
         <Content2 />
-        <UX />
+        {scaleUpPage?.textWithTagsThirs && (
+          <Role content={scaleUpPage.textWithTagsThirs} />
+        )}
         <Testimonial />
         <Pricing />
         <CTA />

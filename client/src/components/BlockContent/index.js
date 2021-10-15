@@ -7,10 +7,9 @@ import Img from 'next/image'
 import { Text } from '../Core'
 import { buildInternalUrl } from '../../utils/helpers'
 
-const serializers = (withAnchor, variant, color) => ({
+const serializers = (withAnchor, variant, color, textAlign) => ({
   types: {
     block: ({ node, children }) => {
-      console.log('color', color)
       switch (node.style) {
         case 'h1':
           return <Typography.H1>{children}</Typography.H1>
@@ -42,6 +41,7 @@ const serializers = (withAnchor, variant, color) => ({
               size="subtitle"
               color={color}
               variant="thin"
+              textAlign={textAlign}
             >
               {children}
             </Typography.Paragraph>
@@ -109,11 +109,12 @@ const BlockContent = ({
   withAnchor = false,
   variant = 'normal',
   color = 'dark',
+  textAlign = 'left',
 }) => {
   return (
     <BaseBlockContent
       blocks={blocks}
-      serializers={serializers(withAnchor, variant, color)}
+      serializers={serializers(withAnchor, variant, color, textAlign)}
     />
   )
 }

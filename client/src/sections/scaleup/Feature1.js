@@ -64,7 +64,6 @@ const Feature = ({ content }) => {
               <div>
                 <Row className="justify-content-center">
                   {textGrid.texts.map((block, i) => {
-                    console.log('block', block)
                     return (
                       <Col
                         md="12"
