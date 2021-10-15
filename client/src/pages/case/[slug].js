@@ -12,6 +12,7 @@ import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
+import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const BlogDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
@@ -69,6 +70,7 @@ const BlogDetails = ({ data, preview = false }) => {
         <Container>
           <Row className="justify-content-center text-center">
             <Col lg="8">
+              {preview && <ExitPreviewButton />}
               <Box className="text-center" mb={4}>
                 {post?.company && post.company}
               </Box>
@@ -101,13 +103,14 @@ const BlogDetails = ({ data, preview = false }) => {
 }
 
 const casePostsQuery = groq`
-*[_type == 'casePost' && !(_id in path('drafts.**'))] {
-    slug,
-    preview
-}`
+*[_type == 'casePost' && defined(slug.current) && !(_id in path('drafts.**'))][] {
+  slug,
+  preview
+}
+`
 
 const casePageQuery = groq`
-*[_type == 'casePage' && !(_id in path('drafts.**'))][1]{
+*[_id == 'casePage'] {
 titleWithCTA {
     ...,
     blockText{
@@ -139,24 +142,36 @@ titleWithCTA {
 }`
 
 const casePostQuery = groq`
-*[_type == "casePost" && slug.current == $slug][0] {
-    blockText,
-    company,
-    title,
-    subtitle, 
-    metaTags, 
-    preview
+*[_type == "casePost" && slug.current == $slug] {
+  ...,
+  blockText{
+    blockText []{
+     ...,
+     markDefs[]{
+       ...,
+       _type == "internalLink" => {
+         reference-> {
+           _type,
+           slug {
+             current
+           }
+         }
+       }
+     }
+   }
+  },
 }`
 
 export async function getStaticProps({ params, preview = false }) {
   const queryParams = { slug: params.slug }
   const data = await getClient(preview).fetch(casePostQuery, queryParams)
   const posts = await getClient(preview).fetch(casePostsQuery)
-  const page = await getClient(preview).fetch(casePageQuery)
+  const casePage = await getClient(preview).fetch(casePageQuery)
 
   if (!data) return { notFound: true }
 
   const post = filterDataToSingleItem(data, preview)
+  const page = filterDataToSingleItem(casePage, preview)
 
   return {
     props: {

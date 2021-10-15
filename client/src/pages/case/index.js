@@ -9,10 +9,11 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const CaseStudy = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePageQuery, {
-    initialData: data?.casePage,
+    initialData: data?.page,
     enabled: preview,
   })
 
@@ -29,6 +30,7 @@ const CaseStudy = ({ data, preview = false }) => {
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
+            {preview && <ExitPreviewButton />}
             <Row className="justify-content-center text-center">
               <Col lg="6">
                 <Title variant="hero">
@@ -39,7 +41,7 @@ const CaseStudy = ({ data, preview = false }) => {
             </Row>
           </Container>
         </Section>
-        <CaseList posts={data?.casePosts && data.casePosts} />
+        <CaseList posts={data?.casePosts && data?.casePosts} />
         <CaseList2 sectionCards={sectionCards && sectionCards} />
         <CTA text={casePage?.titleWithCTA && casePage.titleWithCTA} />
       </PageWrapper>
@@ -48,7 +50,7 @@ const CaseStudy = ({ data, preview = false }) => {
 }
 
 const casePageQuery = groq`
-  *[_type == 'casePage' && !(_id in path('drafts.**'))][1] 
+  *[_id == 'casePage']
   {
   ...,
   titleWithCTA {
@@ -68,7 +70,7 @@ const casePageQuery = groq`
 const casePostsQuery = groq`
   *[_type == 'casePost'&& !(_id in path('drafts.**'))]
   {
-...,
+    ...,
   }`
 
 export async function getStaticProps({ preview = false }) {
@@ -77,10 +79,11 @@ export async function getStaticProps({ preview = false }) {
 
   if (!casePage) return { notFound: true }
 
+  const page = filterDataToSingleItem(casePage, preview)
   return {
     props: {
       preview,
-      data: { casePage, casePosts, casePageQuery },
+      data: { page, casePosts, casePageQuery },
     },
   }
 }
