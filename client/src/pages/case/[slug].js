@@ -169,7 +169,7 @@ export async function getStaticProps({ params, preview = false }) {
   const casePage = await getClient(preview).fetch(casePageQuery)
 
   if (!data) return { notFound: true }
-  if (!data.post) return { notFound: true }
+  // if (!data.post) return { notFound: true }
 
   const post = filterDataToSingleItem(data, preview)
   const page = filterDataToSingleItem(casePage, preview)
