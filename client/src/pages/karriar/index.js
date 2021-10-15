@@ -1,13 +1,14 @@
-import React from "react"
-import PageWrapper from "../../components/PageWrapper"
+import React from 'react'
+import PageWrapper from '../../components/PageWrapper'
 import Hero from '../../sections/common/Hero'
-import Content from "../../sections/karriar/Content"
-import Feature from "../../sections/karriar/Feature"
-import Roles from "../../sections/karriar/Roles"
-import { groq } from "next-sanity"
+import Content from '../../sections/karriar/Content'
+import Feature from '../../sections/karriar/Feature'
+import Roles from '../../sections/karriar/Roles'
+import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const Career = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
@@ -16,14 +17,23 @@ const Career = ({ data, preview = false }) => {
   })
 
   const post = filterDataToSingleItem(previewData, preview)
-  const { hero, openings, section, textGrid, coworkerCarouselOne, coworkerCarouselTwo } = post
+  const {
+    hero,
+    openings,
+    section,
+    textGrid,
+    coworkerCarouselOne,
+    coworkerCarouselTwo,
+  } = post
 
   const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
-  const carousel = coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  const carousel =
+    coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
 
   return (
     <>
       <PageWrapper headerDark footerDark>
+        {preview && <ExitPreviewButton />}
         <Hero content={hero} />
         <Content content={section} carousel={carousel} />
         <Feature content={textGrid} />
@@ -89,8 +99,8 @@ export async function getStaticProps({ preview = false }) {
   return {
     props: {
       preview,
-      data: { openPositions, careerPage, careerPageQuery }
-    }
+      data: { openPositions, careerPage, careerPageQuery },
+    },
   }
 }
 
