@@ -1,4 +1,4 @@
-const remoteUrl = 'https://iteam-next-site.vercel.app'
+const remoteUrl = 'https://iteam.se'
 const localUrl = 'http://localhost:3000'
 const previewSecret = '1iyD685T7kOS'
 
@@ -10,8 +10,6 @@ export default function resolveProductionUrl(doc) {
   let route = '/'
   switch (doc._type) {
     case 'newsPost':
-      route = 'aktuellt'
-      break
     case 'newsPage':
       route = 'aktuellt'
       break
@@ -19,14 +17,10 @@ export default function resolveProductionUrl(doc) {
       route = 'about'
       break
     case 'casePost':
-      route = 'case'
-      break
     case 'casePage':
       route = 'case'
       break
     case 'openPositions':
-      route = 'karriar'
-      break
     case 'careerPage':
       route = `karriar`
       break
