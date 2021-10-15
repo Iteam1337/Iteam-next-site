@@ -73,8 +73,8 @@ const casePostsQuery = groq`
   }`
 
 export async function getStaticProps({ preview = false }) {
-  const casePosts = await getClient(preview).fetch(casePostsQuery)
   const page = await getClient(preview).fetch(casePageQuery)
+  const casePosts = await getClient(preview).fetch(casePostsQuery)
 
   if (!casePosts) return { notFound: true }
 
