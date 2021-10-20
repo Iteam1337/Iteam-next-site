@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-
 import { Title, Button, Section, Box, Text } from '../../components/Core'
 import BlockContent from '../../components/BlockContent'
 
