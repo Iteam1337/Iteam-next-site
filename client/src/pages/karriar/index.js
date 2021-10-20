@@ -7,28 +7,17 @@ import Roles from '../../sections/karriar/Roles'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
+import { filterDataToSingleItem, shuffleArray } from '../../utils/helpers'
 import ExitPreviewButton from '../../components/ExitPreviewButton'
 
-const Career = ({ data, preview = false }) => {
+const Career = ({ data, preview = false, carousel }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
     initialData: data?.careerPage,
     enabled: preview,
   })
 
   const post = filterDataToSingleItem(previewData, preview)
-  const {
-    hero,
-    openings,
-    section,
-    textGrid,
-    coworkerCarouselOne,
-    coworkerCarouselTwo,
-  } = post
-
-  const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
-  const carousel =
-    coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  const { hero, openings, section, textGrid } = post
 
   return (
     <>
@@ -96,10 +85,18 @@ export async function getStaticProps({ preview = false }) {
 
   if (!openPositions) return { notFound: true }
 
+  const { coworkerCarouselOne, coworkerCarouselTwo } = filterDataToSingleItem(
+    careerPage,
+    preview
+  )
+  const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
   return {
     props: {
       preview,
       data: { openPositions, careerPage, careerPageQuery },
+      carousel: shuffleArray(
+        coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+      ),
     },
   }
 }
