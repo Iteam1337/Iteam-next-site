@@ -29,75 +29,73 @@ const ScaleUp = ({ data, preview = false }) => {
   )
 
   return (
-    <>
-      <PageWrapper>
-        {preview && <ExitPreviewButton />}
-        {scaleUpPage && (
-          <NextSeo
-            title={scaleUpPage?.metaTags?.title ?? scaleUpPage.hero.title}
-            titleTemplate="%s | Aktuellt på Iteam"
-            description={
-              scaleUpPage?.metaTags?.description ?? scaleUpPage?.hero?.subtitle
-            }
-            image={urlFor(
+    <PageWrapper>
+      {preview && <ExitPreviewButton />}
+      {scaleUpPage && (
+        <NextSeo
+          title={scaleUpPage?.metaTags?.title ?? scaleUpPage.hero.title}
+          titleTemplate="%s | Aktuellt på Iteam"
+          description={
+            scaleUpPage?.metaTags?.description ?? scaleUpPage?.hero?.subtitle
+          }
+          image={urlFor(
+            scaleUpPage?.metaTags?.imageWithAlt?.asset._ref ??
+              scaleUpPage?.hero?.mediaType?.image.asset._ref
+          )}
+          openGraph={{
+            title: scaleUpPage?.metaTags?.title ?? scaleUpPage.title,
+            description:
+              scaleUpPage?.metaTags?.description ??
+              scaleUpPage?.hero?.description,
+            images: [
+              {
+                url: urlFor(
+                  scaleUpPage?.metaTags?.imageWithAlt?.asset._ref ??
+                    scaleUpPage?.hero?.mediaType?.image.asset._ref
+                ),
+              },
+            ],
+            site_name: 'Iteam',
+          }}
+          twitter={{
+            title: scaleUpPage?.metaTags?.title ?? scaleUpPage.title,
+            description:
+              scaleUpPage?.metaTags?.description ??
+              scaleUpPage?.hero?.description,
+            image: urlFor(
               scaleUpPage?.metaTags?.imageWithAlt?.asset._ref ??
                 scaleUpPage?.hero?.mediaType?.image.asset._ref
-            )}
-            openGraph={{
-              title: scaleUpPage?.metaTags?.title ?? scaleUpPage.title,
-              description:
-                scaleUpPage?.metaTags?.description ??
-                scaleUpPage?.hero?.description,
-              images: [
-                {
-                  url: urlFor(
-                    scaleUpPage?.metaTags?.imageWithAlt?.asset._ref ??
-                      scaleUpPage?.hero?.mediaType?.image.asset._ref
-                  ),
-                },
-              ],
-              site_name: 'Iteam',
-            }}
-            twitter={{
-              title: scaleUpPage?.metaTags?.title ?? scaleUpPage.title,
-              description:
-                scaleUpPage?.metaTags?.description ??
-                scaleUpPage?.hero?.description,
-              image: urlFor(
-                scaleUpPage?.metaTags?.imageWithAlt?.asset._ref ??
-                  scaleUpPage?.hero?.mediaType?.image.asset._ref
-              ),
-              handle: '@iteam1337',
-              site: '@iteam1337',
-              cardType: 'summary_large_image',
-            }}
-          />
-        )}
-        {scaleUpPage?.hero && <Hero content={scaleUpPage.hero} />}
-        {scaleUpPage?.sectionWithImageAndButton && (
-          <Content1 content={scaleUpPage.sectionWithImageAndButton} />
-        )}
-        {scaleUpPage?.sectionWithButtonAndTextGrid && (
-          <Feature1 content={scaleUpPage.sectionWithButtonAndTextGrid} />
-        )}
-        {scaleUpPage?.textWithTagsFirst && (
-          <Role content={scaleUpPage.textWithTagsFirst} />
-        )}
-        {scaleUpPage?.sectionWithImage && (
-          <DesignatedTeam content={scaleUpPage.sectionWithImage} />
-        )}
-        {scaleUpPage?.textWithTagsSecond && (
-          <Role content={scaleUpPage.textWithTagsSecond} />
-        )}
-        {casePost && <Content2 content={casePost} />}
-        {scaleUpPage?.textWithTagsThirs && (
-          <Role content={scaleUpPage.textWithTagsThirs} />
-        )}
-        <Testimonial />
-        <Pricing />
-        <CTA />
-      </PageWrapper>
-    </>
+            ),
+            handle: '@iteam1337',
+            site: '@iteam1337',
+            cardType: 'summary_large_image',
+          }}
+        />
+      )}
+      {scaleUpPage?.hero && <Hero content={scaleUpPage.hero} />}
+      {scaleUpPage?.sectionWithImageAndButton && (
+        <Content1 content={scaleUpPage.sectionWithImageAndButton} />
+      )}
+      {scaleUpPage?.sectionWithButtonAndTextGrid && (
+        <Feature1 content={scaleUpPage.sectionWithButtonAndTextGrid} />
+      )}
+      {scaleUpPage?.textWithTagsFirst && (
+        <Role content={scaleUpPage.textWithTagsFirst} />
+      )}
+      {scaleUpPage?.sectionWithImage && (
+        <DesignatedTeam content={scaleUpPage.sectionWithImage} />
+      )}
+      {scaleUpPage?.textWithTagsSecond && (
+        <Role content={scaleUpPage.textWithTagsSecond} />
+      )}
+      {casePost && <Content2 content={casePost} />}
+      {scaleUpPage?.textWithTagsThirs && (
+        <Role content={scaleUpPage.textWithTagsThirs} />
+      )}
+      <Testimonial />
+      <Pricing />
+      <CTA />
+    </PageWrapper>
   )
 }
 
