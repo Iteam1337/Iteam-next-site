@@ -12,52 +12,50 @@ const ImageRight = styled(Box)`
 `
 const Content2 = ({ content }) => {
   return (
-    <>
-      <Section id="design_sprint">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg="6" md="10" className="order-lg-2 mb-4">
-              <div className="position-relative text-lg-right">
-                <ImageRight
-                  className=""
-                  data-aos="fade-down"
-                  data-aos-duration="750"
-                  data-aos-once="true"
-                >
-                  <img
-                    src={urlFor(content.preview.imageCard.image.asset._ref)}
-                    alt={content.preview.imageCard.image.alt}
-                    className="img-fluid"
-                  />
-                </ImageRight>
-              </div>
-            </Col>
-            <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
-              <div
-                data-aos="fade-right"
-                data-aos-duration="150"
+    <Section id="design_sprint">
+      <Container>
+        <Row className="align-items-center">
+          <Col lg="6" md="10" className="order-lg-2 mb-4">
+            <div className="position-relative text-lg-right">
+              <ImageRight
+                className=""
+                data-aos="fade-down"
+                data-aos-duration="750"
                 data-aos-once="true"
               >
-                <div>
-                  <Title>{content.title}</Title>
-                  <Text mb={4}>{content.preview.imageCard.description}</Text>
+                <img
+                  src={urlFor(content.preview.imageCard.image.asset._ref)}
+                  alt={content.preview.imageCard.image.alt}
+                  className="img-fluid"
+                />
+              </ImageRight>
+            </div>
+          </Col>
+          <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="150"
+              data-aos-once="true"
+            >
+              <div>
+                <Title>{content.title}</Title>
+                <Text mb={4}>{content.preview.imageCard.description}</Text>
 
-                  <Box>
-                    <Button
-                      onClick={() =>
-                        (window.location.href = `/case/${content.slug.current}`)
-                      }
-                    >
-                      Läs mer om {content.company}
-                    </Button>
-                  </Box>
-                </div>
+                <Box>
+                  <Button
+                    onClick={() =>
+                      (window.location.href = `/case/${content.slug.current}`)
+                    }
+                  >
+                    Läs mer om {content.company}
+                  </Button>
+                </Box>
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </Section>
-    </>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </Section>
   )
 }
 

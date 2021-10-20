@@ -35,57 +35,55 @@ const Feature = ({ content }) => {
   const { section, textGrid, button } = content
 
   return (
-    <>
-      <Section bg="ash">
-        <Container>
-          <Row className="align-items-center">
-            <Col
-              md="8"
-              lg="6"
-              className="offset-lg-1 pl-lg-5 order-lg-2"
-              data-aos="fade-left"
-              data-aos-duration="600"
-              data-aos-once="true"
-              data-aos-delay="500"
-            >
-              <Box>
-                <Title color="light">{section.title}</Title>
-                <BlockContent
-                  color="light"
-                  blocks={section.blockText.blockText}
-                />
-                <a href="#book">
-                  <Button mt={4}>{button}</Button>
-                </a>
-              </Box>
-            </Col>
-            <Col md="8" lg="5" className="order-lg-1 mt-5 mt-lg-0">
-              <div>
-                <Row className="justify-content-center">
-                  {textGrid.texts.map((block, i) => {
-                    return (
-                      <Col
-                        md="12"
-                        className={i != 0 && 'mt-4'}
-                        data-aos="fade-right"
-                        data-aos-duration="600"
-                        data-aos-once="true"
-                        data-aos-delay="50"
-                        key={i}
-                      >
-                        <FeatureCard color="primary" title={block.title}>
-                          {block.text}
-                        </FeatureCard>
-                      </Col>
-                    )
-                  })}
-                </Row>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </Section>
-    </>
+    <Section bg="ash">
+      <Container>
+        <Row className="align-items-center">
+          <Col
+            md="8"
+            lg="6"
+            className="offset-lg-1 pl-lg-5 order-lg-2"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-once="true"
+            data-aos-delay="500"
+          >
+            <Box>
+              <Title color="light">{section.title}</Title>
+              <BlockContent
+                color="light"
+                blocks={section.blockText.blockText}
+              />
+              <a href="#book">
+                <Button mt={4}>{button}</Button>
+              </a>
+            </Box>
+          </Col>
+          <Col md="8" lg="5" className="order-lg-1 mt-5 mt-lg-0">
+            <div>
+              <Row className="justify-content-center">
+                {textGrid.texts.map((block, i) => {
+                  return (
+                    <Col
+                      md="12"
+                      className={i != 0 && 'mt-4'}
+                      data-aos="fade-right"
+                      data-aos-duration="600"
+                      data-aos-once="true"
+                      data-aos-delay="50"
+                      key={i}
+                    >
+                      <FeatureCard color="primary" title={block.title}>
+                        {block.text}
+                      </FeatureCard>
+                    </Col>
+                  )
+                })}
+              </Row>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </Section>
   )
 }
 
