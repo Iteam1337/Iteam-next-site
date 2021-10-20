@@ -27,10 +27,10 @@ const CaseStudy = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper footerDark>
+        {preview && <ExitPreviewButton />}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
-            {preview && <ExitPreviewButton />}
             <Row className="justify-content-center text-center">
               <Col lg="6">
                 <Title variant="hero">

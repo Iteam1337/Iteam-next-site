@@ -65,12 +65,12 @@ const BlogDetails = ({ data, preview = false }) => {
           }}
         />
       )}
+      {preview && <ExitPreviewButton />}
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>
           <Row className="justify-content-center text-center">
             <Col lg="8">
-              {preview && <ExitPreviewButton />}
               <Box className="text-center" mb={4}>
                 {post?.company && post.company}
               </Box>
