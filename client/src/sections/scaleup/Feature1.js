@@ -72,6 +72,7 @@ const Feature = ({ content }) => {
                         data-aos-duration="600"
                         data-aos-once="true"
                         data-aos-delay="50"
+                        key={i}
                       >
                         <FeatureCard color="primary" title={block.title}>
                           {block.text}
