@@ -1,7 +1,7 @@
-import React, { Fragment } from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import { Title, Section, Text, Anchor } from "../../components/Core"
-import { formatPhoneNumber } from "../../utils/helpers"
+import React, { Fragment } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Title, Section, Text, Anchor } from '../../components/Core'
+import { formatPhoneNumber } from '../../utils/helpers'
 
 const InfoSection = ({ text, title }) => (
   <Row className="py-5">
@@ -14,7 +14,7 @@ const InfoSection = ({ text, title }) => (
   </Row>
 )
 
-const Medarbetare = ({ info, fullname }) => (
+const Medarbetare = ({ info }) => (
   <Container>
     <Section>
       <Row className="py-5">
@@ -39,22 +39,26 @@ const Medarbetare = ({ info, fullname }) => (
               Object.entries(info.socialMedia).map(([key, value], index) => {
                 return (
                   <Fragment key={index}>
-                    {index !== 0 && " | "}
-                    {key !== "website" ? (
+                    {index !== 0 && ' | '}
+                    {key !== 'website' ? (
                       <Anchor
                         href={value}
                         color="info"
-                        aria-label={`${key} - ${fullname}`}
+                        aria-label={`${key} - ${info.fullname}`}
                       >
                         <i
                           className={`fab fa-${key}`}
                           aria-hidden="true"
-                          title={`${key} - ${fullname}`}
+                          title={`${key} - ${info.fullname}`}
                         />
                       </Anchor>
                     ) : (
-                      <Anchor href={value} color="info">
-                        <i className="fas fa-globe" alt="tesdtyin" />
+                      <Anchor
+                        href={value}
+                        color="info"
+                        aria-label={`Webbsida - ${info.fullname}`}
+                      >
+                        <i className="fas fa-globe" />
                       </Anchor>
                     )}
                   </Fragment>

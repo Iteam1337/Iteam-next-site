@@ -9,10 +9,11 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const CaseStudy = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePageQuery, {
-    initialData: data?.casePage,
+    initialData: data?.page,
     enabled: preview,
   })
 
@@ -29,17 +30,18 @@ const CaseStudy = ({ data, preview = false }) => {
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
+            {preview && <ExitPreviewButton />}
             <Row className="justify-content-center text-center">
               <Col lg="6">
                 <Title variant="hero">
                   {casePage?.title && casePage.title}
                 </Title>
-                <Text>{casePage?.subTitle && casePage.subTitle}</Text>
+                <Text>{casePage?.subtitle && casePage.subtitle}</Text>
               </Col>
             </Row>
           </Container>
         </Section>
-        <CaseList posts={data?.casePosts && data.casePosts} />
+        <CaseList posts={data?.casePosts && data?.casePosts} />
         <CaseList2 sectionCards={sectionCards && sectionCards} />
         <CTA text={casePage?.titleWithCTA && casePage.titleWithCTA} />
       </PageWrapper>
@@ -48,8 +50,7 @@ const CaseStudy = ({ data, preview = false }) => {
 }
 
 const casePageQuery = groq`
-  *[_type == 'casePage' && !(_id in path('drafts.**'))][1] 
-  {
+  *[_type == 'casePage'] {
   ...,
   titleWithCTA {
     ...,
@@ -68,19 +69,19 @@ const casePageQuery = groq`
 const casePostsQuery = groq`
   *[_type == 'casePost'&& !(_id in path('drafts.**'))]
   {
-...,
+    ...,
   }`
 
 export async function getStaticProps({ preview = false }) {
-  const casePage = await getClient(preview).fetch(casePageQuery)
+  const page = await getClient(preview).fetch(casePageQuery)
   const casePosts = await getClient(preview).fetch(casePostsQuery)
 
-  if (!casePage) return { notFound: true }
+  if (!casePosts) return { notFound: true }
 
   return {
     props: {
       preview,
-      data: { casePage, casePosts, casePageQuery },
+      data: { casePosts, page, casePageQuery },
     },
   }
 }
