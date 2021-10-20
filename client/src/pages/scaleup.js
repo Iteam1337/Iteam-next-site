@@ -31,41 +31,26 @@ const ScaleUp = ({ data, preview = false }) => {
   return (
     <PageWrapper>
       {preview && <ExitPreviewButton />}
-      {scaleUpPage && (
+      {scaleUpPage.metaTags && (
         <NextSeo
-          title={scaleUpPage?.metaTags?.title ?? scaleUpPage.hero.title}
+          title={scaleUpPage.metaTags.title}
           titleTemplate="%s | Aktuellt på Iteam"
-          description={
-            scaleUpPage?.metaTags?.description ?? scaleUpPage?.hero?.subtitle
-          }
-          image={urlFor(
-            scaleUpPage?.metaTags?.imageWithAlt?.asset._ref ??
-              scaleUpPage?.hero?.mediaType?.image.asset._ref
-          )}
+          description={scaleUpPage.metaTags.description}
+          image={urlFor(scaleUpPage.metaTags.imageWithAlt.asset._ref)}
           openGraph={{
-            title: scaleUpPage?.metaTags?.title ?? scaleUpPage.title,
-            description:
-              scaleUpPage?.metaTags?.description ??
-              scaleUpPage?.hero?.description,
+            title: scaleUpPage.metaTags.title,
+            description: scaleUpPage.metaTags.description,
             images: [
               {
-                url: urlFor(
-                  scaleUpPage?.metaTags?.imageWithAlt?.asset._ref ??
-                    scaleUpPage?.hero?.mediaType?.image.asset._ref
-                ),
+                url: urlFor(scaleUpPage.metaTags.imageWithAlt.asset._ref),
               },
             ],
             site_name: 'Iteam',
           }}
           twitter={{
-            title: scaleUpPage?.metaTags?.title ?? scaleUpPage.title,
-            description:
-              scaleUpPage?.metaTags?.description ??
-              scaleUpPage?.hero?.description,
-            image: urlFor(
-              scaleUpPage?.metaTags?.imageWithAlt?.asset._ref ??
-                scaleUpPage?.hero?.mediaType?.image.asset._ref
-            ),
+            title: scaleUpPage.metaTags.title,
+            description: scaleUpPage.metaTags.description,
+            image: urlFor(scaleUpPage.metaTags.imageWithAlt.asset._ref),
             handle: '@iteam1337',
             site: '@iteam1337',
             cardType: 'summary_large_image',
