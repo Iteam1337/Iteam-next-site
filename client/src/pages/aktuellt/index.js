@@ -8,6 +8,7 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 export default function BlogRegular({ data, preview = false }) {
   const { data: previewData } = usePreviewSubscription(data?.newsPageQuery, {
@@ -56,6 +57,7 @@ export default function BlogRegular({ data, preview = false }) {
             }}
           />
         )}
+        {preview && <ExitPreviewButton />}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
@@ -73,26 +75,23 @@ export default function BlogRegular({ data, preview = false }) {
 }
 
 const newsPageQuery = groq`
-  *[_type == 'newsPage' && !(_id in path('drafts.**'))][0] 
-  {
-    title,
-    metaTags
+  *[_type == 'newsPage'] {
+    ...,
   }`
 
 const newsPostsQuery = groq`
-  *[_type == 'newsPost'&& !(_id in path('drafts.**'))]
-  {
-  title,
-   imageCard,
-   slug,
-   date
+  *[_type == 'newsPost'&& !(_id in path('drafts.**'))] {
+    title,
+    imageCard,
+    slug,
+    date
   }`
 
 export async function getStaticProps({ preview = false }) {
   const newsPosts = await getClient(preview).fetch(newsPostsQuery)
   const newsPage = await getClient(preview).fetch(newsPageQuery)
 
-  if (!newsPage) return { notFound: true }
+  if (!newsPosts) return { notFound: true }
 
   return {
     props: {

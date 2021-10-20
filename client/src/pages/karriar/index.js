@@ -10,6 +10,7 @@ import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
 import { urlFor } from '../../utils/helpers'
+import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const Career = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
@@ -61,6 +62,7 @@ const Career = ({ data, preview = false }) => {
         />
       )}
       <PageWrapper headerDark footerDark>
+        {preview && <ExitPreviewButton />}
         <Hero content={hero} />
         <Content content={section} carousel={carousel} />
         <Feature content={textGrid} />
