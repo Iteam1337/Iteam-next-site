@@ -1,21 +1,29 @@
 import React from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+  background-color: #ff3b5c;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+
+  a {
+    color: white;
+    font-weight: bold;
+  }
+`
+
 const ExitPreviewButton = () => {
   const router = useRouter()
   return (
-    <div
-      style={{
-        backgroundColor: 'red',
-        zIndex: 99999,
-        position: 'absolute',
-        top: 0,
-      }}
-    >
+    <Wrapper>
       <a href={`/api/exit-preview?slug=${router.asPath}`}>
-        Preview Mode Activated!
+        Preview Mode Activated. Click to exit preview mode.
       </a>
-    </div>
+    </Wrapper>
   )
 }
 
