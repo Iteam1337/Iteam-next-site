@@ -13,6 +13,8 @@ import {
 } from '../utils/helpers'
 import { groq } from 'next-sanity'
 import BlockContent from '../components/BlockContent'
+import { NextSeo } from 'next-seo'
+import { urlFor } from '../utils/helpers'
 import ExitPreviewButton from '../components/ExitPreviewButton'
 
 const FormStyled = styled.form``
@@ -36,6 +38,32 @@ const Book = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper footerDark>
+        {page.metaTags && (
+          <NextSeo
+            title={page.metaTags.title}
+            titleTemplate="%s | Aktellt på Iteam"
+            description={page.metaTags?.description}
+            image={urlFor(page.metaTags?.imageWithAlt?.asset._ref)}
+            openGraph={{
+              title: page.metaTags?.title,
+              description: page.metaTags?.description,
+              images: [
+                {
+                  url: urlFor(page.metaTags?.imageWithAlt?.asset._ref),
+                },
+              ],
+              site_name: 'Iteam',
+            }}
+            twitter={{
+              title: page.metaTags?.title,
+              description: page.metaTags?.description,
+              image: urlFor(page.metaTags?.imageWithAlt?.asset._ref),
+              handle: '@iteam1337',
+              site: '@iteam1337',
+              cardType: 'summary_large_image',
+            }}
+          />
+        )}
         {preview && <ExitPreviewButton />}
         <Hero content={page?.hero && page.hero} />
         <Section>

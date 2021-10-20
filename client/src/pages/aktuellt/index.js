@@ -26,20 +26,44 @@ export default function BlogRegular({ data, preview = false }) {
     }
   })
 
+  const { metaTags, title } = newsPage
+
   return (
     <>
       <PageWrapper footerDark>
-        <MetaTags
-          title={newsPage?.title && newsPage.title}
-          description={newsPage?.title && newsPage.title}
-        />
+        {metaTags && (
+          <NextSeo
+            title={metaTags.title}
+            titleTemplate="%s | Aktellt på Iteam"
+            description={metaTags?.description}
+            image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+            openGraph={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              images: [
+                {
+                  url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+                },
+              ],
+              site_name: 'Iteam',
+            }}
+            twitter={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+              handle: '@iteam1337',
+              site: '@iteam1337',
+              cardType: 'summary_large_image',
+            }}
+          />
+        )}
         {preview && <ExitPreviewButton />}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="8">
-                <Title>{newsPage?.title && newsPage.title}</Title>
+                <Title>{title && title}</Title>
               </Col>
             </Row>
           </Container>
