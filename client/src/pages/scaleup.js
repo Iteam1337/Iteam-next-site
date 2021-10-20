@@ -23,8 +23,11 @@ const ScaleUp = ({ data, preview = false }) => {
     initialData: data?.scaleUp,
     enabled: preview,
   })
-
   const scaleUpPage = filterDataToSingleItem(previewData, preview)
+
+  const casePost = scaleUpPage.case.find(
+    (casePost) => casePost.slug.current === scaleUpPage.reference.slug.current
+  )
 
   return (
     <>
@@ -87,8 +90,7 @@ const ScaleUp = ({ data, preview = false }) => {
         {scaleUpPage?.textWithTagsSecond && (
           <Role content={scaleUpPage.textWithTagsSecond} />
         )}
-        <ModalVideo url="https://www.youtube.com/watch?v=Iz-XLYvzXyU"></ModalVideo>
-        <Content2 />
+        {casePost && <Content2 content={casePost} />}
         {scaleUpPage?.textWithTagsThirs && (
           <Role content={scaleUpPage.textWithTagsThirs} />
         )}
@@ -104,6 +106,13 @@ const scaleUpPageQuery = groq`
   *[_type == 'scaleUpPage']
   {
     ...,
+    reference -> {
+      _type,
+      slug {
+        current,
+      }
+    },
+    "case": *[ _type == "casePost"],
     sectionWithImageAndButton{
       ...,
       blockText{
@@ -123,7 +132,6 @@ const scaleUpPageQuery = groq`
         }
       }
     },
-    
     sectionWithImageAndCtaSecond{
       ...,
       blockText{
@@ -143,6 +151,7 @@ const scaleUpPageQuery = groq`
         }
       }
     },
+
     
   }`
 

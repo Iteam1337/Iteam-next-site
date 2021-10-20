@@ -36,7 +36,7 @@ export default {
     {
       type: 'sectionWithImage',
       name: 'sectionWithImage',
-      title: 'Sektion med rubrik, text och bild',
+      title: 'Sektion med bild',
       options: {
         collapsible: true,
       },
@@ -45,6 +45,18 @@ export default {
       type: 'textWithTags',
       name: 'textWithTagsSecond',
       title: 'Text med taggar',
+      options: {
+        collapsible: true,
+      },
+    },
+    {
+      name: 'reference',
+      type: 'reference',
+      weak: true,
+      title: 'Referens till ett case',
+      description:
+        'Här väljer du ett case som du vill ska förhandvisas på sidan.',
+      to: [{ type: 'casePost' }],
       options: {
         collapsible: true,
       },
