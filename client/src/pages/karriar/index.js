@@ -8,7 +8,7 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const Career = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
@@ -33,7 +33,7 @@ const Career = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper headerDark footerDark>
-        {preview && <ExitPreviewButton />}
+        {preview && <ExitPreviewLink />}
         <Hero content={hero} />
         <Content content={section} carousel={carousel} />
         <Feature content={textGrid} />

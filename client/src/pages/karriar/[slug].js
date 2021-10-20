@@ -11,7 +11,7 @@ import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const OpeningDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(
@@ -52,7 +52,7 @@ const OpeningDetails = ({ data, preview = false }) => {
           }}
         />
       )}
-      {preview && <ExitPreviewButton />}
+      {preview && <ExitPreviewLink />}
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>

@@ -8,7 +8,7 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 export default function BlogRegular({ data, preview = false }) {
   const { data: previewData } = usePreviewSubscription(data?.newsPageQuery, {
@@ -33,7 +33,7 @@ export default function BlogRegular({ data, preview = false }) {
           title={newsPage?.title && newsPage.title}
           description={newsPage?.title && newsPage.title}
         />
-        {preview && <ExitPreviewButton />}
+        {preview && <ExitPreviewLink />}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>

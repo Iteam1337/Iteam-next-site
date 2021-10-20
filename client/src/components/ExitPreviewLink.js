@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   }
 `
 
-const ExitPreviewButton = () => {
+const ExitPreviewLink = () => {
   const router = useRouter()
   return (
     <Wrapper>
@@ -27,4 +27,4 @@ const ExitPreviewButton = () => {
   )
 }
 
-export default ExitPreviewButton
+export default ExitPreviewLink

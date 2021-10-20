@@ -13,7 +13,7 @@ import {
 } from '../utils/helpers'
 import { groq } from 'next-sanity'
 import BlockContent from '../components/BlockContent'
-import ExitPreviewButton from '../components/ExitPreviewButton'
+import ExitPreviewLink from '../components/ExitPreviewLink'
 
 const FormStyled = styled.form``
 
@@ -36,7 +36,7 @@ const Book = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper footerDark>
-        {preview && <ExitPreviewButton />}
+        {preview && <ExitPreviewLink />}
         <Hero content={page?.hero && page.hero} />
         <Section>
           <Container>

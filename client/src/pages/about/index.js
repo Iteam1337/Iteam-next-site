@@ -9,7 +9,7 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const About = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.aboutPageQuery, {
@@ -30,7 +30,7 @@ const About = ({ data, preview = false }) => {
             'Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag.'
           }
         />
-        {preview && <ExitPreviewButton />}
+        {preview && <ExitPreviewLink />}
         <Hero content={hero && hero} />
         <Content content={rest && rest} />
         <Team

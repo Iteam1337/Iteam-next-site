@@ -9,7 +9,7 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const CaseStudy = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePageQuery, {
@@ -27,7 +27,7 @@ const CaseStudy = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper footerDark>
-        {preview && <ExitPreviewButton />}
+        {preview && <ExitPreviewLink />}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
