@@ -349,7 +349,7 @@ export default () =>
             'ourPricing',
             'openings',
             'sectionWithImageAndCta',
-            'sectionWithCtaAndTextGrid',
+            'sectionWithButtonAndTextGrid',
             'textWithTags',
             'sectionWithImage',
             'mvpPage',
@@ -359,6 +359,7 @@ export default () =>
             'metaTags',
             'bookPage',
             'sectionWithText',
+            'sectionWithImageAndButton',
           ].includes(listItem.getId())
       ),
     ])

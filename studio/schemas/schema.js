@@ -30,7 +30,7 @@ import coworker from './pages/coworker'
 import footer from './modules/footer'
 import mvpPage from './pages/mvpPage'
 import sectionWithImageAndCta from './shared/sections/sectionWithImageAndCta'
-import sectionWithCtaAndTextGrid from './shared/sections/sectionWithCtaAndTextGrid'
+import sectionWithButtonAndTextGrid from './shared/sections/sectionWithButtonAndTextGrid'
 import textWithTags from './shared/textWithTags'
 import sectionWithImage from './shared/sections/sectionWithImage'
 import scaleUpPage from './pages/scaleUpPage'
@@ -41,6 +41,7 @@ import metaTags from './shared/metaTags'
 import bookPage from './pages/bookPage'
 import defaultReference from './shared/reference'
 import sectionWithText from './shared/sections/sectionWithText'
+import sectionWithImageAndButton from './shared/sections/sectionWithImageAndButton'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -76,7 +77,7 @@ export default createSchema({
     footer,
     mvpPage,
     sectionWithImageAndCta,
-    sectionWithCtaAndTextGrid,
+    sectionWithButtonAndTextGrid,
     textWithTags,
     sectionWithImage,
     scaleUpPage,
@@ -87,5 +88,6 @@ export default createSchema({
     bookPage,
     defaultReference,
     sectionWithText,
+    sectionWithImageAndButton,
   ]),
 })

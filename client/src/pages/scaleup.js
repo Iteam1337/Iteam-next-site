@@ -16,6 +16,7 @@ import { usePreviewSubscription } from '../lib/sanity'
 import Hero from '../sections/common/Hero'
 import { NextSeo } from 'next-seo'
 import { urlFor } from '../utils/helpers'
+import ExitPreviewButton from '../components/ExitPreviewButton'
 
 const ScaleUp = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.scaleUpPageQuery, {
@@ -28,6 +29,7 @@ const ScaleUp = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper>
+        {preview && <ExitPreviewButton />}
         {scaleUpPage && (
           <NextSeo
             title={scaleUpPage?.metaTags?.title ?? scaleUpPage.hero.title}
@@ -70,11 +72,11 @@ const ScaleUp = ({ data, preview = false }) => {
           />
         )}
         {scaleUpPage?.hero && <Hero content={scaleUpPage.hero} />}
-        {scaleUpPage?.sectionWithImageAndCtaFirst && (
-          <Content1 content={scaleUpPage.sectionWithImageAndCtaFirst} />
+        {scaleUpPage?.sectionWithImageAndButton && (
+          <Content1 content={scaleUpPage.sectionWithImageAndButton} />
         )}
-        {scaleUpPage?.sectionWithCtaAndTextGrid && (
-          <Feature1 content={scaleUpPage.sectionWithCtaAndTextGrid} />
+        {scaleUpPage?.sectionWithButtonAndTextGrid && (
+          <Feature1 content={scaleUpPage.sectionWithButtonAndTextGrid} />
         )}
         {scaleUpPage?.textWithTagsFirst && (
           <Role content={scaleUpPage.textWithTagsFirst} />
@@ -102,7 +104,7 @@ const scaleUpPageQuery = groq`
   *[_type == 'scaleUpPage']
   {
     ...,
-    sectionWithImageAndCtaFirst{
+    sectionWithImageAndButton{
       ...,
       blockText{
         blockText []{

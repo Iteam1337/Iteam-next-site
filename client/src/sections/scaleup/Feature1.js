@@ -33,7 +33,7 @@ const FeatureCard = ({
 )
 
 const Feature = ({ content }) => {
-  const { section, textGrid, cta } = content
+  const { section, textGrid, button } = content
 
   return (
     <>
@@ -56,7 +56,7 @@ const Feature = ({ content }) => {
                   blocks={section.blockText.blockText}
                 />
                 <a href="#book">
-                  <Button mt={4}>{cta.title}</Button>
+                  <Button mt={4}>{button}</Button>
                 </a>
               </Box>
             </Col>

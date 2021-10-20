@@ -31,7 +31,7 @@ const ImageHalfContainer = styled(Box)`
 `
 
 const Content1 = ({ content }) => {
-  const { title, blockText, cta, imageWithAlt } = content
+  const { title, blockText, button, imageWithAlt } = content
 
   return (
     <>
@@ -54,7 +54,7 @@ const Content1 = ({ content }) => {
                     mt={4}
                     onClick={() => (window.location.href = '#pricing')}
                   >
-                    {cta.title}
+                    {button}
                   </Button>
                 </div>
               </Section>

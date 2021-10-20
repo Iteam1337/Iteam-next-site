@@ -9,17 +9,18 @@ export default {
       title: 'Hero',
     },
     {
-      type: 'sectionWithImageAndCta',
-      name: 'sectionWithImageAndCtaFirst',
-      title: 'Sektion med rubrik, text, cta och bild',
+      type: 'sectionWithImageAndButton',
+      name: 'sectionWithImageAndButton',
+      title:
+        'Sektion med rubrik, text, bild och en knapp som leder till priserna längre ner på sidan.',
       options: {
         collapsible: true,
       },
     },
     {
-      type: 'sectionWithCtaAndTextGrid',
-      name: 'sectionWithCtaAndTextGrid',
-      title: 'Sektion med rubrik, text, cta och text grid',
+      type: 'sectionWithButtonAndTextGrid',
+      name: 'sectionWithButtonAndTextGrid',
+      title: 'Sektion med rubrik, text, knapp och text grid',
       options: {
         collapsible: true,
       },
