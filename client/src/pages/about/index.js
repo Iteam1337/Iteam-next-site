@@ -9,6 +9,7 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const About = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.aboutPageQuery, {
@@ -29,6 +30,7 @@ const About = ({ data, preview = false }) => {
             'Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag.'
           }
         />
+        {preview && <ExitPreviewButton />}
         <Hero content={hero && hero} />
         <Content content={rest && rest} />
         <Team
@@ -42,7 +44,7 @@ const About = ({ data, preview = false }) => {
 }
 
 const aboutPageQuery = groq`
-*[_type == 'aboutPage'][0] {
+*[_type == 'aboutPage'] {
   ..., 
   titleWithCTA {
     ...,
@@ -69,7 +71,7 @@ export async function getStaticProps({ preview = false }) {
   const aboutPage = await getClient(preview).fetch(aboutPageQuery)
   const coworkers = await getClient(preview).fetch(coworkerQuery)
 
-  if (!aboutPage) return { notFound: true }
+  if (!coworkers) return { notFound: true }
 
   return {
     props: {
