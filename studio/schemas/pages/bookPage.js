@@ -74,6 +74,13 @@ export default {
         },
       ],
     },
+    {
+      type: 'metaTags',
+      name: 'metaTags',
+      options: {
+        collapsible: true,
+      },
+    },
   ],
 
   preview: {
@@ -82,13 +89,13 @@ export default {
       subtitle: 'hero.subtitle',
     },
     prepare({ title = 'Book', name = 'book' }) {
-      const path = `/${name}`;
+      const path = `/${name}`
       return {
         path,
         name,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}
