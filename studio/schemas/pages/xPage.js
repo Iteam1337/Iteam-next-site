@@ -26,9 +26,9 @@ export default {
       },
     },
     {
-      type: 'sectionWithCtaAndTextGrid',
-      name: 'sectionWithCtaAndTextGrid',
-      title: 'Sektion med rubrik, text, cta och text grid',
+      type: 'sectionWithButtonAndTextGrid',
+      name: 'sectionWithButtonAndTextGrid',
+      title: 'Sektion med rubrik, text, knapp och text grid',
       options: {
         collapsible: true,
       },
@@ -76,13 +76,13 @@ export default {
       subtitle: 'hero.subtitle',
     },
     prepare({ title = 'Iteam X', name = 'iteamX' }) {
-      const path = `/${name}`;
+      const path = `/${name}`
       return {
         path,
         name,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}
