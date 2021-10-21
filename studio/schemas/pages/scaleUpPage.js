@@ -62,14 +62,6 @@ export default {
       },
     },
     {
-      type: 'sectionWithImageAndCta',
-      name: 'sectionWithImageAndCtaSecond',
-      title: 'Sektion med rubrik, text, cta och bild',
-      options: {
-        collapsible: true,
-      },
-    },
-    {
       type: 'textWithTags',
       name: 'textWithTagsThirs',
       title: 'Text med taggar',
