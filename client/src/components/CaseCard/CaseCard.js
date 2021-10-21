@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Title, Box, Text } from '../Core'
 import BlockContent from '../../components/BlockContent'
+import Image from 'next/image'
 
 const Card = styled(Box)`
   border-radius: 0;
@@ -38,7 +39,7 @@ const CaseCard = ({
   return (
     <Card className="d-flex" {...rest}>
       <ImageContainer>
-        <img src={img} alt={alt} className="w-100 img-fluid" />
+        <Image src={img} alt={alt} layout="fill" />
       </ImageContainer>
       <CardText>
         <TitleStyled variant="card" mb="12px">

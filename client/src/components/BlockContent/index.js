@@ -3,7 +3,7 @@ import BaseBlockContent from '@sanity/block-content-to-react'
 import Typography from '../Typography'
 import client from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
-import Img from 'next/image'
+import Image from 'next/image'
 import { Text } from '../Core'
 import { buildInternalUrl } from '../../utils/helpers'
 
@@ -54,7 +54,7 @@ const serializers = (withAnchor, variant, color, textAlign) => ({
     imageWithAlt: ({ node }) => {
       const imageProps = useNextSanityImage(client, node.asset._ref)
       return (
-        <Img
+        <Image
           {...imageProps}
           layout="responsive"
           sizes="(max-width: 800px) 100vw, 800px"

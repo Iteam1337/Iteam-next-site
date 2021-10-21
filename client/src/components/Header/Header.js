@@ -331,7 +331,7 @@ const Header = ({ isDark = false }) => {
         <Container fluid>
           <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
             {/* <!-- Brand Logo--> */}
-            <div className="brand-logo">
+            <div style={{ marginTop: 15 }}>
               {isMobile ? (
                 <Logo vertical={false} white={isDark} />
               ) : (
