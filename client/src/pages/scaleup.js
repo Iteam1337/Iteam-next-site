@@ -15,7 +15,7 @@ import { usePreviewSubscription } from '../lib/sanity'
 import Hero from '../sections/common/Hero'
 import { NextSeo } from 'next-seo'
 import { urlFor } from '../utils/helpers'
-import ExitPreviewButton from '../components/ExitPreviewButton'
+import ExitPreviewLink from '../components/ExitPreviewLink'
 
 const ScaleUp = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.scaleUpPageQuery, {
@@ -30,7 +30,7 @@ const ScaleUp = ({ data, preview = false }) => {
 
   return (
     <PageWrapper>
-      {preview && <ExitPreviewButton />}
+      {preview && <ExitPreviewLink />}
       {scaleUpPage.metaTags && (
         <NextSeo
           title={scaleUpPage.metaTags.title}

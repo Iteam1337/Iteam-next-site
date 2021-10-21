@@ -58,7 +58,6 @@ export default function BlogRegular({ data, preview = false }) {
             }}
           />
         )}
-        {preview && <ExitPreviewButton />}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>

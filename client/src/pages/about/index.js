@@ -49,7 +49,6 @@ const About = ({ data, preview = false }) => {
             }}
           />
         )}
-        {preview && <ExitPreviewButton />}
         <Hero content={hero && hero} />
         <Content content={rest && rest} />
         <Team
