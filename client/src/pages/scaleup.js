@@ -3,7 +3,7 @@ import PageWrapper from '../components/PageWrapper'
 import SectionWithButtonAndTextGrid from '../sections/scaleup/SectionWithButtonAndTextGrid'
 import SectionWithImageAndButton from '../sections/scaleup/SectionWithImageAndButton'
 import Role from '../sections/scaleup/Role'
-import Content2 from '../sections/scaleup/Content2'
+import Case from '../sections/scaleup/Case'
 import SectionWithImage from '../sections/scaleup/SectionWithImage'
 import Testimonial from '../sections/startpage/Testimonial'
 import Pricing from '../sections/startpage/Pricing'
@@ -77,7 +77,7 @@ const ScaleUp = ({ data, preview = false }) => {
       {scaleUpPage?.textWithTagsSecond && (
         <Role content={scaleUpPage.textWithTagsSecond} />
       )}
-      {casePost && <Content2 content={casePost} />}
+      {casePost && <Case content={casePost} />}
       {scaleUpPage?.textWithTagsThirs && (
         <Role content={scaleUpPage.textWithTagsThirs} />
       )}

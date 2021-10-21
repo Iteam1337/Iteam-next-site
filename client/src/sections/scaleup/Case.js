@@ -10,7 +10,7 @@ const ImageRight = styled(Box)`
     border-radius: 10px;
   }
 `
-const Content2 = ({ content }) => {
+const Case = ({ content }) => {
   return (
     <Section id="design_sprint">
       <Container>
@@ -59,4 +59,4 @@ const Content2 = ({ content }) => {
   )
 }
 
-export default Content2
+export default Case
