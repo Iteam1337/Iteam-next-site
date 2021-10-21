@@ -9,6 +9,7 @@ import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import ExitPreviewButton from '../../components/ExitPreviewButton'
+import { NextSeo } from 'next-seo'
 
 export default function BlogRegular({ data, preview = false }) {
   const { data: previewData } = usePreviewSubscription(data?.newsPageQuery, {
