@@ -19,7 +19,6 @@ const StartPage = ({ data, preview = false, carousel }) => {
   })
   const page = filterDataToSingleItem(previewData, preview)
   const { layout } = page
-  console.log('page', page)
 
   return (
     <>
