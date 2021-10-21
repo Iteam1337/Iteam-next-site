@@ -2,13 +2,13 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Title, Text } from '../../components/Core'
-import MetaTags from '../../components/MetaTags/MetaTags'
 import BlogList from '../../sections/aktuellt/BlogList'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { NextSeo } from 'next-seo'
 
 export default function BlogRegular({ data, preview = false }) {
   const { data: previewData } = usePreviewSubscription(data?.newsPageQuery, {
@@ -31,6 +31,7 @@ export default function BlogRegular({ data, preview = false }) {
   return (
     <>
       <PageWrapper footerDark>
+        {preview && <ExitPreviewLink />}
         {metaTags && (
           <NextSeo
             title={metaTags.title}
@@ -57,7 +58,6 @@ export default function BlogRegular({ data, preview = false }) {
             }}
           />
         )}
-        {preview && <ExitPreviewButton />}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>

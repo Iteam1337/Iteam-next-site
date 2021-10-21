@@ -9,10 +9,9 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import client from '../../sanity-client'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
 import { urlFor } from '../../utils/helpers'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const CaseStudy = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePageQuery, {
@@ -31,6 +30,7 @@ const CaseStudy = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper footerDark>
+        {preview && <ExitPreviewLink />}
         {metaTags && (
           <NextSeo
             title={metaTags.title}
@@ -60,7 +60,6 @@ const CaseStudy = ({ data, preview = false }) => {
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
-            {preview && <ExitPreviewButton />}
             <Row className="justify-content-center text-center">
               <Col lg="6">
                 <Title variant="hero">{title && title}</Title>

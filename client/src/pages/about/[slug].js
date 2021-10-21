@@ -6,7 +6,7 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const CoworkerPage = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.coworkerQuery, {
@@ -18,7 +18,7 @@ const CoworkerPage = ({ data, preview = false }) => {
 
   return (
     <PageWrapper footerDark>
-      {preview && <ExitPreviewButton />}
+      {preview && <ExitPreviewLink />}
       {post && (
         <>
           <Hero

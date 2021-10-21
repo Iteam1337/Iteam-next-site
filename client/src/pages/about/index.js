@@ -7,10 +7,9 @@ import CTA from '../../sections/about/CTA'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
+import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
-import { urlFor } from '../../utils/helpers'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const About = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.aboutPageQuery, {
@@ -23,6 +22,7 @@ const About = ({ data, preview = false }) => {
   return (
     <>
       <PageWrapper>
+        {preview && <ExitPreviewLink />}
         {metaTags && (
           <NextSeo
             title={metaTags.title}
@@ -49,7 +49,6 @@ const About = ({ data, preview = false }) => {
             }}
           />
         )}
-        {preview && <ExitPreviewButton />}
         <Hero content={hero && hero} />
         <Content content={rest && rest} />
         <Team
