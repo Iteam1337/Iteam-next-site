@@ -7,31 +7,22 @@ import Roles from '../../sections/karriar/Roles'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewLink from '../../components/ExitPreviewLink'
+import {
+  filterDataToSingleItem,
+  shuffleArray,
+  urlFor,
+} from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
-import { urlFor } from '../../utils/helpers'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
-const Career = ({ data, preview = false }) => {
+const Career = ({ data, preview = false, carousel }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
     initialData: data?.careerPage,
     enabled: preview,
   })
 
   const post = filterDataToSingleItem(previewData, preview)
-  const {
-    hero,
-    openings,
-    section,
-    textGrid,
-    coworkerCarouselOne,
-    coworkerCarouselTwo,
-    metaTags,
-  } = post
-
-  const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
-  const carousel =
-    coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  const { hero, openings, section, textGrid, metaTags } = post
 
   return (
     <>
@@ -120,16 +111,24 @@ const careerPageQuery = groq`
  }
 `
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
   const openPositions = await getClient(preview).fetch(openPositionsQuery)
   const careerPage = await getClient(preview).fetch(careerPageQuery)
 
   if (!openPositions) return { notFound: true }
 
+  const { coworkerCarouselOne, coworkerCarouselTwo } = filterDataToSingleItem(
+    careerPage,
+    preview
+  )
+  const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
   return {
     props: {
       preview,
       data: { openPositions, careerPage, careerPageQuery },
+      carousel: shuffleArray(
+        coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+      ),
     },
   }
 }
