@@ -60,10 +60,10 @@ const Canvas = styled.canvas`
   left: 0;
 `
 
-const TextBg = styled.div`
+const TextBg = styled.span`
   display: inline;
   background: rgba(0,0,0,.6);
-  padding: 8px;
+  padding: 7px;
   white-space:pre-wrap;
   box-decoration-break: clone;
 `
