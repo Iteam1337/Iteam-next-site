@@ -7,9 +7,12 @@ import Roles from '../../sections/karriar/Roles'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem, shuffleArray } from '../../utils/helpers'
+import {
+  filterDataToSingleItem,
+  shuffleArray,
+  urlFor,
+} from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
-import { urlFor } from '../../utils/helpers'
 import ExitPreviewButton from '../../components/ExitPreviewButton'
 
 const Career = ({ data, preview = false, carousel }) => {
