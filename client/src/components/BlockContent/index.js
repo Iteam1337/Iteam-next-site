@@ -35,7 +35,7 @@ const serializers = (withAnchor, variant, color) => ({
             </Typography.BlockQuote>
           )
         case 'subtitle':
-          return <Text>{children}</Text>
+          return <Text color={color}>{children}</Text>
         default:
           console.warn('Unhandled in portable text serializer: ', node)
           return <p></p>

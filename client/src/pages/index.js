@@ -1,9 +1,9 @@
 import React from 'react'
 import Hero from '../sections/startpage/Hero'
-import Feature from '../sections/startpage/Feature'
-import Content1 from '../sections/startpage/Content1'
-import Content2 from '../sections/startpage/Content2'
-import DesignatedTeam from '../sections/mvp/DesignatedTeam'
+import TextGrid from '../sections/startpage/TextGrid'
+import TextWithImageToRight from '../sections/startpage/TextWithImageToRight'
+import TextWithImageToLeft from '../sections/startpage/TextWithImageToLeft'
+import SectionWithImageAndCta from '../sections/mvp/SectionWithImageAndCta'
 import PageWrapper from '../components/PageWrapper'
 import GoogleAnalytics from '../components/GoogleAnalytics/GoogleAnalytics'
 import { usePreviewSubscription } from '../lib/sanity'
@@ -17,18 +17,33 @@ const StartPage = ({ data, preview = false, carousel }) => {
     initialData: data?.startPage,
     enabled: preview,
   })
-
   const page = filterDataToSingleItem(previewData, preview)
+  const { layout } = page
+  console.log('page', page)
 
   return (
     <>
       <PageWrapper headerDark footerDark>
         <GoogleAnalytics />
         <Hero />
-        <Feature />
-        <Content1 />
-        <DesignatedTeam />
-        <Content2 />
+        {layout.map((content) => {
+          switch (content._type) {
+            case 'textGrid':
+              return <TextGrid content={content} />
+            case 'sectionWithImageAndPosition':
+              switch (content.imageToRight) {
+                case true:
+                  return <TextWithImageToRight content={content} />
+                case false:
+                  return <TextWithImageToLeft content={content} />
+              }
+            case 'sectionWithImageAndCta':
+              return <SectionWithImageAndCta content={content} />
+            default:
+              console.log('Type does not exist')
+          }
+        })}
+
         <DefaultContent data={page.defaultLayout} carousel={carousel} />
       </PageWrapper>
     </>
@@ -38,6 +53,25 @@ const StartPage = ({ data, preview = false, carousel }) => {
 const startPageQuery = groq`
 *[_id == 'startPage'] {
   ...,
+  layout[] {
+    ...,
+      blockText {
+        blockText []{
+        ...,
+        markDefs[]{
+          ...,
+          _type == "internalLink" => {
+            reference-> {
+              _type,
+              slug {
+                current
+              }
+            }
+          }
+        }
+      }
+    },
+  },
   defaultLayout {
     ...,
     faq[] {

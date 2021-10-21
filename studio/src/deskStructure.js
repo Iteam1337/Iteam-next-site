@@ -333,6 +333,7 @@ export default () =>
             'scaleUpPage',
             'metaTags',
             'bookPage',
+            'sectionWithImageAndPosition',
           ].includes(listItem.getId())
       ),
     ])
