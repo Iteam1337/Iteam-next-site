@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { Title, Button, Section, Box, Text } from '../Core'
 import { device } from '../../utils'
-import BlockContent from '../../components/BlockContent'
+import BlockContent from '../BlockContent'
 import { urlFor } from '../../utils/helpers'
 
 const ImageHalfContainer = styled(Box)`
@@ -28,11 +28,16 @@ const ImageHalfContainer = styled(Box)`
   }
 `
 
-const SectionWithImageAndButton = ({ content }) => {
-  const { title, blockText, button, imageWithAlt } = content
+const SectionStyled = styled(Section)`
+  border-bottom: 1px solid ${({ bg }) => (bg == 'dark' ? '#242427' : 'white')};
+  background-color: ${({ bg }) => (bg == 'dark' ? 'rgb(25,25,27)' : 'white')};
+  overflow: hidden;
+`
 
+const SectionWithImageAndButton = ({ content, bg = 'light' }) => {
+  const { title, blockText, button, imageWithAlt } = content
   return (
-    <div className="overflow-hidden">
+    <SectionStyled bg={bg}>
       <Container>
         <Row>
           <Col
@@ -45,8 +50,11 @@ const SectionWithImageAndButton = ({ content }) => {
           >
             <Section py={[5, null, null, '190px']}>
               <div className="omga-02__content-text section-title order-lg-1">
-                <Title>{title}</Title>
-                <BlockContent blocks={blockText.blockText} />
+                <Title color={bg == 'dark' ? 'light' : 'dark'}>{title}</Title>
+                <BlockContent
+                  blocks={blockText.blockText}
+                  color={bg == 'dark' ? 'light' : 'dark'}
+                />
                 <Button
                   mt={4}
                   onClick={() => (window.location.href = '#pricing')}
@@ -69,7 +77,7 @@ const SectionWithImageAndButton = ({ content }) => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </SectionStyled>
   )
 }
 

@@ -1,10 +1,13 @@
 import React from 'react'
 import PageWrapper from '../components/PageWrapper'
-import SectionWithButtonAndTextGrid from '../sections/scaleup/SectionWithButtonAndTextGrid'
-import SectionWithImageAndButton from '../sections/scaleup/SectionWithImageAndButton'
+import {
+  SectionWithButtonAndTextGrid,
+  SectionWithImageAndButton,
+  SectionWithImage,
+  TextWithTags,
+} from '../components/Sections'
 import Role from '../sections/scaleup/Role'
 import Case from '../sections/scaleup/Case'
-import SectionWithImage from '../sections/scaleup/SectionWithImage'
 import Testimonial from '../sections/startpage/Testimonial'
 import Pricing from '../sections/startpage/Pricing'
 import CTA from '../sections/scaleup/CTA'
@@ -69,13 +72,13 @@ const ScaleUp = ({ data, preview = false }) => {
         />
       )}
       {scaleUpPage?.textWithTagsFirst && (
-        <Role content={scaleUpPage.textWithTagsFirst} />
+        <TextWithTags content={scaleUpPage.textWithTagsFirst} />
       )}
       {scaleUpPage?.sectionWithImage && (
-        <SectionWithImage content={scaleUpPage.sectionWithImage} />
+        <SectionWithImage bg="dark" content={scaleUpPage.sectionWithImage} />
       )}
       {scaleUpPage?.textWithTagsSecond && (
-        <Role content={scaleUpPage.textWithTagsSecond} />
+        <TextWithTags content={scaleUpPage.textWithTagsSecond} />
       )}
       {casePost && <Case content={casePost} />}
       {scaleUpPage?.textWithTagsThirs && (

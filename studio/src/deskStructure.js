@@ -82,15 +82,15 @@ export default () =>
                   S.list()
                     .title('Erbjudanden')
                     .items([
-                      // S.listItem()
-                      //   .title('Iteam MVP')
-                      //   .icon(FaRegFileAlt)
-                      //   .child(
-                      //     S.document()
-                      //       .schemaType('mvpPage')
-                      //       .documentId('mvpPage')
-                      //       .title('Iteam MVP')
-                      //   ),
+                      S.listItem()
+                        .title('Iteam MVP')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('mvpPage')
+                            .documentId('mvpPage')
+                            .title('Iteam MVP')
+                        ),
                       S.divider(),
                       S.listItem()
                         .title('Iteam Scale-up')
