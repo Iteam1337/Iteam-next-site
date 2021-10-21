@@ -1,10 +1,10 @@
 import React from 'react'
 import PageWrapper from '../components/PageWrapper'
-import Feature1 from '../sections/scaleup/Feature1'
-import Content1 from '../sections/scaleup/Content1'
+import SectionWithButtonAndTextGrid from '../sections/scaleup/SectionWithButtonAndTextGrid'
+import SectionWithImageAndButton from '../sections/scaleup/SectionWithImageAndButton'
 import Role from '../sections/scaleup/Role'
 import Content2 from '../sections/scaleup/Content2'
-import DesignatedTeam from '../sections/scaleup/DesignatedTeam'
+import SectionWithImage from '../sections/scaleup/SectionWithImage'
 import Testimonial from '../sections/startpage/Testimonial'
 import Pricing from '../sections/startpage/Pricing'
 import CTA from '../sections/scaleup/CTA'
@@ -59,16 +59,20 @@ const ScaleUp = ({ data, preview = false }) => {
       )}
       {scaleUpPage?.hero && <Hero content={scaleUpPage.hero} />}
       {scaleUpPage?.sectionWithImageAndButton && (
-        <Content1 content={scaleUpPage.sectionWithImageAndButton} />
+        <SectionWithImageAndButton
+          content={scaleUpPage.sectionWithImageAndButton}
+        />
       )}
       {scaleUpPage?.sectionWithButtonAndTextGrid && (
-        <Feature1 content={scaleUpPage.sectionWithButtonAndTextGrid} />
+        <SectionWithButtonAndTextGrid
+          content={scaleUpPage.sectionWithButtonAndTextGrid}
+        />
       )}
       {scaleUpPage?.textWithTagsFirst && (
         <Role content={scaleUpPage.textWithTagsFirst} />
       )}
       {scaleUpPage?.sectionWithImage && (
-        <DesignatedTeam content={scaleUpPage.sectionWithImage} />
+        <SectionWithImage content={scaleUpPage.sectionWithImage} />
       )}
       {scaleUpPage?.textWithTagsSecond && (
         <Role content={scaleUpPage.textWithTagsSecond} />

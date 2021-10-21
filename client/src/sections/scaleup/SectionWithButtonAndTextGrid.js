@@ -31,7 +31,7 @@ const FeatureCard = ({
   </Box>
 )
 
-const Feature = ({ content }) => {
+const SectionWithButtonAndTextGrid = ({ content }) => {
   const { section, textGrid, button } = content
 
   return (
@@ -87,4 +87,4 @@ const Feature = ({ content }) => {
   )
 }
 
-export default Feature
+export default SectionWithButtonAndTextGrid

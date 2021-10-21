@@ -9,7 +9,7 @@ const SectionStyled = styled(Section)`
   border-bottom: 1px solid #242427;
 `
 
-const DesignatedTeam = ({ content }) => {
+const SectionWithImage = ({ content }) => {
   return (
     <SectionStyled bg="dark">
       <Container>
@@ -52,4 +52,4 @@ const DesignatedTeam = ({ content }) => {
   )
 }
 
-export default DesignatedTeam
+export default SectionWithImage

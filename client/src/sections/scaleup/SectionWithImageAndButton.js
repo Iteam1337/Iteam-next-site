@@ -28,7 +28,7 @@ const ImageHalfContainer = styled(Box)`
   }
 `
 
-const Content1 = ({ content }) => {
+const SectionWithImageAndButton = ({ content }) => {
   const { title, blockText, button, imageWithAlt } = content
 
   return (
@@ -73,4 +73,4 @@ const Content1 = ({ content }) => {
   )
 }
 
-export default Content1
+export default SectionWithImageAndButton
