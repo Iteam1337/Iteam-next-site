@@ -12,7 +12,7 @@ import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const BlogDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
@@ -65,12 +65,12 @@ const BlogDetails = ({ data, preview = false }) => {
           }}
         />
       )}
+      {preview && <ExitPreviewLink />}
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>
           <Row className="justify-content-center text-center">
             <Col lg="8">
-              {preview && <ExitPreviewButton />}
               <Box className="text-center" mb={4}>
                 {post?.company && post.company}
               </Box>

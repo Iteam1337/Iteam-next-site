@@ -13,7 +13,7 @@ import {
   urlFor,
 } from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const Career = ({ data, preview = false, carousel }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
@@ -53,7 +53,7 @@ const Career = ({ data, preview = false, carousel }) => {
         />
       )}
       <PageWrapper headerDark footerDark>
-        {preview && <ExitPreviewButton />}
+        {preview && <ExitPreviewLink />}
         <Hero content={hero} />
         <Content content={section} carousel={carousel} />
         <Feature content={textGrid} />

@@ -10,12 +10,12 @@ import {
   buildInternalUrl,
   filterDataToSingleItem,
   formatPhoneNumber,
+  urlFor,
 } from '../utils/helpers'
 import { groq } from 'next-sanity'
 import BlockContent from '../components/BlockContent'
+import ExitPreviewLink from '../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
-import { urlFor } from '../utils/helpers'
-import ExitPreviewButton from '../components/ExitPreviewButton'
 
 const FormStyled = styled.form``
 
@@ -64,7 +64,7 @@ const Book = ({ data, preview = false }) => {
             }}
           />
         )}
-        {preview && <ExitPreviewButton />}
+        {preview && <ExitPreviewLink />}
         <Hero content={page?.hero && page.hero} />
         <Section>
           <Container>

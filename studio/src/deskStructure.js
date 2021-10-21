@@ -74,47 +74,56 @@ export default () =>
               //       .documentId('startPage')
               //   ),
               // S.divider(),
-              // S.divider(),
-              // S.listItem()
-              //   .title('Erbjudanden')
-              //   .icon(FaRegFolder)
-              //   .child(
-              //     S.list()
-              //       .title('Erbjudanden')
-              //       .items([
-              //         S.listItem()
-              //           .title('Iteam MVP')
-              //           .icon(FaRegFileAlt)
-              //           .child(
-              //             S.document()
-              //               .schemaType('mvpPage')
-              //               .documentId('mvpPage')
-              //               .title('Iteam MVP')
-              //           ),
-              //         S.divider(),
-              //         S.listItem()
-              //           .title('Iteam Scale-up')
-              //           .icon(FaRegFileAlt)
-              //           .child(
-              //             S.document()
-              //               .schemaType('scaleUpPage')
-              //               .documentId('scaleUpPage')
-              //               .title('Iteam Scale-up')
-              //           ),
-              //         S.divider(),
-              //         S.listItem()
-              //           .title('Iteam X')
-              //           .icon(FaRegFileAlt)
-              //           .child(
-              //             S.document()
-              //               .schemaType('xPage')
-              //               .documentId('xPage')
-              //               .title('Iteam X')
-              //           ),
-              //         S.divider(),
-              //       ])
-              // ),
-              // S.divider(),
+              S.divider(),
+              S.listItem()
+                .title('Erbjudanden')
+                .icon(FaRegFolder)
+                .child(
+                  S.list()
+                    .title('Erbjudanden')
+                    .items([
+                      // S.listItem()
+                      //   .title('Iteam MVP')
+                      //   .icon(FaRegFileAlt)
+                      //   .child(
+                      //     S.document()
+                      //       .schemaType('mvpPage')
+                      //       .documentId('mvpPage')
+                      //       .title('Iteam MVP')
+                      //   ),
+                      S.divider(),
+                      S.listItem()
+                        .title('Iteam Scale-up')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('scaleUpPage')
+                            .documentId('scaleUpPage')
+                            .title('Iteam Scale-up')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
+                        ),
+                      // S.divider(),
+                      // S.listItem()
+                      //   .title('Iteam X')
+                      //   .icon(FaRegFileAlt)
+                      //   .child(
+                      //     S.document()
+                      //       .schemaType('xPage')
+                      //       .documentId('xPage')
+                      //       .title('Iteam X')
+                      //   ),
+                      // S.divider(),
+                    ])
+                ),
+              S.divider(),
               S.listItem()
                 .title('Case')
                 .icon(FaRegFolder)
@@ -340,7 +349,7 @@ export default () =>
             'ourPricing',
             'openings',
             'sectionWithImageAndCta',
-            'sectionWithCtaAndTextGrid',
+            'sectionWithButtonAndTextGrid',
             'textWithTags',
             'sectionWithImage',
             'mvpPage',
@@ -349,6 +358,8 @@ export default () =>
             'scaleUpPage',
             'metaTags',
             'bookPage',
+            'sectionWithText',
+            'sectionWithImageAndButton',
           ].includes(listItem.getId())
       ),
     ])

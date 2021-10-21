@@ -12,7 +12,7 @@ import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewButton from '../../components/ExitPreviewButton'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const BlogDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.newsPostQuery, {
@@ -65,7 +65,7 @@ const BlogDetails = ({ data, preview = false }) => {
         />
       )}
       <PageWrapper footerDark>
-        {preview && <ExitPreviewButton />}
+        {preview && <ExitPreviewLink />}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
@@ -73,9 +73,7 @@ const BlogDetails = ({ data, preview = false }) => {
               <Col lg="12">
                 <Title variant="hero">{post?.title && post.title}</Title>
                 <Box className="d-flex justify-content-center">
-                  <Text mr={3}>
-                    <p>{post?.date && post.date}</p>
-                  </Text>
+                  <Text mr={3}>{post?.date && post.date}</Text>
                   <Text>
                     {post?.tags &&
                       post.tags?.map((tag) => <Link href="/">{tag}</Link>)}

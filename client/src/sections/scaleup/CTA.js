@@ -1,9 +1,8 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-
-import { Section } from "../../components/Core"
-import HubspotForm from "../../components/HubspotForm"
-import imgCtaBG from "../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Section } from '../../components/Core'
+import HubspotForm from '../../components/HubspotForm'
+import imgCtaBG from '../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg'
 
 const CTA = () => (
   <>

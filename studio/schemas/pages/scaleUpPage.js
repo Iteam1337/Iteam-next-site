@@ -9,17 +9,18 @@ export default {
       title: 'Hero',
     },
     {
-      type: 'sectionWithImageAndCta',
-      name: 'sectionWithImageAndCtaFirst',
-      title: 'Sektion med rubrik, text, cta och bild',
+      type: 'sectionWithImageAndButton',
+      name: 'sectionWithImageAndButton',
+      title:
+        'Sektion med rubrik, text, bild och en knapp som leder till priserna längre ner på sidan.',
       options: {
         collapsible: true,
       },
     },
     {
-      type: 'sectionWithCtaAndTextGrid',
-      name: 'sectionWithCtaAndTextGrid',
-      title: 'Sektion med rubrik, text, cta och text grid',
+      type: 'sectionWithButtonAndTextGrid',
+      name: 'sectionWithButtonAndTextGrid',
+      title: 'Sektion med rubrik, text, knapp och text grid',
       options: {
         collapsible: true,
       },
@@ -35,7 +36,7 @@ export default {
     {
       type: 'sectionWithImage',
       name: 'sectionWithImage',
-      title: 'Sektion med rubrik, text och bild',
+      title: 'Sektion med bild',
       options: {
         collapsible: true,
       },
@@ -49,9 +50,13 @@ export default {
       },
     },
     {
-      type: 'sectionWithImageAndCta',
-      name: 'sectionWithImageAndCtaSecond',
-      title: 'Sektion med rubrik, text, cta och bild',
+      name: 'reference',
+      type: 'reference',
+      weak: true,
+      title: 'Referens till ett case',
+      description:
+        'Här väljer du ett case som du vill ska förhandvisas på sidan.',
+      to: [{ type: 'casePost' }],
       options: {
         collapsible: true,
       },
@@ -64,6 +69,13 @@ export default {
         collapsible: true,
       },
     },
+    {
+      type: 'metaTags',
+      name: 'metaTags',
+      options: {
+        collapsible: true,
+      },
+    },
   ],
 
   preview: {
@@ -72,13 +84,13 @@ export default {
       subtitle: 'hero.subtitle',
     },
     prepare({ title = 'Iteam Scale-up', name = 'scaleup' }) {
-      const path = `/${name}`;
+      const path = `/${name}`
       return {
         path,
         name,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}

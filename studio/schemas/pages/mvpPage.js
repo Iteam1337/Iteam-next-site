@@ -5,9 +5,9 @@ export default {
   fields: [
     { type: 'hero', name: 'hero' },
     {
-      type: 'sectionWithCtaAndTextGrid',
-      name: 'sectionWithCtaAndTextGrid',
-      title: 'Sektion med rubrik, text, cta och text grid',
+      type: 'sectionWithButtonAndTextGrid',
+      name: 'sectionWithButtonAndTextGrid',
+      title: 'Sektion med rubrik, text, knapp och text grid',
       options: {
         collapsible: true,
       },
@@ -49,13 +49,13 @@ export default {
       subtitle: 'hero.subtitle',
     },
     prepare({ title = 'Iteam MVP', name = 'mvp' }) {
-      const path = `/${name}`;
+      const path = `/${name}`
       return {
         path,
         name,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}
