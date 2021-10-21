@@ -9,6 +9,8 @@ import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { NextSeo } from 'next-seo'
+import { urlFor } from '../../utils/helpers'
 
 const Career = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
@@ -24,6 +26,7 @@ const Career = ({ data, preview = false }) => {
     textGrid,
     coworkerCarouselOne,
     coworkerCarouselTwo,
+    metaTags,
   } = post
 
   const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
@@ -32,6 +35,32 @@ const Career = ({ data, preview = false }) => {
 
   return (
     <>
+      {metaTags && (
+        <NextSeo
+          title={metaTags.title}
+          titleTemplate="%s | Aktellt på Iteam"
+          description={metaTags?.description}
+          image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+          openGraph={{
+            title: metaTags?.title,
+            description: metaTags?.description,
+            images: [
+              {
+                url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+              },
+            ],
+            site_name: 'Iteam',
+          }}
+          twitter={{
+            title: metaTags?.title,
+            description: metaTags?.description,
+            image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+            handle: '@iteam1337',
+            site: '@iteam1337',
+            cardType: 'summary_large_image',
+          }}
+        />
+      )}
       <PageWrapper headerDark footerDark>
         {preview && <ExitPreviewLink />}
         <Hero content={hero} />
@@ -51,6 +80,7 @@ const openPositionsQuery = groq`
 
 const careerPageQuery = groq`
  *[_type == 'careerPage']{
+  metaTags,
   hero, 
   openings, 
   textGrid, 

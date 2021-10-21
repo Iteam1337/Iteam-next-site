@@ -1,20 +1,20 @@
-import React, { useState, useContext, useEffect } from "react"
-import styled from "styled-components"
-import { Container } from "react-bootstrap"
-import { useScrollPosition } from "@n8tb1t/use-scroll-position"
-import Link from "next/link"
+import React, { useState, useContext, useEffect } from 'react'
+import styled from 'styled-components'
+import { Container } from 'react-bootstrap'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import Link from 'next/link'
 
-import GlobalContext from "../../context/GlobalContext"
-import Offcanvas from "../Offcanvas"
-import { Button } from "../Core"
-import NestedMenu from "../NestedMenu"
-import { device } from "../../utils"
-import Logo from "../Logo"
-import { menuItems } from "./menuItems"
+import GlobalContext from '../../context/GlobalContext'
+import Offcanvas from '../Offcanvas'
+import { Button } from '../Core'
+import NestedMenu from '../NestedMenu'
+import { device } from '../../utils'
+import Logo from '../Logo'
+import { menuItems } from './menuItems'
 
 const SiteHeader = styled.header`
   padding: 10px 0 10px 3px;
-  position: absolute !important;
+  position: fixed !important;
   top: 0;
   right: 0;
   width: 100%;
@@ -23,21 +23,17 @@ const SiteHeader = styled.header`
   .container {
     padding-left: 0;
   }
-
-  @media ${device.lg} {
-    position: fixed !important;
+  transition: 0.4s;
+  &.scrolling {
+    transform: translateY(-100%);
     transition: 0.4s;
-    &.scrolling {
-      transform: translateY(-100%);
-      transition: 0.4s;
-    }
-    &.reveal-header {
-      transform: translateY(0%);
-      box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
-      z-index: 9999;
-      background: ${({ dark, theme }) =>
-        dark ? theme.colors.dark : theme.colors.light};
-    }
+  }
+  &.reveal-header {
+    transform: translateY(0%);
+    box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
+    z-index: 9999;
+    background: ${({ dark, theme }) =>
+      dark ? theme.colors.dark : theme.colors.light};
   }
 
   /* Bounce To Left */
@@ -62,7 +58,7 @@ const SiteHeader = styled.header`
   }
 
   .hvr-bounce-to-left:before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     top: 0;
@@ -108,7 +104,7 @@ const SiteHeader = styled.header`
     border: 1px solid #c31a12;
     background: #ff3b5c;
     color: #fff !important;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 21px;
     font-weight: 500;
     letter-spacing: -0.66px;
@@ -116,8 +112,8 @@ const SiteHeader = styled.header`
 `
 
 const ToggleButton = styled.button`
-  color: ${({ dark, theme }) => (dark ? "#fff" : "#000")} !important;
-  border-color: ${({ dark, theme }) => (dark ? "#fff" : "#000")} !important;
+  color: ${({ dark, theme }) => (dark ? '#fff' : '#000')} !important;
+  border-color: ${({ dark, theme }) => (dark ? '#fff' : '#000')} !important;
 `
 
 const Menu = styled.ul`
@@ -188,7 +184,7 @@ const MenuDropdown = styled.ul`
     border-top: ${({ theme }) => `3px solid ${theme.colors.secondary}`};
   }
   > .drop-menu-item {
-    color: '${({ theme }) => theme.colors.dark};'
+    color: '${({ theme }) => theme.colors.dark}';
     font-size: 16px;
     font-weight: 300;
     letter-spacing: -0.5px;
@@ -206,7 +202,7 @@ const MenuDropdown = styled.ul`
       &.dropdown-toggle::after {
         display: inline-block;
         vertical-align: 0.255em;
-        content: "";
+        content: '';
         border-top: 0.325em solid;
         border-right: 0.325em solid transparent;
         border-bottom: 0;
@@ -266,6 +262,13 @@ const MenuDropdown = styled.ul`
   }
 `
 
+const CrossWrapper = styled.div`
+    position: absolute;
+    top: 11px;
+    right: 24px;
+}
+`
+
 const Header = ({ isDark = false }) => {
   const gContext = useContext(GlobalContext)
   const [showScrolling, setShowScrolling] = useState(false)
@@ -273,6 +276,11 @@ const Header = ({ isDark = false }) => {
 
   const size = useWindowSize()
   const isMobile = size.width < 622
+
+  const toggleMenu = () => {
+    gContext.toggleOffCanvas()
+    document.body.style.overflow = 'hidden'
+  }
 
   useScrollPosition(({ prevPos, currPos }) => {
     if (currPos.y < 0) {
@@ -294,7 +302,7 @@ const Header = ({ isDark = false }) => {
     })
 
     useEffect(() => {
-      if (typeof window !== "undefined") {
+      if (typeof window !== 'undefined') {
         function handleResize() {
           setWindowSize({
             width: window.innerWidth,
@@ -302,11 +310,11 @@ const Header = ({ isDark = false }) => {
           })
         }
 
-        window.addEventListener("resize", handleResize)
+        window.addEventListener('resize', handleResize)
 
         handleResize()
 
-        return () => window.removeEventListener("resize", handleResize)
+        return () => window.removeEventListener('resize', handleResize)
       }
     }, [])
     return windowSize
@@ -315,8 +323,8 @@ const Header = ({ isDark = false }) => {
   return (
     <>
       <SiteHeader
-        className={`sticky-header ${showScrolling ? "scrolling" : ""} ${
-          showReveal ? "reveal-header" : ""
+        className={`sticky-header ${showScrolling ? 'scrolling' : ''} ${
+          showReveal ? 'reveal-header' : ''
         }`}
         dark={isDark ? 1 : 0}
       >
@@ -468,7 +476,7 @@ const Header = ({ isDark = false }) => {
             </div>
             <ToggleButton
               className={`navbar-toggler btn-close-off-canvas ml-3 ${
-                gContext.visibleOffCanvas ? "collapsed" : ""
+                gContext.visibleOffCanvas ? 'collapsed' : ''
               }`}
               type="button"
               data-toggle="collapse"
@@ -476,10 +484,22 @@ const Header = ({ isDark = false }) => {
               aria-controls="mobile-menu"
               aria-expanded="false"
               aria-label="Toggle navigation"
-              onClick={gContext.toggleOffCanvas}
+              onClick={toggleMenu}
               dark={isDark ? 1 : 0}
             >
-              <i className="icon icon-menu-34 icon-burger d-block fa-2x"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                fill={isDark ? 'white' : 'black'}
+                className="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
             </ToggleButton>
           </nav>
         </Container>
@@ -488,6 +508,23 @@ const Header = ({ isDark = false }) => {
         show={gContext.visibleOffCanvas}
         onHideOffcanvas={gContext.toggleOffCanvas}
       >
+        <CrossWrapper
+          onClick={() => {
+            document.body.style.overflow = 'visible'
+            gContext.toggleOffCanvas()
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="55"
+            height="55"
+            fill="white"
+            className="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </CrossWrapper>
         <NestedMenu menuItems={menuItems} />
       </Offcanvas>
     </>

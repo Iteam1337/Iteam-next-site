@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Text } from "../../components/Core"
-import { hexToRGBA } from "../../utils/helpers"
+import { Title, Section, Text } from '../../components/Core'
+import { hexToRGBA } from '../../utils/helpers'
 import { urlFor } from '../../utils/helpers'
 
 const SectionStyled = styled(Section)`
@@ -13,35 +13,49 @@ const SectionStyled = styled(Section)`
     147deg, rgba(${hexToRGBA(color)}, 0.17) 0%,
     rgba(84, 84, 212, 0) 100% 
   )`
-      : "linear-gradient(147deg, rgba(141, 141, 236, 0.17) 0%, rgba(84, 84, 212, 0) 100%)"};
+      : 'linear-gradient(147deg, rgba(141, 141, 236, 0.17) 0%, rgba(84, 84, 212, 0) 100%)'};
 `
 
 const SectionStyledImage = styled(Section)`
-  background: ${(props) => `linear-gradient(to left, rgba(0, 0, 0, 0.127), rgba(0, 0, 0, 0.8)),
+  background: ${(props) => ` ${
+    props.darkGradient === true
+      ? ` linear-gradient(to left, rgba(0, 0, 0, 0.127), rgba(0, 0, 0, 0.8))`
+      : `linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1)
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    )`
+  },
     url(${urlFor(props.image)}) no-repeat center`};
   background-size: cover;
 `
 
-
 const MediaType = ({ mediaType, children }) => {
   switch (mediaType.type) {
-    case "color":
+    case 'color':
       return (
         <SectionStyled
-          pt={["120px!important", null, "190px!important"]}
-          pb={["50px!important", null, "180px!important"]}
+          pt={['120px!important', null, '190px!important']}
+          pb={['50px!important', null, '180px!important']}
           color={mediaType.color}
         >
           {children}
         </SectionStyled>
       )
-    case "image":
+    case 'image':
       return (
         <SectionStyledImage
-          pt={["120px!important", null, "190px!important"]}
-          pb={["50px!important", null, "180px!important"]}
+          pt={['120px!important', null, '190px!important']}
+          pb={['50px!important', null, '180px!important']}
           bg="dark"
           image={mediaType.image.asset._ref}
+          darkGradient={mediaType.darkGradient}
         >
           {children}
         </SectionStyledImage>
@@ -49,8 +63,8 @@ const MediaType = ({ mediaType, children }) => {
     default:
       return (
         <SectionStyled
-          pt={["120px!important", null, "190px!important"]}
-          pb={["50px!important", null, "180px!important"]}
+          pt={['120px!important', null, '190px!important']}
+          pb={['50px!important', null, '180px!important']}
         >
           {children}
         </SectionStyled>
@@ -59,7 +73,8 @@ const MediaType = ({ mediaType, children }) => {
 }
 
 const Hero = ({ content }) => {
-  const { title, subtitle, cta, mediaType = { type: "" } } = content
+  const { title, subtitle, cta, mediaType = { type: '' } } = content
+
   return (
     <>
       <MediaType mediaType={mediaType}>
@@ -71,8 +86,29 @@ const Hero = ({ content }) => {
           <Row>
             <Col lg="6">
               <div>
-                <Title variant="hero" color={mediaType.type === 'image' ? 'light' : 'dark'}>{title}</Title>
-                <Text color={mediaType.type === 'image' ? 'light' : 'dark'}>{subtitle}</Text>
+                <Title
+                  variant="hero"
+                  color={
+                    mediaType.type === 'image'
+                      ? mediaType.darkGradient
+                        ? 'light'
+                        : 'dark'
+                      : 'dark'
+                  }
+                >
+                  {title}
+                </Title>
+                <Text
+                  color={
+                    mediaType.type === 'image'
+                      ? mediaType.darkGradient
+                        ? 'light'
+                        : 'dark'
+                      : 'dark'
+                  }
+                >
+                  {subtitle}
+                </Text>
               </div>
             </Col>
           </Row>

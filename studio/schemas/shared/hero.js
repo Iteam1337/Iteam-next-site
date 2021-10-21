@@ -37,4 +37,4 @@ export default {
         Rules.required().error('Välj vad för typ av hero du vill ha.'),
     },
   ],
-};
+}

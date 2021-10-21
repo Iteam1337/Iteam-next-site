@@ -2,14 +2,14 @@ import React from 'react'
 import PageWrapper from '../../components/PageWrapper'
 import Hero from '../../sections/common/Hero'
 import Content from '../../sections/about/Content'
-import MetaTags from '../../components/MetaTags/MetaTags'
 import Team from '../../sections/about/Team'
 import CTA from '../../sections/about/CTA'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
+import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { NextSeo } from 'next-seo'
 
 const About = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.aboutPageQuery, {
@@ -18,19 +18,38 @@ const About = ({ data, preview = false }) => {
   })
 
   const aboutPage = filterDataToSingleItem(previewData, preview)
-  const { hero, coworkersSection, titleWithCTA, ...rest } = aboutPage
+  const { hero, coworkersSection, titleWithCTA, metaTags, ...rest } = aboutPage
   return (
     <>
       <PageWrapper>
-        <MetaTags
-          title={
-            'Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag.'
-          }
-          description={
-            'Skapa värde, ha kul, göra något bra, det är våra värderingar. De lever vi efter varje dag.'
-          }
-        />
         {preview && <ExitPreviewLink />}
+        {metaTags && (
+          <NextSeo
+            title={metaTags.title}
+            titleTemplate="%s | Aktellt på Iteam"
+            description={metaTags?.description}
+            image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+            openGraph={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              images: [
+                {
+                  url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+                },
+              ],
+              site_name: 'Iteam',
+            }}
+            twitter={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+              handle: '@iteam1337',
+              site: '@iteam1337',
+              cardType: 'summary_large_image',
+            }}
+          />
+        )}
+        {preview && <ExitPreviewButton />}
         <Hero content={hero && hero} />
         <Content content={rest && rest} />
         <Team
@@ -46,6 +65,7 @@ const About = ({ data, preview = false }) => {
 const aboutPageQuery = groq`
 *[_type == 'aboutPage'] {
   ..., 
+  metaTags,
   titleWithCTA {
     ...,
   	cta {
