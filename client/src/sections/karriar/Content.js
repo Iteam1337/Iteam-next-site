@@ -18,7 +18,7 @@ const Content = ({ content, carousel }) => {
             </Col>
           </Row>
           <Box>
-            <Carousel content={carousel} />
+            <Carousel coworker={true} content={carousel} />
           </Box>
         </Container>
       </Section>

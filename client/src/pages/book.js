@@ -154,7 +154,7 @@ const Book = ({ data, preview = false }) => {
 const bookPageQuery = groq`
 *[_type == 'bookPage'] {
   ...,
-  blockText{
+ blockText {
     blockText []{
      ...,
      markDefs[]{

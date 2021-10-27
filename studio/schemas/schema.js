@@ -40,6 +40,7 @@ import xPage from './pages/xPage'
 import metaTags from './shared/metaTags'
 import bookPage from './pages/bookPage'
 import defaultReference from './shared/reference'
+import sectionWithImageAndPosition from './shared/sections/sectionWithImageAndPosition'
 import sectionWithText from './shared/sections/sectionWithText'
 import sectionWithImageAndButton from './shared/sections/sectionWithImageAndButton'
 // Then we give our schema to the builder and provide the result to Sanity
@@ -87,6 +88,7 @@ export default createSchema({
     metaTags,
     bookPage,
     defaultReference,
+    sectionWithImageAndPosition,
     sectionWithText,
     sectionWithImageAndButton,
   ]),

@@ -1,7 +1,8 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
-import { rgba } from "polished"
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
+import { rgba } from 'polished'
+import { buildInternalUrl } from '../../utils/helpers'
 
 import {
   Title,
@@ -11,13 +12,14 @@ import {
   Badge,
   Button,
   Switch,
-} from "../../components/Core"
-import { device } from "../../utils"
+} from '../../components/Core'
+import { device } from '../../utils'
+import BlockContent from '../../components/BlockContent'
 
 const SectionStyled = styled(Section)`
   position: relative;
   &::after {
-    content: "";
+    content: '';
     left: 0;
     bottom: 0;
     height: 30%;
@@ -52,8 +54,8 @@ const ULStyled = styled.ul`
     width: 100%;
 
     &:before {
-      content: "\f00c";
-      font-family: "Font Awesome 5 Free";
+      content: '\f00c';
+      font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       display: inline-block;
       font-size: 13px;
@@ -111,12 +113,10 @@ const TimePer = styled.span`
   margin-bottom: 5px;
 `
 
-const Pricing = () => {
+const Pricing = ({ content }) => {
   const [timeMonthly, setTimeMonthly] = useState(true)
-
   return (
     <>
-      {/* <!-- Pricing section --> */}
       <SectionStyled bg="#F7F7FB" pt="90px !important" pb="0 !important">
         <Container
           className="position-relative"
@@ -127,23 +127,23 @@ const Pricing = () => {
           <Row className="justify-content-center">
             <Col md="8" lg="9">
               <div className=" text-center" id="pricing">
-                <Title>Våra enkla priser</Title>
-                <Text>
-                  Vi vill göra det enkelt att jobba med oss{" "}
-                  <br className="d-none d-md-block" /> därför har vi enkla och
-                  transparenta prislistor.
-                </Text>
+                <Title>{content.section.title}</Title>
+                <BlockContent
+                  variant="thin"
+                  textAlign="center"
+                  blocks={content.section.blockText.blockText}
+                />
               </div>
             </Col>
           </Row>
           <div className="text-center pt-5">
             <div className="d-inline-flex justify-content-between align-items-center mb-5">
-              <Text>Löpande</Text>
+              <Text>{content.onGoing}</Text>
 
               <Switch onClick={() => setTimeMonthly(!timeMonthly)} />
               <div className="d-flex align-items-center">
-                <Text>Fast avtal ( &gt; 3 mån)</Text>
-                <Badge ml={2}>15% rabatt</Badge>
+                <Text>{content.agreement}</Text>
+                <Badge ml={2}>{content.discount}</Badge>
               </div>
             </div>
 
@@ -151,9 +151,9 @@ const Pricing = () => {
               <Col lg="8" className="mb-5 align-items-center">
                 <CardPricing>
                   <div className="mb-4">
-                    <TitleSmall>Helt team</TitleSmall>
+                    <TitleSmall>{content.team}</TitleSmall>
                     <div className="d-flex align-items-end justify-content-center my-3">
-                      <Currency>SEK</Currency>
+                      <Currency>{content.value}</Currency>
                       <Title
                         css={`
                           font-size: 80px;
@@ -161,57 +161,29 @@ const Pricing = () => {
                           margin-bottom: 0 !important;
                         `}
                       >
-                        {timeMonthly ? 1400 : 1200}
+                        {timeMonthly ? content.price : content.priceOngoing}
                       </Title>
                       <TimePer>/h</TimePer>
                     </div>
-                    <Text fontSize="18px">per person</Text>
+                    <Text fontSize="18px">{content.priceIncluding}</Text>
                     <ULStyled>
-                      <li>
-                        Kompetens inom UX, utveckling och teamfacilitering
-                      </li>
-                      <li> Arbetar med en avgränsad del av er verksamhet</li>
-                      <li> Stöd och coachning till dig som beställare</li>
-                      <li>2 eller 4 dagar/vecka</li>
+                      {content.includes.map((include) => (
+                        <li>{include} </li>
+                      ))}
                     </ULStyled>
                   </div>
                   <Button
                     bg="primary"
-                    onClick={() => (window.location.href = "/book")}
+                    onClick={() =>
+                      (window.location.href = buildInternalUrl(
+                        content.cta.reference
+                      ))
+                    }
                   >
-                    Boka tid för intromöte
+                    {content.cta.title}
                   </Button>
                 </CardPricing>
               </Col>
-              {/*<Col lg="6" className="mb-4">
-                <CardPricing>
-                  <div className="mb-4">
-                    <TitleSmall>Konsult</TitleSmall>
-                    <div className="d-flex align-items-end justify-content-center my-3">
-                      <Currency>SEK</Currency>
-                      <Title
-                        css={`
-                          font-size: 80px;
-                          letter-spacing: -1.38px;
-                          margin-bottom: 0 !important;
-                        `}
-                      >
-                        {timeMonthly ? 1200 : 900}
-                      </Title>
-                      <TimePer> /h</TimePer>
-                    </div>
-                    <Text fontSize="18px">timtaxa</Text>
-                    <ULStyled>
-                      <li>Frontend, Backend, Fullstack</li>
-                      <li>UX, Agil Coach, Strateg</li>
-                      <li>Minst tre månaders avtal</li>
-                      <li>Stärker upp ert team</li>
-                      <li>Minst 32h/vecka</li>
-                    </ULStyled>
-                  </div>
-                  <Button bg="secondary">Boka tid för intromöte</Button>
-                </CardPricing>
-              </Col>*/}
             </Row>
           </div>
         </Container>

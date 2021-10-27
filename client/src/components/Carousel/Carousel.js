@@ -6,6 +6,8 @@ import { Title, Box, Text } from '../../components/Core'
 import Slider from 'react-slick'
 import { device, breakpoints } from '../../utils'
 import { rgba } from 'polished'
+import sanityClient from '../../sanity-client'
+import { useNextSanityImage } from 'next-sanity-image'
 
 const SliderStyled = styled(Slider)`
   position: relative;
@@ -133,7 +135,57 @@ const SliderText = styled(Box)`
   padding: 80px 30px 0px;
 `
 
-const Carousel = ({ content }) => {
+const Coworker = ({ item }) => {
+  return (
+    <SliderItem>
+      <SliderCard>
+        <SliderImgContainer>
+          <Gravatar email={item.email} className="img-fluid" size={200} />
+        </SliderImgContainer>
+        <SliderText>
+          <Title variant="card" mb={0} mt={3}>
+            {item.whyTech}
+          </Title>
+          <Text color="dark" my={2}>
+            {item.answerTech}
+          </Text>
+          <Title variant="card" mb={0} mt={3}>
+            {item.fullname}
+          </Title>
+          <Text variant="small">{item.role}</Text>
+        </SliderText>
+      </SliderCard>
+    </SliderItem>
+  )
+}
+
+const Testimonial = ({ item }) => {
+  const imageProps = useNextSanityImage(sanityClient, item?.image?.asset._ref)
+  return (
+    <SliderItem>
+      <SliderCard>
+        <SliderImgContainer>
+          <img
+            {...imageProps}
+            alt={item.image.alt}
+            style={{ height: 'auto' }}
+          />
+        </SliderImgContainer>
+        <SliderText>
+          <Text color="dark" my={2}>
+            {item.quote}
+          </Text>
+          <Title variant="card" mb={0} mt={3}>
+            {item.fullname}
+          </Title>
+          <Text variant="small">{item.role}</Text>
+        </SliderText>
+      </SliderCard>
+    </SliderItem>
+  )
+}
+
+const Carousel = ({ content, coworker = false }) => {
   const slickSettings = {
     dots: false,
     infinite: true,
@@ -153,33 +205,13 @@ const Carousel = ({ content }) => {
       <Row className="justify-content-center">
         <Col lg="12" xl="11">
           <SliderStyled {...slickSettings}>
-            {content.map((person, i) => {
-              return (
-                <SliderItem key={i}>
-                  <SliderCard>
-                    <SliderImgContainer>
-                      <Gravatar
-                        email={person.email}
-                        className="img-fluid"
-                        size={200}
-                      />
-                    </SliderImgContainer>
-                    <SliderText>
-                      <Title variant="card" mb={0} mt={3}>
-                        {person.whyTech}
-                      </Title>
-                      <Text color="dark" my={2}>
-                        {person.answerTech}
-                      </Text>
-                      <Title variant="card" mb={0} mt={3}>
-                        {person.fullname}
-                      </Title>
-                      <Text variant="small">{person.role}</Text>
-                    </SliderText>
-                  </SliderCard>
-                </SliderItem>
+            {content.map((person, i) =>
+              coworker ? (
+                <Coworker item={person} key={i} />
+              ) : (
+                <Testimonial item={person} key={i} />
               )
-            })}
+            )}
           </SliderStyled>
         </Col>
       </Row>
