@@ -1,13 +1,13 @@
 export default {
   type: 'document',
-  name: 'sectionWithImageAndCta',
-  title: 'Text med bild och cta',
+  name: 'sectionWithImageAndPosition',
+  title: 'Text med bild',
   fields: [
     {
       type: 'string',
       name: 'hiddenTitle',
       title: 'Titel',
-      initialValue: 'Titel, en tillhörande text, CTA och en bild',
+      initialValue: 'Titel, en tillhörande text och en bild',
       readOnly: true,
       description: 'En fast rubrik för den här sektionen',
       hidden: true,
@@ -18,12 +18,6 @@ export default {
       validation: (Rules) => Rules.required().error('Ange en rubrik.'),
     },
     {
-      type: 'cta',
-      name: 'cta',
-      title: 'Knapp',
-      validation: (Rules) => Rules.required().error('Lägg in allt för CTA.'),
-    },
-    {
       type: 'blockText',
       name: 'blockText',
       validation: (Rules) => Rules.required().error('Ange en text.'),
@@ -31,7 +25,13 @@ export default {
     {
       type: 'imageWithAlt',
       name: 'imageWithAlt',
-      validation: (Rules) => Rules.required().error('Ange en bild.'),
+      validation: (Rules) => Rules.required().error('Lägg in en bild.'),
+    },
+    {
+      title: 'Bild till höger om texten',
+      name: 'imageToRight',
+      type: 'boolean',
+      initalValue: true,
     },
   ],
 }

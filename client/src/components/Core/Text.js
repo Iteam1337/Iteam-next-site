@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { color, space, typography, shadow } from "styled-system"
+import React from 'react'
+import styled from 'styled-components'
+import { color, space, typography, shadow } from 'styled-system'
 
 const Paragraph = styled.p`
   margin-bottom: 0;
@@ -12,6 +12,8 @@ const Paragraph = styled.p`
   ${space};
   ${typography};
   ${shadow};
+  color: ${({ color }) =>
+    color == 'light' ? 'rgba(255,255,255, 0.7)' : '#19191b'};
 `
 
 const ParagraphSmall = styled(Paragraph)`
@@ -21,20 +23,22 @@ const ParagraphSmall = styled(Paragraph)`
   ${space};
   ${typography};
   ${shadow};
+  color: ${({ color }) =>
+    color == 'light' ? 'rgba(255,255,255, 0.7)' : '#19191b'};
 `
 
-const Text = ({ variant, ...props }) => {
+const Text = ({ variant, color = 'dark', ...props }) => {
   let TextRender
 
   switch (variant) {
-    case "small":
+    case 'small':
       TextRender = ParagraphSmall
       break
     default:
       TextRender = Paragraph
   }
 
-  return <TextRender color="text" {...props} />
+  return <TextRender color={color} {...props} />
 }
 
 export default Text

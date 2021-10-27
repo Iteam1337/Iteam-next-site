@@ -1,0 +1,65 @@
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import styled from 'styled-components'
+import { Title, Section, Box } from '../../components/Core'
+import { device } from '../../utils'
+import BlockContent from '../../components/BlockContent'
+import { urlFor } from '../../utils/helpers'
+
+const ImgStyled = styled.img`
+  box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};
+  border-radius: 0px;
+  max-width: 70%;
+  @media ${device.sm} {
+    max-width: 50%;
+  }
+  @media ${device.md} {
+    max-width: 33%;
+  }
+  @media ${device.lg} {
+    max-width: 100%;
+  }
+  @media ${device.xl} {
+    margin-left: -50px;
+  }
+`
+
+const TextWithImageToLeft = ({ content }) => {
+  return (
+    <>
+      <Section>
+        <Container>
+          <Row className="align-items-center">
+            <Col lg="6" className="mb-4 mb-lg-0">
+              <div
+                className="pl-5"
+                data-aos="fade-right"
+                data-aos-duration="750"
+                data-aos-delay="200"
+                data-aos-once="true"
+              >
+                <ImgStyled
+                  src={urlFor(content.imageWithAlt.asset._ref)}
+                  alt=""
+                  className="img-fluid"
+                />
+              </div>
+            </Col>
+            <Col lg="6" md="9">
+              <Box className="pt-5 pt-lg-0">
+                <Title>{content.title}</Title>
+
+                <BlockContent
+                  variant="thin"
+                  blocks={content.blockText.blockText}
+                />
+              </Box>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+    </>
+  )
+}
+
+export default TextWithImageToLeft
