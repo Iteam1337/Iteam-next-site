@@ -3,7 +3,7 @@ export default {
   type: 'document',
   title: 'Startsida',
   fields: [
-    { type: 'hero', name: 'hero' },
+    // { type: 'hero', name: 'hero' },
     { type: 'layout', name: 'layout' },
     {
       type: 'document',

@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { Title, Box, Text } from "../Core"
-import BlockContent from "../../components/BlockContent"
+import React from 'react'
+import styled from 'styled-components'
+import { Title, Box, Text } from '../Core'
+import BlockContent from '../../components/BlockContent'
 
 const Card = styled(Box)`
   border-radius: 0;
@@ -22,7 +22,6 @@ const CardText = styled(Box)`
 
 const TitleStyled = styled(Title)`
   transition: 0.3s;
-
 `
 
 const CaseCard = ({
@@ -43,14 +42,11 @@ const CaseCard = ({
       </ImageContainer>
       <CardText>
         <TitleStyled variant="card" mb="12px">
-
           {title}
         </TitleStyled>
-        <Text fontSize={2} lineHeight={1.75} mb="0">
-          <BlockContent variant='thin' blocks={blocks.blockText} />
-        </Text>
+        <BlockContent variant="thin" blocks={blocks.blockText} />
       </CardText>
-    </Card >
+    </Card>
   )
 }
 

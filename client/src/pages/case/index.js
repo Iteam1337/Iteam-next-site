@@ -1,44 +1,85 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import PageWrapper from "../../components/PageWrapper"
-import { Section, Title, Text } from "../../components/Core"
-import CaseList from "../../sections/case/CaseList1"
-import CaseList2 from "../../sections/case/CaseList2"
-import CTA from "../../sections/case/CTA"
-import client from "../../sanity-client"
-import { groq } from "next-sanity"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import PageWrapper from '../../components/PageWrapper'
+import { Section, Title, Text } from '../../components/Core'
+import CaseList from '../../sections/case/CaseList1'
+import CaseList2 from '../../sections/case/CaseList2'
+import CTA from '../../sections/case/CTA'
+import { groq } from 'next-sanity'
+import { usePreviewSubscription } from '../../lib/sanity'
+import { getClient } from '../../lib/sanity.server'
+import { filterDataToSingleItem } from '../../utils/helpers'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { NextSeo } from 'next-seo'
+import { urlFor } from '../../utils/helpers'
 
-const CaseStudy = ({ casePage, casePosts }) => {
-  const sectionCards = [casePage.sectionWithImageOne, casePage.sectionWithImageTwo]
+const CaseStudy = ({ data, preview = false }) => {
+  const { data: previewData } = usePreviewSubscription(data?.casePageQuery, {
+    initialData: data?.page,
+    enabled: preview,
+  })
 
+  const casePage = filterDataToSingleItem(previewData, preview)
+
+  const sectionCards = [
+    casePage?.sectionWithImageOne,
+    casePage?.sectionWithImageTwo,
+  ]
+
+  const { metaTags, title, subTitle, titleWithCTA } = casePage
   return (
     <>
       <PageWrapper footerDark>
+        {preview && <ExitPreviewLink />}
+        {metaTags && (
+          <NextSeo
+            title={metaTags.title}
+            titleTemplate="%s | Aktellt på Iteam"
+            description={metaTags?.description}
+            image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+            openGraph={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              images: [
+                {
+                  url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+                },
+              ],
+              site_name: 'Iteam',
+            }}
+            twitter={{
+              title: metaTags?.title,
+              description: metaTags?.description,
+              image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+              handle: '@iteam1337',
+              site: '@iteam1337',
+              cardType: 'summary_large_image',
+            }}
+          />
+        )}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="6">
-                <Title variant="hero">{casePage.title}</Title>
-                <Text>
-                  {casePage.subTitle}
-                </Text>
+                <Title variant="hero">{title && title}</Title>
+                <Text>{subTitle && subTitle}</Text>
               </Col>
             </Row>
           </Container>
         </Section>
-        <CaseList posts={casePosts} />
-        <CaseList2 sectionCards={sectionCards} />
-        <CTA text={casePage.titleWithCTA} />
+        <CaseList posts={data?.casePosts && data?.casePosts} />
+        <CaseList2 sectionCards={sectionCards && sectionCards} />
+        <CTA text={titleWithCTA && titleWithCTA} />
       </PageWrapper>
     </>
   )
 }
 
 const casePageQuery = groq`
-  *[_type == 'casePage' && !(_id in path('drafts.**'))][1] 
-  {
+  *[_type == 'casePage'] {
   ...,
+  metaTags,
   titleWithCTA {
     ...,
   	cta {
@@ -56,18 +97,21 @@ const casePageQuery = groq`
 const casePostsQuery = groq`
   *[_type == 'casePost'&& !(_id in path('drafts.**'))]
   {
-...,
+    ...,
   }`
 
+export async function getStaticProps({ preview = false }) {
+  const page = await getClient(preview).fetch(casePageQuery)
+  const casePosts = await getClient(preview).fetch(casePostsQuery)
 
-export async function getStaticProps() {
-  const casePage = await client.fetch(casePageQuery)
-  const casePosts = await client.fetch(casePostsQuery)
+  if (!casePosts) return { notFound: true }
+
   return {
     props: {
-      casePage,
-      casePosts
-    }
+      preview,
+      data: { casePosts, page, casePageQuery },
+    },
   }
 }
+
 export default CaseStudy

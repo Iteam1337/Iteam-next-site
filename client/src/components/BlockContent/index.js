@@ -7,7 +7,7 @@ import Img from 'next/image'
 import { Text } from '../Core'
 import { buildInternalUrl } from '../../utils/helpers'
 
-const serializers = (withAnchor, variant, color) => ({
+const serializers = (withAnchor, variant, color, textAlign) => ({
   types: {
     block: ({ node, children }) => {
       switch (node.style) {
@@ -35,7 +35,17 @@ const serializers = (withAnchor, variant, color) => ({
             </Typography.BlockQuote>
           )
         case 'subtitle':
-          return <Text color={color}>{children}</Text>
+          return (
+            <Typography.Paragraph
+              variant="small"
+              size="subtitle"
+              color={color}
+              variant="thin"
+              textAlign={textAlign}
+            >
+              {children}
+            </Typography.Paragraph>
+          )
         default:
           console.warn('Unhandled in portable text serializer: ', node)
           return <p></p>
@@ -98,12 +108,13 @@ const BlockContent = ({
   blocks = [],
   withAnchor = false,
   variant = 'normal',
-  color = '',
+  color = 'dark',
+  textAlign = 'left',
 }) => {
   return (
     <BaseBlockContent
       blocks={blocks}
-      serializers={serializers(withAnchor, variant, color)}
+      serializers={serializers(withAnchor, variant, color, textAlign)}
     />
   )
 }

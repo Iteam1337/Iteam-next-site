@@ -18,8 +18,9 @@ export const urlFor = (source) => {
 
 export const buildInternalUrl = (reference) => {
   if (reference.slug) {
-    return `${getRouteNameFromPageType(reference._type)}/${reference.slug.current
-      }`
+    return `${getRouteNameFromPageType(reference._type)}/${
+      reference.slug.current
+    }`
   }
   return `/${getRouteNameFromPageType(
     reference._ref ? reference._ref : reference._type
@@ -57,9 +58,15 @@ export const getRouteNameFromPageType = (contentType) => {
 export const filterDataToSingleItem = (data, preview) => {
   if (!Array.isArray(data)) return data
 
-  return data.length > 1 && preview
-    ? data.filter((item) => item._id.startsWith(`drafts.`)).slice(-1)[0]
-    : data.slice(-1)[0]
+  if (data.length === 1) {
+    return data[0]
+  }
+
+  if (preview) {
+    return data.find((item) => item._id.startsWith('drafts.')) || data[0]
+  }
+
+  return data[0]
 }
 
 export const formatPhoneNumber = (phoneNumber) => {
@@ -67,12 +74,12 @@ export const formatPhoneNumber = (phoneNumber) => {
   return phoneUtil.format(number, PNF.NATIONAL)
 }
 
-export const shuffleArray = array => {
+export const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
+    const j = Math.floor(Math.random() * (i + 1))
+    const temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
   }
   return array
 }

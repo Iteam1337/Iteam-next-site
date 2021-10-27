@@ -11,6 +11,7 @@ import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const OpeningDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(
@@ -23,36 +24,35 @@ const OpeningDetails = ({ data, preview = false }) => {
   )
   const post = filterDataToSingleItem(previewData, preview)
 
-  const { title, blockText, metaTags } = post
-
   return (
     <PageWrapper footerDark>
       {post && (
         <NextSeo
-          title={metaTags?.title ?? post.title}
+          title={post?.metaTags?.title ?? post?.title}
           titleTemplate="%s | Aktuellt på Iteam"
-          description={metaTags?.description}
-          image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
+          description={post?.metaTags?.description}
+          image={urlFor(post?.metaTags?.imageWithAlt?.asset._ref)}
           openGraph={{
-            title: metaTags?.title ?? post.title,
-            description: metaTags?.description,
+            title: post?.metaTags?.title ?? post.title,
+            description: post?.metaTags?.description,
             images: [
               {
-                url: urlFor(metaTags?.imageWithAlt?.asset._ref),
+                url: urlFor(post?.metaTags?.imageWithAlt?.asset._ref),
               },
             ],
             site_name: 'Iteam',
           }}
           twitter={{
-            title: metaTags?.title ?? post.title,
-            description: metaTags?.description,
-            image: urlFor(metaTags?.imageWithAlt?.asset._ref),
+            title: post?.metaTags?.title ?? post?.title,
+            description: post?.metaTags?.description,
+            image: urlFor(post?.metaTags?.imageWithAlt?.asset._ref),
             handle: '@iteam1337',
             site: '@iteam1337',
             cardType: 'summary_large_image',
           }}
         />
       )}
+      {preview && <ExitPreviewLink />}
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>
@@ -61,7 +61,7 @@ const OpeningDetails = ({ data, preview = false }) => {
               <Box className="text-center" mb={4}>
                 Ledig tjänst
               </Box>
-              <Title variant="hero">{title && title}</Title>
+              <Title variant="hero">{post?.title && post.title}</Title>
             </Col>
           </Row>
         </Container>
@@ -71,8 +71,11 @@ const OpeningDetails = ({ data, preview = false }) => {
         <Container>
           <Row>
             <Col lg="12" xl="10" className="offset-xl-1">
-              {blockText && (
-                <BlockContent variant="thin" blocks={blockText.blockText} />
+              {post?.blockText && (
+                <BlockContent
+                  variant="thin"
+                  blocks={post?.blockText.blockText}
+                />
               )}
             </Col>
           </Row>
@@ -82,14 +85,8 @@ const OpeningDetails = ({ data, preview = false }) => {
   )
 }
 
-const openPositionsQuery = groq`
-  *[_type == 'openPositions'] {
-    ...,
-   }
-`
-
 const openPositionQuery = groq`
-    *[_type == "openPositions" && slug.current == $slug][0] {
+    *[_type == "openPositions" && slug.current == $slug] {
     ...,
     blockText{
       blockText []{
@@ -126,11 +123,12 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export const getStaticPaths = async () => {
-  const pages = (await client.fetch(openPositionsQuery)) || []
-  const paths = pages.map((page) => ({
-    params: { slug: page.slug.current },
-  }))
-  return { paths, fallback: false }
+  const query = groq`*[_type == 'openPositions' && defined(slug.current)][].slug.current`
+  const pages = await getClient().fetch(query)
+  return {
+    paths: pages.map((slug) => `/karriar/${slug}`),
+    fallback: true,
+  }
 }
 
 export default OpeningDetails

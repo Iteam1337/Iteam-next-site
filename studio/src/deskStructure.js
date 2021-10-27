@@ -13,9 +13,15 @@ import resolveProductionUrl from '../resolveProductionUrl'
 import SocialPreview from 'part:social-preview/component'
 
 export const getDefaultDocumentNode = ({ schemaType }) => {
-  if (['openPositions'].includes(schemaType)) {
+  if (['openPositions', 'casePost', 'newsPost'].includes(schemaType)) {
     return S.document().views([
       S.view.form(),
+      S.view
+        .component(Iframe)
+        .options({
+          url: (doc) => resolveProductionUrl(doc),
+        })
+        .title('Förhandsvisning'),
       S.view
         .component(
           SocialPreview({
@@ -27,18 +33,12 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
                 title: doc.metaTags.title,
                 description: doc.metaTags.description,
                 ogImage: doc.metaTags.imageWithAlt.asset,
-                siteUrl: 'https://iteam.se/karriar/' + doc.slug.current,
+                siteUrl: 'https://iteam.se/',
               }
             },
           })
         )
-        .title('Social & SEO'),
-      S.view
-        .component(Iframe)
-        .options({
-          url: (doc) => resolveProductionUrl(doc),
-        })
-        .title('Preview'),
+        .title('Förhandsvisning för delning på sociala medier'),
     ])
   }
 
@@ -49,7 +49,7 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
       .options({
         url: (doc) => resolveProductionUrl(doc),
       })
-      .title('Preview'),
+      .title('Förhandsvisning'),
   ])
 }
 
@@ -83,47 +83,55 @@ export default () =>
                     ])
                 ),
               S.divider(),
-              // S.divider(),
-              // S.listItem()
-              //   .title('Erbjudanden')
-              //   .icon(FaRegFolder)
-              //   .child(
-              //     S.list()
-              //       .title('Erbjudanden')
-              //       .items([
-              //         S.listItem()
-              //           .title('Iteam MVP')
-              //           .icon(FaRegFileAlt)
-              //           .child(
-              //             S.document()
-              //               .schemaType('mvpPage')
-              //               .documentId('mvpPage')
-              //               .title('Iteam MVP')
-              //           ),
-              //         S.divider(),
-              //         S.listItem()
-              //           .title('Iteam Scale-up')
-              //           .icon(FaRegFileAlt)
-              //           .child(
-              //             S.document()
-              //               .schemaType('scaleUpPage')
-              //               .documentId('scaleUpPage')
-              //               .title('Iteam Scale-up')
-              //           ),
-              //         S.divider(),
-              //         S.listItem()
-              //           .title('Iteam X')
-              //           .icon(FaRegFileAlt)
-              //           .child(
-              //             S.document()
-              //               .schemaType('xPage')
-              //               .documentId('xPage')
-              //               .title('Iteam X')
-              //           ),
-              //         S.divider(),
-              //       ])
-              // ),
-              // S.divider(),
+              S.listItem()
+                .title('Erbjudanden')
+                .icon(FaRegFolder)
+                .child(
+                  S.list()
+                    .title('Erbjudanden')
+                    .items([
+                      // S.listItem()
+                      //   .title('Iteam MVP')
+                      //   .icon(FaRegFileAlt)
+                      //   .child(
+                      //     S.document()
+                      //       .schemaType('mvpPage')
+                      //       .documentId('mvpPage')
+                      //       .title('Iteam MVP')
+                      //   ),
+                      S.divider(),
+                      S.listItem()
+                        .title('Iteam Scale-up')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('scaleUpPage')
+                            .documentId('scaleUpPage')
+                            .title('Iteam Scale-up')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
+                        ),
+                      // S.divider(),
+                      // S.listItem()
+                      //   .title('Iteam X')
+                      //   .icon(FaRegFileAlt)
+                      //   .child(
+                      //     S.document()
+                      //       .schemaType('xPage')
+                      //       .documentId('xPage')
+                      //       .title('Iteam X')
+                      //   ),
+                      // S.divider(),
+                    ])
+                ),
+              S.divider(),
               S.listItem()
                 .title('Case')
                 .icon(FaRegFolder)
@@ -139,6 +147,15 @@ export default () =>
                             .schemaType('casePage')
                             .documentId('casePage')
                             .title('Case landningssida')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
                         ),
                       S.divider(),
                       S.listItem()
@@ -165,6 +182,15 @@ export default () =>
                             .schemaType('newsPage')
                             .documentId('newsPage')
                             .title('Akuellt landningssida')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
                         ),
                       S.divider(),
                       S.listItem()
@@ -191,6 +217,15 @@ export default () =>
                             .schemaType('aboutPage')
                             .documentId('aboutPage')
                             .title('Om oss landningssida')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
                         ),
                       S.divider(),
                       S.listItem()
@@ -224,11 +259,9 @@ export default () =>
                               S.view
                                 .component(Iframe)
                                 .options({
-                                  url: (doc) => {
-                                    return resolveProductionUrl(doc)
-                                  },
+                                  url: (doc) => resolveProductionUrl(doc),
                                 })
-                                .title('Preview'),
+                                .title('Förhandsvisning'),
                             ])
                         ),
                       S.divider(),
@@ -258,7 +291,7 @@ export default () =>
                         .options({
                           url: (doc) => resolveProductionUrl(doc),
                         })
-                        .title('Preview'),
+                        .title('Förhandsvisning'),
                     ])
                 ),
             ])
@@ -324,7 +357,7 @@ export default () =>
             'ourPricing',
             'openings',
             'sectionWithImageAndCta',
-            'sectionWithCtaAndTextGrid',
+            'sectionWithButtonAndTextGrid',
             'textWithTags',
             'sectionWithImage',
             'mvpPage',
@@ -334,6 +367,8 @@ export default () =>
             'metaTags',
             'bookPage',
             'sectionWithImageAndPosition',
+            'sectionWithText',
+            'sectionWithImageAndButton',
           ].includes(listItem.getId())
       ),
     ])

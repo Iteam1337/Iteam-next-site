@@ -34,12 +34,7 @@ const TextGrid = ({ content }) => {
           {content.texts.map((text) => {
             return (
               <Col lg="4" className="mb-5 mb-lg-4">
-                <FeatureCard title={text.title}>
-                  <BlockContent
-                    variant="thin"
-                    blocks={text.blockText.blockText}
-                  />
-                </FeatureCard>
+                <FeatureCard title={text.title}>{text.text}</FeatureCard>
               </Col>
             )
           })}

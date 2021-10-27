@@ -1,13 +1,10 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import { Title, Section, Box, Text, Anchor } from "../../components/Core"
-import BlockContent from "../../components/BlockContent"
-import { shuffleArray } from '../../utils/helpers'
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Title, Section, Box } from '../../components/Core'
+import BlockContent from '../../components/BlockContent'
 import Carousel from '../../components/Carousel'
 
 const Content = ({ content, carousel }) => {
-
-  const shuffledCarousel = shuffleArray(carousel)
   return (
     <>
       <Section>
@@ -21,7 +18,7 @@ const Content = ({ content, carousel }) => {
             </Col>
           </Row>
           <Box>
-            <Carousel content={shuffledCarousel} />
+            <Carousel content={carousel} />
           </Box>
         </Container>
       </Section>

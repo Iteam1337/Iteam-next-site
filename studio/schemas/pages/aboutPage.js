@@ -25,6 +25,13 @@ export default {
       title: 'Text med CTA knapp',
       validation: (Rules) => Rules.required().error('Lägg in en CTA sektion.'),
     },
+    {
+      type: 'metaTags',
+      name: 'metaTags',
+      options: {
+        collapsible: true,
+      },
+    },
   ],
 
   preview: {
@@ -33,13 +40,13 @@ export default {
       subtitle: 'section',
     },
     prepare({ title = 'Om oss', name = 'about' }) {
-      const path = `/${name}`;
+      const path = `/${name}`
       return {
         path,
         name,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}

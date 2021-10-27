@@ -2,6 +2,7 @@ export default {
   name: 'mediaType',
   title: 'Media',
   type: 'document',
+
   fields: [
     {
       name: 'type',
@@ -24,6 +25,15 @@ export default {
       hidden: ({ parent }) => parent?.type !== 'image',
     },
     {
+      name: 'darkGradient',
+      title: 'Mörk gradient och vit text över hero bild.',
+      type: 'boolean',
+      initialValue: true,
+      description:
+        'Välj här om du vill ha en ljus eller mörk gradient över hero bilden. Om du väljer mörk kommer texten att bli ljus och virse versa. Mörk är default.',
+      hidden: ({ parent }) => parent?.type !== 'image',
+    },
+    {
       name: 'video',
       title: 'Video url',
       type: 'string',
@@ -37,4 +47,4 @@ export default {
       hidden: ({ parent }) => parent?.type !== 'color',
     },
   ],
-};
+}

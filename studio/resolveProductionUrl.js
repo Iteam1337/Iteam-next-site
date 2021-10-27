@@ -7,26 +7,30 @@ export default function resolveProductionUrl(doc) {
     window.location.hostname === 'localhost' ? localUrl : remoteUrl
   const previewUrl = new URL(baseUrl)
 
-  let route = ''
+  let route = '/'
   switch (doc._type) {
     case 'newsPost':
+    case 'newsPage':
       route = 'aktuellt'
       break
     case 'coworker':
       route = 'about'
       break
     case 'casePost':
+    case 'casePage':
       route = 'case'
       break
     case 'openPositions':
-      route = 'karriar'
-      break
     case 'careerPage':
       route = `karriar`
       break
     case 'bookPage':
       route = 'book'
       break
+    case 'aboutPage':
+      route = 'about'
+    case 'scaleUpPage':
+      route = 'scaleup'
     default:
       break
   }

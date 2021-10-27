@@ -4,17 +4,15 @@ import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Title, Text, Box } from '../../components/Core'
 import { groq } from 'next-sanity'
-import client from '../../sanity-client'
-
 import Sidebar from '../../sections/aktuellt/Sidebar'
 import BlogList from '../../sections/aktuellt/BlogList'
 import { NextSeo } from 'next-seo'
-
 import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const BlogDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.newsPostQuery, {
@@ -67,6 +65,7 @@ const BlogDetails = ({ data, preview = false }) => {
         />
       )}
       <PageWrapper footerDark>
+        {preview && <ExitPreviewLink />}
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
@@ -74,14 +73,12 @@ const BlogDetails = ({ data, preview = false }) => {
               <Col lg="12">
                 <Title variant="hero">{post?.title && post.title}</Title>
                 <Box className="d-flex justify-content-center">
-                  <Text mr={3}>
-                    <p>{post?.date && post.date}</p>
-                  </Text>
+                  <Text mr={3}>{post?.date && post.date}</Text>
                   <Text>
                     {post?.tags &&
                       post.tags?.map((tag) => <Link href="/">{tag}</Link>)}
                   </Text>
-                  <Text>{post.author && 'av ' + post.author}</Text>
+                  <Text>{post?.author && 'av ' + post.author}</Text>
                 </Box>
               </Col>
             </Row>
@@ -114,7 +111,7 @@ const newsPostsQuery = groq`
 `
 
 const newsPostQuery = groq`
-    *[_type == "newsPost" && slug.current == $slug][0] {
+    *[_type == "newsPost" && slug.current == $slug] {
     ...,
     blockText{
       blockText []{
@@ -139,7 +136,8 @@ export async function getStaticProps({ params, preview = false }) {
   const queryParams = { slug: params.slug }
   const data = await getClient(preview).fetch(newsPostQuery, queryParams)
   const posts = await getClient(preview).fetch(newsPostsQuery)
-  if (!data) return { notFound: true }
+
+  if (!posts) return { notFound: true }
 
   const post = filterDataToSingleItem(data, preview)
 
@@ -152,11 +150,12 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export const getStaticPaths = async () => {
-  const pages = (await client.fetch(newsPostsQuery)) || []
-  const paths = pages.map((page) => ({
-    params: { slug: page.slug.current },
-  }))
-  return { paths, fallback: false }
+  const query = groq`*[_type == 'newsPost' && defined(slug.current)][].slug.current`
+  const pages = await getClient().fetch(query)
+  return {
+    paths: pages.map((slug) => `/aktuellt/${slug}`),
+    fallback: true,
+  }
 }
 
 export default BlogDetails

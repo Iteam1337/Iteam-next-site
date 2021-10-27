@@ -12,6 +12,7 @@ import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 import { NextSeo } from 'next-seo'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const BlogDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
@@ -64,6 +65,7 @@ const BlogDetails = ({ data, preview = false }) => {
           }}
         />
       )}
+      {preview && <ExitPreviewLink />}
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>
@@ -101,13 +103,14 @@ const BlogDetails = ({ data, preview = false }) => {
 }
 
 const casePostsQuery = groq`
-*[_type == 'casePost' && !(_id in path('drafts.**'))] {
-    slug,
-    preview
-}`
+*[_type == 'casePost' && defined(slug.current) && !(_id in path('drafts.**'))][] {
+  slug,
+  preview
+}
+`
 
 const casePageQuery = groq`
-*[_type == 'casePage' && !(_id in path('drafts.**'))][1]{
+*[_id == 'casePage'] {
 titleWithCTA {
     ...,
     blockText{
@@ -139,24 +142,36 @@ titleWithCTA {
 }`
 
 const casePostQuery = groq`
-*[_type == "casePost" && slug.current == $slug][0] {
-    blockText,
-    company,
-    title,
-    subtitle, 
-    metaTags, 
-    preview
+*[_type == "casePost" && slug.current == $slug] {
+  ...,
+  blockText{
+    blockText []{
+     ...,
+     markDefs[]{
+       ...,
+       _type == "internalLink" => {
+         reference-> {
+           _type,
+           slug {
+             current
+           }
+         }
+       }
+     }
+   }
+  },
 }`
 
 export async function getStaticProps({ params, preview = false }) {
   const queryParams = { slug: params.slug }
   const data = await getClient(preview).fetch(casePostQuery, queryParams)
   const posts = await getClient(preview).fetch(casePostsQuery)
-  const page = await getClient(preview).fetch(casePageQuery)
+  const casePage = await getClient(preview).fetch(casePageQuery)
 
   if (!data) return { notFound: true }
 
   const post = filterDataToSingleItem(data, preview)
+  const page = filterDataToSingleItem(casePage, preview)
 
   return {
     props: {
@@ -173,9 +188,11 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export const getStaticPaths = async () => {
-  const pages = await getClient().fetch(casePostsQuery)
+  const query = groq`*[_type == 'casePost' && defined(slug.current)][].slug.current
+  `
+  const pages = await getClient().fetch(query)
   return {
-    paths: pages.map((slug) => `/case/${slug.current}`),
+    paths: pages.map((slug) => `/case/${slug}`),
     fallback: true,
   }
 }
