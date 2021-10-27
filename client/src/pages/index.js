@@ -11,6 +11,7 @@ import { getClient } from '../lib/sanity.server'
 import { filterDataToSingleItem } from '../utils/helpers'
 import { groq } from 'next-sanity'
 import DefaultContent from '../sections/startpage/DefaultContent'
+import ExitPreviewLink from '../components/ExitPreviewLink'
 
 const StartPage = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.startPageQuery, {
@@ -38,6 +39,7 @@ const StartPage = ({ data, preview = false }) => {
 
   return (
     <PageWrapper headerDark footerDark>
+      {preview && <ExitPreviewLink />}
       <GoogleAnalytics />
       <Hero />
       {layout.map((content) => getLayoutComponent(content))}
