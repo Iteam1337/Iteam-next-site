@@ -6,13 +6,13 @@ import Offerings from './Offerings'
 import Pricing from './Pricing'
 import Testimonial from './Testimonial'
 
-const DefaultContent = ({ data, carousel }) => {
+const DefaultContent = ({ data, carousel, ourPricing }) => {
   return (
     <>
       <Offerings data={data.ourOffers} />
       <Testimonial content={carousel} />
       <Clients clients={data.clients} />
-      <Pricing />
+      <Pricing content={ourPricing} />
       <Faq content={data.faq} />
       <CTA content={data.titleWithCta} />
     </>

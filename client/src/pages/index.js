@@ -12,7 +12,7 @@ import { filterDataToSingleItem } from '../utils/helpers'
 import { groq } from 'next-sanity'
 import DefaultContent from '../sections/startpage/DefaultContent'
 
-const StartPage = ({ data, preview = false, carousel }) => {
+const StartPage = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.startPageQuery, {
     initialData: data?.startPage,
     enabled: preview,
@@ -43,7 +43,11 @@ const StartPage = ({ data, preview = false, carousel }) => {
           }
         })}
 
-        <DefaultContent data={page.defaultLayout} carousel={carousel} />
+        <DefaultContent
+          data={page.defaultLayout}
+          carousel={data.carousel}
+          ourPricing={data.ourPricing}
+        />
       </PageWrapper>
     </>
   )
@@ -100,15 +104,39 @@ const carouselQuery = groq`
   ...,
 }`
 
+const ourPricingQuery = groq`
+*[_id == 'ourPricing'][0] {
+  ...,
+  section {
+    ...,
+    blockText {
+      blockText [] {
+        ...,
+        markDefs[] {
+          ...,
+          _type == "internalLink" => {
+            reference-> {
+              _type,
+              slug {
+                current
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
 export async function getStaticProps({ preview = false }) {
   const startPage = await getClient(preview).fetch(startPageQuery)
   const carousel = await getClient(preview).fetch(carouselQuery)
+  const ourPricing = await getClient(preview).fetch(ourPricingQuery)
 
   return {
     props: {
       preview,
-      data: { startPage, startPageQuery },
-      carousel,
+      data: { startPage, startPageQuery, carousel, ourPricing },
     },
   }
 }

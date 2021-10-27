@@ -17,7 +17,7 @@ import { NextSeo } from 'next-seo'
 import { urlFor } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'
 
-const ScaleUp = ({ data, preview = false, carousel }) => {
+const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
   const { data: previewData } = usePreviewSubscription(data?.scaleUpPageQuery, {
     initialData: data?.scaleUp,
     enabled: preview,
@@ -82,7 +82,7 @@ const ScaleUp = ({ data, preview = false, carousel }) => {
         <Role content={scaleUpPage.textWithTagsThirs} />
       )}
       <Testimonial content={carousel} />
-      <Pricing />
+      <Pricing content={ourPricing} />
       <CTA />
     </PageWrapper>
   )
@@ -144,9 +144,35 @@ const carouselQuery = groq`
   ...,
 }`
 
+const ourPricingQuery = groq`
+*[_id == 'ourPricing'][0] {
+  ...,
+  section {
+    ...,
+    blockText {
+      blockText [] {
+        ...,
+        markDefs[] {
+          ...,
+          _type == "internalLink" => {
+            reference-> {
+              _type,
+              slug {
+                current
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
 export async function getStaticProps({ preview = false }) {
   const scaleUp = await getClient(preview).fetch(scaleUpPageQuery)
   const carousel = await getClient(preview).fetch(carouselQuery)
+  const ourPricing = await getClient(preview).fetch(ourPricingQuery)
 
   if (!scaleUp) return { notFound: true }
 
@@ -155,6 +181,7 @@ export async function getStaticProps({ preview = false }) {
       preview,
       data: { scaleUp, scaleUpPageQuery },
       carousel,
+      ourPricing,
     },
   }
 }
