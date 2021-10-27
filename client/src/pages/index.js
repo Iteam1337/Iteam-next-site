@@ -25,12 +25,10 @@ const StartPage = ({ data, preview = false }) => {
       case 'textGrid':
         return <TextGrid content={content} />
       case 'sectionWithImageAndPosition':
-        switch (content.imageToRight) {
-          case true:
-            return <TextWithImageToRight content={content} />
-          case false:
-            return <TextWithImageToLeft content={content} />
+        if (content.imageToRight) {
+          return <TextWithImageToRight content={content} />
         }
+        return <TextWithImageToLeft content={content} />
       case 'sectionWithImageAndCta':
         return <SectionWithImageAndCta content={content} />
       default:
