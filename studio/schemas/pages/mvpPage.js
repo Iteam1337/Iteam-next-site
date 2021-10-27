@@ -43,6 +43,13 @@ export default {
         collapsible: true,
       },
     },
+    {
+      type: 'metaTags',
+      name: 'metaTags',
+      options: {
+        collapsible: true,
+      },
+    },
   ],
 
   preview: {

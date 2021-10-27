@@ -10,7 +10,10 @@ const SectionStyled = styled(Section)`
   border-bottom: 1px solid #242427;
 `
 
-const SectionWithImageAndCta = ({ content }) => {
+/*
+ * This component is both for linking to an id or sending to another page.
+ */
+const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
   return (
     <>
       <SectionStyled bg="dark">
@@ -49,8 +52,16 @@ const SectionWithImageAndCta = ({ content }) => {
                   />
                 </Text>
                 <div className="mt-5">
-                  <Link href={buildInternalUrl(content.cta.reference)}>
-                    <Button>{content.cta.title}</Button>
+                  <Link
+                    href={
+                      referenceTo
+                        ? referenceTo
+                        : buildInternalUrl(content.cta.reference)
+                    }
+                  >
+                    <Button>
+                      {referenceTo ? content.button : content.cta.title}
+                    </Button>
                   </Link>
                 </div>
               </div>
