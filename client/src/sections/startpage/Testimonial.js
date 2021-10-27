@@ -16,7 +16,7 @@ const Testimonial = ({ content }) => {
               </div>
             </Col>
           </Row>
-          <Carousel coworker={false} content={content.texts} />
+          <Carousel content={content.texts} />
         </Container>
       </Section>
     </>

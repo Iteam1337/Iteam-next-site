@@ -185,7 +185,7 @@ const Testimonial = ({ item }) => {
   )
 }
 
-const Carousel = ({ content, coworker }) => {
+const Carousel = ({ content, coworker = false }) => {
   const slickSettings = {
     dots: false,
     infinite: true,
