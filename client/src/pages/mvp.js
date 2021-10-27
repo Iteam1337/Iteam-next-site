@@ -42,9 +42,7 @@ const Mvp = ({ data, preview = false }) => {
           />
         )}
         {mvpPage?.sectionWithImageAndButton && (
-          <SectionWithImageAndButton
-            content={mvpPage.sectionWithImageAndButton}
-          />
+          <Content1 content={mvpPage.sectionWithImageAndButton} />
         )}
         {mvpPage?.textWithTags && (
           <TextWithTags content={mvpPage.textWithTags} />
@@ -58,7 +56,7 @@ const Mvp = ({ data, preview = false }) => {
         {mvpPage?.sectionWithImage && (
           <SectionWithImage content={mvpPage.sectionWithImage} />
         )}
-        <Testimonial />
+        {/* <Testimonial /> */}
         <CTA />
       </PageWrapper>
     </>
