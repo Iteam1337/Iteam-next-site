@@ -135,37 +135,20 @@ const SliderText = styled(Box)`
   padding: 80px 30px 0px;
 `
 
-const CarouselItem = ({ item }) => {
-  const imageProps = useNextSanityImage(sanityClient, item?.image?.asset._ref)
+const Coworker = ({ item }) => {
   return (
     <SliderItem>
       <SliderCard>
         <SliderImgContainer>
-          {item._type === 'coworker' ? (
-            <Gravatar email={item.email} className="img-fluid" size={200} />
-          ) : (
-            <img
-              {...imageProps}
-              alt={item.image.alt}
-              style={{ height: 'auto' }}
-            />
-          )}
+          <Gravatar email={item.email} className="img-fluid" size={200} />
         </SliderImgContainer>
         <SliderText>
-          {item._type === 'coworker' ? (
-            <>
-              <Title variant="card" mb={0} mt={3}>
-                {item.whyTech}
-              </Title>
-              <Text color="dark" my={2}>
-                {item.answerTech}
-              </Text>
-            </>
-          ) : (
-            <Text color="dark" my={2}>
-              {item.quote}
-            </Text>
-          )}
+          <Title variant="card" mb={0} mt={3}>
+            {item.whyTech}
+          </Title>
+          <Text color="dark" my={2}>
+            {item.answerTech}
+          </Text>
           <Title variant="card" mb={0} mt={3}>
             {item.fullname}
           </Title>
@@ -176,7 +159,33 @@ const CarouselItem = ({ item }) => {
   )
 }
 
-const Carousel = ({ content }) => {
+const Testimonial = ({ item }) => {
+  const imageProps = useNextSanityImage(sanityClient, item?.image?.asset._ref)
+  return (
+    <SliderItem>
+      <SliderCard>
+        <SliderImgContainer>
+          <img
+            {...imageProps}
+            alt={item.image.alt}
+            style={{ height: 'auto' }}
+          />
+        </SliderImgContainer>
+        <SliderText>
+          <Text color="dark" my={2}>
+            {item.quote}
+          </Text>
+          <Title variant="card" mb={0} mt={3}>
+            {item.fullname}
+          </Title>
+          <Text variant="small">{item.role}</Text>
+        </SliderText>
+      </SliderCard>
+    </SliderItem>
+  )
+}
+
+const Carousel = ({ content, coworker }) => {
   const slickSettings = {
     dots: false,
     infinite: true,
@@ -196,9 +205,13 @@ const Carousel = ({ content }) => {
       <Row className="justify-content-center">
         <Col lg="12" xl="11">
           <SliderStyled {...slickSettings}>
-            {content.map((person, i) => (
-              <CarouselItem item={person} key={i} />
-            ))}
+            {content.map((person, i) =>
+              coworker ? (
+                <Coworker item={person} key={i} />
+              ) : (
+                <Testimonial item={person} key={i} />
+              )
+            )}
           </SliderStyled>
         </Col>
       </Row>
