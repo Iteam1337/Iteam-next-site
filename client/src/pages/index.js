@@ -20,36 +20,36 @@ const StartPage = ({ data, preview = false }) => {
   const page = filterDataToSingleItem(previewData, preview)
   const { layout } = page
 
-  return (
-    <>
-      <PageWrapper headerDark footerDark>
-        <GoogleAnalytics />
-        <Hero />
-        {layout.map((content) => {
-          switch (content._type) {
-            case 'textGrid':
-              return <TextGrid content={content} />
-            case 'sectionWithImageAndPosition':
-              switch (content.imageToRight) {
-                case true:
-                  return <TextWithImageToRight content={content} />
-                case false:
-                  return <TextWithImageToLeft content={content} />
-              }
-            case 'sectionWithImageAndCta':
-              return <SectionWithImageAndCta content={content} />
-            default:
-              console.log('Type does not exist')
-          }
-        })}
+  const getLayoutComponent = (content) => {
+    switch (content._type) {
+      case 'textGrid':
+        return <TextGrid content={content} />
+      case 'sectionWithImageAndPosition':
+        switch (content.imageToRight) {
+          case true:
+            return <TextWithImageToRight content={content} />
+          case false:
+            return <TextWithImageToLeft content={content} />
+        }
+      case 'sectionWithImageAndCta':
+        return <SectionWithImageAndCta content={content} />
+      default:
+        console.log('Type does not exist')
+    }
+  }
 
-        <DefaultContent
-          data={page.defaultLayout}
-          carousel={data.carousel}
-          ourPricing={data.ourPricing}
-        />
-      </PageWrapper>
-    </>
+  return (
+    <PageWrapper headerDark footerDark>
+      <GoogleAnalytics />
+      <Hero />
+      {layout.map((content) => getLayoutComponent(content))}
+
+      <DefaultContent
+        data={page.defaultLayout}
+        carousel={data.carousel}
+        ourPricing={data.ourPricing}
+      />
+    </PageWrapper>
   )
 }
 
