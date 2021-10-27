@@ -17,6 +17,7 @@ const StartPage = ({ data, preview = false }) => {
     initialData: data?.startPage,
     enabled: preview,
   })
+
   const page = filterDataToSingleItem(previewData, preview)
   const { layout } = page
 
@@ -52,7 +53,7 @@ const StartPage = ({ data, preview = false }) => {
 }
 
 const startPageQuery = groq`
-*[_id == 'startPage'] {
+*[_type == 'startPage'] {
   ...,
   layout[] {
     ...,
@@ -130,6 +131,11 @@ export async function getStaticProps({ preview = false }) {
   const startPage = await getClient(preview).fetch(startPageQuery)
   const carousel = await getClient(preview).fetch(carouselQuery)
   const ourPricing = await getClient(preview).fetch(ourPricingQuery)
+
+  if (!startPage)
+    return {
+      notfound: true,
+    }
 
   return {
     props: {
