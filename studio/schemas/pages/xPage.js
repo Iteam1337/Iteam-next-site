@@ -29,7 +29,7 @@ export default {
         },
         {
           type: 'title',
-          name: 'button',
+          name: 'cta',
           title: 'Titel för knappen',
           description:
             'Knapp som leder till "Boka en gratis rådgivning" längre ner på sidan.',
