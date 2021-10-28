@@ -78,7 +78,7 @@ export default () =>
                         .options({
                           url: (doc) => resolveProductionUrl(doc),
                         })
-                        .title('Preview'),
+                        .title('Förhandsvisning'),
                     ])
                 ),
               S.divider(),
@@ -104,7 +104,7 @@ export default () =>
                                 .options({
                                   url: (doc) => resolveProductionUrl(doc),
                                 })
-                                .title('Preview'),
+                                .title('Förhandsvisning'),
                             ])
                         ),
                       S.divider(),
@@ -126,17 +126,25 @@ export default () =>
                                 .title('Förhandsvisning'),
                             ])
                         ),
-                      // S.divider(),
-                      // S.listItem()
-                      //   .title('Iteam X')
-                      //   .icon(FaRegFileAlt)
-                      //   .child(
-                      //     S.document()
-                      //       .schemaType('xPage')
-                      //       .documentId('xPage')
-                      //       .title('Iteam X')
-                      //   ),
-                      // S.divider(),
+                      S.divider(),
+                      S.listItem()
+                        .title('Iteam X')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('xPage')
+                            .documentId('xPage')
+                            .title('Iteam X')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Förhandsvisning'),
+                            ])
+                        ),
                     ])
                 ),
               S.divider(),
