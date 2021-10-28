@@ -6,12 +6,13 @@ import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 
 const SectionStyled = styled(Section)`
-  border-bottom: 1px solid #242427;
+  border-bottom: 1px solid ${({ bg }) => (bg == 'dark' ? '#242427' : 'white')};
+  background-color: ${({ bg }) => (bg == 'dark' ? 'rgb(25,25,27)' : 'white')};
+  overflow: hidden;
 `
-
-const SectionWithImage = ({ content }) => {
+const SectionWithImage = ({ content, bg = 'light' }) => {
   return (
-    <SectionStyled bg="dark">
+    <SectionStyled bg={bg}>
       <Container>
         <Row className="justify-content-center align-items-center">
           <Col lg="5" className="offset-lg-1 order-lg-2 mb-5 mb-lg-0">
@@ -39,9 +40,11 @@ const SectionWithImage = ({ content }) => {
             data-aos-once="true"
           >
             <div>
-              <Title color="light">{content.title}</Title>
+              <Title color={bg === 'dark' ? 'light' : 'dark'}>
+                {content.title}
+              </Title>
               <BlockContent
-                color="light"
+                color={bg === 'dark' ? 'light' : 'dark'}
                 blocks={content.blockText.blockText}
               />
             </div>

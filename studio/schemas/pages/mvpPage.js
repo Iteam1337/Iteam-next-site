@@ -13,9 +13,10 @@ export default {
       },
     },
     {
-      type: 'sectionWithImageAndCta',
-      name: 'sectionWithImageAndCta',
-      title: 'Sektion med rubrik, text, cta och bild',
+      type: 'sectionWithImageAndButton',
+      name: 'sectionWithImageAndButton',
+      title:
+        'Sektion med rubrik, text, bild och en knapp som leder till kalendern längre ner på sidan.',
       options: {
         collapsible: true,
       },
@@ -26,9 +27,10 @@ export default {
       title: 'Text med taggar',
     },
     {
-      type: 'sectionWithImageAndCta',
-      name: 'sectionWithImageAndCta2',
-      title: 'Sektion med rubrik, text, cta och bild',
+      type: 'sectionWithImageAndButton',
+      name: 'sectionWithImageAndButton2',
+      title:
+        'Sektion med rubrik, text, bild och en knapp som leder till kalendern längre ner på sidan.',
       options: {
         collapsible: true,
       },
@@ -37,6 +39,13 @@ export default {
       type: 'sectionWithImage',
       name: 'sectionWithImage',
       title: 'Sektion med rubrik, text och bild',
+      options: {
+        collapsible: true,
+      },
+    },
+    {
+      type: 'metaTags',
+      name: 'metaTags',
       options: {
         collapsible: true,
       },

@@ -72,7 +72,7 @@ const MediaType = ({ mediaType, children }) => {
   }
 }
 
-const Hero = ({ content }) => {
+const Hero = ({ content, flipTexts = false }) => {
   const { title, subtitle, cta, mediaType = { type: '' } } = content
 
   return (
@@ -84,8 +84,13 @@ const Hero = ({ content }) => {
           `}
         >
           <Row>
-            <Col lg="6">
-              <div>
+            <Col lg="7">
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: flipTexts ? 'column-reverse' : 'column',
+                }}
+              >
                 <Title
                   variant="hero"
                   color={

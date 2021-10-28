@@ -31,6 +31,8 @@ export default function resolveProductionUrl(doc) {
       route = 'about'
     case 'scaleUpPage':
       route = 'scaleup'
+    case 'mvpPage':
+      route = 'mvp'
     default:
       break
   }

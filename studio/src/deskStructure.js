@@ -7,7 +7,6 @@ import {
   FaRegClone,
   FaRegFolder,
 } from 'react-icons/fa'
-import title from '../schemas/shared/title'
 import resolveProductionUrl from '../resolveProductionUrl'
 
 import SocialPreview from 'part:social-preview/component'
@@ -90,15 +89,24 @@ export default () =>
                   S.list()
                     .title('Erbjudanden')
                     .items([
-                      // S.listItem()
-                      //   .title('Iteam MVP')
-                      //   .icon(FaRegFileAlt)
-                      //   .child(
-                      //     S.document()
-                      //       .schemaType('mvpPage')
-                      //       .documentId('mvpPage')
-                      //       .title('Iteam MVP')
-                      //   ),
+                      S.listItem()
+                        .title('Iteam MVP')
+                        .icon(FaRegFileAlt)
+                        .child(
+                          S.document()
+                            .schemaType('mvpPage')
+                            .documentId('mvpPage')
+                            .title('Iteam MVP')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Preview'),
+                            ])
+                        ),
                       S.divider(),
                       S.listItem()
                         .title('Iteam Scale-up')
