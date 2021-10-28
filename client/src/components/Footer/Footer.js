@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
-import { Title, Box } from "../Core"
-import Logo from "../Logo"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Title, Box } from '../Core'
+import Logo from '../Logo'
 
 const TitleStyled = styled(Title)`
   font-size: 16px;
@@ -68,7 +68,7 @@ const Footer = ({ isDark = true }) => {
   return (
     <>
       {/* <!-- Footer section --> */}
-      <Box bg={isDark ? "dark" : "light"}>
+      <Box bg={isDark ? 'dark' : 'light'}>
         <Container>
           <Box
             css={`
@@ -85,11 +85,11 @@ const Footer = ({ isDark = true }) => {
                     <div className="mb-5 mb-lg-4">
                       <TitleStyled
                         variant="card"
-                        color={isDark ? "light" : "dark"}
+                        color={isDark ? 'light' : 'dark'}
                       >
                         Följ oss
                       </TitleStyled>
-                      <UlStyled color={isDark ? "light" : "dark"}>
+                      <UlStyled color={isDark ? 'light' : 'dark'}>
                         <li>
                           <a
                             href="https://facebook.com/iteam1337"
@@ -117,6 +117,15 @@ const Footer = ({ isDark = true }) => {
                             Instagram
                           </a>
                         </li>
+                        <li>
+                          <a
+                            href="https://linkedin.com/company/iteam1337"
+                            target="_blank"
+                          >
+                            <i className="icon icon-logo-linkedin"></i>&nbsp;
+                            Linkedin
+                          </a>
+                        </li>
                       </UlStyled>
                     </div>
                   </Col>
@@ -124,20 +133,20 @@ const Footer = ({ isDark = true }) => {
                     <div className="mb-5 mb-lg-4">
                       <TitleStyled
                         variant="card"
-                        color={isDark ? "light" : "dark"}
+                        color={isDark ? 'light' : 'dark'}
                       >
                         Besök oss
                         <br />
                       </TitleStyled>
-                      <UlStyled color={isDark ? "light" : "dark"}>
+                      <UlStyled color={isDark ? 'light' : 'dark'}>
                         <li>
                           <a
                             href="https://maps.google.com/?q=Iteam, Järntorgsgatan, Göteborg"
                             target="_blank"
                           >
                             Iteam Solutions AB
-                              <br />
-                              Järntorgsgatan 12
+                            <br />
+                            Järntorgsgatan 12
                             <br />
                             413 01 Göteborg
                           </a>
@@ -181,11 +190,11 @@ const Footer = ({ isDark = true }) => {
                     <div className="mb-lg-4">
                       <TitleStyled
                         variant="card"
-                        color={isDark ? "light" : "dark"}
+                        color={isDark ? 'light' : 'dark'}
                       >
                         Kontakta oss
                       </TitleStyled>
-                      <UlStyled color={isDark ? "light" : "dark"}>
+                      <UlStyled color={isDark ? 'light' : 'dark'}>
                         <li>
                           <a href="/book">Kontakt</a>
                         </li>
@@ -206,7 +215,7 @@ const Footer = ({ isDark = true }) => {
             <Row className="align-items-center">
               <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
                 <p>
-                  &copy; 2021 Iteam, All Rights Reserved. Our{" "}
+                  &copy; 2021 Iteam, All Rights Reserved. Our{' '}
                   <a href="/privacy">privacy policy</a>.
                 </p>
               </Col>
