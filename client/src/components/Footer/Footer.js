@@ -92,11 +92,11 @@ const Footer = ({ isDark = true }) => {
                       <UlStyled color={isDark ? 'light' : 'dark'}>
                         <li>
                           <a
-                            href="https://facebook.com/iteam1337"
+                            href="https://linkedin.com/company/iteam1337"
                             target="_blank"
                           >
-                            <i className="icon icon-logo-facebook"></i>&nbsp;
-                            Facebook
+                            <i className="icon icon-logo-linkedin"></i>&nbsp;
+                            Linkedin
                           </a>
                         </li>
                         <li>
@@ -109,21 +109,21 @@ const Footer = ({ isDark = true }) => {
                           </a>
                         </li>
                         <li>
+                          <li>
+                            <a
+                              href="https://facebook.com/iteam1337"
+                              target="_blank"
+                            >
+                              <i className="icon icon-logo-facebook"></i>&nbsp;
+                              Facebook
+                            </a>
+                          </li>
                           <a
                             href="https://instagram.com/iteam1337"
                             target="_blank"
                           >
                             <i className="icon icon-logo-instagram"></i>&nbsp;
                             Instagram
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://linkedin.com/company/iteam1337"
-                            target="_blank"
-                          >
-                            <i className="icon icon-logo-linkedin"></i>&nbsp;
-                            Linkedin
                           </a>
                         </li>
                       </UlStyled>
