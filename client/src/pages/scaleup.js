@@ -2,11 +2,11 @@ import React from 'react'
 import PageWrapper from '../components/PageWrapper'
 import {
   SectionWithButtonAndTextGrid,
-  SectionWithImageAndButton,
   SectionWithImage,
   TextWithTags,
 } from '../components/Sections'
 import Role from '../sections/scaleup/Role'
+import SectionWithImageAndButton from '../sections/scaleup/SectionWithImageAndButton'
 import Case from '../sections/scaleup/Case'
 import Testimonial from '../sections/startpage/Testimonial'
 import Pricing from '../sections/startpage/Pricing'
