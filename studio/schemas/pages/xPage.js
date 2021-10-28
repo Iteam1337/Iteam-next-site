@@ -28,13 +28,19 @@ export default {
             ),
         },
         {
-          type: 'title',
           name: 'cta',
-          title: 'Titel för knappen',
+          type: 'document',
+          title: 'Cta',
           description:
             'Knapp som leder till "Boka en gratis rådgivning" längre ner på sidan.',
-          validation: (Rules) =>
-            Rules.required().error('Lägg till text för knappen.'),
+          fields: [
+            {
+              name: 'title',
+              type: 'string',
+              description: 'Ange text till CTA.',
+              title: 'Text på knappen',
+            },
+          ],
         },
         {
           name: 'mediaType',
