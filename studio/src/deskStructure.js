@@ -7,7 +7,6 @@ import {
   FaRegClone,
   FaRegFolder,
 } from 'react-icons/fa'
-import title from '../schemas/shared/title'
 import resolveProductionUrl from '../resolveProductionUrl'
 
 import SocialPreview from 'part:social-preview/component'
@@ -98,6 +97,15 @@ export default () =>
                             .schemaType('mvpPage')
                             .documentId('mvpPage')
                             .title('Iteam MVP')
+                            .views([
+                              S.view.form(),
+                              S.view
+                                .component(Iframe)
+                                .options({
+                                  url: (doc) => resolveProductionUrl(doc),
+                                })
+                                .title('Preview'),
+                            ])
                         ),
                       S.divider(),
                       S.listItem()
