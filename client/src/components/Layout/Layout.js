@@ -13,8 +13,6 @@ import AOS from 'aos'
 import Header from '../Header'
 import Footer from '../Footer'
 
-import ModalVideo from '../ModalVideo'
-
 import GlobalContext from '../../context/GlobalContext'
 
 import GlobalStyle from '../../utils/globalStyle'
