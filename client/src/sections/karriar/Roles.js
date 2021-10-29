@@ -1,8 +1,8 @@
-import React from "react"
-import Link from "next/link"
-import { Container, Row, Col } from "react-bootstrap"
-import { Title, Section } from "../../components/Core"
-import styled from "styled-components"
+import React from 'react'
+import Link from 'next/link'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Title, Section } from '../../components/Core'
+import styled from 'styled-components'
 import BlockContent from '../../components/BlockContent'
 
 const Card = styled.a`
@@ -40,7 +40,7 @@ const Location = styled.span`
 `
 
 const RolesCard = ({
-  color = "primary",
+  color = 'primary',
   title,
   location,
   type,
@@ -70,7 +70,10 @@ const Roles = ({ content, openPositions }) => (
           <Col lg="6" className="text-center">
             <div>
               <Title>{content.title}</Title>
-              <BlockContent variant='thin' blocks={content.subtitle.blockText} />
+              <BlockContent
+                variant="thin"
+                blocks={content.subtitle.blockText}
+              />
             </div>
           </Col>
         </Row>

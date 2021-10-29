@@ -7,16 +7,13 @@ export default {
       type: 'string',
       title: 'Titel',
       name: 'title',
-      validation: (Rules) =>
-        Rules.required().error('Ange en rubrik.'),
-
+      validation: (Rules) => Rules.required().error('Ange en rubrik.'),
     },
     {
       type: 'string',
       title: 'Underrubrik',
       name: 'subtitle',
-      validation: (Rules) =>
-        Rules.required().error('Ange en underrubrik.'),
+      validation: (Rules) => Rules.required().error('Ange en underrubrik.'),
     },
     {
       name: 'texts',
@@ -55,4 +52,4 @@ export default {
       ],
     },
   ],
-};
+}

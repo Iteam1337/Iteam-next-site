@@ -1,13 +1,13 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaGithub,
-} from "react-icons/fa"
-import { Button } from "react-bootstrap"
+} from 'react-icons/fa'
+import { Button } from 'react-bootstrap'
 
 const icons = {
   Facebook: <FaFacebookF />,
@@ -49,12 +49,12 @@ const Social = ({ items, outline, inverse, className, ...rest }) => {
       {items.map((item) => (
         <div key={item.title}>
           <Button
-            variant={"outline-primary"}
+            variant={'outline-primary'}
             size="sm"
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={inverse && "inverse"}
+            className={inverse && 'inverse'}
           >
             {icons[item.title]}
           </Button>

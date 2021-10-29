@@ -7,15 +7,13 @@ export default {
       title: 'Kortare text för förhandsvisning',
       name: 'description',
       type: 'text',
-      validation: (Rules) =>
-        Rules.required().error('Ange en beskrivning.'),
+      validation: (Rules) => Rules.required().error('Ange en beskrivning.'),
     },
     {
       title: 'Bild',
       name: 'image',
       type: 'imageWithAlt',
-      validation: (Rules) =>
-        Rules.required().error('Lägg in en bild.'),
+      validation: (Rules) => Rules.required().error('Lägg in en bild.'),
     },
   ],
-};
+}

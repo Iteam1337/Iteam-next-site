@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const QuoteMark = styled.div`
   font-size: 2.5rem;
@@ -19,7 +19,7 @@ const BlockQuote = styled.blockquote`
   flex-direction: row;
 `
 
-export default function Quote({ author = "", authorTitle = "", text }) {
+export default function Quote({ author = '', authorTitle = '', text }) {
   return (
     <BlockQuote>
       <QuoteMark aria-hidden="true">&ldquo;</QuoteMark>

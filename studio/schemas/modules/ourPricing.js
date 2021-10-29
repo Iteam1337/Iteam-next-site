@@ -8,8 +8,7 @@ export default {
       name: 'section',
       description:
         'Här fyller vi i vårt timpris per person, för ett helt team. Modulen visas på startsidan och på Scale-up sidan.',
-      validation: (Rules) =>
-        Rules.required().error('Fyll i denna sektionen.'),
+      validation: (Rules) => Rules.required().error('Fyll i denna sektionen.'),
     },
     {
       type: 'string',
@@ -24,16 +23,14 @@ export default {
       name: 'agreement',
       title: 'Avtal',
       initialValue: 'Fast avtal ( > 3 mån)',
-      validation: (Rules) =>
-        Rules.required().error('Ange en text för avtal.'),
+      validation: (Rules) => Rules.required().error('Ange en text för avtal.'),
     },
     {
       type: 'string',
       name: 'discount',
       title: 'Rabatt',
       initialValue: '15% rabatt',
-      validation: (Rules) =>
-        Rules.required().error('Ange en text för rabatt.'),
+      validation: (Rules) => Rules.required().error('Ange en text för rabatt.'),
     },
     {
       type: 'string',
@@ -47,8 +44,7 @@ export default {
       type: 'string',
       name: 'value',
       title: 'Valuta',
-      validation: (Rules) =>
-        Rules.required().error('Ange valuta.'),
+      validation: (Rules) => Rules.required().error('Ange valuta.'),
     },
     {
       type: 'string',
@@ -85,8 +81,7 @@ export default {
     {
       type: 'cta',
       name: 'cta',
-      validation: (Rules) =>
-        Rules.required().error('Fyll i CTA.'),
+      validation: (Rules) => Rules.required().error('Fyll i CTA.'),
     },
   ],
-};
+}

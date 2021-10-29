@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Container } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container } from 'react-bootstrap'
 
-import { Box } from "../../components/Core"
+import { Box } from '../../components/Core'
 
 const Brand = styled(Box)`
   opacity: 0.7;
@@ -15,7 +15,7 @@ const Brand = styled(Box)`
 const Clients = () => (
   <>
     {/* <!-- Clients Brands Area --> */}
-    <Box py={"30px"}>
+    <Box py={'30px'}>
       <Container>
         <Box
           className="d-flex justify-content-center justify-content-lg-between

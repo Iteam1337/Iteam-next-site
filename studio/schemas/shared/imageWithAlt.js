@@ -8,9 +8,9 @@ export default {
   validation: (Rule) =>
     Rule.custom((fields) => {
       if (fields?.asset && !fields?.alt)
-        return 'Lägg in en alternativ text för bilden.';
+        return 'Lägg in en alternativ text för bilden.'
 
-      return true;
+      return true
     }),
   fields: [
     {
@@ -23,4 +23,4 @@ export default {
       },
     },
   ],
-};
+}

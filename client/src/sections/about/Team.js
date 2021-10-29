@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import Gravatar from "react-gravatar"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import Gravatar from 'react-gravatar'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from "../../components/Core"
-import Link from "next/link"
-import { formatPhoneNumber, urlFor } from "../../utils/helpers"
+import { Title, Section, Box, Text } from '../../components/Core'
+import Link from 'next/link'
+import { formatPhoneNumber, urlFor } from '../../utils/helpers'
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -46,7 +46,7 @@ const TeamCard = ({ coworker }) => {
                   src={urlFor(profilePic.image.asset._ref)}
                   alt={`Profilbild på ${fullname}`}
                   className="img-fluid"
-                  style={{ width: 200, height: 200, objectFit: "cover" }}
+                  style={{ width: 200, height: 200, objectFit: 'cover' }}
                 />
               ) : (
                 <Gravatar email={email} className="img-fluid" size={200} />

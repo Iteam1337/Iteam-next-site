@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const List = styled.ul`
   li {
@@ -11,7 +11,7 @@ const List = styled.ul`
     margin-bottom: 17px;
     display: flex;
     &:before {
-      content: "";
+      content: '';
       min-width: 10px;
       max-width: 10px;
       min-height: 10px;

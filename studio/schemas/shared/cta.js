@@ -5,11 +5,11 @@ export default {
   validation: (Rule) =>
     Rule.custom((fields) => {
       if (fields?.title && !fields?.reference)
-        return 'Lägg till en referens för vart din knapp ska leda';
+        return 'Lägg till en referens för vart din knapp ska leda'
       if (!fields?.title && fields?.reference)
-        return 'Lägg till en text till din knapp';
+        return 'Lägg till en text till din knapp'
 
-      return true;
+      return true
     }),
   fields: [
     {
@@ -42,4 +42,4 @@ export default {
       ],
     },
   ],
-};
+}

@@ -1,1 +1,1 @@
-export { default } from "./ModalVideo"
+export { default } from './ModalVideo'

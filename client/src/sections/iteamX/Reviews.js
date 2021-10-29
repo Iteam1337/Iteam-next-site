@@ -1,15 +1,15 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from "../../components/Core"
+import { Title, Section, Box, Text } from '../../components/Core'
 
-import imgB1 from "../../assets/image/png/testimonial-brand-logo-1.png"
-import imgB2 from "../../assets/image/png/testimonial-brand-logo-2.png"
-import ltu from "../../assets/image/svg/ltu_logo_sv.svg"
+import imgB1 from '../../assets/image/png/testimonial-brand-logo-1.png'
+import imgB2 from '../../assets/image/png/testimonial-brand-logo-2.png'
+import ltu from '../../assets/image/svg/ltu_logo_sv.svg'
 
-import imgR1 from "../../assets/image/jpeg/l8-testimonial-user-image-1.jpg"
-import imgR2 from "../../assets/image/jpeg/l8-testimonial-user-image-2.jpg"
-import johanna from "../../assets/image/jpeg/johanna_lindberg.jpg"
+import imgR1 from '../../assets/image/jpeg/l8-testimonial-user-image-1.jpg'
+import imgR2 from '../../assets/image/jpeg/l8-testimonial-user-image-2.jpg'
+import johanna from '../../assets/image/jpeg/johanna_lindberg.jpg'
 
 const ContentCard = ({
   className,
@@ -21,7 +21,7 @@ const ContentCard = ({
   ...rest
 }) => (
   <Box
-    minHeight={["320px", null, `400px`]}
+    minHeight={['320px', null, `400px`]}
     borderColor="border"
     borderRadius={10}
     className={`d-flex flex-column ${className}`}
@@ -36,7 +36,7 @@ const ContentCard = ({
         src={imageBrand}
         alt=""
         className="img-fluid"
-        css={"filter: opacity(30%); height: 100px;"}
+        css={'filter: opacity(30%); height: 100px;'}
       />
     </Box>
     <Text color="lightShade" mt={4} mb={3} className="text-center mb-0">

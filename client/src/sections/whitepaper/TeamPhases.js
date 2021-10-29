@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
-import Slider from "react-slick"
-import { rgba } from "polished"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
+import Slider from 'react-slick'
+import { rgba } from 'polished'
 
-import { Title, Section, Box, Text } from "../../components/Core"
-import { device, breakpoints } from "../../utils"
+import { Title, Section, Box, Text } from '../../components/Core'
+import { device, breakpoints } from '../../utils'
 
 const SectionStyled = styled(Section)``
 
@@ -27,8 +27,8 @@ const SliderStyled = styled(Slider)`
     margin-top: -20px;
     &::before {
       position: absolute;
-      content: "";
-      font-family: "Font Awesome 5 Free";
+      content: '';
+      font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       font-size: 20px;
       top: 50%;
@@ -41,7 +41,7 @@ const SliderStyled = styled(Slider)`
   .slick-arrow.slick-prev {
     left: 0;
     &:before {
-      content: "\f060";
+      content: '\f060';
     }
     @media ${device.md} {
       /* margin-left: 60px; */
@@ -53,7 +53,7 @@ const SliderStyled = styled(Slider)`
     left: auto;
     transform: translate(50%, -50%);
     &:before {
-      content: "\f061";
+      content: '\f061';
     }
     @media ${device.md} {
       /* margin-right: 60px; */
@@ -169,7 +169,7 @@ const Testimonial = () => {
   return (
     <>
       {/* <!-- testimonial section --> */}
-      <SectionStyled bg="#f6f6f8" pb={["0px!important"]}>
+      <SectionStyled bg="#f6f6f8" pb={['0px!important']}>
         <Container>
           <Row className="justify-content-center mb-4">
             <Col lg="10">

@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text } from "../../components/Core"
-import { device } from "../../utils"
-import imgPM from "../../assets/image/case/predictive-movement.png"
-import Link from "next/link"
+import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { device } from '../../utils'
+import imgPM from '../../assets/image/case/predictive-movement.png'
+import Link from 'next/link'
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;

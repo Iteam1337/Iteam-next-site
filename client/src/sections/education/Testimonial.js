@@ -1,13 +1,13 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
-import Slider from "react-slick"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
+import Slider from 'react-slick'
 
-import { Title, Section, Box, Text } from "../../components/Core"
-import { breakpoints } from "../../utils"
+import { Title, Section, Box, Text } from '../../components/Core'
+import { breakpoints } from '../../utils'
 
-import imgC1 from "../../assets/image/case/TRR_logo_lila.svg"
-import imgC2 from "../../assets/image/case/skelleftea.jpg"
+import imgC1 from '../../assets/image/case/TRR_logo_lila.svg'
+import imgC2 from '../../assets/image/case/skelleftea.jpg'
 
 const SliderStyled = styled(Slider)`
   .slick-dots {

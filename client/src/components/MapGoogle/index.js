@@ -1,1 +1,1 @@
-export { default } from "./MapGoogle"
+export { default } from './MapGoogle'

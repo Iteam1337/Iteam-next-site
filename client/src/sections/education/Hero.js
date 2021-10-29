@@ -1,12 +1,12 @@
-import React, { useState, useContext } from "react"
-import styled from "styled-components"
+import React, { useState, useContext } from 'react'
+import styled from 'styled-components'
 
-import { Container, Row, Col, FormControl } from "react-bootstrap"
+import { Container, Row, Col, FormControl } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text, Badge } from "../../components/Core"
-import GlobalContext from "../../context/GlobalContext"
+import { Title, Button, Section, Box, Text, Badge } from '../../components/Core'
+import GlobalContext from '../../context/GlobalContext'
 
-import imgHero from "../../assets/image/png/Sofa-Large.png"
+import imgHero from '../../assets/image/png/Sofa-Large.png'
 
 const ImgRight = styled(Box)``
 

@@ -1,7 +1,7 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text, Span } from "../../components/Core"
+import { Title, Button, Section, Box, Text, Span } from '../../components/Core'
 
 const Hero = () => {
   return (
