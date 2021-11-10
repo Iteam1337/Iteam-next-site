@@ -59,6 +59,7 @@ const serializers = (withAnchor, variant, color, textAlign) => ({
           layout="responsive"
           sizes="(max-width: 800px) 100vw, 800px"
           alt={node.alt}
+          quality={100}
         />
       )
     },
