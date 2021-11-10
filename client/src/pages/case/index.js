@@ -95,7 +95,7 @@ const casePageQuery = groq`
   }`
 
 const casePostsQuery = groq`
-  *[_type == 'casePost'&& !(_id in path('drafts.**'))] | order(_createdAt)
+  *[_type == 'casePost'&& !(_id in path('drafts.**'))] | order(_createdAt desc)
   {
     ...,
   }`
