@@ -4,29 +4,29 @@ import React, {
   useLayoutEffect,
   useContext,
   useRef,
-} from "react"
+} from 'react'
 
-import styled, { ThemeProvider } from "styled-components"
-import Head from "next/head"
-import AOS from "aos"
+import styled, { ThemeProvider } from 'styled-components'
+import Head from 'next/head'
+import AOS from 'aos'
 
-import Header from "../Header"
-import Footer from "../Footer"
+import Header from '../Header'
+import Footer from '../Footer'
 
-import ModalVideo from "../ModalVideo"
+import ModalVideo from '../ModalVideo'
 
-import GlobalContext from "../../context/GlobalContext"
+import GlobalContext from '../../context/GlobalContext'
 
-import GlobalStyle from "../../utils/globalStyle"
+import GlobalStyle from '../../utils/globalStyle'
 
-import imgFavicon from "../../assets/image/png/favicon.png"
+import imgFavicon from '../../assets/image/png/favicon.png'
 
-import { get, merge } from "lodash"
+import { get, merge } from 'lodash'
 // the full theme object
-import { theme as baseTheme } from "../../utils"
+import { theme as baseTheme } from '../../utils'
 
 // options for different color modes
-const modes = { light: "light", dark: "dark" }
+const modes = { light: 'light', dark: 'dark' }
 
 // merge the color mode with the base theme
 // to create a new theme object
@@ -35,14 +35,14 @@ const getTheme = (mode) =>
     colors: get(baseTheme.colors.modes, mode, baseTheme.colors),
   })
 
-const Layout = ({ children, pageContext }) => {
+const Layout = ({ children, pageContext, footer }) => {
   const gContext = useContext(GlobalContext)
 
   const [visibleLoader, setVisibleLoader] = useState(true)
 
   useLayoutEffect(() => {
     AOS.init({
-      disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     })
     setVisibleLoader(false)
   }, [])
@@ -52,7 +52,7 @@ const Layout = ({ children, pageContext }) => {
 
   useEffect(() => {
     window.addEventListener(
-      "popstate",
+      'popstate',
       function (event) {
         // The popstate event is fired each time when the current history entry changes.
         gContext.closeOffCanvas()
@@ -60,7 +60,7 @@ const Layout = ({ children, pageContext }) => {
       false
     )
     window.addEventListener(
-      "pushState",
+      'pushState',
       function (event) {
         // The pushstate event is fired each time when the current history entry changes.
         gContext.closeOffCanvas()
@@ -69,7 +69,7 @@ const Layout = ({ children, pageContext }) => {
     )
   }, [gContext])
 
-  if (pageContext.layout === "bare") {
+  if (pageContext.layout === 'bare') {
     return (
       <ThemeProvider
         theme={
@@ -111,7 +111,7 @@ const Layout = ({ children, pageContext }) => {
           <Header isDark={gContext.headerDark} />
           {children}
 
-          <Footer isDark={gContext.footerDark} />
+          <Footer isDark={gContext.footerDark} content={footer} />
         </div>
 
         <ModalVideo />
