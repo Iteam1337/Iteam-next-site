@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text } from "../../components/Core"
-import { device } from "../../utils"
-import imgPM from "../../assets/image/case/predictive-movement.png"
-import Link from "next/link"
+import { Title, Button, Section, Box } from '../../components/Core'
+import { device } from '../../utils'
+import imgPM from '../../assets/image/case/predictive-movement.png'
+import BlockContent from '../../components/BlockContent'
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;
@@ -36,49 +36,50 @@ const ImageRight = styled(Box)`
   }
 `
 
-const Content2 = () => (
-  <>
-    {/* <!-- Content section 1 --> */}
-    <Section bg="dark" id="ai_sustainability">
-      <Container>
-        <Row className="align-items-center">
-          <Col lg="6" md="10" className="order-lg-2 mb-4">
-            <div className="position-relative text-lg-right">
-              <ImageRight
-                className=""
-                data-aos="fade-down"
+const Content2 = ({ content }) => {
+  return (
+    <>
+      {/* <!-- Content section 1 --> */}
+      <Section bg="dark" id="ai_sustainability">
+        <Container>
+          <Row className="align-items-center">
+            <Col lg="6" md="10" className="order-lg-2 mb-4">
+              <div className="position-relative text-lg-right">
+                <ImageRight
+                  className=""
+                  data-aos="fade-down"
+                  data-aos-duration="750"
+                  data-aos-once="true"
+                >
+                  <img src={imgPM} alt="" className="img-fluid" />
+                </ImageRight>
+              </div>
+            </Col>
+            <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
+              <div
+                data-aos="fade-right"
                 data-aos-duration="750"
                 data-aos-once="true"
               >
-                <img src={imgPM} alt="" className="img-fluid" />
-              </ImageRight>
-            </div>
-          </Col>
-          <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
-            <div
-              data-aos="fade-right"
-              data-aos-duration="750"
-              data-aos-once="true"
-            >
-              <div>
-                <Title color="light">Hållbarhet med AI</Title>
-                <Text mb={4} color="light">
-                  I projektet Predictive Movement utgår vi från hypotesen att
-                  det bör gå att optimera energiåtgången i vägnätet genom att
-                  använda sig av AI och en blockkedja.
-                </Text>
-                <a href="https://predictivemovement.se">
-                  <Button bg="secondary" color="dark">
-                    Läs om Predictive Movement
-                  </Button>
-                </a>
+                <div>
+                  <Title color="light">{content.title}</Title>
+                  <BlockContent
+                    color="light"
+                    blocks={content.blockText.blockText}
+                  />
+                  <a href="https://predictivemovement.se">
+                    <Button bg="secondary" color="dark">
+                      {content.cta.title}
+                    </Button>
+                  </a>
+                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </Section>
-  </>
-)
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+    </>
+  )
+}
 
 export default Content2

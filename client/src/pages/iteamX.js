@@ -3,7 +3,6 @@ import Hero from '../sections/iteamX/Hero'
 import Fact from '../sections/iteamX/Fact'
 import Content from '../sections/iteamX/Content'
 import Content2 from '../sections/iteamX/Content2'
-import Feature1 from '../sections/iteamX/Feature1'
 import CaseStudies from '../sections/iteamX/CaseStudies'
 import Reviews from '../sections/iteamX/Reviews'
 import Contact from '../sections/iteamX/Contact'
@@ -15,7 +14,7 @@ import { usePreviewSubscription } from '../lib/sanity'
 import { filterDataToSingleItem, urlFor } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
-import { TextWithTags } from '../components/Sections'
+import { SectionWithButtonAndTextGrid } from '../components/Sections'
 
 const IteamX = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.xPageQuery, {
@@ -57,8 +56,16 @@ const IteamX = ({ data, preview = false }) => {
         {xPage.hero && <Hero content={xPage.hero} />}
         {xPage.textGrid && <Fact content={xPage.textGrid} />}
         {xPage.textWithTags && <Content content={xPage.textWithTags} />}
-        <Content2 content={xPage.sectionWithImageAndCta} />
-        <Feature1 />
+        {xPage.sectionWithImageAndCta && (
+          <Content2 content={xPage.sectionWithImageAndCta} />
+        )}
+        {xPage.sectionWithButtonAndTextGrid && (
+          <SectionWithButtonAndTextGrid
+            content={xPage.sectionWithButtonAndTextGrid}
+            btnStyle="secondary"
+            linkTo="sprintMeeting"
+          />
+        )}
         <CaseStudies cases={data.casePosts} />
         <Reviews />
         <Contact />
