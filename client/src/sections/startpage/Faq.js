@@ -30,7 +30,7 @@ const FaqCard = styled(Box)`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.light} !important;
+    font-weight: 500;
   }
 `
 
@@ -58,6 +58,7 @@ const Faq = ({ content }) => {
                       <FaqTitle>{faq.title}</FaqTitle>
                       <Text variant="small" color="light" opacity={0.7}>
                         <BlockContent
+                          anchorColor="secondary"
                           blocks={faq.blockText.blockText}
                           color="light"
                         />

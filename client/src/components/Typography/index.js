@@ -75,7 +75,8 @@ const H4 = styled.h4`
   line-height: 1.2;
 `
 const Anchor = styled.a`
-  color: rgb(102, 140, 255);
+  color: ${({ color, theme }) =>
+    color === 'secondary' ? theme.colors.secondary : theme.colors.info};
 `
 const QuoteMark = styled.div`
   font-size: 2.5rem;

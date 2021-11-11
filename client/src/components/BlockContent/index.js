@@ -7,7 +7,7 @@ import Img from 'next/image'
 import { Text } from '../Core'
 import { buildInternalUrl } from '../../utils/helpers'
 
-const serializers = (withAnchor, variant, color, textAlign) => ({
+const serializers = (withAnchor, variant, color, textAlign, anchorColor) => ({
   types: {
     block: ({ node, children }) => {
       switch (node.style) {
@@ -66,8 +66,12 @@ const serializers = (withAnchor, variant, color, textAlign) => ({
   },
   marks: {
     internalLink: ({ mark, children }) => {
+      console.log('mark', mark.reference)
       return (
-        <Typography.Anchor href={buildInternalUrl(mark.reference)}>
+        <Typography.Anchor
+          href={buildInternalUrl(mark.reference)}
+          color={anchorColor}
+        >
           {children}
         </Typography.Anchor>
       )
@@ -79,7 +83,9 @@ const serializers = (withAnchor, variant, color, textAlign) => ({
           {children}
         </Typography.Anchor>
       ) : (
-        <Typography.Anchor href={href}>{children}</Typography.Anchor>
+        <Typography.Anchor href={href} color={anchorColor}>
+          {children}
+        </Typography.Anchor>
       )
     },
   },
@@ -111,11 +117,18 @@ const BlockContent = ({
   variant = 'normal',
   color = 'dark',
   textAlign = 'left',
+  anchorColor = 'info',
 }) => {
   return (
     <BaseBlockContent
       blocks={blocks}
-      serializers={serializers(withAnchor, variant, color, textAlign)}
+      serializers={serializers(
+        withAnchor,
+        variant,
+        color,
+        textAlign,
+        anchorColor
+      )}
     />
   )
 }
