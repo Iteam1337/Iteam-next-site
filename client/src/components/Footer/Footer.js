@@ -109,15 +109,15 @@ const Footer = ({ isDark = true }) => {
                           </a>
                         </li>
                         <li>
-                          <li>
-                            <a
-                              href="https://facebook.com/iteam1337"
-                              target="_blank"
-                            >
-                              <i className="icon icon-logo-facebook"></i>&nbsp;
-                              Facebook
-                            </a>
-                          </li>
+                          <a
+                            href="https://facebook.com/iteam1337"
+                            target="_blank"
+                          >
+                            <i className="icon icon-logo-facebook"></i>&nbsp;
+                            Facebook
+                          </a>
+                        </li>
+                        <li>
                           <a
                             href="https://instagram.com/iteam1337"
                             target="_blank"
