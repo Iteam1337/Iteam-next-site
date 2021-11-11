@@ -67,7 +67,7 @@ const IteamX = ({ data, preview = false }) => {
           />
         )}
         <CaseStudies cases={data.casePosts} />
-        <Reviews />
+        {xPage.quote && <Reviews quote={xPage.quote} />}
         <Contact />
       </PageWrapper>
     </>
