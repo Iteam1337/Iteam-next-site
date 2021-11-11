@@ -50,7 +50,7 @@ const ContentCard = ({
         <Title color="light" variant="card" mb={1}>
           {name}
         </Title>
-        <Text variant="small" color="lightShade" opacity={0.5}>
+        <Text variant="small" color="light" opacity={0.5}>
           {role}
         </Text>
       </Box>
