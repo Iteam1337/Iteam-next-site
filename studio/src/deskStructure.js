@@ -318,15 +318,15 @@ export default () =>
           S.list()
             .title('Moduler')
             .items([
-              // S.listItem()
-              //   .title('Footer')
-              //   .icon(FaRegFileImage)
-              //   .child(
-              //     S.document()
-              //       .title('Footer')
-              //       .schemaType('footer')
-              //       .documentId('footer')
-              //   ),
+              S.listItem()
+                .title('Footer')
+                .icon(FaRegFileImage)
+                .child(
+                  S.document()
+                    .title('Footer')
+                    .schemaType('footer')
+                    .documentId('footer')
+                ),
               S.listItem()
                 .title('Karusell')
                 .icon(FaRegFileImage)

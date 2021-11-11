@@ -64,188 +64,143 @@ const CopyRightArea = styled.div`
   }
 `
 
-const Footer = ({ isDark = true }) => {
+const Footer = ({ isDark = true, content }) => {
   return (
-    <>
-      {/* <!-- Footer section --> */}
-      <Box bg={isDark ? 'dark' : 'light'}>
-        <Container>
-          <Box
-            css={`
-              padding: 80px 0 60px;
-            `}
-          >
-            <Row className="justify-content-center">
-              <Col lg="2" md="4">
-                <Logo white={isDark} vertical />
-              </Col>
-              <Col lg="10" md="8" className="mt-5 mt-lg-0">
-                <Row>
-                  <Col xs="6" lg="3">
-                    <div className="mb-5 mb-lg-4">
-                      <TitleStyled
-                        variant="card"
-                        color={isDark ? 'light' : 'dark'}
-                      >
-                        Följ oss
-                      </TitleStyled>
-                      <UlStyled color={isDark ? 'light' : 'dark'}>
-                        <li>
-                          <a
-                            href="https://linkedin.com/company/iteam1337"
-                            target="_blank"
-                          >
-                            <i className="icon icon-logo-linkedin"></i>&nbsp;
-                            Linkedin
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://twitter.com/iteam1337"
-                            target="_blank"
-                          >
-                            <i className="icon icon-logo-twitter"></i>&nbsp;
-                            Twitter
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://facebook.com/iteam1337"
-                            target="_blank"
-                          >
-                            <i className="icon icon-logo-facebook"></i>&nbsp;
-                            Facebook
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://instagram.com/iteam1337"
-                            target="_blank"
-                          >
-                            <i className="icon icon-logo-instagram"></i>&nbsp;
-                            Instagram
-                          </a>
-                        </li>
-                      </UlStyled>
-                    </div>
-                  </Col>
-                  <Col xs="6" lg="3">
-                    <div className="mb-5 mb-lg-4">
-                      <TitleStyled
-                        variant="card"
-                        color={isDark ? 'light' : 'dark'}
-                      >
-                        Besök oss
-                        <br />
-                      </TitleStyled>
-                      <UlStyled color={isDark ? 'light' : 'dark'}>
-                        <li>
-                          <a
-                            href="https://maps.google.com/?q=Iteam, Järntorgsgatan, Göteborg"
-                            target="_blank"
-                          >
-                            Iteam Solutions AB
-                            <br />
-                            Järntorgsgatan 12
-                            <br />
-                            413 01 Göteborg
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.allabolag.se/5565516928/iteam-solutions-aktiebolag">
-                            Org nr: 556551-6928
-                          </a>
-                        </li>
-                      </UlStyled>
-                    </div>
-                  </Col>
-                  {/* <Col xs="6" lg="3">
-                    <div className="mb-5 mb-lg-4">
-                      <TitleStyled
-                        variant="card"
-                        color={isDark ? "light" : "dark"}
-                      >
-                        Skryt
-                      </TitleStyled>
-                      <UlStyled color={isDark ? "light" : "dark"}>
-                        <li>
-                          <a href="/#" target="_blank">
-                            Gasellföretag
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/#" target="_blank">
-                            AAA Rating
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.bisnode.se/kunskap/vara-tankar-om/superforetagen-2018/" target="_blank">
-                            VA Superföretag
-                          </a>
-                        </li>
-                      </UlStyled>
-                    </div>
-                  </Col> */}
-                  <Col xs="6" lg="3">
-                    <div className="mb-lg-4">
-                      <TitleStyled
-                        variant="card"
-                        color={isDark ? 'light' : 'dark'}
-                      >
-                        Kontakta oss
-                      </TitleStyled>
-                      <UlStyled color={isDark ? 'light' : 'dark'}>
-                        <li>
-                          <a href="/book">Kontakt</a>
-                        </li>
-                        <li>
-                          <a href="/karriar">Sök jobb</a>
-                        </li>
-                        <li>
-                          <a href="mailto:joinus@iteam.se">Spontanansökan</a>
-                        </li>
-                      </UlStyled>
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </Box>
-          <CopyRightArea dark={isDark ? 1 : 0}>
-            <Row className="align-items-center">
-              <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
-                <p>
-                  &copy; 2021 Iteam, All Rights Reserved. Our{' '}
-                  <a href="/privacy">privacy policy</a>.
-                </p>
-              </Col>
-              <Col sm="6" className="text-sm-right text-center">
-                <ul className="social-icons">
-                  <li>
-                    <a href="https://twitter.com/iteam1337" target="_blank">
-                      <i className="icon icon-logo-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/company/iteam1337/"
-                      target="_blank"
+    <Box bg={isDark ? 'dark' : 'light'}>
+      <Container>
+        <Box
+          css={`
+            padding: 80px 0 60px;
+          `}
+        >
+          <Row className="justify-content-center">
+            <Col lg="2" md="4">
+              <Logo white={isDark} vertical />
+            </Col>
+            <Col lg="10" md="8" className="mt-5 mt-lg-0">
+              <Row>
+                <Col xs="6" lg="3">
+                  <div className="mb-5 mb-lg-4">
+                    <TitleStyled
+                      variant="card"
+                      color={isDark ? 'light' : 'dark'}
                     >
-                      <i className="icon icon-logo-linkedin"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://facebook.com/iteam1337" target="_blank">
-                      <i className="icon icon-logo-facebook"></i>
-                    </a>
-                  </li>
-                </ul>
-              </Col>
-            </Row>
-          </CopyRightArea>
-        </Container>
-      </Box>
-    </>
+                      {content.follow}
+                    </TitleStyled>
+                    <UlStyled color={isDark ? 'light' : 'dark'}>
+                      <li>
+                        <a href={content.linkedinLink} target="_blank">
+                          <i className="icon icon-logo-linkedin"></i>&nbsp;
+                          {content.linkedin}
+                        </a>
+                      </li>
+                      <li>
+                        <a href={content.twitterLink} target="_blank">
+                          <i className="icon icon-logo-twitter"></i>&nbsp;
+                          {content.twitter}
+                        </a>
+                      </li>
+                      <li>
+                        <a href={content.facebookLink} target="_blank">
+                          <i className="icon icon-logo-facebook"></i>&nbsp;
+                          {content.facebook}
+                        </a>
+                      </li>
+                      <li>
+                        <a href={content.instagramLink} target="_blank">
+                          <i className="icon icon-logo-instagram"></i>&nbsp;
+                          {content.instagram}
+                        </a>
+                      </li>
+                    </UlStyled>
+                  </div>
+                </Col>
+                <Col xs="6" lg="3">
+                  <div className="mb-5 mb-lg-4">
+                    <TitleStyled
+                      variant="card"
+                      color={isDark ? 'light' : 'dark'}
+                    >
+                      {content.visitUs}
+                      <br />
+                    </TitleStyled>
+                    <UlStyled color={isDark ? 'light' : 'dark'}>
+                      <li>
+                        <a href={content.addressLink} target="_blank">
+                          {content.address}
+                        </a>
+                      </li>
+                      <li>
+                        <a href={content.org}>{content.orgNumber}</a>
+                      </li>
+                    </UlStyled>
+                  </div>
+                </Col>
+                <Col xs="6" lg="3">
+                  <div className="mb-lg-4">
+                    <TitleStyled
+                      variant="card"
+                      color={isDark ? 'light' : 'dark'}
+                    >
+                      {content.contact}
+                    </TitleStyled>
+                    <UlStyled color={isDark ? 'light' : 'dark'}>
+                      <li>
+                        <a href={content.contactLink}>{content.contactTitle}</a>
+                      </li>
+                      <li>
+                        <a href={content.applyForJobLink}>
+                          {content.applyForJob}
+                        </a>
+                      </li>
+                      <li>
+                        <a href={`mailto:${content.mailToApplyJob}`}>
+                          {content.applyJob}
+                        </a>
+                      </li>
+                    </UlStyled>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Box>
+        <CopyRightArea dark={isDark ? 1 : 0}>
+          <Row className="align-items-center">
+            <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
+              <p>
+                &copy; 2021 Iteam, All Rights Reserved. Our{' '}
+                <a href="/privacy">privacy policy</a>.
+              </p>
+            </Col>
+            <Col sm="6" className="text-sm-right text-center">
+              <ul className="social-icons">
+                <li>
+                  <a href={content.linkedinLink} target="_blank">
+                    <i className="icon icon-logo-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href={content.twitterLink} target="_blank">
+                    <i className="icon icon-logo-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href={content.facebookLink} target="_blank">
+                    <i className="icon icon-logo-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href={content.instagramLink} target="_blank">
+                    <i className="icon icon-logo-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+        </CopyRightArea>
+      </Container>
+    </Box>
   )
 }
 
