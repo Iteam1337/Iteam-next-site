@@ -7,24 +7,57 @@ import Feature1 from '../sections/iteamX/Feature1'
 import CaseStudies from '../sections/iteamX/CaseStudies'
 import Reviews from '../sections/iteamX/Reviews'
 import Contact from '../sections/iteamX/Contact'
-import MetaTags from '../components/MetaTags/MetaTags'
 
 import PageWrapper from '../components/PageWrapper'
 import { getClient } from '../lib/sanity.server'
 import { groq } from 'next-sanity'
+import { usePreviewSubscription } from '../lib/sanity'
+import { filterDataToSingleItem, urlFor } from '../utils/helpers'
+import ExitPreviewLink from '../components/ExitPreviewLink'
+import { NextSeo } from 'next-seo'
+import { TextWithTags } from '../components/Sections'
 
-const IteamX = ({ data }) => {
+const IteamX = ({ data, preview = false }) => {
+  const { data: previewData } = usePreviewSubscription(data?.xPageQuery, {
+    initialData: data?.xPage,
+    enabled: preview,
+  })
+  const xPage = filterDataToSingleItem(previewData, preview)
+
   return (
     <>
       <PageWrapper headerDark footerDark>
-        <MetaTags
-          title={'Iteam X - när du inte vet vad som är möjligt'}
-          description={'Experimentell utveckling med exponentiell teknik.'}
-        />
-        <Hero />
-        <Fact />
-        <Content />
-        <Content2 />
+        {preview && <ExitPreviewLink />}
+        {xPage.metaTags && (
+          <NextSeo
+            title={xPage.metaTags.title}
+            titleTemplate="%s | Aktuellt på Iteam"
+            description={xPage.metaTags.description}
+            image={urlFor(xPage.metaTags.imageWithAlt.asset._ref)}
+            openGraph={{
+              title: xPage.metaTags.title,
+              description: xPage.metaTags.description,
+              images: [
+                {
+                  url: urlFor(xPage.metaTags.imageWithAlt.asset._ref),
+                },
+              ],
+              site_name: 'Iteam',
+            }}
+            twitter={{
+              title: xPage.metaTags.title,
+              description: xPage.metaTags.description,
+              image: urlFor(xPage.metaTags.imageWithAlt.asset._ref),
+              handle: '@iteam1337',
+              site: '@iteam1337',
+              cardType: 'summary_large_image',
+            }}
+          />
+        )}
+        {xPage.hero && <Hero content={xPage.hero} />}
+        {xPage.textGrid && <Fact content={xPage.textGrid} />}
+        {xPage.textWithTags && <Content content={xPage.textWithTags} />}
+        <Content2 content={xPage.sectionWithImageAndCta} />
         <Feature1 />
         <CaseStudies cases={data.casePosts} />
         <Reviews />
@@ -44,15 +77,34 @@ const filteredCasePostQuery = groq`
  },
  }
 `
+const xPageQuery = groq`
+  *[_type == 'xPage']
+  {
+    ...,
+    sectionWithImageAndCta2 {
+      ...,
+      cta {
+        ...,
+        reference -> {
+          _type,
+          slug {
+            current,
+          }
+        }
+      }
+    }
+  }`
 
 export async function getStaticProps({ preview = false }) {
+  const xPage = await getClient(preview).fetch(xPageQuery)
   const casePosts = await getClient(preview).fetch(filteredCasePostQuery)
 
+  if (!xPage) return { notFound: true }
   if (!casePosts) return { notFound: true }
   return {
     props: {
       preview,
-      data: { casePosts },
+      data: { casePosts, xPage, xPageQuery },
     },
   }
 }
