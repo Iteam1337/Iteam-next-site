@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Span } from "../../components/Core"
-import { device } from "../../utils"
-import ContentCard from "../../components/ContentCard"
+import { Title, Section, Box, Span } from '../../components/Core'
+import { device } from '../../utils'
+import ContentCard from '../../components/ContentCard'
 
 const SectionStyled = styled(Section)``
 
@@ -52,7 +52,7 @@ const ContentWidget = styled(Box)`
   } */
 `
 
-const ContentCard1 = ({ children = "" }) => {
+const ContentCard1 = ({ children = '' }) => {
   return (
     <ContentWidget>
       <div className="d-flex align-items-center">
@@ -67,18 +67,19 @@ const ContentCard1 = ({ children = "" }) => {
 }
 
 const tech = [
-  "Blockkedjor",
-  "Applicerad AI",
-  "Data pipelines",
-  "Krypteringslösningar",
-  "Digitala tvillingar",
-  "Machine Learning",
-  "Drönarteknik",
-  "VR/AR",
-  "Datavisualisering",
+  'Blockkedjor',
+  'Applicerad AI',
+  'Data pipelines',
+  'Krypteringslösningar',
+  'Digitala tvillingar',
+  'Machine Learning',
+  'Drönarteknik',
+  'VR/AR',
+  'Datavisualisering',
 ]
 
-const Content = () => {
+const Content = ({ content }) => {
+  const title = content.title.split('en hypotes.')
   return (
     <>
       {/* <!-- Content section --> */}
@@ -88,9 +89,8 @@ const Content = () => {
             <Col lg="10">
               <div className="text-center">
                 <Title color="light">
-                  Våra X team utgår från{" "}
-                  <Span color="secondary">en hypotes.</Span> Den försöker vi
-                  därefter att motbevisa med hjälp av olika experiment.
+                  {title[0]}
+                  <Span color="secondary">en hypotes.</Span> {title[1]}
                 </Title>
               </div>
             </Col>
