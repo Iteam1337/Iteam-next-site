@@ -167,8 +167,8 @@ const Pricing = ({ content }) => {
                     </div>
                     <Text fontSize="18px">{content.priceIncluding}</Text>
                     <ULStyled>
-                      {content.includes.map((include) => (
-                        <li>{include} </li>
+                      {content.includes.map((include, i) => (
+                        <li key={i}>{include} </li>
                       ))}
                     </ULStyled>
                   </div>

@@ -21,7 +21,7 @@ const Fact = ({ content }) => (
       <Container>
         <Row>
           {content.texts.map((item, index) => (
-            <Col md="4" sm="6" className="mb-4 mb-md-0">
+            <Col md="4" sm="6" className="mb-4 mb-md-0" key={index}>
               <Box>
                 <Title color="light" mb="20px!important">
                   {item.title}
