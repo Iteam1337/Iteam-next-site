@@ -63,6 +63,7 @@ const SectionWithButtonAndTextGrid = ({
               <BlockContent
                 color="light"
                 blocks={section.blockText.blockText}
+                anchorColor="secondary"
               />
               <Anchor href={`#${linkTo}`}>
                 <Button
