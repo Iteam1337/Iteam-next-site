@@ -31,9 +31,9 @@ const TextGrid = ({ content }) => {
     <SectionStyled>
       <Container>
         <Row className="justify-content-center">
-          {content.texts.map((text) => {
+          {content.texts.map((text, i) => {
             return (
-              <Col lg="4" className="mb-5 mb-lg-4">
+              <Col lg="4" className="mb-5 mb-lg-4" key={i}>
                 <FeatureCard title={text.title}>{text.text}</FeatureCard>
               </Col>
             )

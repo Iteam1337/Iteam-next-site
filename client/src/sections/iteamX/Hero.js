@@ -1,9 +1,10 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text, Span } from "../../components/Core"
+import { Title, Button, Section, Box, Text, Span } from '../../components/Core'
 
-const Hero = () => {
+const Hero = ({ content }) => {
+  const [title] = content.title.split('.')
   return (
     <>
       {/* <!-- Hero Area --> */}
@@ -25,7 +26,7 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="700"
                 >
-                  Iteam X - när du inte vet vad som är möjligt
+                  {content.subtitle}
                 </Text>
                 <Title
                   my={4}
@@ -36,8 +37,8 @@ const Hero = () => {
                   data-aos-once="true"
                   data-aos-delay="1000"
                 >
-                  Experimentell utveckling <br className="d-none d-lg-block" />
-                  med exponentiell teknik<Span color="secondary">.</Span>
+                  {title}
+                  <Span color="secondary">.</Span>
                 </Title>
                 <Box
                   pt="12px"
@@ -48,7 +49,7 @@ const Hero = () => {
                 >
                   <a href="#sprintMeeting">
                     <Button color="dark" bg="secondary">
-                      Boka en sprint
+                      {content.cta.title}
                     </Button>
                   </a>
                 </Box>

@@ -9,7 +9,8 @@ const Paragraph = styled.p`
     variant == 'thin' ? 'normal' : '-0.56px'};
   line-height: ${({ variant }) => (variant == 'thin' ? '38px' : '30px')};
   text-align: ${({ textAlign }) => (textAlign == 'center' ? 'center' : 'left')};
-  color: ${({ color }) => (color == 'light' ? '#ffffff' : '#19191b')};
+  color: ${({ color }) =>
+    color == 'light' ? 'rgba(255,255,255, 0.7)' : '#19191b'};
 `
 const QuoteParagraph = styled(Paragraph)`
   font-size: 19.5px;

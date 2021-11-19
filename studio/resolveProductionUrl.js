@@ -33,6 +33,8 @@ export default function resolveProductionUrl(doc) {
       route = 'scaleup'
     case 'mvpPage':
       route = 'mvp'
+    case 'xPage':
+      route = 'iteamX'
     default:
       break
   }
