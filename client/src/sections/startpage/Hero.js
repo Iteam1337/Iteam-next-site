@@ -1,8 +1,8 @@
-import React from "react"
-import GlitchHero from "./GlitchHero"
+import React from 'react'
+import RecruteHero from './RecruteHero'
 
-const Hero = () => {
-  return <GlitchHero />
+const Hero = ({ content }) => {
+  return <RecruteHero content={content} />
 }
 
 export default Hero

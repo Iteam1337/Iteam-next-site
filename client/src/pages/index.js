@@ -42,7 +42,7 @@ const StartPage = ({ data, preview = false }) => {
     <PageWrapper headerDark footerDark>
       {preview && <ExitPreviewLink />}
       <GoogleAnalytics />
-      <Hero />
+      {page?.hero && <Hero content={page.hero} />}
       {layout.map((content) => getLayoutComponent(content))}
 
       <DefaultContent
