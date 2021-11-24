@@ -22,17 +22,17 @@ const StartPage = ({ data, preview = false }) => {
   const page = filterDataToSingleItem(previewData, preview)
   const { layout } = page
 
-  const getLayoutComponent = (content) => {
+  const getLayoutComponent = (content, index) => {
     switch (content._type) {
       case 'textGrid':
-        return <TextGrid content={content} />
+        return <TextGrid key={index} content={content} />
       case 'sectionWithImageAndPosition':
         if (content.imageToRight) {
-          return <TextWithImageToRight content={content} />
+          return <TextWithImageToRight key={index} content={content} />
         }
-        return <TextWithImageToLeft content={content} />
+        return <TextWithImageToLeft key={index} content={content} />
       case 'sectionWithImageAndCta':
-        return <SectionWithImageAndCta content={content} />
+        return <SectionWithImageAndCta key={index} content={content} />
       default:
         console.log('Type does not exist')
     }
@@ -42,8 +42,8 @@ const StartPage = ({ data, preview = false }) => {
     <PageWrapper headerDark footerDark>
       {preview && <ExitPreviewLink />}
       <GoogleAnalytics />
-      <Hero />
-      {layout.map((content) => getLayoutComponent(content))}
+      {page?.hero && <Hero content={page.hero} />}
+      {layout.map((content, index) => getLayoutComponent(content, index))}
 
       <DefaultContent
         data={page.defaultLayout}

@@ -45,12 +45,11 @@ const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
             >
               <div>
                 <Title color="light">{content.title}</Title>
-                <Text color="lightShade">
-                  <BlockContent
-                    color="light"
-                    blocks={content.blockText.blockText}
-                  />
-                </Text>
+                <BlockContent
+                  color="light"
+                  blocks={content.blockText.blockText}
+                />
+
                 <div className="mt-5">
                   <Link
                     href={

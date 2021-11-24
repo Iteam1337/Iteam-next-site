@@ -3,7 +3,39 @@ export default {
   type: 'document',
   title: 'Startsida',
   fields: [
-    // { type: 'hero', name: 'hero' },
+    {
+      name: 'hero',
+      type: 'object',
+      title: 'Hero',
+      options: {
+        collapsible: true,
+      },
+      fields: [
+        {
+          name: 'title',
+          title: 'Titel',
+          type: 'string',
+          validation: (Rules) =>
+            Rules.required().error('Du behöver sätta en rubrik.'),
+        },
+        {
+          name: 'subtitle',
+          title: 'Underrubrik',
+          type: 'text',
+          validation: (Rules) =>
+            Rules.required().error(
+              'En underrubrik kan vara snyggt att ha också.'
+            ),
+        },
+        {
+          name: 'cta',
+          title: 'Call to action',
+          type: 'cta',
+          description:
+            'Om du vill ha en CTA på hero sektionen så fyller du i det här.',
+        },
+      ],
+    },
     { type: 'layout', name: 'layout' },
     {
       type: 'document',
