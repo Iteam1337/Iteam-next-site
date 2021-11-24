@@ -66,7 +66,6 @@ const serializers = (withAnchor, variant, color, textAlign, anchorColor) => ({
   },
   marks: {
     internalLink: ({ mark, children }) => {
-      console.log('mark', mark.reference)
       return (
         <Typography.Anchor
           href={buildInternalUrl(mark.reference)}

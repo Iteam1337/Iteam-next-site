@@ -24,14 +24,14 @@ const Clients = ({ clients }) => (
          align-items-center flex-wrap"
           mx="-32px"
         >
-          {clients.map((client) => {
+          {clients.map((client, i) => {
             const imageProps = useNextSanityImage(
               sanityClient,
               client?.asset._ref
             )
 
             return (
-              <Brand className="" py={3} mx={4}>
+              <Brand key={i} className="" py={3} mx={4}>
                 <img {...imageProps} alt={client.alt} className="img-fluid" />
               </Brand>
             )

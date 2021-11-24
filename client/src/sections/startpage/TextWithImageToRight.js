@@ -59,9 +59,7 @@ const TextWithImageToRight = ({ content }) => {
               >
                 <div>
                   <Title>{content.title}</Title>
-                  <Text mb={4}>
-                    <BlockContent blocks={content.blockText.blockText} />
-                  </Text>
+                  <BlockContent blocks={content.blockText.blockText} />
                 </div>
               </div>
             </Col>
