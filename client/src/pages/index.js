@@ -39,10 +39,10 @@ const StartPage = ({ data, preview = false }) => {
   }
 
   return (
-    <PageWrapper headerDark footerDark>
+    <PageWrapper footerDark>
       {preview && <ExitPreviewLink />}
       <GoogleAnalytics />
-      <Hero />
+      {page?.hero && <Hero content={page.hero} gradient={false} />}
       {layout.map((content) => getLayoutComponent(content))}
 
       <DefaultContent
