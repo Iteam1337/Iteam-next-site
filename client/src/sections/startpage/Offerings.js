@@ -37,11 +37,10 @@ const ContentCard = ({ offer }) => (
   <Link href={getRouteNameFromPageType(offer.reference._ref)}>
     <Card className="card-job top-only">
       <div className="mb-3">
-        <a>
-          <Title variant="card" className="title">
-            {offer.title}
-          </Title>
-        </a>
+        <Title variant="card" className="title">
+          {offer.title}
+        </Title>
+
         <Text>{offer.subtitle}</Text>
       </div>
     </Card>

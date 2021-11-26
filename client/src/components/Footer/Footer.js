@@ -85,7 +85,7 @@ const Footer = ({ isDark = true, content }) => {
                       variant="card"
                       color={isDark ? 'light' : 'dark'}
                     >
-                      {content.follow}
+                      {content?.follow}
                     </TitleStyled>
                     <UlStyled color={isDark ? 'light' : 'dark'}>
                       <li>

@@ -111,7 +111,7 @@ const Layout = ({ children, pageContext, footer }) => {
           <Header isDark={gContext.headerDark} />
           {children}
 
-          <Footer isDark={gContext.footerDark} content={footer} />
+          {footer && <Footer isDark={gContext.footerDark} content={footer} />}
         </div>
 
         <ModalVideo />

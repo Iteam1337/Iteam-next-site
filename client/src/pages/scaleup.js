@@ -27,14 +27,14 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
   })
   const scaleUpPage = filterDataToSingleItem(previewData, preview)
 
-  const casePost = scaleUpPage.case.find(
+  const casePost = scaleUpPage?.case?.find(
     (casePost) => casePost.slug.current === scaleUpPage.reference.slug.current
   )
 
   return (
     <PageWrapper>
       {preview && <ExitPreviewLink />}
-      {scaleUpPage.metaTags && (
+      {scaleUpPage?.metaTags && (
         <NextSeo
           title={scaleUpPage.metaTags.title}
           titleTemplate="%s | Aktuellt på Iteam"
@@ -84,8 +84,8 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
       {scaleUpPage?.textWithTagsThirs && (
         <Role content={scaleUpPage.textWithTagsThirs} />
       )}
-      <Testimonial content={carousel} />
-      <Pricing content={ourPricing} />
+      {carousel && <Testimonial content={carousel} />}
+      {ourPricing && <Pricing content={ourPricing} />}
       <CTA />
     </PageWrapper>
   )
