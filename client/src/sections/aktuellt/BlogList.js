@@ -1,16 +1,17 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import { Section, Box } from "../../components/Core"
-import PostCard from "../../components/PostCard"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Section, Box } from '../../components/Core'
+import PostCard from '../../components/PostCard'
 
 export default function BlogList({ posts }) {
+  console.log(posts)
   return (
     <Section className="position-relative">
       <Container>
         <Row className="justify-content-center">
           {posts?.map((post, i) => (
             <Col lg="4" className="mb-5" key={i}>
-              <PostCard
+              {/* <PostCard
                 img={post.imageCard.image}
                 preTitle={post.date}
                 link={`/aktuellt/${post.slug.current}`}
@@ -18,7 +19,7 @@ export default function BlogList({ posts }) {
                 readMore
               >
                 {post.imageCard.description}
-              </PostCard>
+              </PostCard> */}
             </Col>
           ))}
         </Row>
