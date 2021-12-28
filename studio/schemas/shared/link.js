@@ -4,9 +4,9 @@ export default {
   type: 'object',
   fields: [
     {
-      title: 'Select the type of link',
+      title: 'Välj vilken typ av länk som du vill använda',
       description:
-        'External links go to other websites using the format `https://www.google.com`. Internal links are restricted to other pages in the SANITY database.',
+        'External links: tex. `https://www.google.com` eller `https://iteam.se/scaleup#pricing`. Internal links: Länka till en annan sida som finns här i CMS:et.',
       name: 'linkType',
       type: 'string',
       options: {

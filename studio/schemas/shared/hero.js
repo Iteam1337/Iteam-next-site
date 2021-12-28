@@ -21,9 +21,9 @@ export default {
         Rules.required().error('En underrubrik kan vara snyggt att ha också.'),
     },
     {
-      name: 'cta',
+      name: 'link',
       title: 'Call to action',
-      type: 'cta',
+      type: 'callToAction',
       description:
         'Om du vill ha en CTA på hero sektionen så fyller du i det här.',
     },
