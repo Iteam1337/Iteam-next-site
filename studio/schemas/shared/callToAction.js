@@ -4,20 +4,16 @@ export default {
   title: 'Cta',
   validation: (Rule) =>
     Rule.custom((fields) => {
-      switch (fields?.reference.linkType) {
-        case 'internal':
-          if (fields?.title && !fields?.reference.internalLink)
-            return 'Lägg till en referens för vart din knapp ska leda'
-          if (!fields?.title && fields?.internalLink)
-            return 'Lägg till en text till din knapp'
-        case 'external':
-          if (fields?.title && !fields?.reference.href)
-            return 'Lägg till en referens för vart din knapp ska leda'
-          if (!fields?.title && fields?.reference.href)
-            return 'Lägg till en text till din knapp'
-        default:
-          return true
-      }
+      const checkLinkField = () =>
+        fields?.link?.internal || fields?.link?.external
+
+      if (!fields?.title && checkLinkField())
+        return 'Lägg till en text till din knapp'
+
+      if (fields?.title && !checkLinkField())
+        return 'Lägg till en referens för vart din knapp ska leda'
+
+      return true
     }),
   options: {
     collapsible: true,
@@ -30,8 +26,8 @@ export default {
       title: 'Text på knappen',
     },
     {
-      name: 'reference',
-      type: 'link',
+      name: 'link',
+      type: 'sendTo',
       options: {
         collapsible: false,
       },

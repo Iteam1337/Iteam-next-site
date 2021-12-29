@@ -43,7 +43,7 @@ import defaultReference from './shared/reference'
 import sectionWithImageAndPosition from './shared/sections/sectionWithImageAndPosition'
 import sectionWithText from './shared/sections/sectionWithText'
 import sectionWithImageAndButton from './shared/sections/sectionWithImageAndButton'
-import link from './shared/link'
+import sendTo from './shared/sendTo'
 import callToAction from './shared/callToAction'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -93,7 +93,7 @@ export default createSchema({
     sectionWithImageAndPosition,
     sectionWithText,
     sectionWithImageAndButton,
-    link,
+    sendTo,
     callToAction,
   ]),
 })

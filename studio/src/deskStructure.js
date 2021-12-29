@@ -385,6 +385,7 @@ export default () =>
             'sectionWithImageAndPosition',
             'sectionWithText',
             'sectionWithImageAndButton',
+            'callToAction',
           ].includes(listItem.getId())
       ),
     ])
