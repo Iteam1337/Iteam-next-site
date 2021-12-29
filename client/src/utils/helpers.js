@@ -83,3 +83,11 @@ export const shuffleArray = (array) => {
   }
   return array
 }
+
+export const getExternalOrInternalLink = (object) => {
+  if (object.internal) {
+    return getRouteNameFromPageType(object.internal._ref)
+  }
+
+  return object.external
+}

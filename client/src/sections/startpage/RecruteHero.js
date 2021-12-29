@@ -4,7 +4,7 @@ import Link from 'next/link'
 import HeroImg from '../../assets/image/jpeg/working-hero.jpg'
 import { Container } from 'react-bootstrap'
 import { Title, Text, Button, Section } from '../../components/Core'
-import { getRouteNameFromPageType } from '../../utils/helpers'
+import { getExternalOrInternalLink } from '../../utils/helpers'
 const Wrapper = styled.div`
   background: linear-gradient(
       180deg,
@@ -59,20 +59,20 @@ const RecruteHero = ({ content }) => {
               <Text color="light">
                 <TextBg>{content.subtitle}</TextBg>
               </Text>
-              <Link
-                href={getRouteNameFromPageType(content?.cta?.reference?._ref)}
-              >
-                <Button
-                  css={`
-                    margin-top: 20px;
-                    width: fit-content;
-                  `}
-                  bg="primary"
-                  color="light"
-                >
-                  {content.cta.title}
-                </Button>
-              </Link>
+              {content?.link && (
+                <Link href={getExternalOrInternalLink(content.link.link)}>
+                  <Button
+                    css={`
+                      margin-top: 20px;
+                      width: fit-content;
+                    `}
+                    bg="primary"
+                    color="light"
+                  >
+                    {content.link.title}
+                  </Button>
+                </Link>
+              )}
             </TextContainer>
           </Container>
         </Section>
