@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Box, Text } from '../../components/Core'
 
 const Feature = ({ content }) => {
-  console.log('con', content)
   return (
     <>
       <Section pt="0!important">
