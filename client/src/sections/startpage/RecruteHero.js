@@ -59,7 +59,7 @@ const RecruteHero = ({ content }) => {
               <Text color="light">
                 <TextBg>{content.subtitle}</TextBg>
               </Text>
-              {content?.link && (
+              {content?.link?.link && (
                 <Link href={getExternalOrInternalLink(content.link.link)}>
                   <Button
                     css={`

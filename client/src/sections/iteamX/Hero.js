@@ -48,7 +48,7 @@ const Hero = ({ content }) => {
                   data-aos-once="true"
                   data-aos-delay="1300"
                 >
-                  {content?.link && (
+                  {content?.link?.link && (
                     <Link href={getExternalOrInternalLink(content.link.link)}>
                       <Button
                         css={`
