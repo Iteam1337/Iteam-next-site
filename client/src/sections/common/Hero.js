@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-
-import { Title, Section, Text } from '../../components/Core'
-import { hexToRGBA } from '../../utils/helpers'
+import Link from 'next/link'
+import { Title, Section, Text, Button } from '../../components/Core'
+import { getExternalOrInternalLink, hexToRGBA } from '../../utils/helpers'
 import { urlFor } from '../../utils/helpers'
 
 const SectionStyled = styled(Section)`
@@ -73,7 +73,7 @@ const MediaType = ({ mediaType, children }) => {
 }
 
 const Hero = ({ content, flipTexts = false }) => {
-  const { title, subtitle, cta, mediaType = { type: '' } } = content
+  const { title, subtitle, link, mediaType = { type: '' } } = content
 
   return (
     <>
@@ -114,6 +114,20 @@ const Hero = ({ content, flipTexts = false }) => {
                 >
                   {subtitle}
                 </Text>
+                {link && (
+                  <Link href={getExternalOrInternalLink(link.link)}>
+                    <Button
+                      css={`
+                        margin-top: 20px;
+                        width: fit-content;
+                      `}
+                      bg="primary"
+                      color="light"
+                    >
+                      {link.title}
+                    </Button>
+                  </Link>
+                )}
               </div>
             </Col>
           </Row>

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-
+import Link from 'next/link'
 import { Title, Button, Section, Box, Text, Span } from '../../components/Core'
+import { getExternalOrInternalLink } from '../../utils/helpers'
 
 const Hero = ({ content }) => {
   const [title] = content.title.split('.')
@@ -47,11 +48,20 @@ const Hero = ({ content }) => {
                   data-aos-once="true"
                   data-aos-delay="1300"
                 >
-                  <a href="#sprintMeeting">
-                    <Button color="dark" bg="secondary">
-                      {content.cta.title}
-                    </Button>
-                  </a>
+                  {content?.link?.link && (
+                    <Link href={getExternalOrInternalLink(content.link.link)}>
+                      <Button
+                        css={`
+                          margin-top: 20px;
+                          width: fit-content;
+                        `}
+                        bg="secondary"
+                        color="dark"
+                      >
+                        {content.link.title}
+                      </Button>
+                    </Link>
+                  )}
                 </Box>
               </Box>
             </Col>

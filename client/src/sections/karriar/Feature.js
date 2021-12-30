@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Box, Text } from '../../components/Core'
-import BlockContent from '../../components/BlockContent'
 
 const Feature = ({ content }) => {
   return (
@@ -24,10 +23,7 @@ const Feature = ({ content }) => {
                       >
                         {item.title}
                       </Text>
-                      <BlockContent
-                        variant="thin"
-                        blocks={item.blockText.blockText}
-                      />
+                      <Text variant="thin">{item.text}</Text>
                     </div>
                   </div>
                 </Box>
