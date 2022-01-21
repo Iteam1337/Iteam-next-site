@@ -29,7 +29,7 @@ const Career = ({ data, preview = false, carousel }) => {
       {metaTags && (
         <NextSeo
           title={metaTags.title}
-          titleTemplate="%s | Aktellt på Iteam"
+          titleTemplate="%s | Aktuellt på Iteam"
           description={metaTags?.description}
           image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
           openGraph={{
