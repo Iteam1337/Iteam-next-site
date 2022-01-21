@@ -27,7 +27,7 @@ const BlogDetails = ({ data, preview = false }) => {
       {post && (
         <NextSeo
           title={post?.metaTags?.title ?? post.title}
-          titleTemplate="%s | Aktuellt på Iteam"
+          titleTemplate="%s | Iteam"
           description={
             post?.metaTags?.description ?? post?.preview?.imageCard?.description
           }

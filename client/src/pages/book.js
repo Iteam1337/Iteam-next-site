@@ -41,7 +41,7 @@ const Book = ({ data, preview = false }) => {
         {page.metaTags && (
           <NextSeo
             title={page.metaTags.title}
-            titleTemplate="%s | Aktellt på Iteam"
+            titleTemplate="%s | Iteam"
             description={page.metaTags?.description}
             image={urlFor(page.metaTags?.imageWithAlt?.asset._ref)}
             openGraph={{

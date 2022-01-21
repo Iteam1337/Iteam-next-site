@@ -37,7 +37,7 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
       {scaleUpPage.metaTags && (
         <NextSeo
           title={scaleUpPage.metaTags.title}
-          titleTemplate="%s | Aktuellt på Iteam"
+          titleTemplate="%s | Iteam"
           description={scaleUpPage.metaTags.description}
           image={urlFor(scaleUpPage.metaTags.imageWithAlt.asset._ref)}
           openGraph={{
