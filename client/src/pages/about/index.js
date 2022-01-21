@@ -26,7 +26,7 @@ const About = ({ data, preview = false }) => {
         {metaTags && (
           <NextSeo
             title={metaTags.title}
-            titleTemplate="%s | Aktuellt på Iteam"
+            titleTemplate="%s | Iteam"
             description={metaTags?.description}
             image={urlFor(metaTags?.imageWithAlt?.asset._ref)}
             openGraph={{

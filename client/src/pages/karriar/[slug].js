@@ -29,7 +29,7 @@ const OpeningDetails = ({ data, preview = false }) => {
       {post && (
         <NextSeo
           title={post?.metaTags?.title ?? post?.title}
-          titleTemplate="%s | Aktuellt på Iteam"
+          titleTemplate="%s | Iteam"
           description={post?.metaTags?.description}
           image={urlFor(post?.metaTags?.imageWithAlt?.asset._ref)}
           openGraph={{

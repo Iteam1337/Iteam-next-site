@@ -30,7 +30,7 @@ const Mvp = ({ data, preview = false }) => {
         {mvpPage.metaTags && (
           <NextSeo
             title={mvpPage.metaTags.title}
-            titleTemplate="%s | Aktuellt på Iteam"
+            titleTemplate="%s | Iteam"
             description={mvpPage.metaTags.description}
             image={urlFor(mvpPage.metaTags.imageWithAlt.asset._ref)}
             openGraph={{

@@ -30,7 +30,7 @@ const IteamX = ({ data, preview = false }) => {
         {xPage.metaTags && (
           <NextSeo
             title={xPage.metaTags.title}
-            titleTemplate="%s | Aktuellt på Iteam"
+            titleTemplate="%s | Iteam"
             description={xPage.metaTags.description}
             image={urlFor(xPage.metaTags.imageWithAlt.asset._ref)}
             openGraph={{
