@@ -1,10 +1,10 @@
 apiVersion: skaffold/v2beta23
 kind: Config
 metadata:
-  name: landing-page
+  name: iteam-next-site
 build:
   artifacts:
-    - image: landing-page
+    - image: iteam-next-site
       docker:
         dockerfile: Dockerfile
 deploy:
