@@ -1,5 +1,4 @@
 // import App from 'next/app'
-import TagManager from "react-gtm-module"
 import Layout from "../components/Layout"
 import { GlobalProvider } from "../context/GlobalContext"
 
@@ -10,14 +9,6 @@ import "../../node_modules/aos/dist/aos.css"
 
 import "../assets/fonts/icon-font/css/style.css"
 import "../assets/fonts/fontawesome-5/css/all.css"
-
-const tagManagerArgs = {
-  gtmId: "GTM-MP7MZVC",
-}
-
-if (process.browser) {
-  TagManager.initialize(tagManagerArgs)
-}
 
 const MyApp = ({ Component, pageProps, router }) => {
   if (router.pathname.match(/sign|reset|coming/)) {
