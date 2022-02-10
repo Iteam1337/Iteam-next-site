@@ -53,7 +53,7 @@ const Contact1 = () => {
                     <Title>Boka möte i kalendern</Title>
                   </Box>
                   <div
-                    class="meetings-iframe-container"
+                    className="meetings-iframe-container"
                     data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
                   ></div>
                 </FormStyled>
