@@ -46,10 +46,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - iteam.pub
+        - statup.se
       secretName: iteam-pub-secret-tls
   rules:
-    - host: iteam.pub
+    - host: statup.se
       http:
         paths:
           - pathType: Prefix
