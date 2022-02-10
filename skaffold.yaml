@@ -5,8 +5,7 @@ metadata:
 build:
   artifacts:
     - image: iteam-next-site
-      docker:
-        dockerfile: client/Dockerfile
+      context: client
 deploy:
   kubectl:
     manifests:
