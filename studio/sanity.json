@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "project": {
+    "name": "studio"
+  },
+  "api": {
+    "projectId": "3gob9bjq",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "color-picker",
+    "@sanity/dashboard",
+    "vercel-deploy",
+    "@sanity/production-preview",
+    "iframe-pane",
+    "social-preview"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ],
+      "api": {
+        "dataset": "development"
+      }
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./src/deskStructure.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveProductionUrl.js"
+    }
+  ]
+}
