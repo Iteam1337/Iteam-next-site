@@ -6,7 +6,7 @@ build:
   artifacts:
     - image: iteam-next-site
       docker:
-        dockerfile: Dockerfile
+        dockerfile: client/Dockerfile
 deploy:
   kubectl:
     manifests:
