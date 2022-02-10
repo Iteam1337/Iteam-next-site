@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: iteam-pub
-          image: iteam-pub
+          image: iteam-next-site
           ports:
             - containerPort: 3000
 ---
