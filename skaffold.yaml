@@ -1,4 +1,4 @@
-apiVersion: skaffold/v2beta23
+apiVersion: skaffold/v2beta27
 kind: Config
 metadata:
   name: iteam-next-site
@@ -6,6 +6,14 @@ build:
   artifacts:
     - image: iteam-next-site
       context: client
+      docker:
+        buildArgs:
+          SANITY_READ_DATA_TOKEN: "{{.SANITY_READ_DATA_TOKEN}}"
+          SANITY_API_TOKEN: "{{.SANITY_API_TOKEN}}"
+          SANITY_PREVIEW_SECRET: "{{.SANITY_PREVIEW_SECRET}}"
+      platforms:
+        - linux/amd64
+  
 deploy:
   kubectl:
     manifests:
