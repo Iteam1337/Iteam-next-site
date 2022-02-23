@@ -3,10 +3,14 @@ kind: Config
 metadata:
   name: iteam-next-site
 build:
+  tagPolicy:
+    sha256: {}
   artifacts:
     - image: iteam-next-site
       context: client
       docker:
+        cacheFrom: 
+          - iteam-next-site
         buildArgs:
           SANITY_READ_DATA_TOKEN: "{{.SANITY_READ_DATA_TOKEN}}"
           SANITY_API_TOKEN: "{{.SANITY_API_TOKEN}}"
