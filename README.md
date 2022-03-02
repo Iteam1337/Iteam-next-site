@@ -18,7 +18,7 @@ To make it clearer that the user is in preview mode we use the `ExitPreviewLink`
 
 If you want to add live preview to a document type you will need to add .views to deskStructure and then do the same as above.
 
-You might need to take a look in resolveProductionUrl aswell.
+You might need to take a look in resolveProductionUrl as well.
 
 ## Client
 
