@@ -42,11 +42,7 @@ const SliderStyled = styled(Slider)`
     &:before {
       content: '\f060';
     }
-
-    @media ${device.lg} {
-    }
   }
-
   .slick-arrow.slick-next {
     right: 0;
     left: auto;
@@ -55,7 +51,6 @@ const SliderStyled = styled(Slider)`
       content: '\f061';
     }
   }
-
   .slick-arrow:hover,
   .slick-arrow:focus {
     background: ${({ theme }) => theme.colors.light}!important;
@@ -72,14 +67,18 @@ const SliderStyled = styled(Slider)`
     top: 0;
     left: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+
+    @media ${device.md} {
+      align-items: center;
+    }
   }
 
   .slick-list {
     margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: ${({ theme }) =>
-      `0 31px 25px ${rgba(theme.colors.shadow, 0.125)}`};
+      `0 10px 25px ${rgba(theme.colors.shadow, 0.125)}`};
     background: ${({ theme }) => theme.colors.light}!important;
   }
 
@@ -91,6 +90,7 @@ const SliderStyled = styled(Slider)`
     opacity: 1;
     animation: fade-in 0.3s ease-in;
   }
+
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -132,9 +132,11 @@ const SliderStyled = styled(Slider)`
 
 const SliderItem = styled(Box)`
   padding: 30px 30px 60px;
+
   &:focus {
     outline: none;
   }
+
   @media ${device.md} {
     padding: 30px 90px 60px;
   }
@@ -147,16 +149,17 @@ const SliderCard = styled(Box)`
   flex-direction: column;
   align-items: center;
 
-  @media ${device.sm} {
-    padding: 35px 0;
+  h4:first-of-type {
+    margin-top: 0;
   }
+
   @media ${device.md} {
     padding: 10px;
+    align-items: flex-start;
   }
   @media ${device.lg} {
     padding: 0 0 0 30px;
     flex-direction: row;
-    // margin: 0 60px !important;
   }
 `
 
@@ -165,13 +168,6 @@ const SliderImgContainer = styled(Box)`
   overflow: hidden;
   min-width: 100%;
 
-  @media ${device.sm} {
-    padding: 0;
-  }
-  @media ${device.lg} {
-    min-width: 315px;
-  }
-
   img {
     margin: 0 auto;
     max-width: unset;
@@ -179,8 +175,13 @@ const SliderImgContainer = styled(Box)`
   }
 
   @media ${device.sm} {
+    padding: 0;
     max-width: 100%;
     width: auto;
+  }
+  @media ${device.lg} {
+    min-width: 315px;
+    margin-top: 5px;
   }
 `
 
@@ -192,8 +193,13 @@ const SliderText = styled(Box)`
   justify-content: left;
   flex: auto;
   padding: 60px 0 0 0;
+
+  p {
+    margin-top: 0;
+  }
+
   @media ${device.lg} {
-    padding: 60px 30px;
+    padding: 0 0 0 30px;
   }
 `
 
