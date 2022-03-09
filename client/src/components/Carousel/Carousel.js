@@ -42,13 +42,7 @@ const SliderStyled = styled(Slider)`
     &:before {
       content: '\f060';
     }
-    margin-left: -6px;
-
-    @media ${device.lg} {
-      margin-left: 40px;
-    }
   }
-
   .slick-arrow.slick-next {
     right: 0;
     left: auto;
@@ -56,62 +50,123 @@ const SliderStyled = styled(Slider)`
     &:before {
       content: '\f061';
     }
-    margin-right: -6px;
-    @media ${device.lg} {
-      margin-right: 40px;
-    }
   }
-
   .slick-arrow:hover,
   .slick-arrow:focus {
     background: ${({ theme }) => theme.colors.light}!important;
     color: ${({ theme }) => theme.colors.secondary}!important;
+    box-shadow: ${({ theme }) =>
+      `0 1px 6px ${rgba(theme.colors.shadow, 0.125)}`};
     &:before {
       color: ${({ theme }) => theme.colors.secondary}!important;
     }
   }
+
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+
+    @media ${device.md} {
+      align-items: center;
+    }
+  }
+
+  .slick-list {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: ${({ theme }) =>
+      `0 10px 25px ${rgba(theme.colors.shadow, 0.125)}`};
+    background: ${({ theme }) => theme.colors.light}!important;
+  }
+
+  .slick-slide {
+    opacity: 0;
+  }
+
+  .slick-active {
+    opacity: 1;
+    animation: fade-in 0.3s ease-in;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .slick-dots {
+    position: static;
+    margin-top: 30px;
+  }
+  .slick-dots li {
+    width: 45px;
+    height: 45px;
+  }
+  .slick-dots li button {
+    width: 45px;
+    height: 45px;
+    background: ${({ theme }) => theme.colors.secondary};
+    opacity: 1;
+    transition: 0.2s;
+    border-radius: 100%;
+    box-shadow: ${({ theme }) =>
+      `0 1px 6px ${rgba(theme.colors.shadow, 0.125)}`};
+  }
+  .slick-dots li button:hover,
+  .slick-dots li button:focus {
+    background: ${({ theme }) => theme.colors.light};
+  }
+  .slick-dots li.slick-active button {
+    background: ${({ theme }) => theme.colors.light};
+  }
+  .slick-dots li button::before {
+    display: none;
+  }
 `
 
 const SliderItem = styled(Box)`
-  padding: 30px;
+  padding: 30px 30px 60px;
+
   &:focus {
     outline: none;
+  }
+
+  @media ${device.md} {
+    padding: 30px 90px 60px;
   }
 `
 
 const SliderCard = styled(Box)`
-  border-radius: 10px;
   background: #fff;
   overflow: hidden;
-  box-shadow: ${({ theme }) =>
-    `0 52px 54px ${rgba(theme.colors.shadow, 0.125)}`};
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media ${device.sm} {
-    padding: 35px 35px 20px 35px;
+
+  h4:first-of-type {
+    margin-top: 0;
   }
+
   @media ${device.md} {
     padding: 10px;
-    flex-direction: row;
+    align-items: flex-start;
   }
   @media ${device.lg} {
-    padding: 0 0 30px 30px;
-
-    margin: 60px 60px 100px 60px !important;
+    padding: 0 0 0 30px;
+    flex-direction: row;
   }
 `
 
 const SliderImgContainer = styled(Box)`
   border-radius: 10px;
   overflow: hidden;
-
-  @media ${device.sm} {
-    min-width: 315px;
-    padding: 0;
-  }
-  @media ${device.md} {
-  }
+  min-width: 100%;
 
   img {
     margin: 0 auto;
@@ -120,8 +175,13 @@ const SliderImgContainer = styled(Box)`
   }
 
   @media ${device.sm} {
+    padding: 0;
     max-width: 100%;
     width: auto;
+  }
+  @media ${device.lg} {
+    min-width: 315px;
+    margin-top: 5px;
   }
 `
 
@@ -132,7 +192,15 @@ const SliderText = styled(Box)`
   align-items: left;
   justify-content: left;
   flex: auto;
-  padding: 80px 30px 0px;
+  padding: 60px 0 0 0;
+
+  p {
+    margin-top: 0;
+  }
+
+  @media ${device.lg} {
+    padding: 0 0 0 30px;
+  }
 `
 
 const Coworker = ({ item }) => {
@@ -195,9 +263,18 @@ const Carousel = ({ content, coworker = false }) => {
     arrows: true,
     responsive: [
       {
-        breakpoint: breakpoints.lg,
+        breakpoint: breakpoints.md,
+        settings: {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
       },
     ],
+    useCSS: false,
   }
 
   return (
