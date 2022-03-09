@@ -64,10 +64,11 @@ const Content1 = ({ content }) => (
           <Col
             md={8}
             lg={6}
-            data-aos="fade-right"
-            data-aos-duration="750"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="200"
+            data-aos-offset="0"
             data-aos-once="true"
-            data-aos-delay="500"
           >
             <Section py={[5, null, null, '190px']}>
               <div className="omga-02__content-text section-title order-lg-1">

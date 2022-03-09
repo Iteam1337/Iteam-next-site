@@ -53,10 +53,12 @@ const SectionWithButtonAndTextGrid = ({
             md="8"
             lg="6"
             className="offset-lg-1 pl-lg-5 order-lg-2"
-            data-aos="fade-left"
-            data-aos-duration="600"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-duration="300"
+            data-aos-delay="100"
+            data-aos-offset="0"
             data-aos-once="true"
-            data-aos-delay="500"
           >
             <Box>
               <Title color="light">{section.title}</Title>
@@ -84,10 +86,12 @@ const SectionWithButtonAndTextGrid = ({
                     <Col
                       md="12"
                       className={i != 0 && 'mt-4'}
-                      data-aos="fade-right"
-                      data-aos-duration="600"
+                      data-aos="fade-zoom-in"
+                      data-aos-easing="ease-in-back"
+                      data-aos-duration="400"
+                      data-aos-delay="500"
+                      data-aos-offset="0"
                       data-aos-once="true"
-                      data-aos-delay="50"
                       key={i}
                     >
                       <FeatureCard color="primary" title={block.title}>

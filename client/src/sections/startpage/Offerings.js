@@ -81,22 +81,17 @@ const Offerings = ({ data }) => {
           <Row className="align-items-center">
             <Col lg="5" md="9" sm="10" className="mb-5 mb-lg-0">
               <div className="position-relative">
-                <div
-                  data-aos="fade-down"
-                  data-aos-duration="750"
-                  data-aos-once="true"
-                >
-                  <img src={imgContentMobile} alt="" className="img-fluid" />
-                </div>
+                <img src={imgContentMobile} alt="" className="img-fluid" />
                 <ShapeCard
                   bg="secondary"
                   p="18px"
                   borderRadius={8}
                   className="d-flex align-items-start"
                   data-aos="fade-right"
-                  data-aos-duration="750"
+                  data-aos-duration="200"
                   data-aos-once="true"
-                  data-aos-delay="500"
+                  data-aos-delay="1000"
+                  data-aos-easing="ease-out-back"
                 >
                   <Box
                     width="30px"
@@ -131,20 +126,32 @@ const Offerings = ({ data }) => {
               </div>
             </Col>
             <Col lg="7">
-              <div
-                data-aos="fade-left"
-                data-aos-duration="750"
-                data-aos-once="true"
-              >
-                <div className="content-text pl-lg--50">
-                  <div className="section-title">
-                    <Title>{data?.title}</Title>
-                  </div>
-                  <div className="mt-5">
-                    {data?.offers?.map((offer, index) => (
+              <div className="content-text pl-lg--50">
+                <div
+                  className="section-title"
+                  data-aos="fade-zoom-in"
+                  data-aos-easing="ease-in-back"
+                  data-aos-delay="300"
+                  data-aos-duration="200"
+                  data-aos-offset="0"
+                  data-aos-once="true"
+                >
+                  <Title>{data?.title}</Title>
+                </div>
+                <div className="mt-5">
+                  {data?.offers?.map((offer, index) => (
+                    <div
+                      className="section-title"
+                      data-aos="fade-zoom-in"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay="300"
+                      data-aos-duration="200"
+                      data-aos-offset="0"
+                      data-aos-once="true"
+                    >
                       <ContentCard offer={offer} key={index} />
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </Col>

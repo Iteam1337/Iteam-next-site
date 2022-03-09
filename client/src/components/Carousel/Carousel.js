@@ -278,7 +278,13 @@ const Carousel = ({ content, coworker = false }) => {
   }
 
   return (
-    <Container>
+    <Container
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-duration="300"
+      data-aos-offset="0"
+      data-aos-once="true"
+    >
       <Row className="justify-content-center">
         <Col lg="12" xl="11">
           <SliderStyled {...slickSettings}>

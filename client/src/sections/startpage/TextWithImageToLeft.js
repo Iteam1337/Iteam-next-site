@@ -29,15 +29,16 @@ const TextWithImageToLeft = ({ content }) => {
     <>
       <Section>
         <Container>
-          <Row className="align-items-center">
+          <Row
+            className="align-items-center"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="200"
+            data-aos-offset="0"
+            data-aos-once="true"
+          >
             <Col lg="6" className="mb-4 mb-lg-0">
-              <div
-                className="pl-5"
-                data-aos="fade-right"
-                data-aos-duration="750"
-                data-aos-delay="200"
-                data-aos-once="true"
-              >
+              <div className="pl-5">
                 <ImgStyled
                   src={urlFor(content.imageWithAlt.asset._ref)}
                   alt=""
