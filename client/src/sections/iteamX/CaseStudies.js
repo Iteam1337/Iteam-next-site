@@ -6,13 +6,17 @@ import { Title, Box, Text, Button } from '../../components/Core'
 import { device } from '../../utils'
 import sanityClient from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
+import Link from 'next/link'
 
-const CaseCardStyled = styled(Card)`
+const CaseCardStyled = styled.a`
+  display: inline-block;
   width: 100%;
   transition: 0.4s;
   height: 100%;
+  transition: 0.2s;
   border: none;
   background-color: ${({ theme }) => theme.colors.dark};
+  overflow: hidden;
 
   .img-container {
     position: relative;
@@ -26,39 +30,30 @@ const CaseCardStyled = styled(Card)`
     }
   }
 
-  &:hover {
-    transform: translateY(-20px);
+  &:after {
+    content: 'Läs mer';
+    position: absolute;
+    z-index: 3;
+    right: 15px;
+    bottom: 0;
+    opacity: 0;
+    padding: 1rem 1.5rem;
+    background: ${({ theme }) => theme.colors.light};
+    border-radius: 8px 0 8px 0;
+    color: ${({ theme }) => theme.colors.dark};
+    font-weight: 500;
+    transition: 0.3s;
   }
-  &:hover i {
-    transform: translateX(10px);
-    opacity: 1;
-  }
-`
 
-const BtnContainer = styled(Box)`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  margin-top: 20px;
-  opacity: 0;
-  transition: 0.4s opacity, 0.4s margin-top;
-  height: 40px;
-  font-size: 16px;
-  text-align: center;
-  ${CaseCardStyled}:hover & {
-    opacity: 1;
-    margin-top: 0px;
-  }
-  button {
-    font-size: 16px;
-    padding: 0.5rem 1.25rem;
-    @media ${device.sm} {
-      font-size: 18px;
-      padding: 0.75rem 1.5rem;
-    }
-    @media ${device.lg} {
-      padding: 0.85rem 1.75rem;
+  &:hover,
+  &:focus {
+    transition: 1s;
+    // @media screen and (prefers-reduced-motion: no-preference) {
+    //   transform: scale(1.01);
+    // }
+
+    &:after {
+      opacity: 1;
     }
   }
 `
@@ -131,42 +126,39 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
     data.preview.imageCard.image.asset._ref
   )
   return (
-    <CaseCardStyled>
-      <div className="img-container">
-        <img {...imageProps} alt="" />
-        <BtnContainer>
-          <Button
-            onClick={() => (window.location.href = `case/${data.slug.current}`)}
-          >
-            Läs case
-          </Button>
-        </BtnContainer>
-      </div>
-      <TextContent bg={bg}>
-        <Shape bg={bg}>
-          <svg height="22" viewBox="0 0 540 22">
-            <g>
+    <Link href={`case/${data.slug.current}`} passHref>
+      <CaseCardStyled aria-label="Läs mer om detta case">
+        {/* <div> */}
+        <div className="img-container">
+          <img {...imageProps} alt="" />
+        </div>
+        <TextContent bg={bg}>
+          <Shape bg={bg}>
+            <svg height="22" viewBox="0 0 540 22">
               <g>
-                <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
+                <g>
+                  <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
+                </g>
               </g>
-            </g>
-          </svg>
-        </Shape>
-        <PreTitle color={isDark ? 'lightShade' : 'darkShade'}>
-          {data.tags
-            ? data.tags.map(
-                (tag, i) => `${tag}${i < data.tags.length - 1 ? ', ' : ''} `
-              )
-            : data.title}
-        </PreTitle>
-        <TitleStyled color={isDark ? 'light' : 'dark'}>
-          {data.title}
-        </TitleStyled>
-        <Text color={isDark ? 'lightShade' : 'darkShade'}>
-          {data.preview.imageCard.description}
-        </Text>
-      </TextContent>
-    </CaseCardStyled>
+            </svg>
+          </Shape>
+          <PreTitle color={isDark ? 'lightShade' : 'darkShade'}>
+            {data.tags
+              ? data.tags.map(
+                  (tag, i) => `${tag}${i < data.tags.length - 1 ? ', ' : ''} `
+                )
+              : data.title}
+          </PreTitle>
+          <TitleStyled color={isDark ? 'light' : 'dark'}>
+            {data.title}
+          </TitleStyled>
+          <Text color={isDark ? 'lightShade' : 'darkShade'}>
+            {data.preview.imageCard.description}
+          </Text>
+        </TextContent>
+        {/* </div> */}
+      </CaseCardStyled>
+    </Link>
   )
 }
 
@@ -183,15 +175,13 @@ const CaseStudies = ({ cases }) => {
                 lg="6"
                 md="9"
                 className="mb-4"
-                data-aos="fade-up"
-                data-aos-duration="1000"
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="200"
+                data-aos-offset="0"
                 data-aos-once="true"
               >
-                <CaseCard
-                  bg={i === 0 ? 'secondary' : 'light'}
-                  isDark={false}
-                  data={item}
-                />
+                <CaseCard bg={'secondary'} isDark={false} data={item} />
               </Col>
             ))}
           </Row>
