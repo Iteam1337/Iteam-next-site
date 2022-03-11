@@ -40,8 +40,7 @@ const SectionWithImageAndButton = ({ content }) => {
             lg={6}
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
-            data-aos-delay="400"
-            data-aos-duration="600"
+            data-aos-delay="50"
             data-aos-offset="0"
             data-aos-once="true"
           >

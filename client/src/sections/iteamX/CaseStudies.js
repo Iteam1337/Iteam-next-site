@@ -8,12 +8,9 @@ import sanityClient from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
 import Link from 'next/link'
 
-const CaseCardStyled = styled.a`
-  display: inline-block;
+const CaseCardStyled = styled(Card)`
   width: 100%;
-  transition: 0.4s;
   height: 100%;
-  transition: 0.2s;
   border: none;
   background-color: ${({ theme }) => theme.colors.dark};
   overflow: hidden;
@@ -29,31 +26,39 @@ const CaseCardStyled = styled.a`
       object-fit: cover;
     }
   }
+`
 
-  &:after {
-    content: 'Läs mer';
-    position: absolute;
-    z-index: 3;
-    right: 15px;
-    bottom: 0;
-    opacity: 0;
-    padding: 1rem 1.5rem;
-    background: ${({ theme }) => theme.colors.light};
-    border-radius: 8px 0 8px 0;
-    color: ${({ theme }) => theme.colors.dark};
-    font-weight: 500;
-    transition: 0.3s;
-  }
+const CaseCardLink = styled.a`
+  display: inline-block;
+  transition: 0.4s;
+  height: 100%;
+  transition: 0.2s;
 
   &:hover,
   &:focus {
-    transition: 1s;
-    // @media screen and (prefers-reduced-motion: no-preference) {
-    //   transform: scale(1.01);
-    // }
+    transition: 0.4s;
 
     &:after {
+      content: 'Läs mer';
+      position: absolute;
+      z-index: 3;
+      right: 15px;
+      bottom: 0;
       opacity: 1;
+      padding: 1rem 1.5rem;
+      background: ${({ theme }) => theme.colors.light};
+      border-radius: 8px 0 8px 0;
+      color: ${({ theme }) => theme.colors.dark};
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+      transform: scale(1.01);
+
+      &:after {
+        right: 0;
+      }
     }
   }
 `
@@ -127,37 +132,37 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
   )
   return (
     <Link href={`case/${data.slug.current}`} passHref>
-      <CaseCardStyled aria-label="Läs mer om detta case">
-        {/* <div> */}
-        <div className="img-container">
-          <img {...imageProps} alt="" />
-        </div>
-        <TextContent bg={bg}>
-          <Shape bg={bg}>
-            <svg height="22" viewBox="0 0 540 22">
-              <g>
+      <CaseCardLink aria-label="Läs mer om detta case">
+        <CaseCardStyled>
+          <div className="img-container">
+            <img {...imageProps} alt="" />
+          </div>
+          <TextContent bg={bg}>
+            <Shape bg={bg}>
+              <svg height="22" viewBox="0 0 540 22">
                 <g>
-                  <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
+                  <g>
+                    <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
+                  </g>
                 </g>
-              </g>
-            </svg>
-          </Shape>
-          <PreTitle color={isDark ? 'lightShade' : 'darkShade'}>
-            {data.tags
-              ? data.tags.map(
-                  (tag, i) => `${tag}${i < data.tags.length - 1 ? ', ' : ''} `
-                )
-              : data.title}
-          </PreTitle>
-          <TitleStyled color={isDark ? 'light' : 'dark'}>
-            {data.title}
-          </TitleStyled>
-          <Text color={isDark ? 'lightShade' : 'darkShade'}>
-            {data.preview.imageCard.description}
-          </Text>
-        </TextContent>
-        {/* </div> */}
-      </CaseCardStyled>
+              </svg>
+            </Shape>
+            <PreTitle color={isDark ? 'lightShade' : 'darkShade'}>
+              {data.tags
+                ? data.tags.map(
+                    (tag, i) => `${tag}${i < data.tags.length - 1 ? ', ' : ''} `
+                  )
+                : data.title}
+            </PreTitle>
+            <TitleStyled color={isDark ? 'light' : 'dark'}>
+              {data.title}
+            </TitleStyled>
+            <Text color={isDark ? 'lightShade' : 'darkShade'}>
+              {data.preview.imageCard.description}
+            </Text>
+          </TextContent>
+        </CaseCardStyled>
+      </CaseCardLink>
     </Link>
   )
 }
@@ -177,7 +182,7 @@ const CaseStudies = ({ cases }) => {
                 className="mb-4"
                 data-aos="fade-zoom-in"
                 data-aos-easing="ease-in-back"
-                data-aos-delay="200"
+                data-aos-delay="50"
                 data-aos-offset="0"
                 data-aos-once="true"
               >

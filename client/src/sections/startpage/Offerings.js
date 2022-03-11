@@ -90,7 +90,7 @@ const Offerings = ({ data }) => {
                   data-aos="fade-right"
                   data-aos-duration="200"
                   data-aos-once="true"
-                  data-aos-delay="1000"
+                  data-aos-delay="800"
                   data-aos-easing="ease-out-back"
                 >
                   <Box
@@ -131,7 +131,7 @@ const Offerings = ({ data }) => {
                   className="section-title"
                   data-aos="fade-zoom-in"
                   data-aos-easing="ease-in-back"
-                  data-aos-delay="300"
+                  data-aos-delay="50"
                   data-aos-duration="200"
                   data-aos-offset="0"
                   data-aos-once="true"
@@ -144,7 +144,7 @@ const Offerings = ({ data }) => {
                       className="section-title"
                       data-aos="fade-zoom-in"
                       data-aos-easing="ease-in-back"
-                      data-aos-delay="300"
+                      data-aos-delay="50"
                       data-aos-duration="200"
                       data-aos-offset="0"
                       data-aos-once="true"

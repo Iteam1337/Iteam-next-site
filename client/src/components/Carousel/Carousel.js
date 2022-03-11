@@ -281,7 +281,7 @@ const Carousel = ({ content, coworker = false }) => {
     <Container
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
-      data-aos-duration="300"
+      data-aos-duration="500"
       data-aos-offset="0"
       data-aos-once="true"
     >

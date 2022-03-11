@@ -55,8 +55,7 @@ const SectionWithButtonAndTextGrid = ({
             className="offset-lg-1 pl-lg-5 order-lg-2"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
-            data-aos-duration="300"
-            data-aos-delay="100"
+            data-aos-delay="50"
             data-aos-offset="0"
             data-aos-once="true"
           >
@@ -80,20 +79,17 @@ const SectionWithButtonAndTextGrid = ({
           </Col>
           <Col md="8" lg="5" className="order-lg-1 mt-5 mt-lg-0">
             <div>
-              <Row className="justify-content-center">
+              <Row
+                className="justify-content-center"
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="400"
+                data-aos-offset="0"
+                data-aos-once="true"
+              >
                 {textGrid.texts.map((block, i) => {
                   return (
-                    <Col
-                      md="12"
-                      className={i != 0 && 'mt-4'}
-                      data-aos="fade-zoom-in"
-                      data-aos-easing="ease-in-back"
-                      data-aos-duration="400"
-                      data-aos-delay="500"
-                      data-aos-offset="0"
-                      data-aos-once="true"
-                      key={i}
-                    >
+                    <Col md="12" className={i != 0 && 'mt-4'} key={i}>
                       <FeatureCard color="primary" title={block.title}>
                         {block.text}
                       </FeatureCard>

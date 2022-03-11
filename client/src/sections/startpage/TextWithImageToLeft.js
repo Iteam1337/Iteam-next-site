@@ -33,7 +33,7 @@ const TextWithImageToLeft = ({ content }) => {
             className="align-items-center"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
-            data-aos-delay="200"
+            data-aos-delay="50"
             data-aos-offset="0"
             data-aos-once="true"
           >

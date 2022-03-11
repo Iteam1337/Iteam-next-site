@@ -66,7 +66,7 @@ const Content1 = ({ content }) => (
             lg={6}
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
-            data-aos-delay="200"
+            data-aos-delay="50"
             data-aos-offset="0"
             data-aos-once="true"
           >
