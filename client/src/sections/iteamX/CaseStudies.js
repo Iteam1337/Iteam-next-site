@@ -124,6 +124,17 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
     sanityClient,
     data.preview.imageCard.image.asset._ref
   )
+
+  const previewDescription = () => {
+    let trimmedDescription = data.preview.imageCard.description.slice(0, 150)
+    trimmedDescription = trimmedDescription.slice(
+      0,
+      Math.min(trimmedDescription.length, trimmedDescription.lastIndexOf(' '))
+    )
+    return `${trimmedDescription} (…)`
+  }
+
+  console.log(previewDescription())
   return (
     <Link href={`case/${data.slug.current}`} passHref>
       <CaseCardLink aria-label="Läs mer om detta case">
@@ -152,7 +163,7 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
               {data.title}
             </TitleStyled>
             <Text color={isDark ? 'lightShade' : 'darkShade'}>
-              {data.preview.imageCard.description}
+              {previewDescription()}
             </Text>
           </TextContent>
         </CaseCardStyled>
