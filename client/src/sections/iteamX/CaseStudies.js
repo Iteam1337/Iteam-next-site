@@ -136,39 +136,35 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
 
   console.log(previewDescription())
   return (
-    <Link href={`case/${data.slug.current}`} passHref>
-      <CaseCardLink aria-label="Läs mer om detta case">
-        <CaseCardStyled>
-          <div className="img-container">
-            <img {...imageProps} alt="" />
-          </div>
-          <TextContent bg={bg}>
-            <Shape bg={bg}>
-              <svg height="22" viewBox="0 0 540 22">
-                <g>
-                  <g>
-                    <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
-                  </g>
-                </g>
-              </svg>
-            </Shape>
-            <PreTitle color={isDark ? 'lightShade' : 'darkShade'}>
-              {data.tags
-                ? data.tags.map(
-                    (tag, i) => `${tag}${i < data.tags.length - 1 ? ', ' : ''} `
-                  )
-                : data.title}
-            </PreTitle>
-            <TitleStyled color={isDark ? 'light' : 'dark'}>
-              {data.title}
-            </TitleStyled>
-            <Text color={isDark ? 'lightShade' : 'darkShade'}>
-              {previewDescription()}
-            </Text>
-          </TextContent>
-        </CaseCardStyled>
-      </CaseCardLink>
-    </Link>
+    <CaseCardStyled>
+      <div className="img-container">
+        <img {...imageProps} alt="" />
+      </div>
+      <TextContent bg={bg}>
+        <Shape bg={bg}>
+          <svg height="22" viewBox="0 0 540 22">
+            <g>
+              <g>
+                <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
+              </g>
+            </g>
+          </svg>
+        </Shape>
+        <PreTitle color={isDark ? 'lightShade' : 'darkShade'}>
+          {data.tags
+            ? data.tags.map(
+                (tag, i) => `${tag}${i < data.tags.length - 1 ? ', ' : ''} `
+              )
+            : data.title}
+        </PreTitle>
+        <TitleStyled color={isDark ? 'light' : 'dark'}>
+          {data.title}
+        </TitleStyled>
+        <Text color={isDark ? 'lightShade' : 'darkShade'}>
+          {previewDescription()}
+        </Text>
+      </TextContent>
+    </CaseCardStyled>
   )
 }
 
@@ -191,7 +187,11 @@ const CaseStudies = ({ cases }) => {
                 data-aos-offset="0"
                 data-aos-once="true"
               >
-                <CaseCard bg={'secondary'} isDark={false} data={item} />
+                <Link href={`/case/${item.slug.current}`} passHref>
+                  <CaseCardLink aria-label="Läs mer om detta case">
+                    <CaseCard bg={'secondary'} isDark={false} data={item} />
+                  </CaseCardLink>
+                </Link>
               </Col>
             ))}
           </Row>
