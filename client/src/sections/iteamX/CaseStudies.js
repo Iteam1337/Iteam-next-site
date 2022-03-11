@@ -89,13 +89,7 @@ const Shape = styled(Box)`
   width: 100%;
   left: 0;
   z-index: 2;
-  bottom: 98%;
-  @media ${device.sm} {
-    bottom: 99%;
-  }
-  @media ${device.xl} {
-    bottom: 100%;
-  }
+  bottom: 98.5%;
   svg {
     width: 100%;
     path {
