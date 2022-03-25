@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
-import { Title, Box } from "../Core"
+import { Title, Box, Button } from "../Core"
 
 import { device } from "../../utils"
 
@@ -21,13 +21,15 @@ const HubspotForm = ({
   value,
   title = "Boka intromöte direkt i kalendern",
 }) => {
+  const [formVisible, setFormVisible] = useState(false)
   React.useEffect(() => {
+    if (!formVisible) return
     const script = document.createElement("script")
     script.src =
       "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
     script.async = true
     document.body.appendChild(script)
-  }, [])
+  }, [formVisible])
 
   return (
     <FormStyled
@@ -39,11 +41,16 @@ const HubspotForm = ({
       <Box>
         <Title>{title}</Title>
       </Box>
-      <input type="hidden" name="form-name" value={value} />
-      <div
-        className="meetings-iframe-container"
-        data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
-      />
+      { formVisible ? (<>
+        <input type="hidden" name="form-name" value={value} />
+        <div
+          className="meetings-iframe-container"
+          data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
+        />
+      </>
+) : (
+        <Button onClick={() => setFormVisible(true)}>Hitta tid i vår kalender</Button>
+)}
     </FormStyled>
   )
 }

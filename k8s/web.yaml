@@ -1,0 +1,64 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: iteam-pub
+  namespace: iteam-pub
+spec:
+  ports:
+    - port: 3000
+  type: LoadBalancer
+  selector:
+    app: iteam-pub
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iteam-pub
+  namespace: iteam-pub
+spec:
+  selector:
+    matchLabels:
+      app: iteam-pub
+  template:
+    metadata:
+      labels:
+        app: iteam-pub
+    spec:
+      containers:
+        - name: iteam-pub
+          image: iteam-next-site
+          ports:
+            - containerPort: 3000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: iteam-pub
+  namespace: iteam-pub
+  annotations:
+    kubernetes.io/ingress.class: 'public'
+    cert-manager.io/cluster-issuer: 'letsencrypt-prod'
+    nginx.ingress.kubernetes.io/from-to-www-redirect: 'true'
+    nginx.ingress.kubernetes.io/http2-push-preload: 'true'
+    nginx.ingress.kubernetes.io/proxy-body-size: '500m'
+    nginx.ingress.kubernetes.io/proxy-pass-headers: 'Location'
+    nginx.ingress.kubernetes.io/configuration-snippet: |   
+      add_header X-Frame-Options "sameorigin";
+      add_header X-Content-Type-Options nosniff;
+      add_header Referrer-Policy 'same-origin';
+spec:
+  tls:
+    - hosts:
+        - iteam.pub
+      secretName: web-secret-tls
+  rules:
+    - host: iteam.pub
+      http:
+        paths:
+          - pathType: Prefix
+            path: '/'
+            backend:
+              service:
+                name: iteam-pub
+                port:
+                  number: 3000
