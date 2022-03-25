@@ -208,7 +208,9 @@ const Coworker = ({ item }) => {
     <SliderItem>
       <SliderCard>
         <SliderImgContainer>
-          <Gravatar email={item.email} className="img-fluid" size={200} />
+          {item.email && (
+            <Gravatar email={item.email} className="img-fluid" size={200} />
+          )}
         </SliderImgContainer>
         <SliderText>
           <Title variant="card" mb={0} mt={3}>
