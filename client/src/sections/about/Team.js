@@ -6,6 +6,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import { Title, Section, Box, Text } from "../../components/Core"
 import Link from "next/link"
 import { formatPhoneNumber, urlFor } from "../../utils/helpers"
+import SocialMediaLinks from "./SocialMediaLinks"
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -33,7 +34,7 @@ const Wrapper = styled.div`
 `
 
 const TeamCard = ({ coworker }) => {
-  const { phoneNumber, email, fullname, status, role, slug, profilePic } =
+  const { phoneNumber, email, fullname, status, role, slug, profilePic, socialMedia } =
     coworker
   return (
     <Box className="text-center" pt="15px" px="30px" borderRadius={10} mb={4}>
@@ -84,6 +85,9 @@ const TeamCard = ({ coworker }) => {
                 {email}
               </Text>
             </a>
+          )}
+          {socialMedia && (
+            <SocialMediaLinks socialMedia={socialMedia} fullname={fullname} color="black" />
           )}
         </div>
       </Wrapper>
