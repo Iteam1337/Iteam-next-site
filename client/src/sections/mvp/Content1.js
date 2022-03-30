@@ -77,10 +77,7 @@ const Content1 = ({ content }) => (
                   color="dark"
                 />
 
-                <Button
-                  mt={4}
-                  onClick={() => (window.location.href = '#pricing')}
-                >
+                <Button mt={4} onClick={() => (window.location.href = '#book')}>
                   {content.button}
                 </Button>
               </div>
