@@ -55,6 +55,7 @@ const MediaType = ({ mediaType, children }) => {
           pb={['50px!important', null, '180px!important']}
           bg="dark"
           image={mediaType.image.asset._ref}
+          alt={mediaType.image.alt}
           darkGradient={mediaType.darkGradient}
         >
           {children}
