@@ -1,9 +1,9 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Section } from "../../components/Core"
-import HubspotForm from "../../components/HubspotForm"
-import imgCtaBG from "../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg"
+import { Section } from '../../components/Core'
+import HubspotForm from '../../components/HubspotForm'
+import imgCtaBG from '../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg'
 
 const CTA = () => (
   <>
@@ -20,7 +20,7 @@ const CTA = () => (
               >
                 <img
                   src={imgCtaBG}
-                  alt=""
+                  alt="En person med en stor bukett blommor"
                   className="img-fluid"
                   css={`
                     border-radius: 10px;
