@@ -103,6 +103,15 @@ const startPageQuery = groq`
 const carouselQuery = groq`
 *[_id == 'carousel'][0] {
   ...,
+  texts[]{
+    ...,
+    reference -> {
+      _type,
+      slug {
+        current,
+      }
+    }
+  }
 }`
 
 const ourPricingQuery = groq`
