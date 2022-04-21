@@ -19,7 +19,7 @@ const CTA = () => (
               >
                 <img
                   src={imgCtaBG}
-                  alt=""
+                  alt="En person med en stor bukett blommor"
                   className="img-fluid"
                   css={`
                     border-radius: 10px;

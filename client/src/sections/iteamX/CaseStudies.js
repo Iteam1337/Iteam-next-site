@@ -133,7 +133,7 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
   return (
     <CaseCardStyled>
       <div className="img-container">
-        <img {...imageProps} alt="" />
+        <img {...imageProps} alt={data.preview.imageCard.image.alt} />
         <BtnContainer>
           <Button
             onClick={() => (window.location.href = `case/${data.slug.current}`)}
