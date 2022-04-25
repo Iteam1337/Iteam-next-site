@@ -1,4 +1,4 @@
-import { AiOutlineLink } from 'react-icons/ai';
+import { AiOutlineLink } from 'react-icons/ai'
 export default {
   type: 'document',
   name: 'blockText',
@@ -54,7 +54,14 @@ export default {
                     title: 'Referens',
                     description:
                       'Länk till någon av de andra posterna på sidan, t.ex ett projekt eller en nyhet.',
-                    to: [{ type: 'newsPost' }, { type: 'casePost' }, { type: 'mvpPage' }, { type: 'xPage' }, { type: 'scaleUpPage' }, { type: 'aboutPage' }],
+                    to: [
+                      { type: 'newsPost' },
+                      { type: 'casePost' },
+                      { type: 'mvpPage' },
+                      { type: 'xPage' },
+                      { type: 'scaleUpPage' },
+                      { type: 'aboutPage' },
+                    ],
                   },
                 ],
               },
@@ -73,4 +80,4 @@ export default {
       ],
     },
   ],
-};
+}

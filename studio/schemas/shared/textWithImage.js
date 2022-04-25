@@ -6,4 +6,4 @@ export default {
     { type: 'imageWithAlt', name: 'Bild' },
     { type: 'blockText', name: 'Text' },
   ],
-};
+}

@@ -19,4 +19,4 @@ export default {
     { type: 'xPage' },
     { type: 'bookPage' },
   ],
-};
+}

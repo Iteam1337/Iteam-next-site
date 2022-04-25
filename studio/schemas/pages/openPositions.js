@@ -48,13 +48,13 @@ export default {
       subtitle: 'position',
     },
     prepare({ title = 'No name', slug = {}, name = 'karriar' }) {
-      const path = `/${name}/${slug.current}`;
+      const path = `/${name}/${slug.current}`
 
       return {
         path,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}
