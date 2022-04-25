@@ -5,17 +5,19 @@ export default {
   fields: [
     {
       title: 'Kortare text för förhandsvisning',
+      description: 'Max 150 tecken',
       name: 'description',
       type: 'text',
-      validation: (Rules) =>
+      validation: (Rules) => [
         Rules.required().error('Ange en beskrivning.'),
+        Rules.max(150),
+      ],
     },
     {
       title: 'Bild',
       name: 'image',
       type: 'imageWithAlt',
-      validation: (Rules) =>
-        Rules.required().error('Lägg in en bild.'),
+      validation: (Rules) => Rules.required().error('Lägg in en bild.'),
     },
   ],
-};
+}
