@@ -10,7 +10,7 @@ export default {
       type: 'text',
       validation: (Rules) => [
         Rules.required().error('Ange en beskrivning.'),
-        Rules.max(200),
+        Rules.max(150),
       ],
     },
     {
