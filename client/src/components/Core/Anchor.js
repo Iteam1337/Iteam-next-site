@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { color, space, typography, shadow } from "styled-system"
+import React from 'react'
+import styled from 'styled-components'
+import { color, space, typography, shadow } from 'styled-system'
 
 const Anchor = styled.a`
   font-weight: 300;
@@ -16,12 +16,12 @@ const Anchor = styled.a`
     ${color};
     text-decoration: underline;
   }
-  &:visited{
+  &:visited {
     ${color};
   }
 `
 
-const A = ({ href = "#", ...props }) => {
+const A = ({ href = '#', ...props }) => {
   return <Anchor href={href} color="secondary" {...props} />
 }
 

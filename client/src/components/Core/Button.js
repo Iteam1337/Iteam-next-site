@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 import {
   color,
   background,
@@ -9,7 +9,7 @@ import {
   shadow,
   flexbox,
   layout,
-} from "styled-system"
+} from 'styled-system'
 
 const ButtonSolid = styled.button`
   padding: 0.85rem 1.75rem;
@@ -36,7 +36,7 @@ const ButtonSolid = styled.button`
   ${layout};
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     top: 0;
@@ -83,12 +83,12 @@ const ButtonOutline = styled(ButtonSolid)`
 `
 
 const Button = ({
-  variant = "solid",
-  color = "light",
-  bg = "primary",
+  variant = 'solid',
+  color = 'light',
+  bg = 'primary',
   ...rest
 }) => {
-  return variant === "solid" ? (
+  return variant === 'solid' ? (
     <ButtonSolid
       color={color}
       border={`1px solid`}

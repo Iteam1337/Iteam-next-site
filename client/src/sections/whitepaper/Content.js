@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from "../../components/Core"
-import { device } from "../../utils"
+import { Title, Section, Box, Text } from '../../components/Core'
+import { device } from '../../utils'
 
 const SectionStyled = styled(Section)``
 
@@ -41,7 +41,7 @@ const ContentWidgetIcon = styled(Box)`
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 
-const ContentCard = ({ children = "" }) => {
+const ContentCard = ({ children = '' }) => {
   return (
     <ContentWidget>
       <ContentWidgetIcon>
@@ -67,7 +67,7 @@ const Content = () => {
               <div className="text-center">
                 <Title>Things you’ll learn</Title>
                 <Text>
-                  Create custom landing pages with Omega that converts{" "}
+                  Create custom landing pages with Omega that converts{' '}
                   <br className="d-none d-md-block" /> more visitors than any
                   website.
                 </Text>

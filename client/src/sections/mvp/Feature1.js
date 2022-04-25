@@ -1,6 +1,6 @@
-import React from "react"
-import { rgba } from "polished"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import { rgba } from 'polished'
+import { Container, Row, Col } from 'react-bootstrap'
 import {
   Title,
   Button,
@@ -8,16 +8,16 @@ import {
   Box,
   Text,
   Anchor,
-} from "../../components/Core"
+} from '../../components/Core'
 
 const FeatureCard = ({
-  color = "primary",
+  color = 'primary',
   iconName,
   title,
   children,
   ...rest
 }) => (
-  <Box width={"100%"} bg="light" p="30px" borderRadius={10} {...rest}>
+  <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>
     <div className="d-flex justify-content-between align-items-start">
       <div>
         <Text
@@ -63,7 +63,7 @@ const Feature = () => (
                 för att kickstarta samarbetet. Andra gånger gör vi research om
                 användarbehov för att försäkra oss om att vi löser rätt problem.
               </Text>
-              <Button mt={4} onClick={() => (window.location.href = "#book")}>
+              <Button mt={4} onClick={() => (window.location.href = '#book')}>
                 Boka möte
               </Button>
             </Box>

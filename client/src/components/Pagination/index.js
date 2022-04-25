@@ -1,1 +1,1 @@
-export { default, PageItem } from "./Pagination"
+export { default, PageItem } from './Pagination'

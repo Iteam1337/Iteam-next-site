@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from 'react'
+import styled from 'styled-components'
 import {
   space,
   border,
@@ -7,7 +7,7 @@ import {
   shadow,
   flexbox,
   layout,
-} from "styled-system"
+} from 'styled-system'
 
 const SwitchStyled = styled.div`
   display: inline-block;
@@ -44,7 +44,7 @@ const Round = styled.span`
   pointer-events: none;
 `
 
-const Switch = ({ bg = "secondary", onClick = () => {}, ...rest }) => {
+const Switch = ({ bg = 'secondary', onClick = () => {}, ...rest }) => {
   const [active, setActive] = useState(false)
 
   const handleSwitch = () => {

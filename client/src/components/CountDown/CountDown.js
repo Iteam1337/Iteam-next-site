@@ -1,7 +1,7 @@
-import React from "react"
-import ReactCountdown from "react-countdown"
+import React from 'react'
+import ReactCountdown from 'react-countdown'
 
-import { Box, Text, Title } from "../Core"
+import { Box, Text, Title } from '../Core'
 
 const CardTime = ({ label, time }) => (
   <Box
@@ -13,11 +13,11 @@ const CardTime = ({ label, time }) => (
     bg="secondary"
     className="w-100 h-100 d-flex flex-column align-items-center justify-content-center"
   >
-    <Title variant="card" fontSize={["26px", null, "38px"]} color="light">
+    <Title variant="card" fontSize={['26px', null, '38px']} color="light">
       {time}
     </Title>
     <Text
-      fontSize={["14px", null, "16px"]}
+      fontSize={['14px', null, '16px']}
       variant="small"
       color="lightShade"
       css={`

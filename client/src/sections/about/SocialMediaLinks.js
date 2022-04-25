@@ -7,7 +7,11 @@ const SocialMediaLinks = ({ socialMedia, fullname, color }) => {
       <Fragment key={index}>
         {index !== 0 && ' | '}
         {key !== 'website' ? (
-          <Anchor href={value} color={color} aria-label={`${key} - ${fullname}`}>
+          <Anchor
+            href={value}
+            color={color}
+            aria-label={`${key} - ${fullname}`}
+          >
             <i
               className={`fab fa-${key}`}
               aria-hidden="true"

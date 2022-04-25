@@ -1,13 +1,13 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from "../../components/Core"
+import { Title, Section, Box, Text } from '../../components/Core'
 
-import imgContent1 from "../../assets/image/jpeg/_DSC6527_.jpg"
-import imgContent2 from "../../assets/image/jpeg/Lounge-Martin-Mikael-Christian-Lowres.jpg"
-import BlockContent from "../../components/BlockContent"
-import { urlFor } from "../../utils/helpers"
+import imgContent1 from '../../assets/image/jpeg/_DSC6527_.jpg'
+import imgContent2 from '../../assets/image/jpeg/Lounge-Martin-Mikael-Christian-Lowres.jpg'
+import BlockContent from '../../components/BlockContent'
+import { urlFor } from '../../utils/helpers'
 
 const ContentImg = styled(Box)`
   box-shadow: ${({ theme }) => `0 42px 54px ${theme.colors.shadow}`};
@@ -39,7 +39,7 @@ const Content = ({ content }) => (
                       src={urlFor(image.asset._ref)}
                       alt={image.alt}
                       className="img-fluid"
-                      style={{ objectFit: "cover", height: "100%" }}
+                      style={{ objectFit: 'cover', height: '100%' }}
                     />
                   </ContentImg>
                 </Col>
@@ -52,7 +52,7 @@ const Content = ({ content }) => (
                     src={urlFor(image.asset._ref)}
                     alt={image.alt}
                     className="img-fluid"
-                    style={{ objectFit: "cover", height: "100%" }}
+                    style={{ objectFit: 'cover', height: '100%' }}
                   />
                 </ContentImg>
               </Col>

@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 import {
   CardSidebar,
@@ -6,7 +6,7 @@ import {
   TitleSidebar,
   TitlePost,
   Date,
-} from "../../components/Sidebar"
+} from '../../components/Sidebar'
 
 const Sidebar = ({ posts }) => {
   const sortedPosts = posts.sort((a, b) => {
@@ -22,7 +22,9 @@ const Sidebar = ({ posts }) => {
         <TitleSidebar>Aktuellt</TitleSidebar>
         {sortedPosts?.map((post, i) => (
           <Block key={i}>
-            <TitlePost link={`/aktuellt/${post.slug.current}`}>{post.title}</TitlePost>
+            <TitlePost link={`/aktuellt/${post.slug.current}`}>
+              {post.title}
+            </TitlePost>
             <Date>{post.date}</Date>
           </Block>
         ))}

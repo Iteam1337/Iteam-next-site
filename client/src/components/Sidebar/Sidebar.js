@@ -1,7 +1,7 @@
-import React from "react"
-import Link from "next/link"
+import React from 'react'
+import Link from 'next/link'
 
-import { Title, Text, Box, Span } from "../Core"
+import { Title, Text, Box, Span } from '../Core'
 
 export const CardSidebar = ({ children, ...rest }) => (
   <Box bg="ash" borderRadius="10px" mb="30px" p="25px" {...rest}>
@@ -21,7 +21,7 @@ export const TitleSidebar = ({ children, ...rest }) => (
   </Title>
 )
 
-export const TitlePost = ({ link = "/", children, ...rest }) => (
+export const TitlePost = ({ link = '/', children, ...rest }) => (
   <Title variant="card" fontSize="16px" mb={0} {...rest}>
     <Link href={link}>
       <a>
@@ -31,7 +31,7 @@ export const TitlePost = ({ link = "/", children, ...rest }) => (
   </Title>
 )
 
-export const Date = ({ link = "/", children, ...rest }) => (
+export const Date = ({ link = '/', children, ...rest }) => (
   <Text color="lightShade" fontSize="14px" {...rest}>
     {children}
   </Text>
@@ -51,7 +51,7 @@ export const CatList = ({ children, ...rest }) => (
 )
 
 export const CatListItem = ({
-  link = "/",
+  link = '/',
   numPosts = 20,
   children,
   ...rest
@@ -64,7 +64,7 @@ export const CatListItem = ({
   >
     <Link href={link}>
       <a>
-        <Span color="light">{children}</Span>{" "}
+        <Span color="light">{children}</Span>{' '}
         <Span color="lightShade">- {numPosts} Posts</Span>
       </a>
     </Link>

@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { device } from "../../utils"
+import React from 'react'
+import styled from 'styled-components'
+import { device } from '../../utils'
 
 const DivStyled = styled.div`
   padding: 50px 0;

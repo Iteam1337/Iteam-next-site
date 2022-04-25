@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { rgba } from "polished"
+import React from 'react'
+import styled from 'styled-components'
+import { rgba } from 'polished'
 
-import Input from "./Input"
+import Input from './Input'
 
 const InputGroupStyled = styled.div`
   position: relative;
@@ -19,8 +19,8 @@ const Icon = styled.div`
 `
 
 const InputGroup = ({
-  type = "text",
-  focusColor = "secondary",
+  type = 'text',
+  focusColor = 'secondary',
   icon = <span className="far fa-envelope" />,
   ...rest
 }) => {

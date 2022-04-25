@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text } from "../../components/Core"
-import { device } from "../../utils"
+import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { device } from '../../utils'
 
-import imgContent from "../../assets/image/jpeg/Teacher-Christian.jpg"
+import imgContent from '../../assets/image/jpeg/Teacher-Christian.jpg'
 
 const ImgContainer = styled(Box)`
   position: absolute;

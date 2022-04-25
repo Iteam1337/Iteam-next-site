@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text, Span } from "../../components/Core"
-import { device } from "../../utils"
+import { Title, Section, Box, Text, Span } from '../../components/Core'
+import { device } from '../../utils'
 
 const SectionStyled = styled(Section)``
 
@@ -51,12 +51,12 @@ const Fact = () => (
                 Magazine, Awwwards and more.
               </Text>
               <Text variant="small" mt={4}>
-                {" "}
-                Reach me on{" "}
+                {' '}
+                Reach me on{' '}
                 <a href="/" target="_blank">
                   <Span color="secondary">Twitter</Span>
-                </a>{" "}
-                or{" "}
+                </a>{' '}
+                or{' '}
                 <a href="/" target="_blank">
                   <Span color="secondary">Email</Span>
                 </a>

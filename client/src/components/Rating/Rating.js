@@ -1,7 +1,7 @@
-import React from "react"
-import { Box } from "../Core"
+import React from 'react'
+import { Box } from '../Core'
 
-const Rating = ({ numStar = 4.5, color = "secondary", ...rest }) => {
+const Rating = ({ numStar = 4.5, color = 'secondary', ...rest }) => {
   return (
     <>
       <Box color={color} {...rest}>
