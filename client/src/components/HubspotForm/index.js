@@ -18,6 +18,7 @@ const FormStyled = styled.form`
 `
 const FrameStyled = styled.div`
   max-width: 484px;
+  margin: 0 auto;
 `
 
 const HubspotForm = ({
