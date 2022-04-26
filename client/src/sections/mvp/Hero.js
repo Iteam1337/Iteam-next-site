@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
 import {
   Title,
@@ -9,11 +9,11 @@ import {
   Box,
   Text,
   InputGroup,
-} from "../../components/Core"
+} from '../../components/Core'
 
-import { device } from "../../utils"
+import { device } from '../../utils'
 
-import imgL2HeroBg from "../../assets/image/jpeg/Jonna-Med-Team-Scrum-Board.jpg"
+import imgL2HeroBg from '../../assets/image/jpeg/Jonna-Med-Team-Scrum-Board.jpg'
 
 const SectionStyled = styled(Section)`
   background: 
@@ -80,7 +80,7 @@ const Hero = () => {
               data-aos-delay="500"
               data-aos-once="true"
             >
-              {" "}
+              {' '}
               Iteam MVP – När du vill bygga nytt
               <Box py={[null, null, null, 4]} pr={5} pt={[4, null]}>
                 <Title variant="hero">

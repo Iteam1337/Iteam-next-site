@@ -1,19 +1,19 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box } from "../../components/Core"
-import ContentCard from "../../components/ContentCard"
+import { Title, Section, Box } from '../../components/Core'
+import ContentCard from '../../components/ContentCard'
 
 const services = [
-  "API",
-  "Appar",
-  "Plattformar",
-  "Widgets",
-  "Interna portaler",
-  "Webbapplikationer",
-  "Integrationer för nya tjänster",
-  "Chatbottar",
-  "Automatiseringar",
+  'API',
+  'Appar',
+  'Plattformar',
+  'Widgets',
+  'Interna portaler',
+  'Webbapplikationer',
+  'Integrationer för nya tjänster',
+  'Chatbottar',
+  'Automatiseringar',
 ]
 
 const Feature2 = () => (

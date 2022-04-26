@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Container } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text } from "../../components/Core"
-import { device } from "../../utils"
+import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { device } from '../../utils'
 
 const SectionStyled = styled(Section)`
   padding-bottom: 100px;

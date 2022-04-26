@@ -1,1 +1,1 @@
-export { default } from "./InputSearch"
+export { default } from './InputSearch'

@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
-import Gravatar from "react-gravatar"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import Gravatar from 'react-gravatar'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from "../../components/Core"
-import Link from "next/link"
-import { formatPhoneNumber, urlFor } from "../../utils/helpers"
-import SocialMediaLinks from "./SocialMediaLinks"
+import { Title, Section, Box, Text } from '../../components/Core'
+import Link from 'next/link'
+import { formatPhoneNumber, urlFor } from '../../utils/helpers'
+import SocialMediaLinks from './SocialMediaLinks'
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -34,8 +34,16 @@ const Wrapper = styled.div`
 `
 
 const TeamCard = ({ coworker }) => {
-  const { phoneNumber, email, fullname, status, role, slug, profilePic, socialMedia } =
-    coworker
+  const {
+    phoneNumber,
+    email,
+    fullname,
+    status,
+    role,
+    slug,
+    profilePic,
+    socialMedia,
+  } = coworker
   return (
     <Box className="text-center" pt="15px" px="30px" borderRadius={10} mb={4}>
       <Wrapper>
@@ -47,7 +55,7 @@ const TeamCard = ({ coworker }) => {
                   src={urlFor(profilePic.image.asset._ref)}
                   alt={`Profilbild på ${fullname}`}
                   className="img-fluid"
-                  style={{ width: 200, height: 200, objectFit: "cover" }}
+                  style={{ width: 200, height: 200, objectFit: 'cover' }}
                 />
               ) : (
                 <Gravatar email={email} className="img-fluid" size={200} />
@@ -87,7 +95,11 @@ const TeamCard = ({ coworker }) => {
             </a>
           )}
           {socialMedia && (
-            <SocialMediaLinks socialMedia={socialMedia} fullname={fullname} color="black" />
+            <SocialMediaLinks
+              socialMedia={socialMedia}
+              fullname={fullname}
+              color="black"
+            />
           )}
         </div>
       </Wrapper>

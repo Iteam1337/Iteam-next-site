@@ -1,36 +1,54 @@
-import React, { useEffect } from "react"
-import Link from "next/link"
-import * as THREE from "three"
-import styled from "styled-components"
-import { Container } from "react-bootstrap"
+import React, { useEffect } from 'react'
+import Link from 'next/link'
+import * as THREE from 'three'
+import styled from 'styled-components'
+import { Container } from 'react-bootstrap'
 
-import { Title, Text, Button } from "../../components/Core"
+import { Title, Text, Button } from '../../components/Core'
 import heroImg from '../../assets/image/jpeg/new_colleagues.jpg'
 
 const GlitchHero = () => {
   useEffect(() => {
     glitchEffect()
   }, [])
-  
+
   return (
     <>
       <Canvas id="hero-canvas" />
       <Wrapper>
-        <Container css={`position: absolute; top: 0; left: 0; bottom: 0; right: 0;`}>
+        <Container
+          css={`
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+          `}
+        >
           <TextContainer>
             <Link href="/aktuellt/roliga-nyheter">
               <ClickableArea>
                 <Title variant="hero" color="light">
-                  Boom! Vi växer och 
-                  <br />har massor att berätta
+                  Boom! Vi växer och
+                  <br />
+                  har massor att berätta
                 </Title>
                 <Text mb={4} color="light">
                   <TextBg>
-                    Hållbarhet och digital innovation sitter lika naturligt ihop som Batman och Robin.
-                    Det attraherar både kunder och smarta medarbetare.
+                    Hållbarhet och digital innovation sitter lika naturligt ihop
+                    som Batman och Robin. Det attraherar både kunder och smarta
+                    medarbetare.
                   </TextBg>
                 </Text>
-                  <Button css={`margin-top: 20px`} bg="secondary" color="dark">Träffa våra nya kollegor</Button>
+                <Button
+                  css={`
+                    margin-top: 20px;
+                  `}
+                  bg="secondary"
+                  color="dark"
+                >
+                  Träffa våra nya kollegor
+                </Button>
               </ClickableArea>
             </Link>
           </TextContainer>
@@ -62,9 +80,9 @@ const Canvas = styled.canvas`
 
 const TextBg = styled.span`
   display: inline;
-  background: rgba(0,0,0,.6);
+  background: rgba(0, 0, 0, 0.6);
   padding: 7px;
-  white-space:pre-wrap;
+  white-space: pre-wrap;
   box-decoration-break: clone;
 `
 
@@ -94,20 +112,19 @@ function glitchEffect() {
           type: 't',
           value: null,
         },
-      };
-      this.obj = null;
+      }
+      this.obj = null
     }
     init(src, callback) {
-      const loader = new THREE.TextureLoader();
-      loader.crossOrigin = '*'; 
-      loader.load(
-        src, (tex) => {
-        tex.magFilter = THREE.NearestFilter;
-        tex.minFilter = THREE.NearestFilter;
-        this.uniforms.texture.value = tex;
-        this.obj = this.createObj();
-        callback();
-      });
+      const loader = new THREE.TextureLoader()
+      loader.crossOrigin = '*'
+      loader.load(src, (tex) => {
+        tex.magFilter = THREE.NearestFilter
+        tex.minFilter = THREE.NearestFilter
+        this.uniforms.texture.value = tex
+        this.obj = this.createObj()
+        callback()
+      })
     }
     createObj() {
       return new THREE.Mesh(
@@ -146,30 +163,30 @@ function glitchEffect() {
             }
           `,
         })
-      );
+      )
     }
     resize() {
-      this.uniforms.resolution.value.set(window.innerWidth, window.innerHeight);
+      this.uniforms.resolution.value.set(window.innerWidth, window.innerHeight)
     }
   }
-  
+
   class PostEffect {
     constructor(texture) {
       this.uniforms = {
         time: {
           type: 'f',
-          value: 0
+          value: 0,
         },
         resolution: {
           type: 'v2',
-          value: new THREE.Vector2(window.innerWidth, window.innerHeight)
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
         },
         texture: {
           type: 't',
           value: texture,
         },
-      };
-      this.obj = this.createObj();
+      }
+      this.obj = this.createObj()
     }
     createObj() {
       return new THREE.Mesh(
@@ -350,21 +367,21 @@ function glitchEffect() {
             }
           `,
         })
-      );
+      )
     }
     render(time) {
-      this.uniforms.time.value += time;
+      this.uniforms.time.value += time
     }
     resize() {
-      this.uniforms.resolution.value.set(window.innerWidth, window.innerHeight);
+      this.uniforms.resolution.value.set(window.innerWidth, window.innerHeight)
     }
   }
-  
+
   class ConsoleSignature {
     constructor() {
-      this.message = `created by yoichi kobayashi`;
-      this.url = `http://www.tplh.net`;
-      this.show();
+      this.message = `created by yoichi kobayashi`
+      this.url = `http://www.tplh.net`
+      this.show()
     }
     show() {
       if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
@@ -373,91 +390,103 @@ function glitchEffect() {
           'color: #fff; background: #222; padding:3px 0;',
           'padding:3px 1px;',
           'color: #fff; background: #47c; padding:3px 0;',
-        ];
-        console.log.apply(console, args);
+        ]
+        console.log.apply(console, args)
       } else if (window.console) {
-        console.log(`${this.message} ${this.url}`);
+        console.log(`${this.message} ${this.url}`)
       }
     }
   }
-  
+
   const debounce = (callback, duration) => {
-    var timer;
-    return function(event) {
-      clearTimeout(timer);
-      timer = setTimeout(function(){
-        callback(event);
-      }, duration);
-    };
-  };
-  
-  const canvas = document.getElementById('hero-canvas');
+    var timer
+    return function (event) {
+      clearTimeout(timer)
+      timer = setTimeout(function () {
+        callback(event)
+      }, duration)
+    }
+  }
+
+  const canvas = document.getElementById('hero-canvas')
   const renderer = new THREE.WebGLRenderer({
     antialias: false,
     canvas: canvas,
-  });
-  const renderBack1 = new THREE.WebGLRenderTarget(window.innerWidth, window.innerHeight);
-  const scene = new THREE.Scene();
-  const sceneBack = new THREE.Scene();
-  const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-  const cameraBack = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-  const clock = new THREE.Clock();
-  
+  })
+  const renderBack1 = new THREE.WebGLRenderTarget(
+    window.innerWidth,
+    window.innerHeight
+  )
+  const scene = new THREE.Scene()
+  const sceneBack = new THREE.Scene()
+  const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1)
+  const cameraBack = new THREE.PerspectiveCamera(
+    45,
+    window.innerWidth / window.innerHeight,
+    1,
+    10000
+  )
+  const clock = new THREE.Clock()
+
   //
   // process for this sketch.
   //
-  
-  const bgImg = new BackgroundImage();
-  const postEffect = new PostEffect(renderBack1.texture);
-  const consoleSignature = new ConsoleSignature();
-  
+
+  const bgImg = new BackgroundImage()
+  const postEffect = new PostEffect(renderBack1.texture)
+  const consoleSignature = new ConsoleSignature()
+
   //
   // common process
   //
   const resizeWindow = () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    cameraBack.aspect = window.innerWidth / window.innerHeight;
-    cameraBack.updateProjectionMatrix();
-    bgImg.resize();
-    postEffect.resize();
-    renderBack1.setSize(window.innerWidth, window.innerHeight);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    cameraBack.aspect = window.innerWidth / window.innerHeight
+    cameraBack.updateProjectionMatrix()
+    bgImg.resize()
+    postEffect.resize()
+    renderBack1.setSize(window.innerWidth, window.innerHeight)
+    renderer.setSize(window.innerWidth, window.innerHeight)
   }
   const render = () => {
-    const time = clock.getDelta();
-    renderer.render(sceneBack, cameraBack, renderBack1);
-    postEffect.render(time);
-    renderer.render(scene, camera);
+    const time = clock.getDelta()
+    renderer.render(sceneBack, cameraBack, renderBack1)
+    postEffect.render(time)
+    renderer.render(scene, camera)
   }
   const renderLoop = () => {
-    render();
-    requestAnimationFrame(renderLoop);
-  }
-  
-  const on = () => {
-    window.addEventListener('resize', debounce(() => {
-      resizeWindow();
-    }), 1000);
-  }
-  
-  const init = () => {
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x111111, 1.0);
-    cameraBack.position.set(0, 0, 100);
-    cameraBack.lookAt(new THREE.Vector3());
-  
-    bgImg.init(heroImg, () => {
-      sceneBack.add(bgImg.obj);
-      scene.add(postEffect.obj);
-    })
-  
-    on();
-    resizeWindow();
-    renderLoop();
+    render()
+    requestAnimationFrame(renderLoop)
   }
 
-  init();
+  const on = () => {
+    window.addEventListener(
+      'resize',
+      debounce(() => {
+        resizeWindow()
+      }),
+      1000
+    )
+  }
+
+  const init = () => {
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.setClearColor(0x111111, 1.0)
+    cameraBack.position.set(0, 0, 100)
+    cameraBack.lookAt(new THREE.Vector3())
+
+    bgImg.init(heroImg, () => {
+      sceneBack.add(bgImg.obj)
+      scene.add(postEffect.obj)
+    })
+
+    on()
+    resizeWindow()
+    renderLoop()
+  }
+
+  init()
 }
 
 export default GlitchHero

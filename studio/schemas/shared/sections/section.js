@@ -6,4 +6,4 @@ export default {
     { type: 'string', name: 'title', title: 'Rubrik' },
     { type: 'blockText', name: 'blockText', title: ' Text' },
   ],
-};
+}

@@ -36,9 +36,13 @@ const Medarbetare = ({ info }) => (
             </Anchor>
           </Text>
           <Text>
-            {info.socialMedia &&
-              (<SocialMediaLinks socialMedia={info.socialMedia} fullname={info.fullname} color="info" />)
-            }
+            {info.socialMedia && (
+              <SocialMediaLinks
+                socialMedia={info.socialMedia}
+                fullname={info.fullname}
+                color="info"
+              />
+            )}
           </Text>
         </Col>
       </Row>

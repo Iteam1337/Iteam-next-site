@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { Pagination as BSPagination } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Pagination as BSPagination } from 'react-bootstrap'
 
 const PaginationStyled = styled(BSPagination)`
   .page-item {

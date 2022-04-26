@@ -65,13 +65,13 @@ export default {
       subtitle: 'blockText',
     },
     prepare({ title = 'No name', slug = {}, name = 'aktuellt' }) {
-      const path = `/${name}/${slug.current}`;
+      const path = `/${name}/${slug.current}`
 
       return {
         path,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}

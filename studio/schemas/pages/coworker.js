@@ -181,13 +181,13 @@ export default {
       subtitle: 'description',
     },
     prepare({ title = 'No name', slug = {}, name = 'about' }) {
-      const path = `/${name}/${slug.current}`;
+      const path = `/${name}/${slug.current}`
 
       return {
         path,
         title,
         subtitle: path,
-      };
+      }
     },
   },
-};
+}

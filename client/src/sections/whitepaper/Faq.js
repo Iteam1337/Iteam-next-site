@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from "../../components/Core"
+import { Title, Section, Box, Text } from '../../components/Core'
 
 const SectionStyled = styled(Section)``
 
@@ -10,8 +10,8 @@ const FaqCard = styled(Box)`
   padding-left: 55px;
   position: relative;
   &::before {
-    content: "\f061";
-    font-family: "Font Awesome 5 Free";
+    content: '\f061';
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     min-width: 30px;
     min-height: 30px;

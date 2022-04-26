@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Box, Text } from "../../components/Core"
+import { Title, Box, Text } from '../../components/Core'
 
 const BoxStyled = styled(Box)`
   border-bottom: 1px solid #eae9f2;
@@ -24,7 +24,7 @@ const FeatureCard = ({ iconImage, title, children, ...rest }) => (
 
 const Feature = () => (
   <>
-    <BoxStyled bg="#f6f6f8" pb={["50px!important"]}>
+    <BoxStyled bg="#f6f6f8" pb={['50px!important']}>
       <Container>
         <Row className="justify-content-center">
           <Col lg="4" className="mb-5 mb-lg-4">

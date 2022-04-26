@@ -10,11 +10,11 @@ $black: $text;
 $body-color: $text;
 $headings-color: $text;
 $body-bg: $bg;
-$font-family-base: "Roboto", sans-serif;
+$font-family-base: 'Roboto', sans-serif;
 $headings-font-family: $font-family-base;
 
 // Import Bootstrap and its default variables
-@import "~bootstrap/scss/bootstrap.scss";
+@import '~bootstrap/scss/bootstrap.scss';
 
 .has-offcanvas {
   width: 100%;

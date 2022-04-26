@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from "../../components/Core"
+import { Title, Section, Box, Text } from '../../components/Core'
 
-import christian from "../../assets/image/jpeg/Teacher-Christian.jpg"
-import adam from "../../assets/image/jpeg/Adam.png"
-import emmaklara from "../../assets/image/jpeg/Emma-Klara.jpg"
+import christian from '../../assets/image/jpeg/Teacher-Christian.jpg'
+import adam from '../../assets/image/jpeg/Adam.png'
+import emmaklara from '../../assets/image/jpeg/Emma-Klara.jpg'
 
 const ContentImg = styled(Box)`
   box-shadow: ${({ theme }) => `0 52px 54px ${theme.colors.shadow}`};

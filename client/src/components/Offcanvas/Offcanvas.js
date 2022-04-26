@@ -1,7 +1,7 @@
-import React from "react"
-import { Container } from "react-bootstrap"
-import styled from "styled-components"
-import Logo from "../Logo"
+import React from 'react'
+import { Container } from 'react-bootstrap'
+import styled from 'styled-components'
+import Logo from '../Logo'
 
 const Overlay = styled.div`
   position: fixed;
@@ -50,20 +50,20 @@ const LogoContainer = styled.div`
 `
 
 const Offcanvas = ({ show, onHideOffcanvas, children, ...rest }) => {
-  if (typeof document !== "undefined") {
+  if (typeof document !== 'undefined') {
     if (show) {
-      document.querySelector("html").classList.add("has-offcanvas")
-      document.body.classList.add("has-offcanvas")
+      document.querySelector('html').classList.add('has-offcanvas')
+      document.body.classList.add('has-offcanvas')
     } else {
-      document.querySelector("html").classList.remove("has-offcanvas")
-      document.body.classList.remove("has-offcanvas")
+      document.querySelector('html').classList.remove('has-offcanvas')
+      document.body.classList.remove('has-offcanvas')
     }
   }
 
   return (
     <div {...rest}>
-      <Overlay className={show ? "" : "hidden"} onClick={onHideOffcanvas} />
-      <Drawer className={show ? "" : "hidden"}>
+      <Overlay className={show ? '' : 'hidden'} onClick={onHideOffcanvas} />
+      <Drawer className={show ? '' : 'hidden'}>
         <Container>
           <div className="p-3">
             <i className="icon icon-simple-remove icon-close"></i>
