@@ -16,6 +16,9 @@ const FormStyled = styled.form`
   width: 100%;
   text-align: center;
 `
+const FrameStyled = styled.div`
+  max-width: 484px;
+`
 
 const HubspotForm = ({
   value,
@@ -40,7 +43,7 @@ const HubspotForm = ({
         <Title>{title}</Title>
       </Box>
       <input type="hidden" name="form-name" value={value} />
-      <div
+      <FrameStyled
         className="meetings-iframe-container"
         data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
       />

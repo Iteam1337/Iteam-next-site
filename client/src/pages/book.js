@@ -18,6 +18,9 @@ import ExitPreviewLink from '../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
 
 const FormStyled = styled.form``
+const FrameStyled = styled.div`
+  max-width: 484px;
+`
 
 const Book = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.bookPageQuery, {
@@ -83,10 +86,10 @@ const Book = ({ data, preview = false }) => {
                   <Box mb={5}>
                     <Title>{page?.title && page.title}</Title>
                   </Box>
-                  <div
+                  <FrameStyled
                     className="meetings-iframe-container"
                     data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
-                  ></div>
+                  ></FrameStyled>
                 </FormStyled>
               </Col>
               <Col
