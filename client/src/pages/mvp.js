@@ -103,6 +103,15 @@ const mvpPageQuery = groq`
 const carouselQuery = groq`
   *[_id == 'carousel'][0] {
     ...,
+    texts[]{
+      ...,
+      reference -> {
+        _type,
+        slug {
+          current,
+        }
+      }
+    }
   }`
 export async function getStaticProps({ preview = false }) {
   const mvp = await getClient(preview).fetch(mvpPageQuery)
