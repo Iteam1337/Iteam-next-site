@@ -215,6 +215,14 @@ export default () =>
                         .child(
                           S.documentTypeList('newsPost').title('Alla nyheter')
                         ),
+                      S.divider(),
+                      S.listItem()
+                        .title('Open Source Skolan')
+                        .icon(FaRegFolderOpen)
+                        .child(
+                          S.documentTypeList('openSourceLesson')
+                            .title('Alla lektioner')
+                        ),
                     ])
                 ),
               S.divider(),
@@ -365,6 +373,7 @@ export default () =>
             'carousel',
             'newsPage',
             'newsPost',
+            'openSourceLesson',
             'section',
             'careerPage',
             'aboutPage',

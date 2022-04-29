@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
-import { Section, Title, Text } from '../../components/Core'
+import { Section, Title, Text, Anchor } from '../../components/Core'
 import BlogList from '../../sections/aktuellt/BlogList'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
@@ -9,16 +9,31 @@ import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 
-export default function BlogRegular({ data, preview = false }) {
+export default function BlogRegular({ query, data, preview = false }) {
+  const router = useRouter()
   const { data: previewData } = usePreviewSubscription(data?.newsPageQuery, {
     initialData: data?.newsPage,
     enabled: preview,
   })
 
   const newsPage = filterDataToSingleItem(previewData, preview)
+  const filters = {
+    'alla': (type) =>
+      (type == 'newsPost' || type == 'openSourceLesson'),
+    'blogg': (type) =>
+      (type == 'newsPost'),
+    'open-source-skolan': (type) =>
+      (type == 'openSourceLesson')
+  }
+  const filterParam = router?.query?.taggat || 'alla'
+  console.log("filterParam: ", filterParam)
+  const contentFilter = filters[filterParam] || filters['alla']
 
-  const sortedNewsPosts = data.newsPosts.sort((a, b) => {
+  const filteredPosts = data.posts.filter((post)=> (contentFilter(post._type)))
+
+  const sortedPosts = filteredPosts.sort((a, b) => {
     if (a.date < b.date) {
       return 1
     } else {
@@ -68,7 +83,24 @@ export default function BlogRegular({ data, preview = false }) {
             </Row>
           </Container>
         </Section>
-        <BlogList posts={sortedNewsPosts && sortedNewsPosts} />
+          <Section className="pb-0">
+          <div className="pt-5"></div>
+          <Container>
+            <Row>
+              <Col lg="8">
+                <Text fontSize={2} fontWeight='bold'>Visa</Text>
+              </Col>
+            </Row>
+            <Row>
+              <Col lg="8">
+                <Anchor fontWeight={filterParam == 'alla' ? 'bold' : 'normal'} color="dark" mr={48} href='/aktuellt'>Allt</Anchor>
+                <Anchor fontWeight={filterParam == 'blogg' ? 'bold' : 'normal'} color="dark" mr={48} href='/aktuellt?taggat=blogg'>Blogg</Anchor>
+                <Anchor fontWeight={filterParam == 'open-source-skolan' ? 'bold' : 'normal'} color="dark" mr={48} href='/aktuellt?taggat=open-source-skolan'>Open Source skolan</Anchor>
+              </Col>
+            </Row>
+          </Container>
+        </Section>
+        <BlogList posts={sortedPosts && sortedPosts} />
       </PageWrapper>
     </>
   )
@@ -79,24 +111,21 @@ const newsPageQuery = groq`
     ...,
   }`
 
-const newsPostsQuery = groq`
-  *[_type == 'newsPost'&& !(_id in path('drafts.**'))] {
-    title,
-    imageCard,
-    slug,
-    date
-  }`
+const allPostsQuery = groq`
+  *[(_type == 'newsPost' || _type == 'openSourceLesson') && !(_id in path('drafts.**'))] {
+    ...,
+  }
+`
 
 export async function getStaticProps({ preview = false }) {
-  const newsPosts = await getClient(preview).fetch(newsPostsQuery)
+  const posts = await getClient(preview).fetch(allPostsQuery)
   const newsPage = await getClient(preview).fetch(newsPageQuery)
-
-  if (!newsPosts) return { notFound: true }
+  if (!posts) return { notFound: true }
 
   return {
     props: {
       preview,
-      data: { newsPosts, newsPage, newsPageQuery },
+      data: { posts, newsPage, newsPageQuery },
     },
   }
 }

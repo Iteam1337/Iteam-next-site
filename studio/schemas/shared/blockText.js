@@ -57,6 +57,7 @@ export default {
                     to: [
                       { type: 'newsPost' },
                       { type: 'casePost' },
+                      { type: 'openSourceLesson' },
                       { type: 'mvpPage' },
                       { type: 'xPage' },
                       { type: 'scaleUpPage' },

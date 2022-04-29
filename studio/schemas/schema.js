@@ -20,6 +20,7 @@ import textGrid from './shared/textGrid'
 import carousel from './modules/carousel'
 import newsPage from './pages/newsPage'
 import newsPost from './pages/newsPost'
+import openSourceLesson from './pages/openSourceLesson'
 import aboutPage from './pages/aboutPage'
 import section from './shared/sections/section'
 import careerPage from './pages/careerPage'
@@ -70,6 +71,7 @@ export default createSchema({
     carousel,
     newsPage,
     newsPost,
+    openSourceLesson,
     aboutPage,
     section,
     careerPage,

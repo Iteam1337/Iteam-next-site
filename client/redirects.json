@@ -1,5 +1,10 @@
 [
   {
+    "source": "/open-source-skolan",
+    "destination": "/aktuellt?taggat=open-source-skolan",
+    "permanent": true
+  },
+  {
     "source": "/medarbetare",
     "destination": "/about#medarbetare",
     "permanent": true
