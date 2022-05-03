@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { color, space, typography, shadow } from "styled-system"
-import { device } from "../../utils"
+import React from 'react'
+import styled from 'styled-components'
+import { color, space, typography, shadow } from 'styled-system'
+import { device } from '../../utils'
 
 const SectionTitle = styled.h2`
   font-weight: 700;
@@ -64,10 +64,10 @@ const Title = ({ variant, ...rest }) => {
   let TitleStyled = SectionTitle
 
   switch (variant) {
-    case "card":
+    case 'card':
       TitleStyled = CardTitle
       break
-    case "hero":
+    case 'hero':
       TitleStyled = HeroTitle
       break
     default:

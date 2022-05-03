@@ -77,6 +77,9 @@ const careerPageQuery = groq`
   textGrid, 
   _id, 
   coworkerCarouselOne[] -> {
+  slug {
+    current
+  },
   fullname,
   role,
   whyTech,
@@ -84,6 +87,9 @@ const careerPageQuery = groq`
   email,
   _type,
   } , coworkerCarouselTwo[] -> {
+  slug {
+    current
+  },
   fullname,
   role,
   whyTech,

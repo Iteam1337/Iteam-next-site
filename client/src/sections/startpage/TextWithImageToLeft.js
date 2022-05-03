@@ -41,7 +41,7 @@ const TextWithImageToLeft = ({ content }) => {
               <div className="pl-5">
                 <ImgStyled
                   src={urlFor(content.imageWithAlt.asset._ref)}
-                  alt=""
+                  alt={content.imageWithAlt.alt}
                   className="img-fluid"
                 />
               </div>

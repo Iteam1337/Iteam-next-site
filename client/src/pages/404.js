@@ -1,13 +1,13 @@
-import React from "react"
-import Link from "next/link"
-import { Container } from "react-bootstrap"
-import styled from "styled-components"
-import { rgba } from "polished"
-import Section from "../components/Section"
-import PageWrapper from "../components/PageWrapper"
+import React from 'react'
+import Link from 'next/link'
+import { Container } from 'react-bootstrap'
+import styled from 'styled-components'
+import { rgba } from 'polished'
+import Section from '../components/Section'
+import PageWrapper from '../components/PageWrapper'
 
-import imgIcon from "../assets/image/png/heart-shape.png"
-import { Title, Text } from "../components/Core"
+import imgIcon from '../assets/image/png/heart-shape.png'
+import { Title, Text } from '../components/Core'
 
 const ContentIcon = styled.div`
   width: 118px;

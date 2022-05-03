@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from "react"
-import styled from "styled-components"
-import { rgba } from "polished"
-import { Container, Row, Col } from "react-bootstrap"
+import React, { useEffect, useRef } from 'react'
+import styled from 'styled-components'
+import { rgba } from 'polished'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text, Span } from "../../components/Core"
+import { Title, Button, Section, Box, Text, Span } from '../../components/Core'
 
-import { device } from "../../utils"
+import { device } from '../../utils'
 
-import imgHero from "../../assets/image/png/l6-hero-image.png"
-import imgAuthor from "../../assets/image/jpeg/l6-author-image.jpg"
+import imgHero from '../../assets/image/png/l6-hero-image.png'
+import imgAuthor from '../../assets/image/jpeg/l6-author-image.jpg'
 
 const ImgRight = styled(Box)`
   max-width: 80%;
@@ -47,8 +47,8 @@ const ULStyled = styled.ul`
     margin-bottom: 5px;
 
     &:before {
-      content: "\f00c";
-      font-family: "Font Awesome 5 Free";
+      content: '\f00c';
+      font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       display: inline-block;
       font-size: 13px;
@@ -112,8 +112,8 @@ const AuthorText = styled(Box)`
 
 const Hero = () => {
   useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "//js.hsforms.net/forms/shell.js"
+    const script = document.createElement('script')
+    script.src = '//js.hsforms.net/forms/shell.js'
     script.async = true
     document.body.appendChild(script)
   }, [])
@@ -122,10 +122,10 @@ const Hero = () => {
 
   const openForm = () => {
     hbspt.forms.create({
-      region: "na1",
-      portalId: "5211588",
-      target: "#" + form.current.id,
-      formId: "7d3129b6-d7ff-48e7-8a84-4b69aa00e03c",
+      region: 'na1',
+      portalId: '5211588',
+      target: '#' + form.current.id,
+      formId: '7d3129b6-d7ff-48e7-8a84-4b69aa00e03c',
     })
   }
 
@@ -175,8 +175,8 @@ const Hero = () => {
                     </Button>
                     <div ref={form}></div>
 
-                    <Text fontSize={"18px"} color="ash" fontWeight={500}>
-                      Osäker?{" "}
+                    <Text fontSize={'18px'} color="ash" fontWeight={500}>
+                      Osäker?{' '}
                       <a href="/" target="blank">
                         <Span color="secondary">Ladda ner förhandsvisning</Span>
                       </a>

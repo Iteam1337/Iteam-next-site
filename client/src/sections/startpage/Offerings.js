@@ -6,9 +6,8 @@ import { Title, Section, Box, Text } from '../../components/Core'
 import { device } from '../../utils'
 
 import svgCurve from '../../assets/image/svg/l1-curve-content2.svg'
-import imgContentMobile from '../../assets/image/jpeg/Christian-Hopper-Lowres.jpg'
 import Link from 'next/link'
-import { getRouteNameFromPageType } from '../../utils/helpers'
+import { getRouteNameFromPageType, urlFor } from '../../utils/helpers'
 
 const ShapeTop = styled(Box)`
   position: absolute;
@@ -81,7 +80,11 @@ const Offerings = ({ data }) => {
           <Row className="align-items-center">
             <Col lg="5" md="9" sm="10" className="mb-5 mb-lg-0">
               <div className="position-relative">
-                <img src={imgContentMobile} alt="" className="img-fluid" />
+                <img
+                  src={urlFor(data.imageWithAlt.asset._ref)}
+                  alt={data.imageWithAlt.alt}
+                  className="img-fluid"
+                />
                 <ShapeCard
                   bg="secondary"
                   p="18px"

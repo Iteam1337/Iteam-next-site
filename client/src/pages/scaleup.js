@@ -143,9 +143,19 @@ const scaleUpPageQuery = groq`
   }`
 
 const carouselQuery = groq`
-*[_id == 'carousel'][0] {
-  ...,
-}`
+  *[_id == 'carousel'][0] {
+    ...,
+    texts[]{
+      ...,
+      reference -> {
+        _type,
+        slug {
+          current,
+        }
+      }
+    }
+  }
+`
 
 const ourPricingQuery = groq`
 *[_id == 'ourPricing'][0] {

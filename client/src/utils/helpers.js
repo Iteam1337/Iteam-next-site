@@ -29,6 +29,8 @@ export const buildInternalUrl = (reference) => {
 
 export const getRouteNameFromPageType = (contentType) => {
   switch (contentType) {
+    case 'casePost':
+      return 'case'
     case 'mvpPage':
       return 'mvp'
     case 'xPage':

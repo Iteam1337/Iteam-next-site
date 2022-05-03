@@ -12,13 +12,6 @@ const StyledBox = styled(Box)`
     dark ? theme.colors.dark : theme.colors.light};
   transition: all 0.3s ease-out;
 
-  &:hover {
-    ${({ theme, dark }) =>
-      dark
-        ? `background-color: ${theme.colors.secondary} `
-        : `box-shadow: 0 4px 20px ${theme.colors.shadow};`};
-  }
-
   h4 {
     color: ${({ theme, dark }) =>
       dark ? theme.colors.light : theme.colors.dark};

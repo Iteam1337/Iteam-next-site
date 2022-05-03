@@ -18,6 +18,7 @@ const CaseList = ({ posts }) => {
                     img={item.preview.imageCard.image}
                     title={item.preview.title}
                     link={`/case/${item.slug.current}`}
+                    readMore
                   >
                     {item.preview.imageCard.description}
                   </PostCard>

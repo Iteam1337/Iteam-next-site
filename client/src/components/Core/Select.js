@@ -1,12 +1,12 @@
-import React from "react"
-import { withTheme } from "styled-components"
+import React from 'react'
+import { withTheme } from 'styled-components'
 
-import Select from "react-select"
+import Select from 'react-select'
 
 const defaultOptions = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' },
 ]
 
 const getCustomStyles = (theme) => {
@@ -24,9 +24,9 @@ const getCustomStyles = (theme) => {
             ? `1px solid ${theme.colors.secondary} !important`
             : `1px solid ${theme.colors.border} !important`,
         borderRadius: 10,
-        padding: "1.275rem 1rem",
-        outline: "none",
-        boxShadow: "none",
+        padding: '1.275rem 1rem',
+        outline: 'none',
+        boxShadow: 'none',
       }
     },
   }
@@ -34,7 +34,7 @@ const getCustomStyles = (theme) => {
 
 const SelectStyled = ({
   theme,
-  name = "item",
+  name = 'item',
   options = defaultOptions,
   ...rest
 }) => {

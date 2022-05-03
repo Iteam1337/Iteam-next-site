@@ -1,5 +1,5 @@
-import Head from "next/head"
-import Logo from "../../../public/favicon.png"
+import Head from 'next/head'
+import Logo from '../../../public/favicon.png'
 
 const MetaTags = ({ title, description, image }) => {
   return (

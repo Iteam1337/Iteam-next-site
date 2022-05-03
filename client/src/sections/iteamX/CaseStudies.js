@@ -138,7 +138,7 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
   return (
     <CaseCardStyled>
       <div className="img-container">
-        <img {...imageProps} alt="" />
+        <img {...imageProps} alt={data.preview.imageCard.image.alt} />
       </div>
       <TextContent bg={bg}>
         <Shape bg={bg}>

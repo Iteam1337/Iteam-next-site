@@ -1,11 +1,11 @@
-import { Component } from "react"
-import Head from "next/head"
+import { Component } from 'react'
+import Head from 'next/head'
 
 export default class extends Component {
   render() {
     return (
       <>
-        {process.env.NODE_ENV === "production" && process.browser ? (
+        {process.env.NODE_ENV === 'production' && process.browser ? (
           <Head>
             <script
               async

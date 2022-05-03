@@ -1,13 +1,13 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Box } from "../../components/Core"
+import { Box } from '../../components/Core'
 
-import { device } from "../../utils"
+import { device } from '../../utils'
 
-import imgShape from "../../assets/image/svg/contact-shape.svg"
-import HubspotForm from "../../components/HubspotForm"
+import imgShape from '../../assets/image/svg/contact-shape.svg'
+import HubspotForm from '../../components/HubspotForm'
 
 const BoxStyled = styled(Box)`
   &::after {
@@ -15,7 +15,7 @@ const BoxStyled = styled(Box)`
     bottom: 0;
     left: 0;
     height: 49%;
-    content: "";
+    content: '';
     width: 100%;
     background: ${({ theme }) => theme.colors.secondary};
     z-index: 1;

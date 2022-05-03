@@ -1,14 +1,14 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import { rgba } from "polished"
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import { rgba } from 'polished'
 
-import { Title, Section, Box, Text } from "../../components/Core"
-import { device } from "../../utils"
+import { Title, Section, Box, Text } from '../../components/Core'
+import { device } from '../../utils'
 
-import imgContent from "../../assets/image/png/Floppy-disk-Large.png"
+import imgContent from '../../assets/image/png/Floppy-disk-Large.png'
 
 const ContentCard = ({
-  color = "primary",
+  color = 'primary',
   className,
   iconName,
   title,

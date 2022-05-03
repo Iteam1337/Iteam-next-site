@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
-import { Box, Badge } from "../../components/Core"
+import { Box, Badge } from '../../components/Core'
 
-import iconQuote from "../../assets/image/png/quote-icon.png"
+import iconQuote from '../../assets/image/png/quote-icon.png'
 
 const Post = styled(Box)`
   overflow: hidden;

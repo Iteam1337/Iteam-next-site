@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text } from "../../components/Core"
-import { device } from "../../utils"
-import imgDesignSprint from "../../assets/image/jpeg/design-sprint.jpeg"
+import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { device } from '../../utils'
+import imgDesignSprint from '../../assets/image/jpeg/design-sprint.jpeg'
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;

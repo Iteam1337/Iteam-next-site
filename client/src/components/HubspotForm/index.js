@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
-import { Title, Box } from "../Core"
+import { Title, Box } from '../Core'
 
-import { device } from "../../utils"
+import { device } from '../../utils'
 
 const FormStyled = styled.form`
   padding: 40px 30px;
@@ -16,15 +16,19 @@ const FormStyled = styled.form`
   width: 100%;
   text-align: center;
 `
+const FrameStyled = styled.div`
+  max-width: 484px;
+  margin: 0 auto;
+`
 
 const HubspotForm = ({
   value,
-  title = "Boka intromöte direkt i kalendern",
+  title = 'Boka intromöte direkt i kalendern',
 }) => {
   React.useEffect(() => {
-    const script = document.createElement("script")
+    const script = document.createElement('script')
     script.src =
-      "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
+      'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
     script.async = true
     document.body.appendChild(script)
   }, [])
@@ -40,7 +44,7 @@ const HubspotForm = ({
         <Title>{title}</Title>
       </Box>
       <input type="hidden" name="form-name" value={value} />
-      <div
+      <FrameStyled
         className="meetings-iframe-container"
         data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
       />

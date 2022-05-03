@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 import {
   space,
   border,
@@ -7,15 +7,15 @@ import {
   shadow,
   flexbox,
   layout,
-} from "styled-system"
+} from 'styled-system'
 
 const CheckStyled = styled.label`
   display: inline-flex;
   cursor: pointer;
 
   input:checked ~ .check::before {
-    content: "\f14a";
-    font-family: "Font Awesome 5 free";
+    content: '\f14a';
+    font-family: 'Font Awesome 5 free';
     font-weight: 900;
     color: ${({ theme }) => theme.colors.secondary};
   }
@@ -36,8 +36,8 @@ const Check = styled.span`
   min-height: 20px;
   min-width: 20px;
   &::before {
-    content: "\f0c8";
-    font-family: "Font Awesome 5 free";
+    content: '\f0c8';
+    font-family: 'Font Awesome 5 free';
     font-size: 19px;
     color: #e2e4e8;
   }
@@ -52,11 +52,11 @@ const Text = styled.p`
 `
 
 const Checkbox = ({
-  children = "Keep me signed in",
+  children = 'Keep me signed in',
   onClick = () => {},
   ...rest
 }) => {
-  const uID = "check_"
+  const uID = 'check_'
 
   return (
     <CheckStyled {...rest} htmlFor={uID}>

@@ -4,8 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import { Title, Button, Section, Box } from '../../components/Core'
 import { device } from '../../utils'
-import imgPM from '../../assets/image/case/predictive-movement.png'
 import BlockContent from '../../components/BlockContent'
+import { urlFor } from '../../utils/helpers'
 
 const ImageBottom = styled(Box)`
   border: 10px solid transparent;
@@ -46,7 +46,11 @@ const Content2 = ({ content }) => {
             <Col lg="6" md="10" className="order-lg-2 mb-4">
               <div className="position-relative text-lg-right">
                 <ImageRight className="">
-                  <img src={imgPM} alt="" className="img-fluid" />
+                  <img
+                    src={urlFor(content.imageWithAlt.asset._ref)}
+                    alt={content.imageWithAlt.alt}
+                    className="img-fluid"
+                  />
                 </ImageRight>
               </div>
             </Col>

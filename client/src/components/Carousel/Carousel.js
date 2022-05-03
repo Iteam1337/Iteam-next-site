@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Gravatar from 'react-gravatar'
-import { Title, Box, Text } from '../../components/Core'
+import { Title, Box, Text, Span, Anchor } from '../../components/Core'
 import Slider from 'react-slick'
 import { device, breakpoints } from '../../utils'
 import { rgba } from 'polished'
 import sanityClient from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
+import { buildInternalUrl } from '../../utils/helpers'
 
 const SliderStyled = styled(Slider)`
   position: relative;
@@ -208,7 +209,9 @@ const Coworker = ({ item }) => {
     <SliderItem>
       <SliderCard>
         <SliderImgContainer>
-          <Gravatar email={item.email} className="img-fluid" size={200} />
+          {item.email && (
+            <Gravatar email={item.email} className="img-fluid" size={200} />
+          )}
         </SliderImgContainer>
         <SliderText>
           <Title variant="card" mb={0} mt={3}>
@@ -221,6 +224,9 @@ const Coworker = ({ item }) => {
             {item.fullname}
           </Title>
           <Text variant="small">{item.role}</Text>
+          <Anchor color="info" href={`/about/${item.slug.current}`}>
+            <Span color="info">Läs mer...</Span>
+          </Anchor>
         </SliderText>
       </SliderCard>
     </SliderItem>
@@ -247,6 +253,11 @@ const Testimonial = ({ item }) => {
             {item.fullname}
           </Title>
           <Text variant="small">{item.role}</Text>
+          {item.reference && (
+            <Anchor color="info" href={buildInternalUrl(item.reference)}>
+              <Span color="info">Läs mer...</Span>
+            </Anchor>
+          )}
         </SliderText>
       </SliderCard>
     </SliderItem>
