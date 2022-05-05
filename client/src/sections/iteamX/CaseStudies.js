@@ -134,7 +134,6 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
     return `${trimmedDescription} (…)`
   }
 
-  console.log(previewDescription())
   return (
     <CaseCardStyled>
       <div className="img-container">
