@@ -77,31 +77,27 @@ const Content1 = ({ content }) => (
                   color="dark"
                 />
 
-                  <Button
-                    mt={4}
-                    onClick={() => (window.location.href = '#book')}
-                  >
-                    {content.button}
-                  </Button>
-                </div>
-              </Section>
-            </Col>
-            <Col md={8} lg={6} className="position-relative mb-5 mb-lg-0">
-              <ImageHalfContainer>
-                <div className="h-100">
-                  <img
-                    src={urlFor(content.imageWithAlt.asset._ref)}
-                    alt={content.imageWithAlt.alt}
-                    className="img-half img-fluid"
-                  />
-                </div>
-              </ImageHalfContainer>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </>
-  )
-}
+                <Button mt={4} onClick={() => (window.location.href = '#book')}>
+                  {content.button}
+                </Button>
+              </div>
+            </Section>
+          </Col>
+          <Col md={8} lg={6} className="position-relative mb-5 mb-lg-0">
+            <ImageHalfContainer>
+              <div className="h-100">
+                <img
+                  src={urlFor(content.imageWithAlt.asset._ref)}
+                  alt={content.imageWithAlt.alt}
+                  className="img-half img-fluid"
+                />
+              </div>
+            </ImageHalfContainer>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  </>
+)
 
 export default Content1
