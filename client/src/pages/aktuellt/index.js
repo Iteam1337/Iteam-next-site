@@ -20,18 +20,14 @@ export default function BlogRegular({ query, data, preview = false }) {
 
   const newsPage = filterDataToSingleItem(previewData, preview)
   const filters = {
-    'alla': (type) =>
-      (type == 'newsPost' || type == 'openSourceLesson'),
-    'blogg': (type) =>
-      (type == 'newsPost'),
-    'open-source-skolan': (type) =>
-      (type == 'openSourceLesson')
+    alla: (type) => type == 'newsPost' || type == 'openSourceLesson',
+    blogg: (type) => type == 'newsPost',
+    'open-source-skolan': (type) => type == 'openSourceLesson',
   }
   const filterParam = router?.query?.taggat || 'alla'
-  console.log("filterParam: ", filterParam)
   const contentFilter = filters[filterParam] || filters['alla']
 
-  const filteredPosts = data.posts.filter((post)=> (contentFilter(post._type)))
+  const filteredPosts = data.posts.filter((post) => contentFilter(post._type))
 
   const sortedPosts = filteredPosts.sort((a, b) => {
     if (a.date < b.date) {
@@ -83,19 +79,44 @@ export default function BlogRegular({ query, data, preview = false }) {
             </Row>
           </Container>
         </Section>
-          <Section className="pb-0">
+        <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
             <Row>
               <Col lg="8">
-                <Text fontSize={2} fontWeight='bold'>Visa</Text>
+                <Text fontSize={2} fontWeight="bold">
+                  Visa
+                </Text>
               </Col>
             </Row>
             <Row>
               <Col lg="8">
-                <Anchor fontWeight={filterParam == 'alla' ? 'bold' : 'normal'} color="dark" mr={48} href='/aktuellt'>Allt</Anchor>
-                <Anchor fontWeight={filterParam == 'blogg' ? 'bold' : 'normal'} color="dark" mr={48} href='/aktuellt?taggat=blogg'>Blogg</Anchor>
-                <Anchor fontWeight={filterParam == 'open-source-skolan' ? 'bold' : 'normal'} color="dark" mr={48} href='/aktuellt?taggat=open-source-skolan'>Open Source skolan</Anchor>
+                <Anchor
+                  fontWeight={filterParam == 'alla' ? 'bold' : 'normal'}
+                  color="dark"
+                  mr={48}
+                  href="/aktuellt"
+                >
+                  Allt
+                </Anchor>
+                <Anchor
+                  fontWeight={filterParam == 'blogg' ? 'bold' : 'normal'}
+                  color="dark"
+                  mr={48}
+                  href="/aktuellt?taggat=blogg"
+                >
+                  Blogg
+                </Anchor>
+                <Anchor
+                  fontWeight={
+                    filterParam == 'open-source-skolan' ? 'bold' : 'normal'
+                  }
+                  color="dark"
+                  mr={48}
+                  href="/aktuellt?taggat=open-source-skolan"
+                >
+                  Open Source skolan
+                </Anchor>
               </Col>
             </Row>
           </Container>
