@@ -95,7 +95,7 @@ const LessonDetails = ({ data, preview = false }) => {
             {lesson?.youtubeId && (
               <Row>
                 <Col>
-                  <Box mt={40} mb={32}>
+                  <Box mt={56} mb={32}>
                     <VideoContainer>
                       <VideoIframe
                         src={`https://www.youtube.com/embed/${lesson?.youtubeId}`}
