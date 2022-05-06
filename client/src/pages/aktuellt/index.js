@@ -80,7 +80,6 @@ export default function BlogRegular({ query, data, preview = false }) {
           </Container>
         </Section>
         <Section className="pb-0">
-          <div className="pt-5"></div>
           <Container>
             <Row>
               <Col lg="8">
