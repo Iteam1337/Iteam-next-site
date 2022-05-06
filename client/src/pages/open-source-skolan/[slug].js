@@ -29,8 +29,6 @@ const VideoIframe = styled.iframe`
   border: 0;
 `
 
-
-
 const LessonDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.lessonQuery, {
     params: data?.queryParams ?? {},
@@ -100,16 +98,20 @@ const LessonDetails = ({ data, preview = false }) => {
                   <Box mt={96} mb={32}>
                     <VideoContainer>
                       <VideoIframe
-                        src={`https://www.youtube.com/embed/${lesson?.youtubeId}?autoplay=1`}
+                        src={`https://www.youtube.com/embed/${lesson?.youtubeId}`}
                         title={lesson?.metaTags?.title ?? lesson.title}
                         frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        autoplay
-                        allowfullscreen />
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      />
                     </VideoContainer>
                   </Box>
                   <Box>
-                    <Text><Span fontWeight='bold'>Open Source skolan:</Span> {lesson?.imageCard?.description && lesson.imageCard.description}</Text>
+                    <Text>
+                      <Span fontWeight="bold">Open Source skolan:</Span>{' '}
+                      {lesson?.imageCard?.description &&
+                        lesson.imageCard.description}
+                    </Text>
                   </Box>
                 </Col>
               </Row>
@@ -152,9 +154,9 @@ export async function getStaticProps({ params, preview = false }) {
   const queryParams = { slug: params.slug }
   const data = await getClient(preview).fetch(lessonQuery, queryParams)
   const lessons = await getClient(preview).fetch(lessonsQuery, queryParams)
-  
+
   if (!lessons) return { notFound: true }
-  
+
   const lesson = filterDataToSingleItem(data, preview)
 
   return {
