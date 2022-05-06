@@ -98,11 +98,10 @@ const LessonDetails = ({ data, preview = false }) => {
                   <Box mt={56} mb={32}>
                     <VideoContainer>
                       <VideoIframe
-                        src={`https://www.youtube.com/embed/${lesson?.youtubeId}?autoplay=1`}
+                        src={`https://www.youtube.com/embed/${lesson?.youtubeId}`}
                         title={lesson?.metaTags?.title ?? lesson.title}
                         frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        autoplay
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
                       />
                     </VideoContainer>
