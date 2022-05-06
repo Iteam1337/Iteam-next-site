@@ -56,7 +56,6 @@ const ImageBottom = styled(Box)`
 `
 
 const Content1 = ({ content }) => {
-  console.log(content)
   return (
     <>
       <div className="overflow-hidden">
