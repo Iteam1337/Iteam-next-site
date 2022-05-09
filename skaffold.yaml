@@ -12,9 +12,9 @@ build:
         cacheFrom: 
           - iteam-next-site
         buildArgs:
-          SANITY_READ_DATA_TOKEN: "{{.SANITY_READ_DATA_TOKEN}}"
-          SANITY_API_TOKEN: "{{.SANITY_API_TOKEN}}"
-          SANITY_PREVIEW_SECRET: "{{.SANITY_PREVIEW_SECRET}}"
+          SANITY_READ_DATA_TOKEN: "{{ .SANITY_READ_DATA_TOKEN }}"
+          SANITY_API_TOKEN: "{{ .SANITY_API_TOKEN }}"
+          SANITY_PREVIEW_SECRET: "{{ .SANITY_PREVIEW_SECRET }}"
      # platforms:
      #   - linux/amd64
   

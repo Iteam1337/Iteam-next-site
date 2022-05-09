@@ -6,10 +6,13 @@ export const sanityClient = createClient(config)
 
 // Set up a preview client with serverless authentication for drafts
 export const previewClient = createClient({
-    ...config,
-    useCdn: false,
-    token: process.env.SANITY_API_TOKEN,
+  ...config,
+  useCdn: false,
+  token: process.env.SANITY_API_TOKEN,
 })
 
+console.log('Sanity client created', process.env.SANITY_API_TOKEN)
+
 // Helper function for easily switching between normal client and preview client
-export const getClient = (usePreview) => (usePreview ? previewClient : sanityClient)
+export const getClient = (usePreview) =>
+  usePreview ? previewClient : sanityClient
