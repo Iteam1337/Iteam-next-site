@@ -19,34 +19,20 @@ const Hero = ({ content }) => {
         >
           <Row>
             <Col md="11" lg="11" xl="9">
-              <Box py={4}>
-                <Text
-                  color="light"
-                  data-aos="fade-up"
-                  data-aos-duration="600"
-                  data-aos-once="true"
-                  data-aos-delay="700"
-                >
-                  {content.subtitle}
-                </Text>
-                <Title
-                  my={4}
-                  variant="hero"
-                  color="light"
-                  data-aos="fade-right"
-                  data-aos-duration="600"
-                  data-aos-once="true"
-                  data-aos-delay="1000"
-                >
+              <Box
+                py={4}
+              >
+                <Text color="light">{content.subtitle}</Text>
+                <Title my={4} variant="hero" color="light">
                   {title}
                   <Span color="secondary">.</Span>
                 </Title>
                 <Box
                   pt="12px"
                   data-aos="fade-up"
-                  data-aos-duration="700"
+                  data-aos-duration="300"
                   data-aos-once="true"
-                  data-aos-delay="1300"
+                  data-aos-delay="200"
                 >
                   {content?.link?.link && (
                     <Link href={getExternalOrInternalLink(content.link.link)}>

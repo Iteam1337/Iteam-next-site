@@ -6,13 +6,14 @@ import { Title, Box, Text, Button } from '../../components/Core'
 import { device } from '../../utils'
 import sanityClient from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
+import Link from 'next/link'
 
 const CaseCardStyled = styled(Card)`
   width: 100%;
-  transition: 0.4s;
   height: 100%;
   border: none;
   background-color: ${({ theme }) => theme.colors.dark};
+  overflow: hidden;
 
   .img-container {
     position: relative;
@@ -25,40 +26,39 @@ const CaseCardStyled = styled(Card)`
       object-fit: cover;
     }
   }
-
-  &:hover {
-    transform: translateY(-20px);
-  }
-  &:hover i {
-    transform: translateX(10px);
-    opacity: 1;
-  }
 `
 
-const BtnContainer = styled(Box)`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  margin-top: 20px;
-  opacity: 0;
-  transition: 0.4s opacity, 0.4s margin-top;
-  height: 40px;
-  font-size: 16px;
-  text-align: center;
-  ${CaseCardStyled}:hover & {
-    opacity: 1;
-    margin-top: 0px;
-  }
-  button {
-    font-size: 16px;
-    padding: 0.5rem 1.25rem;
-    @media ${device.sm} {
-      font-size: 18px;
-      padding: 0.75rem 1.5rem;
+const CaseCardLink = styled.a`
+  display: inline-block;
+  transition: 0.4s;
+  height: 100%;
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    transition: 0.4s;
+
+    &:after {
+      content: 'Läs mer';
+      position: absolute;
+      z-index: 3;
+      right: 15px;
+      bottom: 0;
+      opacity: 1;
+      padding: 1rem 1.5rem;
+      background: ${({ theme }) => theme.colors.light};
+      border-radius: 8px 0 8px 0;
+      color: ${({ theme }) => theme.colors.dark};
+      font-weight: 500;
+      transition: 0.3s;
     }
-    @media ${device.lg} {
-      padding: 0.85rem 1.75rem;
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+      transform: scale(1.01);
+
+      &:after {
+        right: 0;
+      }
     }
   }
 `
@@ -89,13 +89,7 @@ const Shape = styled(Box)`
   width: 100%;
   left: 0;
   z-index: 2;
-  bottom: 98%;
-  @media ${device.sm} {
-    bottom: 99%;
-  }
-  @media ${device.xl} {
-    bottom: 100%;
-  }
+  bottom: 98.5%;
   svg {
     width: 100%;
     path {
@@ -130,17 +124,20 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
     sanityClient,
     data.preview.imageCard.image.asset._ref
   )
+
+  const previewDescription = () => {
+    let trimmedDescription = data.preview.imageCard.description.slice(0, 150)
+    trimmedDescription = trimmedDescription.slice(
+      0,
+      Math.min(trimmedDescription.length, trimmedDescription.lastIndexOf(' '))
+    )
+    return `${trimmedDescription} (…)`
+  }
+
   return (
     <CaseCardStyled>
       <div className="img-container">
         <img {...imageProps} alt={data.preview.imageCard.image.alt} />
-        <BtnContainer>
-          <Button
-            onClick={() => (window.location.href = `case/${data.slug.current}`)}
-          >
-            Läs case
-          </Button>
-        </BtnContainer>
       </div>
       <TextContent bg={bg}>
         <Shape bg={bg}>
@@ -163,7 +160,7 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
           {data.title}
         </TitleStyled>
         <Text color={isDark ? 'lightShade' : 'darkShade'}>
-          {data.preview.imageCard.description}
+          {previewDescription()}
         </Text>
       </TextContent>
     </CaseCardStyled>
@@ -183,15 +180,17 @@ const CaseStudies = ({ cases }) => {
                 lg="6"
                 md="9"
                 className="mb-4"
-                data-aos="fade-up"
-                data-aos-duration="1000"
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="50"
+                data-aos-offset="0"
                 data-aos-once="true"
               >
-                <CaseCard
-                  bg={i === 0 ? 'secondary' : 'light'}
-                  isDark={false}
-                  data={item}
-                />
+                <Link href={`/case/${item.slug.current}`} passHref>
+                  <CaseCardLink aria-label="Läs mer om detta case">
+                    <CaseCard bg={'secondary'} isDark={false} data={item} />
+                  </CaseCardLink>
+                </Link>
               </Col>
             ))}
           </Row>

@@ -14,28 +14,26 @@ const SectionWithImage = ({ content, bg = 'light' }) => {
   return (
     <SectionStyled bg={bg}>
       <Container>
-        <Row className="justify-content-center align-items-center">
+        <Row
+          className="justify-content-center align-items-center"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="50"
+          data-aos-offset="0"
+          data-aos-once="true"
+        >
           <Col lg="5" className="offset-lg-1 order-lg-2 mb-5 mb-lg-0">
-            <div>
-              <div
-                data-aos="zoom-out"
-                data-aos-duration="750"
-                data-aos-once="true"
-                data-aos-delay="500"
-              >
-                <img
-                  src={urlFor(content.imageWithAlt.asset._ref)}
-                  alt={content.imageWithAlt.alt}
-                  className="img-fluid"
-                />
-              </div>
-            </div>
+            <img
+              src={urlFor(content.imageWithAlt.asset._ref)}
+              alt={content.imageWithAlt.alt}
+              className="img-fluid"
+            />
           </Col>
           <Col
             md="10"
             lg="6"
             className="order-lg-1"
-            data-aos="fade-right"
+            // data-aos="fade-right"
             data-aos-duration="750"
             data-aos-once="true"
           >

@@ -31,10 +31,12 @@ const ContentCards = ({
     lg="4"
     md="6"
     className="mb-4"
-    data-aos="zoom-in"
-    data-aos-duration="750"
-    data-aos-once="true"
+    data-aos="fade-zoom-in"
+    data-aos-easing="ease-in-back"
     data-aos-delay="50"
+    data-aos-duration="200"
+    data-aos-offset="0"
+    data-aos-once="true"
   >
     <StyledBox
       dark={dark}

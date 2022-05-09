@@ -32,16 +32,20 @@ const TextWithImageToRight = ({ content }) => {
         py={['50px', null, '130px', null, '230px']}
       >
         <Container>
-          <Row className="align-items-center">
+          <Row
+            className="align-items-center"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="50"
+            data-aos-offset="0"
+            data-aos-once="true"
+          >
             <Col lg="6" className=" position-static order-lg-2">
               <ImgContainer className=" pl-lg-5">
                 <img
                   src={urlFor(content.imageWithAlt.asset._ref)}
                   alt={content.imageWithAlt.alt}
                   className="img-fluid"
-                  data-aos="fade-left"
-                  data-aos-duration="600"
-                  data-aos-once="true"
                   css={`
                     margin-right: -800px;
                     box-shadow: ${({ theme }) =>
@@ -52,16 +56,8 @@ const TextWithImageToRight = ({ content }) => {
               </ImgContainer>
             </Col>
             <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
-              <div
-                data-aos="fade-right"
-                data-aos-duration="600"
-                data-aos-once="true"
-              >
-                <div>
-                  <Title>{content.title}</Title>
-                  <BlockContent blocks={content.blockText.blockText} />
-                </div>
-              </div>
+              <Title>{content.title}</Title>
+              <BlockContent blocks={content.blockText.blockText} />
             </Col>
           </Row>
         </Container>

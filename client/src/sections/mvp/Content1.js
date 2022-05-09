@@ -55,54 +55,49 @@ const ImageBottom = styled(Box)`
   }
 `
 
-const Content1 = ({ content }) => {
-  console.log(content)
-  return (
-    <>
-      <div className="overflow-hidden">
-        <Container>
-          <Row>
-            <Col
-              md={8}
-              lg={6}
-              data-aos="fade-right"
-              data-aos-duration="750"
-              data-aos-once="true"
-              data-aos-delay="500"
-            >
-              <Section py={[5, null, null, '190px']}>
-                <div className="omga-02__content-text section-title order-lg-1">
-                  <Title>{content.title}</Title>
-                  <BlockContent
-                    blocks={content.blockText.blockText}
-                    color="dark"
-                  />
+const Content1 = ({ content }) => (
+  <>
+    <div className="overflow-hidden">
+      <Container>
+        <Row>
+          <Col
+            md={8}
+            lg={6}
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="50"
+            data-aos-offset="0"
+            data-aos-once="true"
+          >
+            <Section py={[5, null, null, '190px']}>
+              <div className="omga-02__content-text section-title order-lg-1">
+                <Title>{content.title}</Title>
+                <BlockContent
+                  blocks={content.blockText.blockText}
+                  color="dark"
+                />
 
-                  <Button
-                    mt={4}
-                    onClick={() => (window.location.href = '#book')}
-                  >
-                    {content.button}
-                  </Button>
-                </div>
-              </Section>
-            </Col>
-            <Col md={8} lg={6} className="position-relative mb-5 mb-lg-0">
-              <ImageHalfContainer>
-                <div className="h-100">
-                  <img
-                    src={urlFor(content.imageWithAlt.asset._ref)}
-                    alt={content.imageWithAlt.alt}
-                    className="img-half img-fluid"
-                  />
-                </div>
-              </ImageHalfContainer>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </>
-  )
-}
+                <Button mt={4} onClick={() => (window.location.href = '#book')}>
+                  {content.button}
+                </Button>
+              </div>
+            </Section>
+          </Col>
+          <Col md={8} lg={6} className="position-relative mb-5 mb-lg-0">
+            <ImageHalfContainer>
+              <div className="h-100">
+                <img
+                  src={urlFor(content.imageWithAlt.asset._ref)}
+                  alt={content.imageWithAlt.alt}
+                  className="img-half img-fluid"
+                />
+              </div>
+            </ImageHalfContainer>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  </>
+)
 
 export default Content1

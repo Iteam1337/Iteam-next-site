@@ -38,10 +38,11 @@ const SectionWithImageAndButton = ({ content }) => {
           <Col
             md={8}
             lg={6}
-            data-aos="fade-right"
-            data-aos-duration="750"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="50"
+            data-aos-offset="0"
             data-aos-once="true"
-            data-aos-delay="500"
           >
             <Section py={[5, null, null, '190px']}>
               <div className="omga-02__content-text section-title order-lg-1">
@@ -58,7 +59,9 @@ const SectionWithImageAndButton = ({ content }) => {
           </Col>
           <Col md={8} lg={6} className="position-relative mb-5 mb-lg-0">
             <ImageHalfContainer>
-              <div className="h-100">
+              <div
+                className="h-100"
+              >
                 <img
                   src={urlFor(imageWithAlt.asset._ref)}
                   alt={imageWithAlt.alt}
