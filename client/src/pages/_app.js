@@ -3,8 +3,6 @@ import React, { useEffect } from 'react'
 import TagManager from 'react-gtm-module'
 import Layout from '../components/Layout'
 import { GlobalProvider } from '../context/GlobalContext'
-import { getClient } from '../lib/sanity.server'
-import { groq } from 'next-sanity'
 
 import '../components/Layout/bootstrap-custom.scss'
 import '../../node_modules/slick-carousel/slick/slick.css'
@@ -46,23 +44,6 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
       </Layout>
     </GlobalProvider>
   )
-}
-
-const footerQuery = groq`
-*[_id == 'footer'][0] {
-  ...,
-}`
-
-MyApp.getInitialProps = async () => {
-  if (footerCache) {
-    return { footer: footerCache }
-  }
-
-  const footer = await getClient().fetch(footerQuery)
-
-  footerCache = footer
-
-  return { footer }
 }
 
 export default MyApp

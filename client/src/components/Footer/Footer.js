@@ -4,6 +4,9 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Title, Box } from '../Core'
 import Logo from '../Logo'
 
+import { getClient } from '../../lib/sanity.server'
+import { groq } from 'next-sanity'
+
 const TitleStyled = styled(Title)`
   font-size: 16px;
   font-weight: 700;
@@ -202,6 +205,20 @@ const Footer = ({ isDark = true, content }) => {
       </Container>
     </Box>
   )
+}
+
+const footerQuery = groq`
+*[_id == 'footer'][0] {
+  ...,
+}`
+
+Footer.getStaticProps = async () => {
+  const footer = await getClient().fetch(footerQuery)
+  return {
+    props: {
+      footer,
+    },
+  }
 }
 
 export default Footer

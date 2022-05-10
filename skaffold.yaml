@@ -6,11 +6,9 @@ build:
   tagPolicy:
     sha256: {}
   artifacts:
-    - image: iteam-next-site
+    - image: iteam1337/iteam-next-site
       context: client
       docker:
-        cacheFrom: 
-          - iteam-next-site
         buildArgs:
           SANITY_READ_DATA_TOKEN: "{{ .SANITY_READ_DATA_TOKEN }}"
           SANITY_API_TOKEN: "{{ .SANITY_API_TOKEN }}"

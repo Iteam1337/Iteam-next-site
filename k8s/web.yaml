@@ -26,7 +26,14 @@ spec:
     spec:
       containers:
         - name: iteam-pub
-          image: iteam-next-site
+          resources: 
+            limits:
+              cpu: 100m
+              memory: 100Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          image: iteam1337/iteam-next-site
           ports:
             - containerPort: 3000
 ---
@@ -36,7 +43,6 @@ metadata:
   name: iteam-pub
   namespace: iteam-pub
   annotations:
-    kubernetes.io/ingress.class: 'public'
     cert-manager.io/cluster-issuer: 'letsencrypt-prod'
     nginx.ingress.kubernetes.io/from-to-www-redirect: 'true'
     nginx.ingress.kubernetes.io/http2-push-preload: 'true'
@@ -47,6 +53,7 @@ metadata:
       add_header X-Content-Type-Options nosniff;
       add_header Referrer-Policy 'same-origin';
 spec:
+  ingressClassName: nginx
   tls:
     - hosts:
         - iteam.pub

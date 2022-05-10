@@ -16,6 +16,11 @@ ARG SANITY_READ_DATA_TOKEN
 ARG SANITY_API_TOKEN
 ARG SANITY_PREVIEW_SECRET
 
+ENV SANITY_READ_DATA_TOKEN $SANITY_READ_DATA_TOKEN
+ENV SANITY_API_TOKEN $SANITY_API_TOKEN
+ENV SANITY_PREVIEW_SECRET $SANITY_PREVIEW_SECRET
+
+
 RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
 
 # Production image, copy all the files and run next
