@@ -34,6 +34,22 @@ spec:
               cpu: 100m
               memory: 100Mi
           image: iteam1337/iteam-next-site
+          env:
+            - name: SANITY_READ_DATA_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: sanity-secret
+                  key: SANITY_READ_DATA_TOKEN
+            - name: SANITY_API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: sanity-secret
+                  key: SANITY_API_TOKEN
+            - name: SANITY_PREVIEW_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: sanity-secret
+                  key: SANITY_PREVIEW_SECRET
           ports:
             - containerPort: 3000
 ---
