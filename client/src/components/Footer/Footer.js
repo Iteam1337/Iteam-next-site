@@ -1,7 +1,9 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import clsx from 'clsx'
+import { groq } from 'next-sanity'
 
+import { getClient } from '../../lib/sanity.server'
 import { Box, Typography } from '../Core'
 import { Logo } from '../Logo'
 
@@ -238,3 +240,18 @@ export const Footer = ({ isDark = true, content }) => {
     </footer>
   )
 }
+const footerQuery = groq`
+*[_id == 'footer'][0] {
+  ...,
+}`
+
+Footer.getStaticProps = async () => {
+  const footer = await getClient().fetch(footerQuery)
+  return {
+    props: {
+      footer,
+    },
+  }
+}
+
+export default Footer
