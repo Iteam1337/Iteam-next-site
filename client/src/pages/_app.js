@@ -2,6 +2,10 @@ import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 // import App from 'next/app'
 import posthog from 'posthog-js'
+import Layout from '../components/Layout'
+import { GlobalProvider } from '../context/GlobalContext'
+import { getClient } from '../lib/sanity.server'
+import { groq } from 'next-sanity'
 
 import { GlobalProvider } from '../context/GlobalContext'
 import { Layout } from '../components/Layout'
@@ -56,6 +60,23 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
       </Layout>
     </GlobalProvider>
   )
+}
+
+const footerQuery = groq`
+*[_id == 'footer'][0] {
+  ...,
+}`
+
+MyApp.getInitialProps = async () => {
+  if (footerCache) {
+    return { footer: footerCache }
+  }
+
+  const footer = await getClient().fetch(footerQuery)
+
+  footerCache = footer
+
+  return { footer }
 }
 
 export default MyApp
