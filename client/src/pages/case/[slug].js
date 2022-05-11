@@ -193,7 +193,7 @@ export const getStaticPaths = async () => {
   const pages = await getClient().fetch(query)
   return {
     paths: pages.map((slug) => `/case/${slug}`),
-    fallback: true,
+    fallback: false,
   }
 }
 

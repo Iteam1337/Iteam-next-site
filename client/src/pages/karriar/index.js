@@ -119,7 +119,7 @@ const careerPageQuery = groq`
  }
 `
 
-export async function getServerSideProps({ preview = false }) {
+export async function getStaticProps({ preview = false }) {
   const openPositions = await getClient(preview).fetch(openPositionsQuery)
   const careerPage = await getClient(preview).fetch(careerPageQuery)
 
