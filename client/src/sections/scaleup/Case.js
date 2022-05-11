@@ -17,12 +17,7 @@ const Case = ({ content }) => {
         <Row className="align-items-center">
           <Col lg="6" md="10" className="order-lg-2 mb-4">
             <div className="position-relative text-lg-right">
-              <ImageRight
-                className=""
-                data-aos="fade-down"
-                data-aos-duration="750"
-                data-aos-once="true"
-              >
+              <ImageRight className="">
                 <img
                   src={urlFor(content.preview.imageCard.image.asset._ref)}
                   alt={content.preview.imageCard.image.alt}
@@ -33,8 +28,10 @@ const Case = ({ content }) => {
           </Col>
           <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
             <div
-              data-aos="fade-right"
-              data-aos-duration="150"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="50"
+              data-aos-offset="0"
               data-aos-once="true"
             >
               <div>
