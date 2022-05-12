@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "preinstall": "npx npm-force-resolutions"
   },
+  "resolutions": { "glob-parent": "^6.0.1" },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "@sanity/block-content-to-react": "^3.0.0",
@@ -15,7 +17,6 @@
     "aos": "^3.0.0-beta.6",
     "babel-plugin-transform-define": "^2.0.0",
     "bootstrap": "^4.5.0",
-    "glob-parent": "^6.0.2",
     "google-libphonenumber": "^3.2.24",
     "gray-matter": "^4.0.3",
     "imagemin-mozjpeg": "9.0.0",
