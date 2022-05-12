@@ -73,31 +73,15 @@ export default function BlogRegular({ query, data, preview = false }) {
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
-              <Col lg="8">
+              <Anchor
+                fontWeight={filterParam == 'alla' ? 'bold' : 'normal'}
+                color="dark"
+                mr={48}
+                href="/aktuellt"
+              >
                 <Title>{title && title}</Title>
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        <Section className="pb-0">
-          <Container>
-            <Row>
+              </Anchor>
               <Col lg="8">
-                <Text fontSize={2} fontWeight="bold">
-                  Visa
-                </Text>
-              </Col>
-            </Row>
-            <Row>
-              <Col lg="8">
-                <Anchor
-                  fontWeight={filterParam == 'alla' ? 'bold' : 'normal'}
-                  color="dark"
-                  mr={48}
-                  href="/aktuellt"
-                >
-                  Allt
-                </Anchor>
                 <Anchor
                   fontWeight={filterParam == 'blogg' ? 'bold' : 'normal'}
                   color="dark"

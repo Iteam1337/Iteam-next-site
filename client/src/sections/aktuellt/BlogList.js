@@ -17,7 +17,8 @@ export default function BlogList({ posts }) {
         <Row className="justify-content-center">
           {sortedPosts?.map((post, i) => {
             const { imageCard, slug, date, title, _type } = post
-            const prefix = _type == 'openSourceLesson' ? 'open-source-skolan' : 'aktuellt'
+            const prefix =
+              _type == 'openSourceLesson' ? 'open-source-skolan' : 'aktuellt'
             return (
               <Col lg="4" className="mb-5" key={i}>
                 <PostCard
