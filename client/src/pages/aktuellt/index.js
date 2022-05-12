@@ -37,6 +37,8 @@ export default function BlogRegular({ query, data, preview = false }) {
     }
   })
 
+  const mixedPosts = data.posts.find((post) => post._type !== 'newsPost')
+
   const { metaTags, title } = newsPage
 
   return (
@@ -74,34 +76,40 @@ export default function BlogRegular({ query, data, preview = false }) {
           <Container>
             <Row className="justify-content-center text-center">
               <Title>{title && title}</Title>
-              <Col lg="8">
-                <Anchor
-                  textDecoration={filterParam == 'alla' ? 'underline' : 'none'}
-                  color="dark"
-                  mx={24}
-                  href="/aktuellt"
-                >
-                  Allt
-                </Anchor>
-                <Anchor
-                  textDecoration={filterParam == 'blogg' ? 'underline' : 'none'}
-                  color="dark"
-                  mx={24}
-                  href="/aktuellt?taggat=blogg"
-                >
-                  Blogg
-                </Anchor>
-                <Anchor
-                  textDecoration={
-                    filterParam == 'open-source-skolan' ? 'underline' : 'none'
-                  }
-                  color="dark"
-                  mx={24}
-                  href="/aktuellt?taggat=open-source-skolan"
-                >
-                  Open Source skolan
-                </Anchor>
-              </Col>
+              {mixedPosts && (
+                <Col lg="8">
+                  <Anchor
+                    textDecoration={
+                      filterParam == 'alla' ? 'underline' : 'none'
+                    }
+                    color="dark"
+                    mx={24}
+                    href="/aktuellt"
+                  >
+                    Allt
+                  </Anchor>
+                  <Anchor
+                    textDecoration={
+                      filterParam == 'blogg' ? 'underline' : 'none'
+                    }
+                    color="dark"
+                    mx={24}
+                    href="/aktuellt?taggat=blogg"
+                  >
+                    Blogg
+                  </Anchor>
+                  <Anchor
+                    textDecoration={
+                      filterParam == 'open-source-skolan' ? 'underline' : 'none'
+                    }
+                    color="dark"
+                    mx={24}
+                    href="/aktuellt?taggat=open-source-skolan"
+                  >
+                    Open Source skolan
+                  </Anchor>
+                </Col>
+              )}
             </Row>
           </Container>
         </Section>
