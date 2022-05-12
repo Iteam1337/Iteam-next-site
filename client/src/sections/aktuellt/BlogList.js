@@ -12,7 +12,7 @@ export default function BlogList({ posts }) {
     }
   })
   return (
-    <Section className="position-relative">
+    <Section className="pt-5 position-relative">
       <Container>
         <Row className="justify-content-center">
           {sortedPosts?.map((post, i) => {

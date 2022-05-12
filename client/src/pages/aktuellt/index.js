@@ -75,7 +75,7 @@ export default function BlogRegular({ query, data, preview = false }) {
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
-              <Title>{title && title}</Title>
+              <Title variant="hero" pb="4">{title && title}</Title>
               {mixedPosts && (
                 <Col lg="8">
                   <Anchor
