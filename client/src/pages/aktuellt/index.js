@@ -73,29 +73,30 @@ export default function BlogRegular({ query, data, preview = false }) {
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
-              <Anchor
-                fontWeight={filterParam == 'alla' ? 'bold' : 'normal'}
-                color="dark"
-                mr={48}
-                href="/aktuellt"
-              >
-                <Title>{title && title}</Title>
-              </Anchor>
+              <Title>{title && title}</Title>
               <Col lg="8">
                 <Anchor
-                  fontWeight={filterParam == 'blogg' ? 'bold' : 'normal'}
+                  textDecoration={filterParam == 'alla' ? 'underline' : 'none'}
                   color="dark"
-                  mr={48}
+                  mx={24}
+                  href="/aktuellt"
+                >
+                  Allt
+                </Anchor>
+                <Anchor
+                  textDecoration={filterParam == 'blogg' ? 'underline' : 'none'}
+                  color="dark"
+                  mx={24}
                   href="/aktuellt?taggat=blogg"
                 >
                   Blogg
                 </Anchor>
                 <Anchor
-                  fontWeight={
-                    filterParam == 'open-source-skolan' ? 'bold' : 'normal'
+                  textDecoration={
+                    filterParam == 'open-source-skolan' ? 'underline' : 'none'
                   }
                   color="dark"
-                  mr={48}
+                  mx={24}
                   href="/aktuellt?taggat=open-source-skolan"
                 >
                   Open Source skolan
