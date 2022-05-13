@@ -3,6 +3,35 @@ import styled from 'styled-components'
 import { color, space, typography, shadow } from 'styled-system'
 import { device } from '../../utils'
 
+const HeroTitle = styled.h1`
+  font-weight: 700;
+  letter-spacing: -2.81px;
+  font-size: 50px;
+  line-height: 56px;
+  margin-bottom: 30px;
+
+  @media ${device.sm} {
+    font-size: 66px;
+    line-height: 70px;
+  }
+
+  @media ${device.lg} {
+    font-size: 76px;
+    line-height: 84px;
+    margin-bottom: 30px;
+  }
+
+  @media ${device.xl} {
+    font-size: 90px;
+    line-height: 94px;
+  }
+
+  ${color};
+  ${space};
+  ${typography};
+  ${shadow};
+`
+
 const SectionTitle = styled.h2`
   font-weight: 700;
   letter-spacing: -2.5px;
@@ -27,29 +56,7 @@ const SectionTitle = styled.h2`
   ${shadow};
 `
 
-const HeroTitle = styled(SectionTitle)`
-  letter-spacing: -2.81px;
-  font-size: 50px;
-  line-height: 56px;
-  margin-bottom: 30px;
-
-  @media ${device.sm} {
-    font-size: 66px;
-    line-height: 70px;
-  }
-
-  @media ${device.lg} {
-    font-size: 76px;
-    line-height: 84px;
-  }
-
-  @media ${device.xl} {
-    font-size: 90px;
-    line-height: 94px;
-  }
-`
-
-const CardTitle = styled.h4`
+const CardTitle = styled.h3`
   font-size: 21px;
   font-weight: 700;
   letter-spacing: -0.66px;
