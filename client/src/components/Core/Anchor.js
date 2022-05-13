@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { color, space, typography, shadow } from 'styled-system'
+import { color, space, typography, shadow, system } from 'styled-system'
 
 const Anchor = styled.a`
   font-weight: 300;
@@ -10,6 +10,11 @@ const Anchor = styled.a`
   ${space};
   ${typography};
   ${shadow};
+  ${system({
+    textDecoration: {
+      property: 'text-decoration',
+    },
+  })}
   &:hover,
   &:active,
   &.active {

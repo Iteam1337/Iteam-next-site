@@ -13,6 +13,9 @@ export default function resolveProductionUrl(doc) {
     case 'newsPage':
       route = 'aktuellt'
       break
+    case 'openSourceLesson':
+      route = 'open-source-skolan'
+      break
     case 'coworker':
       route = 'about'
       break

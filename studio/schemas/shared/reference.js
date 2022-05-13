@@ -13,6 +13,7 @@ export default {
     { type: 'mvpPage' },
     { type: 'newsPage' },
     { type: 'newsPost' },
+    { type: 'openSourceLesson' },
     { type: 'openPositions' },
     { type: 'scaleUpPage' },
     { type: 'startPage' },
