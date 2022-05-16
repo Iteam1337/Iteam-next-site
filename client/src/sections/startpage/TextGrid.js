@@ -27,8 +27,11 @@ const FeatureCard = ({ title, children, ...rest }) => (
 )
 
 const TextGrid = ({ content }) => {
+  console.log(content)
   return (
     <SectionStyled>
+      {/* content.title is actually just a description of the Sanity document type ("Flera texter"), but serves OK as a generic h2 */}
+      <Title className="sr-only">{content.title}</Title>
       <Container>
         <Row className="justify-content-center">
           {content.texts.map((text, i) => {
