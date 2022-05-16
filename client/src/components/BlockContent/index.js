@@ -37,7 +37,6 @@ const serializers = (withAnchor, variant, color, textAlign, anchorColor) => ({
         case 'subtitle':
           return (
             <Typography.Paragraph
-              variant="small"
               size="subtitle"
               color={color}
               variant="thin"
