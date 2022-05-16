@@ -19,14 +19,12 @@ const Hero = ({ content }) => {
         >
           <Row>
             <Col md="11" lg="11" xl="9">
-              <Box
-                py={4}
-              >
-                <Text color="light">{content.subtitle}</Text>
+              <Box py={4}>
                 <Title my={4} variant="hero" color="light">
                   {title}
                   <Span color="secondary">.</Span>
                 </Title>
+                <Text color="light">{content.subtitle}</Text>
                 <Box
                   pt="12px"
                   data-aos="fade-up"
