@@ -43,7 +43,7 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: -1px;
   margin-top: 2.25rem;
@@ -51,22 +51,35 @@ const H2 = styled.h2`
   color: black;
   text-align: left;
   line-height: 1.2;
+
+  @media ${device.lg} {
+    font-size: 32px;
+  }
 `
 const H3 = styled.h3`
-  font-size: 24px;
-  margin: 2.25rem 0 1.25rem;
-  color: black;
-  text-align: left;
-  font-weight: 500;
-  line-height: 1.2;
-`
-const H4 = styled.h4`
   font-size: 20px;
   margin: 2.25rem 0 1.25rem;
   color: black;
   text-align: left;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media ${device.lg} {
+    font-size: 24px;
+    font-weight: 500;
+  }
+`
+const H4 = styled.h4`
+  font-size: 18px;
+  margin: 2.25rem 0 1.25rem;
+  color: black;
+  text-align: left;
   font-weight: 500;
   line-height: 1.2;
+
+  @media ${device.lg} {
+    font-size: 20px;
+  }
 `
 const Anchor = styled.a`
   color: ${({ color, theme }) =>
