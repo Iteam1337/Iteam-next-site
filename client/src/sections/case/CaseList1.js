@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Section } from '../../components/Core'
+import { Section, Title } from '../../components/Core'
 import PostCard from '../../components/PostCard'
 
 const Column = (props) => <Col sm={6} lg={4} className="mb-4" {...props} />
@@ -10,6 +10,7 @@ const CaseList = ({ posts }) => {
     <>
       <Section className="position-relative">
         <Container>
+          <Title className="sr-only">Utvalda case</Title>
           <Row>
             {posts.map((item, i) => {
               return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Section } from '../../components/Core'
+import { Section, Title } from '../../components/Core'
 import CaseCard from '../../components/CaseCard'
 import { urlFor } from '../../utils/helpers'
 
@@ -11,6 +11,7 @@ const CaseList2 = ({ sectionCards }) => {
       {/* <!-- Feature section --> */}
       <Section bg="#F7F7FB" className="position-relative">
         <Container>
+          <Title className="sr-only">Utvalda case</Title>
           <Row className="align-items-center justify-content-center">
             {sectionCards.map((card, i) => {
               return (

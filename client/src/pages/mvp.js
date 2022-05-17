@@ -53,7 +53,7 @@ const Mvp = ({ data, preview = false }) => {
             }}
           />
         )}
-        <Hero content={mvpPage?.hero && mvpPage.hero} flipTexts={true} />
+        <Hero content={mvpPage?.hero && mvpPage.hero} />
         {mvpPage?.sectionWithButtonAndTextGrid && (
           <SectionWithButtonAndTextGrid
             content={mvpPage.sectionWithButtonAndTextGrid}

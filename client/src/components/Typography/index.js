@@ -7,7 +7,7 @@ const Paragraph = styled.p`
   font-weight: ${({ variant }) => (variant == 'thin' ? 300 : 500)};
   letter-spacing: ${({ variant }) =>
     variant == 'thin' ? 'normal' : '-0.56px'};
-  line-height: ${({ variant }) => (variant == 'thin' ? '38px' : '30px')};
+  line-height: ${({ variant }) => (variant == 'thin' ? '2' : '1.4')};
   text-align: ${({ textAlign }) => (textAlign == 'center' ? 'center' : 'left')};
   color: ${({ color }) =>
     color == 'light' ? 'rgba(255,255,255, 0.7)' : '#19191b'};
@@ -15,14 +15,7 @@ const Paragraph = styled.p`
 const QuoteParagraph = styled(Paragraph)`
   font-size: 19.5px;
 `
-const ParagraphThin = styled.p`
-  margin: 20px 0;
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: -0.56px;
-  line-height: 35px;
-  text-align: center;
-`
+
 const H1 = styled.h1`
   font-weight: 700;
   font-size: 50px;
@@ -60,16 +53,16 @@ const H2 = styled.h2`
   line-height: 1.2;
 `
 const H3 = styled.h3`
-  font-size: 28px;
-  margin: 36px 0 20px;
+  font-size: 24px;
+  margin: 2.25rem 0 1.25rem;
   color: black;
   text-align: left;
   font-weight: 500;
   line-height: 1.2;
 `
 const H4 = styled.h4`
-  font-size: 24px;
-  margin: 36px 0 20px;
+  font-size: 20px;
+  margin: 2.25rem 0 1.25rem;
   color: black;
   text-align: left;
   font-weight: 500;
@@ -98,7 +91,6 @@ const BlockQuote = styled.blockquote`
 
 export default {
   Paragraph,
-  ParagraphThin,
   H1,
   H2,
   H3,

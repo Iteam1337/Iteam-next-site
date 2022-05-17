@@ -18,6 +18,7 @@ const InfoSection = ({ text, title }) => (
 const Medarbetare = ({ info }) => (
   <Container>
     <Section>
+      <Title className="sr-only">Info</Title>
       <Row className="py-5">
         <Col md={8} lg={6}>
           <Title variant="card">Kontakt</Title>

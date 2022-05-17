@@ -23,7 +23,7 @@ const Content = ({ content }) => (
       <Container>
         <Row className="justify-content-center pb-4">
           <Col lg="6">
-            <Title variant="hero">{content.section.title}</Title>
+            <Title>{content.section.title}</Title>
           </Col>
           <Col lg="6" className="pl-lg-5">
             <BlockContent blocks={content.section.blockText.blockText} />

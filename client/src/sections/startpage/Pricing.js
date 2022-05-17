@@ -87,7 +87,7 @@ const CardPricing = styled(Box)`
   }
 `
 
-const TitleSmall = styled.h4`
+const TitleSmall = styled.h3`
   color: ${({ theme }) => theme.colors.black};
   font-size: 16px;
   font-weight: 300;
@@ -139,7 +139,6 @@ const Pricing = ({ content }) => {
           <div className="text-center pt-5">
             <div className="d-inline-flex justify-content-between align-items-center mb-5">
               <Text>{content.onGoing}</Text>
-
               <Switch onClick={() => setTimeMonthly(!timeMonthly)} />
               <div className="d-flex align-items-center">
                 <Text>{content.agreement}</Text>
@@ -154,15 +153,16 @@ const Pricing = ({ content }) => {
                     <TitleSmall>{content.team}</TitleSmall>
                     <div className="d-flex align-items-end justify-content-center my-3">
                       <Currency>{content.value}</Currency>
-                      <Title
+                      <Text
                         css={`
-                          font-size: 80px;
+                          font-size: 80px !important;
                           letter-spacing: -1.38px;
-                          margin-bottom: 0 !important;
+                          margin-bottom: 14px !important;
+                          font-weight: 700;
                         `}
                       >
                         {timeMonthly ? content.price : content.priceOngoing}
-                      </Title>
+                      </Text>
                       <TimePer>/h</TimePer>
                     </div>
                     <Text fontSize="18px">{content.priceIncluding}</Text>
