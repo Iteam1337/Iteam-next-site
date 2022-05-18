@@ -10,9 +10,9 @@ import '../components/Layout/bootstrap-custom.scss'
 import '../../node_modules/slick-carousel/slick/slick.css'
 import '../../node_modules/slick-carousel/slick/slick-theme.css'
 import '../../node_modules/aos/dist/aos.css'
-
 import '../assets/fonts/icon-font/css/style.css'
 import '../assets/fonts/fontawesome-5/css/all.css'
+import '../assets/fonts/roboto/css/style.css'
 
 const tagManagerArgs = {
   gtmId: 'GTM-MP7MZVC',
