@@ -9,13 +9,15 @@ const defaultColors = {
   black: '#000000',
   yellow: '#fedc5a',
   ash: '#141313',
-  green: '#s',
+  green: '#38FFA1',
   info: ' #668CFF',
+  pink: '#FF5C77',
 }
 
 const colors = {
   primary: defaultColors.primary,
   secondary: defaultColors.secondary,
+  pink: defaultColors.pink,
   light: defaultColors.white,
   lightShade: rgba(defaultColors.white, 0.75),
   dark: defaultColors.dark,

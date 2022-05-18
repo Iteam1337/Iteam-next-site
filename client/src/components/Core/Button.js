@@ -84,8 +84,8 @@ const ButtonOutline = styled(ButtonSolid)`
 
 const Button = ({
   variant = 'solid',
-  color = 'light',
-  bg = 'primary',
+  color = 'dark',
+  bg = 'pink',
   ...rest
 }) => {
   return variant === 'solid' ? (
