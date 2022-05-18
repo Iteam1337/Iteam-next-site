@@ -15,32 +15,6 @@ const Paragraph = styled.p`
 const QuoteParagraph = styled(Paragraph)`
   font-size: 19.5px;
 `
-// todo: shouldn't be used in an article – do we need it?
-const H1 = styled.h1`
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 56px;
-  letter-spacing: -2.81px;
-  font-size: 50px;
-  line-height: 56px;
-  margin-bottom: 30px;
-  color: black;
-
-  @media ${device.sm} {
-    font-size: 66px;
-    line-height: 70px;
-  }
-
-  @media ${device.lg} {
-    font-size: 76px;
-    line-height: 84px;
-  }
-
-  @media ${device.xl} {
-    font-size: 90px;
-    line-height: 94px;
-  }
-`
 
 const H2 = styled.h2`
   font-size: 24px;
@@ -106,7 +80,6 @@ const BlockQuote = styled.blockquote`
 
 export default {
   Paragraph,
-  H1,
   H2,
   H3,
   H4,
