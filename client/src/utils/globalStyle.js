@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 
-// todo: create styles for headings, sync with src/components/Typography
-
 const globalStyle = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.colors.bg} !important;
@@ -27,7 +25,8 @@ const globalStyle = createGlobalStyle`
 
   a {
     color: ${({ theme }) => theme.colors.secondary};  
-    transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+    font-weight: 400;
     &:hover, &:active, &:focus{
       color: ${({ theme }) => theme.colors.secondary};
       text-decoration: none;
