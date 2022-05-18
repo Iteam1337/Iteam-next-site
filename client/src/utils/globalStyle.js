@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+// todo: create styles for headings, sync with src/components/Typography
+
 const globalStyle = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.colors.bg} !important;
