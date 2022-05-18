@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { color, space, typography, shadow, system } from 'styled-system'
 
 const Anchor = styled.a`
-  font-weight: 300;
-  letter-spacing: -0.66px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
   line-height: 35px;
   ${color};
   ${space};
