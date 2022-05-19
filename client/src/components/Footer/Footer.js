@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Box } from '../Core'
+import { Title, Box, Anchor } from '../Core'
 import Logo from '../Logo'
 
 const TitleStyled = styled(Title)`
@@ -19,9 +19,11 @@ const UlStyled = styled.ul`
     line-height: 2.25;
     a {
       color: ${({ theme, color }) => theme.colors[color]} !important;
+      text-decoration: none;
       &:hover {
-        text-decoration: none;
-        color: ${({ theme, color }) => theme.colors.secondary} !important;
+        text-decoration: underline;
+        color: ${({ dark, theme }) =>
+          dark ? theme.colors.light : theme.colors.dark};
       }
     }
   }
@@ -48,7 +50,7 @@ const CopyRightArea = styled.div`
     display: inline-flex;
     a {
       color: ${({ dark, theme }) =>
-        dark ? theme.colors.light : theme.colors.dark} !important;
+        dark ? theme.colors.light : theme.colors.dark};
       font-size: 16px;
       transition: 0.4s;
       padding: 0 3px;
@@ -58,10 +60,14 @@ const CopyRightArea = styled.div`
       }
       &:hover {
         text-decoration: none;
-        color: ${({ theme, color }) => theme.colors.secondary} !important;
       }
     }
   }
+`
+
+const PrivacyAnchor = styled(Anchor)`
+  font-size: 13px;
+  font-weight: 300;
 `
 
 const Footer = ({ isDark = true, content }) => {
@@ -167,11 +173,15 @@ const Footer = ({ isDark = true, content }) => {
         </Box>
         <CopyRightArea dark={isDark ? 1 : 0}>
           <Row className="align-items-center">
-            <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
-              <p>
-                &copy; 2021 Iteam, All Rights Reserved. Our{' '}
-                <a href="/privacy">privacy policy</a>.
-              </p>
+            <Col
+              sm="6"
+              display="flex"
+              className="text-sm-left text-center mb-2 mb-sm-0"
+            >
+              <p>&copy; 2021 Iteam, All Rights Reserved.</p>
+              <PrivacyAnchor color={isDark ? 'light' : 'dark'} href="/privacy">
+                Our privacy policy.
+              </PrivacyAnchor>
             </Col>
             <Col sm="6" className="text-sm-right text-center">
               <ul className="social-icons">

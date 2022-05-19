@@ -20,9 +20,6 @@ const Card = styled.a`
   &:hover {
     box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
     text-decoration: none;
-    .title {
-      color: ${({ theme }) => theme.colors.info};
-    }
   }
 `
 

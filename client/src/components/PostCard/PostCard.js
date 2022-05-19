@@ -23,14 +23,16 @@ const CardText = styled(Box)`
 
 const TitleStyled = styled(Title)`
   transition: 0.3s;
-  &:hover {
-    color: ${({ theme }) => theme.colors.info};
-  }
+  text-decoration: none;
 `
 
 const CoverImg = styled.img`
   height: 320px;
   object-fit: ${(props) => props.scale};
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const PostCard = ({
@@ -63,27 +65,22 @@ const PostCard = ({
           />
         </Link>
       </Box>
-
       <CardText>
         {preTitle && (
           <Text fontSize={2} lineHeight={1.75} mb="14px">
             {preTitle}
           </Text>
         )}
-
-        <Anchor color="info" href={link}>
-          <TitleStyled variant="card" mb="14px">
-            {title}
-          </TitleStyled>
-        </Anchor>
-
+        <TitleStyled variant="card" mb="14px">
+          {title}
+        </TitleStyled>
         <Text fontSize={2} lineHeight={1.75} mb="16px">
           {children}
         </Text>
         {readMore && (
           <Box>
-            <Anchor color="info" href={link}>
-              <Span color="info">Läs mer...</Span>
+            <Anchor href={link}>
+              <Span>Läs mer...</Span>
             </Anchor>
           </Box>
         )}

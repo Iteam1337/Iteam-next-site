@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Gravatar from 'react-gravatar'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Text, Anchor } from '../../components/Core'
 import Link from 'next/link'
 import { formatPhoneNumber, urlFor } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'
@@ -21,7 +21,7 @@ const CardImage = styled.div`
 `
 
 const Wrapper = styled.div`
-  height: 330px;
+  height: auto;
   &:hover {
     cursor: pointer;
     .image {
@@ -30,6 +30,9 @@ const Wrapper = styled.div`
       min-height: 170px;
       max-height: 170px;
     }
+  }
+  &:focus-within {
+    outline: 2px solid ${({ theme }) => theme.colors.secondary};
   }
 `
 
@@ -47,7 +50,7 @@ const TeamCard = ({ coworker }) => {
   return (
     <Box className="text-center" pt="15px" px="30px" borderRadius={10} mb={4}>
       <Wrapper>
-        <Link href={`/about/${slug.current}`}>
+        <Anchor href={`/about/${slug.current}`} aria-label={fullname} textDecoration="none">
           <div>
             <CardImage className="image">
               {profilePic ? (
@@ -70,36 +73,32 @@ const TeamCard = ({ coworker }) => {
               >
                 {fullname}
               </Title>
-              <Text fontSize={2} lineHeight={1.75}>
+              <Text fontSize={2} pt="9px" lineHeight={1.2}>
                 {status}
               </Text>
-              <Text fontSize={2} lineHeight={1.75}>
+              <Text fontSize={2} pt="4.5px" pb="9px" lineHeight={1.2}>
                 {role}
               </Text>
             </div>
           </div>
-        </Link>
+        </Anchor>
         <div className="text-center">
           {phoneNumber && (
-            <a href={`tel:${phoneNumber}`}>
-              <Text fontSize={1} lineHeight={1.25}>
+            <div>
+              <Anchor href={`tel:${phoneNumber}`} fontSize="14px" lineHeight="1" textDecoration="none">
                 {formatPhoneNumber(phoneNumber)}
-              </Text>
-            </a>
+              </Anchor>
+            </div>
           )}
           {email && (
-            <a href={`mailto:${email}`}>
-              <Text fontSize={1} lineHeight={1.25}>
+            <div>
+              <Anchor href={`mailto:${email}`} fontSize="14px" lineHeight="1" textDecoration="none">
                 {email}
-              </Text>
-            </a>
+              </Anchor>
+            </div>
           )}
           {socialMedia && (
-            <SocialMediaLinks
-              socialMedia={socialMedia}
-              fullname={fullname}
-              color="black"
-            />
+            <SocialMediaLinks socialMedia={socialMedia} fullname={fullname} />
           )}
         </div>
       </Wrapper>

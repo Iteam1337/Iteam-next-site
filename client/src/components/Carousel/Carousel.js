@@ -226,8 +226,8 @@ const Coworker = ({ item }) => {
             {item.fullname}
           </Title>
           <Text variant="small">{item.role}</Text>
-          <Anchor color="info" href={`/about/${item.slug.current}`}>
-            <Span color="info">Läs mer...</Span>
+          <Anchor href={`/about/${item.slug.current}`}>
+            <Span>Läs mer…</Span>
           </Anchor>
         </SliderText>
       </SliderCard>
@@ -256,9 +256,7 @@ const Testimonial = ({ item }) => {
           </Title>
           <Text variant="small">{item.role}</Text>
           {item.reference && (
-            <Anchor color="info" href={buildInternalUrl(item.reference)}>
-              <Span color="info">Läs mer...</Span>
-            </Anchor>
+            <Anchor href={buildInternalUrl(item.reference)}>Läs mer…</Anchor>
           )}
         </SliderText>
       </SliderCard>

@@ -137,9 +137,11 @@ const Menu = styled.ul`
         padding-bottom: 18px !important;
         padding-left: 18px !important;
         padding-right: 18px !important;
+        margin-left: 9px;
+        margin-right: 9px;
       }
       &:hover {
-        color: ${({ theme }) => theme.colors.primary} !important;
+       text-decoration: none;
       }
     }
   }
@@ -217,7 +219,7 @@ const MenuDropdown = styled.ul`
 
     &:hover {
       > a {
-        color: ${({ theme }) => theme.colors.secondary};
+        color: ${({ theme }) => theme.colors.dark};
         text-decoration: none;
         &::after {
           transform: rotate(0deg);
