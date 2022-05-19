@@ -36,6 +36,7 @@ const colors = {
     dark: {
       primary: defaultColors.primary,
       secondary: defaultColors.secondary,
+      pink: defaultColors.pink,
       light: defaultColors.white,
       lightShade: rgba(defaultColors.white, 0.75),
       dark: defaultColors.dark,
