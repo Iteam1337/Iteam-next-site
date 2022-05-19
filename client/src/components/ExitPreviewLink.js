@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
   a {
     color: white;
-    font-weight: bold;
+    font-weight: 700;
   }
 `
 

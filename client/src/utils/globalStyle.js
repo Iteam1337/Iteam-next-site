@@ -25,7 +25,8 @@ const globalStyle = createGlobalStyle`
 
   a {
     color: ${({ theme }) => theme.colors.secondary};  
-    transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+    font-weight: 400;
     &:hover, &:active, &:focus{
       color: ${({ theme }) => theme.colors.secondary};
       text-decoration: none;

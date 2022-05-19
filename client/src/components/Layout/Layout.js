@@ -5,20 +5,15 @@ import React, {
   useContext,
   useRef,
 } from 'react'
-
 import styled, { ThemeProvider } from 'styled-components'
 import Head from 'next/head'
 import AOS from 'aos'
 
 import Header from '../Header'
 import Footer from '../Footer'
-
 import ModalVideo from '../ModalVideo'
-
 import GlobalContext from '../../context/GlobalContext'
-
 import GlobalStyle from '../../utils/globalStyle'
-
 import imgFavicon from '../../assets/image/png/favicon.png'
 
 import { get, merge } from 'lodash'
@@ -77,15 +72,6 @@ const Layout = ({ children, pageContext, footer }) => {
         }
       >
         <GlobalStyle />
-        <Head>
-          <title>Iteam</title>
-          <link rel="icon" type="image/png" href={imgFavicon} />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
           {children}
         </div>

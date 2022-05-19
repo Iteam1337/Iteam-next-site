@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { device } from '../../utils'
 
 const Paragraph = styled.p`
-  margin: 20px 0;
+  margin: 27px 0;
   font-size: ${({ size }) => (size == 'subtitle' ? '21px' : '18px')};
   font-weight: ${({ variant }) => (variant == 'thin' ? 300 : 500)};
   letter-spacing: ${({ variant }) =>
@@ -16,38 +16,11 @@ const QuoteParagraph = styled(Paragraph)`
   font-size: 19.5px;
 `
 
-const H1 = styled.h1`
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 56px;
-  letter-spacing: -2.81px;
-  font-size: 50px;
-  line-height: 56px;
-  margin-bottom: 30px;
-  color: ${({ theme }) => theme.colors.dark};
-
-  @media ${device.sm} {
-    font-size: 66px;
-    line-height: 70px;
-  }
-
-  @media ${device.lg} {
-    font-size: 76px;
-    line-height: 84px;
-  }
-
-  @media ${device.xl} {
-    font-size: 90px;
-    line-height: 94px;
-  }
-`
-
 const H2 = styled.h2`
   font-size: 24px;
   font-weight: 600;
   letter-spacing: -1px;
-  margin-top: 2.25rem;
-  margin-bottom: 1.25rem;
+  margin: 36px 0 27px;
   color: ${({ theme }) => theme.colors.dark};
   text-align: left;
   line-height: 1.2;
@@ -58,22 +31,24 @@ const H2 = styled.h2`
 `
 const H3 = styled.h3`
   font-size: 20px;
-  margin: 2.25rem 0 1.25rem;
+  margin: 36px 0 18px;
   color: ${({ theme }) => theme.colors.dark};
   text-align: left;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
+
+  + p {
+    margin-top: -9px;
+  }
 
   @media ${device.lg} {
     font-size: 24px;
-    font-weight: 500;
   }
 `
 const H4 = styled.h4`
   font-size: 18px;
-  margin: 2.25rem 0 1.25rem;
+  margin: 36px 0 27px;
   color: ${({ theme }) => theme.colors.dark};
-
   text-align: left;
   font-weight: 500;
   line-height: 1.2;
@@ -105,7 +80,6 @@ const BlockQuote = styled.blockquote`
 
 export default {
   Paragraph,
-  H1,
   H2,
   H3,
   H4,
