@@ -34,7 +34,7 @@ const SliderStyled = styled(Slider)`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #fff;
+      color: ${({ theme }) => theme.colors.dark};
       transition: 0.4s;
     }
   }
@@ -42,6 +42,7 @@ const SliderStyled = styled(Slider)`
     left: 0;
     &:before {
       content: '\f060';
+      opacity: 1;
     }
   }
   .slick-arrow.slick-next {
@@ -50,16 +51,17 @@ const SliderStyled = styled(Slider)`
     transform: translate(50%, -50%);
     &:before {
       content: '\f061';
+      opacity: 1;
     }
   }
   .slick-arrow:hover,
   .slick-arrow:focus {
     background: ${({ theme }) => theme.colors.light}!important;
-    color: ${({ theme }) => theme.colors.secondary}!important;
+    color: ${({ theme }) => theme.colors.dark}!important;
     box-shadow: ${({ theme }) =>
       `0 1px 6px ${rgba(theme.colors.shadow, 0.125)}`};
     &:before {
-      color: ${({ theme }) => theme.colors.secondary}!important;
+      color: ${({ theme }) => theme.colors.dark}!important;
     }
   }
 
