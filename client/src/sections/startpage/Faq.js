@@ -19,8 +19,8 @@ const FaqCard = styled(Box)`
     min-height: 30px;
     max-height: 30px;
     font-size: 15px;
-    background-color: ${({ theme }) => theme.colors.secondary};
-    color: ${({ theme }) => theme.colors.light};
+    background-color: ${({ theme }) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.dark};
     display: inline-flex;
     align-items: center;
     justify-content: center;
