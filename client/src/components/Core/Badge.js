@@ -31,7 +31,7 @@ const BadgeSolid = styled.span`
   ${layout};
 `
 
-const Badge = ({ color = 'light', bg = 'primary', ...rest }) => {
+const Badge = ({ color = 'dark', bg = 'pink', ...rest }) => {
   return (
     <BadgeSolid
       color={color}

@@ -17,7 +17,7 @@ const SwitchStyled = styled.div`
   border-radius: 17px;
   transition: all 0.3s ease-out;
   background: ${({ active, theme, bg }) =>
-    active ? theme.colors[bg] : `#eae9f2`};
+    active ? theme.colors[bg] :  theme.colors.darkShade};
   position: relative;
   margin: 0 15px;
   white-space: nowrap;
@@ -32,7 +32,8 @@ const SwitchStyled = styled.div`
 const Round = styled.span`
   width: 21px;
   height: 21px;
-  background-color: #ffffff;
+  background-color: ${({ active, theme, bg }) =>
+    active ? theme.colors.dark : theme.colors.light};
   position: absolute;
   transition: all 0.3s ease-out;
   left: ${({ active }) => (active ? `calc(100% - 33px)` : `0`)};

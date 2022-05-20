@@ -61,12 +61,12 @@ const ULStyled = styled.ul`
       font-size: 13px;
       width: 30px !important;
       height: 30px;
-      background-color: ${({ theme }) => rgba(theme.colors.secondary, 0.2)};
+      background-color: ${({ theme }) => theme.colors.secondary};
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 500px;
-      color: ${({ theme }) => theme.colors.secondary};
+      color: ${({ theme }) => theme.colors.dark};
       position: relative;
       top: 9px;
       margin-right: 13px;
@@ -173,7 +173,7 @@ const Pricing = ({ content }) => {
                     </ULStyled>
                   </div>
                   <Button
-                    bg="primary"
+                    bg="secondary"
                     onClick={() =>
                       (window.location.href = buildInternalUrl(
                         content.cta.reference
