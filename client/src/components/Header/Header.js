@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import GlobalContext from '../../context/GlobalContext'
 import Offcanvas from '../Offcanvas'
@@ -141,7 +142,7 @@ const Menu = styled.ul`
         margin-right: 9px;
       }
       &:hover {
-       text-decoration: none;
+        text-decoration: none;
       }
     }
   }
@@ -265,10 +266,9 @@ const MenuDropdown = styled.ul`
 `
 
 const CrossWrapper = styled.div`
-    position: absolute;
-    top: 11px;
-    right: 24px;
-}
+  position: absolute;
+  top: 11px;
+  right: 24px;
 `
 
 const Header = ({ isDark = false }) => {
@@ -322,6 +322,12 @@ const Header = ({ isDark = false }) => {
     return windowSize
   }
 
+  const setActiveLink = (names) => {
+    if (names.find((name) => name === useRouter().pathname.slice(1))) {
+      return { textDecoration: 'underline' }
+    }
+  }
+
   return (
     <>
       <SiteHeader
@@ -358,6 +364,11 @@ const Header = ({ isDark = false }) => {
                             <li className="nav-item dropdown" {...rest}>
                               <a
                                 className="nav-link dropdown-toggle"
+                                style={setActiveLink([
+                                  'mvp',
+                                  'scaleup',
+                                  'iteamX',
+                                ])}
                                 role="button"
                                 data-toggle="dropdown"
                                 aria-expanded="false"
@@ -435,7 +446,13 @@ const Header = ({ isDark = false }) => {
                                             </a>
                                           ) : (
                                             <Link href={`/${subItem.name}`}>
-                                              <a>{subItem.label}</a>
+                                              <a
+                                                style={setActiveLink([
+                                                  subItem.name,
+                                                ])}
+                                              >
+                                                {subItem.label}
+                                              </a>
                                             </Link>
                                           )}
                                         </li>
@@ -460,6 +477,7 @@ const Header = ({ isDark = false }) => {
                                 <Link href={`/${name}`}>
                                   <a
                                     className="nav-link"
+                                    style={setActiveLink([name])}
                                     role="button"
                                     aria-expanded="false"
                                   >
