@@ -24,7 +24,7 @@ const Card = styled.a`
 `
 
 const Location = styled.span`
-  color: #8c97ac;
+  color: ${({ theme }) => theme.colors.dark};
   font-size: 16px;
   font-weight: 300;
   margin-right: 5px;
