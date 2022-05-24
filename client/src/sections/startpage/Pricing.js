@@ -173,7 +173,6 @@ const Pricing = ({ content }) => {
                     </ULStyled>
                   </div>
                   <Button
-                    bg="secondary"
                     onClick={() =>
                       (window.location.href = buildInternalUrl(
                         content.cta.reference

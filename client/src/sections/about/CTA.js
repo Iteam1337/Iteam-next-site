@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import { Title, Button, Section, Box } from '../../components/Core'
 
-import imgOval from '../../assets/image/png/l1-cta-oval.png'
+import imgOval from '../../assets/image/svg/l1-cta-oval.svg'
 import svgCurve from '../../assets/image/svg/l1-curve-cta.svg'
 import { buildInternalUrl } from '../../utils/helpers'
 
@@ -29,10 +29,10 @@ const CTA = ({ content }) => (
         data-aos-duration="750"
         data-aos-once="true"
       >
-        <img src={imgOval} alt="" className="img-fluid" />
+        <img src={imgOval} alt="" aria-hidden="true" className="img-fluid" />
       </LeftCard>
       <RightCard>
-        <img src={svgCurve} alt="" className="img-fluid" />
+        <img src={svgCurve} alt="" aria-hidden="true" className="img-fluid" />
       </RightCard>
       <Container>
         <Row className="justify-content-center text-center">

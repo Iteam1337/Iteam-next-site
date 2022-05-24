@@ -56,7 +56,7 @@ const Feature = () => (
                 riktningen.
               </Text>
               <a href="#sprintMeeting">
-                <Button bg="secondary" color="dark" mt={4}>
+                <Button color="dark" mt={4}>
                   Boka ett X team
                 </Button>
               </a>

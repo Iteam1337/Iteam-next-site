@@ -17,7 +17,7 @@ const BoxStyled = styled(Box)`
     height: 49%;
     content: '';
     width: 100%;
-    background: ${({ theme }) => theme.colors.secondary};
+    background: #5454d4;
     z-index: 1;
   }
 `
@@ -42,7 +42,7 @@ const Contact = () => (
       className="position-relative"
     >
       <Shape>
-        <img src={imgShape} alt="" className="w-100 img-fluid" />
+        <img src={imgShape} alt="" aria-hidden="true" className="w-100 img-fluid" />
       </Shape>
       <Container
         css={`

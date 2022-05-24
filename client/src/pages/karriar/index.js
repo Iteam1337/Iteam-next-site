@@ -54,7 +54,7 @@ const Career = ({ data, preview = false, carousel }) => {
       )}
       <PageWrapper headerDark footerDark>
         {preview && <ExitPreviewLink />}
-        <Hero content={hero} />
+        <Hero content={hero}/>
         <Content content={section} carousel={carousel} />
         <Feature content={textGrid} />
         <Roles content={openings} openPositions={data.openPositions} />

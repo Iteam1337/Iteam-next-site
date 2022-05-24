@@ -69,6 +69,7 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
       {scaleUpPage?.sectionWithButtonAndTextGrid && (
         <SectionWithButtonAndTextGrid
           content={scaleUpPage.sectionWithButtonAndTextGrid}
+          btnStyle="secondary"
         />
       )}
       {scaleUpPage?.textWithTagsFirst && (

@@ -38,11 +38,7 @@ const Anchor = styled.a`
   }
 `
 
-const SectionWithButtonAndTextGrid = ({
-  content,
-  btnStyle,
-  linkTo = 'book',
-}) => {
+const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
   const { section, textGrid, button } = content
 
   return (
@@ -67,13 +63,7 @@ const SectionWithButtonAndTextGrid = ({
                 anchorColor="light"
               />
               <Anchor href={`#${linkTo}`}>
-                <Button
-                  mt={4}
-                  bg={btnStyle && btnStyle}
-                  color={btnStyle && 'dark'}
-                >
-                  {button}
-                </Button>
+                <Button mt={4}>{button}</Button>
               </Anchor>
             </Box>
           </Col>
