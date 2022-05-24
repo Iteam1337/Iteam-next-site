@@ -322,9 +322,12 @@ const Header = ({ isDark = false }) => {
     return windowSize
   }
 
-  const setActiveLink = (names) => {
-    if (names.find((name) => name === useRouter().pathname.slice(1))) {
-      return { textDecoration: 'underline' }
+  const setActiveNav = (names) => {
+    for (const name of names) {
+      const regex = new RegExp(name)
+      if (useRouter().pathname.search(regex) === 1) {
+        return { textDecoration: 'underline' }
+      }
     }
   }
 
@@ -364,7 +367,7 @@ const Header = ({ isDark = false }) => {
                             <li className="nav-item dropdown" {...rest}>
                               <a
                                 className="nav-link dropdown-toggle"
-                                style={setActiveLink([
+                                style={setActiveNav([
                                   'mvp',
                                   'scaleup',
                                   'iteamX',
@@ -447,7 +450,7 @@ const Header = ({ isDark = false }) => {
                                           ) : (
                                             <Link href={`/${subItem.name}`}>
                                               <a
-                                                style={setActiveLink([
+                                                style={setActiveNav([
                                                   subItem.name,
                                                 ])}
                                               >
@@ -477,7 +480,7 @@ const Header = ({ isDark = false }) => {
                                 <Link href={`/${name}`}>
                                   <a
                                     className="nav-link"
-                                    style={setActiveLink([name])}
+                                    style={setActiveNav([name])}
                                     role="button"
                                     aria-expanded="false"
                                   >
