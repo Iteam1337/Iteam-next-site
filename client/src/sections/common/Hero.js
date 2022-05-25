@@ -122,8 +122,7 @@ const Hero = ({ content, flipTexts = false }) => {
                         margin-top: 20px;
                         width: fit-content;
                       `}
-                      bg="primary"
-                      color="light"
+                      bg="secondary"
                     >
                       {link.title}
                     </Button>
