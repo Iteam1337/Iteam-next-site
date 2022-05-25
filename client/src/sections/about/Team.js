@@ -34,6 +34,9 @@ const Wrapper = styled.div`
   &:focus-within {
     outline: 2px solid ${({ theme }) => theme.colors.secondary};
   }
+  &:focus-visible {
+    outline: none;
+  }
 `
 
 const TeamCard = ({ coworker }) => {
@@ -50,7 +53,11 @@ const TeamCard = ({ coworker }) => {
   return (
     <Box className="text-center" pt="15px" px="30px" borderRadius={10} mb={4}>
       <Wrapper>
-        <Anchor href={`/about/${slug.current}`} aria-label={fullname} textDecoration="none">
+        <Anchor
+          href={`/about/${slug.current}`}
+          aria-label={fullname}
+          textDecoration="none"
+        >
           <div>
             <CardImage className="image">
               {profilePic ? (
@@ -85,14 +92,24 @@ const TeamCard = ({ coworker }) => {
         <div className="text-center">
           {phoneNumber && (
             <div>
-              <Anchor href={`tel:${phoneNumber}`} fontSize="14px" lineHeight="1" textDecoration="none">
+              <Anchor
+                href={`tel:${phoneNumber}`}
+                fontSize="14px"
+                lineHeight="1"
+                textDecoration="none"
+              >
                 {formatPhoneNumber(phoneNumber)}
               </Anchor>
             </div>
           )}
           {email && (
             <div>
-              <Anchor href={`mailto:${email}`} fontSize="14px" lineHeight="1" textDecoration="none">
+              <Anchor
+                href={`mailto:${email}`}
+                fontSize="14px"
+                lineHeight="1"
+                textDecoration="none"
+              >
                 {email}
               </Anchor>
             </div>
