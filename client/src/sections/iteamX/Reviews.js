@@ -28,7 +28,7 @@ const ContentCard = ({
         src={urlFor(logo.asset._ref)}
         alt={logo.alt}
         className="img-fluid"
-        css={'filter: opacity(30%); height: 100px;'}
+        css={'height: 100px;'}
       />
     </Box>
     <Text color="light" mt={4} className="text-center mb-4">
@@ -50,7 +50,7 @@ const ContentCard = ({
         <Title color="light" variant="card" mb={1}>
           {name}
         </Title>
-        <Text variant="small" color="light" opacity={0.5}>
+        <Text variant="small" color="light">
           {role}
         </Text>
       </Box>
