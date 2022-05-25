@@ -66,8 +66,7 @@ const RecruteHero = ({ content }) => {
                       margin-top: 20px;
                       width: fit-content;
                     `}
-                    bg="primary"
-                    color="light"
+                    bg="secondary"
                   >
                     {content.link.title}
                   </Button>
