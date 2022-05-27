@@ -19,6 +19,7 @@ import imgFavicon from '../../assets/image/png/favicon.png'
 import { get, merge } from 'lodash'
 // the full theme object
 import { theme as baseTheme } from '../../utils'
+import SkipLink from '../SkipLink'
 
 // options for different color modes
 const modes = { light: 'light', dark: 'dark' }
@@ -72,8 +73,10 @@ const Layout = ({ children, pageContext, footer }) => {
         }
       >
         <GlobalStyle />
+        <SkipLink />
+
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
-          {children}
+          <main id="main-content">{children}</main>
         </div>
 
         <ModalVideo />
@@ -93,9 +96,10 @@ const Layout = ({ children, pageContext, footer }) => {
           <title>Iteam</title>
           <link rel="icon" type="image/png" href={imgFavicon} />
         </Head>
+        <SkipLink />
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
           <Header isDark={gContext.headerDark} />
-          {children}
+          <main id="main-content">{children}</main>
 
           <Footer isDark={gContext.footerDark} content={footer} />
         </div>
