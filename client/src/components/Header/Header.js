@@ -324,7 +324,7 @@ const Header = ({ isDark = false }) => {
     return windowSize
   }
 
-  const setActiveNav = (names) => {
+  const getNavLinkStyle = (names) => {
     for (const name of names) {
       const regex = new RegExp(name)
       if (router.pathname.search(regex) === 1) {
@@ -369,7 +369,7 @@ const Header = ({ isDark = false }) => {
                             <li className="nav-item dropdown" {...rest}>
                               <a
                                 className="nav-link dropdown-toggle"
-                                style={setActiveNav([
+                                style={getNavLinkStyle([
                                   'mvp',
                                   'scaleup',
                                   'iteamX',
@@ -452,7 +452,7 @@ const Header = ({ isDark = false }) => {
                                           ) : (
                                             <Link href={`/${subItem.name}`}>
                                               <a
-                                                style={setActiveNav([
+                                                style={getNavLinkStyle([
                                                   subItem.name,
                                                 ])}
                                               >
@@ -482,7 +482,7 @@ const Header = ({ isDark = false }) => {
                                 <Link href={`/${name}`}>
                                   <a
                                     className="nav-link"
-                                    style={setActiveNav([name])}
+                                    style={getNavLinkStyle([name])}
                                     role="button"
                                     aria-expanded="false"
                                   >
