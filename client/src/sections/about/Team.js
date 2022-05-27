@@ -39,6 +39,12 @@ const Wrapper = styled.div`
   }
 `
 
+const ContactAnchor = styled(Anchor)`
+  &:hover {
+    text-decoration: none;
+  }
+`
+
 const TeamCard = ({ coworker }) => {
   const {
     phoneNumber,
@@ -53,11 +59,7 @@ const TeamCard = ({ coworker }) => {
   return (
     <Box className="text-center" pt="15px" px="30px" borderRadius={10} mb={4}>
       <Wrapper>
-        <Anchor
-          href={`/about/${slug.current}`}
-          aria-label={fullname}
-          textDecoration="none"
-        >
+        <ContactAnchor href={`/about/${slug.current}`} aria-label={fullname}>
           <div>
             <CardImage className="image">
               {profilePic ? (
@@ -88,30 +90,28 @@ const TeamCard = ({ coworker }) => {
               </Text>
             </div>
           </div>
-        </Anchor>
+        </ContactAnchor>
         <div className="text-center">
           {phoneNumber && (
             <div>
-              <Anchor
+              <ContactAnchor
                 href={`tel:${phoneNumber}`}
                 fontSize="14px"
                 lineHeight="1"
-                textDecoration="none"
               >
                 {formatPhoneNumber(phoneNumber)}
-              </Anchor>
+              </ContactAnchor>
             </div>
           )}
           {email && (
             <div>
-              <Anchor
+              <ContactAnchor
                 href={`mailto:${email}`}
                 fontSize="14px"
                 lineHeight="1"
-                textDecoration="none"
               >
                 {email}
-              </Anchor>
+              </ContactAnchor>
             </div>
           )}
           {socialMedia && (

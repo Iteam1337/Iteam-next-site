@@ -11,17 +11,17 @@ const Anchor = styled.a`
   ${space};
   ${typography};
   ${shadow};
+  ${system({
+    textDecoration: {
+      property: 'text-decoration',
+    },
+  })}
   &:hover,
   &:active,
   &.active {
     color: ${({ color, theme }) =>
       color == 'light' ? theme.colors.light : theme.colors.dark};
     text-decoration: underline;
-    ${system({
-    textDecoration: {
-      property: 'text-decoration',
-    },
-  })}
   }
 `
 
