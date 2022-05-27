@@ -279,6 +279,8 @@ const Header = ({ isDark = false }) => {
   const size = useWindowSize()
   const isMobile = size.width < 622
 
+  const router = useRouter();
+
   const toggleMenu = () => {
     gContext.toggleOffCanvas()
     document.body.style.overflow = 'hidden'
@@ -325,7 +327,7 @@ const Header = ({ isDark = false }) => {
   const setActiveNav = (names) => {
     for (const name of names) {
       const regex = new RegExp(name)
-      if (useRouter().pathname.search(regex) === 1) {
+      if (router.pathname.search(regex) === 1) {
         return { textDecoration: 'underline' }
       }
     }
