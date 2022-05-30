@@ -34,7 +34,7 @@ const SliderStyled = styled(Slider)`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #fff;
+      color: ${({ theme }) => theme.colors.dark};
       transition: 0.4s;
     }
   }
@@ -42,6 +42,7 @@ const SliderStyled = styled(Slider)`
     left: 0;
     &:before {
       content: '\f060';
+      opacity: 1;
     }
   }
   .slick-arrow.slick-next {
@@ -50,16 +51,17 @@ const SliderStyled = styled(Slider)`
     transform: translate(50%, -50%);
     &:before {
       content: '\f061';
+      opacity: 1;
     }
   }
   .slick-arrow:hover,
   .slick-arrow:focus {
     background: ${({ theme }) => theme.colors.light}!important;
-    color: ${({ theme }) => theme.colors.secondary}!important;
+    color: ${({ theme }) => theme.colors.dark}!important;
     box-shadow: ${({ theme }) =>
       `0 1px 6px ${rgba(theme.colors.shadow, 0.125)}`};
     &:before {
-      color: ${({ theme }) => theme.colors.secondary}!important;
+      color: ${({ theme }) => theme.colors.dark}!important;
     }
   }
 
@@ -224,8 +226,8 @@ const Coworker = ({ item }) => {
             {item.fullname}
           </Title>
           <Text variant="small">{item.role}</Text>
-          <Anchor color="info" href={`/about/${item.slug.current}`}>
-            <Span color="info">Läs mer...</Span>
+          <Anchor href={`/about/${item.slug.current}`}>
+            <Span>Läs mer…</Span>
           </Anchor>
         </SliderText>
       </SliderCard>
@@ -254,9 +256,7 @@ const Testimonial = ({ item }) => {
           </Title>
           <Text variant="small">{item.role}</Text>
           {item.reference && (
-            <Anchor color="info" href={buildInternalUrl(item.reference)}>
-              <Span color="info">Läs mer...</Span>
-            </Anchor>
+            <Anchor href={buildInternalUrl(item.reference)}>Läs mer…</Anchor>
           )}
         </SliderText>
       </SliderCard>

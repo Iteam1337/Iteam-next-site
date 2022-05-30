@@ -12,8 +12,8 @@ const Paragraph = styled.p`
   ${space};
   ${typography};
   ${shadow};
-  color: ${({ color }) =>
-    color == 'light' ? 'rgba(255,255,255, 0.7)' : '#19191b'};
+  color: ${({ theme, color }) =>
+    color == 'light' ? theme.colors.textLight : theme.colors.dark};
 `
 
 const ParagraphSmall = styled(Paragraph)`
@@ -23,8 +23,8 @@ const ParagraphSmall = styled(Paragraph)`
   ${space};
   ${typography};
   ${shadow};
-  color: ${({ color }) =>
-    color == 'light' ? 'rgba(255,255,255, 0.7)' : '#19191b'};
+  color: ${({ theme, color }) =>
+    color == 'light' ? theme.colors.textLight : theme.colors.dark};
 `
 
 const Text = ({ variant, color = 'dark', ...props }) => {

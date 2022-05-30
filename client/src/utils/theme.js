@@ -5,12 +5,16 @@ const defaultColors = {
   primary: '#FF3B5C',
   secondary: '#38FFA1',
   white: '#ffffff',
+  textLight: '#f2f2f2',
   dark: '#19191b',
   black: '#000000',
   yellow: '#fedc5a',
   ash: '#141313',
-  green: '#s',
+  green: '#38FFA1',
   info: ' #668CFF',
+  // used for backgrounds a11y color contrast
+  pink: '#FF5C77',
+  blue: '#85A3FF',
 }
 
 const colors = {
@@ -29,6 +33,10 @@ const colors = {
   warning: defaultColors.yellow,
   success: defaultColors.green,
   info: defaultColors.info,
+  textLight: defaultColors.textLight,
+  // used for backgrounds a11y color contrast
+  pink: defaultColors.pink,
+  blue: defaultColors.blue,
 
   modes: {
     dark: {
@@ -47,6 +55,10 @@ const colors = {
       warning: defaultColors.yellow,
       success: defaultColors.green,
       info: defaultColors.info,
+      textLight: defaultColors.textLight,
+      // used for backgrounds a11y color contrast
+      pink: defaultColors.pink,
+      blue: defaultColors.blue,
     },
   },
 }

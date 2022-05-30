@@ -43,6 +43,7 @@ const Case = ({ content }) => {
                     onClick={() =>
                       (window.location.href = `/case/${content.slug.current}`)
                     }
+                    bg="secondary"
                   >
                     Läs mer om {content.company}
                   </Button>

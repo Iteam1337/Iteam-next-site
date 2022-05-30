@@ -22,18 +22,15 @@ const globalStyle = createGlobalStyle`
     padding: 0;
   }
 
-
   a {
-    color: ${({ theme }) => theme.colors.secondary};  
     transition: all 0.3s ease-out;
-    font-weight: 400;
-    &:hover, &:active, &:focus{
-      color: ${({ theme }) => theme.colors.secondary};
-      text-decoration: none;
-      outline: none !important;
+   &:focus-visible {
+      outline: 2px solid ${({ theme }) => theme.colors.secondary} !important;
+      transition: none !important;
     }
-    &:hover {
-      text-decoration: underline;
+    &:hover, active {
+      outline: none !important;
+      text-decoration: none;
     }
   }
 

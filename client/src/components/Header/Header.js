@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import GlobalContext from '../../context/GlobalContext'
 import Offcanvas from '../Offcanvas'
@@ -137,9 +138,11 @@ const Menu = styled.ul`
         padding-bottom: 18px !important;
         padding-left: 18px !important;
         padding-right: 18px !important;
+        margin-left: 9px;
+        margin-right: 9px;
       }
       &:hover {
-        color: ${({ theme }) => theme.colors.primary} !important;
+        text-decoration: none;
       }
     }
   }
@@ -217,7 +220,7 @@ const MenuDropdown = styled.ul`
 
     &:hover {
       > a {
-        color: ${({ theme }) => theme.colors.secondary};
+        color: ${({ theme }) => theme.colors.dark};
         text-decoration: none;
         &::after {
           transform: rotate(0deg);
@@ -263,10 +266,9 @@ const MenuDropdown = styled.ul`
 `
 
 const CrossWrapper = styled.div`
-    position: absolute;
-    top: 11px;
-    right: 24px;
-}
+  position: absolute;
+  top: 11px;
+  right: 24px;
 `
 
 const Header = ({ isDark = false }) => {
@@ -276,6 +278,8 @@ const Header = ({ isDark = false }) => {
 
   const size = useWindowSize()
   const isMobile = size.width < 622
+
+  const router = useRouter();
 
   const toggleMenu = () => {
     gContext.toggleOffCanvas()
@@ -320,6 +324,15 @@ const Header = ({ isDark = false }) => {
     return windowSize
   }
 
+  const getNavLinkStyle = (names) => {
+    for (const name of names) {
+      const regex = new RegExp(name)
+      if (router.pathname.search(regex) === 1) {
+        return { textDecoration: 'underline' }
+      }
+    }
+  }
+
   return (
     <>
       <SiteHeader
@@ -356,6 +369,11 @@ const Header = ({ isDark = false }) => {
                             <li className="nav-item dropdown" {...rest}>
                               <a
                                 className="nav-link dropdown-toggle"
+                                style={getNavLinkStyle([
+                                  'mvp',
+                                  'scaleup',
+                                  'iteamX',
+                                ])}
                                 role="button"
                                 data-toggle="dropdown"
                                 aria-expanded="false"
@@ -433,7 +451,13 @@ const Header = ({ isDark = false }) => {
                                             </a>
                                           ) : (
                                             <Link href={`/${subItem.name}`}>
-                                              <a>{subItem.label}</a>
+                                              <a
+                                                style={getNavLinkStyle([
+                                                  subItem.name,
+                                                ])}
+                                              >
+                                                {subItem.label}
+                                              </a>
                                             </Link>
                                           )}
                                         </li>
@@ -458,6 +482,7 @@ const Header = ({ isDark = false }) => {
                                 <Link href={`/${name}`}>
                                   <a
                                     className="nav-link"
+                                    style={getNavLinkStyle([name])}
                                     role="button"
                                     aria-expanded="false"
                                   >

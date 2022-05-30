@@ -20,14 +20,11 @@ const Card = styled.a`
   &:hover {
     box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
     text-decoration: none;
-    .title {
-      color: ${({ theme }) => theme.colors.info};
-    }
   }
 `
 
 const Location = styled.span`
-  color: #8c97ac;
+  color: ${({ theme }) => theme.colors.dark};
   font-size: 16px;
   font-weight: 300;
   margin-right: 5px;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Gravatar from 'react-gravatar'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Text, Anchor } from '../../components/Core'
 import Link from 'next/link'
 import { formatPhoneNumber, urlFor } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'
@@ -21,15 +21,24 @@ const CardImage = styled.div`
 `
 
 const Wrapper = styled.div`
-  height: 330px;
+  height: auto;
   &:hover {
     cursor: pointer;
-    .image {
-      max-width: 170px;
-      min-width: 170px;
-      min-height: 170px;
-      max-height: 170px;
-    }
+  }
+`
+
+const ContactAnchor = styled(Anchor)`
+  &:hover {
+    text-decoration: none;
+  }
+`
+
+const StyledCol = styled(Col)`
+  &:hover {
+    box-shadow: ${({ theme }) => `0 5px 25px ${theme.colors.shadow}`};
+  }
+  &:focus-within {
+    box-shadow: ${({ theme }) => `0 5px 25px ${theme.colors.shadow}`};
   }
 `
 
@@ -46,63 +55,61 @@ const TeamCard = ({ coworker }) => {
   } = coworker
   return (
     <Box className="text-center" pt="15px" px="30px" borderRadius={10} mb={4}>
-      <Wrapper>
-        <Link href={`/about/${slug.current}`}>
-          <div>
-            <CardImage className="image">
-              {profilePic ? (
-                <img
-                  src={urlFor(profilePic.image.asset._ref)}
-                  alt={`Profilbild på ${fullname}`}
-                  className="img-fluid"
-                  style={{ width: 200, height: 200, objectFit: 'cover' }}
-                />
-              ) : (
-                <Gravatar email={email} className="img-fluid" size={200} />
-              )}
-            </CardImage>
-            <div className="text-center">
-              <Title
-                variant="card"
-                fontSize="24px"
-                letterSpacing={-0.75}
-                my={1}
-              >
-                {fullname}
-              </Title>
-              <Text fontSize={2} lineHeight={1.75}>
-                {status}
-              </Text>
-              <Text fontSize={2} lineHeight={1.75}>
-                {role}
-              </Text>
-            </div>
+      <ContactAnchor href={`/about/${slug.current}`} aria-label={fullname}>
+        <Wrapper>
+          <CardImage className="image">
+            {profilePic ? (
+              <img
+                src={urlFor(profilePic.image.asset._ref)}
+                alt={`Profilbild på ${fullname}`}
+                className="img-fluid"
+                style={{ width: 200, height: 200, objectFit: 'cover' }}
+              />
+            ) : (
+              <Gravatar email={email} className="img-fluid" size={200} />
+            )}
+          </CardImage>
+          <div className="text-center">
+            <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
+              {fullname}
+            </Title>
+            <Text fontSize={2} pt="9px" lineHeight={1.2}>
+              {status}
+            </Text>
+            <Text fontSize={2} pt="6px" pb="9px" lineHeight={1.2}>
+              {role}
+            </Text>
           </div>
-        </Link>
-        <div className="text-center">
-          {phoneNumber && (
-            <a href={`tel:${phoneNumber}`}>
-              <Text fontSize={1} lineHeight={1.25}>
+          <div className="text-center d-flex flex-column">
+            {phoneNumber && (
+              <ContactAnchor
+                href={`tel:${phoneNumber}`}
+                fontSize="14px"
+                lineHeight="1.3"
+              >
                 {formatPhoneNumber(phoneNumber)}
-              </Text>
-            </a>
-          )}
-          {email && (
-            <a href={`mailto:${email}`}>
-              <Text fontSize={1} lineHeight={1.25}>
+              </ContactAnchor>
+            )}
+            {email && (
+              <ContactAnchor
+                href={`mailto:${email}`}
+                fontSize="14px"
+                lineHeight="1.3"
+              >
                 {email}
-              </Text>
-            </a>
-          )}
-          {socialMedia && (
-            <SocialMediaLinks
-              socialMedia={socialMedia}
-              fullname={fullname}
-              color="black"
-            />
-          )}
-        </div>
-      </Wrapper>
+              </ContactAnchor>
+            )}
+            {socialMedia && (
+              <div className="pt-2">
+                <SocialMediaLinks
+                  socialMedia={socialMedia}
+                  fullname={fullname}
+                />
+              </div>
+            )}
+          </div>
+        </Wrapper>
+      </ContactAnchor>
     </Box>
   )
 }
@@ -133,9 +140,15 @@ const Team = ({ content, coworkers }) => {
           </Row>
           <Row className="justify-content-center">
             {sortedTeam.map((coworker, index) => (
-              <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4" key={index}>
+              <StyledCol
+                sm="6"
+                md="5"
+                lg="4"
+                className="mt-3 mt-lg-4"
+                key={index}
+              >
                 <TeamCard coworker={coworker} />
-              </Col>
+              </StyledCol>
             ))}
           </Row>
         </Container>

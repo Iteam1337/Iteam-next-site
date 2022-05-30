@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { Title, Text, Box, Span } from '../Core'
+import { Title, Text, Box, Span, Anchor } from '../Core'
 
 export const CardSidebar = ({ children, ...rest }) => (
   <Box borderRadius="10px" border="1px solid #eae9f2" mb="30px" mt="-15px" p="25px" {...rest}>
@@ -23,11 +23,9 @@ export const TitleSidebar = ({ children, ...rest }) => (
 
 export const TitlePost = ({ link = '/', children, ...rest }) => (
   <Title variant="card" fontSize="16px" mb={0} {...rest}>
-    <Link href={link}>
-      <a>
-        <Span color="black">{children}</Span>
-      </a>
-    </Link>
+    <Anchor href={link}>
+       {children}
+    </Anchor>
   </Title>
 )
 

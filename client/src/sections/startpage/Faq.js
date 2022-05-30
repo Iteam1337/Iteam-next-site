@@ -19,8 +19,8 @@ const FaqCard = styled(Box)`
     min-height: 30px;
     max-height: 30px;
     font-size: 15px;
-    background-color: ${({ theme }) => theme.colors.secondary};
-    color: ${({ theme }) => theme.colors.light};
+    background-color: ${({ theme }) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.dark};
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,6 @@ const FaqCard = styled(Box)`
 const FaqTitle = styled(Title)`
   color: ${({ theme }) => theme.colors.light};
   font-size: 24px;
-  font-weight: 900;
   letter-spacing: -0.75px;
   margin-bottom: 24px;
   line-height: 2rem;
@@ -56,13 +55,12 @@ const Faq = ({ content }) => {
                   <FaqCard>
                     <div>
                       <FaqTitle>{faq.title}</FaqTitle>
-                      <Text variant="small" color="light" opacity={0.7}>
-                        <BlockContent
-                          anchorColor="secondary"
-                          blocks={faq.blockText.blockText}
-                          color="light"
-                        />
-                      </Text>
+                      <BlockContent
+                        anchorColor="light"
+                        blocks={faq.blockText.blockText}
+                        color="light"
+                        variant="subtitle"
+                      />
                     </div>
                   </FaqCard>
                 </Col>

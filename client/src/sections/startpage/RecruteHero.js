@@ -32,7 +32,7 @@ const TextContainer = styled.div`
 
 const TextBg = styled.span`
   display: inline;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0, 0, 0, 0.7);
   padding: 7px;
   white-space: pre-wrap;
   box-decoration-break: clone;
@@ -66,8 +66,7 @@ const RecruteHero = ({ content }) => {
                       margin-top: 20px;
                       width: fit-content;
                     `}
-                    bg="primary"
-                    color="light"
+                    bg="secondary"
                   >
                     {content.link.title}
                   </Button>

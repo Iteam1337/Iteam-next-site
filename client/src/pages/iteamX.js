@@ -62,7 +62,6 @@ const IteamX = ({ data, preview = false }) => {
         {xPage.sectionWithButtonAndTextGrid && (
           <SectionWithButtonAndTextGrid
             content={xPage.sectionWithButtonAndTextGrid}
-            btnStyle="secondary"
             linkTo="sprintMeeting"
           />
         )}

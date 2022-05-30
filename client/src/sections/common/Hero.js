@@ -36,6 +36,14 @@ const SectionStyledImage = styled(Section)`
   background-size: cover;
 `
 
+const TextBg = styled.span`
+  display: inline;
+  background: rgb(0, 0, 0, 0.7);
+  padding: 7px;
+  white-space: pre-wrap;
+  box-decoration-break: clone;
+`
+
 const MediaType = ({ mediaType, children }) => {
   switch (mediaType.type) {
     case 'color':
@@ -104,16 +112,8 @@ const Hero = ({ content, flipTexts = false }) => {
                 >
                   {title}
                 </Title>
-                <Text
-                  color={
-                    mediaType.type === 'image'
-                      ? mediaType.darkGradient
-                        ? 'light'
-                        : 'dark'
-                      : 'dark'
-                  }
-                >
-                  {subtitle}
+                <Text color="light">
+                  <TextBg>{subtitle}</TextBg>
                 </Text>
                 {link && (
                   <Link href={getExternalOrInternalLink(link.link)}>
@@ -122,8 +122,7 @@ const Hero = ({ content, flipTexts = false }) => {
                         margin-top: 20px;
                         width: fit-content;
                       `}
-                      bg="primary"
-                      color="light"
+                      bg="secondary"
                     >
                       {link.title}
                     </Button>

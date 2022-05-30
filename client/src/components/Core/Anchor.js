@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { color, space, typography, shadow, system } from 'styled-system'
+import { space, typography, shadow, system } from 'styled-system'
 
 const Anchor = styled.a`
-  font-weight: 400;
   letter-spacing: -0.5px;
-  line-height: 35px;
-  ${color};
+  color: ${({ color, theme }) =>
+    color == 'light' ? theme.colors.light : theme.colors.dark};
+  text-decoration: none;
   ${space};
   ${typography};
   ${shadow};
@@ -18,16 +18,14 @@ const Anchor = styled.a`
   &:hover,
   &:active,
   &.active {
-    ${color};
+    color: ${({ color, theme }) =>
+      color == 'light' ? theme.colors.light : theme.colors.dark};
     text-decoration: underline;
-  }
-  &:visited {
-    ${color};
   }
 `
 
 const A = ({ href = '#', ...props }) => {
-  return <Anchor href={href} color="secondary" {...props} />
+  return <Anchor href={href} {...props} />
 }
 
 export default A

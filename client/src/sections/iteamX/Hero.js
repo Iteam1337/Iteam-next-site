@@ -39,7 +39,6 @@ const Hero = ({ content }) => {
                           margin-top: 20px;
                           width: fit-content;
                         `}
-                        bg="secondary"
                         color="dark"
                       >
                         {content.link.title}

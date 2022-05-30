@@ -9,8 +9,8 @@ const Paragraph = styled.p`
     variant == 'thin' ? 'normal' : '-0.56px'};
   line-height: ${({ variant }) => (variant == 'thin' ? '2' : '1.4')};
   text-align: ${({ textAlign }) => (textAlign == 'center' ? 'center' : 'left')};
-  color: ${({ color }) =>
-    color == 'light' ? 'rgba(255,255,255, 0.7)' : '#19191b'};
+  color: ${({ color, theme }) =>
+    color == 'light' ? theme.colors.textLight : theme.colors.dark};
 `
 const QuoteParagraph = styled(Paragraph)`
   font-size: 19.5px;
@@ -21,7 +21,7 @@ const H2 = styled.h2`
   font-weight: 600;
   letter-spacing: -1px;
   margin: 36px 0 27px;
-  color: black;
+  color: ${({ theme }) => theme.colors.dark};
   text-align: left;
   line-height: 1.2;
 
@@ -32,7 +32,7 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-size: 20px;
   margin: 36px 0 18px;
-  color: black;
+  color: ${({ theme }) => theme.colors.dark};
   text-align: left;
   font-weight: 700;
   line-height: 1.2;
@@ -48,7 +48,7 @@ const H3 = styled.h3`
 const H4 = styled.h4`
   font-size: 18px;
   margin: 36px 0 27px;
-  color: black;
+  color: ${({ theme }) => theme.colors.dark};
   text-align: left;
   font-weight: 500;
   line-height: 1.2;
@@ -59,8 +59,17 @@ const H4 = styled.h4`
 `
 const Anchor = styled.a`
   color: ${({ color, theme }) =>
-    color === 'secondary' ? theme.colors.secondary : theme.colors.info};
+    color === 'light' ? theme.colors.textLight : theme.colors.dark};
+  text-decoration: underline;
+
+  &:hover,
+  :active {
+    color: ${({ color, theme }) =>
+      color === 'light' ? theme.colors.textLight : theme.colors.dark};
+    text-decoration: none;
+  }
 `
+
 const QuoteMark = styled.div`
   font-size: 2.5rem;
   font-family: Georgia, serif;

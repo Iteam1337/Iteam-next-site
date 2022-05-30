@@ -51,6 +51,7 @@ const SectionWithImageAndButton = ({ content }) => {
                 <Button
                   mt={4}
                   onClick={() => (window.location.href = '#pricing')}
+                  bg="secondary"
                 >
                   {button}
                 </Button>
