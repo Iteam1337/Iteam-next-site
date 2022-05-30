@@ -10,7 +10,7 @@ const Paragraph = styled.p`
   line-height: ${({ variant }) => (variant == 'thin' ? '2' : '1.4')};
   text-align: ${({ textAlign }) => (textAlign == 'center' ? 'center' : 'left')};
   color: ${({ color, theme }) =>
-    color == 'light' ? theme.colors.light : theme.colors.dark};
+    color == 'light' ? theme.colors.textLight : theme.colors.dark};
 `
 const QuoteParagraph = styled(Paragraph)`
   font-size: 19.5px;
@@ -59,13 +59,13 @@ const H4 = styled.h4`
 `
 const Anchor = styled.a`
   color: ${({ color, theme }) =>
-    color === 'light' ? theme.colors.light : theme.colors.dark};
+    color === 'light' ? theme.colors.textLight : theme.colors.dark};
   text-decoration: underline;
 
   &:hover,
   :active {
     color: ${({ color, theme }) =>
-      color === 'light' ? theme.colors.light : theme.colors.dark};
+      color === 'light' ? theme.colors.textLight : theme.colors.dark};
     text-decoration: none;
   }
 `

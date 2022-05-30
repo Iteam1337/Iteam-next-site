@@ -80,7 +80,7 @@ const Canvas = styled.canvas`
 
 const TextBg = styled.span`
   display: inline;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   padding: 7px;
   white-space: pre-wrap;
   box-decoration-break: clone;

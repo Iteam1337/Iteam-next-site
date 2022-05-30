@@ -13,7 +13,7 @@ const Paragraph = styled.p`
   ${typography};
   ${shadow};
   color: ${({ theme, color }) =>
-    color == 'light' ? theme.colors.light : theme.colors.dark};
+    color == 'light' ? theme.colors.textLight : theme.colors.dark};
 `
 
 const ParagraphSmall = styled(Paragraph)`
@@ -24,7 +24,7 @@ const ParagraphSmall = styled(Paragraph)`
   ${typography};
   ${shadow};
   color: ${({ theme, color }) =>
-    color == 'light' ? theme.colors.light : theme.colors.dark};
+    color == 'light' ? theme.colors.textLight : theme.colors.dark};
 `
 
 const Text = ({ variant, color = 'dark', ...props }) => {

@@ -32,7 +32,7 @@ const TextContainer = styled.div`
 
 const TextBg = styled.span`
   display: inline;
-  background: rgb(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0, 0.7);
   padding: 7px;
   white-space: pre-wrap;
   box-decoration-break: clone;
