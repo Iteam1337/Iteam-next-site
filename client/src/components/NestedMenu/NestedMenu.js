@@ -69,7 +69,13 @@ const MenuItem = ({
           className="d-flex align-items-center justify-content-between"
         >
           <span>{label}</span>
-          <span>{open ? <FaAngleDown /> : <FaAngleRight />}</span>
+          <span>
+            {open ? (
+              <FaAngleDown aria-hidden="true" />
+            ) : (
+              <FaAngleRight aria-hidden="true" />
+            )}
+          </span>
         </ListGroup.Item>
       ) : (
         <ListGroup.Item
