@@ -24,13 +24,23 @@ const globalStyle = createGlobalStyle`
 
   a {
     transition: all 0.3s ease-out;
-   &:focus-visible {
+    &:focus-visible {
       outline: 2px solid ${({ theme }) => theme.colors.secondary} !important;
       transition: none !important;
     }
     &:hover, active {
       outline: none !important;
       text-decoration: none;
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    &:focus-visible {
+      outline: 2px solid ${({ theme }) => theme.colors.secondary};
+      outline-offset: 3px;
     }
   }
 
