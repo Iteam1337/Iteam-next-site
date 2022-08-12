@@ -42,6 +42,11 @@ const NestedMenuContainer = styled.div`
   } */
 `
 
+const ExpandButton = styled.button`
+  color: ${({ theme }) => theme.colors.light};
+  margin-top: -4px;
+`
+
 const MenuItem = ({
   label,
   isExternal = false,
@@ -69,7 +74,9 @@ const MenuItem = ({
           className="d-flex align-items-center justify-content-between"
         >
           <span>{label}</span>
-          <span>{open ? <FaAngleDown /> : <FaAngleRight />}</span>
+          <ExpandButton>
+            {open ? <FaAngleDown /> : <FaAngleRight />}
+          </ExpandButton>
         </ListGroup.Item>
       ) : (
         <ListGroup.Item

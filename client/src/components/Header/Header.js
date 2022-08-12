@@ -122,12 +122,9 @@ const Menu = styled.ul`
     display: flex;
     justify-content: flex-end;
   }
-
-  .dropdown-toggle {
-    cursor: pointer;
-  }
   > li {
-    > .nav-link {
+    > a {
+      display: block;
       @media ${device.lg} {
         color: ${({ dark, theme }) =>
           dark ? theme.colors.light : theme.colors.darkShade}!important;
@@ -141,22 +138,49 @@ const Menu = styled.ul`
         margin-left: 9px;
         margin-right: 9px;
       }
-      &:hover {
-        text-decoration: none;
+    }
+    &.primary-dropdown {
+      @media ${device.lg} {
+        position: relative;
+        z-index: 99;
       }
-    }
-  }
-  .nav-item.dropdown {
-    @media ${device.lg} {
-      position: relative;
-      z-index: 99;
-    }
-    &:hover {
-      > .menu-dropdown {
-        @media ${device.lg} {
-          top: 90%;
-          opacity: 1;
-          pointer-events: visible;
+      & > a {
+        &::after {
+          display: inline-block;
+          vertical-align: 0.255em;
+          content: '';
+          border-top: 0.325em solid;
+          border-right: 0.325em solid transparent;
+          border-bottom: 0;
+          border-left: 0.325em solid transparent;
+          position: relative;
+          top: 1px;
+          margin-left: auto;
+          transform: rotate(-90deg);
+          transition: 0.4s;
+          margin-left: 0.5rem;
+        }
+        &:hover {
+          &::after {
+            @media screen and (prefers-reduced-motion: no-preference) {
+              transform: rotate(0deg);
+            }
+          }
+        }
+      }
+      &:hover,
+      &:focus-within {
+        > .menu-dropdown {
+          @media ${device.lg} {
+            top: 90%;
+            opacity: 1;
+            pointer-events: visible;
+          }
+        }
+        &::after {
+          @media screen and (prefers-reduced-motion: no-preference) {
+            transform: rotate(90deg);
+          }
         }
       }
     }
@@ -177,16 +201,20 @@ const MenuDropdown = styled.ul`
     padding: 15px 0px;
     z-index: 99;
     opacity: 0;
-    transition: opacity 0.4s, top 0.4s;
+    transition: none;
     pointer-events: none;
-    left: -90%;
+    left: auto;
+    right: -60%;
     border-radius: 0 0 10px 10px;
     border: 1px solid #eae9f2;
     background-color: #ffffff;
     display: block;
     border-top: ${({ theme }) => `3px solid ${theme.colors.secondary}`};
   }
-  > .drop-menu-item {
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.4s, top 0.4s;
+  }
+  > li {
     color: '${({ theme }) => theme.colors.dark}';
     font-size: 16px;
     font-weight: 300;
@@ -195,41 +223,39 @@ const MenuDropdown = styled.ul`
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-
     a {
       color: ${({ theme }) => theme.colors.dark};
       transition: all 0.3s ease-out;
       position: relative;
       display: flex;
       align-items: center;
-      &.dropdown-toggle::after {
-        display: inline-block;
-        vertical-align: 0.255em;
-        content: '';
-        border-top: 0.325em solid;
-        border-right: 0.325em solid transparent;
-        border-bottom: 0;
-        border-left: 0.325em solid transparent;
-        position: relative;
-        top: 1px;
-        margin-left: auto;
-        transform: rotate(-90deg);
-        transition: 0.4s;
-      }
     }
-
-    &:hover {
-      > a {
-        color: ${({ theme }) => theme.colors.dark};
-        text-decoration: none;
+    &.secondary-dropdown {
+      position: relative;
+      & > a {
         &::after {
-          transform: rotate(0deg);
+          display: inline-block;
+          vertical-align: 0.255em;
+          content: '';
+          border-top: 0.325em solid;
+          border-right: 0.325em solid transparent;
+          border-bottom: 0;
+          border-left: 0.325em solid transparent;
+          position: relative;
+          top: 1px;
+          margin-left: auto;
+          transform: rotate(-90deg);
+          transition: 0.4s;
+          margin-left: 0.5rem;
+        }
+        &:hover {
+          &::after {
+            @media screen and (prefers-reduced-motion: no-preference) {
+              transform: rotate(0deg);
+            }
+          }
         }
       }
-    }
-    &.dropdown {
-      position: relative;
-
       &:hover {
         > .menu-dropdown {
           @media ${device.lg} {
@@ -250,7 +276,7 @@ const MenuDropdown = styled.ul`
           transition: 0.4s;
           pointer-events: none;
         }
-        > .drop-menu-item {
+        > li {
           @media ${device.lg} {
             padding-left: 30px;
             padding-right: 30px;
@@ -259,16 +285,17 @@ const MenuDropdown = styled.ul`
       }
     }
   }
-  &.dropdown-right {
-    left: auto;
-    right: -90%;
-  }
 `
 
-const CrossWrapper = styled.div`
+const CrossWrapper = styled.button`
   position: absolute;
   top: 11px;
   right: 24px;
+
+  background: none;
+  color: ${({ theme }) => theme.colors.light};
+  border: none;
+  padding: 0;
 `
 
 const Header = ({ isDark = false }) => {
@@ -279,7 +306,7 @@ const Header = ({ isDark = false }) => {
   const size = useWindowSize()
   const isMobile = size.width < 622
 
-  const router = useRouter();
+  const router = useRouter()
 
   const toggleMenu = () => {
     gContext.toggleOffCanvas()
@@ -366,9 +393,8 @@ const Header = ({ isDark = false }) => {
                       return (
                         <React.Fragment key={name + index}>
                           {hasSubItems ? (
-                            <li className="nav-item dropdown" {...rest}>
+                            <li className="primary-dropdown" {...rest}>
                               <a
-                                className="nav-link dropdown-toggle"
                                 style={getNavLinkStyle([
                                   'mvp',
                                   'scaleup',
@@ -383,7 +409,7 @@ const Header = ({ isDark = false }) => {
                                 {label}
                               </a>
                               <MenuDropdown
-                                className="menu-dropdown dropdown-right"
+                                className="menu-dropdown"
                                 dark={isDark ? 1 : 0}
                               >
                                 {items.map((subItem, indexSub) => {
@@ -395,25 +421,22 @@ const Header = ({ isDark = false }) => {
                                       key={subItem.name + indexSub}
                                     >
                                       {hasInnerSubItems ? (
-                                        <li className="drop-menu-item dropdown">
+                                        <li className="secondary-dropdown">
                                           <a
-                                            className="dropdown-toggle"
                                             role="button"
                                             data-toggle="dropdown"
-                                            aria-expanded="false"
                                             href="/#"
                                             onClick={(e) => e.preventDefault()}
                                           >
                                             {subItem.label}
                                           </a>
                                           <MenuDropdown
-                                            className="menu-dropdown dropdown-right"
+                                            className="menu-dropdown"
                                             dark={isDark ? 1 : 0}
                                           >
                                             {subItem.items.map(
                                               (itemInner, indexInnerMost) => (
                                                 <li
-                                                  className="drop-menu-item"
                                                   key={
                                                     itemInner.name +
                                                     indexInnerMost
@@ -440,7 +463,7 @@ const Header = ({ isDark = false }) => {
                                           </MenuDropdown>
                                         </li>
                                       ) : (
-                                        <li className="drop-menu-item">
+                                        <li>
                                           {subItem.isExternal ? (
                                             <a
                                               href={`${subItem.name}`}
@@ -468,10 +491,9 @@ const Header = ({ isDark = false }) => {
                               </MenuDropdown>
                             </li>
                           ) : (
-                            <li className="nav-item" {...rest}>
+                            <li {...rest}>
                               {isExternal ? (
                                 <a
-                                  className="nav-link"
                                   href={`${name}`}
                                   target="_blank"
                                   rel="noopener noreferrer"
@@ -481,7 +503,6 @@ const Header = ({ isDark = false }) => {
                               ) : (
                                 <Link href={`/${name}`}>
                                   <a
-                                    className="nav-link"
                                     style={getNavLinkStyle([name])}
                                     role="button"
                                     aria-expanded="false"

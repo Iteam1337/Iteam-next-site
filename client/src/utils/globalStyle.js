@@ -42,6 +42,9 @@ const globalStyle = createGlobalStyle`
       outline: 2px solid ${({ theme }) => theme.colors.secondary};
       outline-offset: 3px;
     }
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
   }
 
     input::-webkit-outer-spin-button,
