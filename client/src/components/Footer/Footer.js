@@ -95,26 +95,58 @@ const Footer = ({ isDark = true, content }) => {
                     </TitleStyled>
                     <UlStyled color={isDark ? 'light' : 'dark'}>
                       <li>
-                        <a href={content.linkedinLink} target="_blank">
-                          <i className="icon icon-logo-linkedin"></i>&nbsp;
+                        <a
+                          href={content.linkedinLink}
+                          target="_blank"
+                          aria-label="Linkedin"
+                        >
+                          <i
+                            className="icon icon-logo-linkedin"
+                            aria-hidden="true"
+                          ></i>
+                          &nbsp;
                           {content.linkedin}
                         </a>
                       </li>
                       <li>
-                        <a href={content.twitterLink} target="_blank">
-                          <i className="icon icon-logo-twitter"></i>&nbsp;
+                        <a
+                          href={content.twitterLink}
+                          target="_blank"
+                          aria-label="Twitter"
+                        >
+                          <i
+                            className="icon icon-logo-twitter"
+                            aria-hidden="true"
+                          ></i>
+                          &nbsp;
                           {content.twitter}
                         </a>
                       </li>
                       <li>
-                        <a href={content.facebookLink} target="_blank">
-                          <i className="icon icon-logo-facebook"></i>&nbsp;
+                        <a
+                          href={content.facebookLink}
+                          target="_blank"
+                          aria-label="Facebook"
+                        >
+                          <i
+                            className="icon icon-logo-facebook"
+                            aria-hidden="true"
+                          ></i>
+                          &nbsp;
                           {content.facebook}
                         </a>
                       </li>
                       <li>
-                        <a href={content.instagramLink} target="_blank">
-                          <i className="icon icon-logo-instagram"></i>&nbsp;
+                        <a
+                          href={content.instagramLink}
+                          target="_blank"
+                          aria-label="Instagram"
+                        >
+                          <i
+                            className="icon icon-logo-instagram"
+                            aria-hidden="true"
+                          ></i>
+                          &nbsp;
                           {content.instagram}
                         </a>
                       </li>
@@ -186,23 +218,51 @@ const Footer = ({ isDark = true, content }) => {
             <Col sm="6" className="text-sm-right text-center">
               <ul className="social-icons">
                 <li>
-                  <a href={content.linkedinLink} target="_blank">
-                    <i className="icon icon-logo-linkedin"></i>
+                  <a
+                    href={content.linkedinLink}
+                    target="_blank"
+                    aria-label="Linkedin"
+                  >
+                    <i
+                      className="icon icon-logo-linkedin"
+                      aria-hidden="true"
+                    ></i>
                   </a>
                 </li>
                 <li>
-                  <a href={content.twitterLink} target="_blank">
-                    <i className="icon icon-logo-twitter"></i>
+                  <a
+                    href={content.twitterLink}
+                    target="_blank"
+                    aria-label="Twitter"
+                  >
+                    <i
+                      className="icon icon-logo-twitter"
+                      aria-hidden="true"
+                    ></i>
                   </a>
                 </li>
                 <li>
-                  <a href={content.facebookLink} target="_blank">
-                    <i className="icon icon-logo-facebook"></i>
+                  <a
+                    href={content.facebookLink}
+                    target="_blank"
+                    aria-label="Facebook"
+                  >
+                    <i
+                      className="icon icon-logo-facebook"
+                      aria-hidden="true"
+                    ></i>
                   </a>
                 </li>
                 <li>
-                  <a href={content.instagramLink} target="_blank">
-                    <i className="icon icon-logo-instagram"></i>
+                  <a
+                    href={content.instagramLink}
+                    target="_blank"
+                    aria-label="Instagram"
+                  >
+                    <i
+                      className="icon icon-logo-instagram"
+                      aria-hidden="true"
+                    ></i>
                   </a>
                 </li>
               </ul>

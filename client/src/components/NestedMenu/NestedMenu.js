@@ -74,8 +74,12 @@ const MenuItem = ({
           className="d-flex align-items-center justify-content-between"
         >
           <span>{label}</span>
-          <ExpandButton>
-            {open ? <FaAngleDown /> : <FaAngleRight />}
+          <ExpandButton aria-label={open ? 'Dölj undermeny' : 'Visa undermeny'}>
+            {open ? (
+              <FaAngleDown aria-hidden="true" />
+            ) : (
+              <FaAngleRight aria-hidden="true" />
+            )}
           </ExpandButton>
         </ListGroup.Item>
       ) : (
