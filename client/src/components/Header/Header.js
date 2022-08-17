@@ -139,7 +139,7 @@ const Menu = styled.ul`
         margin-right: 9px;
       }
     }
-    &.primary-dropdown {
+    &.with-dropdown {
       @media ${device.lg} {
         position: relative;
         z-index: 99;
@@ -156,30 +156,12 @@ const Menu = styled.ul`
           position: relative;
           top: 1px;
           margin-left: auto;
-          transform: rotate(-90deg);
-          transition: 0.4s;
+          transform: ${({ open }) =>
+            open ? 'rotate(0deg)' : 'rotate(-90deg)'};
           margin-left: 0.5rem;
-        }
-        &:hover {
-          &::after {
-            @media screen and (prefers-reduced-motion: no-preference) {
-              transform: rotate(0deg);
-            }
-          }
-        }
-      }
-      &:hover,
-      &:focus-within {
-        > .menu-dropdown {
-          @media ${device.lg} {
-            top: 90%;
-            opacity: 1;
-            pointer-events: visible;
-          }
-        }
-        &::after {
+
           @media screen and (prefers-reduced-motion: no-preference) {
-            transform: rotate(90deg);
+            transition: 0.4s;
           }
         }
       }
@@ -187,10 +169,10 @@ const Menu = styled.ul`
   }
 `
 
-const MenuDropdown = styled.ul`
+const DropdownMenu = styled.ul`
   list-style: none;
   @media ${device.lg} {
-    top: 110%;
+    top: ${({ open }) => (open ? '116%' : '110%')};
     position: absolute;
     min-width: 227px;
     max-width: 227px;
@@ -200,11 +182,11 @@ const MenuDropdown = styled.ul`
     background-color: #ffffff;
     padding: 15px 0px;
     z-index: 99;
-    opacity: 0;
+    opacity: ${({ open }) => (open ? '1' : '0')};
     transition: none;
-    pointer-events: none;
+    pointer-events: ${({ open }) => (open ? 'visible' : 'none')};
     left: auto;
-    right: -60%;
+    right: -56%;
     border-radius: 0 0 10px 10px;
     border: 1px solid #eae9f2;
     background-color: #ffffff;
@@ -230,60 +212,6 @@ const MenuDropdown = styled.ul`
       display: flex;
       align-items: center;
     }
-    &.secondary-dropdown {
-      position: relative;
-      & > a {
-        &::after {
-          display: inline-block;
-          vertical-align: 0.255em;
-          content: '';
-          border-top: 0.325em solid;
-          border-right: 0.325em solid transparent;
-          border-bottom: 0;
-          border-left: 0.325em solid transparent;
-          position: relative;
-          top: 1px;
-          margin-left: auto;
-          transform: rotate(-90deg);
-          transition: 0.4s;
-          margin-left: 0.5rem;
-        }
-        &:hover {
-          &::after {
-            @media screen and (prefers-reduced-motion: no-preference) {
-              transform: rotate(0deg);
-            }
-          }
-        }
-      }
-      &:hover {
-        > .menu-dropdown {
-          @media ${device.lg} {
-            top: 10px;
-            opacity: 1;
-            pointer-events: visible;
-            transform: translateX(-100%);
-          }
-        }
-      }
-      > .menu-dropdown {
-        border-top-color: ${({ theme }) => theme.colors.primary};
-        @media ${device.lg} {
-          top: 10px;
-          left: 0%;
-          opacity: 0;
-          transform: translateX(-110%);
-          transition: 0.4s;
-          pointer-events: none;
-        }
-        > li {
-          @media ${device.lg} {
-            padding-left: 30px;
-            padding-right: 30px;
-          }
-        }
-      }
-    }
   }
 `
 
@@ -302,6 +230,7 @@ const Header = ({ isDark = false }) => {
   const gContext = useContext(GlobalContext)
   const [showScrolling, setShowScrolling] = useState(false)
   const [showReveal, setShowReveal] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const size = useWindowSize()
   const isMobile = size.width < 622
@@ -316,6 +245,7 @@ const Header = ({ isDark = false }) => {
   useScrollPosition(({ prevPos, currPos }) => {
     if (currPos.y < 0) {
       setShowScrolling(true)
+      setOpen(false)
     } else {
       setShowScrolling(false)
     }
@@ -383,6 +313,8 @@ const Header = ({ isDark = false }) => {
                 <Menu
                   className="navbar-nav d-none d-lg-flex"
                   dark={isDark ? 1 : 0}
+                  setShowScrolling
+                  open={open}
                 >
                   {menuItems.map(
                     (
@@ -393,7 +325,7 @@ const Header = ({ isDark = false }) => {
                       return (
                         <React.Fragment key={name + index}>
                           {hasSubItems ? (
-                            <li className="primary-dropdown" {...rest}>
+                            <li className="with-dropdown" {...rest}>
                               <a
                                 style={getNavLinkStyle([
                                   'mvp',
@@ -404,91 +336,47 @@ const Header = ({ isDark = false }) => {
                                 data-toggle="dropdown"
                                 aria-expanded="false"
                                 href="/#"
-                                onClick={(e) => e.preventDefault()}
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  setOpen(!open)
+                                }}
                               >
                                 {label}
                               </a>
-                              <MenuDropdown
-                                className="menu-dropdown"
-                                dark={isDark ? 1 : 0}
-                              >
+                              <DropdownMenu dark={isDark ? 1 : 0} open={open}>
                                 {items.map((subItem, indexSub) => {
-                                  const hasInnerSubItems = Array.isArray(
-                                    subItem.items
-                                  )
                                   return (
                                     <React.Fragment
                                       key={subItem.name + indexSub}
                                     >
-                                      {hasInnerSubItems ? (
-                                        <li className="secondary-dropdown">
+                                      <li>
+                                        {subItem.isExternal ? (
                                           <a
-                                            role="button"
-                                            data-toggle="dropdown"
-                                            href="/#"
-                                            onClick={(e) => e.preventDefault()}
+                                            href={`${subItem.name}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                           >
                                             {subItem.label}
                                           </a>
-                                          <MenuDropdown
-                                            className="menu-dropdown"
-                                            dark={isDark ? 1 : 0}
-                                          >
-                                            {subItem.items.map(
-                                              (itemInner, indexInnerMost) => (
-                                                <li
-                                                  key={
-                                                    itemInner.name +
-                                                    indexInnerMost
-                                                  }
-                                                >
-                                                  {itemInner.isExternal ? (
-                                                    <a
-                                                      href={`${itemInner.name}`}
-                                                      target="_blank"
-                                                      rel="noopener noreferrer"
-                                                    >
-                                                      {itemInner.label}
-                                                    </a>
-                                                  ) : (
-                                                    <Link
-                                                      href={`/${itemInner.name}`}
-                                                    >
-                                                      <a>{itemInner.label}</a>
-                                                    </Link>
-                                                  )}
-                                                </li>
-                                              )
-                                            )}
-                                          </MenuDropdown>
-                                        </li>
-                                      ) : (
-                                        <li>
-                                          {subItem.isExternal ? (
+                                        ) : (
+                                          <Link href={`/${subItem.name}`}>
                                             <a
-                                              href={`${subItem.name}`}
-                                              target="_blank"
-                                              rel="noopener noreferrer"
+                                              style={getNavLinkStyle([
+                                                subItem.name,
+                                              ])}
+                                              onClick={(e) => {
+                                                setOpen(!open)
+                                              }}
                                             >
                                               {subItem.label}
                                             </a>
-                                          ) : (
-                                            <Link href={`/${subItem.name}`}>
-                                              <a
-                                                style={getNavLinkStyle([
-                                                  subItem.name,
-                                                ])}
-                                              >
-                                                {subItem.label}
-                                              </a>
-                                            </Link>
-                                          )}
-                                        </li>
-                                      )}
+                                          </Link>
+                                        )}
+                                      </li>
                                     </React.Fragment>
                                   )
                                 })}
-                              </MenuDropdown>
+                              </DropdownMenu>
                             </li>
                           ) : (
                             <li {...rest}>
@@ -506,6 +394,9 @@ const Header = ({ isDark = false }) => {
                                     style={getNavLinkStyle([name])}
                                     role="button"
                                     aria-expanded="false"
+                                    onClick={(e) => {
+                                      setOpen(false)
+                                    }}
                                   >
                                     {label}
                                   </a>
