@@ -3,7 +3,6 @@ import { createGlobalStyle } from 'styled-components'
 const globalStyle = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.colors.bg} !important;
-
     color: ${({ theme }) => theme.colors.text} !important;
   }
 
@@ -28,7 +27,7 @@ const globalStyle = createGlobalStyle`
       outline: 2px solid ${({ theme }) => theme.colors.secondary} !important;
       transition: none !important;
     }
-    &:hover, active {
+    &:hover {
       outline: none !important;
       text-decoration: none;
     }
