@@ -72,7 +72,7 @@ const Mvp = ({ data, preview = false }) => {
       {mvpPage?.sectionWithImage && (
         <SectionWithImage content={mvpPage.sectionWithImage} />
       )}
-      <Testimonial content={data.carousel} />
+      <Testimonial bg content={data.carousel} />
       <CTA />
     </PageWrapper>
   )
