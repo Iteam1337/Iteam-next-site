@@ -31,6 +31,11 @@ const HubspotForm = ({
       'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
     script.async = true
     document.body.appendChild(script)
+    script.addEventListener('load', () =>
+      document
+        .querySelector('iframe')
+        .setAttribute('title', 'Boka intromöte direkt i kalendern')
+    )
   }, [])
 
   return (
