@@ -4,17 +4,17 @@ import {
   SectionWithButtonAndTextGrid,
   SectionWithImage,
   TextWithTags,
+  Testimonial,
+  Hero,
 } from '../sections/common'
 import Role from '../sections/scaleup/Role'
 import SectionWithImageAndButton from '../sections/scaleup/SectionWithImageAndButton'
 import Case from '../sections/scaleup/Case'
-import { Testimonial } from '../sections/common'
 import CTA from '../sections/scaleup/CTA'
 import { groq } from 'next-sanity'
 import { getClient } from '../lib/sanity.server'
 import { filterDataToSingleItem } from '../utils/helpers'
 import { usePreviewSubscription } from '../lib/sanity'
-import { Hero } from '../sections/common'
 import { NextSeo } from 'next-seo'
 import { urlFor } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'
