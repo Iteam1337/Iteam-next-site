@@ -33,8 +33,10 @@ const Drawer = styled.div`
   overflow-y: auto;
   transform: translateX(0);
   transition: all 0.15s ease-out;
+  visibility: visible;
   &.hidden {
     transform: translateX(-100%);
+    visibility: hidden;
   }
   .dropdown-menu {
     position: static !important;

@@ -172,6 +172,7 @@ const Menu = styled.ul`
 const DropdownMenu = styled.ul`
   list-style: none;
   @media ${device.lg} {
+    visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
     top: ${({ open }) => (open ? '116%' : '110%')};
     position: absolute;
     min-width: 227px;
