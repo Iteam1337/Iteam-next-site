@@ -27,7 +27,9 @@ const SiteHeader = styled.header`
   transition: 0.4s;
   &.scrolling {
     transform: translateY(-100%);
-    transition: 0.4s;
+    @media screen and (prefers-reduced-motion: no-preference) {
+      transition: 0.4s;
+    }
   }
   &.reveal-header {
     transform: translateY(0%);
@@ -220,7 +222,6 @@ const CloseMenuButton = styled.button`
   position: absolute;
   top: 11px;
   right: 24px;
-
   background: none;
   color: ${({ theme }) => theme.colors.light};
   border: none;
