@@ -72,205 +72,212 @@ const PrivacyAnchor = styled(Anchor)`
 
 const Footer = ({ isDark = true, content }) => {
   return (
-    <Box bg={isDark ? 'dark' : 'light'}>
-      <Container>
-        <Box
-          css={`
-            padding: 80px 0 60px;
-          `}
-        >
-          <Row className="justify-content-center">
-            <Col lg="2" md="4">
-              <Logo white={isDark} vertical />
-            </Col>
-            <Col lg="10" md="8" className="mt-5 mt-lg-0">
-              <Row>
-                <Col xs="6" lg="3">
-                  <div className="mb-5 mb-lg-4">
-                    <TitleStyled
-                      variant="card"
-                      color={isDark ? 'light' : 'dark'}
+    <footer>
+      <Box bg={isDark ? 'dark' : 'light'}>
+        <Container>
+          <Box
+            css={`
+              padding: 80px 0 60px;
+            `}
+          >
+            <Row className="justify-content-center">
+              <Col lg="2" md="4">
+                <Logo white={isDark} vertical />
+              </Col>
+              <Col lg="10" md="8" className="mt-5 mt-lg-0">
+                <Row>
+                  <Col xs="6" lg="3">
+                    <div className="mb-5 mb-lg-4">
+                      <TitleStyled
+                        variant="card"
+                        color={isDark ? 'light' : 'dark'}
+                      >
+                        {content.follow}
+                      </TitleStyled>
+                      <UlStyled color={isDark ? 'light' : 'dark'}>
+                        <li>
+                          <a
+                            href={content.linkedinLink}
+                            target="_blank"
+                            aria-label="Linkedin"
+                          >
+                            <i
+                              className="icon icon-logo-linkedin"
+                              aria-hidden="true"
+                            ></i>
+                            &nbsp;
+                            {content.linkedin}
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href={content.twitterLink}
+                            target="_blank"
+                            aria-label="Twitter"
+                          >
+                            <i
+                              className="icon icon-logo-twitter"
+                              aria-hidden="true"
+                            ></i>
+                            &nbsp;
+                            {content.twitter}
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href={content.facebookLink}
+                            target="_blank"
+                            aria-label="Facebook"
+                          >
+                            <i
+                              className="icon icon-logo-facebook"
+                              aria-hidden="true"
+                            ></i>
+                            &nbsp;
+                            {content.facebook}
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href={content.instagramLink}
+                            target="_blank"
+                            aria-label="Instagram"
+                          >
+                            <i
+                              className="icon icon-logo-instagram"
+                              aria-hidden="true"
+                            ></i>
+                            &nbsp;
+                            {content.instagram}
+                          </a>
+                        </li>
+                      </UlStyled>
+                    </div>
+                  </Col>
+                  <Col xs="6" lg="3">
+                    <div className="mb-5 mb-lg-4">
+                      <TitleStyled
+                        variant="card"
+                        color={isDark ? 'light' : 'dark'}
+                      >
+                        {content.visitUs}
+                        <br />
+                      </TitleStyled>
+                      <UlStyled color={isDark ? 'light' : 'dark'}>
+                        <li>
+                          <a href={content.addressLink} target="_blank">
+                            {content.address}
+                          </a>
+                        </li>
+                        <li>
+                          <a href={content.org}>{content.orgNumber}</a>
+                        </li>
+                      </UlStyled>
+                    </div>
+                  </Col>
+                  <Col xs="6" lg="3">
+                    <div className="mb-lg-4">
+                      <TitleStyled
+                        variant="card"
+                        color={isDark ? 'light' : 'dark'}
+                      >
+                        {content.contact}
+                      </TitleStyled>
+                      <UlStyled color={isDark ? 'light' : 'dark'}>
+                        <li>
+                          <a href={content.contactLink}>
+                            {content.contactTitle}
+                          </a>
+                        </li>
+                        <li>
+                          <a href={content.applyForJobLink}>
+                            {content.applyForJob}
+                          </a>
+                        </li>
+                        <li>
+                          <a href={`mailto:${content.mailToApplyJob}`}>
+                            {content.applyJob}
+                          </a>
+                        </li>
+                      </UlStyled>
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Box>
+          <CopyRightArea dark={isDark ? 1 : 0}>
+            <Row className="align-items-center">
+              <Col
+                sm="6"
+                display="flex"
+                className="text-sm-left text-center mb-2 mb-sm-0"
+              >
+                <p>&copy; 2021 Iteam, All Rights Reserved.</p>
+                <PrivacyAnchor
+                  color={isDark ? 'light' : 'dark'}
+                  href="/privacy"
+                >
+                  Our privacy policy.
+                </PrivacyAnchor>
+              </Col>
+              <Col sm="6" className="text-sm-right text-center">
+                <ul className="social-icons">
+                  <li>
+                    <a
+                      href={content.linkedinLink}
+                      target="_blank"
+                      aria-label="Linkedin"
                     >
-                      {content.follow}
-                    </TitleStyled>
-                    <UlStyled color={isDark ? 'light' : 'dark'}>
-                      <li>
-                        <a
-                          href={content.linkedinLink}
-                          target="_blank"
-                          aria-label="Linkedin"
-                        >
-                          <i
-                            className="icon icon-logo-linkedin"
-                            aria-hidden="true"
-                          ></i>
-                          &nbsp;
-                          {content.linkedin}
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href={content.twitterLink}
-                          target="_blank"
-                          aria-label="Twitter"
-                        >
-                          <i
-                            className="icon icon-logo-twitter"
-                            aria-hidden="true"
-                          ></i>
-                          &nbsp;
-                          {content.twitter}
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href={content.facebookLink}
-                          target="_blank"
-                          aria-label="Facebook"
-                        >
-                          <i
-                            className="icon icon-logo-facebook"
-                            aria-hidden="true"
-                          ></i>
-                          &nbsp;
-                          {content.facebook}
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href={content.instagramLink}
-                          target="_blank"
-                          aria-label="Instagram"
-                        >
-                          <i
-                            className="icon icon-logo-instagram"
-                            aria-hidden="true"
-                          ></i>
-                          &nbsp;
-                          {content.instagram}
-                        </a>
-                      </li>
-                    </UlStyled>
-                  </div>
-                </Col>
-                <Col xs="6" lg="3">
-                  <div className="mb-5 mb-lg-4">
-                    <TitleStyled
-                      variant="card"
-                      color={isDark ? 'light' : 'dark'}
+                      <i
+                        className="icon icon-logo-linkedin"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={content.twitterLink}
+                      target="_blank"
+                      aria-label="Twitter"
                     >
-                      {content.visitUs}
-                      <br />
-                    </TitleStyled>
-                    <UlStyled color={isDark ? 'light' : 'dark'}>
-                      <li>
-                        <a href={content.addressLink} target="_blank">
-                          {content.address}
-                        </a>
-                      </li>
-                      <li>
-                        <a href={content.org}>{content.orgNumber}</a>
-                      </li>
-                    </UlStyled>
-                  </div>
-                </Col>
-                <Col xs="6" lg="3">
-                  <div className="mb-lg-4">
-                    <TitleStyled
-                      variant="card"
-                      color={isDark ? 'light' : 'dark'}
+                      <i
+                        className="icon icon-logo-twitter"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={content.facebookLink}
+                      target="_blank"
+                      aria-label="Facebook"
                     >
-                      {content.contact}
-                    </TitleStyled>
-                    <UlStyled color={isDark ? 'light' : 'dark'}>
-                      <li>
-                        <a href={content.contactLink}>{content.contactTitle}</a>
-                      </li>
-                      <li>
-                        <a href={content.applyForJobLink}>
-                          {content.applyForJob}
-                        </a>
-                      </li>
-                      <li>
-                        <a href={`mailto:${content.mailToApplyJob}`}>
-                          {content.applyJob}
-                        </a>
-                      </li>
-                    </UlStyled>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Box>
-        <CopyRightArea dark={isDark ? 1 : 0}>
-          <Row className="align-items-center">
-            <Col
-              sm="6"
-              display="flex"
-              className="text-sm-left text-center mb-2 mb-sm-0"
-            >
-              <p>&copy; 2021 Iteam, All Rights Reserved.</p>
-              <PrivacyAnchor color={isDark ? 'light' : 'dark'} href="/privacy">
-                Our privacy policy.
-              </PrivacyAnchor>
-            </Col>
-            <Col sm="6" className="text-sm-right text-center">
-              <ul className="social-icons">
-                <li>
-                  <a
-                    href={content.linkedinLink}
-                    target="_blank"
-                    aria-label="Linkedin"
-                  >
-                    <i
-                      className="icon icon-logo-linkedin"
-                      aria-hidden="true"
-                    ></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={content.twitterLink}
-                    target="_blank"
-                    aria-label="Twitter"
-                  >
-                    <i
-                      className="icon icon-logo-twitter"
-                      aria-hidden="true"
-                    ></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={content.facebookLink}
-                    target="_blank"
-                    aria-label="Facebook"
-                  >
-                    <i
-                      className="icon icon-logo-facebook"
-                      aria-hidden="true"
-                    ></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={content.instagramLink}
-                    target="_blank"
-                    aria-label="Instagram"
-                  >
-                    <i
-                      className="icon icon-logo-instagram"
-                      aria-hidden="true"
-                    ></i>
-                  </a>
-                </li>
-              </ul>
-            </Col>
-          </Row>
-        </CopyRightArea>
-      </Container>
-    </Box>
+                      <i
+                        className="icon icon-logo-facebook"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={content.instagramLink}
+                      target="_blank"
+                      aria-label="Instagram"
+                    >
+                      <i
+                        className="icon icon-logo-instagram"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </li>
+                </ul>
+              </Col>
+            </Row>
+          </CopyRightArea>
+        </Container>
+      </Box>
+    </footer>
   )
 }
 
