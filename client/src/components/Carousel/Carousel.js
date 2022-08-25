@@ -227,11 +227,7 @@ const Coworker = ({ item, active }) => {
           </Title>
           <Text variant="small">{item.role}</Text>
           {active && (
-            <Anchor
-              tabIndex={active && '-1'}
-              aria-hidden={active && 'true'}
-              href={`/about/${item.slug.current}`}
-            >
+            <Anchor href={`/about/${item.slug.current}`}>
               <Span>Läs mer…</Span>
             </Anchor>
           )}
