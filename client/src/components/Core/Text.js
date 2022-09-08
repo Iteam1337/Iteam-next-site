@@ -1,44 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
-import { color, space, typography, shadow } from 'styled-system'
 
-const Paragraph = styled.p`
-  margin-bottom: 0;
-  font-size: 21px;
-  font-weight: 300;
-  letter-spacing: normal;
-  line-height: 38px;
-  ${color};
-  ${space};
-  ${typography};
-  ${shadow};
-  color: ${({ theme, color }) =>
-    color == 'light' ? theme.colors.textLight : theme.colors.dark};
-`
-
-const ParagraphSmall = styled(Paragraph)`
-  font-size: 16px;
-  line-height: 28px;
-  ${color};
-  ${space};
-  ${typography};
-  ${shadow};
-  color: ${({ theme, color }) =>
-    color == 'light' ? theme.colors.textLight : theme.colors.dark};
-`
-
-const Text = ({ variant, color = 'dark', ...props }) => {
-  let TextRender
-
-  switch (variant) {
-    case 'small':
-      TextRender = ParagraphSmall
-      break
-    default:
-      TextRender = Paragraph
-  }
-
-  return <TextRender color={color} {...props} />
+const Text = ({ children, variant, color }) => {
+  return (
+    <p
+      className={`tw-mb-0 tw-font-light tw-tracking-normal ${
+        color === 'light' ? 'tw-text-gray-light' : 'tw-text-gray-dark'
+      } ${
+        variant === 'small'
+          ? 'tw-text-base tw-leading-7'
+          : 'tw-text-xl tw-leading-8'
+      }`}
+    >
+      {children}
+    </p>
+  )
 }
 
 export default Text
