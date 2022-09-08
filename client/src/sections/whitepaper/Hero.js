@@ -175,7 +175,7 @@ const Hero = () => {
                     </Button>
                     <div ref={form}></div>
 
-                    <Text fontSize={'18px'} color="ash" fontWeight={500}>
+                    <Text>
                       Osäker?{' '}
                       <a href="/" target="blank">
                         <Span color="secondary">Ladda ner förhandsvisning</Span>
@@ -207,10 +207,12 @@ const Hero = () => {
                   data-aos-delay="500"
                   data-aos-once="true"
                 >
-                  <Text color="dark" className="font-italic">
-                    “OMG! I cannot believe that I have got a brand new landing
-                    page after getting Omega. It was super easy to edit and
-                    publish.”
+                  <Text>
+                    <i>
+                      “OMG! I cannot believe that I have got a brand new landing
+                      page after getting Omega. It was super easy to edit and
+                      publish.”
+                    </i>
                   </Text>
                   <Title variant="card" mt={3}>
                     Jonathan Taylor

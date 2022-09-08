@@ -61,7 +61,7 @@ const Content2 = () => (
             >
               <div>
                 <Title>Se in i framtiden med Designsprint</Title>
-                <Text mb={4}>
+                <Text>
                   I en designsprint samlar vi ditt team för att fokusera på en
                   utmaning. Vi skapar en gemensam förståelse för utmaningen och
                   går från en idé till en testad prototyp på bara fyra dagar.

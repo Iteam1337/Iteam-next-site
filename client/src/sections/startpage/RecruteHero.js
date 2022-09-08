@@ -30,14 +30,6 @@ const TextContainer = styled.div`
   }
 `
 
-const TextBg = styled.span`
-  display: inline;
-  background: rgb(0, 0, 0, 0.7);
-  padding: 7px;
-  white-space: pre-wrap;
-  box-decoration-break: clone;
-`
-
 const RecruteHero = ({ content }) => {
   return (
     <div>
@@ -57,7 +49,9 @@ const RecruteHero = ({ content }) => {
                 {content.title}
               </Title>
               <Text color="light">
-                <TextBg>{content.subtitle}</TextBg>
+                <div className="tw-inline tw-bg-[rgb(0,0,0,0.7)] tw-p-2 tw-leading-[2.46rem] tw-whitespace-pre-wrap tw-box-decoration-clone">
+                  {content.subtitle}
+                </div>
               </Text>
               {content?.link?.link && (
                 <Link href={getExternalOrInternalLink(content.link.link)}>

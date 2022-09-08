@@ -20,19 +20,8 @@ const FeatureCard = ({
   <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>
     <div className="d-flex justify-content-between align-items-start">
       <div>
-        <Text
-          color="heading"
-          as="h3"
-          fontSize={4}
-          fontWeight={700}
-          letterSpacing={-0.75}
-          mb={2}
-        >
-          {title}
-        </Text>
-        <Text fontSize={2} lineHeight={1.75}>
-          {children}
-        </Text>
+        <Title variant="card">{title}</Title>
+        <Text variant="small">{children}</Text>
       </div>
     </div>
   </Box>

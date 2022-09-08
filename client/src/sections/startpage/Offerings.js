@@ -107,20 +107,11 @@ const Offerings = ({ data }) => {
                   >
                     <i className="fas fa-bell"></i>
                   </Box>
-
                   <Box pr="40px">
-                    <Text
-                      color="dark"
-                      lineHeight="24px"
-                      fontSize={1}
-                      opacity={0.7}
-                      mb={0}
-                    >
+                    <Text variant="small">
                       {new Date().toLocaleTimeString()}
                     </Text>
-                    <Title variant="card" color="dark" fontWeight={300} mb={0}>
-                      {data?.message?.text}
-                    </Title>
+                    <Text variant="small">{data?.message?.text}</Text>
                   </Box>
                 </ShapeCard>
               </div>

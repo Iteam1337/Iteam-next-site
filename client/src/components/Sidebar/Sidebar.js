@@ -4,7 +4,14 @@ import Link from 'next/link'
 import { Title, Text, Box, Span, Anchor } from '../Core'
 
 export const CardSidebar = ({ children, ...rest }) => (
-  <Box borderRadius="10px" border="1px solid #eae9f2" mb="30px" mt="-15px" p="25px" {...rest}>
+  <Box
+    borderRadius="10px"
+    border="1px solid #eae9f2"
+    mb="30px"
+    mt="-15px"
+    p="25px"
+    {...rest}
+  >
     {children}
   </Box>
 )
@@ -23,16 +30,12 @@ export const TitleSidebar = ({ children, ...rest }) => (
 
 export const TitlePost = ({ link = '/', children, ...rest }) => (
   <Title variant="card" fontSize="16px" mb={0} {...rest}>
-    <Anchor href={link}>
-       {children}
-    </Anchor>
+    <Anchor href={link}>{children}</Anchor>
   </Title>
 )
 
 export const Date = ({ link = '/', children, ...rest }) => (
-  <Text color="lightShade" fontSize="14px" {...rest}>
-    {children}
-  </Text>
+  <Text variant="small">{children}</Text>
 )
 
 export const CatList = ({ children, ...rest }) => (

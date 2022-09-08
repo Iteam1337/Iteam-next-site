@@ -48,7 +48,7 @@ const Hero = ({ title, children, heroImage }) => {
                 <Title color="dark" variant="hero">
                   {title}
                 </Title>
-                <Text color="dark">{children}</Text>
+                <Text>{children}</Text>
               </div>
             </Col>
           </Row>

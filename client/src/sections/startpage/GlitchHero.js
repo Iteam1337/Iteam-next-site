@@ -33,7 +33,7 @@ const GlitchHero = () => {
                   <br />
                   har massor att berätta
                 </Title>
-                <Text mb={4} color="light">
+                <Text color="light">
                   <TextBg>
                     Hållbarhet och digital innovation sitter lika naturligt ihop
                     som Batman och Robin. Det attraherar både kunder och smarta

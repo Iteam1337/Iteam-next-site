@@ -5,7 +5,8 @@ import PageWrapper from '../components/PageWrapper'
 import { Section, Title, Text, Box, List, Anchor } from '../components/Core'
 
 const StyledLi = styled.li`
-  font-weight: 100 !important;
+  font-weight: 300 !important;
+  margin-top: 1rem;
 `
 
 const Privacy = () => {
@@ -44,7 +45,7 @@ const Privacy = () => {
                   <Title variant="card" fontSize="2rem" mb="30px">
                     Insamling av personuppgifter
                   </Title>
-                  <Text style={{ marginBottom: '1rem' }} variant="small">
+                  <Text variant="small">
                     Vi samlar in personuppgifter på följande sätt:
                   </Text>
                   <List>
@@ -79,7 +80,7 @@ const Privacy = () => {
                   <Title variant="card" fontSize="2rem" mb="30px">
                     Kategorier av personuppgifter
                   </Title>
-                  <Text style={{ marginBottom: '1rem' }} variant="small">
+                  <Text variant="small">
                     De kategorier av personuppgifter som vi samlar, eller har
                     rätt att samla in, är:
                   </Text>
@@ -107,7 +108,7 @@ const Privacy = () => {
                   <Title variant="card" fontSize="2rem" mb="30px">
                     Laglig grund och ändamål för behandling av personuppgifter
                   </Title>
-                  <Text style={{ marginBottom: '1rem' }} variant="small">
+                  <Text variant="small">
                     Vi samlar bara in personuppgifter för ändamål som har stöd i
                     gällande dataskyddsförordning. Det vanligaste är att
                     uppgifterna samlas in för behandling med stöd av den
@@ -121,7 +122,7 @@ const Privacy = () => {
                     <StyledLi> köpa en produkt/tjänst</StyledLi>
                     <StyledLi> fakturera tjänster</StyledLi>
                   </List>
-                  <Text style={{ marginBottom: '1rem' }} variant="small">
+                  <Text variant="small">
                     Med vårt <b>berättigade intresse </b> som grund behandlar vi
                     data för flera ändamål, till exempel:
                   </Text>
@@ -151,7 +152,7 @@ const Privacy = () => {
                   <Title variant="card" fontSize="2rem" mb="30px">
                     Överlämnande av personuppgifter
                   </Title>
-                  <Text style={{ marginBottom: '1rem' }} variant="small">
+                  <Text variant="small">
                     Under vissa omständigheter kan vi komma att överlämna
                     personuppgifter till tredje part som då agerar
                     personuppgiftsbiträde. De aktörer som kan komma att behandla
@@ -213,7 +214,7 @@ const Privacy = () => {
                   <Title variant="card" fontSize="2rem" mb="30px">
                     Dina rättigheter
                   </Title>
-                  <Text style={{ marginBottom: '1rem' }} variant="small">
+                  <Text variant="small">
                     Du har rätt till tillgång, rättelse och radering av
                     uppgifter enligt följande:
                   </Text>

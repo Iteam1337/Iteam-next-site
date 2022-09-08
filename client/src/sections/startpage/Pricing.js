@@ -153,14 +153,7 @@ const Pricing = ({ content }) => {
                     <TitleSmall>{content.team}</TitleSmall>
                     <div className="d-flex align-items-end justify-content-center my-3">
                       <Currency>{content.value}</Currency>
-                      <Text
-                        css={`
-                          font-size: 80px !important;
-                          letter-spacing: -1.38px;
-                          margin-bottom: 14px !important;
-                          font-weight: 700;
-                        `}
-                      >
+                      <Text className="tw-text-7xl tw-tracking-tighter tw-mb-4 tw-font-bold">
                         {timeMonthly ? content.price : content.priceOngoing}
                       </Text>
                       <TimePer>/h</TimePer>

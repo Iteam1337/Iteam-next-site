@@ -36,8 +36,9 @@ const Case = ({ content }) => {
             >
               <div>
                 <Title>{content.title}</Title>
-                <Text mb={4}>{content.preview.imageCard.description}</Text>
-
+                <Text className="tw-mb-12">
+                  {content.preview.imageCard.description}
+                </Text>
                 <Box>
                   <Button
                     onClick={() =>

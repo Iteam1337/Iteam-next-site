@@ -38,7 +38,7 @@ const DesignatedTeam = () => (
           >
             <div>
               <Title color="light">Ett fredat team som ger en bra start</Title>
-              <Text color="lightShade">
+              <Text>
                 När du har fått ett uppdrag och dina befintliga utvecklare och
                 designers är upptagna kan vi ändå sätta igång snabbt och bygger
                 det viktigaste i en första version.

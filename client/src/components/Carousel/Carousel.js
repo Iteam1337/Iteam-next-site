@@ -219,9 +219,7 @@ const Coworker = ({ item }) => {
           <Title variant="card" mb={0} mt={3}>
             {item.whyTech}
           </Title>
-          <Text color="dark" my={2}>
-            {item.answerTech}
-          </Text>
+          <Text color="dark">{item.answerTech}</Text>
           <Title variant="card" mb={0} mt={3}>
             {item.fullname}
           </Title>
@@ -248,9 +246,7 @@ const Testimonial = ({ item }) => {
           />
         </SliderImgContainer>
         <SliderText>
-          <Text color="dark" my={2}>
-            {item.quote}
-          </Text>
+          <Text color="dark">{item.quote}</Text>
           <Title variant="card" mb={0} mt={3}>
             {item.fullname}
           </Title>

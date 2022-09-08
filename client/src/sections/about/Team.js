@@ -70,15 +70,9 @@ const TeamCard = ({ coworker }) => {
             )}
           </CardImage>
           <div className="text-center">
-            <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
-              {fullname}
-            </Title>
-            <Text fontSize={2} pt="9px" lineHeight={1.2}>
-              {status}
-            </Text>
-            <Text fontSize={2} pt="6px" pb="9px" lineHeight={1.2}>
-              {role}
-            </Text>
+            <Title variant="card">{fullname}</Title>
+            <Text variant="small">{status}</Text>
+            <Text variant="small">{role}</Text>
           </div>
           <div className="text-center d-flex flex-column">
             {phoneNumber && (

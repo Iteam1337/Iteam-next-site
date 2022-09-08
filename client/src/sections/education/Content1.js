@@ -85,7 +85,7 @@ const Content2 = () => (
                     Vad innebär <br className="d-none d-sm-block" /> öppen
                     källkod?
                   </Title>
-                  <Text mb={4}>
+                  <Text>
                     Lär dig begreppen, koncepten och arbetssätten. Betyder öppen
                     källkod att systemet blir sårbart eller osäkert? Kan man
                     verkligen tjäna pengar på öppen källkod? Lär dig GIT och
