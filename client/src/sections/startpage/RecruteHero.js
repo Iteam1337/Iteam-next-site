@@ -49,7 +49,7 @@ const RecruteHero = ({ content }) => {
                 {content.title}
               </Title>
               <Text color="light">
-                <div className="tw-inline tw-bg-[rgb(0,0,0,0.7)] tw-p-2 tw-leading-[2.46rem] tw-whitespace-pre-wrap tw-box-decoration-clone">
+                <div className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.7)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
                   {content.subtitle}
                 </div>
               </Text>

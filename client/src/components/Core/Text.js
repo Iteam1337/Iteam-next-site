@@ -4,7 +4,7 @@ const Text = ({ children, className, variant, color }) => {
   if (variant === 'caption') {
     return (
       <p
-        className={`tw-mb-0 tw-font-light tw-tracking-normal tw-text-sm leading-tight ${
+        className={`tw-mb-0 tw-text-sm tw-font-light tw-leading-tight tw-tracking-normal ${
           color === 'light' ? 'tw-text-gray-light' : 'tw-text-gray-dark'
         } ${className}`}
       >
@@ -14,7 +14,7 @@ const Text = ({ children, className, variant, color }) => {
   } else if (variant === 'small') {
     return (
       <p
-        className={`tw-mb-0 tw-font-light tw-tracking-normal tw-text-base tw-leading-7 ${
+        className={`tw-mb-0 tw-text-base tw-font-light tw-leading-7 tw-tracking-normal ${
           color === 'light' ? 'tw-text-gray-light' : 'tw-text-gray-dark'
         } ${className}`}
       >
@@ -24,7 +24,7 @@ const Text = ({ children, className, variant, color }) => {
   }
   return (
     <p
-      className={`tw-mb-0 tw-font-light tw-tracking-normal tw-text-xl tw-leading-8 ${
+      className={`tw-mb-0 tw-text-xl tw-font-light tw-leading-8 tw-tracking-normal ${
         color === 'light' ? 'tw-text-gray-light' : 'tw-text-gray-dark'
       } ${className}`}
     >
