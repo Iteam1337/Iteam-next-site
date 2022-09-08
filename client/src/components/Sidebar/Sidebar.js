@@ -35,7 +35,7 @@ export const TitlePost = ({ link = '/', children, ...rest }) => (
 )
 
 export const Date = ({ link = '/', children, ...rest }) => (
-  <Text variant="small">{children}</Text>
+  <Text variant="caption">{children}</Text>
 )
 
 export const CatList = ({ children, ...rest }) => (

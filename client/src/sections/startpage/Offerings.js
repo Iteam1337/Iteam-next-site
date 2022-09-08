@@ -108,10 +108,12 @@ const Offerings = ({ data }) => {
                     <i className="fas fa-bell"></i>
                   </Box>
                   <Box pr="40px">
-                    <Text variant="small">
+                    <Text variant="caption">
                       {new Date().toLocaleTimeString()}
                     </Text>
-                    <Text variant="small">{data?.message?.text}</Text>
+                    <Text variant="small" className="tw-mt-2 tw-leading-normal">
+                      {data?.message?.text}
+                    </Text>
                   </Box>
                 </ShapeCard>
               </div>
