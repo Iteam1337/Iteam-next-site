@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import HeroImg from '../../assets/image/jpeg/working-hero.jpg'
 import { Container } from 'react-bootstrap'
-import { Title, Text, Button, Section } from '../../components/Core'
+import { Title, Typography, Button, Section } from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
 const Wrapper = styled.div`
   background: linear-gradient(
@@ -48,11 +48,11 @@ const RecruteHero = ({ content }) => {
               <Title variant="hero" color="light">
                 {content.title}
               </Title>
-              <Text color="light">
+              <Typography.Paragraph color="light">
                 <div className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.7)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
                   {content.subtitle}
                 </div>
-              </Text>
+              </Typography.Paragraph>
               {content?.link?.link && (
                 <Link href={getExternalOrInternalLink(content.link.link)}>
                   <Button

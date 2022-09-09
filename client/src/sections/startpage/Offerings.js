@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 
 import svgCurve from '../../assets/image/svg/l1-curve-content2.svg'
@@ -41,7 +41,7 @@ const ContentCard = ({ offer }) => (
             {offer.title}
           </Title>
         </a>
-        <Text>{offer.subtitle}</Text>
+        <Typography.Paragraph>{offer.subtitle}</Typography.Paragraph>
       </div>
     </Card>
   </Link>
@@ -108,12 +108,12 @@ const Offerings = ({ data }) => {
                     <i className="fas fa-bell"></i>
                   </Box>
                   <Box pr="40px">
-                    <Text variant="caption">
+                    <Typography.Caption>
                       {new Date().toLocaleTimeString()}
-                    </Text>
-                    <Text variant="small" className="tw-mt-2 tw-leading-normal">
+                    </Typography.Caption>
+                    <Typography.ParagraphSmall className="tw-mt-2 tw-leading-normal">
                       {data?.message?.text}
-                    </Text>
+                    </Typography.ParagraphSmall>
                   </Box>
                 </ShapeCard>
               </div>

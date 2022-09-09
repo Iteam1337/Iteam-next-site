@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
-import { Title, Section, Text, Button } from '../../components/Core'
+import { Title, Section, Typography, Button } from '../../components/Core'
 import { getExternalOrInternalLink, hexToRGBA } from '../../utils/helpers'
 import { urlFor } from '../../utils/helpers'
 
@@ -112,9 +112,9 @@ const Hero = ({ content, flipTexts = false }) => {
                 >
                   {title}
                 </Title>
-                <Text color="light">
+                <Typography.Paragraph color="light">
                   <TextBg>{subtitle}</TextBg>
-                </Text>
+                </Typography.Paragraph>
                 {link && (
                   <Link href={getExternalOrInternalLink(link.link)}>
                     <Button

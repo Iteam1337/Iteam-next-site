@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Gravatar from 'react-gravatar'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text, Anchor } from '../../components/Core'
+import { Title, Section, Box, Anchor, Typography } from '../../components/Core'
 import Link from 'next/link'
 import { formatPhoneNumber, urlFor } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'
@@ -71,12 +71,8 @@ const TeamCard = ({ coworker }) => {
           </CardImage>
           <div className="text-center">
             <Title variant="card">{fullname}</Title>
-            <Text variant="caption" className="tw-p-1">
-              {status}
-            </Text>
-            <Text variant="caption" className="tw-pb-2">
-              {role}
-            </Text>
+            <Typography.Caption className="tw-p-1">{status}</Typography.Caption>
+            <Typography.Caption className="tw-pb-2">{role}</Typography.Caption>
           </div>
           <div className="text-center d-flex flex-column">
             {phoneNumber && (
@@ -132,7 +128,7 @@ const Team = ({ content, coworkers }) => {
             <Col lg="6" className="text-center pb-3">
               <div id="medarbetare" className="">
                 <Title>{content.title}</Title>
-                <Text>{content.subtitle}</Text>
+                <Typography.Paragraph>{content.subtitle}</Typography.Paragraph>
               </div>
             </Col>
           </Row>

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 
 const SectionStyled = styled(Section)`
@@ -26,7 +26,9 @@ const Fact = ({ content }) => (
                 <Title color="light" mb="20px!important">
                   {item.title}
                 </Title>
-                <Text color="light">{item.text}</Text>
+                <Typography.Paragraph color="light">
+                  {item.text}
+                </Typography.Paragraph>
               </Box>
             </Col>
           ))}

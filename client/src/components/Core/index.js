@@ -1,6 +1,5 @@
 import Box from './Box'
 import Title from './Title'
-import Text from './Text'
 import Anchor from './Anchor'
 import Badge from './Badge'
 import Button from './Button'
@@ -18,7 +17,6 @@ import Typography from './Typography'
 export {
   Box,
   Title,
-  Text,
   Anchor,
   Badge,
   Button,

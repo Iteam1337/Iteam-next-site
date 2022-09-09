@@ -3,7 +3,14 @@ import styled from 'styled-components'
 import { rgba } from 'polished'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text, Span } from '../../components/Core'
+import {
+  Title,
+  Button,
+  Section,
+  Box,
+  Typography,
+  Span,
+} from '../../components/Core'
 
 import { device } from '../../utils'
 
@@ -175,12 +182,12 @@ const Hero = () => {
                     </Button>
                     <div ref={form}></div>
 
-                    <Text>
+                    <Typography.Paragraph>
                       Osäker?{' '}
                       <a href="/" target="blank">
                         <Span color="secondary">Ladda ner förhandsvisning</Span>
                       </a>
-                    </Text>
+                    </Typography.Paragraph>
                   </div>
                 </Box>
               </div>
@@ -207,13 +214,13 @@ const Hero = () => {
                   data-aos-delay="500"
                   data-aos-once="true"
                 >
-                  <Text>
+                  <Typography.Paragraph>
                     <i>
                       “OMG! I cannot believe that I have got a brand new landing
                       page after getting Omega. It was super easy to edit and
                       publish.”
                     </i>
-                  </Text>
+                  </Typography.Paragraph>
                   <Title variant="card" mt={3}>
                     Jonathan Taylor
                   </Title>

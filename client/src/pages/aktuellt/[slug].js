@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
-import { Section, Title, Text, Box } from '../../components/Core'
+import { Section, Title, Typography, Box } from '../../components/Core'
 import { groq } from 'next-sanity'
 import Sidebar from '../../sections/aktuellt/Sidebar'
 import BlogList from '../../sections/aktuellt/BlogList'
@@ -73,12 +73,16 @@ const BlogDetails = ({ data, preview = false }) => {
               <Col lg="12">
                 <Title variant="hero">{post?.title && post.title}</Title>
                 <Box className="d-flex justify-content-center">
-                  <Text>{post?.date && post.date}</Text>
-                  <Text>
+                  <Typography.Paragraph>
+                    {post?.date && post.date}
+                  </Typography.Paragraph>
+                  <Typography.Paragraph>
                     {post?.tags &&
                       post.tags?.map((tag) => <Link href="/">{tag}</Link>)}
-                  </Text>
-                  <Text>{post?.author && 'av ' + post.author}</Text>
+                  </Typography.Paragraph>
+                  <Typography.Paragraph>
+                    {post?.author && 'av ' + post.author}
+                  </Typography.Paragraph>
                 </Box>
               </Col>
             </Row>

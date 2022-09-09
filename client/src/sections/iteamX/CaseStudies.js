@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 
-import { Title, Box, Text, Button } from '../../components/Core'
+import { Title, Box, Typography, Button } from '../../components/Core'
 import { device } from '../../utils'
 import sanityClient from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
@@ -99,14 +99,6 @@ const Shape = styled(Box)`
   }
 `
 
-const PreTitle = styled(Text)`
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: -0.5px;
-  line-height: 28px;
-  margin-bottom: 22px;
-`
-
 const TitleStyled = styled(Title)`
   letter-spacing: -1.06px;
   margin-bottom: 22px;
@@ -149,19 +141,19 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
             </g>
           </svg>
         </Shape>
-        <PreTitle color={isDark ? 'lightShade' : 'darkShade'}>
+        <Typography.Caption color={isDark && 'light'} className="tw-mb-6">
           {data.tags
             ? data.tags.map(
                 (tag, i) => `${tag}${i < data.tags.length - 1 ? ', ' : ''} `
               )
             : data.title}
-        </PreTitle>
+        </Typography.Caption>
         <TitleStyled color={isDark ? 'light' : 'dark'}>
           {data.title}
         </TitleStyled>
-        <Text color={isDark ? 'lightShade' : 'darkShade'}>
+        <Typography.Paragraph color={isDark && 'light'}>
           {previewDescription()}
-        </Text>
+        </Typography.Paragraph>
       </TextContent>
     </CaseCardStyled>
   )

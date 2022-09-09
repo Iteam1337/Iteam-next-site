@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
 const ContentCard = ({
@@ -23,7 +23,7 @@ const ContentCard = ({
     data-aos-duration="1000"
     data-aos-once="true"
   >
-    <Box className="text-center">
+    <Box className="tw-flex tw-justify-center">
       <img
         src={urlFor(logo.asset._ref)}
         alt={logo.alt}
@@ -31,11 +31,14 @@ const ContentCard = ({
         css={'height: 100px;'}
       />
     </Box>
-    <Text color="light" mt={4} className="text-center mb-4">
+    <Typography.Paragraph
+      color="light"
+      className="tw-mb-8 tw-mt-8 tw-text-center"
+    >
       {children}
-    </Text>
+    </Typography.Paragraph>
     <Box className={`mt-auto`}>
-      <Box className="text-center">
+      <Box className="tw-flex tw-justify-center">
         <img
           src={urlFor(image.asset._ref)}
           alt={image.alt}
@@ -50,9 +53,9 @@ const ContentCard = ({
         <Title color="light" variant="card" mb={1}>
           {name}
         </Title>
-        <Text variant="small" color="light">
+        <Typography.ParagraphSmall color="light">
           {role}
-        </Text>
+        </Typography.ParagraphSmall>
       </Box>
     </Box>
   </Box>

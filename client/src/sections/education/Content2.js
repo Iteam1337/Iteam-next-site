@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 
 import christian from '../../assets/image/jpeg/Teacher-Christian.jpg'
 import adam from '../../assets/image/jpeg/Adam.png'
@@ -23,14 +23,14 @@ const Content2 = () => (
           <Col xl="7" lg="10" md="9">
             <div className="text-center">
               <Title>Om lärarna</Title>
-              <Text>
+              <Typography.Paragraph>
                 Christian Landgren är en välkänd profil i branschen och håller i
                 den inledande föreläsningen. Emma-Klara Wächter leder vårt Team
                 Coach team och kan allt om gruppers utveckling och hur
                 produktägare bör agera för att bygga välpresterande team. Adam
                 Näslund är säkerhetsexpert och utvecklare och brinner för öppen
                 källkod sedan länge.
-              </Text>
+              </Typography.Paragraph>
             </div>
           </Col>
         </Row>

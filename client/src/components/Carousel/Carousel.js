@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Gravatar from 'react-gravatar'
-import { Title, Box, Text, Span, Anchor } from '../../components/Core'
+import { Title, Box, Span, Anchor, Typography } from '../../components/Core'
 import Slider from 'react-slick'
 import { device, breakpoints } from '../../utils'
 import { rgba } from 'polished'
@@ -219,11 +219,11 @@ const Coworker = ({ item }) => {
           <Title variant="card" mb={0} mt={3}>
             {item.whyTech}
           </Title>
-          <Text color="dark">{item.answerTech}</Text>
+          <Typography.Paragraph>{item.answerTech}</Typography.Paragraph>
           <Title variant="card" mb={0} mt={3}>
             {item.fullname}
           </Title>
-          <Text variant="small">{item.role}</Text>
+          <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           <Anchor href={`/about/${item.slug.current}`}>
             <Span>Läs mer…</Span>
           </Anchor>
@@ -246,11 +246,11 @@ const Testimonial = ({ item }) => {
           />
         </SliderImgContainer>
         <SliderText>
-          <Text color="dark">{item.quote}</Text>
+          <Typography.Paragraph color="dark">{item.quote}</Typography.Paragraph>
           <Title variant="card" mb={0} mt={3}>
             {item.fullname}
           </Title>
-          <Text variant="small">{item.role}</Text>
+          <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           {item.reference && (
             <Anchor href={buildInternalUrl(item.reference)}>Läs mer…</Anchor>
           )}

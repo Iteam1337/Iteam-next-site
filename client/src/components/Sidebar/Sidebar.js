@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { Title, Text, Box, Span, Anchor } from '../Core'
+import { Title, Box, Span, Anchor, Typography } from '../Core'
 
 export const CardSidebar = ({ children, ...rest }) => (
   <Box
@@ -35,7 +35,7 @@ export const TitlePost = ({ link = '/', children, ...rest }) => (
 )
 
 export const Date = ({ link = '/', children, ...rest }) => (
-  <Text variant="caption">{children}</Text>
+  <Typography.Caption>{children}</Typography.Caption>
 )
 
 export const CatList = ({ children, ...rest }) => (

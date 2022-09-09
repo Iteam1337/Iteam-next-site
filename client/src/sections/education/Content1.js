@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { rgba } from 'polished'
 
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 
 import imgContent from '../../assets/image/png/Floppy-disk-Large.png'
@@ -53,7 +53,7 @@ const ContentCard = ({
         {title}
       </Title>
 
-      <Text>{children}</Text>
+      <Typography.Paragraph>{children}</Typography.Paragraph>
     </div>
   </Box>
 )
@@ -85,12 +85,12 @@ const Content2 = () => (
                     Vad innebär <br className="d-none d-sm-block" /> öppen
                     källkod?
                   </Title>
-                  <Text>
+                  <Typography.Paragraph>
                     Lär dig begreppen, koncepten och arbetssätten. Betyder öppen
                     källkod att systemet blir sårbart eller osäkert? Kan man
                     verkligen tjäna pengar på öppen källkod? Lär dig GIT och
                     Github även om du inte programmerar.
-                  </Text>
+                  </Typography.Paragraph>
                 </div>
                 <div className="mt-5">
                   <ContentCard

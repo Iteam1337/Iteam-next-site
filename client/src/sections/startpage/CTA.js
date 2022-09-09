@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
-import { Title, Button, Box, Text } from '../../components/Core'
+import { Title, Button, Box } from '../../components/Core'
 import { getRouteNameFromPageType } from '../../utils/helpers'
 
 const CTA = ({ content }) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
-import { Section, Title, Text } from '../../components/Core'
+import { Section, Title, Typography } from '../../components/Core'
 import CaseList from '../../sections/case/CaseList1'
 import CaseList2 from '../../sections/case/CaseList2'
 import CTA from '../../sections/case/CTA'
@@ -63,7 +63,9 @@ const CaseStudy = ({ data, preview = false }) => {
             <Row className="justify-content-center text-center">
               <Col lg="6">
                 <Title variant="hero">{title && title}</Title>
-                <Text>{subTitle && subTitle}</Text>
+                <Typography.Paragraph>
+                  {subTitle && subTitle}
+                </Typography.Paragraph>
               </Col>
             </Row>
           </Container>

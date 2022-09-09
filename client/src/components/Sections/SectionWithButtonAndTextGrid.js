@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { Title, Button, Section, Box, Typography } from '../../components/Core'
 import BlockContent from '../../components/BlockContent'
 import styled from 'styled-components'
 
@@ -15,7 +15,7 @@ const FeatureCard = ({
     <div className="d-flex justify-content-between align-items-start">
       <div>
         <Title variant="card">{title}</Title>
-        <Text variant="small">{children}</Text>
+        <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
       </div>
     </div>
   </Box>

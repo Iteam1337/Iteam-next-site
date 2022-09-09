@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Slider from 'react-slick'
 
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 import { breakpoints } from '../../utils'
 
 import imgC1 from '../../assets/image/jpeg/l1-customer2.jpg'
@@ -62,9 +62,7 @@ const ContentCard = ({
       }
     `}
   >
-    <Text color="dark" mb={4}>
-      {children}
-    </Text>
+    <Typography.Paragraph className="tw-mb-4">{children}</Typography.Paragraph>
     <Box className={`d-flex justify-content-between`}>
       <Box className="d-flex justify-content-center align-items-start" mr={3}>
         <img src={image} alt="" className="img-fluid" />
@@ -73,7 +71,7 @@ const ContentCard = ({
         <Title variant="card" mb={0}>
           {name}
         </Title>
-        <Text fontSize={2}>{company}</Text>
+        <Typography.ParagraphSmall>{company}</Typography.ParagraphSmall>
       </div>
     </Box>
   </Box>
@@ -107,10 +105,10 @@ const Testimonial = () => {
               <Box className="text-center">
                 <Title>Customer reviews</Title>
               </Box>
-              <Text mb={4}>
+              <Typography.Paragraph className="tw-mb-4">
                 Create custom landing pages with Omega that converts more
                 visitors than any website.
-              </Text>
+              </Typography.Paragraph>
             </Col>
           </Row>
           <Row className="justify-content-center mt-3">

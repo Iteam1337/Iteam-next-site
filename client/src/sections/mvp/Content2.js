@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { Title, Button, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 import imgDesignSprint from '../../assets/image/jpeg/design-sprint.jpeg'
 
@@ -61,14 +61,14 @@ const Content2 = () => (
             >
               <div>
                 <Title>Se in i framtiden med Designsprint</Title>
-                <Text>
+                <Typography.Paragraph>
                   I en designsprint samlar vi ditt team för att fokusera på en
                   utmaning. Vi skapar en gemensam förståelse för utmaningen och
                   går från en idé till en testad prototyp på bara fyra dagar.
                   Teamet får direkt feedback från användare och därmed en
                   inblick i hur idéerna tas emot innan utvecklingen kommit
                   igång.
-                </Text>
+                </Typography.Paragraph>
               </div>
             </div>
           </Col>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Section, Box, Text, Anchor } from '../components/Core'
+import { Title, Section, Box, Anchor, Typography } from '../components/Core'
 import PageWrapper from '../components/PageWrapper'
 import Hero from '../sections/common/Hero'
 import { usePreviewSubscription } from '../lib/sanity'
@@ -104,14 +104,14 @@ const Book = ({ data, preview = false }) => {
                     page.call.contactPersons.map((contact, index) => (
                       <Title variant="card" fontSize="18px" key={index}>
                         {contact.fullname}, {contact.role}
-                        <Text>
+                        <Typography.Paragraph>
                           <Anchor
                             color="info"
                             href={`callto:${contact.phoneNumber}`}
                           >
                             {formatPhoneNumber(contact.phoneNumber)}
                           </Anchor>
-                        </Text>
+                        </Typography.Paragraph>
                       </Title>
                     ))}
                   <Anchor
@@ -129,11 +129,11 @@ const Book = ({ data, preview = false }) => {
                   </Title>
                   {page?.mail?.emails &&
                     page.mail.emails.map((email, index) => (
-                      <Text key={index}>
+                      <Typography.Paragraph key={index}>
                         <Anchor color="info" href={`mailto:${email}`}>
                           {email}
                         </Anchor>
-                      </Text>
+                      </Typography.Paragraph>
                     ))}
                 </Box>
                 {page?.visit?.address &&

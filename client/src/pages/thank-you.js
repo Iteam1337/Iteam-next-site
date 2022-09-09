@@ -6,7 +6,7 @@ import Section from '../components/Section'
 import PageWrapper from '../components/PageWrapper'
 
 import imgIcon from '../assets/image/png/thumbs-shape.png'
-import { Title, Text } from '../components/Core'
+import { Title, Typography } from '../components/Core'
 
 const ContentIcon = styled.div`
   width: 118px;
@@ -59,10 +59,10 @@ const NotFoundPage = () => {
               </ContentIcon>
               <div>
                 <Title variant="hero">Thank You</Title>
-                <Text>
+                <Typography.Paragraph>
                   The page you are looking for is not available or doesn’t
                   <br className="d-none d-md-block" /> belong to this website!
-                </Text>
+                </Typography.Paragraph>
               </div>
               <div className="mt-5">
                 <Link href="/">

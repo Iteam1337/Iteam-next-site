@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Section, Text, Anchor } from '../../components/Core'
+import { Title, Section, Anchor, Typography } from '../../components/Core'
 import { formatPhoneNumber } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'
 
@@ -10,7 +10,7 @@ const InfoSection = ({ text, title }) => (
       <Title variant="card">{title}</Title>
     </Col>
     <Col md={8} lg={6}>
-      <Text>{text}</Text>
+      <Typography.Paragraph>{text}</Typography.Paragraph>
     </Col>
   </Row>
 )
@@ -25,18 +25,18 @@ const Medarbetare = ({ info }) => (
         </Col>
         <Col md={8} lg={6}>
           {info.phoneNumber && (
-            <Text>
+            <Typography.Paragraph>
               <Anchor href={`tel:${info.phoneNumber}`} color="info">
                 {formatPhoneNumber(info.phoneNumber)}
               </Anchor>
-            </Text>
+            </Typography.Paragraph>
           )}
-          <Text>
+          <Typography.Paragraph>
             <Anchor href={`mailto:${info.email}`} color="info">
               {info.email}
             </Anchor>
-          </Text>
-          <Text>
+          </Typography.Paragraph>
+          <Typography.Paragraph>
             {info.socialMedia && (
               <SocialMediaLinks
                 socialMedia={info.socialMedia}
@@ -44,7 +44,7 @@ const Medarbetare = ({ info }) => (
                 color="info"
               />
             )}
-          </Text>
+          </Typography.Paragraph>
         </Col>
       </Row>
       {info.answerTech && (

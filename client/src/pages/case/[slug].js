@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
-import { Section, Title, Text, Box } from '../../components/Core'
+import { Section, Title, Box, Typography } from '../../components/Core'
 import { groq } from 'next-sanity'
 import client from '../../sanity-client'
 import BlockContent from '../../components/BlockContent'
@@ -75,7 +75,9 @@ const BlogDetails = ({ data, preview = false }) => {
                 {post?.company && post.company}
               </Box>
               <Title variant="hero">{post?.title && post.title}</Title>
-              <Text>{post?.subtitle && post.subtitle}</Text>
+              <Typography.Paragraph>
+                {post?.subtitle && post.subtitle}
+              </Typography.Paragraph>
             </Col>
           </Row>
         </Container>
