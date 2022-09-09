@@ -5,9 +5,9 @@ module.exports = {
   prefix: 'tw-',
   important: true,
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/sections/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js, jsx}',
+    './src/components/**/*.{js, jsx}',
+    './src/sections/**/*.{js, jsx}',
   ],
   theme: {
     extend: { colors: { 'gray-light': '#f2f2f2', 'gray-dark': '#19191b' } },
