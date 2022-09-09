@@ -53,9 +53,7 @@ const ContentCard = ({
         <Title color="light" variant="card" mb={1}>
           {name}
         </Title>
-        <Typography.ParagraphSmall color="light">
-          {role}
-        </Typography.ParagraphSmall>
+        <Typography.ParagraphSmall light>{role}</Typography.ParagraphSmall>
       </Box>
     </Box>
   </Box>

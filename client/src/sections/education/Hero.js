@@ -131,7 +131,7 @@ const Hero = () => {
                         {price}kr
                       </Title>
                     </Box>
-                    <Typography.Paragraph color="light">
+                    <Typography.Paragraph light>
                       per person
                     </Typography.Paragraph>
                   </BoxPrice>

@@ -26,9 +26,7 @@ const Fact = ({ content }) => (
                 <Title color="light" mb="20px!important">
                   {item.title}
                 </Title>
-                <Typography.Paragraph color="light">
-                  {item.text}
-                </Typography.Paragraph>
+                <Typography.Paragraph light>{item.text}</Typography.Paragraph>
               </Box>
             </Col>
           ))}

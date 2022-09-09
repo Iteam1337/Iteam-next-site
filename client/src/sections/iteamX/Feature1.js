@@ -37,7 +37,7 @@ const Feature = () => (
           >
             <Box>
               <Title color="light">Leapfrog as a service</Title>
-              <Typography.Paragraph color="light">
+              <Typography.Paragraph light>
                 Du vill gå om dina konkurrenter med ny teknik. När man ska jobba
                 inom okända områden finns det sällan en plan eller färdiga
                 processer att följa. Därför satsar vi på att skapa team som

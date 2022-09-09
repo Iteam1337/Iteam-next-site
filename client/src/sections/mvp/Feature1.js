@@ -43,7 +43,7 @@ const Feature = () => (
           >
             <Box>
               <Title color="light">Vi bygger din idé</Title>
-              <Typography.Paragraph color="light">
+              <Typography.Paragraph light>
                 {/* Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text> */}
                 Oavsett om du har ett problem du behöver lösa eller redan har en
                 idé så hjälper vi dig. Vi börjar där du står och utgår ifrån det

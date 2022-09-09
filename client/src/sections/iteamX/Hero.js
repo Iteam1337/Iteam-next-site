@@ -31,7 +31,7 @@ const Hero = ({ content }) => {
                   {title}
                   <Span color="secondary">.</Span>
                 </Title>
-                <Typography.Paragraph color="light">
+                <Typography.Paragraph light>
                   {content.subtitle}
                 </Typography.Paragraph>
                 <Box
