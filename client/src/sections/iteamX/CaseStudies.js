@@ -141,7 +141,10 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
             </g>
           </svg>
         </Shape>
-        <Typography.Caption color={isDark && 'light'} className="tw-mb-6">
+        <Typography.Caption
+          color={isDark && 'light'}
+          additionalClassName="tw-mb-6"
+        >
           {data.tags
             ? data.tags.map(
                 (tag, i) => `${tag}${i < data.tags.length - 1 ? ', ' : ''} `

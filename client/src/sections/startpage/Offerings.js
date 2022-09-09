@@ -111,7 +111,7 @@ const Offerings = ({ data }) => {
                     <Typography.Caption>
                       {new Date().toLocaleTimeString()}
                     </Typography.Caption>
-                    <Typography.ParagraphSmall className="tw-mt-2 tw-leading-normal">
+                    <Typography.ParagraphSmall additionalClassName="tw-mt-2 tw-leading-normal">
                       {data?.message?.text}
                     </Typography.ParagraphSmall>
                   </Box>

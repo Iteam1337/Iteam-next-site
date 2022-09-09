@@ -36,7 +36,7 @@ const Case = ({ content }) => {
             >
               <div>
                 <Title>{content.title}</Title>
-                <Typography.Paragraph className="tw-mb-12">
+                <Typography.Paragraph additionalClassName="tw-mb-12">
                   {content.preview.imageCard.description}
                 </Typography.Paragraph>
                 <Box>

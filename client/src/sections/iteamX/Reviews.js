@@ -33,7 +33,7 @@ const ContentCard = ({
     </Box>
     <Typography.Paragraph
       color="light"
-      className="tw-mb-8 tw-mt-8 tw-text-center"
+      additionalClassName="tw-mb-8 tw-mt-8 tw-text-center"
     >
       {children}
     </Typography.Paragraph>

@@ -153,7 +153,7 @@ const Pricing = ({ content }) => {
                     <TitleSmall>{content.team}</TitleSmall>
                     <div className="d-flex align-items-end justify-content-center my-3">
                       <Currency>{content.value}</Currency>
-                      <Typography.Paragraph className="tw-mb-4 tw-text-7xl tw-font-bold tw-tracking-tighter">
+                      <Typography.Paragraph additionalClassName="tw-mb-4 tw-text-7xl tw-font-bold tw-tracking-tighter">
                         {timeMonthly ? content.price : content.priceOngoing}
                       </Typography.Paragraph>
                       <TimePer>/h</TimePer>

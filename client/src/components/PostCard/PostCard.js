@@ -67,14 +67,14 @@ const PostCard = ({
       </Box>
       <CardText>
         {preTitle && (
-          <Typography.Caption className="tw-mb-2">
+          <Typography.Caption additionalClassName="tw-mb-2">
             {preTitle}
           </Typography.Caption>
         )}
         <TitleStyled variant="card" mb="14px">
           {title}
         </TitleStyled>
-        <Typography.ParagraphSmall className="tw-mb-2">
+        <Typography.ParagraphSmall additionalClassName="tw-mb-2">
           {children}
         </Typography.ParagraphSmall>
         {readMore && (

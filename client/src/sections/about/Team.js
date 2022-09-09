@@ -71,8 +71,12 @@ const TeamCard = ({ coworker }) => {
           </CardImage>
           <div className="text-center">
             <Title variant="card">{fullname}</Title>
-            <Typography.Caption className="tw-p-1">{status}</Typography.Caption>
-            <Typography.Caption className="tw-pb-2">{role}</Typography.Caption>
+            <Typography.Caption additionalClassName="tw-p-1">
+              {status}
+            </Typography.Caption>
+            <Typography.Caption additionalClassName="tw-pb-2">
+              {role}
+            </Typography.Caption>
           </div>
           <div className="text-center d-flex flex-column">
             {phoneNumber && (
