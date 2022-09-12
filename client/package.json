@@ -19,6 +19,7 @@
     "aos": "^3.0.0-beta.6",
     "babel-plugin-transform-define": "^2.0.0",
     "bootstrap": "^4.5.0",
+    "clsx": "^1.2.1",
     "google-libphonenumber": "^3.2.24",
     "gray-matter": "^4.0.3",
     "imagemin-mozjpeg": "9.0.0",
