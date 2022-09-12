@@ -246,7 +246,7 @@ const Testimonial = ({ item }) => {
           />
         </SliderImgContainer>
         <SliderText>
-          <Typography.Paragraph color="dark">{item.quote}</Typography.Paragraph>
+          <Typography.Paragraph>{item.quote}</Typography.Paragraph>
           <Title variant="card" mb={0} mt={3}>
             {item.fullname}
           </Title>

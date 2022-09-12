@@ -119,7 +119,7 @@ const Hero = () => {
                   <Title color="dark">
                     Utbildning i öppen källkod och modern applikationsutveckling
                   </Title>
-                  <Typography.Paragraph color="dark">
+                  <Typography.Paragraph>
                     Gå en distanskurs i modern applikationsutveckling med några
                     av branschens bästa utvecklare, agila coacher och UX
                     designers
