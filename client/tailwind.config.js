@@ -10,7 +10,13 @@ module.exports = {
     './src/sections/**/*.{js, jsx}',
   ],
   theme: {
-    extend: { colors: { 'gray-light': '#f2f2f2', 'gray-dark': '#19191b' } },
+    extend: {
+      colors: {
+        'gray-light': '#f2f2f2',
+        'gray-dark': '#19191b',
+        'border-color': '#eae9f2',
+      },
+    },
   },
   plugins: [],
 }
