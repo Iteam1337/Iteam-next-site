@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import Card from '../../components/Card/'
 import { Section, Box } from '../../components/Core'
 import PostCard from '../../components/PostCard'
 
@@ -21,7 +22,7 @@ export default function BlogList({ posts }) {
               _type == 'openSourceLesson' ? 'open-source-skolan' : 'aktuellt'
             return (
               <Col lg="4" className="mb-5" key={i}>
-                <PostCard
+                <Card
                   img={imageCard.image}
                   preTitle={date}
                   link={`/${prefix}/${slug.current}`}
@@ -29,7 +30,7 @@ export default function BlogList({ posts }) {
                   readMore
                 >
                   {imageCard.description}
-                </PostCard>
+                </Card>
               </Col>
             )
           })}
