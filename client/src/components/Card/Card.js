@@ -6,11 +6,13 @@ import { useNextSanityImage } from 'next-sanity-image'
 const Card = ({ link, img, preTitle, title, children, readMore }) => {
   const imageProps = useNextSanityImage(client, img.asset._ref)
   return (
-    <li>
+    <li className="tw-relative">
       <img {...imageProps} alt={img.alt} />
       {preTitle && <Typography.Caption>{preTitle}</Typography.Caption>}
       <Title variant="card">
-        <Anchor href={link}>{title}</Anchor>
+        <a href={link} className="after:tw-absolute after:tw-inset-0">
+          {title}
+        </a>
       </Title>
       <div>{children}</div>
       {readMore && (
