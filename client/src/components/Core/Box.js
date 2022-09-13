@@ -1,9 +1,12 @@
 import React from 'react'
 import clsx from 'clsx'
 
-const Box = ({ additionalClassName, children }) => {
+const Box = ({ additionalClassName, children, ariaHidden }) => {
   return (
-    <div className={clsx('tw-box-border tw-min-w-0', additionalClassName)}>
+    <div
+      aria-hidden={ariaHidden}
+      className={clsx('tw-box-border tw-min-w-0', additionalClassName)}
+    >
       {children}
     </div>
   )
