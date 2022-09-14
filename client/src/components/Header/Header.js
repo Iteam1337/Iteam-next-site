@@ -27,7 +27,9 @@ const SiteHeader = styled.header`
   transition: 0.4s;
   &.scrolling {
     transform: translateY(-100%);
-    transition: 0.4s;
+    @media screen and (prefers-reduced-motion: no-preference) {
+      transition: 0.4s;
+    }
   }
   &.reveal-header {
     transform: translateY(0%);
@@ -112,7 +114,7 @@ const SiteHeader = styled.header`
   }
 `
 
-const ToggleButton = styled.button`
+const OpenMenuButton = styled.button`
   color: ${({ dark, theme }) => (dark ? '#fff' : '#000')} !important;
   border-color: ${({ dark, theme }) => (dark ? '#fff' : '#000')} !important;
 `
@@ -122,12 +124,9 @@ const Menu = styled.ul`
     display: flex;
     justify-content: flex-end;
   }
-
-  .dropdown-toggle {
-    cursor: pointer;
-  }
   > li {
-    > .nav-link {
+    > a {
+      display: block;
       @media ${device.lg} {
         color: ${({ dark, theme }) =>
           dark ? theme.colors.light : theme.colors.darkShade}!important;
@@ -141,32 +140,42 @@ const Menu = styled.ul`
         margin-left: 9px;
         margin-right: 9px;
       }
-      &:hover {
-        text-decoration: none;
+    }
+    &.with-dropdown {
+      @media ${device.lg} {
+        position: relative;
+        z-index: 99;
       }
-    }
-  }
-  .nav-item.dropdown {
-    @media ${device.lg} {
-      position: relative;
-      z-index: 99;
-    }
-    &:hover {
-      > .menu-dropdown {
-        @media ${device.lg} {
-          top: 90%;
-          opacity: 1;
-          pointer-events: visible;
+      & > a {
+        &::after {
+          display: inline-block;
+          vertical-align: 0.255em;
+          content: '';
+          border-top: 0.325em solid;
+          border-right: 0.325em solid transparent;
+          border-bottom: 0;
+          border-left: 0.325em solid transparent;
+          position: relative;
+          top: 1px;
+          margin-left: auto;
+          transform: ${({ open }) =>
+            open ? 'rotate(0deg)' : 'rotate(-90deg)'};
+          margin-left: 0.5rem;
+
+          @media screen and (prefers-reduced-motion: no-preference) {
+            transition: 0.4s;
+          }
         }
       }
     }
   }
 `
 
-const MenuDropdown = styled.ul`
+const DropdownMenu = styled.ul`
   list-style: none;
   @media ${device.lg} {
-    top: 110%;
+    visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
+    top: ${({ open }) => (open ? '116%' : '110%')};
     position: absolute;
     min-width: 227px;
     max-width: 227px;
@@ -176,17 +185,21 @@ const MenuDropdown = styled.ul`
     background-color: #ffffff;
     padding: 15px 0px;
     z-index: 99;
-    opacity: 0;
-    transition: opacity 0.4s, top 0.4s;
-    pointer-events: none;
-    left: -90%;
+    opacity: ${({ open }) => (open ? '1' : '0')};
+    transition: none;
+    pointer-events: ${({ open }) => (open ? 'visible' : 'none')};
+    left: auto;
+    right: -56%;
     border-radius: 0 0 10px 10px;
     border: 1px solid #eae9f2;
     background-color: #ffffff;
     display: block;
     border-top: ${({ theme }) => `3px solid ${theme.colors.secondary}`};
   }
-  > .drop-menu-item {
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.4s, top 0.4s;
+  }
+  > li {
     color: '${({ theme }) => theme.colors.dark}';
     font-size: 16px;
     font-weight: 300;
@@ -195,91 +208,36 @@ const MenuDropdown = styled.ul`
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-
     a {
       color: ${({ theme }) => theme.colors.dark};
       transition: all 0.3s ease-out;
       position: relative;
       display: flex;
       align-items: center;
-      &.dropdown-toggle::after {
-        display: inline-block;
-        vertical-align: 0.255em;
-        content: '';
-        border-top: 0.325em solid;
-        border-right: 0.325em solid transparent;
-        border-bottom: 0;
-        border-left: 0.325em solid transparent;
-        position: relative;
-        top: 1px;
-        margin-left: auto;
-        transform: rotate(-90deg);
-        transition: 0.4s;
-      }
     }
-
-    &:hover {
-      > a {
-        color: ${({ theme }) => theme.colors.dark};
-        text-decoration: none;
-        &::after {
-          transform: rotate(0deg);
-        }
-      }
-    }
-    &.dropdown {
-      position: relative;
-
-      &:hover {
-        > .menu-dropdown {
-          @media ${device.lg} {
-            top: 10px;
-            opacity: 1;
-            pointer-events: visible;
-            transform: translateX(-100%);
-          }
-        }
-      }
-      > .menu-dropdown {
-        border-top-color: ${({ theme }) => theme.colors.primary};
-        @media ${device.lg} {
-          top: 10px;
-          left: 0%;
-          opacity: 0;
-          transform: translateX(-110%);
-          transition: 0.4s;
-          pointer-events: none;
-        }
-        > .drop-menu-item {
-          @media ${device.lg} {
-            padding-left: 30px;
-            padding-right: 30px;
-          }
-        }
-      }
-    }
-  }
-  &.dropdown-right {
-    left: auto;
-    right: -90%;
   }
 `
 
-const CrossWrapper = styled.div`
+const CloseMenuButton = styled.button`
   position: absolute;
   top: 11px;
   right: 24px;
+  background: none;
+  color: ${({ theme }) => theme.colors.light};
+  border: none;
+  padding: 0;
 `
 
 const Header = ({ isDark = false }) => {
   const gContext = useContext(GlobalContext)
   const [showScrolling, setShowScrolling] = useState(false)
   const [showReveal, setShowReveal] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const size = useWindowSize()
   const isMobile = size.width < 622
 
-  const router = useRouter();
+  const router = useRouter()
 
   const toggleMenu = () => {
     gContext.toggleOffCanvas()
@@ -289,6 +247,7 @@ const Header = ({ isDark = false }) => {
   useScrollPosition(({ prevPos, currPos }) => {
     if (currPos.y < 0) {
       setShowScrolling(true)
+      setOpen(false)
     } else {
       setShowScrolling(false)
     }
@@ -356,6 +315,8 @@ const Header = ({ isDark = false }) => {
                 <Menu
                   className="navbar-nav d-none d-lg-flex"
                   dark={isDark ? 1 : 0}
+                  setShowScrolling
+                  open={open}
                 >
                   {menuItems.map(
                     (
@@ -366,9 +327,8 @@ const Header = ({ isDark = false }) => {
                       return (
                         <React.Fragment key={name + index}>
                           {hasSubItems ? (
-                            <li className="nav-item dropdown" {...rest}>
+                            <li className="with-dropdown" {...rest}>
                               <a
-                                className="nav-link dropdown-toggle"
                                 style={getNavLinkStyle([
                                   'mvp',
                                   'scaleup',
@@ -378,100 +338,52 @@ const Header = ({ isDark = false }) => {
                                 data-toggle="dropdown"
                                 aria-expanded="false"
                                 href="/#"
-                                onClick={(e) => e.preventDefault()}
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  setOpen(!open)
+                                }}
                               >
                                 {label}
                               </a>
-                              <MenuDropdown
-                                className="menu-dropdown dropdown-right"
-                                dark={isDark ? 1 : 0}
-                              >
+                              <DropdownMenu dark={isDark ? 1 : 0} open={open}>
                                 {items.map((subItem, indexSub) => {
-                                  const hasInnerSubItems = Array.isArray(
-                                    subItem.items
-                                  )
                                   return (
                                     <React.Fragment
                                       key={subItem.name + indexSub}
                                     >
-                                      {hasInnerSubItems ? (
-                                        <li className="drop-menu-item dropdown">
+                                      <li>
+                                        {subItem.isExternal ? (
                                           <a
-                                            className="dropdown-toggle"
-                                            role="button"
-                                            data-toggle="dropdown"
-                                            aria-expanded="false"
-                                            href="/#"
-                                            onClick={(e) => e.preventDefault()}
+                                            href={`${subItem.name}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                           >
                                             {subItem.label}
                                           </a>
-                                          <MenuDropdown
-                                            className="menu-dropdown dropdown-right"
-                                            dark={isDark ? 1 : 0}
-                                          >
-                                            {subItem.items.map(
-                                              (itemInner, indexInnerMost) => (
-                                                <li
-                                                  className="drop-menu-item"
-                                                  key={
-                                                    itemInner.name +
-                                                    indexInnerMost
-                                                  }
-                                                >
-                                                  {itemInner.isExternal ? (
-                                                    <a
-                                                      href={`${itemInner.name}`}
-                                                      target="_blank"
-                                                      rel="noopener noreferrer"
-                                                    >
-                                                      {itemInner.label}
-                                                    </a>
-                                                  ) : (
-                                                    <Link
-                                                      href={`/${itemInner.name}`}
-                                                    >
-                                                      <a>{itemInner.label}</a>
-                                                    </Link>
-                                                  )}
-                                                </li>
-                                              )
-                                            )}
-                                          </MenuDropdown>
-                                        </li>
-                                      ) : (
-                                        <li className="drop-menu-item">
-                                          {subItem.isExternal ? (
+                                        ) : (
+                                          <Link href={`/${subItem.name}`}>
                                             <a
-                                              href={`${subItem.name}`}
-                                              target="_blank"
-                                              rel="noopener noreferrer"
+                                              style={getNavLinkStyle([
+                                                subItem.name,
+                                              ])}
+                                              onClick={(e) => {
+                                                setOpen(!open)
+                                              }}
                                             >
                                               {subItem.label}
                                             </a>
-                                          ) : (
-                                            <Link href={`/${subItem.name}`}>
-                                              <a
-                                                style={getNavLinkStyle([
-                                                  subItem.name,
-                                                ])}
-                                              >
-                                                {subItem.label}
-                                              </a>
-                                            </Link>
-                                          )}
-                                        </li>
-                                      )}
+                                          </Link>
+                                        )}
+                                      </li>
                                     </React.Fragment>
                                   )
                                 })}
-                              </MenuDropdown>
+                              </DropdownMenu>
                             </li>
                           ) : (
-                            <li className="nav-item" {...rest}>
+                            <li {...rest}>
                               {isExternal ? (
                                 <a
-                                  className="nav-link"
                                   href={`${name}`}
                                   target="_blank"
                                   rel="noopener noreferrer"
@@ -481,10 +393,12 @@ const Header = ({ isDark = false }) => {
                               ) : (
                                 <Link href={`/${name}`}>
                                   <a
-                                    className="nav-link"
                                     style={getNavLinkStyle([name])}
                                     role="button"
                                     aria-expanded="false"
+                                    onClick={(e) => {
+                                      setOpen(false)
+                                    }}
                                   >
                                     {label}
                                   </a>
@@ -499,7 +413,7 @@ const Header = ({ isDark = false }) => {
                 </Menu>
               </div>
             </div>
-            <ToggleButton
+            <OpenMenuButton
               className={`navbar-toggler btn-close-off-canvas ml-3 ${
                 gContext.visibleOffCanvas ? 'collapsed' : ''
               }`}
@@ -508,7 +422,7 @@ const Header = ({ isDark = false }) => {
               data-target="#mobile-menu"
               aria-controls="mobile-menu"
               aria-expanded="false"
-              aria-label="Toggle navigation"
+              aria-label="Öppna meny"
               onClick={toggleMenu}
               dark={isDark ? 1 : 0}
             >
@@ -519,13 +433,14 @@ const Header = ({ isDark = false }) => {
                 fill={isDark ? 'white' : 'black'}
                 className="bi bi-list"
                 viewBox="0 0 16 16"
+                aria-hidden="true"
               >
                 <path
                   fillRule="evenodd"
                   d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
                 />
               </svg>
-            </ToggleButton>
+            </OpenMenuButton>
           </nav>
         </Container>
       </SiteHeader>
@@ -533,11 +448,12 @@ const Header = ({ isDark = false }) => {
         show={gContext.visibleOffCanvas}
         onHideOffcanvas={gContext.toggleOffCanvas}
       >
-        <CrossWrapper
+        <CloseMenuButton
           onClick={() => {
             document.body.style.overflow = 'visible'
             gContext.toggleOffCanvas()
           }}
+          aria-label="Stäng meny"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -546,10 +462,11 @@ const Header = ({ isDark = false }) => {
             fill="white"
             className="bi bi-x"
             viewBox="0 0 16 16"
+            aria-hidden="true"
           >
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
           </svg>
-        </CrossWrapper>
+        </CloseMenuButton>
         <NestedMenu menuItems={menuItems} />
       </Offcanvas>
     </>

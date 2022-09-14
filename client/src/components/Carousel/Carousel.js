@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Gravatar from 'react-gravatar'
@@ -206,7 +206,7 @@ const SliderText = styled(Box)`
   }
 `
 
-const Coworker = ({ item }) => {
+const Coworker = ({ item, active }) => {
   return (
     <SliderItem>
       <SliderCard>
@@ -224,20 +224,22 @@ const Coworker = ({ item }) => {
             {item.fullname}
           </Title>
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
-          <Anchor href={`/about/${item.slug.current}`}>
-            <Span>Läs mer…</Span>
-          </Anchor>
+          {active && (
+            <Anchor href={`/about/${item.slug.current}`}>
+              <Span>Läs mer…</Span>
+            </Anchor>
+          )}
         </SliderText>
       </SliderCard>
     </SliderItem>
   )
 }
 
-const Testimonial = ({ item }) => {
+const Client = ({ item, active }) => {
   const imageProps = useNextSanityImage(sanityClient, item?.image?.asset._ref)
   return (
-    <SliderItem>
-      <SliderCard>
+    <SliderItem active={active}>
+      <SliderCard className="slider-card">
         <SliderImgContainer>
           <img
             {...imageProps}
@@ -251,7 +253,7 @@ const Testimonial = ({ item }) => {
             {item.fullname}
           </Title>
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
-          {item.reference && (
+          {active && item.reference && (
             <Anchor href={buildInternalUrl(item.reference)}>Läs mer…</Anchor>
           )}
         </SliderText>
@@ -261,6 +263,21 @@ const Testimonial = ({ item }) => {
 }
 
 const Carousel = ({ content, coworker = false }) => {
+  const [activeSlide, setActiveSlide] = useState(0)
+  const arrLength = content.length
+
+  useEffect(() => {
+    // This tagets the anchor descendant of the active slide.
+    // Somehow the active slide bypasses the <active> condition used when rendering the slides.
+    const clonedLinks = document.querySelectorAll('.slick-cloned')
+    clonedLinks.forEach((el) => {
+      const anchor = el.querySelector(':scope a')
+      if (anchor) {
+        anchor.style.display = 'none'
+      }
+    })
+  })
+
   const slickSettings = {
     dots: false,
     infinite: true,
@@ -282,8 +299,12 @@ const Carousel = ({ content, coworker = false }) => {
       },
     ],
     useCSS: false,
+    beforeChange: (_, next) => {
+      setTimeout(() => {
+        setActiveSlide(next)
+      }, 10)
+    },
   }
-
   return (
     <Container
       data-aos="fade-zoom-in"
@@ -294,14 +315,15 @@ const Carousel = ({ content, coworker = false }) => {
     >
       <Row className="justify-content-center">
         <Col lg="12" xl="11">
-          <SliderStyled {...slickSettings}>
-            {content.map((person, i) =>
-              coworker ? (
-                <Coworker item={person} key={i} />
+          <SliderStyled {...slickSettings} activeSlide={activeSlide}>
+            {content.map((person, i) => {
+              const active = activeSlide === i
+              return coworker ? (
+                <Coworker item={person} key={i} active={active} />
               ) : (
-                <Testimonial item={person} key={i} />
+                <Client item={person} key={i} active={active} />
               )
-            )}
+            })}
           </SliderStyled>
         </Col>
       </Row>

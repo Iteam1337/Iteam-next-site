@@ -132,7 +132,7 @@ const CaseCard = ({ isDark = true, bg = 'secondary', data }) => {
         <img {...imageProps} alt={data.preview.imageCard.image.alt} />
       </div>
       <TextContent bg={bg}>
-        <Shape bg={bg}>
+        <Shape bg={bg} aria-hidden="true">
           <svg height="22" viewBox="0 0 540 22">
             <g>
               <g>
@@ -182,7 +182,7 @@ const CaseStudies = ({ cases }) => {
                 data-aos-once="true"
               >
                 <Link href={`/case/${item.slug.current}`} passHref>
-                  <CaseCardLink aria-label="Läs mer om detta case">
+                  <CaseCardLink aria-label={`Läs mer om caset ${item.title}`}>
                     <CaseCard bg={'secondary'} isDark={false} data={item} />
                   </CaseCardLink>
                 </Link>

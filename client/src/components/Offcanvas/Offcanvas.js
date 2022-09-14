@@ -12,13 +12,9 @@ const Overlay = styled.div`
   height: 100%;
   z-index: 99999;
   background: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  visibility: visible;
+  opacity: ${({ show }) => (show ? '1' : '0')};
+  visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
   transition: all 0.3s ease-out;
-  &.hidden {
-    opacity: 0;
-    visibility: hidden;
-  }
 `
 
 const Drawer = styled.div`
@@ -31,11 +27,9 @@ const Drawer = styled.div`
   z-index: 999999;
   background: #000;
   overflow-y: auto;
-  transform: translateX(0);
+  transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(-100%)')};
   transition: all 0.15s ease-out;
-  &.hidden {
-    transform: translateX(-100%);
-  }
+  visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
   .dropdown-menu {
     position: static !important;
     will-change: initial !important;
@@ -49,21 +43,11 @@ const LogoContainer = styled.div`
   font-size: 1.25rem;
 `
 
-const Offcanvas = ({ show, onHideOffcanvas, children, ...rest }) => {
-  if (typeof document !== 'undefined') {
-    if (show) {
-      document.querySelector('html').classList.add('has-offcanvas')
-      document.body.classList.add('has-offcanvas')
-    } else {
-      document.querySelector('html').classList.remove('has-offcanvas')
-      document.body.classList.remove('has-offcanvas')
-    }
-  }
-
+const Offcanvas = ({ show, onHideOffcanvas, children }) => {
   return (
-    <div {...rest}>
-      <Overlay className={show ? '' : 'hidden'} onClick={onHideOffcanvas} />
-      <Drawer className={show ? '' : 'hidden'}>
+    <>
+      <Overlay show={show} onClick={onHideOffcanvas} />
+      <Drawer show={show}>
         <Container>
           <div className="p-3">
             <i className="icon icon-simple-remove icon-close"></i>
@@ -74,7 +58,7 @@ const Offcanvas = ({ show, onHideOffcanvas, children, ...rest }) => {
           </div>
         </Container>
       </Drawer>
-    </div>
+    </>
   )
 }
 

@@ -23,7 +23,13 @@ export const Block = ({ children, ...rest }) => (
 )
 
 export const TitleSidebar = ({ children, ...rest }) => (
-  <Title variant="card" fontSize="24px" color="black" {...rest}>
+  <Title
+    fontSize="24px !important"
+    letterSpacing="-0.5px"
+    lineHeight="28px !important"
+    color="black"
+    {...rest}
+  >
     {children}
   </Title>
 )

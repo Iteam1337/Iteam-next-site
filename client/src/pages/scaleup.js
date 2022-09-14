@@ -4,21 +4,21 @@ import {
   SectionWithButtonAndTextGrid,
   SectionWithImage,
   TextWithTags,
-} from '../components/Sections'
+  Testimonial,
+  Hero,
+} from '../sections/common'
 import Role from '../sections/scaleup/Role'
 import SectionWithImageAndButton from '../sections/scaleup/SectionWithImageAndButton'
 import Case from '../sections/scaleup/Case'
-import Testimonial from '../sections/startpage/Testimonial'
-import Pricing from '../sections/startpage/Pricing'
 import CTA from '../sections/scaleup/CTA'
 import { groq } from 'next-sanity'
 import { getClient } from '../lib/sanity.server'
 import { filterDataToSingleItem } from '../utils/helpers'
 import { usePreviewSubscription } from '../lib/sanity'
-import Hero from '../sections/common/Hero'
 import { NextSeo } from 'next-seo'
 import { urlFor } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'
+import Pricing from '../sections/startpage/Pricing'
 
 const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
   const { data: previewData } = usePreviewSubscription(data?.scaleUpPageQuery, {
@@ -85,7 +85,7 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
       {scaleUpPage?.textWithTagsThirs && (
         <Role content={scaleUpPage.textWithTagsThirs} />
       )}
-      <Testimonial content={carousel} />
+      <Testimonial bg content={carousel} />
       <Pricing content={ourPricing} />
       <CTA />
     </PageWrapper>

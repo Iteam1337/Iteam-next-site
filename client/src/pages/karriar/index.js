@@ -1,7 +1,6 @@
 import React from 'react'
 import PageWrapper from '../../components/PageWrapper'
-import Hero from '../../sections/common/Hero'
-import Content from '../../sections/karriar/Content'
+import { Hero, Testimonial } from '../../sections/common'
 import Feature from '../../sections/karriar/Feature'
 import Roles from '../../sections/karriar/Roles'
 import { groq } from 'next-sanity'
@@ -54,8 +53,8 @@ const Career = ({ data, preview = false, carousel }) => {
       )}
       <PageWrapper headerDark footerDark>
         {preview && <ExitPreviewLink />}
-        <Hero content={hero}/>
-        <Content content={section} carousel={carousel} />
+        <Hero content={hero} />
+        <Testimonial coworker content={{ section, carousel }} />
         <Feature content={textGrid} />
         <Roles content={openings} openPositions={data.openPositions} />
       </PageWrapper>

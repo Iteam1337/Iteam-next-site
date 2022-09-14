@@ -16,30 +16,28 @@ const Brand = styled(Box)`
 `
 
 const Clients = ({ clients }) => (
-  <>
-    <Box py={'30px'}>
-      <Container>
-        <Box
-          className="d-flex justify-content-center justify-content-lg-between
+  <Box py={'30px'}>
+    <h3 className="visibility-hidden">Kunder</h3>
+    <Container>
+      <Box
+        className="d-flex justify-content-center justify-content-lg-between
          align-items-center flex-wrap"
-          mx="-32px"
-        >
-          {clients.map((client, i) => {
-            const imageProps = useNextSanityImage(
-              sanityClient,
-              client?.asset._ref
-            )
-
-            return (
-              <Brand key={i} className="" py={3} mx={4}>
-                <img {...imageProps} alt={client.alt} className="img-fluid" />
-              </Brand>
-            )
-          })}
-        </Box>
-      </Container>
-    </Box>
-  </>
+        mx="-32px"
+      >
+        {clients.map((client, i) => {
+          const imageProps = useNextSanityImage(
+            sanityClient,
+            client?.asset._ref
+          )
+          return (
+            <Brand key={i} className="" py={3} mx={4}>
+              <img {...imageProps} alt={client.alt} className="img-fluid" />
+            </Brand>
+          )
+        })}
+      </Box>
+    </Container>
+  </Box>
 )
 
 export default Clients

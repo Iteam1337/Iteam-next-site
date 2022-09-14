@@ -92,6 +92,7 @@ const Offerings = ({ data }) => {
                   data-aos-once="true"
                   data-aos-delay="800"
                   data-aos-easing="ease-out-back"
+                  aria-hidden="true"
                 >
                   <Box
                     width="30px"

@@ -17,29 +17,33 @@ const Logo = ({
 }) => {
   return (
     <Link href="/">
-      <a className={`${className}`} {...rest}>
+      <a className={`${className}`} {...rest} aria-label="Länk till startsidan">
         {white ? (
           vertical ? (
             <img
               src={imgL1VericalLogoWhite}
-              alt="Iteam"
               className="tw-mt-1 tw-h-[150px]"
+              aria-hidden="true"
             />
           ) : (
             <img
               src={imgL1LogoWhite}
-              alt="Iteam"
               className="tw-mt-3.5 tw-w-[150px]"
+              aria-hidden="true"
             />
           )
         ) : vertical ? (
           <img
             src={imgL1VericalLogo}
-            alt=""
+            aria-hidden="true"
             className="tw-mt-3.5 tw-h-[150px]"
           />
         ) : (
-          <img src={imgL1Logo} alt="" className="tw-mt-3.5 tw-w-[150px]" />
+          <img
+            src={imgL1Logo}
+            aria-hidden="true"
+            className="tw-mt-3.5 tw-w-[150px]"
+          />
         )}
       </a>
     </Link>
