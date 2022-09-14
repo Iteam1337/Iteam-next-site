@@ -70,6 +70,7 @@ const ULStyled = styled.ul`
       position: relative;
       top: 9px;
       margin-right: 13px;
+      flex-shrink: 0;
     }
   }
 `
@@ -163,7 +164,7 @@ const Pricing = ({ content }) => {
                     </Typography.ParagraphSmall>
                     <ULStyled>
                       {content.includes.map((include, i) => (
-                        <li key={i}>{include} </li>
+                        <li key={i}>{include}</li>
                       ))}
                     </ULStyled>
                   </div>

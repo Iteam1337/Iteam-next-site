@@ -112,7 +112,7 @@ const Hero = ({ content, flipTexts = false }) => {
                 >
                   {title}
                 </Title>
-                <Typography.Paragraph color="light">
+                <Typography.Paragraph light>
                   <TextBg>{subtitle}</TextBg>
                 </Typography.Paragraph>
                 {link && (
