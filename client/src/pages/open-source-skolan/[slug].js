@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
-import { Section, Title, Text, Box, Span } from '../../components/Core'
+import { Section, Title, Box, Span, Typography } from '../../components/Core'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 import { urlFor } from '../../utils/helpers'
@@ -88,7 +88,9 @@ const LessonDetails = ({ data, preview = false }) => {
               <Col lg="12">
                 <Title variant="hero">{lesson?.title && lesson.title}</Title>
                 <Box className="d-flex justify-content-center">
-                  <Text>{lesson?.date && lesson.date}</Text>
+                  <Typography.Paragraph>
+                    {lesson?.date && lesson.date}
+                  </Typography.Paragraph>
                 </Box>
               </Col>
             </Row>
@@ -107,11 +109,11 @@ const LessonDetails = ({ data, preview = false }) => {
                     </VideoContainer>
                   </Box>
                   <Box>
-                    <Text>
+                    <Typography.Paragraph>
                       <Span fontWeight="bold">Open Source skolan:</Span>{' '}
                       {lesson?.imageCard?.description &&
                         lesson.imageCard.description}
-                    </Text>
+                    </Typography.Paragraph>
                   </Box>
                 </Col>
               </Row>

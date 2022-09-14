@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Gravatar from 'react-gravatar'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text, Anchor } from '../../components/Core'
+import { Title, Section, Box, Anchor, Typography } from '../../components/Core'
 import Link from 'next/link'
 import { formatPhoneNumber, urlFor } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'
@@ -70,15 +70,13 @@ const TeamCard = ({ coworker }) => {
             )}
           </CardImage>
           <div className="text-center">
-            <Title variant="card" fontSize="24px" letterSpacing={-0.75} my={1}>
-              {fullname}
-            </Title>
-            <Text fontSize={2} pt="9px" lineHeight={1.2}>
+            <Title variant="card">{fullname}</Title>
+            <Typography.Caption additionalClassName="tw-p-1">
               {status}
-            </Text>
-            <Text fontSize={2} pt="6px" pb="9px" lineHeight={1.2}>
+            </Typography.Caption>
+            <Typography.Caption additionalClassName="tw-pb-2">
               {role}
-            </Text>
+            </Typography.Caption>
           </div>
           <div className="text-center d-flex flex-column">
             {phoneNumber && (
@@ -134,7 +132,7 @@ const Team = ({ content, coworkers }) => {
             <Col lg="6" className="text-center pb-3">
               <div id="medarbetare" className="">
                 <Title>{content.title}</Title>
-                <Text>{content.subtitle}</Text>
+                <Typography.Paragraph>{content.subtitle}</Typography.Paragraph>
               </div>
             </Col>
           </Row>

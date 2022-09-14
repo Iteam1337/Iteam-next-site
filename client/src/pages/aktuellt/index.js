@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
-import { Section, Title, Text, Anchor } from '../../components/Core'
+import { Section, Title, Anchor } from '../../components/Core'
 import BlogList from '../../sections/aktuellt/BlogList'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'

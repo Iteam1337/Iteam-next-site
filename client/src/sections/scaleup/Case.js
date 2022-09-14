@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { Title, Button, Section, Box, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
 const ImageRight = styled(Box)`
@@ -36,8 +36,9 @@ const Case = ({ content }) => {
             >
               <div>
                 <Title>{content.title}</Title>
-                <Text mb={4}>{content.preview.imageCard.description}</Text>
-
+                <Typography.Paragraph additionalClassName="tw-mb-12">
+                  {content.preview.imageCard.description}
+                </Typography.Paragraph>
                 <Box>
                   <Button
                     onClick={() =>

@@ -6,7 +6,7 @@ import {
   Button,
   Section,
   Box,
-  Text,
+  Typography,
   Anchor,
 } from '../../components/Core'
 
@@ -20,19 +20,8 @@ const FeatureCard = ({
   <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>
     <div className="d-flex justify-content-between align-items-start">
       <div>
-        <Text
-          color="heading"
-          as="h3"
-          fontSize={4}
-          fontWeight={700}
-          letterSpacing={-0.75}
-          mb={2}
-        >
-          {title}
-        </Text>
-        <Text fontSize={2} lineHeight={1.75}>
-          {children}
-        </Text>
+        <Title variant="card">{title}</Title>
+        <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
       </div>
     </div>
   </Box>
@@ -54,7 +43,7 @@ const Feature = () => (
           >
             <Box>
               <Title color="light">Vi bygger din idé</Title>
-              <Text color="light">
+              <Typography.Paragraph light>
                 {/* Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text> */}
                 Oavsett om du har ett problem du behöver lösa eller redan har en
                 idé så hjälper vi dig. Vi börjar där du står och utgår ifrån det
@@ -62,7 +51,7 @@ const Feature = () => (
                 <Anchor href="#design_sprint"> Designsprint </Anchor>
                 för att kickstarta samarbetet. Andra gånger gör vi research om
                 användarbehov för att försäkra oss om att vi löser rätt problem.
-              </Text>
+              </Typography.Paragraph>
               <Button mt={4} onClick={() => (window.location.href = '#book')}>
                 Boka möte
               </Button>

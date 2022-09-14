@@ -22,34 +22,27 @@ const Logo = ({
           vertical ? (
             <img
               src={imgL1VericalLogoWhite}
-              style={{ marginTop: 15 }}
-              alt="Iteam logo"
-              height="150"
+              className="tw-mt-1 tw-h-[150px]"
               aria-hidden="true"
             />
           ) : (
             <img
               src={imgL1LogoWhite}
-              style={{ marginTop: 15 }}
-              alt="Iteam logo"
-              width="150"
+              className="tw-mt-3.5 tw-w-[150px]"
               aria-hidden="true"
             />
           )
         ) : vertical ? (
           <img
             src={imgL1VericalLogo}
-            alt="Iteam logo"
-            height="150"
             aria-hidden="true"
+            className="tw-mt-3.5 tw-h-[150px]"
           />
         ) : (
           <img
             src={imgL1Logo}
-            style={{ marginTop: 15 }}
-            alt="Iteam logo"
-            width="150"
             aria-hidden="true"
+            className="tw-mt-3.5 tw-w-[150px]"
           />
         )}
       </a>

@@ -3,7 +3,14 @@ import styled from 'styled-components'
 
 import { Container, Row, Col, FormControl } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text, Badge } from '../../components/Core'
+import {
+  Title,
+  Button,
+  Section,
+  Box,
+  Typography,
+  Badge,
+} from '../../components/Core'
 import GlobalContext from '../../context/GlobalContext'
 
 import imgHero from '../../assets/image/png/Sofa-Large.png'
@@ -112,11 +119,11 @@ const Hero = () => {
                   <Title color="dark">
                     Utbildning i öppen källkod och modern applikationsutveckling
                   </Title>
-                  <Text color="dark">
+                  <Typography.Paragraph>
                     Gå en distanskurs i modern applikationsutveckling med några
                     av branschens bästa utvecklare, agila coacher och UX
                     designers
-                  </Text>
+                  </Typography.Paragraph>
 
                   <BoxPrice mt={4} mb={3}>
                     <Box className="d-flex align-items-center">
@@ -124,7 +131,9 @@ const Hero = () => {
                         {price}kr
                       </Title>
                     </Box>
-                    <Text color="lightShade">per person</Text>
+                    <Typography.Paragraph light>
+                      per person
+                    </Typography.Paragraph>
                   </BoxPrice>
 
                   <div className="d-flex pt-2">
@@ -141,7 +150,9 @@ const Hero = () => {
                       </BtnGroup>
                     </ProductQty>
                     {qty < 5 ? (
-                      <Text variant="small">Minst fem personer</Text>
+                      <Typography.ParagraphSmall>
+                        Minst fem personer
+                      </Typography.ParagraphSmall>
                     ) : (
                       <Button bg="warning" color="dark" mb={2}>
                         Boka för {qty * price} kr

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import { Title, Box, Text, Span, Anchor } from '../Core'
+import { Title, Box, Span, Anchor, Typography } from '../Core'
 import { device } from '../../utils'
 import client from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
@@ -67,16 +67,16 @@ const PostCard = ({
       </Box>
       <CardText>
         {preTitle && (
-          <Text fontSize={2} lineHeight={1.75} mb="14px">
+          <Typography.Caption additionalClassName="tw-mb-2">
             {preTitle}
-          </Text>
+          </Typography.Caption>
         )}
         <TitleStyled variant="card" mb="14px">
           {title}
         </TitleStyled>
-        <Text fontSize={2} lineHeight={1.75} mb="16px">
+        <Typography.ParagraphSmall additionalClassName="tw-mb-2">
           {children}
-        </Text>
+        </Typography.ParagraphSmall>
         {readMore && (
           <Box>
             <Anchor href={link}>

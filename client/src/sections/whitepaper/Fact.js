@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 
 const SectionStyled = styled(Section)`
@@ -23,21 +23,25 @@ const Fact = () => (
           <Col md="4" className="mb-5">
             <Box>
               <Title color="secondary">26</Title>
-              <Text>år har Iteam jobbat med digitalisering.</Text>
+              <Typography.Paragraph>
+                år har Iteam jobbat med digitalisering.
+              </Typography.Paragraph>
             </Box>
           </Col>
           <Col md="4" className="mb-5">
             <Box>
               <Title color="secondary">92%</Title>
-              <Text>Satisfaction rate comes from our awesome customers.</Text>
+              <Typography.Paragraph>
+                Satisfaction rate comes from our awesome customers.
+              </Typography.Paragraph>
             </Box>
           </Col>
           <Col md="4" className="mb-5">
             <Box>
               <Title color="secondary">4.9/5.0</Title>
-              <Text>
+              <Typography.Paragraph>
                 Average customer ratings we have got all over internet.
-              </Text>
+              </Typography.Paragraph>
             </Box>
           </Col>
         </Row>

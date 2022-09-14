@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Text } from '../../components/Core'
+import { Title, Section, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
 const SectionStyled = styled(Section)`
@@ -48,7 +48,7 @@ const Hero = ({ title, children, heroImage }) => {
                 <Title color="dark" variant="hero">
                   {title}
                 </Title>
-                <Text color="dark">{children}</Text>
+                <Typography.Paragraph>{children}</Typography.Paragraph>
               </div>
             </Col>
           </Row>

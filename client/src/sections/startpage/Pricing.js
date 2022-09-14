@@ -8,7 +8,7 @@ import {
   Title,
   Section,
   Box,
-  Text,
+  Typography,
   Badge,
   Button,
   Switch,
@@ -70,6 +70,7 @@ const ULStyled = styled.ul`
       position: relative;
       top: 9px;
       margin-right: 13px;
+      flex-shrink: 0;
     }
   }
 `
@@ -138,10 +139,10 @@ const Pricing = ({ content }) => {
           </Row>
           <div className="text-center pt-5">
             <div className="d-inline-flex justify-content-between align-items-center mb-5">
-              <Text>{content.onGoing}</Text>
+              <Typography.Paragraph>{content.onGoing}</Typography.Paragraph>
               <Switch onClick={() => setTimeMonthly(!timeMonthly)} />
               <div className="d-flex align-items-center">
-                <Text>{content.agreement}</Text>
+                <Typography.Paragraph>{content.agreement}</Typography.Paragraph>
                 <Badge ml={2}>{content.discount}</Badge>
               </div>
             </div>
@@ -153,22 +154,17 @@ const Pricing = ({ content }) => {
                     <TitleSmall>{content.team}</TitleSmall>
                     <div className="d-flex align-items-end justify-content-center my-3">
                       <Currency>{content.value}</Currency>
-                      <Text
-                        css={`
-                          font-size: 80px !important;
-                          letter-spacing: -1.38px;
-                          margin-bottom: 14px !important;
-                          font-weight: 700;
-                        `}
-                      >
+                      <Typography.Paragraph additionalClassName="tw-mb-4 tw-text-7xl tw-font-bold tw-tracking-tighter">
                         {timeMonthly ? content.price : content.priceOngoing}
-                      </Text>
+                      </Typography.Paragraph>
                       <TimePer>/h</TimePer>
                     </div>
-                    <Text fontSize="18px">{content.priceIncluding}</Text>
+                    <Typography.ParagraphSmall>
+                      {content.priceIncluding}
+                    </Typography.ParagraphSmall>
                     <ULStyled>
                       {content.includes.map((include, i) => (
-                        <li key={i}>{include} </li>
+                        <li key={i}>{include}</li>
                       ))}
                     </ULStyled>
                   </div>

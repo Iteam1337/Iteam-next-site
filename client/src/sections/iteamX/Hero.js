@@ -1,7 +1,14 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
-import { Title, Button, Section, Box, Text, Span } from '../../components/Core'
+import {
+  Title,
+  Button,
+  Section,
+  Box,
+  Typography,
+  Span,
+} from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
 
 const Hero = ({ content }) => {
@@ -24,7 +31,9 @@ const Hero = ({ content }) => {
                   {title}
                   <Span color="secondary">.</Span>
                 </Title>
-                <Text color="light">{content.subtitle}</Text>
+                <Typography.Paragraph light>
+                  {content.subtitle}
+                </Typography.Paragraph>
                 <Box
                   pt="12px"
                   data-aos="fade-up"

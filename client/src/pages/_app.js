@@ -13,6 +13,7 @@ import '../../node_modules/aos/dist/aos.css'
 import '../assets/fonts/icon-font/css/style.css'
 import '../assets/fonts/fontawesome-5/css/all.css'
 import '../assets/fonts/roboto/css/style.css'
+import '../styles/globals.css'
 
 const tagManagerArgs = {
   gtmId: 'GTM-MP7MZVC',

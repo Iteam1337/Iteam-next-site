@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { Title, Button, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 
 import imgContent from '../../assets/image/jpeg/Teacher-Christian.jpg'
@@ -38,11 +38,14 @@ const Content3 = () => {
                     Den här utbildningen borde vara obligatorisk i offentlig
                     sektor
                   </Title>
-                  <Text mb={4} color="dark" opacity={0.7}>
+                  <Typography.Paragraph
+                    additionalClassName="tw-mb-4 tw-opacity-70"
+                    color="dark"
+                  >
                     Create custom landing pages with Omega that convert more
                     visitors than any website. With lots of unique blocks, you
                     can easily build a page without coding.
-                  </Text>
+                  </Typography.Paragraph>
                   <div className="d-flex flex-column align-items-start pt-3">
                     <Button bg="warning" color="dark">
                       Try it now

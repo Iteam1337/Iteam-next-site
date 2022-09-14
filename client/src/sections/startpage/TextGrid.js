@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Section, Box, Text } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 import BlockContent from '../../components/BlockContent'
 
@@ -21,7 +21,7 @@ const FeatureCard = ({ title, children, ...rest }) => (
       <Title variant="card" fontSize="24px" mb={3}>
         {title}
       </Title>
-      <Text variant="small">{children}</Text>
+      <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
     </Box>
   </Box>
 )

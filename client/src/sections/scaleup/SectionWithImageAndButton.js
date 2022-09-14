@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Button, Section, Box, Text } from '../../components/Core'
+import { Title, Button, Section, Box } from '../../components/Core'
 import { device } from '../../utils'
 import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
@@ -60,9 +60,7 @@ const SectionWithImageAndButton = ({ content }) => {
           </Col>
           <Col md={8} lg={6} className="position-relative mb-5 mb-lg-0">
             <ImageHalfContainer>
-              <div
-                className="h-100"
-              >
+              <div className="h-100">
                 <img
                   src={urlFor(imageWithAlt.asset._ref)}
                   alt={imageWithAlt.alt}

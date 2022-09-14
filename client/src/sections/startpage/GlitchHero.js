@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 
-import { Title, Text, Button } from '../../components/Core'
+import { Title, Typography, Button } from '../../components/Core'
 import heroImg from '../../assets/image/jpeg/new_colleagues.jpg'
 
 const GlitchHero = () => {
@@ -33,13 +33,13 @@ const GlitchHero = () => {
                   <br />
                   har massor att berätta
                 </Title>
-                <Text mb={4} color="light">
+                <Typography.Paragraph light>
                   <TextBg>
                     Hållbarhet och digital innovation sitter lika naturligt ihop
                     som Batman och Robin. Det attraherar både kunder och smarta
                     medarbetare.
                   </TextBg>
-                </Text>
+                </Typography.Paragraph>
                 <Button
                   css={`
                     margin-top: 20px;
