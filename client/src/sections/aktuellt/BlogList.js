@@ -22,7 +22,7 @@ export default function BlogList({ posts }) {
               _type == 'openSourceLesson' ? 'open-source-skolan' : 'aktuellt'
             return (
               <Col lg="4" className="mb-5" key={i}>
-                <Card
+                <Card.BaseCard
                   img={imageCard.image}
                   preTitle={date}
                   link={`/${prefix}/${slug.current}`}
@@ -30,7 +30,7 @@ export default function BlogList({ posts }) {
                   readMore
                 >
                   {imageCard.description}
-                </Card>
+                </Card.BaseCard>
               </Col>
             )
           })}
