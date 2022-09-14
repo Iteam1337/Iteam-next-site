@@ -15,13 +15,15 @@ export const BaseCard = ({
   readMore,
   email,
   customImgAlt,
+  team,
 }) => {
   const imageProps = useNextSanityImage(client, img?.asset._ref)
   return (
     <li
       className={clsx(
         'tw-group tw-relative tw-flex tw-flex-col tw-rounded-md tw-border-[1px] tw-border-solid tw-border-border-color',
-        'focus-within:tw-shadow-xl hover:tw-shadow-xl'
+        'focus-within:tw-shadow-xl hover:tw-shadow-xl',
+        team && 'tw-text-center'
       )}
     >
       <div className="tw-grow-1 tw-order-2 tw-flex tw-flex-col tw-p-6 last:tw-mt-10">
