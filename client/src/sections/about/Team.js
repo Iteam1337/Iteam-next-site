@@ -137,8 +137,8 @@ const Team = ({ content, coworkers }) => {
               </div>
             </Col>
           </Row>
-          <Row className="justify-content-center">
-            {sortedTeam.map((coworker, index) => {
+          <ul className="justify-content-center">
+            {sortedTeam.map((coworker) => {
               const {
                 phoneNumber,
                 email,
@@ -150,27 +150,20 @@ const Team = ({ content, coworkers }) => {
                 socialMedia,
               } = coworker
               return (
-                <StyledCol
-                  sm="6"
-                  md="5"
-                  lg="4"
-                  className="mt-3 mt-lg-4"
-                  key={index}
-                >
-                  <Card.TeamCard
-                    phoneNumber={phoneNumber}
-                    email={email}
-                    fullname={fullname}
-                    status={status}
-                    role={role}
-                    slug={slug}
-                    profilePic={profilePic}
-                    socialMedia={socialMedia}
-                  />
-                </StyledCol>
+                <Card.TeamCard
+                  key={slug.current}
+                  phoneNumber={phoneNumber}
+                  email={email}
+                  fullname={fullname}
+                  status={status}
+                  role={role}
+                  slug={slug}
+                  profilePic={profilePic}
+                  socialMedia={socialMedia}
+                />
               )
             })}
-          </Row>
+          </ul>
         </Container>
       </Section>
     </>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+
 import Card from '../../components/Card/'
-import { Section, Box } from '../../components/Core'
-import PostCard from '../../components/PostCard'
+import { Section } from '../../components/Core'
 
 export default function BlogList({ posts }) {
   const sortedPosts = posts.sort((a, b) => {
@@ -15,26 +15,25 @@ export default function BlogList({ posts }) {
   return (
     <Section className="pt-5 position-relative">
       <Container>
-        <Row className="justify-content-center">
-          {sortedPosts?.map((post, i) => {
+        <ul>
+          {sortedPosts?.map((post) => {
             const { imageCard, slug, date, title, _type } = post
             const prefix =
               _type == 'openSourceLesson' ? 'open-source-skolan' : 'aktuellt'
             return (
-              <Col lg="4" className="mb-5" key={i}>
-                <Card.BaseCard
-                  img={imageCard.image}
-                  preTitle={date}
-                  link={`/${prefix}/${slug.current}`}
-                  title={title}
-                  readMore
-                >
-                  {imageCard.description}
-                </Card.BaseCard>
-              </Col>
+              <Card.BaseCard
+                key={slug.current}
+                img={imageCard.image}
+                preTitle={date}
+                link={`/${prefix}/${slug.current}`}
+                title={title}
+                readMore
+              >
+                {imageCard.description}
+              </Card.BaseCard>
             )
           })}
-        </Row>
+        </ul>
       </Container>
     </Section>
   )
