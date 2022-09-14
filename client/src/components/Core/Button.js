@@ -24,7 +24,6 @@ const ButtonSolid = styled.button`
   transform: perspective(1px) translateZ(0);
   position: relative;
   overflow: hidden;
-  outline: none !important;
   white-space: nowrap;
   ${color};
   ${background};

@@ -9,7 +9,7 @@ import {
   layout,
 } from 'styled-system'
 
-const SwitchStyled = styled.div`
+const SwitchStyled = styled.button`
   display: inline-block;
   cursor: pointer;
   width: 72px;
@@ -17,7 +17,7 @@ const SwitchStyled = styled.div`
   border-radius: 17px;
   transition: all 0.3s ease-out;
   background: ${({ active, theme, bg }) =>
-    active ? theme.colors[bg] :  theme.colors.darkShade};
+    active ? theme.colors[bg] : theme.colors.darkShade};
   position: relative;
   margin: 0 15px;
   white-space: nowrap;
@@ -27,6 +27,14 @@ const SwitchStyled = styled.div`
   ${shadow};
   ${flexbox};
   ${layout};
+
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.secondary};
+    outline-offset: 3px;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
 `
 
 const Round = styled.span`
@@ -50,7 +58,6 @@ const Switch = ({ bg = 'secondary', onClick = () => {}, ...rest }) => {
 
   const handleSwitch = () => {
     setActive(!active)
-    onClick()
   }
 
   return (
@@ -59,8 +66,9 @@ const Switch = ({ bg = 'secondary', onClick = () => {}, ...rest }) => {
       {...rest}
       onClick={handleSwitch}
       active={active ? 1 : 0}
+      aria-label={active ? 'Klicka för löpande pris' : 'Klicka för fast avtal'}
     >
-      <Round active={active ? 1 : 0} />
+      <Round active={active ? 1 : 0} aria-hidden="true" />
     </SwitchStyled>
   )
 }

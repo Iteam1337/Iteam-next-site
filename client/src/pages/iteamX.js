@@ -14,7 +14,7 @@ import { usePreviewSubscription } from '../lib/sanity'
 import { filterDataToSingleItem, urlFor } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
-import { SectionWithButtonAndTextGrid } from '../components/Sections'
+import { SectionWithButtonAndTextGrid } from '../sections/common'
 
 const IteamX = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.xPageQuery, {

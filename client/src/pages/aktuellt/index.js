@@ -75,7 +75,14 @@ export default function BlogRegular({ query, data, preview = false }) {
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
-              <Title variant="hero" pb="4">{title && title}</Title>
+              <Title variant="hero" pb="4">
+                {title && title}
+              </Title>
+              <Title className="visibility-hidden">
+                {(filterParam == 'alla' && 'Allt') ||
+                  (filterParam == 'blogg' && 'Blogg') ||
+                  (filterParam == 'open-source-skolan' && 'Open Source Skolan')}
+              </Title>
               {mixedPosts && (
                 <Col lg="8">
                   <Anchor

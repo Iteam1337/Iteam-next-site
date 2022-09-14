@@ -17,27 +17,40 @@ const Logo = ({
 }) => {
   return (
     <Link href="/">
-      <a className={`${className}`} {...rest}>
+      <a className={`${className}`} {...rest} aria-label="Länk till startsidan">
         {white ? (
           vertical ? (
             <img
               src={imgL1VericalLogoWhite}
               style={{ marginTop: 15 }}
-              alt="Iteam"
+              alt="Iteam logo"
               height="150"
+              aria-hidden="true"
             />
           ) : (
             <img
               src={imgL1LogoWhite}
               style={{ marginTop: 15 }}
-              alt="Iteam"
+              alt="Iteam logo"
               width="150"
+              aria-hidden="true"
             />
           )
         ) : vertical ? (
-          <img src={imgL1VericalLogo} alt="" height="150" />
+          <img
+            src={imgL1VericalLogo}
+            alt="Iteam logo"
+            height="150"
+            aria-hidden="true"
+          />
         ) : (
-          <img src={imgL1Logo} style={{ marginTop: 15 }} alt="" width="150" />
+          <img
+            src={imgL1Logo}
+            style={{ marginTop: 15 }}
+            alt="Iteam logo"
+            width="150"
+            aria-hidden="true"
+          />
         )}
       </a>
     </Link>

@@ -3,7 +3,6 @@ import { createGlobalStyle } from 'styled-components'
 const globalStyle = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.colors.bg} !important;
-
     color: ${({ theme }) => theme.colors.text} !important;
   }
 
@@ -24,13 +23,26 @@ const globalStyle = createGlobalStyle`
 
   a {
     transition: all 0.3s ease-out;
-   &:focus-visible {
+    &:focus-visible {
       outline: 2px solid ${({ theme }) => theme.colors.secondary} !important;
       transition: none !important;
     }
-    &:hover, active {
+    &:hover {
       outline: none !important;
       text-decoration: none;
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    &:focus-visible {
+      outline: 2px solid ${({ theme }) => theme.colors.secondary};
+      outline-offset: 3px;
+    }
+    :focus:not(:focus-visible) {
+      outline: none;
     }
   }
 
@@ -43,6 +55,18 @@ const globalStyle = createGlobalStyle`
 
     input[type="number"] {
       -moz-appearance: textfield; /* Firefox */
+    }
+
+    .visibility-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
     }
 `
 

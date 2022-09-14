@@ -8,6 +8,7 @@ import React, {
 import styled, { ThemeProvider } from 'styled-components'
 import Head from 'next/head'
 import AOS from 'aos'
+import { get, merge } from 'lodash'
 
 import Header from '../Header'
 import Footer from '../Footer'
@@ -15,8 +16,7 @@ import ModalVideo from '../ModalVideo'
 import GlobalContext from '../../context/GlobalContext'
 import GlobalStyle from '../../utils/globalStyle'
 import imgFavicon from '../../assets/image/png/favicon.png'
-
-import { get, merge } from 'lodash'
+import SkipLink from '../SkipLink'
 // the full theme object
 import { theme as baseTheme } from '../../utils'
 
@@ -72,10 +72,10 @@ const Layout = ({ children, pageContext, footer }) => {
         }
       >
         <GlobalStyle />
+        <SkipLink />
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
-          {children}
+          <main id="main-content">{children}</main>
         </div>
-
         <ModalVideo />
       </ThemeProvider>
     )
@@ -93,13 +93,12 @@ const Layout = ({ children, pageContext, footer }) => {
           <title>Iteam</title>
           <link rel="icon" type="image/png" href={imgFavicon} />
         </Head>
+        <SkipLink />
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
           <Header isDark={gContext.headerDark} />
-          {children}
-
+          <main id="main-content">{children}</main>
           <Footer isDark={gContext.footerDark} content={footer} />
         </div>
-
         <ModalVideo />
       </ThemeProvider>
     </>

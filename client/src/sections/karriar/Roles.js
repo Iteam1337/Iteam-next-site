@@ -5,7 +5,7 @@ import { Title, Section } from '../../components/Core'
 import styled from 'styled-components'
 import BlockContent from '../../components/BlockContent'
 
-const Card = styled.a`
+const Card = styled.section`
   justify-content: flex-start;
   min-height: 100%;
   box-shadow: 0 2px 4px rgba(14, 86, 124, 0.17);
@@ -16,10 +16,12 @@ const Card = styled.a`
   padding: 35px;
   transition: 0.4s;
   border-radius: 10px;
-  cursor: pointer;
   &:hover {
     box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
     text-decoration: none;
+  }
+  &:focus-within {
+    box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
   }
 `
 
@@ -45,18 +47,20 @@ const RolesCard = ({
   link,
   ...rest
 }) => (
-  <Link href={link}>
-    <Card className="card-job top-only" {...rest}>
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <Location>
-          <i className="icon icon-pin-3 mr-1" /> {location}
-        </Location>
-      </div>
-      <Title variant="card" className="title" fontWeight={500}>
-        {title}
-      </Title>
-    </Card>
-  </Link>
+  <Card className="card-job top-only" {...rest}>
+    <Link href={link}>
+      <a>
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <Location>
+            <i className="icon icon-pin-3 mr-1" aria-hidden="true" /> {location}
+          </Location>
+        </div>
+        <Title variant="card" className="title" fontWeight={500}>
+          {title}
+        </Title>
+      </a>
+    </Link>
+  </Card>
 )
 
 const Roles = ({ content, openPositions }) => (
