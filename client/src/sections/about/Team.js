@@ -7,6 +7,7 @@ import { Title, Section, Box, Anchor, Typography } from '../../components/Core'
 import Link from 'next/link'
 import { formatPhoneNumber, urlFor } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'
+import Card from '../../components/Card'
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -137,17 +138,38 @@ const Team = ({ content, coworkers }) => {
             </Col>
           </Row>
           <Row className="justify-content-center">
-            {sortedTeam.map((coworker, index) => (
-              <StyledCol
-                sm="6"
-                md="5"
-                lg="4"
-                className="mt-3 mt-lg-4"
-                key={index}
-              >
-                <TeamCard coworker={coworker} />
-              </StyledCol>
-            ))}
+            {sortedTeam.map((coworker, index) => {
+              const {
+                phoneNumber,
+                email,
+                fullname,
+                status,
+                role,
+                slug,
+                profilePic,
+                socialMedia,
+              } = coworker
+              return (
+                <StyledCol
+                  sm="6"
+                  md="5"
+                  lg="4"
+                  className="mt-3 mt-lg-4"
+                  key={index}
+                >
+                  <Card.TeamCard
+                    phoneNumber={phoneNumber}
+                    email={email}
+                    fullname={fullname}
+                    status={status}
+                    role={role}
+                    slug={slug}
+                    profilePic={profilePic}
+                    socialMedia={socialMedia}
+                  />
+                </StyledCol>
+              )
+            })}
           </Row>
         </Container>
       </Section>
