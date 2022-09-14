@@ -2,7 +2,7 @@ import React from 'react'
 
 import SocialMediaLinks from '../../sections/about/SocialMediaLinks'
 import { formatPhoneNumber } from '../../utils/helpers'
-import { Typography } from '../Core'
+import { Anchor, Typography } from '../Core'
 import { BaseCard } from './BaseCard'
 
 export const TeamCard = ({
@@ -22,28 +22,29 @@ export const TeamCard = ({
       customImgAlt={`Profilbild på ${fullname}`}
       title={fullname}
       email={email}
+      team
     >
       <div className="text-center">
-        <Typography.Caption additionalClassName="tw-p-1">
-          {status}
-        </Typography.Caption>
-        <Typography.Caption additionalClassName="tw-pb-2">
+        <Typography.Caption>{status}</Typography.Caption>
+        <Typography.Caption additionalClassName="tw-py-2">
           {role}
         </Typography.Caption>
       </div>
       <div className="tw-relative tw-flex tw-flex-col">
         {phoneNumber && (
-          <a href={`tel:${phoneNumber}`} fontSize="14px" lineHeight="1.3">
-            {formatPhoneNumber(phoneNumber)}
-          </a>
+          <Typography.Caption>
+            <Anchor href={`tel:${phoneNumber}`}>
+              {formatPhoneNumber(phoneNumber)}
+            </Anchor>
+          </Typography.Caption>
         )}
         {email && (
-          <a href={`mailto:${email}`} fontSize="14px" lineHeight="1.3">
-            {email}
-          </a>
+          <Typography.Caption>
+            <Anchor href={`mailto:${email}`}>{email}</Anchor>
+          </Typography.Caption>
         )}
         {socialMedia && (
-          <div>
+          <div className="tw-pt-3">
             <SocialMediaLinks socialMedia={socialMedia} fullname={fullname} />
           </div>
         )}
