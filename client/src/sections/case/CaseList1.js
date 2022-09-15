@@ -2,16 +2,16 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Card from '../../components/Card'
-import { Section, Title, Typography } from '../../components/Core'
+import CardList from '../../components/CardList'
+import { Section, Title } from '../../components/Core'
 
-const Column = (props) => <Col sm={6} lg={4} className="mb-4" {...props} />
 const CaseList = ({ posts }) => {
   return (
     <>
       <Section className="position-relative">
         <Container>
           <Title className="sr-only">Utvalda case</Title>
-          <ul>
+          <CardList>
             {posts.map((post) => {
               const { preview, slug } = post
               return (
@@ -26,7 +26,7 @@ const CaseList = ({ posts }) => {
                 </Card.PostCard>
               )
             })}
-          </ul>
+          </CardList>
         </Container>
       </Section>
     </>

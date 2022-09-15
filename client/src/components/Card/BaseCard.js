@@ -21,7 +21,7 @@ export const BaseCard = ({
   return (
     <li
       className={clsx(
-        'tw-group tw-relative tw-flex tw-cursor-pointer tw-flex-col tw-rounded-md tw-border-[1px] tw-border-solid tw-border-border-color',
+        'tw-group tw-relative tw-mt-2 tw-flex tw-cursor-pointer tw-flex-col tw-rounded-md tw-border-[1px] tw-border-solid tw-border-border-color',
         'focus-within:tw-shadow-xl hover:tw-shadow-xl',
         centerContent && 'tw-justify-center'
       )}
