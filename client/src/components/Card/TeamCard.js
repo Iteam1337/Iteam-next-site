@@ -6,25 +6,29 @@ import { Anchor, Typography } from '../Core'
 import { BaseCard } from './BaseCard'
 
 export const TeamCard = ({
-  phoneNumber,
-  email,
+  link,
   fullname,
+  img,
+  title,
   status,
   role,
-  slug,
-  profilePic,
+  phoneNumber,
+  email,
   socialMedia,
+  customImgAlt,
 }) => {
   return (
     <BaseCard
-      link={`/about/${slug.current}`}
-      img={profilePic?.image}
-      customImgAlt={`Profilbild på ${fullname}`}
-      title={fullname}
-      email={email}
-      team
+      link={link}
+      img={img}
+      preTitle=""
+      title={title}
+      readMore={false}
+      customImgAlt={customImgAlt}
+      gravatarEmail={email}
+      centerContent={true}
     >
-      <div className="text-center">
+      <div>
         <Typography.Caption>{status}</Typography.Caption>
         <Typography.Caption additionalClassName="tw-py-2">
           {role}
