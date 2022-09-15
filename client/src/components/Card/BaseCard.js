@@ -15,11 +15,11 @@ export const BaseCard = ({
   return (
     <li
       className={clsx(
-        'tw-group tw-relative tw-mt-2 tw-flex tw-cursor-pointer tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-border-color tw-transition',
+        'tw-group tw-relative tw-mt-2 tw-flex tw-cursor-pointer tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-border-color tw-bg-white tw-transition',
         'focus-within:tw-shadow-xl hover:tw-shadow-lg motion-reduce:tw-transition-none'
       )}
     >
-      <div className="tw-order-2 tw-flex tw-grow tw-flex-col tw-p-6 last:tw-mt-10">
+      <div className="tw-order-2 tw-flex tw-grow tw-flex-col tw-p-6 tw-pt-8">
         <Title
           variant="card"
           className={clsx(
@@ -35,16 +35,7 @@ export const BaseCard = ({
             {title}
           </Anchor>
         </Title>
-        {preTitle && (
-          <Typography.Caption
-            additionalClassName={clsx(
-              'tw-order-1',
-              centerContent && 'tw-text-center'
-            )}
-          >
-            {preTitle}
-          </Typography.Caption>
-        )}
+        {preTitle && preTitle}
         <div className={clsx('tw-order-3', centerContent && 'tw-text-center')}>
           {children}
         </div>
