@@ -29,12 +29,16 @@ export const TeamCard = ({
       centerContent={true}
     >
       <div>
-        <Typography.Caption>{status}</Typography.Caption>
-        <Typography.Caption additionalClassName="tw-py-2">
+        {status && (
+          <Typography.Caption additionalClassName="tw-pt-3">
+            {status}
+          </Typography.Caption>
+        )}
+        <Typography.Caption additionalClassName="tw-pt-3">
           {role}
         </Typography.Caption>
       </div>
-      <div className="tw-relative tw-flex tw-flex-col">
+      <div className="tw-relative tw-flex tw-flex-col tw-pt-3">
         {phoneNumber && (
           <Typography.Caption>
             <Anchor href={`tel:${phoneNumber}`}>
