@@ -1,67 +1,11 @@
 import React from 'react'
-import Link from 'next/link'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Section } from '../../components/Core'
 import styled from 'styled-components'
+
+import { Title, Section } from '../../components/Core'
 import BlockContent from '../../components/BlockContent'
-
-const Card = styled.section`
-  justify-content: flex-start;
-  min-height: 100%;
-  box-shadow: 0 2px 4px rgba(14, 86, 124, 0.17);
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 35px;
-  transition: 0.4s;
-  border-radius: 10px;
-  &:hover {
-    box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
-    text-decoration: none;
-  }
-  &:focus-within {
-    box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
-  }
-`
-
-const Location = styled.span`
-  color: ${({ theme }) => theme.colors.dark};
-  font-size: 16px;
-  font-weight: 300;
-  margin-right: 5px;
-  display: flex;
-  align-items: flex-start;
-
-  > i {
-    margin-top: 4px;
-  }
-`
-
-const RolesCard = ({
-  color = 'primary',
-  title,
-  location,
-  type,
-  children,
-  link,
-  ...rest
-}) => (
-  <Card className="card-job top-only" {...rest}>
-    <Link href={link}>
-      <a>
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <Location>
-            <i className="icon icon-pin-3 mr-1" aria-hidden="true" /> {location}
-          </Location>
-        </div>
-        <Title variant="card" className="title" fontWeight={500}>
-          {title}
-        </Title>
-      </a>
-    </Link>
-  </Card>
-)
+import Card from '../../components/Card'
+import CardList from '../../components/CardList'
 
 const Roles = ({ content, openPositions }) => (
   <>
@@ -78,19 +22,17 @@ const Roles = ({ content, openPositions }) => (
             </div>
           </Col>
         </Row>
-        <Row className="mt-lg-5 justify-content-center">
-          {openPositions.map((openPosition, index) => (
-            <Col lg="4" md="6" className="pt-4" key={index}>
-              <RolesCard
-                color="warning"
-                title={openPosition.title}
-                type="Full-time"
-                location={openPosition.position}
-                link={`/karriar/${openPosition.slug.current}`}
-              />
-            </Col>
+        <CardList>
+          {openPositions.map((openPosition) => (
+            <Card.SimpleCard
+              key={openPosition.title}
+              link={`/karriar/${openPosition.slug.current}`}
+              preTitle={openPosition.position}
+              title={openPosition.title}
+              variant=""
+            />
           ))}
-        </Row>
+        </CardList>
       </Container>
     </Section>
   </>
