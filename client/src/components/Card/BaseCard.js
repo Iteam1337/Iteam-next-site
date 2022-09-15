@@ -1,7 +1,4 @@
 import React from 'react'
-import client from '../../sanity-client'
-import { useNextSanityImage } from 'next-sanity-image'
-import Gravatar from 'react-gravatar'
 import clsx from 'clsx'
 
 import { Anchor, Title, Typography } from '../Core'
@@ -12,18 +9,14 @@ export const BaseCard = ({
   preTitle,
   title,
   readMore,
-  customImgAlt,
-  gravatarEmail,
   centerContent,
   children,
 }) => {
-  const imageProps = useNextSanityImage(client, img?.asset._ref)
   return (
     <li
       className={clsx(
         'tw-group tw-relative tw-mt-2 tw-flex tw-cursor-pointer tw-flex-col tw-rounded-md tw-border-[1px] tw-border-solid tw-border-border-color',
-        'tw-overflow-hidden focus-within:tw-shadow-xl hover:tw-shadow-lg',
-        centerContent && 'tw-items-center'
+        'tw-overflow-hidden focus-within:tw-shadow-xl hover:tw-shadow-lg'
       )}
     >
       <div className="tw-order-2 tw-flex tw-grow tw-flex-col tw-p-6 last:tw-mt-10">
@@ -64,27 +57,7 @@ export const BaseCard = ({
           </Typography.Caption>
         )}
       </div>
-      <div
-        className={clsx(
-          'tw-h-80',
-          centerContent &&
-            'tw-mt-6 tw-max-h-[160px] tw-min-h-[160px] tw-min-w-[160px] tw-max-w-[160px] tw-overflow-hidden tw-rounded-full'
-        )}
-      >
-        {img ? (
-          <img
-            {...imageProps}
-            alt={customImgAlt ? customImgAlt : img.alt}
-            className="tw-order-1 tw-h-full tw-w-full tw-object-cover"
-          />
-        ) : (
-          <Gravatar
-            email={gravatarEmail}
-            className="tw-order-1 tw-h-auto tw-max-w-full"
-            size={200}
-          />
-        )}
-      </div>
+      {img && img}
     </li>
   )
 }
