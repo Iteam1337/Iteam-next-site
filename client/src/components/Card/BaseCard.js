@@ -15,8 +15,8 @@ export const BaseCard = ({
   return (
     <li
       className={clsx(
-        'tw-group tw-relative tw-mt-2 tw-flex tw-cursor-pointer tw-flex-col tw-rounded-md tw-border-[1px] tw-border-solid tw-border-border-color',
-        'tw-overflow-hidden focus-within:tw-shadow-xl hover:tw-shadow-lg'
+        'tw-group tw-relative tw-mt-2 tw-flex tw-cursor-pointer tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-border-color tw-transition',
+        'focus-within:tw-shadow-xl hover:tw-shadow-lg motion-reduce:tw-transition-none'
       )}
     >
       <div className="tw-order-2 tw-flex tw-grow tw-flex-col tw-p-6 last:tw-mt-10">
@@ -51,9 +51,12 @@ export const BaseCard = ({
         {readMore && (
           <Typography.Caption
             ariaHidden="true"
-            additionalClassName="peer-focus-within:tw-underline group-hover:tw-underline tw-order-4 tw-mt-auto tw-pt-4 tw-text-right"
+            additionalClassName={clsx(
+              'tw-transition-opacity tw-leading-none tw-opacity-0 tw-underline tw-order-4 tw-mt-0 tw-mb-0 tw-mt-auto tw-pt-1 tw-text-right',
+              'motion-reduce:tw-transition-none group-hover:tw-opacity-100 peer-focus-within:tw-opacity-100'
+            )}
           >
-            Läs mer...
+            Läs mer
           </Typography.Caption>
         )}
       </div>
