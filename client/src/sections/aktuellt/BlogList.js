@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Card from '../../components/Card/'
+import CardList from '../../components/CardList'
 import { Section, Typography } from '../../components/Core'
 
 export default function BlogList({ posts }) {
@@ -15,7 +16,7 @@ export default function BlogList({ posts }) {
   return (
     <Section className="pt-5 position-relative">
       <Container>
-        <ul>
+        <CardList>
           {sortedPosts?.map((post) => {
             const { imageCard, slug, date, title, _type } = post
             const prefix =
@@ -32,7 +33,7 @@ export default function BlogList({ posts }) {
               </Card.PostCard>
             )
           })}
-        </ul>
+        </CardList>
       </Container>
     </Section>
   )

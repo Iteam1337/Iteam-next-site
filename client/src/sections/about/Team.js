@@ -7,6 +7,7 @@ import { Title, Section, Box, Anchor, Typography } from '../../components/Core'
 import { formatPhoneNumber, urlFor } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'
 import Card from '../../components/Card'
+import CardList from '../../components/CardList'
 
 const CardImage = styled.div`
   max-width: 160px;
@@ -136,7 +137,7 @@ const Team = ({ content, coworkers }) => {
               </div>
             </Col>
           </Row>
-          <ul className="justify-content-center">
+          <CardList>
             {sortedTeam.map((coworker) => {
               const {
                 slug,
@@ -163,7 +164,7 @@ const Team = ({ content, coworkers }) => {
                 />
               )
             })}
-          </ul>
+          </CardList>
         </Container>
       </Section>
     </>
