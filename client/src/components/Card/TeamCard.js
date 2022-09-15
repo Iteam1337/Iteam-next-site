@@ -12,7 +12,7 @@ const TeamCardImage = ({ img, email, customImgAlt }) => {
   const imageProps = useNextSanityImage(client, img?.asset._ref)
   return (
     <div className="tw-flex tw-justify-center">
-      <div className="tw-mt-6 tw-max-h-[160px] tw-min-h-[160px] tw-min-w-[160px] tw-max-w-[160px] tw-overflow-hidden tw-rounded-full">
+      <div className="tw-mt-8 tw-max-h-[160px] tw-min-h-[160px] tw-min-w-[160px] tw-max-w-[160px] tw-overflow-hidden tw-rounded-full">
         {img ? (
           <img
             {...imageProps}
@@ -57,15 +57,15 @@ export const TeamCard = ({
     >
       <div>
         {status && (
-          <Typography.Caption additionalClassName="tw-pt-3">
+          <Typography.Caption additionalClassName="tw-pb-3">
             {status}
           </Typography.Caption>
         )}
-        <Typography.Caption additionalClassName="tw-pt-3">
+        <Typography.Caption additionalClassName="tw-pb-3">
           {role}
         </Typography.Caption>
       </div>
-      <div className="tw-relative tw-flex tw-flex-col tw-pt-3">
+      <div className="tw-relative tw-flex tw-flex-col tw-pb-3">
         {phoneNumber && (
           <Typography.Caption>
             <Anchor href={`tel:${phoneNumber}`}>
@@ -79,7 +79,7 @@ export const TeamCard = ({
           </Typography.Caption>
         )}
         {socialMedia && (
-          <div className="tw-pt-3">
+          <div className="tw-pt-3.5">
             <SocialMediaLinks socialMedia={socialMedia} fullname={fullname} />
           </div>
         )}
