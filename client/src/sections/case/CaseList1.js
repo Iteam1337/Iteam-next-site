@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Card from '../../components/Card'
-import { Section, Title } from '../../components/Core'
+import { Section, Title, Typography } from '../../components/Core'
 
 const Column = (props) => <Col sm={6} lg={4} className="mb-4" {...props} />
 const CaseList = ({ posts }) => {
@@ -15,15 +15,15 @@ const CaseList = ({ posts }) => {
             {posts.map((post) => {
               const { preview, slug } = post
               return (
-                <Card.BaseCard
+                <Card.PostCard
                   key={slug.current}
-                  img={preview.imageCard.image}
-                  title={preview.title}
                   link={`/case/${slug.current}`}
-                  readMore
+                  img={preview.imageCard.image}
+                  preTitle=""
+                  title={preview.title}
                 >
                   {preview.imageCard.description}
-                </Card.BaseCard>
+                </Card.PostCard>
               )
             })}
           </ul>

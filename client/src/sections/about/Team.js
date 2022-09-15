@@ -4,7 +4,6 @@ import Gravatar from 'react-gravatar'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Title, Section, Box, Anchor, Typography } from '../../components/Core'
-import Link from 'next/link'
 import { formatPhoneNumber, urlFor } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'
 import Card from '../../components/Card'
@@ -140,26 +139,27 @@ const Team = ({ content, coworkers }) => {
           <ul className="justify-content-center">
             {sortedTeam.map((coworker) => {
               const {
-                phoneNumber,
-                email,
+                slug,
+                profilePic,
                 fullname,
                 status,
                 role,
-                slug,
-                profilePic,
+                phoneNumber,
+                email,
                 socialMedia,
               } = coworker
               return (
                 <Card.TeamCard
                   key={slug.current}
-                  phoneNumber={phoneNumber}
-                  email={email}
-                  fullname={fullname}
+                  link={`/about/${slug.current}`}
+                  img={profilePic?.image}
+                  title={fullname}
                   status={status}
                   role={role}
-                  slug={slug}
-                  profilePic={profilePic}
+                  phoneNumber={phoneNumber}
+                  email={email}
                   socialMedia={socialMedia}
+                  customImgAlt={`Profilbild på ${fullname}`}
                 />
               )
             })}

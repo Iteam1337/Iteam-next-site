@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Card from '../../components/Card/'
-import { Section } from '../../components/Core'
+import { Section, Typography } from '../../components/Core'
 
 export default function BlogList({ posts }) {
   const sortedPosts = posts.sort((a, b) => {
@@ -21,16 +21,15 @@ export default function BlogList({ posts }) {
             const prefix =
               _type == 'openSourceLesson' ? 'open-source-skolan' : 'aktuellt'
             return (
-              <Card.BaseCard
+              <Card.PostCard
                 key={slug.current}
+                link={`/${prefix}/${slug.current}`}
                 img={imageCard.image}
                 preTitle={date}
-                link={`/${prefix}/${slug.current}`}
                 title={title}
-                readMore
               >
                 {imageCard.description}
-              </Card.BaseCard>
+              </Card.PostCard>
             )
           })}
         </ul>
