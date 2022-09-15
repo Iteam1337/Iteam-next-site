@@ -2,9 +2,9 @@ import React from 'react'
 import client from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
 import Gravatar from 'react-gravatar'
+import clsx from 'clsx'
 
 import { Anchor, Title, Typography } from '../Core'
-import clsx from 'clsx'
 
 export const BaseCard = ({
   link,
@@ -37,7 +37,7 @@ export const BaseCard = ({
           <Anchor
             aria-label={`${title}, Läs mer…`}
             href={link}
-            className="after:tw-inset-0 hover:tw-no-underline focus-visible:tw-outline-none"
+            className="after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
           >
             {title}
           </Anchor>
