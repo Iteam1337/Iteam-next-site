@@ -17,7 +17,7 @@ export const BaseCard = ({
   return (
     <li
       className={clsx(
-        'tw-group tw-relative tw-mt-2 tw-flex tw-cursor-pointer tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-gray-border tw-bg-white tw-transition',
+        'tw-group tw-relative tw-mt-2 tw-flex tw-flex-1 tw-cursor-pointer tw-flex-col tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-gray-border tw-bg-white tw-transition',
         'focus-within:tw-shadow-lg hover:tw-shadow-lg motion-reduce:tw-transition-none',
         variant === 'secondary' && 'tw-border-secondary tw-bg-secondary',
         bgDark && 'focus-within:tw-shadow-gray-light hover:tw-shadow-gray-light'

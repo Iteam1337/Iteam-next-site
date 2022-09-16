@@ -137,7 +137,7 @@ const Team = ({ content, coworkers }) => {
               </div>
             </Col>
           </Row>
-          <CardList>
+          <CardList.CardListGrid>
             {sortedTeam.map((coworker) => {
               const {
                 slug,
@@ -165,7 +165,7 @@ const Team = ({ content, coworkers }) => {
                 />
               )
             })}
-          </CardList>
+          </CardList.CardListGrid>
         </Container>
       </Section>
     </>

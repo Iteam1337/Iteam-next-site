@@ -16,7 +16,7 @@ export default function BlogList({ posts }) {
   return (
     <Section className="pt-5 position-relative">
       <Container>
-        <CardList>
+        <CardList.CardListGrid>
           {sortedPosts?.map((post) => {
             const { imageCard, slug, date, title, _type } = post
             const prefix =
@@ -34,7 +34,7 @@ export default function BlogList({ posts }) {
               </Card.PostCard>
             )
           })}
-        </CardList>
+        </CardList.CardListGrid>
       </Container>
     </Section>
   )

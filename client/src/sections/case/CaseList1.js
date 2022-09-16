@@ -11,7 +11,7 @@ const CaseList = ({ posts }) => {
       <Section className="position-relative">
         <Container>
           <Title className="sr-only">Utvalda case</Title>
-          <CardList>
+          <CardList.CardListGrid>
             {posts.map((post) => {
               const { preview, slug } = post
               return (
@@ -27,7 +27,7 @@ const CaseList = ({ posts }) => {
                 </Card.PostCard>
               )
             })}
-          </CardList>
+          </CardList.CardListGrid>
         </Container>
       </Section>
     </>
