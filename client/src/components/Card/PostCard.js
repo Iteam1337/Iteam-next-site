@@ -18,12 +18,24 @@ const PostCardImage = ({ img }) => {
   )
 }
 
+const PostCardPreTitle = ({ preTitle }) => {
+  return (
+    <>
+      {preTitle && (
+        <Typography.Caption additionalClassName="tw-order-1">
+          {preTitle}
+        </Typography.Caption>
+      )}
+    </>
+  )
+}
+
 export const PostCard = ({ link, img, preTitle, title, children }) => {
   return (
     <BaseCard
       link={link}
       img={<PostCardImage img={img} />}
-      preTitle={preTitle}
+      preTitle={<PostCardPreTitle preTitle={preTitle} />}
       title={title}
       readMore={true}
       centerContent={false}
