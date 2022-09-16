@@ -22,7 +22,7 @@ const Roles = ({ content, openPositions }) => (
             </div>
           </Col>
         </Row>
-        <CardList>
+        <CardList.CardListFlex>
           {openPositions.map((openPosition) => (
             <Card.SimpleCard
               key={openPosition.title}
@@ -34,7 +34,7 @@ const Roles = ({ content, openPositions }) => (
               bgDark={false}
             />
           ))}
-        </CardList>
+        </CardList.CardListFlex>
       </Container>
     </Section>
   </>

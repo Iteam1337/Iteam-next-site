@@ -30,7 +30,7 @@ const CaseStudies = ({ cases }) => {
             data-aos-offset="0"
             data-aos-once="true"
           >
-            <CardList>
+            <CardList.CardListFlex column={false}>
               {cases.map((item) => {
                 return (
                   <Card.PostCard
@@ -48,7 +48,7 @@ const CaseStudies = ({ cases }) => {
                   </Card.PostCard>
                 )
               })}
-            </CardList>
+            </CardList.CardListFlex>
           </div>
         </Container>
       </Box>
