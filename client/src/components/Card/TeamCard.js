@@ -49,7 +49,6 @@ export const TeamCard = ({
       img={
         <TeamCardImage img={img} email={email} customImgAlt={customImgAlt} />
       }
-      preTitle=""
       title={title}
       readMore={false}
       gravatarEmail={email}

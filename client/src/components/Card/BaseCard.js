@@ -19,22 +19,24 @@ export const BaseCard = ({
         'focus-within:tw-shadow-xl hover:tw-shadow-lg motion-reduce:tw-transition-none'
       )}
     >
-      <div className="tw-order-2 tw-flex tw-grow tw-flex-col tw-p-6 tw-pt-8">
-        <Title
-          variant="card"
-          className={clsx(
-            'tw-peer tw-order-2 tw-my-2',
-            centerContent && 'tw-text-center'
-          )}
-        >
-          <Anchor
-            aria-label={`${title}, Läs mer…`}
-            href={link}
-            className="after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
+      <div className="tw-order-2 tw-flex tw-grow tw-flex-col tw-p-6">
+        {title && (
+          <Title
+            variant="card"
+            className={clsx(
+              'tw-peer tw-order-2 tw-my-2',
+              centerContent && 'tw-text-center'
+            )}
           >
-            {title}
-          </Anchor>
-        </Title>
+            <Anchor
+              aria-label={`${title}, Läs mer…`}
+              href={link}
+              className="after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
+            >
+              {title}
+            </Anchor>
+          </Title>
+        )}
         {preTitle && preTitle}
         <div className={clsx('tw-order-3', centerContent && 'tw-text-center')}>
           {children}

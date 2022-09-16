@@ -27,9 +27,10 @@ const Roles = ({ content, openPositions }) => (
             <Card.SimpleCard
               key={openPosition.title}
               link={`/karriar/${openPosition.slug.current}`}
+              icon="icon-pin-3"
               preTitle={openPosition.position}
               title={openPosition.title}
-              variant=""
+              ariaLabel={`Plats: ${openPosition.position}`}
             />
           ))}
         </CardList>

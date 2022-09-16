@@ -6,8 +6,9 @@ import { Title, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 
 import svgCurve from '../../assets/image/svg/l1-curve-content2.svg'
-import Link from 'next/link'
 import { getRouteNameFromPageType, urlFor } from '../../utils/helpers'
+import Card from '../../components/Card'
+import CardList from '../../components/CardList'
 
 const ShapeTop = styled(Box)`
   position: absolute;
@@ -29,39 +30,6 @@ const ShapeCard = styled(Box)`
   @media ${device.sm} {
     transform: scale(1);
     left: -14%;
-  }
-`
-
-const ContentCard = ({ offer }) => (
-  <Link href={getRouteNameFromPageType(offer.reference._ref)}>
-    <Card className="card-job top-only">
-      <div className="mb-3">
-        <a>
-          <Title variant="card" className="title">
-            {offer.title}
-          </Title>
-        </a>
-        <Typography.Paragraph>{offer.subtitle}</Typography.Paragraph>
-      </div>
-    </Card>
-  </Link>
-)
-
-const Card = styled.a`
-  justify-content: flex-start;
-  box-shadow: 0 2px 4px rgba(14, 86, 124, 0.17);
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: 0.4s;
-  border-radius: 0px;
-  cursor: pointer;
-  &:hover {
-    box-shadow: 0 32px 84px rgba(14, 86, 124, 0.17);
-    text-decoration: none;
   }
 `
 
@@ -132,20 +100,27 @@ const Offerings = ({ data }) => {
                 >
                   <Title>{data?.title}</Title>
                 </div>
-                <div className="mt-5">
-                  {data?.offers?.map((offer, index) => (
-                    <div
-                      className="section-title"
-                      data-aos="fade-zoom-in"
-                      data-aos-easing="ease-in-back"
-                      data-aos-delay="50"
-                      data-aos-duration="200"
-                      data-aos-offset="0"
-                      data-aos-once="true"
-                    >
-                      <ContentCard offer={offer} key={index} />
-                    </div>
-                  ))}
+                <div
+                  data-aos="fade-zoom-in"
+                  data-aos-easing="ease-in-back"
+                  data-aos-delay="50"
+                  data-aos-duration="200"
+                  data-aos-offset="0"
+                  data-aos-once="true"
+                >
+                  <CardList additionalClassName="tw-mt-5">
+                    {data?.offers?.map((offer) => (
+                      <Card.SimpleCard
+                        key={offer.title}
+                        link={getRouteNameFromPageType(offer.reference._ref)}
+                        icon=""
+                        title={offer.title}
+                        readMore={true}
+                      >
+                        {offer.subtitle}
+                      </Card.SimpleCard>
+                    ))}
+                  </CardList>
                 </div>
               </div>
             </Col>
