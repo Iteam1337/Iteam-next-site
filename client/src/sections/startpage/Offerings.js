@@ -2,8 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
-import { Title, Section, Box, Typography } from '../../components/Core'
-import { device } from '../../utils'
+import { Title, Section, Box } from '../../components/Core'
 
 import svgCurve from '../../assets/image/svg/l1-curve-content2.svg'
 import { getRouteNameFromPageType, urlFor } from '../../utils/helpers'
@@ -16,20 +15,6 @@ const ShapeTop = styled(Box)`
   left: -150px;
   img {
     min-width: 100%;
-  }
-`
-
-const ShapeCard = styled(Box)`
-  width: 305px;
-  box-shadow: ${({ theme }) => `0 32px 34px ${theme.colors.border}`};
-  position: absolute;
-  top: 20%;
-  left: 0;
-  z-index: 2;
-  transform: scale(0.85);
-  @media ${device.sm} {
-    transform: scale(1);
-    left: -14%;
   }
 `
 
@@ -50,11 +35,8 @@ const Offerings = ({ data }) => {
                   alt={data.imageWithAlt.alt}
                   className="img-fluid"
                 />
-                <ShapeCard
-                  bg="secondary"
-                  p="18px"
-                  borderRadius={8}
-                  className="d-flex align-items-start"
+                <div
+                  className="tw-absolute tw-top-[20%] tw-left-2  md:tw-left-[-10%]"
                   data-aos="fade-right"
                   data-aos-duration="200"
                   data-aos-once="true"
@@ -62,29 +44,16 @@ const Offerings = ({ data }) => {
                   data-aos-easing="ease-out-back"
                   aria-hidden="true"
                 >
-                  <Box
-                    width="30px"
-                    minWidth="30px"
-                    height="30px"
-                    minHeight="30px"
-                    bg="secondary"
-                    color="dark"
-                    borderRadius="50%"
-                    className="d-flex align-items-center justify-content-center"
-                    mr={3}
-                    mt={2}
-                  >
-                    <i className="fas fa-bell"></i>
-                  </Box>
-                  <Box pr="40px">
-                    <Typography.Caption>
-                      {new Date().toLocaleTimeString()}
-                    </Typography.Caption>
-                    <Typography.ParagraphSmall additionalClassName="tw-mt-2 tw-leading-normal">
-                      {data?.message?.text}
-                    </Typography.ParagraphSmall>
-                  </Box>
-                </ShapeCard>
+                  <Card.NotificationCard
+                    link="/book"
+                    icon="fas fa-bell"
+                    preTitle={new Date().toLocaleTimeString()}
+                    title={data?.message?.text}
+                    variant="secondary"
+                    bgDark={false}
+                    ariaLabel="Boka ett möte"
+                  />
+                </div>
               </div>
             </Col>
             <Col lg="7">
