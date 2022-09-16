@@ -5,7 +5,7 @@ import { useNextSanityImage } from 'next-sanity-image'
 import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'
 
-const PostCardImage = ({ img }) => {
+const ArticleCardImage = ({ img }) => {
   const imageProps = useNextSanityImage(client, img?.asset._ref)
   return (
     <div className="tw-h-80">
@@ -18,7 +18,7 @@ const PostCardImage = ({ img }) => {
   )
 }
 
-const PostCardPreTitle = ({ preTitle }) => {
+const ArticleCardPreTitle = ({ preTitle }) => {
   return (
     <>
       {preTitle && (
@@ -30,7 +30,7 @@ const PostCardPreTitle = ({ preTitle }) => {
   )
 }
 
-export const PostCard = ({
+export const ArticleCard = ({
   link,
   img,
   preTitle,
@@ -42,8 +42,8 @@ export const PostCard = ({
   return (
     <BaseCard
       link={link}
-      img={<PostCardImage img={img} />}
-      preTitle={<PostCardPreTitle preTitle={preTitle} />}
+      img={<ArticleCardImage img={img} />}
+      preTitle={<ArticleCardPreTitle preTitle={preTitle} />}
       title={title}
       readMore={true}
       centerContent={false}
