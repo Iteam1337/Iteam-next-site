@@ -22,7 +22,7 @@ export default function BlogList({ posts }) {
             const prefix =
               _type == 'openSourceLesson' ? 'open-source-skolan' : 'aktuellt'
             return (
-              <Card.PostCard
+              <Card.ArticleCard
                 key={slug.current}
                 link={`/${prefix}/${slug.current}`}
                 img={imageCard.image}
@@ -31,7 +31,7 @@ export default function BlogList({ posts }) {
                 bgDark={false}
               >
                 {imageCard.description}
-              </Card.PostCard>
+              </Card.ArticleCard>
             )
           })}
         </CardList.CardListGrid>

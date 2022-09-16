@@ -15,7 +15,7 @@ const CaseList = ({ posts }) => {
             {posts.map((post) => {
               const { preview, slug } = post
               return (
-                <Card.PostCard
+                <Card.ArticleCard
                   key={slug.current}
                   link={`/case/${slug.current}`}
                   img={preview.imageCard.image}
@@ -24,7 +24,7 @@ const CaseList = ({ posts }) => {
                   bgDark={false}
                 >
                   {preview.imageCard.description}
-                </Card.PostCard>
+                </Card.ArticleCard>
               )
             })}
           </CardList.CardListGrid>

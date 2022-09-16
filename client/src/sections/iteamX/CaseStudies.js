@@ -33,7 +33,7 @@ const CaseStudies = ({ cases }) => {
             <CardList.CardListFlex column={false}>
               {cases.map((item) => {
                 return (
-                  <Card.PostCard
+                  <Card.ArticleCard
                     key={item.title}
                     link={`/case/${item.slug.current}`}
                     img={item.preview.imageCard.image}
@@ -45,7 +45,7 @@ const CaseStudies = ({ cases }) => {
                     {formatPreviewDescription(
                       item.preview.imageCard.description
                     )}
-                  </Card.PostCard>
+                  </Card.ArticleCard>
                 )
               })}
             </CardList.CardListFlex>
