@@ -28,6 +28,7 @@ export default function BlogList({ posts }) {
                 img={imageCard.image}
                 preTitle={date}
                 title={title}
+                bgDark={false}
               >
                 {imageCard.description}
               </Card.PostCard>

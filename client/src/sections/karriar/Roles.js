@@ -31,6 +31,7 @@ const Roles = ({ content, openPositions }) => (
               preTitle={openPosition.position}
               title={openPosition.title}
               ariaLabel={`Plats: ${openPosition.position}`}
+              bgDark={false}
             />
           ))}
         </CardList>

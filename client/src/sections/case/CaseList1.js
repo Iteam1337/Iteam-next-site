@@ -21,6 +21,7 @@ const CaseList = ({ posts }) => {
                   img={preview.imageCard.image}
                   preTitle=""
                   title={preview.title}
+                  bgDark={false}
                 >
                   {preview.imageCard.description}
                 </Card.PostCard>

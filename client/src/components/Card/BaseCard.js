@@ -11,15 +11,34 @@ export const BaseCard = ({
   readMore,
   centerContent,
   children,
+  variant,
+  bgDark,
 }) => {
   return (
     <li
       className={clsx(
-        'tw-group tw-relative tw-mt-2 tw-flex tw-cursor-pointer tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-border-color tw-bg-white tw-transition',
-        'focus-within:tw-shadow-xl hover:tw-shadow-lg motion-reduce:tw-transition-none'
+        'tw-group tw-relative tw-mt-2 tw-flex tw-cursor-pointer tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-gray-border tw-bg-white tw-transition',
+        'focus-within:tw-shadow-lg hover:tw-shadow-lg motion-reduce:tw-transition-none',
+        variant === 'secondary' && 'tw-border-secondary tw-bg-secondary',
+        bgDark && 'focus-within:tw-shadow-gray-light hover:tw-shadow-gray-light'
       )}
     >
       <div className="tw-order-2 tw-flex tw-grow tw-flex-col tw-p-6">
+        {variant && (
+          <div className="tw-relative tw-left-[-24px] tw-top-[-42px] tw-w-[calc(100%+48px)] ">
+            <svg
+              height="22"
+              viewBox="0 0 540 22"
+              className={`tw-w-full tw-fill-${variant}`}
+            >
+              <g>
+                <g>
+                  <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        )}
         {title && (
           <Title
             variant="card"
