@@ -116,6 +116,7 @@ const Offerings = ({ data }) => {
                         icon=""
                         title={offer.title}
                         readMore={true}
+                        bgDark={false}
                       >
                         {offer.subtitle}
                       </Card.SimpleCard>

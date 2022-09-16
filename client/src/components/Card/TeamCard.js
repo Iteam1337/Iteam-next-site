@@ -42,6 +42,7 @@ export const TeamCard = ({
   email,
   socialMedia,
   customImgAlt,
+  bgDark,
 }) => {
   return (
     <BaseCard
@@ -53,6 +54,7 @@ export const TeamCard = ({
       readMore={false}
       gravatarEmail={email}
       centerContent={true}
+      bgDark={bgDark}
     >
       <div>
         {status && (

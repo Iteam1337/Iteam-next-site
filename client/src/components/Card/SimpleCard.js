@@ -38,6 +38,7 @@ export const SimpleCard = ({
   children,
   readMore,
   ariaLabel,
+  bgDark,
 }) => {
   return (
     <BaseCard
@@ -52,6 +53,7 @@ export const SimpleCard = ({
       title={title}
       readMore={readMore}
       centerContent={false}
+      bgDark={bgDark}
     >
       <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
     </BaseCard>

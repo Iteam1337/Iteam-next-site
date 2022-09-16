@@ -30,7 +30,15 @@ const PostCardPreTitle = ({ preTitle }) => {
   )
 }
 
-export const PostCard = ({ link, img, preTitle, title, children }) => {
+export const PostCard = ({
+  link,
+  img,
+  preTitle,
+  title,
+  children,
+  variant,
+  bgDark,
+}) => {
   return (
     <BaseCard
       link={link}
@@ -39,6 +47,8 @@ export const PostCard = ({ link, img, preTitle, title, children }) => {
       title={title}
       readMore={true}
       centerContent={false}
+      variant={variant}
+      bgDark={bgDark}
     >
       <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
     </BaseCard>

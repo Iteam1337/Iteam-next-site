@@ -161,6 +161,7 @@ const Team = ({ content, coworkers }) => {
                   email={email}
                   socialMedia={socialMedia}
                   customImgAlt={`Profilbild på ${fullname}`}
+                  bgDark={false}
                 />
               )
             })}
