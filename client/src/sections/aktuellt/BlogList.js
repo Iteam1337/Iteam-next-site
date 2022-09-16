@@ -1,9 +1,9 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 import Card from '../../components/Card/'
 import CardList from '../../components/CardList'
-import { Section, Typography } from '../../components/Core'
+import { Section } from '../../components/Core'
 
 export default function BlogList({ posts }) {
   const sortedPosts = posts.sort((a, b) => {

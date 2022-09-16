@@ -2,10 +2,10 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Title } from '../../components/Core'
-import CaseCard from '../../components/CaseCard'
+import CaseFooterSection from '../../components/CaseFooterSection'
 import { urlFor } from '../../utils/helpers'
 
-const CaseList2 = ({ sectionCards }) => {
+const CaseFooter = ({ sectionCards }) => {
   return (
     <>
       {/* <!-- Feature section --> */}
@@ -16,7 +16,7 @@ const CaseList2 = ({ sectionCards }) => {
             {sectionCards.map((card, i) => {
               return (
                 <Col lg="6" className="mb-5 mb-lg-0" key={i}>
-                  <CaseCard
+                  <CaseFooterSection
                     alt={card.imageWithAlt.alt}
                     img={urlFor(card.imageWithAlt.asset._ref)}
                     title={card.title}
@@ -32,4 +32,4 @@ const CaseList2 = ({ sectionCards }) => {
   )
 }
 
-export default CaseList2
+export default CaseFooter
