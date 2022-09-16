@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Title, Box, Text } from '../Core'
-import BlockContent from '../../components/BlockContent'
+import BlockContent from '../BlockContent'
 
 const Card = styled(Box)`
   border-radius: 0;
@@ -24,7 +24,7 @@ const TitleStyled = styled(Title)`
   transition: 0.3s;
 `
 
-const CaseCard = ({
+const CaseFooterSection = ({
   img,
   imgBrand,
   preTitle,
@@ -50,4 +50,4 @@ const CaseCard = ({
   )
 }
 
-export default CaseCard
+export default CaseFooterSection

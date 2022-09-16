@@ -2,7 +2,7 @@ import React from 'react'
 import PageWrapper from '../../components/PageWrapper'
 import { Hero } from '../../sections/common'
 import Content from '../../sections/about/Content'
-import Team from '../../sections/about/Team'
+import TeamList from '../../sections/about/TeamList'
 import CTA from '../../sections/about/CTA'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
@@ -51,7 +51,7 @@ const About = ({ data, preview = false }) => {
         )}
         <Hero content={hero && hero} />
         <Content content={rest && rest} />
-        <Team
+        <TeamList
           content={coworkersSection && coworkersSection}
           coworkers={data?.coworkers && data.coworkers}
         />

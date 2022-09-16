@@ -2,8 +2,8 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Title, Typography } from '../../components/Core'
-import CaseList from '../../sections/case/CaseList1'
-import CaseList2 from '../../sections/case/CaseList2'
+import CaseList from '../../sections/case/CaseList'
+import CaseFooter from '../../sections/case/CaseFooter'
 import CTA from '../../sections/case/CTA'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
@@ -71,7 +71,7 @@ const CaseStudy = ({ data, preview = false }) => {
           </Container>
         </Section>
         <CaseList posts={data?.casePosts && data?.casePosts} />
-        <CaseList2 sectionCards={sectionCards && sectionCards} />
+        <CaseFooter sectionCards={sectionCards && sectionCards} />
         <CTA text={titleWithCTA && titleWithCTA} />
       </PageWrapper>
     </>
