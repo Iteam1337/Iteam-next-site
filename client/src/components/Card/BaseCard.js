@@ -47,7 +47,7 @@ export const BaseCard = ({
             {variant && (
               <div className="tw-absolute tw-left-[-24px] tw-bottom-0 tw-w-[calc(100%+48px)] ">
                 <svg
-                  height="22"
+                  height="auto"
                   viewBox="0 0 540 22"
                   className={clsx(
                     'tw-w-full',
@@ -55,11 +55,7 @@ export const BaseCard = ({
                   )}
                   aria-hidden="true"
                 >
-                  <g>
-                    <g>
-                      <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
-                    </g>
-                  </g>
+                  <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
                 </svg>
               </div>
             )}
