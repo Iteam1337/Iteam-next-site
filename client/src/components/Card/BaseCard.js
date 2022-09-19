@@ -49,7 +49,11 @@ export const BaseCard = ({
                 <svg
                   height="22"
                   viewBox="0 0 540 22"
-                  className={`tw-w-full tw-fill-${variant}`}
+                  className={clsx(
+                    'tw-w-full',
+                    variant === 'secondary' && 'tw-fill-secondary'
+                  )}
+                  aria-hidden="true"
                 >
                   <g>
                     <g>
