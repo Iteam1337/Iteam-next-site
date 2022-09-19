@@ -12,17 +12,17 @@ const TeamCardImage = ({ img, email, customImgAlt }) => {
   const imageProps = useNextSanityImage(client, img?.asset._ref)
   return (
     <div className="tw-flex tw-justify-center">
-      <div className="tw-mt-8 tw-max-h-[160px] tw-min-h-[160px] tw-min-w-[160px] tw-max-w-[160px] tw-overflow-hidden tw-rounded-full">
+      <div className="tw-mt-8 tw-mb-2 tw-max-h-[160px] tw-min-h-[160px] tw-min-w-[160px] tw-max-w-[160px] tw-overflow-hidden tw-rounded-full">
         {img ? (
           <img
             {...imageProps}
             alt={customImgAlt ? customImgAlt : img.alt}
-            className="tw-order-1 tw-h-full tw-w-full tw-object-cover"
+            className="tw-h-full tw-w-full tw-object-cover"
           />
         ) : (
           <Gravatar
             email={email}
-            className="tw-order-1 tw-h-auto tw-max-w-full"
+            className="tw-h-auto tw-max-w-full"
             size={200}
           />
         )}
@@ -66,7 +66,7 @@ export const TeamCard = ({
           {role}
         </Typography.Caption>
       </div>
-      <div className="tw-relative tw-flex tw-flex-col tw-pb-3">
+      <div className="tw-relative tw-flex tw-flex-col tw-pb-6">
         {phoneNumber && (
           <Typography.Caption>
             <Anchor href={`tel:${phoneNumber}`}>

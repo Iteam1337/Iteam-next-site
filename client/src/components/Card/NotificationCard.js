@@ -25,11 +25,21 @@ export const NotificationCard = ({
         className={`icon ${icon} tw-h-full group-focus-within:tw-text-white group-hover:tw-text-white`}
         aria-hidden="true"
       />
-      <div className="tw-order-2 tw-ml-6 tw-flex tw-flex-col">
+      <div className="tw-ml-6 tw-flex tw-flex-col">
+        {preTitle && (
+          <Typography.Caption
+            additionalClassName={
+              'group-hover:tw-text-white group-focus-within:tw-text-white'
+            }
+            ariaHidden={true}
+          >
+            {preTitle}
+          </Typography.Caption>
+        )}
         {title && (
           <Title
             variant="card"
-            className="tw-order-2 tw-mt-2 tw-mb-0 tw-text-base tw-font-light"
+            className="tw-mt-2 tw-mb-0 tw-text-base tw-font-light"
           >
             <Anchor
               aria-label={ariaLabel}
@@ -42,16 +52,6 @@ export const NotificationCard = ({
               {title}
             </Anchor>
           </Title>
-        )}
-        {preTitle && (
-          <Typography.Caption
-            additionalClassName={
-              'tw-order-1 group-hover:tw-text-white group-focus-within:tw-text-white'
-            }
-            ariaHidden={true}
-          >
-            {preTitle}
-          </Typography.Caption>
         )}
       </div>
     </div>
