@@ -9,23 +9,14 @@ const SimpleCardPreTitle = ({ icon, preTitle, ariaLabel }) => {
     return (
       <div className="tw-flex tw-gap-1">
         <i className={`icon ${icon}`} aria-hidden="true" />
-        <Typography.Caption
-          ariaLabel={ariaLabel}
-          additionalClassName={clsx('tw-order-1')}
-        >
+        <Typography.Caption ariaLabel={ariaLabel}>
           {preTitle}
         </Typography.Caption>
       </div>
     )
   } else {
     return (
-      <>
-        {preTitle && (
-          <Typography.Caption additionalClassName={clsx('tw-order-1')}>
-            {preTitle}
-          </Typography.Caption>
-        )}
-      </>
+      <>{preTitle && <Typography.Caption>{preTitle}</Typography.Caption>}</>
     )
   }
 }
@@ -55,7 +46,11 @@ export const SimpleCard = ({
       centerContent={false}
       bgDark={bgDark}
     >
-      <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
+      <Typography.ParagraphSmall
+        additionalClassName={clsx('tw-pb-6', readMore && 'tw-pb-0')}
+      >
+        {children}
+      </Typography.ParagraphSmall>
     </BaseCard>
   )
 }

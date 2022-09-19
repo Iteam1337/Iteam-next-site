@@ -12,22 +12,14 @@ const ArticleCardImage = ({ img }) => {
       <img
         {...imageProps}
         alt={img.alt}
-        className="tw-order-1 tw-h-full tw-w-full tw-object-cover"
+        className="tw-h-full tw-w-full tw-object-cover"
       />
     </div>
   )
 }
 
 const ArticleCardPreTitle = ({ preTitle }) => {
-  return (
-    <>
-      {preTitle && (
-        <Typography.Caption additionalClassName="tw-order-1">
-          {preTitle}
-        </Typography.Caption>
-      )}
-    </>
-  )
+  return <>{preTitle && <Typography.Caption>{preTitle}</Typography.Caption>}</>
 }
 
 export const ArticleCard = ({

@@ -23,27 +23,12 @@ export const BaseCard = ({
         bgDark && 'focus-within:tw-shadow-gray-light hover:tw-shadow-gray-light'
       )}
     >
-      <div className="tw-order-2 tw-flex tw-grow tw-flex-col tw-p-6">
-        {variant && (
-          <div className="tw-relative tw-left-[-24px] tw-top-[-42px] tw-w-[calc(100%+48px)] ">
-            <svg
-              height="22"
-              viewBox="0 0 540 22"
-              className={`tw-w-full tw-fill-${variant}`}
-            >
-              <g>
-                <g>
-                  <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
-                </g>
-              </g>
-            </svg>
-          </div>
-        )}
+      <div className="tw-flex tw-grow tw-flex-col">
         {title && (
           <Title
             variant="card"
             className={clsx(
-              'tw-peer tw-order-2 tw-my-2',
+              'tw-peer tw-order-3 tw-py-2 tw-px-6',
               centerContent && 'tw-text-center'
             )}
           >
@@ -56,15 +41,43 @@ export const BaseCard = ({
             </Anchor>
           </Title>
         )}
-        {preTitle && preTitle}
-        <div className={clsx('tw-order-3', centerContent && 'tw-text-center')}>
+        {img && (
+          <div className="tw-relative tw-order-1">
+            {img}
+            {variant && (
+              <div className="tw-absolute tw-left-[-24px] tw-bottom-0 tw-w-[calc(100%+48px)] ">
+                <svg
+                  height="22"
+                  viewBox="0 0 540 22"
+                  className={`tw-w-full tw-fill-${variant}`}
+                >
+                  <g>
+                    <g>
+                      <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            )}
+          </div>
+        )}
+        {preTitle && (
+          <div className="tw-order-2 tw-px-6 tw-pt-6">{preTitle}</div>
+        )}
+
+        <div
+          className={clsx(
+            'tw-order-3 tw-px-6',
+            centerContent && 'tw-text-center'
+          )}
+        >
           {children}
         </div>
         {readMore && (
           <Typography.Caption
             ariaHidden="true"
             additionalClassName={clsx(
-              'tw-transition-opacity tw-leading-none tw-opacity-0 tw-underline tw-order-4 tw-mt-0 tw-mb-0 tw-mt-auto tw-pt-1 tw-text-right',
+              'tw-order-4 tw-px-6 tw-pb-6 tw-transition-opacity tw-leading-none tw-opacity-0 tw-underline tw-mt-0 tw-mb-0 tw-mt-auto tw-pt-1 tw-text-right',
               'motion-reduce:tw-transition-none group-hover:tw-opacity-100 peer-focus-within:tw-opacity-100'
             )}
           >
@@ -72,7 +85,6 @@ export const BaseCard = ({
           </Typography.Caption>
         )}
       </div>
-      {img && img}
     </li>
   )
 }
