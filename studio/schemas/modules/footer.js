@@ -72,18 +72,54 @@ export default {
         Rules.required().error('Ange text till besök oss.'),
     },
     {
-      type: 'text',
-      name: 'address',
-      title: 'Adress till Iteam',
-      validation: (Rules) =>
-        Rules.required().error('Fyll i adress till Iteam.'),
-    },
-    {
-      type: 'string',
-      name: 'addressLink',
-      title: 'Länk till google maps för adressen',
-      validation: (Rules) =>
-        Rules.required().error('En länk till google maps saknas här.'),
+      name: 'addresses',
+      title: 'Adresser',
+      type: 'array',
+      description: 'Adresser till de olika kontoren.',
+      of: [
+        {
+          type: 'document',
+          name: 'officeAddress',
+          title: 'Text',
+          fields: [
+            {
+              type: 'string',
+              name: 'name',
+              title: 'Namn',
+              validation: (Rules) =>
+                Rules.required().error('Ett namn behövs här.'),
+            },
+            {
+              type: 'string',
+              name: 'streetAddress',
+              title: 'Gatuadress',
+              validation: (Rules) =>
+                Rules.required().error('En gatuadress behövs här.'),
+            },
+            {
+              type: 'string',
+              name: 'zipCode',
+              title: 'Postkod',
+              validation: (Rules) =>
+                Rules.required().error('En postkod behövs här.'),
+            },
+            {
+              type: 'string',
+              name: 'city',
+              title: 'Ort',
+              validation: (Rules) =>
+                Rules.required().error('En ort behövs här.'),
+            },
+            {
+              type: 'string',
+              name: 'addressLink',
+              title: 'Länk till google maps för adressen',
+              validation: (Rules) =>
+                Rules.required().error('En länk till google maps saknas här.'),
+            },
+          ],
+        },
+      ],
     },
     {
       type: 'string',
