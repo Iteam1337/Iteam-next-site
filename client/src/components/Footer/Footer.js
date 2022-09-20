@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Title, Box, Anchor } from '../Core'
 import Logo from '../Logo'
+import clsx from 'clsx'
 
 const TitleStyled = styled(Title)`
   font-size: 16px;
@@ -11,64 +12,18 @@ const TitleStyled = styled(Title)`
   margin-bottom: 22px;
 `
 
-const UlStyled = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  li {
-    line-height: 2.25;
-    a {
-      color: ${({ theme, color }) => theme.colors[color]} !important;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-        color: ${({ dark, theme }) =>
-          dark ? theme.colors.light : theme.colors.dark};
-      }
-    }
-  }
-`
-
-const CopyRightArea = styled.div`
-  border-top: ${({ dark, theme }) =>
-    dark ? `1px solid #2f2f31 ` : `1px solid ${theme.colors.border}`};
-
-  padding: 15px 0;
-  p {
-    color: ${({ dark, theme }) =>
-      dark ? theme.colors.light : theme.colors.dark};
-    font-size: 13px;
-    font-weight: 300;
-    letter-spacing: -0.41px;
-    line-height: 38px;
-    margin-bottom: 0;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
-    a {
-      color: ${({ dark, theme }) =>
-        dark ? theme.colors.light : theme.colors.dark};
-      font-size: 16px;
-      transition: 0.4s;
-      padding: 0 3px;
-      margin: 0 2.5px;
-      &:visited {
-        text-decoration: none;
-      }
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-`
-
 const PrivacyAnchor = styled(Anchor)`
   font-size: 13px;
   font-weight: 300;
 `
+
+const FooterList = ({ children, additionalClassName }) => {
+  return (
+    <ul className={clsx('tw-m-0 tw-list-none tw-p-0', additionalClassName)}>
+      {children}
+    </ul>
+  )
+}
 
 const Footer = ({ isDark = true, content }) => {
   return (
@@ -94,64 +49,78 @@ const Footer = ({ isDark = true, content }) => {
                       >
                         {content.follow}
                       </TitleStyled>
-                      <UlStyled color={isDark ? 'light' : 'dark'}>
-                        <li>
+                      <FooterList>
+                        <li className="tw-leading-9">
                           <a
                             href={content.linkedinLink}
                             target="_blank"
                             aria-label="Linkedin"
+                            className={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              'hover:tw-underline'
+                            )}
                           >
                             <i
-                              className="icon icon-logo-linkedin"
+                              className="icon icon-logo-linkedin tw-mr-1"
                               aria-hidden="true"
                             ></i>
-                            &nbsp;
                             {content.linkedin}
                           </a>
                         </li>
-                        <li>
+                        <li className="tw-leading-9">
                           <a
                             href={content.twitterLink}
                             target="_blank"
                             aria-label="Twitter"
+                            className={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              'hover:tw-underline'
+                            )}
                           >
                             <i
-                              className="icon icon-logo-twitter"
+                              className="icon icon-logo-twitter tw-mr-1"
                               aria-hidden="true"
                             ></i>
-                            &nbsp;
                             {content.twitter}
                           </a>
                         </li>
-                        <li>
+                        <li className="tw-leading-9">
                           <a
                             href={content.facebookLink}
                             target="_blank"
                             aria-label="Facebook"
+                            className={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              'hover:tw-underline'
+                            )}
                           >
                             <i
-                              className="icon icon-logo-facebook"
+                              className="icon icon-logo-facebook tw-mr-1"
                               aria-hidden="true"
                             ></i>
-                            &nbsp;
+
                             {content.facebook}
                           </a>
                         </li>
-                        <li>
+                        <li className="tw-leading-9">
                           <a
                             href={content.instagramLink}
                             target="_blank"
                             aria-label="Instagram"
+                            className={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              'hover:tw-underline'
+                            )}
                           >
                             <i
-                              className="icon icon-logo-instagram"
+                              className="icon icon-logo-instagram tw-mr-1"
                               aria-hidden="true"
                             ></i>
-                            &nbsp;
+
                             {content.instagram}
                           </a>
                         </li>
-                      </UlStyled>
+                      </FooterList>
                     </div>
                   </Col>
                   <Col xs="6" lg="3">
@@ -163,16 +132,34 @@ const Footer = ({ isDark = true, content }) => {
                         {content.visitUs}
                         <br />
                       </TitleStyled>
-                      <UlStyled color={isDark ? 'light' : 'dark'}>
-                        <li>
-                          <a href={content.addressLink} target="_blank">
-                            {content.address}
-                          </a>
+                      <FooterList>
+                        {content.addresses.map((address) => (
+                          <li className="tw-mb-5 tw-leading-9">
+                            <a
+                              href={address.addressLink}
+                              className={clsx(
+                                isDark ? 'tw-text-white' : 'tw-text-black',
+                                'hover:tw-underline'
+                              )}
+                              target="_blank"
+                            >
+                              {address.name}
+                              <br />
+                              {address.streetAddress}
+                              <br />
+                              {address.zipCode} {address.city}
+                            </a>
+                          </li>
+                        ))}
+                        <li
+                          className={clsx(
+                            'tw-mb-5 tw-font-light',
+                            isDark ? 'tw-text-white' : 'tw-text-black'
+                          )}
+                        >
+                          {content.orgNumber}
                         </li>
-                        <li>
-                          <a href={content.org}>{content.orgNumber}</a>
-                        </li>
-                      </UlStyled>
+                      </FooterList>
                     </div>
                   </Col>
                   <Col xs="6" lg="3">
@@ -183,51 +170,87 @@ const Footer = ({ isDark = true, content }) => {
                       >
                         {content.contact}
                       </TitleStyled>
-                      <UlStyled color={isDark ? 'light' : 'dark'}>
-                        <li>
-                          <a href={content.contactLink}>
+                      <FooterList>
+                        <li className="tw-leading-9">
+                          <a
+                            href={content.contactLink}
+                            className={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              'hover:tw-underline'
+                            )}
+                          >
                             {content.contactTitle}
                           </a>
                         </li>
-                        <li>
-                          <a href={content.applyForJobLink}>
+                        <li className=" tw-leading-9">
+                          <a
+                            href={content.applyForJobLink}
+                            className={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              'hover:tw-underline'
+                            )}
+                          >
                             {content.applyForJob}
                           </a>
                         </li>
-                        <li>
-                          <a href={`mailto:${content.mailToApplyJob}`}>
+                        <li className="tw-leading-9">
+                          <a
+                            href={`mailto:${content.mailToApplyJob}`}
+                            className={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              'hover:tw-underline'
+                            )}
+                          >
                             {content.applyJob}
                           </a>
                         </li>
-                      </UlStyled>
+                      </FooterList>
                     </div>
                   </Col>
                 </Row>
               </Col>
             </Row>
           </Box>
-          <CopyRightArea dark={isDark ? 1 : 0}>
+          <div
+            className={clsx(
+              'tw-border-1 tw-border-t tw-border-gray-border tw-py-6',
+              isDark ? 'tw-border-[#2f2f31]' : 'tw-border-gray-border'
+            )}
+          >
             <Row className="align-items-center">
               <Col
                 sm="6"
                 display="flex"
                 className="text-sm-left text-center mb-2 mb-sm-0"
               >
-                <p>&copy; 2021 Iteam, All Rights Reserved.</p>
+                <p
+                  className={clsx(
+                    'tw-text-xs tw-leading-9 tw-tracking-normal',
+                    isDark ? 'tw-text-white' : 'tw-text-black'
+                  )}
+                >
+                  &copy; 2021 Iteam, All Rights Reserved.
+                </p>
                 <PrivacyAnchor
-                  color={isDark ? 'light' : 'dark'}
+                  className={clsx(
+                    'tw-text-xs tw-tracking-normal',
+                    isDark ? 'tw-text-white' : 'tw-text-black'
+                  )}
                   href="/privacy"
                 >
                   Our privacy policy.
                 </PrivacyAnchor>
               </Col>
               <Col sm="6" className="text-sm-right text-center">
-                <ul className="social-icons">
+                <FooterList additionalClassName="tw-mt-2 tw-flex sm:tw-justify-end tw-gap-3 tw-justify-center">
                   <li>
                     <a
                       href={content.linkedinLink}
                       target="_blank"
                       aria-label="Linkedin"
+                      className={clsx(
+                        isDark ? 'tw-text-white' : 'tw-text-black'
+                      )}
                     >
                       <i
                         className="icon icon-logo-linkedin"
@@ -240,6 +263,9 @@ const Footer = ({ isDark = true, content }) => {
                       href={content.twitterLink}
                       target="_blank"
                       aria-label="Twitter"
+                      className={clsx(
+                        isDark ? 'tw-text-white' : 'tw-text-black'
+                      )}
                     >
                       <i
                         className="icon icon-logo-twitter"
@@ -252,6 +278,9 @@ const Footer = ({ isDark = true, content }) => {
                       href={content.facebookLink}
                       target="_blank"
                       aria-label="Facebook"
+                      className={clsx(
+                        isDark ? 'tw-text-white' : 'tw-text-black'
+                      )}
                     >
                       <i
                         className="icon icon-logo-facebook"
@@ -264,6 +293,9 @@ const Footer = ({ isDark = true, content }) => {
                       href={content.instagramLink}
                       target="_blank"
                       aria-label="Instagram"
+                      className={clsx(
+                        isDark ? 'tw-text-white' : 'tw-text-black'
+                      )}
                     >
                       <i
                         className="icon icon-logo-instagram"
@@ -271,10 +303,10 @@ const Footer = ({ isDark = true, content }) => {
                       ></i>
                     </a>
                   </li>
-                </ul>
+                </FooterList>
               </Col>
             </Row>
-          </CopyRightArea>
+          </div>
         </Container>
       </Box>
     </footer>
