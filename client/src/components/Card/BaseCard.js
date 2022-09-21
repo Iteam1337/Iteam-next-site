@@ -42,10 +42,10 @@ export const BaseCard = ({
           </Title>
         )}
         {img && (
-          <div className="tw-relative tw-order-1">
+          <div className="tw-order-1">
             {img}
             {variant && (
-              <div className="tw-absolute tw-left-[-24px] tw-bottom-0 tw-w-[calc(100%+48px)] ">
+              <div className="tw-absolute tw-top-[296px] tw-left-[-24px] tw-w-[calc(100%+48px)]">
                 <svg
                   height="auto"
                   viewBox="0 0 540 22"
@@ -64,7 +64,6 @@ export const BaseCard = ({
         {preTitle && (
           <div className="tw-order-2 tw-px-6 tw-pt-6">{preTitle}</div>
         )}
-
         <div
           className={clsx(
             'tw-order-3 tw-px-6',
