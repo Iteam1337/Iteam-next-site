@@ -213,7 +213,7 @@ const Footer = ({ isDark = true, content }) => {
           </Box>
           <div
             className={clsx(
-              'tw-border-1 tw-border-t tw-border-gray-border tw-py-6',
+              'tw-border-1 tw-border-t tw-py-6',
               isDark ? 'tw-border-[#2f2f31]' : 'tw-border-gray-border'
             )}
           >
