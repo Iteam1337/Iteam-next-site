@@ -58,7 +58,7 @@ const NotFoundPage = () => {
                 <img src={imgIcon} alt="" className="img-fluid" />
               </ContentIcon>
               <div>
-                <Title variant="hero">Thank You</Title>
+                <Typography.H1>Thank You</Typography.H1>
                 <Typography.Paragraph>
                   The page you are looking for is not available or doesn’t
                   <br className="d-none d-md-block" /> belong to this website!

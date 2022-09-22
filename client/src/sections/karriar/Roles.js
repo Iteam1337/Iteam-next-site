@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section } from '../../components/Core'
+import { Title, Section, Typography } from '../../components/Core'
 import BlockContent from '../../components/BlockContent'
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
@@ -13,7 +13,7 @@ const Roles = ({ content, openPositions }) => (
         <Row className="justify-content-center">
           <Col lg="6" className="text-center">
             <div>
-              <Title>{content.title}</Title>
+              <Typography.H2>{content.title}</Typography.H2>
               <BlockContent
                 variant="thin"
                 blocks={content.subtitle.blockText}

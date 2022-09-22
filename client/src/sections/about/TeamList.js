@@ -24,7 +24,7 @@ const TeamList = ({ content, coworkers }) => {
           <Row className="justify-content-center">
             <Col lg="6" className="text-center pb-3">
               <div id="medarbetare" className="">
-                <Title>{content.title}</Title>
+                <Typography.H2>{content.title}</Typography.H2>
                 <Typography.Paragraph>{content.subtitle}</Typography.Paragraph>
               </div>
             </Col>

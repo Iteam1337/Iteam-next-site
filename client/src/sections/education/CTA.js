@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section } from '../../components/Core'
+import { Title, Button, Section, Typography } from '../../components/Core'
 
 const CTA = () => (
   <>
@@ -10,10 +10,10 @@ const CTA = () => (
         <Row>
           <Col lg="8" xl="7">
             <div>
-              <Title color="dark">
+              <Typography.H2 additionalClassName="tw-text-dark-gray">
                 Enjoy every beat.<br className="d-none d-sm-block"></br> Get a
                 new headphone.
-              </Title>
+              </Typography.H2>
             </div>
           </Col>
           <Col

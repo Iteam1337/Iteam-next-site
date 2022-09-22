@@ -34,10 +34,10 @@ const Content3 = () => {
                 data-aos-once="true"
               >
                 <Box>
-                  <Title color="dark">
+                  <Typography.H2 color="dark">
                     Den här utbildningen borde vara obligatorisk i offentlig
                     sektor
-                  </Title>
+                  </Typography.H2>
                   <Typography.Paragraph
                     additionalClassName="tw-mb-4 tw-opacity-70"
                     color="dark"

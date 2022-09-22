@@ -14,7 +14,7 @@ const FeatureCard = ({
   <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>
     <div className="d-flex justify-content-between align-items-start">
       <div>
-        <Title variant="card">{title}</Title>
+        <Typography.H3>{title}</Typography.H3>
         <Typography.Paragraph>{children}</Typography.Paragraph>
       </div>
     </div>
@@ -36,7 +36,9 @@ const Feature = () => (
             data-aos-delay="500"
           >
             <Box>
-              <Title color="light">Leapfrog as a service</Title>
+              <Typography.H2 additionalClassName="tw-text-white">
+                Leapfrog as a service
+              </Typography.H2>
               <Typography.Paragraph light>
                 Du vill gå om dina konkurrenter med ny teknik. När man ska jobba
                 inom okända områden finns det sällan en plan eller färdiga

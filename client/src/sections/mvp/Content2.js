@@ -60,7 +60,9 @@ const Content2 = () => (
               data-aos-once="true"
             >
               <div>
-                <Title>Se in i framtiden med Designsprint</Title>
+                <Typography.H2>
+                  Se in i framtiden med Designsprint
+                </Typography.H2>
                 <Typography.Paragraph>
                   I en designsprint samlar vi ditt team för att fokusera på en
                   utmaning. Vi skapar en gemensam förståelse för utmaningen och

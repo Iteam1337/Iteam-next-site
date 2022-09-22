@@ -71,7 +71,7 @@ const BlogDetails = ({ data, preview = false }) => {
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="12">
-                <Title variant="hero">{post?.title && post.title}</Title>
+                <Typography.H1>{post?.title && post.title}</Typography.H1>
                 <Box className="d-flex justify-content-center">
                   <Typography.Paragraph>
                     {post?.date && post.date}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 import styled from 'styled-components'
-import { Box, Title } from '../Core'
+import { Box, Typography } from '../Core'
 
 const StyledBox = styled(Box)`
   padding: 25px 20px;
@@ -43,9 +43,7 @@ const ContentCards = ({
       className={`d-flex align-items-center justify-content-center ${className}`}
       {...rest}
     >
-      <Title variant="card" mb={0}>
-        {title}
-      </Title>
+      <Typography.H3>{title}</Typography.H3>
     </StyledBox>
   </Col>
 )

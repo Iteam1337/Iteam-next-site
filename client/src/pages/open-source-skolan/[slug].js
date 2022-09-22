@@ -86,7 +86,7 @@ const LessonDetails = ({ data, preview = false }) => {
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="12">
-                <Title variant="hero">{lesson?.title && lesson.title}</Title>
+                <Typography.H1>{lesson?.title && lesson.title}</Typography.H1>
                 <Box className="d-flex justify-content-center">
                   <Typography.Paragraph>
                     {lesson?.date && lesson.date}
@@ -127,7 +127,9 @@ const LessonDetails = ({ data, preview = false }) => {
               <Container>
                 <Row className="justify-content-center text-center">
                   <Col lg="12">
-                    <Title>Se fler lektioner i Open Source skolan</Title>
+                    <Typography.H2>
+                      Se fler lektioner i Open Source skolan
+                    </Typography.H2>
                   </Col>
                 </Row>
               </Container>

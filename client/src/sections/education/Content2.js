@@ -22,7 +22,7 @@ const Content2 = () => (
         <Row className="justify-content-center">
           <Col xl="7" lg="10" md="9">
             <div className="text-center">
-              <Title>Om lärarna</Title>
+              <Typography.H2>Om lärarna</Typography.H2>
               <Typography.Paragraph>
                 Christian Landgren är en välkänd profil i branschen och håller i
                 den inledande föreläsningen. Emma-Klara Wächter leder vårt Team

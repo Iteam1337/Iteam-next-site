@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 
 import imgContent1 from '../../assets/image/jpeg/_DSC6527_.jpg'
 import imgContent2 from '../../assets/image/jpeg/Lounge-Martin-Mikael-Christian-Lowres.jpg'
@@ -23,7 +23,7 @@ const Content = ({ content }) => (
       <Container>
         <Row className="justify-content-center pb-4">
           <Col lg="6">
-            <Title>{content.section.title}</Title>
+            <Typography.H2>{content.section.title}</Typography.H2>
           </Col>
           <Col lg="6" className="pl-lg-5">
             <BlockContent blocks={content.section.blockText.blockText} />

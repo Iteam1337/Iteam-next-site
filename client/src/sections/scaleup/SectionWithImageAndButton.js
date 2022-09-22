@@ -46,7 +46,7 @@ const SectionWithImageAndButton = ({ content }) => {
           >
             <Section py={[5, null, null, '190px']}>
               <div className="omga-02__content-text section-title order-lg-1">
-                <Title>{title}</Title>
+                <Typography.H2>{title}</Typography.H2>
                 <BlockContent blocks={blockText.blockText} />
                 <Button
                   mt={4}

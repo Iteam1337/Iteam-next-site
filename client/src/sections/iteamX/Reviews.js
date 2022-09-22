@@ -50,10 +50,10 @@ const ContentCard = ({
         />
       </Box>
       <Box className="flex-grow-1 text-center" mt={3}>
-        <Title color="light" variant="card" mb={1}>
+        <Typography.H3 additionalClassName="tw-text-white tw-mb-1">
           {name}
-        </Title>
-        <Typography.ParagraphSmall light>{role}</Typography.ParagraphSmall>
+        </Typography.H3>
+        <Typography.ParagraphSmall>{role}</Typography.ParagraphSmall>
       </Box>
     </Box>
   </Box>

@@ -7,7 +7,7 @@ import SocialMediaLinks from './SocialMediaLinks'
 const InfoSection = ({ text, title }) => (
   <Row className="py-5">
     <Col md={8} lg={6}>
-      <Title variant="card">{title}</Title>
+      <Typography.H3>{title}</Typography.H3>
     </Col>
     <Col md={8} lg={6}>
       <Typography.Paragraph>{text}</Typography.Paragraph>
@@ -18,10 +18,10 @@ const InfoSection = ({ text, title }) => (
 const Medarbetare = ({ info }) => (
   <Container>
     <Section>
-      <Title className="sr-only">Info</Title>
+      <Typography.H2 additionalClassName="sr-only">Info</Typography.H2>
       <Row className="py-5">
         <Col md={8} lg={6}>
-          <Title variant="card">Kontakt</Title>
+          <Typography.H3>Kontakt</Typography.H3>
         </Col>
         <Col md={8} lg={6}>
           {info.phoneNumber && (

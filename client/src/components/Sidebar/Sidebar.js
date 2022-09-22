@@ -22,22 +22,16 @@ export const Block = ({ children, ...rest }) => (
   </Box>
 )
 
-export const TitleSidebar = ({ children, ...rest }) => (
-  <Title
-    fontSize="24px !important"
-    letterSpacing="-0.5px"
-    lineHeight="28px !important"
-    color="black"
-    {...rest}
-  >
+export const TitleSidebar = ({ children }) => (
+  <Typography.H2 additionalClassName="tw-text-2xl tw-mb-6">
     {children}
-  </Title>
+  </Typography.H2>
 )
 
-export const TitlePost = ({ link = '/', children, ...rest }) => (
-  <Title variant="card" fontSize="16px" mb={0} {...rest}>
+export const TitlePost = ({ link = '/', children }) => (
+  <Typography.H3 additionalClassName="tw-text-base">
     <Anchor href={link}>{children}</Anchor>
-  </Title>
+  </Typography.H3>
 )
 
 export const Date = ({ link = '/', children, ...rest }) => (

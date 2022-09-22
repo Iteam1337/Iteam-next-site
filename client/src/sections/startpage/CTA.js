@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
-import { Title, Button, Box } from '../../components/Core'
+import { Title, Button, Box, Typography } from '../../components/Core'
 import { getRouteNameFromPageType } from '../../utils/helpers'
 
 const CTA = ({ content }) => {
@@ -13,7 +13,9 @@ const CTA = ({ content }) => {
           <Row className="justify-content-center">
             <Col md="8" lg="7">
               <Box className="text-center">
-                <Title color="light">{content?.title}</Title>
+                <Typography.H2 additionalClassName="tw-text-white">
+                  {content?.title}
+                </Typography.H2>
                 <div className="d-flex flex-column align-items-center pt-3">
                   <Box>
                     <Link

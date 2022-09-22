@@ -116,9 +116,9 @@ const Hero = () => {
                 data-aos-once="true"
               >
                 <Box pt={[4, null, null, 0]}>
-                  <Title color="dark">
+                  <Typography.H2 additionalClassName="tw-text-dark-gray">
                     Utbildning i öppen källkod och modern applikationsutveckling
-                  </Title>
+                  </Typography.H2>
                   <Typography.Paragraph>
                     Gå en distanskurs i modern applikationsutveckling med några
                     av branschens bästa utvecklare, agila coacher och UX
@@ -127,9 +127,9 @@ const Hero = () => {
 
                   <BoxPrice mt={4} mb={3}>
                     <Box className="d-flex align-items-center">
-                      <Title color="light" mb="0!important" mr={3}>
+                      <Typography.H1 additionalClassName="tw-text-white tw-mb-0 tw-mr-3">
                         {price}kr
-                      </Title>
+                      </Typography.H1>
                     </Box>
                     <Typography.Paragraph light>
                       per person

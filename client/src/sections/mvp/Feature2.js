@@ -23,11 +23,11 @@ const Feature2 = () => (
         <Row className="justify-content-center">
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
-              <Title>
+              <Typography.H2>
                 Vi bygger det
                 <br />
                 du behöver
-              </Title>
+              </Typography.H2>
             </Box>
           </Col>
         </Row>

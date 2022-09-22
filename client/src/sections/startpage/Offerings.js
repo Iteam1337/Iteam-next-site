@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
-import { Title, Section, Box } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 
 import svgCurve from '../../assets/image/svg/l1-curve-content2.svg'
 import { getRouteNameFromPageType, urlFor } from '../../utils/helpers'
@@ -67,7 +67,7 @@ const Offerings = ({ data }) => {
                   data-aos-offset="0"
                   data-aos-once="true"
                 >
-                  <Title>{data?.title}</Title>
+                  <Typography.H2>{data?.title}</Typography.H2>
                 </div>
                 <div
                   data-aos="fade-zoom-in"

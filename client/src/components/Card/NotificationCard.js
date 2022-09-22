@@ -37,10 +37,7 @@ export const NotificationCard = ({
           </Typography.Caption>
         )}
         {title && (
-          <Title
-            variant="card"
-            className="tw-mt-2 tw-mb-0 tw-text-base tw-font-light"
-          >
+          <h3 className="tw-mt-2 tw-mb-0 tw-text-base tw-font-light">
             <Anchor
               aria-label={ariaLabel}
               href={link}
@@ -51,7 +48,7 @@ export const NotificationCard = ({
             >
               {title}
             </Anchor>
-          </Title>
+          </h3>
         )}
       </div>
     </div>

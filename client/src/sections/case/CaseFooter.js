@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Section, Title } from '../../components/Core'
+import { Section, Title, Typography } from '../../components/Core'
 import CaseFooterSection from '../../components/CaseFooterSection'
 import { urlFor } from '../../utils/helpers'
 
@@ -11,7 +11,9 @@ const CaseFooter = ({ sectionCards }) => {
       {/* <!-- Feature section --> */}
       <Section bg="#F7F7FB" className="position-relative">
         <Container>
-          <Title className="sr-only">Utvalda case</Title>
+          <Typography.H2 additionalClassName="sr-only">
+            Mer information
+          </Typography.H2>
           <Row className="align-items-center justify-content-center">
             {sectionCards.map((card, i) => {
               return (

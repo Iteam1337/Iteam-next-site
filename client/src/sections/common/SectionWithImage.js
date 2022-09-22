@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Section } from '../../components/Core'
+import { Title, Section, Typography } from '../../components/Core'
 import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
+import clsx from 'clsx'
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid ${({ bg }) => (bg == 'dark' ? '#242427' : 'white')};
@@ -38,9 +39,13 @@ const SectionWithImage = ({ content, bg = 'light' }) => {
             data-aos-once="true"
           >
             <div>
-              <Title color={bg === 'dark' ? 'light' : 'dark'}>
+              <Typography.H2
+                additionalClassName={clsx(
+                  bg === 'dark' ? 'tw-text-white' : 'tw-text-dark-grey'
+                )}
+              >
                 {content.title}
-              </Title>
+              </Typography.H2>
               <BlockContent
                 color={bg === 'dark' ? 'light' : 'dark'}
                 blocks={content.blockText.blockText}

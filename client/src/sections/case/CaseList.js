@@ -3,14 +3,16 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
-import { Section, Title } from '../../components/Core'
+import { Section, Title, Typography } from '../../components/Core'
 
 const CaseList = ({ posts }) => {
   return (
     <>
       <Section className="position-relative">
         <Container>
-          <Title className="sr-only">Utvalda case</Title>
+          <Typography.H2 additionalClassName="sr-only">
+            Utvalda case
+          </Typography.H2>
           <CardList.CardListGrid>
             {posts.map((post) => {
               const { preview, slug } = post

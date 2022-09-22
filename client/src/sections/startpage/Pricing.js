@@ -88,14 +88,6 @@ const CardPricing = styled(Box)`
   }
 `
 
-const TitleSmall = styled.h3`
-  color: ${({ theme }) => theme.colors.black};
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: -0.5px;
-  line-height: 28px;
-`
-
 const Currency = styled.span`
   color: ${({ theme }) => theme.colors.dark};
   font-size: 30px;
@@ -128,7 +120,7 @@ const Pricing = ({ content }) => {
           <Row className="justify-content-center">
             <Col md="8" lg="9">
               <div className=" text-center" id="pricing">
-                <Title>{content.section.title}</Title>
+                <Typography.H2>{content.section.title}</Typography.H2>
                 <BlockContent
                   variant="thin"
                   textAlign="center"
@@ -146,15 +138,16 @@ const Pricing = ({ content }) => {
                 <Badge ml={2}>{content.discount}</Badge>
               </div>
             </div>
-
             <Row className="justify-content-center">
               <Col lg="8" className="mb-5 align-items-center">
                 <CardPricing>
                   <div className="mb-4">
-                    <TitleSmall>{content.team}</TitleSmall>
+                    <Typography.H3 additionalClassName="tw-font-light tw-text-base tw-pb-2">
+                      {content.team}
+                    </Typography.H3>
                     <div className="d-flex align-items-end justify-content-center my-3">
                       <Currency>{content.value}</Currency>
-                      <Typography.Paragraph additionalClassName="tw-mb-4 tw-text-7xl tw-font-bold tw-tracking-tighter">
+                      <Typography.Paragraph additionalClassName="tw-mb-4 tw-mr-1 tw-text-7xl tw-font-bold tw-tracking-tighter">
                         {timeMonthly ? content.price : content.priceOngoing}
                       </Typography.Paragraph>
                       <TimePer>/h</TimePer>

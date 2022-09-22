@@ -74,7 +74,7 @@ const BlogDetails = ({ data, preview = false }) => {
               <Box className="text-center" mb={4}>
                 {post?.company && post.company}
               </Box>
-              <Title variant="hero">{post?.title && post.title}</Title>
+              <Typography.H1>{post?.title && post.title}</Typography.H1>
               <Typography.Paragraph>
                 {post?.subtitle && post.subtitle}
               </Typography.Paragraph>

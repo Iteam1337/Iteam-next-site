@@ -27,10 +27,10 @@ const Hero = ({ content }) => {
           <Row>
             <Col md="11" lg="11" xl="9">
               <Box py={4}>
-                <Title my={4} variant="hero" color="light">
+                <Typography.H1 additionalClassName="tw-text-white tw-my-4">
                   {title}
                   <Span color="secondary">.</Span>
-                </Title>
+                </Typography.H1>
                 <Typography.Paragraph light>
                   {content.subtitle}
                 </Typography.Paragraph>

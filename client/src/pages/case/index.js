@@ -62,7 +62,7 @@ const CaseStudy = ({ data, preview = false }) => {
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="6">
-                <Title variant="hero">{title && title}</Title>
+                <Typography.H1>{title && title}</Typography.H1>
                 <Typography.Paragraph>
                   {subTitle && subTitle}
                 </Typography.Paragraph>

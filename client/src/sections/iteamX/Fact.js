@@ -23,9 +23,9 @@ const Fact = ({ content }) => (
           {content.texts.map((item, index) => (
             <Col md="4" sm="6" className="mb-4 mb-md-0" key={index}>
               <Box>
-                <Title color="light" mb="20px!important">
+                <Typography.H2 additionalClassName="tw-text-white tw-mb-6">
                   {item.title}
-                </Title>
+                </Typography.H2>
                 <Typography.Paragraph light>{item.text}</Typography.Paragraph>
               </Box>
             </Col>

@@ -11,7 +11,7 @@ const Testimonial = ({ content }) => {
           <Row className="justify-content-center mb-5">
             <Col lg="9" md="9">
               <div className="text">
-                <Title>{content.title}</Title>
+                <Typography.H2>{content.title}</Typography.H2>
                 <Typography.Paragraph>{content.subtitle}</Typography.Paragraph>
               </div>
             </Col>
