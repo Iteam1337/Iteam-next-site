@@ -17,7 +17,7 @@ const Brand = styled(Box)`
 
 const Clients = ({ clients }) => (
   <Box py={'30px'}>
-    <h3 className="visibility-hidden">Kunder</h3>
+    <h3 className="tw-sr-only">Kunder</h3>
     <Container>
       <Box
         className="d-flex justify-content-center justify-content-lg-between
