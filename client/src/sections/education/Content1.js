@@ -49,9 +49,7 @@ const ContentCard = ({
       <i className={`icon ${iconName}`}></i>
     </Box>
     <div>
-      <Title variant="card" mb={0}>
-        {title}
-      </Title>
+      <Typography.H3 mb={0}>{title}</Typography.H3>
 
       <Typography.Paragraph>{children}</Typography.Paragraph>
     </div>
@@ -81,10 +79,10 @@ const Content2 = () => (
             >
               <div className="content-text pl-lg--50">
                 <div className="section-title">
-                  <Title>
+                  <Typography.H2>
                     Vad innebär <br className="d-none d-sm-block" /> öppen
                     källkod?
-                  </Title>
+                  </Typography.H2>
                   <Typography.Paragraph>
                     Lär dig begreppen, koncepten och arbetssätten. Betyder öppen
                     källkod att systemet blir sårbart eller osäkert? Kan man

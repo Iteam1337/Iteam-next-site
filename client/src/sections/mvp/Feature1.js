@@ -20,7 +20,7 @@ const FeatureCard = ({
   <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>
     <div className="d-flex justify-content-between align-items-start">
       <div>
-        <Title variant="card">{title}</Title>
+        <Typography.H3>{title}</Typography.H3>
         <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
       </div>
     </div>
@@ -42,7 +42,9 @@ const Feature = () => (
             data-aos-delay="500"
           >
             <Box>
-              <Title color="light">Vi bygger din idé</Title>
+              <Typography.H2 additionalClassName="tw-text-white">
+                Vi bygger din idé
+              </Typography.H2>
               <Typography.Paragraph light>
                 {/* Med användarna i fokus bygger vi något litet, en MVP, samlar in feedback och itererar tills vi har en väl fungerande tjänst som användarna älskar. Vi stöttar dig med allt du behöver. Ett korsfunktionellt team som fungerar. Rätt teknikval. Rätt metoder. Tillsammans når vi snabbt ut till era användare så att ni får nöjdare och gladare kunder och anställda. Det är vårt MVP-erbjudande.              </Text> */}
                 Oavsett om du har ett problem du behöver lösa eller redan har en

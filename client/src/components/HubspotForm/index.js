@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Title, Box } from '../Core'
+import { Title, Box, Typography } from '../Core'
 
 import { device } from '../../utils'
 
@@ -46,7 +46,7 @@ const HubspotForm = ({
       data-netlify-honeypot="bot-field"
     >
       <Box>
-        <Title>{title}</Title>
+        <Typography.H2>{title}</Typography.H2>
       </Box>
       <input type="hidden" name="form-name" value={value} />
       <FrameStyled

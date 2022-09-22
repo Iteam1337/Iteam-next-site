@@ -1,16 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Box, Anchor } from '../Core'
+import { Box, Anchor, Typography } from '../Core'
 import Logo from '../Logo'
 import clsx from 'clsx'
-
-const TitleStyled = styled(Title)`
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  margin-bottom: 22px;
-`
 
 const PrivacyAnchor = styled(Anchor)`
   font-size: 13px;
@@ -43,12 +36,14 @@ const Footer = ({ isDark = true, content }) => {
                 <Row>
                   <Col xs="6" lg="3">
                     <div className="mb-5 mb-lg-4">
-                      <TitleStyled
-                        variant="card"
-                        color={isDark ? 'light' : 'dark'}
+                      <Typography.H3
+                        additionalClassName={clsx(
+                          'tw-text-base tw-mb-6',
+                          isDark ? 'tw-text-white' : 'tw-text-gray-dark'
+                        )}
                       >
                         {content.follow}
-                      </TitleStyled>
+                      </Typography.H3>
                       <FooterList>
                         <li className="tw-leading-9">
                           <a
@@ -56,7 +51,7 @@ const Footer = ({ isDark = true, content }) => {
                             target="_blank"
                             aria-label="Linkedin"
                             className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
                               'hover:tw-underline'
                             )}
                           >
@@ -73,7 +68,7 @@ const Footer = ({ isDark = true, content }) => {
                             target="_blank"
                             aria-label="Twitter"
                             className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
                               'hover:tw-underline'
                             )}
                           >
@@ -90,7 +85,7 @@ const Footer = ({ isDark = true, content }) => {
                             target="_blank"
                             aria-label="Facebook"
                             className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
                               'hover:tw-underline'
                             )}
                           >
@@ -108,7 +103,7 @@ const Footer = ({ isDark = true, content }) => {
                             target="_blank"
                             aria-label="Instagram"
                             className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
                               'hover:tw-underline'
                             )}
                           >
@@ -125,20 +120,22 @@ const Footer = ({ isDark = true, content }) => {
                   </Col>
                   <Col xs="6" lg="3">
                     <div className="mb-5 mb-lg-4">
-                      <TitleStyled
-                        variant="card"
-                        color={isDark ? 'light' : 'dark'}
+                      <Typography.H3
+                        additionalClassName={clsx(
+                          'tw-text-base tw-mb-6',
+                          isDark ? 'tw-text-white' : 'tw-text-gray-dark'
+                        )}
                       >
                         {content.visitUs}
                         <br />
-                      </TitleStyled>
+                      </Typography.H3>
                       <FooterList>
                         {content.addresses.map((address) => (
                           <li className="tw-mb-5 tw-leading-9">
                             <a
                               href={address.addressLink}
                               className={clsx(
-                                isDark ? 'tw-text-white' : 'tw-text-black',
+                                isDark ? 'tw-text-white' : 'tw-text-gray-dark',
                                 'hover:tw-underline'
                               )}
                               target="_blank"
@@ -154,7 +151,7 @@ const Footer = ({ isDark = true, content }) => {
                         <li
                           className={clsx(
                             'tw-mb-5 tw-font-light',
-                            isDark ? 'tw-text-white' : 'tw-text-black'
+                            isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                           )}
                         >
                           {content.orgNumber}
@@ -164,18 +161,20 @@ const Footer = ({ isDark = true, content }) => {
                   </Col>
                   <Col xs="6" lg="3">
                     <div className="mb-lg-4">
-                      <TitleStyled
-                        variant="card"
-                        color={isDark ? 'light' : 'dark'}
+                      <Typography.H3
+                        additionalClassName={clsx(
+                          'tw-text-base tw-mb-6',
+                          isDark ? 'tw-text-white' : 'tw-text-gray-dark'
+                        )}
                       >
                         {content.contact}
-                      </TitleStyled>
+                      </Typography.H3>
                       <FooterList>
                         <li className="tw-leading-9">
                           <a
                             href={content.contactLink}
                             className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
                               'hover:tw-underline'
                             )}
                           >
@@ -186,7 +185,7 @@ const Footer = ({ isDark = true, content }) => {
                           <a
                             href={content.applyForJobLink}
                             className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
                               'hover:tw-underline'
                             )}
                           >
@@ -197,7 +196,7 @@ const Footer = ({ isDark = true, content }) => {
                           <a
                             href={`mailto:${content.mailToApplyJob}`}
                             className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-black',
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
                               'hover:tw-underline'
                             )}
                           >
@@ -226,7 +225,7 @@ const Footer = ({ isDark = true, content }) => {
                 <p
                   className={clsx(
                     'tw-text-xs tw-leading-9 tw-tracking-normal',
-                    isDark ? 'tw-text-white' : 'tw-text-black'
+                    isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                   )}
                 >
                   &copy; 2021 Iteam, All Rights Reserved.
@@ -234,7 +233,7 @@ const Footer = ({ isDark = true, content }) => {
                 <PrivacyAnchor
                   className={clsx(
                     'tw-text-xs tw-tracking-normal',
-                    isDark ? 'tw-text-white' : 'tw-text-black'
+                    isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                   )}
                   href="/privacy"
                 >
@@ -249,7 +248,7 @@ const Footer = ({ isDark = true, content }) => {
                       target="_blank"
                       aria-label="Linkedin"
                       className={clsx(
-                        isDark ? 'tw-text-white' : 'tw-text-black'
+                        isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                       )}
                     >
                       <i
@@ -264,7 +263,7 @@ const Footer = ({ isDark = true, content }) => {
                       target="_blank"
                       aria-label="Twitter"
                       className={clsx(
-                        isDark ? 'tw-text-white' : 'tw-text-black'
+                        isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                       )}
                     >
                       <i
@@ -279,7 +278,7 @@ const Footer = ({ isDark = true, content }) => {
                       target="_blank"
                       aria-label="Facebook"
                       className={clsx(
-                        isDark ? 'tw-text-white' : 'tw-text-black'
+                        isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                       )}
                     >
                       <i
@@ -294,7 +293,7 @@ const Footer = ({ isDark = true, content }) => {
                       target="_blank"
                       aria-label="Instagram"
                       className={clsx(
-                        isDark ? 'tw-text-white' : 'tw-text-black'
+                        isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                       )}
                     >
                       <i

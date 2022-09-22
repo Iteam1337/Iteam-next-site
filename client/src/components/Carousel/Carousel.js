@@ -216,18 +216,18 @@ const Coworker = ({ item, active }) => {
           )}
         </SliderImgContainer>
         <SliderText>
-          <Title variant="card" mb={0} mt={3}>
+          <Typography.H3 additionalClassName="tw-mt-1">
             {item.whyTech}
-          </Title>
+          </Typography.H3>
           <Typography.Paragraph>{item.answerTech}</Typography.Paragraph>
-          <Title variant="card" mb={0} mt={3}>
+          <Typography.ParagraphSmall additionalClassName="tw-mt-2 tw-font-bold">
             {item.fullname}
-          </Title>
+          </Typography.ParagraphSmall>
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           {active && (
-            <Anchor href={`/about/${item.slug.current}`}>
-              <Span>Läs mer…</Span>
-            </Anchor>
+            <Typography.ParagraphSmall additionalClassName="tw-mt-2">
+              <Anchor href={`/about/${item.slug.current}`}>Läs mer…</Anchor>
+            </Typography.ParagraphSmall>
           )}
         </SliderText>
       </SliderCard>
@@ -249,12 +249,14 @@ const Client = ({ item, active }) => {
         </SliderImgContainer>
         <SliderText>
           <Typography.Paragraph>{item.quote}</Typography.Paragraph>
-          <Title variant="card" mb={0} mt={3}>
+          <Typography.ParagraphSmall additionalClassName="tw-mt-2 tw-font-bold">
             {item.fullname}
-          </Title>
+          </Typography.ParagraphSmall>
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           {active && item.reference && (
-            <Anchor href={buildInternalUrl(item.reference)}>Läs mer…</Anchor>
+            <Typography.ParagraphSmall additionalClassName="tw-mt-2">
+              <Anchor href={buildInternalUrl(item.reference)}>Läs mer…</Anchor>
+            </Typography.ParagraphSmall>
           )}
         </SliderText>
       </SliderCard>

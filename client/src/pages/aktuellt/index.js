@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageWrapper from '../../components/PageWrapper'
-import { Section, Title, Anchor } from '../../components/Core'
+import { Section, Title, Anchor, Typography } from '../../components/Core'
 import BlogList from '../../sections/aktuellt/BlogList'
 import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
@@ -75,14 +75,14 @@ export default function BlogRegular({ query, data, preview = false }) {
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
-              <Title variant="hero" pb="4">
+              <Typography.H1 additionalClassName="pb-4">
                 {title && title}
-              </Title>
-              <Title className="visibility-hidden">
+              </Typography.H1>
+              <Typography.H2 className="visibility-hidden">
                 {(filterParam == 'alla' && 'Allt') ||
                   (filterParam == 'blogg' && 'Blogg') ||
                   (filterParam == 'open-source-skolan' && 'Open Source Skolan')}
-              </Title>
+              </Typography.H2>
               {mixedPosts && (
                 <Col lg="8">
                   <Anchor

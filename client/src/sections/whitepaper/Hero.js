@@ -164,10 +164,10 @@ const Hero = () => {
                 data-aos-once="true"
               >
                 <Box pt={[4, null, null, 0]} pl={5}>
-                  <Title>
+                  <Typography.H2>
                     Guide till <br className="d-none d-sm-block" />
                     Agil Coachning.
-                  </Title>
+                  </Typography.H2>
                   <Box mb={3}>
                     <ULStyled>
                       <li>Hur ska produktägare agera när teamet stormar?</li>
@@ -221,9 +221,7 @@ const Hero = () => {
                       publish.”
                     </i>
                   </Typography.Paragraph>
-                  <Title variant="card" mt={3}>
-                    Jonathan Taylor
-                  </Title>
+                  <Typography.H3>Jonathan Taylor</Typography.H3>
                 </AuthorText>
               </AuthorWidget>
             </Col>

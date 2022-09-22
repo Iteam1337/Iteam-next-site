@@ -11,7 +11,7 @@ const Feature2 = ({ content }) => {
         <Row className="justify-content-center">
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
-              <Title>{content.title}</Title>
+              <Typography.H2>{content.title}</Typography.H2>
               <BlockContent
                 textAlign="center"
                 blocks={content.subtitle.blockText}

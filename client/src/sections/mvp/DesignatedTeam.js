@@ -37,7 +37,9 @@ const DesignatedTeam = () => (
             data-aos-once="true"
           >
             <div>
-              <Title color="light">Ett fredat team som ger en bra start</Title>
+              <Typography.H2 additionalClassName="tw-text-white">
+                Ett fredat team som ger en bra start
+              </Typography.H2>
               <Typography.Paragraph>
                 När du har fått ett uppdrag och dina befintliga utvecklare och
                 designers är upptagna kan vi ändå sätta igång snabbt och bygger

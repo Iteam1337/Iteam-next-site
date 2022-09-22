@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import MetaTags from '../../components/MetaTags/MetaTags'
 import PageWrapper from '../../components/PageWrapper'
-import { Section, Title, Box } from '../../components/Core'
+import { Section, Title, Box, Typography } from '../../components/Core'
 import { groq } from 'next-sanity'
 import client from '../../sanity-client'
 import BlockContent from '../../components/BlockContent'
@@ -61,7 +61,7 @@ const OpeningDetails = ({ data, preview = false }) => {
               <Box className="text-center" mb={4}>
                 Ledig tjänst
               </Box>
-              <Title variant="hero">{post?.title && post.title}</Title>
+              <Typography.H1>{post?.title && post.title}</Typography.H1>
             </Col>
           </Row>
         </Container>

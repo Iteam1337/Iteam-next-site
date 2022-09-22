@@ -12,7 +12,9 @@ const serializers = (withAnchor) => ({
             <Serializers.H1 withAnchor={withAnchor}>{children}</Serializers.H1>
           )
         case 'h2':
-          return <Title.H2 withAnchor={withAnchor}>{children}</Title.H2>
+          return (
+            <Typography.H2 withAnchor={withAnchor}>{children}</Typography.H2>
+          )
         case 'h3':
           return (
             <Serializers.H3 withAnchor={withAnchor}>{children}</Serializers.H3>

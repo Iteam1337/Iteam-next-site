@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box } from '../../components/Core'
+import { Title, Button, Section, Box, Typography } from '../../components/Core'
 
 import imgOval from '../../assets/image/svg/l1-cta-oval.svg'
 import svgCurveGray from '../../assets/image/svg/l1-curve-cta-gray.svg'
@@ -46,7 +46,9 @@ const CTA = ({ text }) => {
           <Row className="justify-content-center text-center">
             <Col lg="6">
               <Box mb={5} className="text-center">
-                <Title color="light">{text.title}</Title>
+                <Typography.H2 additionalClassName="tw-text-white">
+                  {text.title}
+                </Typography.H2>
               </Box>
               <Box>
                 <a href={buildInternalUrl(text.cta.reference)}>

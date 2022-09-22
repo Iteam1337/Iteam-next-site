@@ -22,7 +22,9 @@ const Fact = () => (
         <Row className="text-center">
           <Col md="4" className="mb-5">
             <Box>
-              <Title color="secondary">26</Title>
+              <Typography.H2 additionalClassName="tw-text-secondary">
+                26
+              </Typography.H2>
               <Typography.Paragraph>
                 år har Iteam jobbat med digitalisering.
               </Typography.Paragraph>
@@ -30,7 +32,9 @@ const Fact = () => (
           </Col>
           <Col md="4" className="mb-5">
             <Box>
-              <Title color="secondary">92%</Title>
+              <Typography.H2 additionalClassName="tw-text-secondary">
+                92%
+              </Typography.H2>
               <Typography.Paragraph>
                 Satisfaction rate comes from our awesome customers.
               </Typography.Paragraph>
@@ -38,7 +42,9 @@ const Fact = () => (
           </Col>
           <Col md="4" className="mb-5">
             <Box>
-              <Title color="secondary">4.9/5.0</Title>
+              <Typography.H2 additionalClassName="tw-text-secondary">
+                4.9/5.0
+              </Typography.H2>
               <Typography.Paragraph>
                 Average customer ratings we have got all over internet.
               </Typography.Paragraph>

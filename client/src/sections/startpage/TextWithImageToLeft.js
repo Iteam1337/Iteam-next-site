@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
-import { Title, Section, Box } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
@@ -48,7 +48,7 @@ const TextWithImageToLeft = ({ content }) => {
             </Col>
             <Col lg="6" md="9">
               <Box className="pt-5 pt-lg-0">
-                <Title>{content.title}</Title>
+                <Typography.H2>{content.title}</Typography.H2>
 
                 <BlockContent
                   variant="thin"

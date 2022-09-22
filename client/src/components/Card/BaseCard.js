@@ -25,9 +25,8 @@ export const BaseCard = ({
     >
       <div className="tw-flex tw-grow tw-flex-col">
         {title && (
-          <Title
-            variant="card"
-            className={clsx(
+          <Typography.H3
+            additionalClassName={clsx(
               'tw-peer tw-order-3 tw-py-2 tw-px-6',
               centerContent && 'tw-text-center'
             )}
@@ -39,7 +38,7 @@ export const BaseCard = ({
             >
               {title}
             </Anchor>
-          </Title>
+          </Typography.H3>
         )}
         {img && (
           <div className="tw-order-1">

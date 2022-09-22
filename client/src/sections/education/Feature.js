@@ -2,7 +2,7 @@ import React from 'react'
 import { rgba } from 'polished'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box } from '../../components/Core'
+import { Title, Section, Box, Typography } from '../../components/Core'
 
 const ContentCard = ({
   color = 'success',
@@ -43,9 +43,7 @@ const ContentCard = ({
       <i className={`icon ${iconName}`}></i>
     </Box>
 
-    <Title variant="card" mb={0}>
-      {title}
-    </Title>
+    <Typography.H3>{title}</Typography.H3>
   </Box>
 )
 
@@ -56,11 +54,11 @@ const Feature2 = () => (
         <Row className="justify-content-center">
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
-              <Title color="light">
+              <Typography.H2 additionalClassName="tw-text-white">
                 Du får med dig
                 <br />
                 allt du behöver.
-              </Title>
+              </Typography.H2>
             </Box>
           </Col>
         </Row>

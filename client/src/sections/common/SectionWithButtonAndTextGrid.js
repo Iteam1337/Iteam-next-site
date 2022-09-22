@@ -14,7 +14,7 @@ const FeatureCard = ({
   <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>
     <div className="d-flex justify-content-between align-items-start">
       <div>
-        <Title variant="card">{title}</Title>
+        <Typography.H3>{title}</Typography.H3>
         <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
       </div>
     </div>
@@ -45,7 +45,9 @@ const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
             data-aos-once="true"
           >
             <Box>
-              <Title color="light">{section.title}</Title>
+              <Typography.H2 additionalClassName="tw-text-white">
+                {section.title}
+              </Typography.H2>
               <BlockContent
                 color="light"
                 blocks={section.blockText.blockText}

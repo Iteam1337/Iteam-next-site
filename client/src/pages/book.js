@@ -17,7 +17,6 @@ import BlockContent from '../components/BlockContent'
 import ExitPreviewLink from '../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
 
-const FormStyled = styled.form``
 const FrameStyled = styled.div`
   max-width: 484px;
 `
@@ -73,7 +72,7 @@ const Book = ({ data, preview = false }) => {
           <Container>
             <Row className="align-items-center">
               <Col lg="5">
-                <FormStyled
+                <form
                   id="form"
                   name="contact1"
                   method="post"
@@ -82,37 +81,38 @@ const Book = ({ data, preview = false }) => {
                 >
                   {/* You still need to add the hidden input with the form name to your JSX form */}
                   <input type="hidden" name="form-name" value="contact1" />
-
                   <Box mb={5}>
-                    <Title>{page?.title && page.title}</Title>
+                    <Typography.H2>{page?.title && page.title}</Typography.H2>
                   </Box>
                   <FrameStyled
                     className="meetings-iframe-container"
                     data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
                   ></FrameStyled>
-                </FormStyled>
+                </form>
               </Col>
               <Col
                 lg={6}
                 className="offset-lg-1 order-lg-2 mt-5 mt-lg-0 pt-lg-5"
               >
                 <Box className="mb-5">
-                  <Title variant="card" fontSize="24px">
+                  <Typography.H2>
                     {page?.call?.title && page.call.title}
-                  </Title>
+                  </Typography.H2>
                   {page?.call?.contactPersons &&
                     page.call.contactPersons.map((contact, index) => (
-                      <Title variant="card" fontSize="18px" key={index}>
-                        {contact.fullname}, {contact.role}
-                        <Typography.Paragraph>
-                          <Anchor
-                            color="info"
-                            href={`callto:${contact.phoneNumber}`}
-                          >
+                      <div className="tw-mb-3">
+                        <Typography.H3
+                          additionalClassName="tw-text-"
+                          key={index}
+                        >
+                          {contact.fullname}, {contact.role}
+                        </Typography.H3>
+                        <Typography.ParagraphSmall>
+                          <Anchor href={`callto:${contact.phoneNumber}`}>
                             {formatPhoneNumber(contact.phoneNumber)}
                           </Anchor>
-                        </Typography.Paragraph>
-                      </Title>
+                        </Typography.ParagraphSmall>
+                      </div>
                     ))}
                   <Anchor
                     color="info"
@@ -124,9 +124,9 @@ const Book = ({ data, preview = false }) => {
                   </Anchor>
                 </Box>
                 <Box className="mb-5">
-                  <Title variant="card" fontSize="24px">
+                  <Typography.H3>
                     {page?.mail?.title && page.mail.title}
-                  </Title>
+                  </Typography.H3>
                   {page?.mail?.emails &&
                     page.mail.emails.map((email, index) => (
                       <Typography.Paragraph key={index}>
@@ -139,9 +139,7 @@ const Book = ({ data, preview = false }) => {
                 {page?.visit?.address &&
                   page.visit.address.map((item, index) => (
                     <Box className="mb-5" key={index}>
-                      <Title variant="card" fontSize="24px">
-                        {item.title}
-                      </Title>
+                      <Typography.H3>{item.title}</Typography.H3>
                       <BlockContent blocks={item.blockText.blockText} />
                     </Box>
                   ))}

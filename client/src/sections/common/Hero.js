@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Title, Section, Typography, Button } from '../../components/Core'
 import { getExternalOrInternalLink, hexToRGBA } from '../../utils/helpers'
 import { urlFor } from '../../utils/helpers'
+import clsx from 'clsx'
 
 const SectionStyled = styled(Section)`
   background-image: ${({ color }) =>
@@ -100,18 +101,17 @@ const Hero = ({ content, flipTexts = false }) => {
                   flexDirection: flipTexts ? 'column-reverse' : 'column',
                 }}
               >
-                <Title
-                  variant="hero"
-                  color={
+                <Typography.H1
+                  additionalClassName={clsx(
                     mediaType.type === 'image'
                       ? mediaType.darkGradient
-                        ? 'light'
-                        : 'dark'
-                      : 'dark'
-                  }
+                        ? 'tw-text-white'
+                        : 'tw-text-dark-gray'
+                      : 'tw-text-dark-gray'
+                  )}
                 >
                   {title}
-                </Title>
+                </Typography.H1>
                 <Typography.Paragraph light>
                   <TextBg>{subtitle}</TextBg>
                 </Typography.Paragraph>

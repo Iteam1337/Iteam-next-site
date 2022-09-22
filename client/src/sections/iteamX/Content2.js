@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box } from '../../components/Core'
+import { Title, Button, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
@@ -64,7 +64,9 @@ const Content2 = ({ content }) => {
               data-aos-once="true"
             >
               <div>
-                <Title color="light">{content.title}</Title>
+                <Typography.H2 additionalClassName="tw-text-white">
+                  {content.title}
+                </Typography.H2>
                 <BlockContent
                   color="light"
                   blocks={content.blockText.blockText}

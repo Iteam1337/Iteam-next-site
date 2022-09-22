@@ -28,11 +28,11 @@ const GlitchHero = () => {
           <TextContainer>
             <Link href="/aktuellt/roliga-nyheter">
               <ClickableArea>
-                <Title variant="hero" color="light">
+                <Typography.H1 additionalClassName="tw-text-white">
                   Boom! Vi växer och
                   <br />
                   har massor att berätta
-                </Title>
+                </Typography.H1>
                 <Typography.Paragraph light>
                   <TextBg>
                     Hållbarhet och digital innovation sitter lika naturligt ihop

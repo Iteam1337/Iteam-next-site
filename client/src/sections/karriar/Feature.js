@@ -13,7 +13,7 @@ const Feature = ({ content }) => {
                 <Box width={'100%'} bg="light">
                   <div className="d-flex justify-content-between align-items-start">
                     <div>
-                      <Title variant="card">{item.title}</Title>
+                      <Typography.H3>{item.title}</Typography.H3>
                       <Typography.Paragraph>{item.text}</Typography.Paragraph>
                     </div>
                   </div>

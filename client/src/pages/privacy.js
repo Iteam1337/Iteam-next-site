@@ -25,21 +25,15 @@ const Privacy = () => {
           <Container>
             <Row className="justify-content-center">
               <Col lg="9" xl="8">
-                <Title variant="" className="text-left">
-                  Personuppgiftshantering hos Iteam
-                </Title>
+                <Typography.H1>Personuppgiftshantering hos Iteam</Typography.H1>
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
-                    Personuppgiftsansvarig
-                  </Title>
+                  <Typography.H2>Personuppgiftsansvarig</Typography.H2>
                   <Typography.ParagraphSmall>
                     Personuppgiftsansvarig är Iteam Solutions AB, 556551-6928.
                   </Typography.ParagraphSmall>
                 </Box>
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
-                    Vad är personuppgifter?
-                  </Title>
+                  <Typography.H2>Vad är personuppgifter?</Typography.H2>
                   <Typography.ParagraphSmall>
                     Med personuppgifter avses all slags information som direkt
                     eller indirekt kan hänföras till en fysisk person som är i
@@ -49,9 +43,7 @@ const Privacy = () => {
                   </Typography.ParagraphSmall>
                 </Box>
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
-                    Insamling av personuppgifter
-                  </Title>
+                  <Typography.H2>Insamling av personuppgifter</Typography.H2>
                   <Typography.ParagraphSmall>
                     Vi samlar in personuppgifter på följande sätt:
                   </Typography.ParagraphSmall>
@@ -84,9 +76,7 @@ const Privacy = () => {
                   </List>
                 </Box>
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
-                    Kategorier av personuppgifter
-                  </Title>
+                  <Typography.H2>Kategorier av personuppgifter</Typography.H2>
                   <Typography.ParagraphSmall>
                     De kategorier av personuppgifter som vi samlar, eller har
                     rätt att samla in, är:
@@ -112,9 +102,9 @@ const Privacy = () => {
                   </List>
                 </Box>
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
+                  <Typography.H2>
                     Laglig grund och ändamål för behandling av personuppgifter
-                  </Title>
+                  </Typography.H2>
                   <Typography.ParagraphSmall>
                     Vi samlar bara in personuppgifter för ändamål som har stöd i
                     gällande dataskyddsförordning. Det vanligaste är att
@@ -156,9 +146,7 @@ const Privacy = () => {
                   </Typography.ParagraphSmall>
                 </Box>
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
-                    Överlämnande av personuppgifter
-                  </Title>
+                  <Typography.H2>Överlämnande av personuppgifter</Typography.H2>
                   <Typography.ParagraphSmall>
                     Under vissa omständigheter kan vi komma att överlämna
                     personuppgifter till tredje part som då agerar
@@ -176,9 +164,9 @@ const Privacy = () => {
                   </List>
                 </Box>
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
+                  <Typography.H2>
                     Inhämtning av personuppgifter från tredje part
-                  </Title>
+                  </Typography.H2>
                   <Typography.ParagraphSmall>
                     För marknadsföring och försäljning inhämtar vi
                     personuppgifter från bl.a . Creditsafe, Bisnode och andra
@@ -187,9 +175,9 @@ const Privacy = () => {
                   </Typography.ParagraphSmall>
                 </Box>
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
+                  <Typography.H2>
                     Så länge sparas dina personuppgifter
-                  </Title>
+                  </Typography.H2>
                   <Typography.ParagraphSmall>
                     Vi sparar inte personuppgifter längre än nödvändigt. Om du
                     inte är kund hos oss så behåller vi dina uppgifter i upp
@@ -206,9 +194,7 @@ const Privacy = () => {
                 </Box>
 
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
-                    Säkerhet
-                  </Title>
+                  <Typography.H2>Säkerhet</Typography.H2>
                   <Typography.ParagraphSmall>
                     Vi vidtar fysiska, tekniska och organisatoriska åtgärder för
                     att skydda de personuppgifter som behandlas så att
@@ -218,9 +204,7 @@ const Privacy = () => {
                 </Box>
 
                 <Box mt={['40px', null, '50px']}>
-                  <Title variant="card" fontSize="2rem" mb="30px">
-                    Dina rättigheter
-                  </Title>
+                  <Typography.H2>Dina rättigheter</Typography.H2>
                   <Typography.ParagraphSmall>
                     Du har rätt till tillgång, rättelse och radering av
                     uppgifter enligt följande:

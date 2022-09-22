@@ -34,14 +34,6 @@ const FaqCard = styled(Box)`
   }
 `
 
-const FaqTitle = styled(Title)`
-  color: ${({ theme }) => theme.colors.light};
-  font-size: 24px;
-  letter-spacing: -0.75px;
-  margin-bottom: 24px;
-  line-height: 2rem;
-`
-
 const Faq = ({ content }) => {
   return (
     <>
@@ -54,7 +46,9 @@ const Faq = ({ content }) => {
                 <Col lg="6" className="mb-5" key={index}>
                   <FaqCard>
                     <div>
-                      <FaqTitle>{faq.title}</FaqTitle>
+                      <Typography.H3 additionalClassName="tw-text-white tw-text-xl">
+                        {faq.title}
+                      </Typography.H3>
                       <BlockContent
                         anchorColor="light"
                         blocks={faq.blockText.blockText}

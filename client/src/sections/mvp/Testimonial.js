@@ -70,9 +70,7 @@ const ContentCard = ({
         <img src={image} alt="" className="img-fluid" />
       </Box>
       <div className="flex-grow-1">
-        <Title variant="card" mb={0}>
-          {name}
-        </Title>
+        <Typography.H3>{name}</Typography.H3>
         <Typography.ParagraphSmall>{company}</Typography.ParagraphSmall>
       </div>
     </Box>
@@ -105,7 +103,7 @@ const Testimonial = () => {
           <Row className="justify-content-center">
             <Col md="9" lg="6" className="text-center">
               <Box className="text-center">
-                <Title>Customer reviews</Title>
+                <Typography.H2>Customer reviews</Typography.H2>
               </Box>
               <Typography.Paragraph additionalClassName="tw-mb-4">
                 Create custom landing pages with Omega that converts more

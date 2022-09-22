@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Title, Box, Text } from '../Core'
+import { Title, Box, Text, Typography } from '../Core'
 import BlockContent from '../BlockContent'
 
 const Card = styled(Box)`
@@ -20,10 +20,6 @@ const CardText = styled(Box)`
   padding-left: 30px;
 `
 
-const TitleStyled = styled(Title)`
-  transition: 0.3s;
-`
-
 const CaseFooterSection = ({
   img,
   imgBrand,
@@ -41,9 +37,7 @@ const CaseFooterSection = ({
         <img src={img} alt={alt} className="w-100 img-fluid" />
       </ImageContainer>
       <CardText>
-        <TitleStyled variant="card" mb="12px">
-          {title}
-        </TitleStyled>
+        <Typography.H3>{title}</Typography.H3>
         <BlockContent variant="thin" blocks={blocks.blockText} />
       </CardText>
     </Card>

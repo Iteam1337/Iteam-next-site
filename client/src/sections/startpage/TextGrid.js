@@ -18,9 +18,7 @@ const SectionStyled = styled(Section)`
 const FeatureCard = ({ title, children, ...rest }) => (
   <Box {...rest}>
     <Box>
-      <Title variant="card" fontSize="24px" mb={3}>
-        {title}
-      </Title>
+      <Typography.H3>{title}</Typography.H3>
       <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
     </Box>
   </Box>
@@ -30,7 +28,9 @@ const TextGrid = ({ content }) => {
   return (
     <SectionStyled>
       {/* content.title is actually just a description of the Sanity document type ("Flera texter"), but serves OK as a generic h2 */}
-      <Title className="sr-only">{content.title}</Title>
+      <Typography.H2 additionalClassName="sr-only">
+        {content.title}
+      </Typography.H2>
       <Container>
         <Row className="justify-content-center">
           {content.texts.map((text, i) => {

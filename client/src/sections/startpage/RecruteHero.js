@@ -45,9 +45,9 @@ const RecruteHero = ({ content }) => {
             `}
           >
             <TextContainer>
-              <Title variant="hero" color="light">
+              <Typography.H1 additionalClassName="tw-text-white">
                 {content.title}
-              </Title>
+              </Typography.H1>
               <Typography.Paragraph light>
                 <div className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.7)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
                   {content.subtitle}
