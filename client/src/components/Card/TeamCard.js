@@ -5,7 +5,7 @@ import Gravatar from 'react-gravatar'
 
 import SocialMediaLinks from '../../sections/about/SocialMediaLinks'
 import { formatPhoneNumber } from '../../utils/helpers'
-import { Anchor, Typography } from '../Core'
+import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'
 
 const TeamCardImage = ({ img, email, customImgAlt }) => {
@@ -69,14 +69,16 @@ export const TeamCard = ({
       <div className="tw-relative tw-flex tw-flex-col tw-pb-6">
         {phoneNumber && (
           <Typography.Caption>
-            <Anchor href={`tel:${phoneNumber}`}>
+            <Typography.Anchor href={`tel:${phoneNumber}`}>
               {formatPhoneNumber(phoneNumber)}
-            </Anchor>
+            </Typography.Anchor>
           </Typography.Caption>
         )}
         {email && (
           <Typography.Caption>
-            <Anchor href={`mailto:${email}`}>{email}</Anchor>
+            <Typography.Anchor href={`mailto:${email}`}>
+              {email}
+            </Typography.Anchor>
           </Typography.Caption>
         )}
         {socialMedia && (

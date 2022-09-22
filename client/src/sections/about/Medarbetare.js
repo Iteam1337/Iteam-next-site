@@ -26,15 +26,15 @@ const Medarbetare = ({ info }) => (
         <Col md={8} lg={6}>
           {info.phoneNumber && (
             <Typography.Paragraph>
-              <Anchor href={`tel:${info.phoneNumber}`} color="info">
+              <Typography.Anchor href={`tel:${info.phoneNumber}`}>
                 {formatPhoneNumber(info.phoneNumber)}
-              </Anchor>
+              </Typography.Anchor>
             </Typography.Paragraph>
           )}
           <Typography.Paragraph>
-            <Anchor href={`mailto:${info.email}`} color="info">
+            <Typography.Anchor href={`mailto:${info.email}`}>
               {info.email}
-            </Anchor>
+            </Typography.Anchor>
           </Typography.Paragraph>
           <Typography.Paragraph>
             {info.socialMedia && (

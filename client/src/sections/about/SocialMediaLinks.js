@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Anchor } from '../../components/Core'
+import { Typography } from '../../components/Core'
 
 const SocialMediaLinks = ({ socialMedia, fullname }) => {
   return Object.entries(socialMedia).map(([key, value], index) => {
@@ -7,17 +7,17 @@ const SocialMediaLinks = ({ socialMedia, fullname }) => {
       <Fragment key={index}>
         {index !== 0 && ' | '}
         {key !== 'website' ? (
-          <Anchor href={value} aria-label={`${key} - ${fullname}`}>
+          <Typography.Anchor href={value} ariaLabel={`${key} - ${fullname}`}>
             <i
               className={`fab fa-${key}`}
               aria-hidden="true"
               title={`${key} - ${fullname}`}
             />
-          </Anchor>
+          </Typography.Anchor>
         ) : (
-          <Anchor href={value} aria-label={`Webbsida - ${fullname}`}>
-            <i className="fas fa-globe" />
-          </Anchor>
+          <Typography.Anchor href={value} ariaLabel={`Webbsida - ${fullname}`}>
+            <i className="fas fa-globe" aria-hidden="true" />
+          </Typography.Anchor>
         )}
       </Fragment>
     )

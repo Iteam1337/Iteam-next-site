@@ -228,9 +228,12 @@ const Privacy = () => {
                   <Typography.ParagraphSmall>
                     Har du frågor om personuppgiftshantering och datasäkerhet,
                     kontakta oss på{' '}
-                    <Anchor color="info" href="mailto:privacy@iteam.se">
+                    <Typography.Anchor
+                      color="info"
+                      href="mailto:privacy@iteam.se"
+                    >
                       privacy@iteam.se.
-                    </Anchor>
+                    </Typography.Anchor>
                   </Typography.ParagraphSmall>
                 </Box>
               </Col>

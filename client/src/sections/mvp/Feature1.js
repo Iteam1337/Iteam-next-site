@@ -43,7 +43,9 @@ const Feature = () => (
                 Oavsett om du har ett problem du behöver lösa eller redan har en
                 idé så hjälper vi dig. Vi börjar där du står och utgår ifrån det
                 helt enkelt. Ibland gör vi en
-                <Anchor href="#design_sprint"> Designsprint </Anchor>
+                <Typography.Anchor href="#design_sprint">
+                  Designsprint
+                </Typography.Anchor>
                 för att kickstarta samarbetet. Andra gånger gör vi research om
                 användarbehov för att försäkra oss om att vi löser rätt problem.
               </Typography.Paragraph>
@@ -75,11 +77,7 @@ const Feature = () => (
                   data-aos-once="true"
                   data-aos-delay="50"
                 >
-                  <FeatureCard
-                    color="ash"
-                    title="Användaren i centrum
-"
-                  >
+                  <FeatureCard color="ash" title="Användaren i centrum">
                     Vi vet att nöjda användare är bra business. Därför sätter vi
                     alltid dem i centrum och utgår från riktiga behov när vi tar
                     fram nya lösningar.

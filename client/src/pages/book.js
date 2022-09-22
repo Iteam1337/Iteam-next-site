@@ -108,20 +108,22 @@ const Book = ({ data, preview = false }) => {
                           {contact.fullname}, {contact.role}
                         </Typography.H3>
                         <Typography.ParagraphSmall>
-                          <Anchor href={`callto:${contact.phoneNumber}`}>
+                          <Typography.Anchor
+                            href={`callto:${contact.phoneNumber}`}
+                          >
                             {formatPhoneNumber(contact.phoneNumber)}
-                          </Anchor>
+                          </Typography.Anchor>
                         </Typography.ParagraphSmall>
                       </div>
                     ))}
-                  <Anchor
+                  <Typography.Anchor
                     color="info"
                     href={`${buildInternalUrl(
                       page?.call?.cta?.reference && page.call.cta.reference
                     )}#medarbetare`}
                   >
                     {page?.call?.cta?.title && page.call.cta.title}
-                  </Anchor>
+                  </Typography.Anchor>
                 </Box>
                 <Box className="mb-5">
                   <Typography.H3>
@@ -129,11 +131,14 @@ const Book = ({ data, preview = false }) => {
                   </Typography.H3>
                   {page?.mail?.emails &&
                     page.mail.emails.map((email, index) => (
-                      <Typography.Paragraph key={index}>
-                        <Anchor color="info" href={`mailto:${email}`}>
+                      <Typography.ParagraphSmall key={index}>
+                        <Typography.Anchor
+                          color="info"
+                          href={`mailto:${email}`}
+                        >
                           {email}
-                        </Anchor>
-                      </Typography.Paragraph>
+                        </Typography.Anchor>
+                      </Typography.ParagraphSmall>
                     ))}
                 </Box>
                 {page?.visit?.address &&

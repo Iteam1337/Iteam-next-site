@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Button, Section, Box, Typography } from '../../components/Core'
 import BlockContent from '../../components/BlockContent'
-import styled from 'styled-components'
 
 const FeatureCard = ({
   color = 'primary',
@@ -20,12 +19,6 @@ const FeatureCard = ({
     </div>
   </Box>
 )
-
-const Anchor = styled.a`
-  &:hover {
-    text-decoration: none;
-  }
-`
 
 const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
   const { section, textGrid, button } = content
@@ -53,9 +46,9 @@ const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
                 blocks={section.blockText.blockText}
                 anchorColor="light"
               />
-              <Anchor href={`#${linkTo}`}>
+              <Typography.Anchor href={`#${linkTo}`}>
                 <Button mt={4}>{button}</Button>
-              </Anchor>
+              </Typography.Anchor>
             </Box>
           </Col>
           <Col md="8" lg="5" className="order-lg-1 mt-5 mt-lg-0">

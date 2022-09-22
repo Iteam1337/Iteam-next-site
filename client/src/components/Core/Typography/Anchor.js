@@ -6,16 +6,14 @@ export const Anchor = ({
   href = '#',
   additionalClassName,
   ariaLabel,
+  target,
 }) => {
   return (
     <a
       href={href}
-      className={clsx(
-        additionalClassName,
-        'tw-underline-none tw-text-gray-dark',
-        'hover:tw-underline'
-      )}
+      className={clsx(additionalClassName, 'a')}
       aria-label={ariaLabel}
+      target={target}
     >
       {children}
     </a>
