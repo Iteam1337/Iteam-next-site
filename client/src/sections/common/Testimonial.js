@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Section, Box, Typography } from '../../components/Core'
+import { Section, Box, Typography } from '../../components/Core'
 import Carousel from '../../components/Carousel'
 import BlockContent from '../../components/BlockContent'
 

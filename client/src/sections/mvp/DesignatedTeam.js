@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
 
-import { Title, Button, Section, Typography } from '../../components/Core'
+import { Button, Section, Typography } from '../../components/Core'
 
 import imgContent from '../../assets/image/jpeg/Rickard-Working-Lowres.jpg'
 

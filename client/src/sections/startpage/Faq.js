@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import BlockContent from '../../components/BlockContent'
-import { Title, Section, Box } from '../../components/Core'
+import { Section, Box, Typography } from '../../components/Core'
 
 const SectionStyled = styled(Section)`
   padding-top: 90px;

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Title, Box, Text, Typography } from '../Core'
+import { Box, Text, Typography } from '../Core'
 import BlockContent from '../BlockContent'
 
 const Card = styled(Box)`

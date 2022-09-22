@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Button, Section, Box, Typography } from '../../components/Core'
+import { Button, Section, Box, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
 const ImageRight = styled(Box)`

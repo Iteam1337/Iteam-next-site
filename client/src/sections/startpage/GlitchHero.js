@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 
-import { Title, Typography, Button } from '../../components/Core'
+import { Typography, Button } from '../../components/Core'
 import heroImg from '../../assets/image/jpeg/new_colleagues.jpg'
 
 const GlitchHero = () => {

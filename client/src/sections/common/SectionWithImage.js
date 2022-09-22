@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Section, Typography } from '../../components/Core'
+import { Section, Typography } from '../../components/Core'
 import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 import clsx from 'clsx'

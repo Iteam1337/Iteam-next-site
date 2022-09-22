@@ -3,14 +3,7 @@ import styled from 'styled-components'
 
 import { Container, Row, Col, FormControl } from 'react-bootstrap'
 
-import {
-  Title,
-  Button,
-  Section,
-  Box,
-  Typography,
-  Badge,
-} from '../../components/Core'
+import { Button, Section, Box, Typography, Badge } from '../../components/Core'
 import GlobalContext from '../../context/GlobalContext'
 
 import imgHero from '../../assets/image/png/Sofa-Large.png'

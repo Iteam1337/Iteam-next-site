@@ -2,14 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import PageWrapper from '../components/PageWrapper'
-import {
-  Section,
-  Title,
-  Box,
-  List,
-  Anchor,
-  Typography,
-} from '../components/Core'
+import { Section, Box, List, Anchor, Typography } from '../components/Core'
 
 const StyledLi = styled.li`
   font-weight: 300 !important;

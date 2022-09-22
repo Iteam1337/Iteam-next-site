@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Typography } from '../../components/Core'
+import { Section, Box, Typography } from '../../components/Core'
 
 import christian from '../../assets/image/jpeg/Teacher-Christian.jpg'
 import adam from '../../assets/image/jpeg/Adam.png'

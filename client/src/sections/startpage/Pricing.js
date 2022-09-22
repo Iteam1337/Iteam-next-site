@@ -5,7 +5,6 @@ import { rgba } from 'polished'
 import { buildInternalUrl } from '../../utils/helpers'
 
 import {
-  Title,
   Section,
   Box,
   Typography,

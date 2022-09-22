@@ -7,7 +7,7 @@ import Section from '../components/Section'
 import PageWrapper from '../components/PageWrapper'
 
 import imgIcon from '../assets/image/png/heart-shape.png'
-import { Title, Typography } from '../components/Core'
+import { Typography } from '../components/Core'
 
 const ContentIcon = styled.div`
   width: 118px;

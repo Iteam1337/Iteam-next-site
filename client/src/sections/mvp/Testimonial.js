@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Slider from 'react-slick'
 
-import { Title, Section, Box, Typography } from '../../components/Core'
+import { Section, Box, Typography } from '../../components/Core'
 import { breakpoints } from '../../utils'
 
 import imgC1 from '../../assets/image/jpeg/l1-customer2.jpg'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box } from '../../components/Core'
+import { Section, Box } from '../../components/Core'
 import ContentCard from '../../components/ContentCard'
 
 const services = [
