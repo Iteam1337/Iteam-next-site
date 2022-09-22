@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Box, Span, Typography } from '../../components/Core'
+import { Section, Box, Span, Typography } from '../../components/Core'
 import { device } from '../../utils'
 import ContentCard from '../../components/ContentCard'
 

@@ -3,14 +3,7 @@ import styled from 'styled-components'
 import { rgba } from 'polished'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import {
-  Title,
-  Button,
-  Section,
-  Box,
-  Typography,
-  Span,
-} from '../../components/Core'
+import { Button, Section, Box, Typography, Span } from '../../components/Core'
 
 import { device } from '../../utils'
 

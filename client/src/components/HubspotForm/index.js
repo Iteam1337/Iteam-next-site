@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Title, Box, Typography } from '../Core'
+import { Box, Typography } from '../Core'
 
 import { device } from '../../utils'
 

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import HeroImg from '../../assets/image/jpeg/working-hero.jpg'
 import { Container } from 'react-bootstrap'
-import { Title, Typography, Button, Section } from '../../components/Core'
+import { Typography, Button, Section } from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
 const Wrapper = styled.div`
   background: linear-gradient(

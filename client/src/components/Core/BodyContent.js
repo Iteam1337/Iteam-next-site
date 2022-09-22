@@ -1,7 +1,7 @@
 import React from 'react'
 import BaseBlockContent from '@sanity/block-content-to-react'
 import * as Serializers from './serializers'
-import { Title } from '.'
+import Typography from '../Core/Typography'
 
 const serializers = (withAnchor) => ({
   types: {

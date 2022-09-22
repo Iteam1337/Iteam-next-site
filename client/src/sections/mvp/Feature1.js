@@ -1,14 +1,7 @@
 import React from 'react'
 import { rgba } from 'polished'
 import { Container, Row, Col } from 'react-bootstrap'
-import {
-  Title,
-  Button,
-  Section,
-  Box,
-  Typography,
-  Anchor,
-} from '../../components/Core'
+import { Button, Section, Box, Typography, Anchor } from '../../components/Core'
 
 const FeatureCard = ({
   color = 'primary',

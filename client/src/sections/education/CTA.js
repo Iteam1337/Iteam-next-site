@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Typography } from '../../components/Core'
+import { Button, Section, Typography } from '../../components/Core'
 
 const CTA = () => (
   <>

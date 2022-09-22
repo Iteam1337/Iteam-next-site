@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import { Anchor, Title, Typography } from '../Core'
+import { Anchor, Typography } from '../Core'
 
 export const NotificationCard = ({
   link,

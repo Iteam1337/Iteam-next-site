@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Section, Anchor, Typography } from '../../components/Core'
+import { Section, Anchor, Typography } from '../../components/Core'
 import { formatPhoneNumber } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'
 

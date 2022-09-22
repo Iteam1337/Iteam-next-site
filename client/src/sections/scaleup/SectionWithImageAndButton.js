@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Title, Button, Section, Box } from '../../components/Core'
+import { Button, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'

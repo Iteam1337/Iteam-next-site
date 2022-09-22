@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
-import { Title, Button, Section, Typography } from '../../components/Core'
+import { Button, Section, Typography } from '../../components/Core'
 import BlockContent from '../../components/BlockContent'
 import { urlFor, buildInternalUrl } from '../../utils/helpers'
 

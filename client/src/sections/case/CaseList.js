@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
-import { Section, Title, Typography } from '../../components/Core'
+import { Section, Typography } from '../../components/Core'
 
 const CaseList = ({ posts }) => {
   return (

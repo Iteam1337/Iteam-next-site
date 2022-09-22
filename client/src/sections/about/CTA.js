@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Button, Section, Box, Typography } from '../../components/Core'
+import { Button, Section, Box, Typography } from '../../components/Core'
 
 import imgOval from '../../assets/image/svg/l1-cta-oval.svg'
 import svgCurve from '../../assets/image/svg/l1-curve-cta.svg'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Title, Section, Typography } from '../../components/Core'
+import { Section, Typography } from '../../components/Core'
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
 

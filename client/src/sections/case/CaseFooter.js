@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Section, Title, Typography } from '../../components/Core'
+import { Section, Typography } from '../../components/Core'
 import CaseFooterSection from '../../components/CaseFooterSection'
 import { urlFor } from '../../utils/helpers'
 

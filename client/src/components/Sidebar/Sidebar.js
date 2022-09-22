@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { Title, Box, Span, Anchor, Typography } from '../Core'
+import { Box, Span, Anchor, Typography } from '../Core'
 
 export const CardSidebar = ({ children, ...rest }) => (
   <Box

@@ -1,14 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
-import {
-  Title,
-  Button,
-  Section,
-  Box,
-  Typography,
-  Span,
-} from '../../components/Core'
+import { Button, Section, Box, Typography, Span } from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
 
 const Hero = ({ content }) => {
