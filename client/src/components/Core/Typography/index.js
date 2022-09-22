@@ -5,6 +5,7 @@ import { H1 } from './H1'
 import { H2 } from './H2'
 import { H3 } from './H3'
 import { H4 } from './H4'
+import { Anchor } from './Anchor'
 
 export default {
   H1,
@@ -14,4 +15,5 @@ export default {
   Paragraph,
   ParagraphSmall,
   Caption,
+  Anchor,
 }
