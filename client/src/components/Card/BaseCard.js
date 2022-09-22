@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import { Anchor, Typography } from '../Core'
+import { Typography } from '../Core'
 
 export const BaseCard = ({
   link,
@@ -31,13 +31,13 @@ export const BaseCard = ({
               centerContent && 'tw-text-center'
             )}
           >
-            <Anchor
+            <Typography.Anchor
               aria-label={`${title}, Läs mer…`}
               href={link}
-              className="after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
+              additionalClassName="after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
             >
               {title}
-            </Anchor>
+            </Typography.Anchor>
           </Typography.H3>
         )}
         {img && (

@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import { Anchor, Typography } from '../Core'
+import { Typography } from '../Core'
 
 export const NotificationCard = ({
   link,
@@ -37,17 +37,17 @@ export const NotificationCard = ({
           </Typography.Caption>
         )}
         {title && (
-          <h3 className="tw-mt-2 tw-mb-0 tw-text-base tw-font-light">
-            <Anchor
+          <h3 className="tw-mt-2 tw-mb-0 tw-text-base">
+            <Typography.Anchor
               aria-label={ariaLabel}
               href={link}
-              className={clsx(
+              additionalClassName={clsx(
                 'tw-font-light tw-transition-none',
                 'after:tw-absolute after:tw-inset-0 hover:tw-text-white hover:tw-no-underline focus-visible:tw-text-white focus-visible:tw-outline-none '
               )}
             >
               {title}
-            </Anchor>
+            </Typography.Anchor>
           </h3>
         )}
       </div>

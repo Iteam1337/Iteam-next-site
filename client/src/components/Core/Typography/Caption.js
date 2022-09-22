@@ -6,15 +6,13 @@ export const Caption = ({
   ariaLabel,
   children,
   additionalClassName,
-  light,
 }) => {
   return (
     <p
       aria-hidden={ariaHidden}
       aria-label={ariaLabel}
       className={clsx(
-        'tw-mb-0 tw-text-sm tw-font-light tw-leading-tight tw-tracking-normal',
-        light ? 'tw-text-gray-light' : 'tw-text-gray-dark',
+        'tw-text-dark-gray tw-mb-0 tw-text-sm tw-font-light tw-leading-tight tw-tracking-normal',
         additionalClassName
       )}
     >

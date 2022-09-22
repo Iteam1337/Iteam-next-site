@@ -226,7 +226,9 @@ const Coworker = ({ item, active }) => {
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           {active && (
             <Typography.ParagraphSmall additionalClassName="tw-mt-2">
-              <Anchor href={`/about/${item.slug.current}`}>Läs mer…</Anchor>
+              <Typography.Anchor href={`/about/${item.slug.current}`}>
+                Läs mer…
+              </Typography.Anchor>
             </Typography.ParagraphSmall>
           )}
         </SliderText>
@@ -255,7 +257,9 @@ const Client = ({ item, active }) => {
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           {active && item.reference && (
             <Typography.ParagraphSmall additionalClassName="tw-mt-2">
-              <Anchor href={buildInternalUrl(item.reference)}>Läs mer…</Anchor>
+              <Typography.Anchor href={buildInternalUrl(item.reference)}>
+                Läs mer…
+              </Typography.Anchor>
             </Typography.ParagraphSmall>
           )}
         </SliderText>

@@ -1,14 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Box, Anchor, Typography } from '../Core'
+import { Box, Typography } from '../Core'
 import Logo from '../Logo'
 import clsx from 'clsx'
-
-const PrivacyAnchor = styled(Anchor)`
-  font-size: 13px;
-  font-weight: 300;
-`
 
 const FooterList = ({ children, additionalClassName }) => {
   return (
@@ -45,14 +39,13 @@ const Footer = ({ isDark = true, content }) => {
                         {content.follow}
                       </Typography.H3>
                       <FooterList>
-                        <li className="tw-leading-9">
-                          <a
+                        <li className="tw-font-light tw-leading-9">
+                          <Typography.Anchor
                             href={content.linkedinLink}
                             target="_blank"
-                            aria-label="Linkedin"
-                            className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
-                              'hover:tw-underline'
+                            ariaLabel="Linkedin"
+                            additionalClassName={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                             )}
                           >
                             <i
@@ -60,16 +53,15 @@ const Footer = ({ isDark = true, content }) => {
                               aria-hidden="true"
                             ></i>
                             {content.linkedin}
-                          </a>
+                          </Typography.Anchor>
                         </li>
-                        <li className="tw-leading-9">
-                          <a
+                        <li className="tw-font-light tw-leading-9">
+                          <Typography.Anchor
                             href={content.twitterLink}
                             target="_blank"
                             aria-label="Twitter"
-                            className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
-                              'hover:tw-underline'
+                            additionalClassName={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                             )}
                           >
                             <i
@@ -77,16 +69,15 @@ const Footer = ({ isDark = true, content }) => {
                               aria-hidden="true"
                             ></i>
                             {content.twitter}
-                          </a>
+                          </Typography.Anchor>
                         </li>
-                        <li className="tw-leading-9">
-                          <a
+                        <li className="tw-font-light tw-leading-9">
+                          <Typography.Anchor
                             href={content.facebookLink}
                             target="_blank"
                             aria-label="Facebook"
-                            className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
-                              'hover:tw-underline'
+                            additionalClassName={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                             )}
                           >
                             <i
@@ -95,16 +86,15 @@ const Footer = ({ isDark = true, content }) => {
                             ></i>
 
                             {content.facebook}
-                          </a>
+                          </Typography.Anchor>
                         </li>
-                        <li className="tw-leading-9">
-                          <a
+                        <li className="tw-font-light tw-leading-9">
+                          <Typography.Anchor
                             href={content.instagramLink}
                             target="_blank"
                             aria-label="Instagram"
-                            className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
-                              'hover:tw-underline'
+                            additionalClassName={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                             )}
                           >
                             <i
@@ -113,7 +103,7 @@ const Footer = ({ isDark = true, content }) => {
                             ></i>
 
                             {content.instagram}
-                          </a>
+                          </Typography.Anchor>
                         </li>
                       </FooterList>
                     </div>
@@ -131,12 +121,15 @@ const Footer = ({ isDark = true, content }) => {
                       </Typography.H3>
                       <FooterList>
                         {content.addresses.map((address) => (
-                          <li className="tw-mb-5 tw-leading-9">
-                            <a
+                          <li
+                            className={clsx(
+                              'tw-mb-5 tw-font-light tw-leading-9'
+                            )}
+                          >
+                            <Typography.Anchor
                               href={address.addressLink}
-                              className={clsx(
-                                isDark ? 'tw-text-white' : 'tw-text-gray-dark',
-                                'hover:tw-underline'
+                              additionalClassName={clsx(
+                                isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                               )}
                               target="_blank"
                             >
@@ -145,7 +138,7 @@ const Footer = ({ isDark = true, content }) => {
                               {address.streetAddress}
                               <br />
                               {address.zipCode} {address.city}
-                            </a>
+                            </Typography.Anchor>
                           </li>
                         ))}
                         <li
@@ -170,38 +163,35 @@ const Footer = ({ isDark = true, content }) => {
                         {content.contact}
                       </Typography.H3>
                       <FooterList>
-                        <li className="tw-leading-9">
-                          <a
+                        <li className="tw-font-light tw-leading-9">
+                          <Typography.Anchor
                             href={content.contactLink}
-                            className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
-                              'hover:tw-underline'
+                            additionalClassName={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                             )}
                           >
                             {content.contactTitle}
-                          </a>
+                          </Typography.Anchor>
                         </li>
-                        <li className=" tw-leading-9">
-                          <a
+                        <li className="tw-font-light tw-leading-9">
+                          <Typography.Anchor
                             href={content.applyForJobLink}
-                            className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
-                              'hover:tw-underline'
+                            additionalClassName={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                             )}
                           >
                             {content.applyForJob}
-                          </a>
+                          </Typography.Anchor>
                         </li>
-                        <li className="tw-leading-9">
-                          <a
+                        <li className="tw-font-light tw-leading-9">
+                          <Typography.Anchor
                             href={`mailto:${content.mailToApplyJob}`}
-                            className={clsx(
-                              isDark ? 'tw-text-white' : 'tw-text-gray-dark',
-                              'hover:tw-underline'
+                            additionalClassName={clsx(
+                              isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                             )}
                           >
                             {content.applyJob}
-                          </a>
+                          </Typography.Anchor>
                         </li>
                       </FooterList>
                     </div>
@@ -230,24 +220,30 @@ const Footer = ({ isDark = true, content }) => {
                 >
                   &copy; 2021 Iteam, All Rights Reserved.
                 </p>
-                <PrivacyAnchor
+                <p
                   className={clsx(
-                    'tw-text-xs tw-tracking-normal',
+                    'tw-text-xs tw-leading-9 tw-tracking-normal',
                     isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                   )}
-                  href="/privacy"
                 >
-                  Our privacy policy.
-                </PrivacyAnchor>
+                  <Typography.Anchor
+                    additionalClassName={clsx(
+                      isDark ? 'tw-text-white' : 'tw-text-gray-dark'
+                    )}
+                    href="/privacy"
+                  >
+                    Our privacy policy.
+                  </Typography.Anchor>{' '}
+                </p>
               </Col>
               <Col sm="6" className="text-sm-right text-center">
                 <FooterList additionalClassName="tw-mt-2 tw-flex sm:tw-justify-end tw-gap-3 tw-justify-center">
                   <li>
-                    <a
+                    <Typography.Anchor
                       href={content.linkedinLink}
                       target="_blank"
                       aria-label="Linkedin"
-                      className={clsx(
+                      additionalClassName={clsx(
                         isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                       )}
                     >
@@ -255,14 +251,14 @@ const Footer = ({ isDark = true, content }) => {
                         className="icon icon-logo-linkedin"
                         aria-hidden="true"
                       ></i>
-                    </a>
+                    </Typography.Anchor>
                   </li>
                   <li>
-                    <a
+                    <Typography.Anchor
                       href={content.twitterLink}
                       target="_blank"
                       aria-label="Twitter"
-                      className={clsx(
+                      additionalClassName={clsx(
                         isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                       )}
                     >
@@ -270,14 +266,14 @@ const Footer = ({ isDark = true, content }) => {
                         className="icon icon-logo-twitter"
                         aria-hidden="true"
                       ></i>
-                    </a>
+                    </Typography.Anchor>
                   </li>
                   <li>
-                    <a
+                    <Typography.Anchor
                       href={content.facebookLink}
                       target="_blank"
                       aria-label="Facebook"
-                      className={clsx(
+                      additionalClassName={clsx(
                         isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                       )}
                     >
@@ -285,14 +281,14 @@ const Footer = ({ isDark = true, content }) => {
                         className="icon icon-logo-facebook"
                         aria-hidden="true"
                       ></i>
-                    </a>
+                    </Typography.Anchor>
                   </li>
                   <li>
-                    <a
+                    <Typography.Anchor
                       href={content.instagramLink}
                       target="_blank"
                       aria-label="Instagram"
-                      className={clsx(
+                      additionalClassName={clsx(
                         isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                       )}
                     >
@@ -300,7 +296,7 @@ const Footer = ({ isDark = true, content }) => {
                         className="icon icon-logo-instagram"
                         aria-hidden="true"
                       ></i>
-                    </a>
+                    </Typography.Anchor>
                   </li>
                 </FooterList>
               </Col>

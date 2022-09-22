@@ -10,6 +10,7 @@ import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
+import clsx from 'clsx'
 
 export default function BlogRegular({ query, data, preview = false }) {
   const router = useRouter()
@@ -78,43 +79,44 @@ export default function BlogRegular({ query, data, preview = false }) {
               <Typography.H1 additionalClassName="pb-4">
                 {title && title}
               </Typography.H1>
-              <Typography.H2 className="visibility-hidden">
+              <Typography.H2 additionalClassName="tw-sr-only">
                 {(filterParam == 'alla' && 'Allt') ||
                   (filterParam == 'blogg' && 'Blogg') ||
                   (filterParam == 'open-source-skolan' && 'Open Source Skolan')}
               </Typography.H2>
               {mixedPosts && (
                 <Col lg="8">
-                  <Anchor
-                    textDecoration={
-                      filterParam == 'alla' ? 'underline' : 'none'
-                    }
-                    color="dark"
-                    mx={24}
+                  <Typography.Anchor
+                    additionalClassName={clsx(
+                      'tw-mx-6',
+                      filterParam == 'alla' ? 'tw-underline' : 'tw-no-underline'
+                    )}
                     href="/aktuellt"
                   >
                     Allt
-                  </Anchor>
-                  <Anchor
-                    textDecoration={
-                      filterParam == 'blogg' ? 'underline' : 'none'
-                    }
-                    color="dark"
-                    mx={24}
+                  </Typography.Anchor>
+                  <Typography.Anchor
+                    additionalClassName={clsx(
+                      'tw-mx-6',
+                      filterParam == 'blogg'
+                        ? 'tw-underline'
+                        : 'tw-no-underline'
+                    )}
                     href="/aktuellt?taggat=blogg"
                   >
                     Blogg
-                  </Anchor>
-                  <Anchor
-                    textDecoration={
-                      filterParam == 'open-source-skolan' ? 'underline' : 'none'
-                    }
-                    color="dark"
-                    mx={24}
+                  </Typography.Anchor>
+                  <Typography.Anchor
+                    additionalClassName={clsx(
+                      'tw-mx-6',
+                      filterParam == 'open-source-skolan'
+                        ? 'tw-underline'
+                        : 'tw-no-underline'
+                    )}
                     href="/aktuellt?taggat=open-source-skolan"
                   >
                     Open Source skolan
-                  </Anchor>
+                  </Typography.Anchor>
                 </Col>
               )}
             </Row>

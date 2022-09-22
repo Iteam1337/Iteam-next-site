@@ -15,4 +15,7 @@
   .h4 {
     @apply tw-text-xl tw-font-bold tw-tracking-tight tw-text-gray-dark;
   }
+  .a {
+    @apply tw-text-gray-dark tw-no-underline hover:tw-underline;
+  }
 }

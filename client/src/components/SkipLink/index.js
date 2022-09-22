@@ -1,32 +1,13 @@
-import styled from 'styled-components'
-import { Anchor } from '../Core'
-
-const Link = styled(Anchor)`
-  position: absolute;
-  left: 25%;
-  top: -1000px;
-  right: 25%;
-  z-index: 9999;
-  padding: 1rem;
-  border-radius: 0 0 5px 5px;
-  background: ${({ theme }) => theme.colors.dark};
-  font-weight: 500;
-  text-align: center;
-  color: ${({ theme }) => theme.colors.light};
-  opacity: 0;
-  transition: opacity 0.1s;
-
-  &:focus-visible {
-    top: 0;
-    opacity: 1;
-  }
-`
+import { Typography } from '../Core'
 
 const SkipLink = () => {
   return (
-    <Link href="#main-content" color="light">
+    <Typography.Anchor
+      additionalClassName="tw-rounded-b-md tw-bg-gray-dark tw-opacity-0 tw-font-bold tw-text-center tw-text-white tw-absolute tw-left-1/4 tw-top-[-1000px] tw-right-1/4 tw-z-9999 tw-p-4 focus-visible:tw-top-0 focus-visible:tw-opacity-100"
+      href="#main-content"
+    >
       Hoppa till innehåll
-    </Link>
+    </Typography.Anchor>
   )
 }
 
