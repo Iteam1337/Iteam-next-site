@@ -11,7 +11,7 @@ export const Anchor = ({
   return (
     <a
       href={href}
-      className={clsx(additionalClassName, 'a')}
+      className={clsx(additionalClassName, 'text-inherit')}
       aria-label={ariaLabel}
       target={target}
     >
