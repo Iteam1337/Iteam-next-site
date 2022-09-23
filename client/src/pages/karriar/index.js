@@ -118,7 +118,7 @@ const careerPageQuery = groq`
  }
 `
 
-export async function getServerSideProps({ preview = false }) {
+export async function getStaticProps({ preview = false }) {
   const openPositions = await getClient(preview).fetch(openPositionsQuery)
   const careerPage = await getClient(preview).fetch(careerPageQuery)
 
@@ -128,7 +128,10 @@ export async function getServerSideProps({ preview = false }) {
     careerPage,
     preview
   )
+
   const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
+
+  console.log(coworkerCarousel)
   return {
     props: {
       preview,
