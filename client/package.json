@@ -9,6 +9,9 @@
     "export": "next build && next export",
     "preinstall": "npx npm-force-resolutions"
   },
+  "resolutions": {
+    "glob-parent": "^6.0.1"
+  },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "@sanity/block-content-to-react": "^3.0.0",
@@ -50,7 +53,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.1",
     "styled-system": "^5.1.5",
-    "three": "^0.84.0"
+    "three": "^0.144.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
