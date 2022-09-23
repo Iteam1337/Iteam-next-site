@@ -9,9 +9,6 @@
     "export": "next build && next export",
     "preinstall": "npx npm-force-resolutions"
   },
-  "resolutions": {
-    "glob-parent": "^6.0.1"
-  },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "@sanity/block-content-to-react": "^3.0.0",
@@ -45,7 +42,7 @@
     "react-is": "^17.0.2",
     "react-player": "^2.3.1",
     "react-select": "^3.1.0",
-    "react-slick": "^0.26.1",
+    "react-slick": "^0.29.0",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "responsive-loader": "^2.3.0",
@@ -58,6 +55,8 @@
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "babel-plugin-styled-components": "^1.10.7",
+    "eslint": "^8.23.1",
+    "eslint-config-next": "^12.3.1",
     "postcss": "^8.4.16",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.1.8"
