@@ -14,7 +14,6 @@ import Header from '../Header'
 import Footer from '../Footer'
 import ModalVideo from '../ModalVideo'
 import GlobalContext from '../../context/GlobalContext'
-import GlobalStyle from '../../utils/globalStyle'
 import imgFavicon from '../../assets/image/png/favicon.png'
 import SkipLink from '../SkipLink'
 // the full theme object
@@ -71,7 +70,6 @@ const Layout = ({ children, pageContext, footer }) => {
           gContext.themeDark ? getTheme(modes.dark) : getTheme(modes.light)
         }
       >
-        <GlobalStyle />
         <SkipLink />
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
           <main id="main-content">{children}</main>
@@ -88,7 +86,6 @@ const Layout = ({ children, pageContext, footer }) => {
           gContext.themeDark ? getTheme(modes.dark) : getTheme(modes.light)
         }
       >
-        <GlobalStyle />
         <Head>
           <title>Iteam</title>
           <link rel="icon" type="image/png" href={imgFavicon} />

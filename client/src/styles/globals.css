@@ -2,20 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply tw-text-base tw-text-gray-dark;
+  }
+  p {
+    @apply tw-text-base tw-font-light tw-leading-6 tw-tracking-normal md:tw-text-lg md:tw-leading-7;
+  }
+  h1 {
+    @apply tw-text-4xl tw-font-bold tw-tracking-tight tw-text-gray-dark sm:tw-text-5xl lg:tw-text-6xl xl:tw-text-7xl;
+  }
+  h2 {
+    @apply tw-text-3xl tw-font-bold tw-tracking-tight tw-text-gray-dark sm:tw-text-4xl md:tw-text-5xl;
+  }
+  h3 {
+    @apply tw-text-xl tw-font-bold tw-tracking-tight tw-text-gray-dark;
+  }
+  h4 {
+    @apply tw-text-lg tw-font-bold tw-tracking-tight tw-text-gray-dark;
+  }
+  a {
+    @apply tw-font-light tw-no-underline hover:tw-text-gray-dark hover:tw-underline hover:tw-outline-none hover:tw-outline-0 focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-secondary motion-reduce:tw-transition-all;
+  }
+  ul {
+    @apply tw-m-0 tw-list-none tw-p-0;
+  }
+  button {
+    @apply tw-border-none tw-bg-none tw-p-0 focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-secondary focus:[&:not(:focus-visible)]:tw-outline-none;
+  }
+}
+
 @layer components {
-  .h1 {
-    @apply tw-mb-6 tw-text-4xl tw-font-bold tw-tracking-tight tw-text-gray-dark sm:tw-text-5xl lg:tw-text-6xl xl:tw-text-7xl;
+  .ul {
+    @apply tw-m-0 tw-list-none tw-p-0;
   }
-  .h2 {
-    @apply tw-mb-4 tw-text-2xl tw-font-bold tw-tracking-tight tw-text-gray-dark sm:tw-text-3xl md:tw-text-4xl lg:tw-mb-7;
-  }
-  .h3 {
-    @apply tw-text-xl tw-font-bold tw-tracking-tight tw-text-gray-dark;
-  }
-  .h4 {
-    @apply tw-text-xl tw-font-bold tw-tracking-tight tw-text-gray-dark;
-  }
-  .a {
-    @apply tw-text-gray-dark tw-no-underline hover:tw-underline;
-  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
 }

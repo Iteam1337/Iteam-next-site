@@ -6,7 +6,7 @@ export const ParagraphSmall = ({ children, additionalClassName }) => {
     <p
       className={clsx(
         additionalClassName,
-        'tw-mb-0 tw-text-base tw-font-light tw-leading-7 tw-tracking-normal'
+        'tw-mb-0 tw-text-base tw-font-light tw-leading-6 tw-tracking-normal'
       )}
     >
       {children}
