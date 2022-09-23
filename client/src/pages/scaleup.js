@@ -85,7 +85,7 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
       {scaleUpPage?.textWithTagsThirs && (
         <Role content={scaleUpPage.textWithTagsThirs} />
       )}
-      <Testimonial bg content={carousel} />
+      <Testimonial.Default bg content={carousel} />
       <Pricing content={ourPricing} />
       <CTA />
     </PageWrapper>

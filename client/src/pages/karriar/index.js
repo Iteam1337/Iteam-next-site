@@ -11,17 +11,33 @@ import {
   shuffleArray,
   urlFor,
 } from '../../utils/helpers'
+
 import { NextSeo } from 'next-seo'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
 
-const Career = ({ data, preview = false, carousel }) => {
+const Career = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {
     initialData: data?.careerPage,
     enabled: preview,
   })
 
   const post = filterDataToSingleItem(previewData, preview)
-  const { hero, openings, section, textGrid, metaTags } = post
+
+  const {
+    hero,
+    openings,
+    section,
+    textGrid,
+    metaTags,
+    coworkerCarouselOne,
+    coworkerCarouselTwo,
+  } = post
+
+  const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
+
+  const carousel = shuffleArray(
+    coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
+  )
 
   return (
     <>
@@ -54,7 +70,7 @@ const Career = ({ data, preview = false, carousel }) => {
       <PageWrapper headerDark footerDark>
         {preview && <ExitPreviewLink />}
         <Hero content={hero} />
-        <Testimonial coworker content={{ section, carousel }} />
+        <Testimonial.Coworker content={{ section, carousel }} />
         <Feature content={textGrid} />
         <Roles content={openings} openPositions={data.openPositions} />
       </PageWrapper>
@@ -124,21 +140,10 @@ export async function getStaticProps({ preview = false }) {
 
   if (!openPositions) return { notFound: true }
 
-  const { coworkerCarouselOne, coworkerCarouselTwo } = filterDataToSingleItem(
-    careerPage,
-    preview
-  )
-
-  const coworkerCarousel = [coworkerCarouselOne, coworkerCarouselTwo]
-
-  console.log(coworkerCarousel)
   return {
     props: {
       preview,
       data: { openPositions, careerPage, careerPageQuery },
-      carousel: shuffleArray(
-        coworkerCarousel[Math.floor(Math.random() * coworkerCarousel.length)]
-      ),
     },
   }
 }
