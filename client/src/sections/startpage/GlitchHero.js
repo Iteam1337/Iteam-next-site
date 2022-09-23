@@ -434,7 +434,6 @@ function glitchEffect() {
 
   const bgImg = new BackgroundImage()
   const postEffect = new PostEffect(renderBack1.texture)
-  const consoleSignature = new ConsoleSignature()
 
   //
   // common process

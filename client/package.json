@@ -15,7 +15,7 @@
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "@sanity/block-content-to-react": "^3.0.0",
-    "@sanity/client": "^2.19.0",
+    "@sanity/client": "^3.4.1",
     "aos": "^3.0.0-beta.6",
     "babel-plugin-transform-define": "^2.0.0",
     "bootstrap": "^4.5.0",
@@ -27,7 +27,7 @@
     "imagemin-svgo": "9.0.0",
     "lodash": "^4.17.15",
     "lru-cache": "^6.0.0",
-    "next": "^11.1.2",
+    "next": "^12.3.1",
     "next-fonts": "^1.2.0",
     "next-optimized-images": "^2.6.2",
     "next-sanity": "^0.4.0",
@@ -51,7 +51,7 @@
     "responsive-loader": "^2.3.0",
     "sass": "^1.26.9",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.1.1",
+    "styled-components": "^5.3.5",
     "styled-system": "^5.1.5",
     "three": "^0.144.0"
   },
