@@ -72,10 +72,7 @@ const OpeningDetails = ({ data, preview = false }) => {
           <Row>
             <Col lg="12" xl="10" className="offset-xl-1">
               {post?.blockText && (
-                <BlockContent
-                  variant="thin"
-                  blocks={post?.blockText.blockText}
-                />
+                <BlockContent blocks={post?.blockText.blockText} />
               )}
             </Col>
           </Row>

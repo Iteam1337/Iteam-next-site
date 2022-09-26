@@ -76,7 +76,11 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
         <TextWithTags content={scaleUpPage.textWithTagsFirst} />
       )}
       {scaleUpPage?.sectionWithImage && (
-        <SectionWithImage bg="dark" content={scaleUpPage.sectionWithImage} />
+        <SectionWithImage
+          bg="dark"
+          additionalClassName="tw-text-white"
+          content={scaleUpPage.sectionWithImage}
+        />
       )}
       {scaleUpPage?.textWithTagsSecond && (
         <TextWithTags content={scaleUpPage.textWithTagsSecond} />

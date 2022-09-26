@@ -68,7 +68,7 @@ const Content2 = ({ content }) => {
                   {content.title}
                 </Typography.H2>
                 <BlockContent
-                  color="light"
+                  additionalClassName="tw-text-white tw-mb-9"
                   blocks={content.blockText.blockText}
                 />
                 <a href="https://predictivemovement.se">

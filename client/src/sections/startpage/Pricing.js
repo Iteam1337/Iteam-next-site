@@ -120,11 +120,7 @@ const Pricing = ({ content }) => {
             <Col md="8" lg="9">
               <div className=" text-center" id="pricing">
                 <Typography.H2>{content.section.title}</Typography.H2>
-                <BlockContent
-                  variant="thin"
-                  textAlign="center"
-                  blocks={content.section.blockText.blockText}
-                />
+                <BlockContent blocks={content.section.blockText.blockText} />
               </div>
             </Col>
           </Row>
