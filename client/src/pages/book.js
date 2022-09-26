@@ -13,7 +13,6 @@ import {
   urlFor,
 } from '../utils/helpers'
 import { groq } from 'next-sanity'
-import BlockContent from '../components/BlockContent'
 import ExitPreviewLink from '../components/ExitPreviewLink'
 import { NextSeo } from 'next-seo'
 
@@ -138,7 +137,9 @@ const Book = ({ data, preview = false }) => {
                   page.visit.address.map((item, index) => (
                     <Box className="tw-mb-6" key={index}>
                       <Typography.H3>{item.title}</Typography.H3>
-                      <BlockContent blocks={item.blockText.blockText} />
+                      <Typography.BlockContent
+                        blocks={item.blockText.blockText}
+                      />
                     </Box>
                   ))}
               </Col>

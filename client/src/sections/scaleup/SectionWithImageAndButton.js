@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Button, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
-import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 
 const ImageHalfContainer = styled(Box)`
@@ -47,7 +46,7 @@ const SectionWithImageAndButton = ({ content }) => {
             <Section py={[5, null, null, '190px']}>
               <div className="omga-02__content-text section-title order-lg-1">
                 <Typography.H2>{title}</Typography.H2>
-                <BlockContent blocks={blockText.blockText} />
+                <Typography.BlockContent blocks={blockText.blockText} />
                 <Button
                   mt={4}
                   onClick={() => (window.location.href = '#pricing')}

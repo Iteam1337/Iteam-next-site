@@ -4,7 +4,6 @@ import PageWrapper from '../../components/PageWrapper'
 import { Section, Box, Typography } from '../../components/Core'
 import { groq } from 'next-sanity'
 import client from '../../sanity-client'
-import BlockContent from '../../components/BlockContent'
 import MetaTags from '../../components/MetaTags/MetaTags'
 import CaseList from '../../sections/case/CaseList'
 import CTA from '../../sections/case/CTA'
@@ -88,7 +87,7 @@ const BlogDetails = ({ data, preview = false }) => {
             <Col lg="12" xl="10" className="offset-xl-1">
               <Box pb={['40px', null, '65px']}>
                 {post?.blockText?.blockText && (
-                  <BlockContent blocks={post.blockText.blockText} />
+                  <Typography.BlockContent blocks={post.blockText.blockText} />
                 )}
               </Box>
             </Col>

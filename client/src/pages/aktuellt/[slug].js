@@ -7,7 +7,6 @@ import { groq } from 'next-sanity'
 import Sidebar from '../../sections/aktuellt/Sidebar'
 import BlogList from '../../sections/aktuellt/BlogList'
 import { NextSeo } from 'next-seo'
-import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
@@ -95,7 +94,7 @@ const BlogDetails = ({ data, preview = false }) => {
             <Row>
               <Col lg="8" className="mb-5">
                 {post?.blockText?.blockText && (
-                  <BlockContent blocks={post.blockText.blockText} />
+                  <Typography.BlockContent blocks={post.blockText.blockText} />
                 )}
               </Col>
               <Col lg="4" className="" style={{ marginTop: '2.3rem' }}>

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import BlockContent from '../../components/BlockContent'
 import { Button, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 import { urlFor } from '../../utils/helpers'
@@ -73,7 +72,9 @@ const Content1 = ({ content }) => {
               <Section py={[5, null, null, '190px']}>
                 <div className="omga-02__content-text section-title order-lg-1">
                   <Typography.H2>{content.title}</Typography.H2>
-                  <BlockContent blocks={content.blockText.blockText} />
+                  <Typography.BlockContent
+                    blocks={content.blockText.blockText}
+                  />
 
                   <Button
                     mt={4}

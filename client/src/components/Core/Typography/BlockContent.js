@@ -1,10 +1,10 @@
 import React from 'react'
 import BaseBlockContent from '@sanity/block-content-to-react'
-import client from '../../sanity-client'
+import client from '../../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
 import Img from 'next/image'
 
-import { buildInternalUrl } from '../../utils/helpers'
+import { buildInternalUrl } from '../../../utils/helpers'
 import clsx from 'clsx'
 
 const serializers = (additionalClassName) => ({
@@ -117,7 +117,7 @@ const serializers = (additionalClassName) => ({
   ),
 })
 
-const BlockContent = ({ blocks = [], additionalClassName }) => {
+export const BlockContent = ({ blocks = [], additionalClassName }) => {
   return (
     <BaseBlockContent
       blocks={blocks}
@@ -125,5 +125,3 @@ const BlockContent = ({ blocks = [], additionalClassName }) => {
     />
   )
 }
-
-export default BlockContent
