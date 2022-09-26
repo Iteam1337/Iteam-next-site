@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
 import { Button, Section, Typography } from '../../components/Core'
-import BlockContent from '../../components/BlockContent'
 import { urlFor, buildInternalUrl } from '../../utils/helpers'
 
 const SectionStyled = styled(Section)`
@@ -40,7 +39,7 @@ const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
                 <Typography.H2 additionalClassName="tw-text-white">
                   {content.title}
                 </Typography.H2>
-                <BlockContent
+                <Typography.BlockContent
                   additionalClassName="tw-text-white"
                   blocks={content.blockText.blockText}
                 />

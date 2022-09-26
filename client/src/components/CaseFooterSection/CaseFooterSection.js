@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Box, Text, Typography } from '../Core'
-import BlockContent from '../BlockContent'
 
 const Card = styled(Box)`
   border-radius: 0;
@@ -38,7 +37,7 @@ const CaseFooterSection = ({
       </ImageContainer>
       <CardText>
         <Typography.H3>{title}</Typography.H3>
-        <BlockContent blocks={blocks.blockText} />
+        <Typography.BlockContent blocks={blocks.blockText} />
       </CardText>
     </Card>
   )

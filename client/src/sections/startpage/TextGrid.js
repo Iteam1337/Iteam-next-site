@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
-import BlockContent from '../../components/BlockContent'
 
 const SectionStyled = styled(Section)`
   padding-top: 47px;

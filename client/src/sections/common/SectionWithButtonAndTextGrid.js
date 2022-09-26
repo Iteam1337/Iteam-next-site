@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Button, Section, Box, Typography } from '../../components/Core'
-import BlockContent from '../../components/BlockContent'
 
 const FeatureCard = ({
   color = 'primary',
@@ -41,7 +40,7 @@ const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
               <Typography.H2 additionalClassName="tw-text-white">
                 {section.title}
               </Typography.H2>
-              <BlockContent
+              <Typography.BlockContent
                 additionalClassName="tw-text-white"
                 blocks={section.blockText.blockText}
               />

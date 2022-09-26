@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import { Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
-import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 
 const ImgStyled = styled.img`
@@ -50,7 +49,7 @@ const TextWithImageToLeft = ({ content }) => {
               <Box className="pt-5 pt-lg-0">
                 <Typography.H2>{content.title}</Typography.H2>
 
-                <BlockContent blocks={content.blockText.blockText} />
+                <Typography.BlockContent blocks={content.blockText.blockText} />
               </Box>
             </Col>
           </Row>

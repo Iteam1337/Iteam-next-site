@@ -6,7 +6,6 @@ import { Section, Box, Typography } from '../../components/Core'
 
 import imgContent1 from '../../assets/image/jpeg/_DSC6527_.jpg'
 import imgContent2 from '../../assets/image/jpeg/Lounge-Martin-Mikael-Christian-Lowres.jpg'
-import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 
 const ContentImg = styled(Box)`
@@ -26,7 +25,9 @@ const Content = ({ content }) => (
             <Typography.H2>{content.section.title}</Typography.H2>
           </Col>
           <Col lg="6" className="pl-lg-5">
-            <BlockContent blocks={content.section.blockText.blockText} />
+            <Typography.BlockContent
+              blocks={content.section.blockText.blockText}
+            />
           </Col>
         </Row>
         <Row className="mt-5">

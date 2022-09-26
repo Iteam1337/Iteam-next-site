@@ -5,7 +5,6 @@ import PageWrapper from '../../components/PageWrapper'
 import { Section, Box, Typography } from '../../components/Core'
 import { groq } from 'next-sanity'
 import client from '../../sanity-client'
-import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
@@ -72,7 +71,7 @@ const OpeningDetails = ({ data, preview = false }) => {
           <Row>
             <Col lg="12" xl="10" className="offset-xl-1">
               {post?.blockText && (
-                <BlockContent blocks={post?.blockText.blockText} />
+                <Typography.BlockContent blocks={post?.blockText.blockText} />
               )}
             </Col>
           </Row>

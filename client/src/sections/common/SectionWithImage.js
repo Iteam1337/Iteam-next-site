@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Typography } from '../../components/Core'
-import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 import clsx from 'clsx'
 
@@ -46,7 +45,7 @@ const SectionWithImage = ({ content, bg = 'light', additionalClassName }) => {
               >
                 {content.title}
               </Typography.H2>
-              <BlockContent
+              <Typography.BlockContent
                 additionalClassName={additionalClassName}
                 blocks={content.blockText.blockText}
               />

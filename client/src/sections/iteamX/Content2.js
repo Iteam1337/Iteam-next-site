@@ -4,7 +4,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import { Button, Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
-import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 
 const ImageBottom = styled(Box)`
@@ -67,7 +66,7 @@ const Content2 = ({ content }) => {
                 <Typography.H2 additionalClassName="tw-text-white">
                   {content.title}
                 </Typography.H2>
-                <BlockContent
+                <Typography.BlockContent
                   additionalClassName="tw-text-white tw-mb-9"
                   blocks={content.blockText.blockText}
                 />

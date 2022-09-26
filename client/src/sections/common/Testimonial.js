@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Box, Typography } from '../../components/Core'
 import Carousel from '../../components/Carousel'
-import BlockContent from '../../components/BlockContent'
 
 const Testimonial = ({ content, coworker, bg }) => {
   return (
@@ -15,7 +14,9 @@ const Testimonial = ({ content, coworker, bg }) => {
                 <Typography.H2>{content.section.title}</Typography.H2>
               </Col>
               <Col lg="6" className="pl-lg-5">
-                <BlockContent blocks={content.section.blockText.blockText} />
+                <Typography.BlockContent
+                  blocks={content.section.blockText.blockText}
+                />
               </Col>
             </Row>
             <Box>

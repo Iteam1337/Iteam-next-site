@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Typography } from '../../components/Core'
-import BlockContent from '../../components/BlockContent'
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
 
@@ -14,7 +13,7 @@ const Roles = ({ content, openPositions }) => (
           <Col lg="6" className="text-center">
             <div>
               <Typography.H2>{content.title}</Typography.H2>
-              <BlockContent blocks={content.subtitle.blockText} />
+              <Typography.BlockContent blocks={content.subtitle.blockText} />
             </div>
           </Col>
         </Row>

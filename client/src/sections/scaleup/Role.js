@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Box, Typography } from '../../components/Core'
 import ContentCard from '../../components/ContentCard'
-import BlockContent from '../../components/BlockContent'
 
 const Feature2 = ({ content }) => {
   return (
@@ -12,7 +11,7 @@ const Feature2 = ({ content }) => {
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
               <Typography.H2>{content.title}</Typography.H2>
-              <BlockContent blocks={content.subtitle.blockText} />
+              <Typography.BlockContent blocks={content.subtitle.blockText} />
             </Box>
           </Col>
         </Row>

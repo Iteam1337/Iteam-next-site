@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Typography } from '../../components/Core'
 import { device } from '../../utils'
-import BlockContent from '../../components/BlockContent'
 import { urlFor } from '../../utils/helpers'
 
 const ImgContainer = styled.div`
@@ -57,7 +56,7 @@ const TextWithImageToRight = ({ content }) => {
             </Col>
             <Col lg="6" className="order-lg-1 mt-5 mt-lg-0">
               <Typography.H2>{content.title}</Typography.H2>
-              <BlockContent blocks={content.blockText.blockText} />
+              <Typography.BlockContent blocks={content.blockText.blockText} />
             </Col>
           </Row>
         </Container>
