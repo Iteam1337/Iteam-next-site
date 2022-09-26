@@ -28,10 +28,6 @@ const FaqCard = styled(Box)`
     position: absolute;
     left: 0;
   }
-
-  a {
-    font-weight: 500;
-  }
 `
 
 const Faq = ({ content }) => {
