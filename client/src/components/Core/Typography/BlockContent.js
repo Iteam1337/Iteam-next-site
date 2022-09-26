@@ -7,7 +7,7 @@ import Img from 'next/image'
 import { buildInternalUrl } from '../../../utils/helpers'
 import clsx from 'clsx'
 
-const serializers = (additionalClassName) => ({
+const serializers = (className) => ({
   types: {
     block: ({ node, children }) => {
       switch (node.style) {
@@ -31,9 +31,7 @@ const serializers = (additionalClassName) => ({
           )
         case 'normal':
           return (
-            <p className={clsx(additionalClassName, 'tw-my-3 md:tw-my-4')}>
-              {children}
-            </p>
+            <p className={clsx(className, 'tw-my-3 md:tw-my-4')}>{children}</p>
           )
         case 'blockquote':
           return (
@@ -48,7 +46,7 @@ const serializers = (additionalClassName) => ({
             </blockquote>
           )
         case 'subtitle':
-          return <p className={clsx(additionalClassName)}>{children}</p>
+          return <p className={clsx(className)}>{children}</p>
         default:
           console.warn('Unhandled in portable text serializer: ', node)
           return <p></p>
@@ -117,11 +115,8 @@ const serializers = (additionalClassName) => ({
   ),
 })
 
-export const BlockContent = ({ blocks = [], additionalClassName }) => {
+export const BlockContent = ({ blocks = [], className }) => {
   return (
-    <BaseBlockContent
-      blocks={blocks}
-      serializers={serializers(additionalClassName)}
-    />
+    <BaseBlockContent blocks={blocks} serializers={serializers(className)} />
   )
 }

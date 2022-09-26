@@ -37,11 +37,11 @@ const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
             data-aos-once="true"
           >
             <Box>
-              <Typography.H2 additionalClassName="tw-text-white">
+              <Typography.H2 className="tw-text-white">
                 {section.title}
               </Typography.H2>
               <Typography.BlockContent
-                additionalClassName="tw-text-white"
+                className="tw-text-white"
                 blocks={section.blockText.blockText}
               />
               <Typography.Anchor href={`#${linkTo}`}>

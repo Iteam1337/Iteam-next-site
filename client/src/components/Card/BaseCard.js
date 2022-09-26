@@ -26,7 +26,7 @@ export const BaseCard = ({
       <div className="tw-flex tw-grow tw-flex-col">
         {title && (
           <Typography.H3
-            additionalClassName={clsx(
+            className={clsx(
               'tw-peer tw-order-3 tw-py-2 tw-px-6',
               centerContent && 'tw-text-center'
             )}
@@ -34,7 +34,7 @@ export const BaseCard = ({
             <Typography.Anchor
               aria-label={`${title}, Läs mer…`}
               href={link}
-              additionalClassName="tw-font-bold after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
+              className="tw-font-bold after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
             >
               {title}
             </Typography.Anchor>
@@ -74,9 +74,9 @@ export const BaseCard = ({
         {readMore && (
           <Typography.Caption
             ariaHidden="true"
-            additionalClassName={clsx(
-              'tw-order-4 tw-px-6 tw-pb-6 tw-transition-opacity tw-leading-none tw-opacity-0 tw-underline tw-mt-0 tw-mb-0 tw-mt-auto tw-pt-1 tw-text-right',
-              'motion-reduce:tw-transition-none group-hover:tw-opacity-100 peer-focus-within:tw-opacity-100'
+            className={clsx(
+              'tw-order-4 tw-mt-0 tw-mb-0 tw-mt-auto tw-px-6 tw-pb-6 tw-pt-1 tw-text-right tw-leading-none tw-underline tw-opacity-0 tw-transition-opacity',
+              'group-hover:tw-opacity-100 peer-focus-within:tw-opacity-100 motion-reduce:tw-transition-none'
             )}
           >
             Läs mer

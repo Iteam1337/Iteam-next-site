@@ -20,11 +20,11 @@ const Hero = ({ content }) => {
           <Row>
             <Col md="11" lg="11" xl="9">
               <Box py={4}>
-                <Typography.H1 additionalClassName="tw-text-white tw-my-4">
+                <Typography.H1 className="tw-my-4 tw-text-white">
                   {title}
                   <Span color="secondary">.</Span>
                 </Typography.H1>
-                <Typography.Paragraph additionalClassName="tw-text-white">
+                <Typography.Paragraph className="tw-text-white">
                   {content.subtitle}
                 </Typography.Paragraph>
                 <Box

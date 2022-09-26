@@ -41,11 +41,11 @@ const Faq = ({ content }) => {
                 <Col lg="6" className="mb-5" key={index}>
                   <FaqCard>
                     <div>
-                      <Typography.H3 additionalClassName="tw-text-white tw-text-xl">
+                      <Typography.H3 className="tw-text-xl tw-text-white">
                         {faq.title}
                       </Typography.H3>
                       <Typography.BlockContent
-                        additionalClassName="tw-text-white"
+                        className="tw-text-white"
                         blocks={faq.blockText.blockText}
                       />
                     </div>

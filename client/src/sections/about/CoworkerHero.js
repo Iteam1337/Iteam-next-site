@@ -45,7 +45,7 @@ const Hero = ({ title, children, heroImage }) => {
           <Row>
             <Col lg="6">
               <div>
-                <Typography.H1 additionalClassName="tw-text-dark-gray">
+                <Typography.H1 className="tw-text-dark-gray">
                   {title}
                 </Typography.H1>
                 <Typography.Paragraph>{children}</Typography.Paragraph>

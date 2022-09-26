@@ -28,8 +28,8 @@ export const NotificationCard = ({
       <div className="tw-ml-6 tw-flex tw-flex-col">
         {preTitle && (
           <Typography.Caption
-            additionalClassName={
-              'group-hover:tw-text-white group-focus-within:tw-text-white'
+            className={
+              'group-focus-within:tw-text-white group-hover:tw-text-white'
             }
             ariaHidden={true}
           >
@@ -41,7 +41,7 @@ export const NotificationCard = ({
             <Typography.Anchor
               aria-label={ariaLabel}
               href={link}
-              additionalClassName={clsx(
+              className={clsx(
                 'tw-font-light tw-transition-none',
                 'after:tw-absolute after:tw-inset-0 hover:tw-text-white hover:tw-no-underline focus-visible:tw-text-white focus-visible:tw-outline-none '
               )}

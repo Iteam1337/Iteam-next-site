@@ -11,9 +11,7 @@ const CaseFooter = ({ sectionCards }) => {
       {/* <!-- Feature section --> */}
       <Section bg="#F7F7FB" className="position-relative">
         <Container>
-          <Typography.H2 additionalClassName="sr-only">
-            Mer information
-          </Typography.H2>
+          <Typography.H2 className="sr-only">Mer information</Typography.H2>
           <Row className="justify-content-center">
             {sectionCards.map((card, i) => {
               return (

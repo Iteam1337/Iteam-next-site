@@ -54,7 +54,7 @@ const Feature2 = () => (
         <Row className="justify-content-center">
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
-              <Typography.H2 additionalClassName="tw-text-white">
+              <Typography.H2 className="tw-text-white">
                 Du får med dig
                 <br />
                 allt du behöver.

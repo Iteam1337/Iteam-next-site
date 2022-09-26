@@ -47,7 +47,7 @@ export const SimpleCard = ({
       bgDark={bgDark}
     >
       <Typography.ParagraphSmall
-        additionalClassName={clsx(readMore ? 'tw-pb-0' : 'tw-pb-6')}
+        className={clsx(readMore ? 'tw-pb-0' : 'tw-pb-6')}
       >
         {children}
       </Typography.ParagraphSmall>

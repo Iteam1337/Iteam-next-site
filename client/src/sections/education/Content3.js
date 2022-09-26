@@ -39,7 +39,7 @@ const Content3 = () => {
                     sektor
                   </Typography.H2>
                   <Typography.Paragraph
-                    additionalClassName="tw-mb-4 tw-opacity-70"
+                    className="tw-mb-4 tw-opacity-70"
                     color="dark"
                   >
                     Create custom landing pages with Omega that convert more

@@ -216,16 +216,14 @@ const Coworker = ({ item, active }) => {
           )}
         </SliderImgContainer>
         <SliderText>
-          <Typography.H3 additionalClassName="tw-mt-1">
-            {item.whyTech}
-          </Typography.H3>
+          <Typography.H3 className="tw-mt-1">{item.whyTech}</Typography.H3>
           <Typography.Paragraph>{item.answerTech}</Typography.Paragraph>
-          <Typography.ParagraphSmall additionalClassName="tw-mt-2 tw-font-bold">
+          <Typography.ParagraphSmall className="tw-mt-2 tw-font-bold">
             {item.fullname}
           </Typography.ParagraphSmall>
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           {active && (
-            <Typography.ParagraphSmall additionalClassName="tw-mt-2">
+            <Typography.ParagraphSmall className="tw-mt-2">
               <Typography.Anchor href={`/about/${item.slug.current}`}>
                 Läs mer…
               </Typography.Anchor>
@@ -251,12 +249,12 @@ const Client = ({ item, active }) => {
         </SliderImgContainer>
         <SliderText>
           <Typography.Paragraph>{item.quote}</Typography.Paragraph>
-          <Typography.ParagraphSmall additionalClassName="tw-mt-2 tw-font-bold">
+          <Typography.ParagraphSmall className="tw-mt-2 tw-font-bold">
             {item.fullname}
           </Typography.ParagraphSmall>
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           {active && item.reference && (
-            <Typography.ParagraphSmall additionalClassName="tw-mt-2">
+            <Typography.ParagraphSmall className="tw-mt-2">
               <Typography.Anchor href={buildInternalUrl(item.reference)}>
                 Läs mer…
               </Typography.Anchor>

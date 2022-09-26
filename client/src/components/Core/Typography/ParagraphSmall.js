@@ -1,11 +1,11 @@
 import React from 'react'
 import clsx from 'clsx'
 
-export const ParagraphSmall = ({ children, additionalClassName }) => {
+export const ParagraphSmall = ({ children, className }) => {
   return (
     <p
       className={clsx(
-        additionalClassName,
+        className,
         'tw-mb-0 tw-text-base tw-font-light tw-leading-6 tw-tracking-normal'
       )}
     >

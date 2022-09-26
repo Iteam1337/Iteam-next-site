@@ -63,11 +63,11 @@ const Content2 = ({ content }) => {
               data-aos-once="true"
             >
               <div>
-                <Typography.H2 additionalClassName="tw-text-white">
+                <Typography.H2 className="tw-text-white">
                   {content.title}
                 </Typography.H2>
                 <Typography.BlockContent
-                  additionalClassName="tw-text-white tw-mb-9"
+                  className="tw-mb-9 tw-text-white"
                   blocks={content.blockText.blockText}
                 />
                 <a href="https://predictivemovement.se">

@@ -78,7 +78,7 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
       {scaleUpPage?.sectionWithImage && (
         <SectionWithImage
           bg="dark"
-          additionalClassName="tw-text-white"
+          className="tw-text-white"
           content={scaleUpPage.sectionWithImage}
         />
       )}

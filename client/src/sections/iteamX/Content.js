@@ -30,7 +30,7 @@ const Content = ({ content }) => {
           <Row className="justify-content-center mb-5">
             <Col lg="10">
               <div className="text-center">
-                <Typography.H2 additionalClassName="tw-text-white">
+                <Typography.H2 className="tw-text-white">
                   {title[0]}
                   <Span color="secondary">en hypotes.</Span> {title[1]}
                 </Typography.H2>

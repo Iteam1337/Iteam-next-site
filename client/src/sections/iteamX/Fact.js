@@ -23,10 +23,10 @@ const Fact = ({ content }) => (
           {content.texts.map((item, index) => (
             <Col md="4" sm="6" className="mb-4 mb-md-0" key={index}>
               <Box>
-                <Typography.H2 additionalClassName="tw-text-white tw-mb-6">
+                <Typography.H2 className="tw-mb-6 tw-text-white">
                   {item.title}
                 </Typography.H2>
-                <Typography.Paragraph additionalClassName="tw-text-white">
+                <Typography.Paragraph className="tw-text-white">
                   {item.text}
                 </Typography.Paragraph>
               </Box>

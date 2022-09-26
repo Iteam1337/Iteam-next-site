@@ -18,7 +18,7 @@ const InfoSection = ({ text, title }) => (
 const Medarbetare = ({ info }) => (
   <Container>
     <Section>
-      <Typography.H2 additionalClassName="sr-only">Info</Typography.H2>
+      <Typography.H2 className="sr-only">Info</Typography.H2>
       <Row className="py-5">
         <Col md={8} lg={6}>
           <Typography.H3>Kontakt</Typography.H3>

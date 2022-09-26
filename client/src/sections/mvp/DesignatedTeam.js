@@ -37,7 +37,7 @@ const DesignatedTeam = () => (
             data-aos-once="true"
           >
             <div>
-              <Typography.H2 additionalClassName="tw-text-white">
+              <Typography.H2 className="tw-text-white">
                 Ett fredat team som ger en bra start
               </Typography.H2>
               <Typography.Paragraph>

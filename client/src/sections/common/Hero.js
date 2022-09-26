@@ -94,7 +94,7 @@ const Hero = ({ content, flipTexts = false }) => {
                 }}
               >
                 <Typography.H1
-                  additionalClassName={clsx(
+                  className={clsx(
                     mediaType.type === 'image'
                       ? mediaType.darkGradient
                         ? 'tw-text-white'
@@ -104,7 +104,7 @@ const Hero = ({ content, flipTexts = false }) => {
                 >
                   {title}
                 </Typography.H1>
-                <Typography.Paragraph additionalClassName="tw-text-white">
+                <Typography.Paragraph className="tw-text-white">
                   <div className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.7)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
                     {content.subtitle}
                   </div>
