@@ -5,6 +5,7 @@ import HeroImg from '../../assets/image/jpeg/working-hero.jpg'
 import { Container } from 'react-bootstrap'
 import { Typography, Button, Section } from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
+import clsx from 'clsx'
 const Wrapper = styled.div`
   background: linear-gradient(
       180deg,
@@ -48,7 +49,7 @@ const RecruteHero = ({ content }) => {
               <Typography.H1 additionalClassName="tw-text-white">
                 {content.title}
               </Typography.H1>
-              <Typography.Paragraph light>
+              <Typography.Paragraph additionalClassName="tw-text-white">
                 <div className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.7)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
                   {content.subtitle}
                 </div>

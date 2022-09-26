@@ -107,23 +107,24 @@ const Book = ({ data, preview = false }) => {
                         >
                           {contact.fullname}, {contact.role}
                         </Typography.H3>
-                        <Typography.ParagraphSmall>
+                        <Typography.Paragraph>
                           <Typography.Anchor
                             href={`callto:${contact.phoneNumber}`}
                           >
                             {formatPhoneNumber(contact.phoneNumber)}
                           </Typography.Anchor>
-                        </Typography.ParagraphSmall>
+                        </Typography.Paragraph>
                       </div>
                     ))}
-                  <Typography.Anchor
-                    color="info"
-                    href={`${buildInternalUrl(
-                      page?.call?.cta?.reference && page.call.cta.reference
-                    )}#medarbetare`}
-                  >
-                    {page?.call?.cta?.title && page.call.cta.title}
-                  </Typography.Anchor>
+                  <Typography.Paragraph>
+                    <Typography.Anchor
+                      href={`${buildInternalUrl(
+                        page?.call?.cta?.reference && page.call.cta.reference
+                      )}#medarbetare`}
+                    >
+                      {page?.call?.cta?.title && page.call.cta.title}
+                    </Typography.Anchor>
+                  </Typography.Paragraph>
                 </Box>
                 <Box className="mb-5">
                   <Typography.H3>
@@ -131,14 +132,11 @@ const Book = ({ data, preview = false }) => {
                   </Typography.H3>
                   {page?.mail?.emails &&
                     page.mail.emails.map((email, index) => (
-                      <Typography.ParagraphSmall key={index}>
-                        <Typography.Anchor
-                          color="info"
-                          href={`mailto:${email}`}
-                        >
+                      <Typography.Paragraph key={index}>
+                        <Typography.Anchor href={`mailto:${email}`}>
                           {email}
                         </Typography.Anchor>
-                      </Typography.ParagraphSmall>
+                      </Typography.Paragraph>
                     ))}
                 </Box>
                 {page?.visit?.address &&

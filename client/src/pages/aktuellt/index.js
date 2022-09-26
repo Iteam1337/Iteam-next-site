@@ -88,7 +88,7 @@ export default function BlogRegular({ query, data, preview = false }) {
                 <Col lg="8">
                   <Typography.Anchor
                     additionalClassName={clsx(
-                      'tw-mx-6',
+                      'tw-mx-6 tw-text-sm hover:tw-underline',
                       filterParam == 'alla' ? 'tw-underline' : 'tw-no-underline'
                     )}
                     href="/aktuellt"
@@ -97,7 +97,7 @@ export default function BlogRegular({ query, data, preview = false }) {
                   </Typography.Anchor>
                   <Typography.Anchor
                     additionalClassName={clsx(
-                      'tw-mx-6',
+                      'tw-mx-6 tw-text-sm hover:tw-underline',
                       filterParam == 'blogg'
                         ? 'tw-underline'
                         : 'tw-no-underline'
@@ -108,7 +108,7 @@ export default function BlogRegular({ query, data, preview = false }) {
                   </Typography.Anchor>
                   <Typography.Anchor
                     additionalClassName={clsx(
-                      'tw-mx-6',
+                      'tw-mx-6 tw-text-sm hover:tw-underline',
                       filterParam == 'open-source-skolan'
                         ? 'tw-underline'
                         : 'tw-no-underline'

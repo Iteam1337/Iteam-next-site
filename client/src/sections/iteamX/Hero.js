@@ -24,7 +24,7 @@ const Hero = ({ content }) => {
                   {title}
                   <Span color="secondary">.</Span>
                 </Typography.H1>
-                <Typography.Paragraph light>
+                <Typography.Paragraph additionalClassName="tw-text-white">
                   {content.subtitle}
                 </Typography.Paragraph>
                 <Box

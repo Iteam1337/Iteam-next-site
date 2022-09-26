@@ -33,7 +33,7 @@ const GlitchHero = () => {
                   <br />
                   har massor att berätta
                 </Typography.H1>
-                <Typography.Paragraph light>
+                <Typography.Paragraph additionalClassName="tw-text-white">
                   <TextBg>
                     Hållbarhet och digital innovation sitter lika naturligt ihop
                     som Batman och Robin. Det attraherar både kunder och smarta

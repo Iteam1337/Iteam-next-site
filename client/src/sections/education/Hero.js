@@ -124,7 +124,7 @@ const Hero = () => {
                         {price}kr
                       </Typography.H1>
                     </Box>
-                    <Typography.Paragraph light>
+                    <Typography.Paragraph additionalClassName="tw-text-white">
                       per person
                     </Typography.Paragraph>
                   </BoxPrice>
