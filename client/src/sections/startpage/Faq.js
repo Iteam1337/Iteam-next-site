@@ -45,7 +45,7 @@ const Faq = ({ content }) => {
                         {faq.title}
                       </Typography.H3>
                       <Typography.BlockContent
-                        className="tw-text-white"
+                        light
                         blocks={faq.blockText.blockText}
                       />
                     </div>

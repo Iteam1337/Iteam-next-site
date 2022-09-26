@@ -3,42 +3,67 @@ import BaseBlockContent from '@sanity/block-content-to-react'
 import client from '../../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
 import Img from 'next/image'
-
-import { buildInternalUrl } from '../../../utils/helpers'
 import clsx from 'clsx'
 
-const serializers = (className) => ({
+import { buildInternalUrl } from '../../../utils/helpers'
+
+const serializers = (light) => ({
   types: {
     block: ({ node, children }) => {
       switch (node.style) {
         case 'h2':
           return (
-            <h2 className="tw-mb-0 tw-mt-4 tw-text-xl md:tw-mt-5 md:tw-text-2xl">
+            <h2
+              className={clsx(
+                light && 'tw-text-white',
+                'tw-mb-0 tw-mt-4 tw-text-xl md:tw-mt-5 md:tw-text-2xl'
+              )}
+            >
               {children}
             </h2>
           )
         case 'h3':
           return (
-            <h3 className="tw-mb-0 tw-mt-4 tw-text-lg md:tw-mt-5 md:tw-text-xl">
+            <h3
+              className={clsx(
+                light && 'tw-text-white',
+                'tw-mb-0 tw-mt-4 tw-text-lg md:tw-mt-5 md:tw-text-xl'
+              )}
+            >
               {children}
             </h3>
           )
         case 'h4':
           return (
-            <h4 className="tw-mb-0 tw-mt-4 tw-text-base md:tw-mt-5 md:tw-text-lg">
+            <h4
+              className={clsx(
+                light && 'tw-text-white',
+                'tw-mb-0 tw-mt-4 tw-text-base md:tw-mt-5 md:tw-text-lg'
+              )}
+            >
               {children}
             </h4>
           )
         case 'normal':
           return (
-            <p className={clsx(className, 'tw-my-3 md:tw-my-4')}>{children}</p>
+            <p className={clsx(light && 'tw-text-white', 'tw-my-3 md:tw-my-4')}>
+              {children}
+            </p>
           )
         case 'blockquote':
           return (
-            <blockquote className="tw-my-6 tw-flex tw-flex-row tw-bg-white tw-italic md:tw-my-8">
+            <blockquote
+              className={clsx(
+                light && 'tw-text-white',
+                'tw-my-6 tw-flex tw-flex-row tw-bg-white tw-italic md:tw-my-8'
+              )}
+            >
               <div
                 aria-hidden="true"
-                className="tw-mr-3 tw-font-serif tw-text-4xl tw-text-[#999]"
+                className={clsx(
+                  light ? 'tw-text-white' : 'tw-text-[#999]',
+                  'tw-mr-3 tw-font-serif tw-text-4xl'
+                )}
               >
                 &ldquo;
               </div>
@@ -46,7 +71,7 @@ const serializers = (className) => ({
             </blockquote>
           )
         case 'subtitle':
-          return <p className={clsx(className)}>{children}</p>
+          return <p className={clsx(light && 'tw-text-white')}>{children}</p>
         default:
           console.warn('Unhandled in portable text serializer: ', node)
           return <p></p>
@@ -70,7 +95,10 @@ const serializers = (className) => ({
     internalLink: ({ mark, children }) => {
       return (
         <a
-          className="tw-text-inherit tw-underline hover:tw-no-underline"
+          className={clsx(
+            light && 'tw-text-white',
+            'tw-text-inherit tw-underline hover:tw-no-underline'
+          )}
           href={buildInternalUrl(mark.reference)}
         >
           {children}
@@ -81,7 +109,10 @@ const serializers = (className) => ({
       const { blank, href } = mark
       return blank ? (
         <a
-          className="tw-underline hover:tw-no-underline"
+          className={clsx(
+            light && 'tw-text-white',
+            'tw-underline hover:tw-no-underline'
+          )}
           href={href}
           target="_blank"
           rel="noreferrer"
@@ -89,7 +120,13 @@ const serializers = (className) => ({
           {children}
         </a>
       ) : (
-        <a className="tw-underline hover:tw-no-underline" href={href}>
+        <a
+          className={clsx(
+            light && 'tw-text-white',
+            'tw-underline hover:tw-no-underline'
+          )}
+          href={href}
+        >
           {children}
         </a>
       )
@@ -98,10 +135,23 @@ const serializers = (className) => ({
   list: ({ type, children }) => {
     switch (type) {
       case 'bullet':
-        return <ul className="tw-list-disc tw-pl-8">{children}</ul>
+        return (
+          <ul
+            className={clsx(light && 'tw-text-white', 'tw-list-disc tw-pl-8')}
+          >
+            {children}
+          </ul>
+        )
       case 'number':
         return (
-          <ol className="tw-list-decimal tw-pl-8 tw-font-light">{children}</ol>
+          <ol
+            className={clsx(
+              light && 'tw-text-white',
+              'tw-list-decimal tw-pl-8 tw-font-light'
+            )}
+          >
+            {children}
+          </ol>
         )
       default:
         console.warn('Unhandled in portable text serializer: ', type)
@@ -115,8 +165,6 @@ const serializers = (className) => ({
   ),
 })
 
-export const BlockContent = ({ blocks = [], className }) => {
-  return (
-    <BaseBlockContent blocks={blocks} serializers={serializers(className)} />
-  )
+export const BlockContent = ({ blocks = [], light }) => {
+  return <BaseBlockContent blocks={blocks} serializers={serializers(light)} />
 }

@@ -41,7 +41,7 @@ const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
                 {section.title}
               </Typography.H2>
               <Typography.BlockContent
-                className="tw-text-white"
+                light
                 blocks={section.blockText.blockText}
               />
               <Typography.Anchor href={`#${linkTo}`}>
