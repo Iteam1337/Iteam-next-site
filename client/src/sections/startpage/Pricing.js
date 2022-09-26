@@ -143,7 +143,7 @@ const Pricing = ({ content }) => {
                     </Typography.H3>
                     <div className="d-flex align-items-end justify-content-center my-3">
                       <Currency>{content.value}</Currency>
-                      <Typography.Paragraph className="tw-mb-4 tw-mr-1 tw-text-7xl tw-font-bold tw-tracking-tighter">
+                      <Typography.Paragraph className="tw-mb-[-5px] tw-mr-1 tw-text-7xl tw-font-bold tw-leading-none tw-tracking-tighter">
                         {timeMonthly ? content.price : content.priceOngoing}
                       </Typography.Paragraph>
                       <TimePer>/h</TimePer>
