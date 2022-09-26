@@ -22,8 +22,6 @@ const BlogDetails = ({ data, preview = false }) => {
 
   const post = filterDataToSingleItem(previewData, preview)
 
-  console.log(post.blockText.blockText)
-
   return (
     <>
       {post && (
