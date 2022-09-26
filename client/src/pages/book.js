@@ -70,7 +70,7 @@ const Book = ({ data, preview = false }) => {
         <Hero content={page?.hero && page.hero} />
         <Section>
           <Container>
-            <Row className="align-items-center">
+            <Row>
               <Col lg="5">
                 <form
                   id="form"
@@ -78,6 +78,7 @@ const Book = ({ data, preview = false }) => {
                   method="post"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
+                  className="tw-mb-2"
                 >
                   {/* You still need to add the hidden input with the form name to your JSX form */}
                   <input type="hidden" name="form-name" value="contact1" />
@@ -90,21 +91,15 @@ const Book = ({ data, preview = false }) => {
                   ></FrameStyled>
                 </form>
               </Col>
-              <Col
-                lg={6}
-                className="offset-lg-1 order-lg-2 mt-5 mt-lg-0 pt-lg-5"
-              >
-                <Box className="mb-5">
+              <Col lg={6} className="offset-lg-1 order-lg-2 mt-lg-0">
+                <Box className="tw-mb-6">
                   <Typography.H2>
                     {page?.call?.title && page.call.title}
                   </Typography.H2>
                   {page?.call?.contactPersons &&
                     page.call.contactPersons.map((contact, index) => (
-                      <div className="tw-mb-3">
-                        <Typography.H3
-                          additionalClassName="tw-text-"
-                          key={index}
-                        >
+                      <div className="tw-mb-6">
+                        <Typography.H3 key={index}>
                           {contact.fullname}, {contact.role}
                         </Typography.H3>
                         <Typography.Paragraph>
@@ -126,7 +121,7 @@ const Book = ({ data, preview = false }) => {
                     </Typography.Anchor>
                   </Typography.Paragraph>
                 </Box>
-                <Box className="mb-5">
+                <Box className="tw-mb-6">
                   <Typography.H3>
                     {page?.mail?.title && page.mail.title}
                   </Typography.H3>
@@ -141,7 +136,7 @@ const Book = ({ data, preview = false }) => {
                 </Box>
                 {page?.visit?.address &&
                   page.visit.address.map((item, index) => (
-                    <Box className="mb-5" key={index}>
+                    <Box className="tw-mb-6" key={index}>
                       <Typography.H3>{item.title}</Typography.H3>
                       <BlockContent blocks={item.blockText.blockText} />
                     </Box>

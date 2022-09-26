@@ -10,7 +10,7 @@ const Roles = ({ content, openPositions }) => (
   <>
     <Section bg="#f7f7fb" id="openings">
       <Container>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center tw-mb-6">
           <Col lg="6" className="text-center">
             <div>
               <Typography.H2>{content.title}</Typography.H2>
