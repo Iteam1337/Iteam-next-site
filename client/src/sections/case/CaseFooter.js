@@ -14,7 +14,7 @@ const CaseFooter = ({ sectionCards }) => {
           <Typography.H2 additionalClassName="sr-only">
             Mer information
           </Typography.H2>
-          <Row className="align-items-center justify-content-center">
+          <Row className="justify-content-center">
             {sectionCards.map((card, i) => {
               return (
                 <Col lg="6" className="mb-5 mb-lg-0" key={i}>
