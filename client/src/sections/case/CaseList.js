@@ -10,9 +10,7 @@ const CaseList = ({ posts }) => {
     <>
       <Section className="position-relative">
         <Container>
-          <Typography.H2 additionalClassName="sr-only">
-            Utvalda case
-          </Typography.H2>
+          <Typography.H2 className="sr-only">Utvalda case</Typography.H2>
           <CardList.CardListGrid>
             {posts.map((post) => {
               const { preview, slug } = post

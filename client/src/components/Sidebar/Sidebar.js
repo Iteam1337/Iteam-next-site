@@ -23,17 +23,12 @@ export const Block = ({ children, ...rest }) => (
 )
 
 export const TitleSidebar = ({ children }) => (
-  <Typography.H2 additionalClassName="tw-text-2xl tw-mb-6">
-    {children}
-  </Typography.H2>
+  <Typography.H2 className="tw-mb-6 tw-text-2xl">{children}</Typography.H2>
 )
 
 export const TitlePost = ({ link = '/', children }) => (
-  <Typography.H3 additionalClassName="tw-text-base">
-    <Typography.Anchor
-      additionalClassName="tw-font-bold tw-text-base"
-      href={link}
-    >
+  <Typography.H3 className="tw-text-base">
+    <Typography.Anchor className="tw-text-base tw-font-bold" href={link}>
       {children}
     </Typography.Anchor>
   </Typography.H3>

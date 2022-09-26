@@ -109,7 +109,7 @@ const Hero = () => {
                 data-aos-once="true"
               >
                 <Box pt={[4, null, null, 0]}>
-                  <Typography.H2 additionalClassName="tw-text-dark-gray">
+                  <Typography.H2 className="tw-text-dark-gray">
                     Utbildning i öppen källkod och modern applikationsutveckling
                   </Typography.H2>
                   <Typography.Paragraph>
@@ -120,11 +120,11 @@ const Hero = () => {
 
                   <BoxPrice mt={4} mb={3}>
                     <Box className="d-flex align-items-center">
-                      <Typography.H1 additionalClassName="tw-text-white tw-mb-0 tw-mr-3">
+                      <Typography.H1 className="tw-mb-0 tw-mr-3 tw-text-white">
                         {price}kr
                       </Typography.H1>
                     </Box>
-                    <Typography.Paragraph additionalClassName="tw-text-white">
+                    <Typography.Paragraph className="tw-text-white">
                       per person
                     </Typography.Paragraph>
                   </BoxPrice>

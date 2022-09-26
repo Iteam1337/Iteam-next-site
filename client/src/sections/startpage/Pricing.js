@@ -138,12 +138,12 @@ const Pricing = ({ content }) => {
               <Col lg="8" className="mb-5 align-items-center">
                 <CardPricing>
                   <div className="mb-4">
-                    <Typography.H3 additionalClassName="tw-font-light tw-text-base tw-pb-2">
+                    <Typography.H3 className="tw-pb-2 tw-text-base tw-font-light">
                       {content.team}
                     </Typography.H3>
                     <div className="d-flex align-items-end justify-content-center my-3">
                       <Currency>{content.value}</Currency>
-                      <Typography.Paragraph additionalClassName="tw-mb-4 tw-mr-1 tw-text-7xl tw-font-bold tw-tracking-tighter">
+                      <Typography.Paragraph className="tw-mb-4 tw-mr-1 tw-text-7xl tw-font-bold tw-tracking-tighter">
                         {timeMonthly ? content.price : content.priceOngoing}
                       </Typography.Paragraph>
                       <TimePer>/h</TimePer>

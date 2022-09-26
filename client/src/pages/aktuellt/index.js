@@ -76,10 +76,8 @@ export default function BlogRegular({ query, data, preview = false }) {
           <div className="pt-5"></div>
           <Container>
             <Row className="justify-content-center text-center">
-              <Typography.H1 additionalClassName="pb-4">
-                {title && title}
-              </Typography.H1>
-              <Typography.H2 additionalClassName="tw-sr-only">
+              <Typography.H1 className="pb-4">{title && title}</Typography.H1>
+              <Typography.H2 className="tw-sr-only">
                 {(filterParam == 'alla' && 'Allt') ||
                   (filterParam == 'blogg' && 'Blogg') ||
                   (filterParam == 'open-source-skolan' && 'Open Source Skolan')}
@@ -87,7 +85,7 @@ export default function BlogRegular({ query, data, preview = false }) {
               {mixedPosts && (
                 <Col lg="8">
                   <Typography.Anchor
-                    additionalClassName={clsx(
+                    className={clsx(
                       'tw-mx-6 tw-text-sm hover:tw-underline',
                       filterParam == 'alla' ? 'tw-underline' : 'tw-no-underline'
                     )}
@@ -96,7 +94,7 @@ export default function BlogRegular({ query, data, preview = false }) {
                     Allt
                   </Typography.Anchor>
                   <Typography.Anchor
-                    additionalClassName={clsx(
+                    className={clsx(
                       'tw-mx-6 tw-text-sm hover:tw-underline',
                       filterParam == 'blogg'
                         ? 'tw-underline'
@@ -107,7 +105,7 @@ export default function BlogRegular({ query, data, preview = false }) {
                     Blogg
                   </Typography.Anchor>
                   <Typography.Anchor
-                    additionalClassName={clsx(
+                    className={clsx(
                       'tw-mx-6 tw-text-sm hover:tw-underline',
                       filterParam == 'open-source-skolan'
                         ? 'tw-underline'

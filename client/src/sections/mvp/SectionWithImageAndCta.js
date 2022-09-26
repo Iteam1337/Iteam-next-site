@@ -36,11 +36,11 @@ const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
               data-aos-once="true"
             >
               <div>
-                <Typography.H2 additionalClassName="tw-text-white">
+                <Typography.H2 className="tw-text-white">
                   {content.title}
                 </Typography.H2>
                 <Typography.BlockContent
-                  additionalClassName="tw-text-white"
+                  className="tw-text-white"
                   blocks={content.blockText.blockText}
                 />
 

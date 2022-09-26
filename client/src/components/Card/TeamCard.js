@@ -58,13 +58,9 @@ export const TeamCard = ({
     >
       <div>
         {status && (
-          <Typography.Caption additionalClassName="tw-pb-3">
-            {status}
-          </Typography.Caption>
+          <Typography.Caption className="tw-pb-3">{status}</Typography.Caption>
         )}
-        <Typography.Caption additionalClassName="tw-pb-3">
-          {role}
-        </Typography.Caption>
+        <Typography.Caption className="tw-pb-3">{role}</Typography.Caption>
       </div>
       <div className="tw-relative tw-flex tw-flex-col tw-pb-6">
         {phoneNumber && (

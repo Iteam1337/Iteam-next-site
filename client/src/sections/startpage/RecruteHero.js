@@ -46,10 +46,10 @@ const RecruteHero = ({ content }) => {
             `}
           >
             <TextContainer>
-              <Typography.H1 additionalClassName="tw-text-white">
+              <Typography.H1 className="tw-text-white">
                 {content.title}
               </Typography.H1>
-              <Typography.Paragraph additionalClassName="tw-text-white">
+              <Typography.Paragraph className="tw-text-white">
                 <div className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.7)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
                   {content.subtitle}
                 </div>

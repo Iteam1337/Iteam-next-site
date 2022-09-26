@@ -31,7 +31,7 @@ const ContentCard = ({
         css={'height: 100px;'}
       />
     </Box>
-    <Typography.Paragraph additionalClassName="tw-mb-8 tw-mt-8 tw-text-center tw-text-white tw-text-light">
+    <Typography.Paragraph className="tw-text-light tw-mb-8 tw-mt-8 tw-text-center tw-text-white">
       {children}
     </Typography.Paragraph>
     <Box className={`mt-auto`}>
@@ -47,9 +47,7 @@ const ContentCard = ({
         />
       </Box>
       <Box className="flex-grow-1 text-center" mt={3}>
-        <Typography.H3 additionalClassName="tw-text-white tw-mb-1">
-          {name}
-        </Typography.H3>
+        <Typography.H3 className="tw-mb-1 tw-text-white">{name}</Typography.H3>
         <Typography.ParagraphSmall>{role}</Typography.ParagraphSmall>
       </Box>
     </Box>

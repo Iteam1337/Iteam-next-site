@@ -62,9 +62,7 @@ const ContentCard = ({
       }
     `}
   >
-    <Typography.Paragraph additionalClassName="tw-mb-4">
-      {children}
-    </Typography.Paragraph>
+    <Typography.Paragraph className="tw-mb-4">{children}</Typography.Paragraph>
     <Box className={`d-flex justify-content-between`}>
       <Box className="d-flex justify-content-center align-items-start" mr={3}>
         <img src={image} alt="" className="img-fluid" />
@@ -105,7 +103,7 @@ const Testimonial = () => {
               <Box className="text-center">
                 <Typography.H2>Customer reviews</Typography.H2>
               </Box>
-              <Typography.Paragraph additionalClassName="tw-mb-4">
+              <Typography.Paragraph className="tw-mb-4">
                 Create custom landing pages with Omega that converts more
                 visitors than any website.
               </Typography.Paragraph>

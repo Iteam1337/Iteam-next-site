@@ -10,7 +10,7 @@ const CTA = () => (
         <Row>
           <Col lg="8" xl="7">
             <div>
-              <Typography.H2 additionalClassName="tw-text-dark-gray">
+              <Typography.H2 className="tw-text-dark-gray">
                 Enjoy every beat.<br className="d-none d-sm-block"></br> Get a
                 new headphone.
               </Typography.H2>

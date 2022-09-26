@@ -13,7 +13,7 @@ const CTA = ({ content }) => {
           <Row className="justify-content-center">
             <Col md="8" lg="7">
               <Box className="text-center">
-                <Typography.H2 additionalClassName="tw-text-white">
+                <Typography.H2 className="tw-text-white">
                   {content?.title}
                 </Typography.H2>
                 <div className="d-flex flex-column align-items-center pt-3">

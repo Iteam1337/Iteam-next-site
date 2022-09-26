@@ -27,9 +27,7 @@ const TextGrid = ({ content }) => {
   return (
     <SectionStyled>
       {/* content.title is actually just a description of the Sanity document type ("Flera texter"), but serves OK as a generic h2 */}
-      <Typography.H2 additionalClassName="sr-only">
-        {content.title}
-      </Typography.H2>
+      <Typography.H2 className="sr-only">{content.title}</Typography.H2>
       <Container>
         <Row className="justify-content-center">
           {content.texts.map((text, i) => {

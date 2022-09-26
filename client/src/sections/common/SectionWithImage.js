@@ -10,7 +10,7 @@ const SectionStyled = styled(Section)`
   background-color: ${({ bg }) => (bg == 'dark' ? 'rgb(25,25,27)' : 'white')};
   overflow: hidden;
 `
-const SectionWithImage = ({ content, bg = 'light', additionalClassName }) => {
+const SectionWithImage = ({ content, bg = 'light', className }) => {
   return (
     <SectionStyled bg={bg}>
       <Container>
@@ -39,14 +39,14 @@ const SectionWithImage = ({ content, bg = 'light', additionalClassName }) => {
           >
             <div>
               <Typography.H2
-                additionalClassName={clsx(
+                className={clsx(
                   bg === 'dark' ? 'tw-text-white' : 'tw-text-dark-grey'
                 )}
               >
                 {content.title}
               </Typography.H2>
               <Typography.BlockContent
-                additionalClassName={additionalClassName}
+                className={className}
                 blocks={content.blockText.blockText}
               />
             </div>

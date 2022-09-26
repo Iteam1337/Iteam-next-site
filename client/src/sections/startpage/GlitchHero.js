@@ -28,12 +28,12 @@ const GlitchHero = () => {
           <TextContainer>
             <Link href="/aktuellt/roliga-nyheter">
               <ClickableArea>
-                <Typography.H1 additionalClassName="tw-text-white">
+                <Typography.H1 className="tw-text-white">
                   Boom! Vi växer och
                   <br />
                   har massor att berätta
                 </Typography.H1>
-                <Typography.Paragraph additionalClassName="tw-text-white">
+                <Typography.Paragraph className="tw-text-white">
                   <TextBg>
                     Hållbarhet och digital innovation sitter lika naturligt ihop
                     som Batman och Robin. Det attraherar både kunder och smarta

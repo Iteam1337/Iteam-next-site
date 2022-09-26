@@ -77,10 +77,7 @@ const Offerings = ({ data }) => {
                   data-aos-offset="0"
                   data-aos-once="true"
                 >
-                  <CardList.CardListFlex
-                    additionalClassName="tw-mt-5"
-                    column={true}
-                  >
+                  <CardList.CardListFlex className="tw-mt-5" column={true}>
                     {data?.offers?.map((offer) => (
                       <Card.SimpleCard
                         key={offer.title}

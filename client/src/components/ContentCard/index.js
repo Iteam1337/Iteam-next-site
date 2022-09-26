@@ -40,7 +40,7 @@ const ContentCards = ({
       {...rest}
     >
       <Typography.H3
-        additionalClassName={clsx(dark ? 'tw-text-white' : 'tw-text-gray-dark')}
+        className={clsx(dark ? 'tw-text-white' : 'tw-text-gray-dark')}
       >
         {title}
       </Typography.H3>

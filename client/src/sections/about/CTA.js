@@ -38,7 +38,7 @@ const CTA = ({ content }) => (
         <Row className="justify-content-center text-center">
           <Col lg="6">
             <Box mb={5} className="text-center">
-              <Typography.H2 additionalClassName="tw-text-white">
+              <Typography.H2 className="tw-text-white">
                 {content.title}
               </Typography.H2>
             </Box>

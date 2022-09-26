@@ -4,14 +4,14 @@ import React from 'react'
 export const Anchor = ({
   children,
   href = '#',
-  additionalClassName,
+  className,
   ariaLabel,
   target,
 }) => {
   return (
     <a
       href={href}
-      className={clsx(additionalClassName, 'text-inherit')}
+      className={clsx(className, 'text-inherit')}
       aria-label={ariaLabel}
       target={target}
     >
