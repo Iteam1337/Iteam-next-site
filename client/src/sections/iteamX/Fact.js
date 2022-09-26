@@ -26,7 +26,9 @@ const Fact = ({ content }) => (
                 <Typography.H2 additionalClassName="tw-text-white tw-mb-6">
                   {item.title}
                 </Typography.H2>
-                <Typography.Paragraph light>{item.text}</Typography.Paragraph>
+                <Typography.Paragraph additionalClassName="tw-text-white">
+                  {item.text}
+                </Typography.Paragraph>
               </Box>
             </Col>
           ))}

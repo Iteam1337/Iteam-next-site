@@ -112,7 +112,7 @@ const Hero = ({ content, flipTexts = false }) => {
                 >
                   {title}
                 </Typography.H1>
-                <Typography.Paragraph light>
+                <Typography.Paragraph additionalClassName="tw-text-white">
                   <TextBg>{subtitle}</TextBg>
                 </Typography.Paragraph>
                 {link && (

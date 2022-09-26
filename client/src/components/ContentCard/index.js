@@ -2,6 +2,7 @@ import React from 'react'
 import { Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import { Box, Typography } from '../Core'
+import clsx from 'clsx'
 
 const StyledBox = styled(Box)`
   padding: 25px 20px;
@@ -11,11 +12,6 @@ const StyledBox = styled(Box)`
   background-color: ${({ theme, dark }) =>
     dark ? theme.colors.dark : theme.colors.light};
   transition: all 0.3s ease-out;
-
-  h3 {
-    color: ${({ theme, dark }) =>
-      dark ? theme.colors.light : theme.colors.dark};
-  }
 `
 
 const ContentCards = ({
@@ -43,7 +39,11 @@ const ContentCards = ({
       className={`d-flex align-items-center justify-content-center ${className}`}
       {...rest}
     >
-      <Typography.H3>{title}</Typography.H3>
+      <Typography.H3
+        additionalClassName={clsx(dark ? 'tw-text-white' : 'tw-text-gray-dark')}
+      >
+        {title}
+      </Typography.H3>
     </StyledBox>
   </Col>
 )

@@ -34,7 +34,7 @@ export const BaseCard = ({
             <Typography.Anchor
               aria-label={`${title}, Läs mer…`}
               href={link}
-              additionalClassName="after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
+              additionalClassName="tw-font-bold after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
             >
               {title}
             </Typography.Anchor>

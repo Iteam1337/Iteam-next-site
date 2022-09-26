@@ -39,7 +39,7 @@ const Feature = () => (
               <Typography.H2 additionalClassName="tw-text-white">
                 Leapfrog as a service
               </Typography.H2>
-              <Typography.Paragraph light>
+              <Typography.Paragraph additionalClassName="tw-text-white">
                 Du vill gå om dina konkurrenter med ny teknik. När man ska jobba
                 inom okända områden finns det sällan en plan eller färdiga
                 processer att följa. Därför satsar vi på att skapa team som

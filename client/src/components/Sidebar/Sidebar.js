@@ -30,7 +30,12 @@ export const TitleSidebar = ({ children }) => (
 
 export const TitlePost = ({ link = '/', children }) => (
   <Typography.H3 additionalClassName="tw-text-base">
-    <Typography.Anchor href={link}>{children}</Typography.Anchor>
+    <Typography.Anchor
+      additionalClassName="tw-font-bold tw-text-base"
+      href={link}
+    >
+      {children}
+    </Typography.Anchor>
   </Typography.H3>
 )
 

@@ -31,10 +31,7 @@ const ContentCard = ({
         css={'height: 100px;'}
       />
     </Box>
-    <Typography.Paragraph
-      light
-      additionalClassName="tw-mb-8 tw-mt-8 tw-text-center"
-    >
+    <Typography.Paragraph additionalClassName="tw-mb-8 tw-mt-8 tw-text-center tw-text-white tw-text-light">
       {children}
     </Typography.Paragraph>
     <Box className={`mt-auto`}>
