@@ -233,7 +233,7 @@ const Footer = ({ isDark = true, content }) => {
                     href="/privacy"
                   >
                     Our privacy policy.
-                  </Typography.Anchor>{' '}
+                  </Typography.Anchor>
                 </p>
               </Col>
               <Col sm="6" className="text-sm-right text-center">
