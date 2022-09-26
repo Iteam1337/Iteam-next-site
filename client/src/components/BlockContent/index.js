@@ -1,50 +1,54 @@
 import React from 'react'
 import BaseBlockContent from '@sanity/block-content-to-react'
-import Typography from '../Typography'
 import client from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
 import Img from 'next/image'
-import { Text } from '../Core'
-import { buildInternalUrl } from '../../utils/helpers'
 
-const serializers = (withAnchor, variant, color, textAlign, anchorColor) => ({
+import { buildInternalUrl } from '../../utils/helpers'
+import clsx from 'clsx'
+
+const serializers = (additionalClassName) => ({
   types: {
     block: ({ node, children }) => {
       switch (node.style) {
-        case 'h1':
-          return <Typography.H1>{children}</Typography.H1>
         case 'h2':
-          return <Typography.H2>{children}</Typography.H2>
+          return (
+            <h2 className="tw-mb-0 tw-mt-4 tw-text-xl md:tw-mt-5 md:tw-text-2xl">
+              {children}
+            </h2>
+          )
         case 'h3':
-          return <Typography.H3>{children}</Typography.H3>
+          return (
+            <h3 className="tw-mb-0 tw-mt-4 tw-text-lg md:tw-mt-5 md:tw-text-xl">
+              {children}
+            </h3>
+          )
         case 'h4':
-          return <Typography.H4>{children}</Typography.H4>
+          return (
+            <h4 className="tw-mb-0 tw-mt-4 tw-text-base md:tw-mt-5 md:tw-text-lg">
+              {children}
+            </h4>
+          )
         case 'normal':
           return (
-            <Typography.Paragraph variant={variant} color={color}>
+            <p className={clsx(additionalClassName, 'tw-my-3 md:tw-my-4')}>
               {children}
-            </Typography.Paragraph>
+            </p>
           )
         case 'blockquote':
           return (
-            <Typography.BlockQuote>
-              <Typography.QuoteMark aria-hidden="true">
+            <blockquote className="tw-my-6 tw-flex tw-flex-row tw-bg-white tw-italic md:tw-my-8">
+              <div
+                aria-hidden="true"
+                className="tw-mr-3 tw-font-serif tw-text-4xl tw-text-[#999]"
+              >
                 &ldquo;
-              </Typography.QuoteMark>
-              <Typography.QuoteParagraph>{children}</Typography.QuoteParagraph>
-            </Typography.BlockQuote>
+              </div>
+              <p>{children}</p>
+            </blockquote>
           )
         case 'subtitle':
-          return (
-            <Typography.Paragraph
-              size="subtitle"
-              color={color}
-              variant="thin"
-              textAlign={textAlign}
-            >
-              {children}
-            </Typography.Paragraph>
-          )
+          return <p className={clsx(additionalClassName)}>{children}</p>
         default:
           console.warn('Unhandled in portable text serializer: ', node)
           return <p></p>
@@ -59,6 +63,7 @@ const serializers = (withAnchor, variant, color, textAlign, anchorColor) => ({
           sizes="(max-width: 800px) 100vw, 800px"
           alt={node.alt}
           quality={100}
+          className="tw-my-3"
         />
       )
     },
@@ -66,37 +71,40 @@ const serializers = (withAnchor, variant, color, textAlign, anchorColor) => ({
   marks: {
     internalLink: ({ mark, children }) => {
       return (
-        <Typography.Anchor
+        <a
+          className="tw-text-inherit tw-underline hover:tw-no-underline"
           href={buildInternalUrl(mark.reference)}
-          color={anchorColor}
         >
           {children}
-        </Typography.Anchor>
+        </a>
       )
     },
     link: ({ mark, children }) => {
       const { blank, href } = mark
       return blank ? (
-        <Typography.Anchor href={href} target="_blank" rel="noreferrer">
+        <a
+          className="tw-underline hover:tw-no-underline"
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+        >
           {children}
-        </Typography.Anchor>
+        </a>
       ) : (
-        <Typography.Anchor href={href} color={anchorColor}>
+        <a className="tw-underline hover:tw-no-underline" href={href}>
           {children}
-        </Typography.Anchor>
+        </a>
       )
     },
   },
   list: ({ type, children }) => {
     switch (type) {
       case 'bullet':
-        return (
-          <ul style={{ listStyleType: 'disc', paddingLeft: '2rem' }}>
-            {children}
-          </ul>
-        )
+        return <ul className="tw-list-disc tw-pl-8">{children}</ul>
       case 'number':
-        return <ol style={{ paddingLeft: '2rem' }}>{children}</ol>
+        return (
+          <ol className="tw-list-decimal tw-pl-8 tw-font-light">{children}</ol>
+        )
       default:
         console.warn('Unhandled in portable text serializer: ', type)
         return <ul></ul>
@@ -104,29 +112,16 @@ const serializers = (withAnchor, variant, color, textAlign, anchorColor) => ({
   },
   listItem: ({ children }) => (
     <li>
-      <Typography.Paragraph variant={variant}>{children}</Typography.Paragraph>
+      <p>{children}</p>
     </li>
   ),
 })
 
-const BlockContent = ({
-  blocks = [],
-  withAnchor = false,
-  variant = 'normal',
-  color = 'dark',
-  textAlign = 'left',
-  anchorColor = 'info',
-}) => {
+const BlockContent = ({ blocks = [], additionalClassName }) => {
   return (
     <BaseBlockContent
       blocks={blocks}
-      serializers={serializers(
-        withAnchor,
-        variant,
-        color,
-        textAlign,
-        anchorColor
-      )}
+      serializers={serializers(additionalClassName)}
     />
   )
 }
