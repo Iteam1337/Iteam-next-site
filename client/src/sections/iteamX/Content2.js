@@ -66,10 +66,12 @@ const Content2 = ({ content }) => {
                 <Typography.H2 className="tw-text-white">
                   {content.title}
                 </Typography.H2>
-                <Typography.BlockContent
-                  className="tw-mb-9 tw-text-white"
-                  blocks={content.blockText.blockText}
-                />
+                <div className="tw-mb-9">
+                  <Typography.BlockContent
+                    className="tw-text-white"
+                    blocks={content.blockText.blockText}
+                  />
+                </div>
                 <a href="https://predictivemovement.se">
                   <Button bg="secondary" color="dark">
                     {content.cta.title}
