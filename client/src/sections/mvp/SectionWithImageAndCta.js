@@ -40,7 +40,7 @@ const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
                   {content.title}
                 </Typography.H2>
                 <Typography.BlockContent
-                  className="tw-text-white"
+                  light
                   blocks={content.blockText.blockText}
                 />
 

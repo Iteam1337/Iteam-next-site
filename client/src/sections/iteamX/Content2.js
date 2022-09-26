@@ -68,7 +68,7 @@ const Content2 = ({ content }) => {
                 </Typography.H2>
                 <div className="tw-mb-9">
                   <Typography.BlockContent
-                    className="tw-text-white"
+                    light
                     blocks={content.blockText.blockText}
                   />
                 </div>
