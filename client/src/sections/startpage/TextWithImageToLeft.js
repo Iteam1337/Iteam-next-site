@@ -50,10 +50,7 @@ const TextWithImageToLeft = ({ content }) => {
               <Box className="pt-5 pt-lg-0">
                 <Typography.H2>{content.title}</Typography.H2>
 
-                <BlockContent
-                  variant="thin"
-                  blocks={content.blockText.blockText}
-                />
+                <BlockContent blocks={content.blockText.blockText} />
               </Box>
             </Col>
           </Row>

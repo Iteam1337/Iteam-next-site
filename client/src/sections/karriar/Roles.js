@@ -14,10 +14,7 @@ const Roles = ({ content, openPositions }) => (
           <Col lg="6" className="text-center">
             <div>
               <Typography.H2>{content.title}</Typography.H2>
-              <BlockContent
-                variant="thin"
-                blocks={content.subtitle.blockText}
-              />
+              <BlockContent blocks={content.subtitle.blockText} />
             </div>
           </Col>
         </Row>

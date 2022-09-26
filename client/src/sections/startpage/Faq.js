@@ -50,10 +50,8 @@ const Faq = ({ content }) => {
                         {faq.title}
                       </Typography.H3>
                       <BlockContent
-                        anchorColor="light"
+                        additionalClassName="tw-text-white"
                         blocks={faq.blockText.blockText}
-                        color="light"
-                        variant="subtitle"
                       />
                     </div>
                   </FaqCard>

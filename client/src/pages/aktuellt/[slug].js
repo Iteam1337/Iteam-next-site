@@ -93,10 +93,7 @@ const BlogDetails = ({ data, preview = false }) => {
             <Row>
               <Col lg="8" className="mb-5">
                 {post?.blockText?.blockText && (
-                  <BlockContent
-                    variant="thin"
-                    blocks={post.blockText.blockText}
-                  />
+                  <BlockContent blocks={post.blockText.blockText} />
                 )}
               </Col>
               <Col lg="4" className="" style={{ marginTop: '2.3rem' }}>

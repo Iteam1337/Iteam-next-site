@@ -12,10 +12,7 @@ const Feature2 = ({ content }) => {
           <Col lg="9">
             <Box className="text-center" mb={[4, 5]}>
               <Typography.H2>{content.title}</Typography.H2>
-              <BlockContent
-                textAlign="center"
-                blocks={content.subtitle.blockText}
-              />
+              <BlockContent blocks={content.subtitle.blockText} />
             </Box>
           </Col>
         </Row>

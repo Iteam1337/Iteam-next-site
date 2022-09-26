@@ -88,10 +88,7 @@ const BlogDetails = ({ data, preview = false }) => {
             <Col lg="12" xl="10" className="offset-xl-1">
               <Box pb={['40px', null, '65px']}>
                 {post?.blockText?.blockText && (
-                  <BlockContent
-                    variant="thin"
-                    blocks={post.blockText.blockText}
-                  />
+                  <BlockContent blocks={post.blockText.blockText} />
                 )}
               </Box>
             </Col>

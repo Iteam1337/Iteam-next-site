@@ -13,10 +13,7 @@ const TextWithTags = ({ content }) => {
             <Box className="text-center" mb={[4, 5]}>
               <Typography.H2>{content.title}</Typography.H2>
               {content?.subtitle?.blockText && (
-                <BlockContent
-                  textAlign="center"
-                  blocks={content.subtitle.blockText}
-                />
+                <BlockContent blocks={content.subtitle.blockText} />
               )}
             </Box>
           </Col>

@@ -38,7 +38,7 @@ const CaseFooterSection = ({
       </ImageContainer>
       <CardText>
         <Typography.H3>{title}</Typography.H3>
-        <BlockContent variant="thin" blocks={blocks.blockText} />
+        <BlockContent blocks={blocks.blockText} />
       </CardText>
     </Card>
   )
