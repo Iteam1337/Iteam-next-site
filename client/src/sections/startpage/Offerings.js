@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
@@ -19,6 +19,11 @@ const ShapeTop = styled(Box)`
 `
 
 const Offerings = ({ data }) => {
+  const [time, setTime] = useState('00:00:00')
+
+  useEffect(() => {
+    setTime(new Date().toLocaleTimeString())
+  })
   return (
     <>
       {/* <!-- Content section 2 --> */}
@@ -47,7 +52,7 @@ const Offerings = ({ data }) => {
                   <Card.NotificationCard
                     link="/book"
                     icon="fas fa-bell"
-                    preTitle={new Date().toLocaleTimeString()}
+                    preTitle={time}
                     title={data?.message?.text}
                     variant="secondary"
                     bgDark={false}
