@@ -97,8 +97,8 @@ const Book = ({ data, preview = false }) => {
                   </Typography.H2>
                   {page?.call?.contactPersons &&
                     page.call.contactPersons.map((contact, index) => (
-                      <div className="tw-mb-6">
-                        <Typography.H3 key={index}>
+                      <div className="tw-mb-6" key={index}>
+                        <Typography.H3>
                           {contact.fullname}, {contact.role}
                         </Typography.H3>
                         <Typography.Paragraph>
