@@ -23,7 +23,9 @@ const CTA = ({ content }) => {
                         content?.cta?.reference?._ref
                       )}
                     >
-                      <Button>{content?.cta?.title}</Button>
+                      <a>
+                        <Button>{content?.cta?.title}</Button>
+                      </a>
                     </Link>
                   </Box>
                 </div>
