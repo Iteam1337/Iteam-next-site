@@ -24,7 +24,7 @@ const DesignatedTeam = () => (
                 data-aos-once="true"
                 data-aos-delay="500"
               >
-                <img src={imgContent} alt="" className="img-fluid" />
+                <img src={imgContent.src} alt="" className="img-fluid" />
               </div>
             </div>
           </Col>

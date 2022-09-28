@@ -146,7 +146,7 @@ const Hero = () => {
               data-aos-once="true"
             >
               <ImgRight>
-                <img src={imgHero} alt="" className="img-fluid" />
+                <img src={imgHero.src} alt="" className="img-fluid" />
               </ImgRight>
             </Col>
             <Col lg="8" xl="7">
@@ -199,7 +199,7 @@ const Hero = () => {
                   data-aos-delay="500"
                   data-aos-once="true"
                 >
-                  <img src={imgAuthor} alt="" className="img-fluid" />
+                  <img src={imgAuthor.src} alt="" className="img-fluid" />
                 </AuthorImage>
                 <AuthorText
                   data-aos="fade-right"

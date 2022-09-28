@@ -42,7 +42,12 @@ const Contact = () => (
       className="position-relative"
     >
       <Shape>
-        <img src={imgShape} alt="" aria-hidden="true" className="w-100 img-fluid" />
+        <img
+          src={imgShape.src}
+          alt=""
+          aria-hidden="true"
+          className="w-100 img-fluid"
+        />
       </Shape>
       <Container
         css={`

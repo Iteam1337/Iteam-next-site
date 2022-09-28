@@ -104,7 +104,7 @@ const PostDetails = ({ post }) => (
     <Post>
       {post.image && (
         <div>
-          <img src={post.image} alt={post.title} />
+          <img src={post.image.src} alt={post.title} />
         </div>
       )}
       <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />

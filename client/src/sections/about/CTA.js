@@ -29,10 +29,20 @@ const CTA = ({ content }) => (
         data-aos-duration="750"
         data-aos-once="true"
       >
-        <img src={imgOval} alt="" aria-hidden="true" className="img-fluid" />
+        <img
+          src={imgOval.src}
+          alt=""
+          aria-hidden="true"
+          className="img-fluid"
+        />
       </LeftCard>
       <RightCard>
-        <img src={svgCurve} alt="" aria-hidden="true" className="img-fluid" />
+        <img
+          src={svgCurve.src}
+          alt=""
+          aria-hidden="true"
+          className="img-fluid"
+        />
       </RightCard>
       <Container>
         <Row className="justify-content-center text-center">

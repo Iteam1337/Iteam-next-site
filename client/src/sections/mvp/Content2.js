@@ -49,7 +49,7 @@ const Content2 = () => (
                 data-aos-duration="750"
                 data-aos-once="true"
               >
-                <img src={imgDesignSprint} alt="" className="img-fluid" />
+                <img src={imgDesignSprint.src} alt="" className="img-fluid" />
               </ImageRight>
             </div>
           </Col>
