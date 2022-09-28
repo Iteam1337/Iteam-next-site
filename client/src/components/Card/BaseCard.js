@@ -46,7 +46,7 @@ export const BaseCard = ({
             {variant && (
               <div className="tw-absolute tw-top-[296px] tw-left-[-24px] tw-w-[calc(100%+48px)]">
                 <svg
-                  height="auto"
+                  height="100%"
                   viewBox="0 0 540 22"
                   className={clsx(
                     'tw-w-full',
