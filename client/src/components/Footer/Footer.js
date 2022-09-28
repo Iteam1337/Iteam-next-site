@@ -122,6 +122,7 @@ const Footer = ({ isDark = true, content }) => {
                       <FooterList>
                         {content.addresses.map((address) => (
                           <li
+                            key={address.name}
                             className={clsx(
                               'tw-mb-5 tw-font-light tw-leading-9'
                             )}
