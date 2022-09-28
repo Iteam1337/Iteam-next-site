@@ -52,9 +52,11 @@ const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
                         : buildInternalUrl(content.cta.reference)
                     }
                   >
-                    <Button>
-                      {referenceTo ? content.button : content.cta.title}
-                    </Button>
+                    <a>
+                      <Button>
+                        {referenceTo ? content.button : content.cta.title}
+                      </Button>
+                    </a>
                   </Link>
                 </div>
               </div>

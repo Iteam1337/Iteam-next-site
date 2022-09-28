@@ -36,15 +36,17 @@ const Hero = ({ content }) => {
                 >
                   {content?.link?.link && (
                     <Link href={getExternalOrInternalLink(content.link.link)}>
-                      <Button
-                        css={`
-                          margin-top: 20px;
-                          width: fit-content;
-                        `}
-                        color="dark"
-                      >
-                        {content.link.title}
-                      </Button>
+                      <a>
+                        <Button
+                          css={`
+                            margin-top: 20px;
+                            width: fit-content;
+                          `}
+                          color="dark"
+                        >
+                          {content.link.title}
+                        </Button>
+                      </a>
                     </Link>
                   )}
                 </Box>
