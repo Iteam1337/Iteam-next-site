@@ -23,7 +23,7 @@ const Content3 = () => {
       {/* <!-- Content3 Area --> */}
       <Section bg="secondary" className="position-relative overflow-hidden">
         <ImgContainer className="d-none d-lg-block">
-          <img src={imgContent} alt="" className="img-fluid" />
+          <img src={imgContent.src} alt="" className="img-fluid" />
         </ImgContainer>
         <Container>
           <Row className="">

@@ -14,7 +14,7 @@ const CTA = () => (
             <div className="position-relative">
               <div className="img-1">
                 <img
-                  src={imgCtaBG}
+                  src={imgCtaBG.src}
                   alt="En person med en stor bukett blommor"
                   className="img-fluid"
                   css={`

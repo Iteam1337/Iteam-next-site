@@ -68,7 +68,7 @@ const Content2 = () => (
               data-aos-duration="750"
               data-aos-once="true"
             >
-              <img src={imgContent} alt="" className="img-fluid" />
+              <img src={imgContent.src} alt="" className="img-fluid" />
             </div>
           </Col>
           <Col lg="7" className="order-lg-1">

@@ -37,17 +37,17 @@ const Content2 = () => (
         <Row className="mt-5">
           <Col lg="4" sm="5" className="mb-4 ">
             <ContentImg>
-              <img src={christian} alt="" className="img-fluid" />
+              <img src={christian.src} alt="" className="img-fluid" />
             </ContentImg>
           </Col>
           <Col lg="4" sm="5" className="mb-4 ">
             <ContentImg>
-              <img src={emmaklara} alt="" className="img-fluid" />
+              <img src={emmaklara.src} alt="" className="img-fluid" />
             </ContentImg>
           </Col>
           <Col lg="4" sm="5" className="mb-4">
             <ContentImg>
-              <img src={adam} alt="" className="img-fluid" />
+              <img src={adam.src} alt="" className="img-fluid" />
             </ContentImg>
           </Col>
         </Row>

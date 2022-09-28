@@ -122,7 +122,7 @@ const Testimonial = () => {
                   <ContentCard
                     name="Jonathan Taylor"
                     company="CEO at Creativex"
-                    image={imgC1}
+                    image={imgC1.src}
                   >
                     OMG! I cannot believe that I have got a brand new landing
                     page after getting Omega. It was super easy to edit and
@@ -139,7 +139,7 @@ const Testimonial = () => {
                   <ContentCard
                     name="Marie Stanley"
                     company="Digital Marketer, Writer"
-                    image={imgC2}
+                    image={imgC2.src}
                   >
                     OMG! I cannot believe that I have got a brand new landing
                     page after getting Omega. It was super easy to edit and
@@ -156,7 +156,7 @@ const Testimonial = () => {
                   <ContentCard
                     name="Jonathan Taylor"
                     company="CEO at Creativex"
-                    image={imgC1}
+                    image={imgC1.src}
                   >
                     OMG! I cannot believe that I have got a brand new landing
                     page after getting Omega. It was super easy to edit and
@@ -173,7 +173,7 @@ const Testimonial = () => {
                   <ContentCard
                     name="Marie Stanley"
                     company="Digital Marketer, Writer"
-                    image={imgC2}
+                    image={imgC2.src}
                   >
                     OMG! I cannot believe that I have got a brand new landing
                     page after getting Omega. It was super easy to edit and
@@ -190,7 +190,7 @@ const Testimonial = () => {
                   <ContentCard
                     name="Jonathan Taylor"
                     company="CEO at Creativex"
-                    image={imgC1}
+                    image={imgC1.src}
                   >
                     OMG! I cannot believe that I have got a brand new landing
                     page after getting Omega. It was super easy to edit and
@@ -207,7 +207,7 @@ const Testimonial = () => {
                   <ContentCard
                     name="Marie Stanley"
                     company="Digital Marketer, Writer"
-                    image={imgC2}
+                    image={imgC2.src}
                   >
                     OMG! I cannot believe that I have got a brand new landing
                     page after getting Omega. It was super easy to edit and

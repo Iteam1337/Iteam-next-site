@@ -98,7 +98,7 @@ const Hero = () => {
               data-aos-once="true"
             >
               <ImgRight>
-                <img src={imgHero} alt="" className="img-fluid" />
+                <img src={imgHero.src} alt="" className="img-fluid" />
               </ImgRight>
             </Col>
             <Col lg="7">

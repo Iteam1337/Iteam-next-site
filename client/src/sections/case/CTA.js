@@ -30,12 +30,17 @@ const CTA = ({ text }) => {
           data-aos-duration="750"
           data-aos-once="true"
         >
-          <img src={imgOval} alt="" aria-hidden="true" className="img-fluid" />
+          <img
+            src={imgOval.src}
+            alt=""
+            aria-hidden="true"
+            className="img-fluid"
+          />
         </LeftCard>
         <RightCard>
           {
             <img
-              src={svgCurveGray}
+              src={svgCurveGray.src}
               alt=""
               aria-hidden="true"
               className="img-fluid"

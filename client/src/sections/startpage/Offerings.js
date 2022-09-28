@@ -24,7 +24,7 @@ const Offerings = ({ data }) => {
       {/* <!-- Content section 2 --> */}
       <Section bg="#f7f7fb" className="position-relative">
         <ShapeTop>
-          <img src={svgCurve} alt="" className="img-fluid" />
+          <img src={svgCurve.src} alt="" className="img-fluid" />
         </ShapeTop>
         <Container>
           <Row className="align-items-center">

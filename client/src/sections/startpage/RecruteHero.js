@@ -12,7 +12,7 @@ const Wrapper = styled.div`
       rgba(0, 0, 0, 0.3) 50%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url(${HeroImg}) no-repeat center;
+    url(${HeroImg.src}) no-repeat center;
   background-position: center;
   background-size: cover;
   height: 100vh;

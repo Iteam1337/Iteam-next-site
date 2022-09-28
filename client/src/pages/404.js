@@ -56,7 +56,7 @@ const NotFoundPage = () => {
           <Container>
             <div className="text-center">
               <ContentIcon>
-                <img src={imgIcon} alt="" className="img-fluid" />
+                <img src={imgIcon.src} alt="" className="img-fluid" />
               </ContentIcon>
               <div>
                 <Typography.H1>404 Error!</Typography.H1>
