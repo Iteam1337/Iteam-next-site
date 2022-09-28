@@ -46,11 +46,11 @@ const Content3 = () => {
                     visitors than any website. With lots of unique blocks, you
                     can easily build a page without coding.
                   </Typography.Paragraph>
-                  <div className="d-flex flex-column align-items-start pt-3">
+                  <span className="d-flex flex-column align-items-start pt-3">
                     <Button bg="warning" color="dark">
                       Try it now
                     </Button>
-                  </div>
+                  </span>
                 </Box>
               </div>
             </Col>

@@ -58,7 +58,7 @@ const serializers = (light) => ({
                 'tw-my-6 tw-flex tw-flex-row tw-bg-white tw-italic md:tw-my-8'
               )}
             >
-              <div
+              <span
                 aria-hidden="true"
                 className={clsx(
                   light ? 'tw-text-white' : 'tw-text-[#999]',
@@ -66,7 +66,7 @@ const serializers = (light) => ({
                 )}
               >
                 &ldquo;
-              </div>
+              </span>
               <p>{children}</p>
             </blockquote>
           )
