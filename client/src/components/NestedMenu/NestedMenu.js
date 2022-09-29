@@ -88,6 +88,7 @@ const MenuItem = ({
           css={`
             padding-left: ${depth * depthStep}px !important;
           `}
+          className="tw-my-1"
         >
           {isExternal ? (
             <a

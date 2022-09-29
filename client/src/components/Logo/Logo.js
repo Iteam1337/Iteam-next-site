@@ -22,13 +22,13 @@ const Logo = ({
           vertical ? (
             <img
               src={imgL1VericalLogoWhite.src}
-              className="tw-mt-1 tw-h-[150px]"
+              className="tw-mt-1 tw-h-[150px] tw-w-[26px]"
               aria-hidden="true"
             />
           ) : (
             <img
               src={imgL1LogoWhite.src}
-              className="tw-mt-3.5 tw-w-[150px]"
+              className="tw-mt-3.5 tw-h-[29px] tw-w-[150px]"
               aria-hidden="true"
             />
           )
@@ -36,13 +36,13 @@ const Logo = ({
           <img
             src={imgL1VericalLogo.src}
             aria-hidden="true"
-            className="tw-mt-3.5 tw-h-[150px]"
+            className="tw-mt-3.5 tw-h-[150px] tw-w-[26px]"
           />
         ) : (
           <img
             src={imgL1Logo.src}
             aria-hidden="true"
-            className="tw-mt-3.5 tw-w-[150px]"
+            className="tw-mt-3.5 tw-h-[29px] tw-w-[150px]"
           />
         )}
       </a>

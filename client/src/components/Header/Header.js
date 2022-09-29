@@ -163,7 +163,7 @@ const Menu = styled.ul`
           margin-left: 0.5rem;
 
           @media screen and (prefers-reduced-motion: no-preference) {
-            transition: 0.4s;
+            transition: transform 0.4s;
           }
         }
       }
@@ -311,7 +311,7 @@ const Header = ({ isDark = false, loaded }) => {
                   <Logo vertical={!showReveal} white={isDark} />
                 )}
               </div>
-              <div className="collapse navbar-collapse">
+              <div className="collapse navbar-collapse tw-justify-end">
                 <div className="navbar-nav ml-lg-auto mr-3">
                   <Menu
                     className="navbar-nav d-none d-lg-flex"
