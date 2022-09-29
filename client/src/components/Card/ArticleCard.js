@@ -1,6 +1,7 @@
 import React from 'react'
 import client from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
+import Image from 'next/image'
 
 import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'
@@ -8,11 +9,15 @@ import { BaseCard } from './BaseCard'
 const ArticleCardImage = ({ img }) => {
   const imageProps = useNextSanityImage(client, img?.asset._ref)
   return (
-    <div className="tw-h-80">
-      <img
-        {...imageProps}
+    <div className="tw-relative tw-z-0 tw-order-1 tw-h-80">
+      <Image
+        src={imageProps.src}
         alt={img.alt}
-        className="tw-h-full tw-w-full tw-object-cover"
+        loader={imageProps.loader}
+        blurDataURL={imageProps.blurDataURL}
+        placeholder={imageProps.placeholder}
+        layout="fill"
+        objectFit="cover"
       />
     </div>
   )

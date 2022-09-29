@@ -9,6 +9,7 @@ import { rgba } from 'polished'
 import sanityClient from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
 import { buildInternalUrl } from '../../utils/helpers'
+import Image from 'next/image'
 
 const SliderStyled = styled(Slider)`
   position: relative;
@@ -241,11 +242,7 @@ const Client = ({ item, active }) => {
     <SliderItem active={active}>
       <SliderCard className="slider-card">
         <SliderImgContainer>
-          <img
-            {...imageProps}
-            alt={item.image.alt}
-            style={{ height: 'auto' }}
-          />
+          <Image {...imageProps} alt={item.image.alt} />
         </SliderImgContainer>
         <SliderText>
           <Typography.Paragraph>{item.quote}</Typography.Paragraph>

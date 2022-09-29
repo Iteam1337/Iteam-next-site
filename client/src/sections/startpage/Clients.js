@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap'
 import { Box } from '../../components/Core'
 import sanityClient from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
+import Image from 'next/image'
 
 const Brand = styled(Box)`
   opacity: 0.7;
@@ -31,7 +32,7 @@ const Clients = ({ clients }) => (
           )
           return (
             <Brand key={i} className="" py={3} mx={4}>
-              <img {...imageProps} alt={client.alt} className="img-fluid" />
+              <Image {...imageProps} alt={client.alt} className="img-fluid" />
             </Brand>
           )
         })}
