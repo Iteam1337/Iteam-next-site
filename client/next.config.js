@@ -2,7 +2,6 @@ const redirects = require('./redirects.json')
 
 module.exports = {
   async redirects() {
-    console.log(redirects)
     return redirects
   },
   swcMinify: true,
