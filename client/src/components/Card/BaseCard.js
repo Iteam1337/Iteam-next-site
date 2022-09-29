@@ -17,7 +17,7 @@ export const BaseCard = ({
   return (
     <li
       className={clsx(
-        'tw-group tw-relative tw-mt-2 tw-flex tw-flex-1 tw-cursor-pointer tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-gray-border tw-bg-white tw-transition',
+        'tw-group tw-relative tw-mt-2 tw-flex tw-flex-1 tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-gray-border tw-bg-white tw-transition',
         'focus-within:tw-shadow-lg hover:tw-shadow-lg motion-reduce:tw-transition-none',
         variant === 'secondary' && 'tw-border-secondary tw-bg-secondary',
         bgDark && 'focus-within:tw-shadow-gray-light hover:tw-shadow-gray-light'
@@ -34,14 +34,14 @@ export const BaseCard = ({
             <Typography.Anchor
               aria-label={`${title}, Läs mer…`}
               href={link}
-              className="tw-font-bold after:tw-absolute after:tw-inset-0 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
+              className="tw-font-bold after:tw-absolute after:tw-inset-0 after:tw-z-10 hover:tw-text-inherit hover:tw-no-underline focus-visible:tw-outline-none"
             >
               {title}
             </Typography.Anchor>
           </Typography.H3>
         )}
         {img && (
-          <div className="tw-order-1">
+          <>
             {img}
             {variant && (
               <div className="tw-absolute tw-top-[296px] tw-left-[-24px] tw-w-[calc(100%+48px)]">
@@ -58,7 +58,7 @@ export const BaseCard = ({
                 </svg>
               </div>
             )}
-          </div>
+          </>
         )}
         {preTitle && (
           <div className="tw-order-2 tw-px-6 tw-pt-6">{preTitle}</div>

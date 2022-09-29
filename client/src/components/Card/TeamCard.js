@@ -2,6 +2,7 @@ import React from 'react'
 import client from '../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
 import Gravatar from 'react-gravatar'
+import Image from 'next/image'
 
 import SocialMediaLinks from '../../sections/about/SocialMediaLinks'
 import { formatPhoneNumber } from '../../utils/helpers'
@@ -9,15 +10,19 @@ import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'
 
 const TeamCardImage = ({ img, email, customImgAlt }) => {
-  const imageProps = useNextSanityImage(client, img?.asset._ref)
+  const imageProps = useNextSanityImage(client, img)
   return (
     <div className="tw-flex tw-justify-center">
-      <div className="tw-mt-8 tw-mb-2 tw-max-h-[160px] tw-min-h-[160px] tw-min-w-[160px] tw-max-w-[160px] tw-overflow-hidden tw-rounded-full">
+      <div className="tw-relative tw-z-0 tw-order-1 tw-mt-8 tw-mb-2 tw-max-h-[160px] tw-min-h-[160px] tw-min-w-[160px] tw-max-w-[160px] tw-overflow-hidden tw-rounded-full">
         {img ? (
-          <img
-            {...imageProps}
+          <Image
+            src={imageProps.src}
             alt={customImgAlt ? customImgAlt : img.alt}
-            className="tw-h-full tw-w-full tw-object-cover"
+            loader={imageProps.loader}
+            blurDataURL={imageProps.blurDataURL}
+            placeholder={imageProps.placeholder}
+            layout="fill"
+            objectFit="cover"
           />
         ) : (
           <Gravatar
