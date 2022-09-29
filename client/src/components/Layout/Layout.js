@@ -88,7 +88,7 @@ const Layout = ({ children, pageContext, footer }) => {
       >
         <Head>
           <title>Iteam</title>
-          <link rel="icon" type="image/png" href={imgFavicon} />
+          <link rel="icon" type="image/png" href={imgFavicon.src} />
         </Head>
         <SkipLink />
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
