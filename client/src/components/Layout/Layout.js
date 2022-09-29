@@ -32,13 +32,13 @@ const getTheme = (mode) =>
 const Layout = ({ children, pageContext, footer }) => {
   const gContext = useContext(GlobalContext)
 
-  const [visibleLoader, setVisibleLoader] = useState(true)
+  const [loaded, setLoaded] = useState(false)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     AOS.init({
       disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     })
-    setVisibleLoader(false)
+    setLoaded(true)
   }, [])
 
   // Navbar style based on scroll
@@ -91,11 +91,15 @@ const Layout = ({ children, pageContext, footer }) => {
           <link rel="icon" type="image/png" href={imgFavicon.src} />
         </Head>
         <SkipLink />
-        <div className="site-wrapper overflow-hidden" ref={eleRef}>
-          <Header isDark={gContext.headerDark} />
-          <main id="main-content">{children}</main>
-          <Footer isDark={gContext.footerDark} content={footer} />
-        </div>
+        {/* todo: remove this conditional when header has been refactored to not rely
+        on client rendering as heavily (that causes flickering on loading page) */}
+        {loaded && (
+          <div className="site-wrapper overflow-hidden" ref={eleRef}>
+            <Header loaded={loaded} isDark={gContext.headerDark} />
+            <main id="main-content">{children}</main>
+            <Footer isDark={gContext.footerDark} content={footer} />
+          </div>
+        )}
         <ModalVideo />
       </ThemeProvider>
     </>
