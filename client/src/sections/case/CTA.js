@@ -47,7 +47,7 @@ const CTA = ({ text }) => {
             />
           }
         </RightCard>
-        <Container>
+        <Container className="tw-relative">
           <Row className="justify-content-center text-center">
             <Col lg="6">
               <Box mb={5} className="text-center">
