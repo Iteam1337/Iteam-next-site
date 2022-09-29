@@ -228,7 +228,7 @@ const CloseMenuButton = styled.button`
   padding: 0;
 `
 
-const Header = ({ isDark = false }) => {
+const Header = ({ isDark = false, loaded }) => {
   const gContext = useContext(GlobalContext)
   const [showScrolling, setShowScrolling] = useState(false)
   const [showReveal, setShowReveal] = useState(false)
@@ -300,149 +300,151 @@ const Header = ({ isDark = false }) => {
         }`}
         dark={isDark ? 1 : 0}
       >
-        <Container fluid>
-          <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
-            {/* <!-- Brand Logo--> */}
-            <div className="brand-logo">
-              {isMobile ? (
-                <Logo vertical={false} white={isDark} />
-              ) : (
-                <Logo vertical={!showReveal} white={isDark} />
-              )}
-            </div>
-            <div className="collapse navbar-collapse">
-              <div className="navbar-nav ml-lg-auto mr-3">
-                <Menu
-                  className="navbar-nav d-none d-lg-flex"
-                  dark={isDark ? 1 : 0}
-                  setShowScrolling
-                  open={open}
-                >
-                  {menuItems.map(
-                    (
-                      { label, isExternal = false, name, items, ...rest },
-                      index
-                    ) => {
-                      const hasSubItems = Array.isArray(items)
-                      return (
-                        <React.Fragment key={name + index}>
-                          {hasSubItems ? (
-                            <li className="with-dropdown" {...rest}>
-                              <a
-                                style={getNavLinkStyle([
-                                  'mvp',
-                                  'scaleup',
-                                  'iteamX',
-                                ])}
-                                role="button"
-                                data-toggle="dropdown"
-                                aria-expanded="false"
-                                href="/#"
-                                onClick={(e) => {
-                                  e.preventDefault()
-                                  setOpen(!open)
-                                }}
-                              >
-                                {label}
-                              </a>
-                              <DropdownMenu dark={isDark ? 1 : 0} open={open}>
-                                {items.map((subItem, indexSub) => {
-                                  return (
-                                    <React.Fragment
-                                      key={subItem.name + indexSub}
-                                    >
-                                      <li>
-                                        {subItem.isExternal ? (
-                                          <a
-                                            href={`${subItem.name}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                          >
-                                            {subItem.label}
-                                          </a>
-                                        ) : (
-                                          <Link href={`/${subItem.name}`}>
-                                            <a
-                                              style={getNavLinkStyle([
-                                                subItem.name,
-                                              ])}
-                                              onClick={(e) => {
-                                                setOpen(!open)
-                                              }}
-                                            >
-                                              {subItem.label}
-                                            </a>
-                                          </Link>
-                                        )}
-                                      </li>
-                                    </React.Fragment>
-                                  )
-                                })}
-                              </DropdownMenu>
-                            </li>
-                          ) : (
-                            <li {...rest}>
-                              {isExternal ? (
+        {loaded && (
+          <Container fluid>
+            <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
+              {/* <!-- Brand Logo--> */}
+              <div className="brand-logo">
+                {isMobile ? (
+                  <Logo vertical={false} white={isDark} />
+                ) : (
+                  <Logo vertical={!showReveal} white={isDark} />
+                )}
+              </div>
+              <div className="collapse navbar-collapse">
+                <div className="navbar-nav ml-lg-auto mr-3">
+                  <Menu
+                    className="navbar-nav d-none d-lg-flex"
+                    dark={isDark ? 1 : 0}
+                    setShowScrolling
+                    open={open}
+                  >
+                    {menuItems.map(
+                      (
+                        { label, isExternal = false, name, items, ...rest },
+                        index
+                      ) => {
+                        const hasSubItems = Array.isArray(items)
+                        return (
+                          <React.Fragment key={name + index}>
+                            {hasSubItems ? (
+                              <li className="with-dropdown" {...rest}>
                                 <a
-                                  href={`${name}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
+                                  style={getNavLinkStyle([
+                                    'mvp',
+                                    'scaleup',
+                                    'iteamX',
+                                  ])}
+                                  role="button"
+                                  data-toggle="dropdown"
+                                  aria-expanded="false"
+                                  href="/#"
+                                  onClick={(e) => {
+                                    e.preventDefault()
+                                    setOpen(!open)
+                                  }}
                                 >
                                   {label}
                                 </a>
-                              ) : (
-                                <Link href={`/${name}`}>
+                                <DropdownMenu dark={isDark ? 1 : 0} open={open}>
+                                  {items.map((subItem, indexSub) => {
+                                    return (
+                                      <React.Fragment
+                                        key={subItem.name + indexSub}
+                                      >
+                                        <li>
+                                          {subItem.isExternal ? (
+                                            <a
+                                              href={`${subItem.name}`}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                            >
+                                              {subItem.label}
+                                            </a>
+                                          ) : (
+                                            <Link href={`/${subItem.name}`}>
+                                              <a
+                                                style={getNavLinkStyle([
+                                                  subItem.name,
+                                                ])}
+                                                onClick={(e) => {
+                                                  setOpen(!open)
+                                                }}
+                                              >
+                                                {subItem.label}
+                                              </a>
+                                            </Link>
+                                          )}
+                                        </li>
+                                      </React.Fragment>
+                                    )
+                                  })}
+                                </DropdownMenu>
+                              </li>
+                            ) : (
+                              <li {...rest}>
+                                {isExternal ? (
                                   <a
-                                    style={getNavLinkStyle([name])}
-                                    role="button"
-                                    aria-expanded="false"
-                                    onClick={(e) => {
-                                      setOpen(false)
-                                    }}
+                                    href={`${name}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                   >
                                     {label}
                                   </a>
-                                </Link>
-                              )}
-                            </li>
-                          )}
-                        </React.Fragment>
-                      )
-                    }
-                  )}
-                </Menu>
+                                ) : (
+                                  <Link href={`/${name}`}>
+                                    <a
+                                      style={getNavLinkStyle([name])}
+                                      role="button"
+                                      aria-expanded="false"
+                                      onClick={(e) => {
+                                        setOpen(false)
+                                      }}
+                                    >
+                                      {label}
+                                    </a>
+                                  </Link>
+                                )}
+                              </li>
+                            )}
+                          </React.Fragment>
+                        )
+                      }
+                    )}
+                  </Menu>
+                </div>
               </div>
-            </div>
-            <OpenMenuButton
-              className={`navbar-toggler btn-close-off-canvas ml-3 ${
-                gContext.visibleOffCanvas ? 'collapsed' : ''
-              }`}
-              type="button"
-              data-toggle="collapse"
-              data-target="#mobile-menu"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-              aria-label="Öppna meny"
-              onClick={toggleMenu}
-              dark={isDark ? 1 : 0}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                fill={isDark ? 'white' : 'black'}
-                className="bi bi-list"
-                viewBox="0 0 16 16"
-                aria-hidden="true"
+              <OpenMenuButton
+                className={`navbar-toggler btn-close-off-canvas ml-3 ${
+                  gContext.visibleOffCanvas ? 'collapsed' : ''
+                }`}
+                type="button"
+                data-toggle="collapse"
+                data-target="#mobile-menu"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                aria-label="Öppna meny"
+                onClick={toggleMenu}
+                dark={isDark ? 1 : 0}
               >
-                <path
-                  fillRule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                />
-              </svg>
-            </OpenMenuButton>
-          </nav>
-        </Container>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill={isDark ? 'white' : 'black'}
+                  className="bi bi-list"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
+              </OpenMenuButton>
+            </nav>
+          </Container>
+        )}
       </SiteHeader>
       <Offcanvas
         show={gContext.visibleOffCanvas}
