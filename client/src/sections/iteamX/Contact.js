@@ -56,10 +56,7 @@ const Contact = () => (
         `}
       >
         <Row className="justify-content-center">
-          <Col
-            lg="10"
-            id="sprintMeeting"
-          >
+          <Col lg="10" id="sprintMeeting">
             <HubspotForm value="iteamX" title="Boka gratis rådgivningsmöte" />
           </Col>
         </Row>
