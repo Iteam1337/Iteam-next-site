@@ -1,15 +1,16 @@
 import React from 'react'
+import { usePreviewSubscription } from '../lib/sanity'
+import { getClient } from '../lib/sanity.server'
+import { groq } from 'next-sanity'
+import Script from 'next/script'
+
 import Hero from '../sections/startpage/Hero'
 import TextGrid from '../sections/startpage/TextGrid'
 import TextWithImageToRight from '../sections/startpage/TextWithImageToRight'
 import TextWithImageToLeft from '../sections/startpage/TextWithImageToLeft'
 import SectionWithImageAndCta from '../sections/mvp/SectionWithImageAndCta'
 import PageWrapper from '../components/PageWrapper'
-import GoogleAnalytics from '../components/GoogleAnalytics/GoogleAnalytics'
-import { usePreviewSubscription } from '../lib/sanity'
-import { getClient } from '../lib/sanity.server'
 import { filterDataToSingleItem } from '../utils/helpers'
-import { groq } from 'next-sanity'
 import DefaultContent from '../sections/startpage/DefaultContent'
 import ExitPreviewLink from '../components/ExitPreviewLink'
 
@@ -41,7 +42,25 @@ const StartPage = ({ data, preview = false }) => {
   return (
     <PageWrapper headerDark footerDark>
       {preview && <ExitPreviewLink />}
-      <GoogleAnalytics />
+      <Script
+        id="matomo"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+    var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.iteam.services/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+  `,
+        }}
+      />
       {page?.hero && <Hero content={page.hero} />}
       {layout.map((content, index) => getLayoutComponent(content, index))}
 
