@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx npm-force-resolutions",
+    "lint": "next lint"
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^2.0.3",
@@ -51,6 +52,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
     "postcss": "^8.4.16",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.1.8"
