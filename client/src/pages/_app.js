@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 // import App from 'next/app'
-import TagManager from 'react-gtm-module'
 import Layout from '../components/Layout'
 import { GlobalProvider } from '../context/GlobalContext'
 import { getClient } from '../lib/sanity.server'
@@ -14,14 +13,6 @@ import '../assets/fonts/icon-font/css/style.css'
 import '../assets/fonts/fontawesome-5/css/all.css'
 import '../assets/fonts/roboto/css/style.css'
 import '../styles/globals.css'
-
-const tagManagerArgs = {
-  gtmId: 'GTM-MP7MZVC',
-}
-
-if (process.browser) {
-  TagManager.initialize(tagManagerArgs)
-}
 
 let footerCache
 
