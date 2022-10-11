@@ -102,11 +102,14 @@ const openPositionQuery = groq`
     }
     }
 `
+
 export async function getStaticProps({ params, preview = false }) {
   const queryParams = { slug: params.slug }
   const data = await getClient(preview).fetch(openPositionQuery, queryParams)
 
-  if (!data) return { notFound: true }
+  if (!data || data.length === 0) {
+    return { notFound: true }
+  }
 
   const post = filterDataToSingleItem(data, preview)
 
