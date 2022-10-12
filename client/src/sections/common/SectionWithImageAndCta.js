@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
 import { Button, Section, Typography } from '../../components/Core'
 import { urlFor, buildInternalUrl } from '../../utils/helpers'
+import Image from 'next/image'
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid #242427;
@@ -19,10 +20,12 @@ const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
         <Container>
           <Row className="justify-content-center align-items-center">
             <Col lg="5" className="offset-lg-1 order-lg-2 mb-5 mb-lg-0">
-              <img
+              <Image
                 src={urlFor(content.imageWithAlt.asset._ref)}
                 alt={content.imageWithAlt.alt}
-                className="img-fluid"
+                width={1500}
+                height={1001}
+                layout="responsive"
               />
             </Col>
             <Col
@@ -43,7 +46,6 @@ const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
                   light
                   blocks={content.blockText.blockText}
                 />
-
                 <div className="mt-5">
                   <Link
                     href={
