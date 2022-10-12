@@ -2,10 +2,24 @@ import React from 'react'
 import BaseBlockContent from '@sanity/block-content-to-react'
 import client from '../../../sanity-client'
 import { useNextSanityImage } from 'next-sanity-image'
-import Img from 'next/image'
+import Image from 'next/image'
 import clsx from 'clsx'
 
 import { buildInternalUrl } from '../../../utils/helpers'
+
+const SerializedImage = ({ node }) => {
+  const imageProps = useNextSanityImage(client, node.asset._ref)
+  return (
+    <Image
+      {...imageProps}
+      layout="responsive"
+      sizes="(max-width: 800px) 100vw, 800px"
+      alt={node.alt}
+      quality={100}
+      className="tw-my-3"
+    />
+  )
+}
 
 const serializers = (light) => ({
   types: {
@@ -78,17 +92,7 @@ const serializers = (light) => ({
       }
     },
     imageWithAlt: ({ node }) => {
-      const imageProps = useNextSanityImage(client, node.asset._ref)
-      return (
-        <Img
-          {...imageProps}
-          layout="responsive"
-          sizes="(max-width: 800px) 100vw, 800px"
-          alt={node.alt}
-          quality={100}
-          className="tw-my-3"
-        />
-      )
+      return <SerializedImage node={node} />
     },
   },
   marks: {

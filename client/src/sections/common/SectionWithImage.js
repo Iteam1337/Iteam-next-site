@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 import clsx from 'clsx'
+import Image from 'next/image'
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid ${({ bg }) => (bg == 'dark' ? '#242427' : 'white')};
@@ -23,10 +24,12 @@ const SectionWithImage = ({ content, bg = 'light' }) => {
           data-aos-once="true"
         >
           <Col lg="5" className="offset-lg-1 order-lg-2 mb-5 mb-lg-0">
-            <img
+            <Image
               src={urlFor(content.imageWithAlt.asset._ref)}
               alt={content.imageWithAlt.alt}
-              className="img-fluid"
+              width={2500}
+              height={1667}
+              layout="responsive"
             />
           </Col>
           <Col

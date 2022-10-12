@@ -7,6 +7,7 @@ import PageWrapper from '../components/PageWrapper'
 
 import imgIcon from '../assets/image/png/thumbs-shape.png'
 import { Typography } from '../components/Core'
+import Image from 'next/image'
 
 const ContentIcon = styled.div`
   width: 118px;
@@ -55,7 +56,7 @@ const NotFoundPage = () => {
           <Container>
             <div className="text-center">
               <ContentIcon>
-                <img src={imgIcon.src} alt="" className="img-fluid" />
+                <Image src={imgIcon} alt="" aria-hidden="true" />
               </ContentIcon>
               <div>
                 <Typography.H1>Thank You</Typography.H1>

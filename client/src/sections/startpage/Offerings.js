@@ -8,6 +8,7 @@ import svgCurve from '../../assets/image/svg/l1-curve-content2.svg'
 import { getRouteNameFromPageType, urlFor } from '../../utils/helpers'
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
+import Image from 'next/image'
 
 const ShapeTop = styled(Box)`
   position: absolute;
@@ -23,22 +24,25 @@ const Offerings = ({ data }) => {
 
   useEffect(() => {
     setTime(new Date().toLocaleTimeString())
-  })
+  }, [])
+
   return (
     <>
       {/* <!-- Content section 2 --> */}
       <Section bg="#f7f7fb" className="position-relative">
         <ShapeTop>
-          <img src={svgCurve.src} alt="" className="img-fluid" />
+          <Image src={svgCurve} alt="" aria-hidden="true" />
         </ShapeTop>
         <Container>
           <Row className="align-items-center">
             <Col lg="5" md="9" sm="10" className="mb-5 mb-lg-0">
               <div className="position-relative">
-                <img
+                <Image
                   src={urlFor(data.imageWithAlt.asset._ref)}
                   alt={data.imageWithAlt.alt}
-                  className="img-fluid"
+                  width={1001}
+                  height={1500}
+                  layout="responsive"
                 />
                 <div
                   className="tw-absolute tw-top-[20%] tw-left-2  md:tw-left-[-10%]"

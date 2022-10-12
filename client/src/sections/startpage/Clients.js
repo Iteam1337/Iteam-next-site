@@ -16,29 +16,32 @@ const Brand = styled(Box)`
   }
 `
 
-const Clients = ({ clients }) => (
-  <Box py={'30px'}>
-    <h3 className="tw-sr-only">Kunder</h3>
-    <Container>
-      <Box
-        className="d-flex justify-content-center justify-content-lg-between
+const Client = ({ client }) => {
+  const imageProps = useNextSanityImage(sanityClient, client?.asset._ref)
+  return (
+    <Brand py={3} mx={4}>
+      <Image {...imageProps} alt={client.alt} className="img-fluid" />
+    </Brand>
+  )
+}
+
+const Clients = ({ clients }) => {
+  return (
+    <Box py={'30px'}>
+      <h3 className="tw-sr-only">Kunder</h3>
+      <Container>
+        <Box
+          className="d-flex justify-content-center justify-content-lg-between
          align-items-center flex-wrap"
-        mx="-32px"
-      >
-        {clients.map((client, i) => {
-          const imageProps = useNextSanityImage(
-            sanityClient,
-            client?.asset._ref
-          )
-          return (
-            <Brand key={i} className="" py={3} mx={4}>
-              <Image {...imageProps} alt={client.alt} className="img-fluid" />
-            </Brand>
-          )
-        })}
-      </Box>
-    </Container>
-  </Box>
-)
+          mx="-32px"
+        >
+          {clients.map((client, i) => {
+            return <Client key={i} client={client} />
+          })}
+        </Box>
+      </Container>
+    </Box>
+  )
+}
 
 export default Clients

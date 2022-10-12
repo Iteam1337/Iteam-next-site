@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Box, Typography } from '../../components/Core'
@@ -16,19 +17,20 @@ const ContentCard = ({
     minHeight={['320px', null, `400px`]}
     borderColor="border"
     borderRadius={10}
-    className={`d-flex flex-column ${className}`}
+    className={`d-flex flex-column tw-items-center ${className}`}
     {...rest}
     aos="fade-left"
     data-aos-delay="500"
     data-aos-duration="1000"
     data-aos-once="true"
   >
-    <Box className="tw-flex tw-justify-center">
-      <img
+    <Box className="tw-w-[180px] tw-justify-center">
+      <Image
         src={urlFor(logo.asset._ref)}
         alt={logo.alt}
-        className="img-fluid"
-        css={'height: 100px;'}
+        width={277}
+        height={150}
+        layout="responsive"
       />
     </Box>
     <Typography.Paragraph className="tw-text-light tw-mb-8 tw-mt-8 tw-text-center tw-text-white">
@@ -36,15 +38,14 @@ const ContentCard = ({
     </Typography.Paragraph>
     <Box className={`mt-auto`}>
       <Box className="tw-flex tw-justify-center">
-        <img
-          src={urlFor(image.asset._ref)}
-          alt={image.alt}
-          className="img-fluid"
-          css={`
-            height: 100px;
-            border-radius: 500px;
-          `}
-        />
+        <div className="tw-relative tw-h-[100px] tw-w-[100px] tw-overflow-hidden tw-rounded-full">
+          <Image
+            src={urlFor(image.asset._ref)}
+            alt={image.alt}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </Box>
       <Box className="flex-grow-1 text-center" mt={3}>
         <Typography.H3 className="tw-mb-1 tw-text-white">{name}</Typography.H3>
