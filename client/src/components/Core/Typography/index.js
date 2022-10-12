@@ -8,7 +8,7 @@ import { H4 } from './H4'
 import { Anchor } from './Anchor'
 import { BlockContent } from './BlockContent'
 
-export default {
+const Typography = {
   H1,
   H2,
   H3,
@@ -19,3 +19,5 @@ export default {
   Anchor,
   BlockContent,
 }
+
+export default Typography

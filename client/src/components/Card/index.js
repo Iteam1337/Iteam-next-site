@@ -4,10 +4,12 @@ import { TeamCard } from './TeamCard'
 import { SimpleCard } from './SimpleCard'
 import { NotificationCard } from './NotificationCard'
 
-export default {
+const Card = {
   BaseCard,
   ArticleCard,
   TeamCard,
   SimpleCard,
   NotificationCard,
 }
+
+export default Card

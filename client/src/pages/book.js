@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Section, Box, Anchor, Typography } from '../components/Core'
+import { Section, Box, Typography } from '../components/Core'
 import PageWrapper from '../components/PageWrapper'
 import { Hero } from '../sections/common'
 import { usePreviewSubscription } from '../lib/sanity'
