@@ -168,7 +168,6 @@ const SliderCard = styled(Box)`
 `
 
 const SliderImgContainer = styled(Box)`
-  border-radius: 10px;
   overflow: hidden;
   min-width: 100%;
 

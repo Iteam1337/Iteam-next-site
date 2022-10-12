@@ -305,9 +305,13 @@ const Header = ({ isDark = false, loaded }) => {
               {/* <!-- Brand Logo--> */}
               <div className="brand-logo">
                 {isMobile ? (
-                  <Logo vertical={false} white={isDark} />
+                  <div className="tw-mt-3.5">
+                    <Logo vertical={false} white={isDark} />
+                  </div>
                 ) : (
-                  <Logo vertical={!showReveal} white={isDark} />
+                  <div className="tw-mt-3.5">
+                    <Logo vertical={!showReveal} white={isDark} />
+                  </div>
                 )}
               </div>
               <div className="collapse navbar-collapse tw-justify-end">
