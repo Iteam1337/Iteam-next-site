@@ -1,11 +1,5 @@
-import React, {
-  useState,
-  useEffect,
-  useLayoutEffect,
-  useContext,
-  useRef,
-} from 'react'
-import styled, { ThemeProvider } from 'styled-components'
+import React, { useState, useEffect, useContext, useRef } from 'react'
+import { ThemeProvider } from 'styled-components'
 import Head from 'next/head'
 import AOS from 'aos'
 import { get, merge } from 'lodash'

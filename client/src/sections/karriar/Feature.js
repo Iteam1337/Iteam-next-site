@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Section, Box, Typography, Title } from '../../components/Core'
+import { Section, Box, Typography } from '../../components/Core'
 
 const Feature = ({ content }) => {
   return (

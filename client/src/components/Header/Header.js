@@ -7,7 +7,6 @@ import { useRouter } from 'next/router'
 
 import GlobalContext from '../../context/GlobalContext'
 import Offcanvas from '../Offcanvas'
-import { Button } from '../Core'
 import NestedMenu from '../NestedMenu'
 import { device } from '../../utils'
 import Logo from '../Logo'

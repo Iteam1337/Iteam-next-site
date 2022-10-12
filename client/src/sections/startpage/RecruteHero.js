@@ -5,7 +5,7 @@ import HeroImg from '../../assets/image/jpeg/working-hero.jpg'
 import { Container } from 'react-bootstrap'
 import { Typography, Button, Section } from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
-import clsx from 'clsx'
+
 const Wrapper = styled.div`
   background: linear-gradient(
       180deg,
