@@ -43,7 +43,7 @@ const SocialContainer = styled.div`
   }
 `
 
-const Social = ({ items, outline, inverse, className, ...rest }) => {
+const Social = ({ items, inverse, className, ...rest }) => {
   return (
     <SocialContainer className={`d-flex ${className}`} {...rest}>
       {items.map((item) => (

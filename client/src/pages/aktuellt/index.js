@@ -12,7 +12,7 @@ import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
-export default function BlogRegular({ query, data, preview = false }) {
+export default function BlogRegular({ data, preview = false }) {
   const router = useRouter()
   const { data: previewData } = usePreviewSubscription(data?.newsPageQuery, {
     initialData: data?.newsPage,

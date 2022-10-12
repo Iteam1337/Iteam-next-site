@@ -34,7 +34,7 @@ export const TitlePost = ({ link = '/', children }) => (
   </Typography.H3>
 )
 
-export const Date = ({ link = '/', children, ...rest }) => (
+export const Date = ({ children }) => (
   <Typography.Caption>{children}</Typography.Caption>
 )
 
