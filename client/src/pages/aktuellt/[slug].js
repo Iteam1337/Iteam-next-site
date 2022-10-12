@@ -77,7 +77,11 @@ const BlogDetails = ({ data, preview = false }) => {
                   </Typography.Paragraph>
                   <Typography.Paragraph>
                     {post?.tags &&
-                      post.tags?.map((tag) => <Link href="/">{tag}</Link>)}
+                      post.tags?.map((tag) => (
+                        <Link key={tag} href="/">
+                          {tag}
+                        </Link>
+                      ))}
                   </Typography.Paragraph>
                   <Typography.Paragraph>
                     {post?.author && 'av ' + post.author}
