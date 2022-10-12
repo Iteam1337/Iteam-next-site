@@ -14,15 +14,7 @@ const StyledBox = styled(Box)`
   transition: all 0.3s ease-out;
 `
 
-const ContentCards = ({
-  color = 'primary',
-  dark = false,
-  className,
-  iconName,
-  title,
-  children,
-  ...rest
-}) => (
+const ContentCards = ({ dark = false, className, title, ...rest }) => (
   <Col
     lg="4"
     md="6"

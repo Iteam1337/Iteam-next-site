@@ -211,11 +211,11 @@ const Footer = ({ isDark = true, content }) => {
               <Col
                 sm="6"
                 display="flex"
-                className="text-sm-left text-center mb-2 mb-sm-0"
+                className="text-sm-left text-left mb-2 mb-sm-0 tw-w-full"
               >
                 <p
                   className={clsx(
-                    'tw-text-xs tw-leading-9 tw-tracking-normal',
+                    'tw-mb-1 tw-text-xs tw-tracking-normal',
                     isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                   )}
                 >
@@ -223,7 +223,7 @@ const Footer = ({ isDark = true, content }) => {
                 </p>
                 <p
                   className={clsx(
-                    'tw-text-xs tw-leading-9 tw-tracking-normal',
+                    'tw-text-xs tw-tracking-normal',
                     isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                   )}
                 >
@@ -237,8 +237,8 @@ const Footer = ({ isDark = true, content }) => {
                   </Typography.Anchor>
                 </p>
               </Col>
-              <Col sm="6" className="text-sm-right text-center">
-                <FooterList className="tw-mt-2 tw-flex tw-justify-center tw-gap-3 sm:tw-justify-end">
+              <Col sm="6" className="tw-w-full">
+                <FooterList className="tw tw-mt-2 tw-flex tw-justify-start tw-gap-3">
                   <li>
                     <Typography.Anchor
                       href={content.linkedinLink}
