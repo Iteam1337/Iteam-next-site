@@ -19,7 +19,7 @@ let footerCache
 const MyApp = ({ Component, pageProps, router, footer }) => {
   useEffect(() => {
     footerCache = footer
-  }, [])
+  }, [footer])
 
   if (router.pathname.match(/sign|reset|coming/)) {
     return (
