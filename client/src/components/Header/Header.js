@@ -263,15 +263,15 @@ const Header = ({ isDark = false, loaded }) => {
       height: undefined,
     })
 
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      })
+    }
+
     useEffect(() => {
       if (typeof window !== 'undefined') {
-        function handleResize() {
-          setWindowSize({
-            width: window.innerWidth,
-            height: window.innerHeight,
-          })
-        }
-
         window.addEventListener('resize', handleResize)
 
         handleResize()
