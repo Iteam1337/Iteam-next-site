@@ -14,7 +14,7 @@ import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
 import Content1 from '../sections/mvp/Content1'
 import CTA from '../sections/mvp/CTA'
-import SectionWithImageAndCta from '../sections/mvp/SectionWithImageAndCta'
+import SectionWithImageAndCta from '../sections/common/SectionWithImageAndCta'
 import { filterDataToSingleItem, urlFor } from '../utils/helpers'
 
 const Mvp = ({ data, preview = false }) => {
