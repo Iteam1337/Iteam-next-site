@@ -7,6 +7,7 @@ import { Button, Section, Box, Typography } from '../../components/Core'
 import imgOval from '../../assets/image/svg/l1-cta-oval.svg'
 import svgCurveGray from '../../assets/image/svg/l1-curve-cta-gray.svg'
 import { buildInternalUrl } from '../../utils/helpers'
+import Image from 'next/image'
 
 const LeftCard = styled(Box)`
   position: absolute;
@@ -30,22 +31,10 @@ const CTA = ({ text }) => {
           data-aos-duration="750"
           data-aos-once="true"
         >
-          <img
-            src={imgOval.src}
-            alt=""
-            aria-hidden="true"
-            className="img-fluid"
-          />
+          <Image src={imgOval} alt="" aria-hidden="true" />
         </LeftCard>
         <RightCard>
-          {
-            <img
-              src={svgCurveGray.src}
-              alt=""
-              aria-hidden="true"
-              className="img-fluid"
-            />
-          }
+          {<Image src={svgCurveGray} alt="" aria-hidden="true" />}
         </RightCard>
         <Container className="tw-relative">
           <Row className="justify-content-center text-center">

@@ -3,11 +3,9 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Box } from '../../components/Core'
-
-import { device } from '../../utils'
-
 import imgShape from '../../assets/image/svg/contact-shape.svg'
 import HubspotForm from '../../components/HubspotForm'
+import Image from 'next/image'
 
 const BoxStyled = styled(Box)`
   &::after {
@@ -22,17 +20,6 @@ const BoxStyled = styled(Box)`
   }
 `
 
-const Shape = styled(Box)`
-  position: absolute;
-  width: 150%;
-  bottom: 48%;
-  left: -5%;
-
-  @media ${device.lg} {
-    bottom: 47%;
-  }
-`
-
 const Contact = () => (
   <>
     <BoxStyled
@@ -41,14 +28,16 @@ const Contact = () => (
       pb={6}
       className="position-relative"
     >
-      <Shape>
-        <img
+      <div className="tw-absolute tw-bottom-[48%] tw-left-[-5%] tw-w-[150%] lg:tw-bottom-[47%]">
+        <Image
           src={imgShape.src}
           alt=""
           aria-hidden="true"
-          className="w-100 img-fluid"
+          width={2007}
+          height={91}
+          layout="responsive"
         />
-      </Shape>
+      </div>
       <Container
         css={`
           position: relative;

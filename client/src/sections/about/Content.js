@@ -3,16 +3,13 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Box, Typography } from '../../components/Core'
-
-import imgContent1 from '../../assets/image/jpeg/_DSC6527_.jpg'
-import imgContent2 from '../../assets/image/jpeg/Lounge-Martin-Mikael-Christian-Lowres.jpg'
 import { urlFor } from '../../utils/helpers'
+import Image from 'next/image'
 
 const ContentImg = styled(Box)`
   box-shadow: ${({ theme }) => `0 42px 54px ${theme.colors.shadow}`};
   border-radius: 10px;
   overflow: hidden;
-  max-height: 515px;
   height: 100%;
 `
 
@@ -36,12 +33,14 @@ const Content = ({ content }) => (
               return (
                 <Col lg="4" sm="5" className="mb-4" key={index}>
                   <ContentImg>
-                    <img
-                      src={urlFor(image.asset._ref)}
-                      alt={image.alt}
-                      className="img-fluid"
-                      style={{ objectFit: 'cover', height: '100%' }}
-                    />
+                    <div className="tw-relative tw-h-[200px] sm:tw-h-[400px]">
+                      <Image
+                        src={urlFor(image.asset._ref)}
+                        alt={image.alt}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    </div>
                   </ContentImg>
                 </Col>
               )
@@ -49,12 +48,14 @@ const Content = ({ content }) => (
             return (
               <Col lg="8" sm="7" className="mb-4" key={index}>
                 <ContentImg>
-                  <img
-                    src={urlFor(image.asset._ref)}
-                    alt={image.alt}
-                    className="img-fluid"
-                    style={{ objectFit: 'cover', height: '100%' }}
-                  />
+                  <div className="tw-relative tw-h-[200px] sm:tw-h-[400px]">
+                    <Image
+                      src={urlFor(image.asset._ref)}
+                      alt={image.alt}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
                 </ContentImg>
               </Col>
             )

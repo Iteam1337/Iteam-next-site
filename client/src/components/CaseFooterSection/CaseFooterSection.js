@@ -1,6 +1,7 @@
+import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Text, Typography } from '../Core'
+import { Box, Typography } from '../Core'
 
 const Card = styled(Box)`
   border-radius: 0;
@@ -19,21 +20,11 @@ const CardText = styled(Box)`
   padding-left: 30px;
 `
 
-const CaseFooterSection = ({
-  img,
-  imgBrand,
-  preTitle,
-  title,
-  children,
-  readMore,
-  alt,
-  blocks,
-  ...rest
-}) => {
+const CaseFooterSection = ({ img, title, alt, blocks, ...rest }) => {
   return (
     <Card className="d-flex" {...rest}>
       <ImageContainer>
-        <img src={img} alt={alt} className="w-100 img-fluid" />
+        <Image src={img} alt={alt} layout="fill" objectFit="contain" />
       </ImageContainer>
       <CardText>
         <Typography.H3>{title}</Typography.H3>
