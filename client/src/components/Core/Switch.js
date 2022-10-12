@@ -40,7 +40,7 @@ const SwitchStyled = styled.button`
 const Round = styled.span`
   width: 21px;
   height: 21px;
-  background-color: ${({ active, theme, bg }) =>
+  background-color: ${({ active, theme }) =>
     active ? theme.colors.dark : theme.colors.light};
   position: absolute;
   transition: all 0.3s ease-out;
@@ -53,7 +53,7 @@ const Round = styled.span`
   pointer-events: none;
 `
 
-const Switch = ({ bg = 'secondary', onClick = () => {}, ...rest }) => {
+const Switch = ({ bg = 'secondary', ...rest }) => {
   const [active, setActive] = useState(false)
 
   const handleSwitch = () => {

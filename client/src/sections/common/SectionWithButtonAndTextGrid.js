@@ -2,13 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Button, Section, Box, Typography } from '../../components/Core'
 
-const FeatureCard = ({
-  color = 'primary',
-  iconName,
-  title,
-  children,
-  ...rest
-}) => (
+const FeatureCard = ({ title, children, ...rest }) => (
   <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>
     <div className="d-flex justify-content-between align-items-start">
       <div>
@@ -62,7 +56,7 @@ const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
                 {textGrid.texts.map((block, i) => {
                   return (
                     <Col md="12" className={i != 0 && 'mt-4'} key={i}>
-                      <FeatureCard color="primary" title={block.title}>
+                      <FeatureCard title={block.title}>
                         {block.text}
                       </FeatureCard>
                     </Col>

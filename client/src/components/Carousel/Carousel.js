@@ -265,7 +265,6 @@ const Client = ({ item, active }) => {
 
 const Carousel = ({ content, coworker = false }) => {
   const [activeSlide, setActiveSlide] = useState(0)
-  const arrLength = content.length
 
   useEffect(() => {
     // This tagets the anchor descendant of the active slide.

@@ -114,8 +114,8 @@ const SiteHeader = styled.header`
 `
 
 const OpenMenuButton = styled.button`
-  color: ${({ dark, theme }) => (dark ? '#fff' : '#000')} !important;
-  border-color: ${({ dark, theme }) => (dark ? '#fff' : '#000')} !important;
+  color: ${({ dark }) => (dark ? '#fff' : '#000')} !important;
+  border-color: ${({ dark }) => (dark ? '#fff' : '#000')} !important;
 `
 
 const Menu = styled.ul`
@@ -243,7 +243,7 @@ const Header = ({ isDark = false, loaded }) => {
     document.body.style.overflow = 'hidden'
   }
 
-  useScrollPosition(({ prevPos, currPos }) => {
+  useScrollPosition(({ currPos }) => {
     if (currPos.y < 0) {
       setShowScrolling(true)
       setOpen(false)
@@ -366,7 +366,7 @@ const Header = ({ isDark = false, loaded }) => {
                                                 style={getNavLinkStyle([
                                                   subItem.name,
                                                 ])}
-                                                onClick={(e) => {
+                                                onClick={() => {
                                                   setOpen(!open)
                                                 }}
                                               >
@@ -396,7 +396,7 @@ const Header = ({ isDark = false, loaded }) => {
                                       style={getNavLinkStyle([name])}
                                       role="button"
                                       aria-expanded="false"
-                                      onClick={(e) => {
+                                      onClick={() => {
                                         setOpen(false)
                                       }}
                                     >

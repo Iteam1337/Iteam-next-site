@@ -75,7 +75,7 @@ const MediaType = ({ mediaType, children }) => {
 }
 
 const Hero = ({ content, flipTexts = false }) => {
-  const { title, subtitle, link, mediaType = { type: '' } } = content
+  const { title, link, mediaType = { type: '' } } = content
 
   return (
     <>

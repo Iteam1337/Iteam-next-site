@@ -40,7 +40,7 @@ const Layout = ({ children, pageContext, footer }) => {
   useEffect(() => {
     window.addEventListener(
       'popstate',
-      function (event) {
+      function () {
         // The popstate event is fired each time when the current history entry changes.
         gContext.closeOffCanvas()
       },
@@ -48,7 +48,7 @@ const Layout = ({ children, pageContext, footer }) => {
     )
     window.addEventListener(
       'pushState',
-      function (event) {
+      function () {
         // The pushstate event is fired each time when the current history entry changes.
         gContext.closeOffCanvas()
       },

@@ -137,7 +137,7 @@ const MenuItem = ({
   )
 }
 
-const NestedMenu = ({ menuItems = defaultMenuItems }) => {
+const NestedMenu = ({ menuItems }) => {
   return (
     <NestedMenuContainer>
       <ListGroup variant="flush">
