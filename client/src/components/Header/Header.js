@@ -328,7 +328,7 @@ const Header = ({ isDark = false, loaded }) => {
                           <React.Fragment key={name + index}>
                             {hasSubItems ? (
                               <li className="with-dropdown" {...rest}>
-                                <a
+                                <Link
                                   style={getNavLinkStyle([
                                     'mvp',
                                     'scaleup',
@@ -338,13 +338,16 @@ const Header = ({ isDark = false, loaded }) => {
                                   data-toggle="dropdown"
                                   aria-expanded="false"
                                   href="/#"
-                                  onClick={(e) => {
-                                    e.preventDefault()
-                                    setOpen(!open)
-                                  }}
                                 >
-                                  {label}
-                                </a>
+                                  <a
+                                    onClick={(e) => {
+                                      e.preventDefault()
+                                      setOpen(!open)
+                                    }}
+                                  >
+                                    {label}
+                                  </a>
+                                </Link>
                                 <DropdownMenu dark={isDark ? 1 : 0} open={open}>
                                   {items.map((subItem, indexSub) => {
                                     return (
