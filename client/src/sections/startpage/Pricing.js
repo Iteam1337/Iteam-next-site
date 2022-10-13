@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import { rgba } from 'polished'
-import { buildInternalUrl } from '../../utils/helpers'
 
+import { buildInternalUrl } from '../../utils/helpers'
 import {
   Section,
   Box,

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import RecruteHero from './RecruteHero'
 
 const Hero = ({ content }) => {

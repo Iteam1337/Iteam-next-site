@@ -2,6 +2,7 @@ import {
   createPreviewSubscriptionHook,
   createCurrentUserHook,
 } from 'next-sanity'
+
 import { config } from './config'
 
 // Set up the live preview subscription hook

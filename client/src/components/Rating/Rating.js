@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Box } from '../Core'
 
 const Rating = ({ numStar = 4.5, color = 'secondary', ...rest }) => {

@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
+import { Container, Row, Col } from 'react-bootstrap'
+
 import { Button, Section, Box, Typography, Span } from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
 

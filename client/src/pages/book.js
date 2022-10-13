@@ -1,20 +1,21 @@
 import React, { useEffect } from 'react'
+import { NextSeo } from 'next-seo'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Section, Box, Typography } from '../components/Core'
-import PageWrapper from '../components/PageWrapper'
-import { Hero } from '../sections/common'
-import { usePreviewSubscription } from '../lib/sanity'
-import { getClient } from '../lib/sanity.server'
+import { groq } from 'next-sanity'
+
 import {
   buildInternalUrl,
   filterDataToSingleItem,
   formatPhoneNumber,
   urlFor,
 } from '../utils/helpers'
-import { groq } from 'next-sanity'
+import { Section, Box, Typography } from '../components/Core'
+import PageWrapper from '../components/PageWrapper'
 import ExitPreviewLink from '../components/ExitPreviewLink'
-import { NextSeo } from 'next-seo'
+import { Hero } from '../sections/common'
+import { usePreviewSubscription } from '../lib/sanity'
+import { getClient } from '../lib/sanity.server'
 
 const FrameStyled = styled.div`
   max-width: 484px;

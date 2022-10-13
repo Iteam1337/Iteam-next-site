@@ -1,15 +1,16 @@
 import React from 'react'
+import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+
 import PageWrapper from '../../components/PageWrapper'
 import { Hero } from '../../sections/common'
 import Content from '../../sections/about/Content'
 import TeamList from '../../sections/about/TeamList'
 import CTA from '../../sections/about/CTA'
-import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
-import { NextSeo } from 'next-seo'
 
 const About = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.aboutPageQuery, {

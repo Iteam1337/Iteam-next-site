@@ -1,9 +1,9 @@
 import React from 'react'
-import client from '../../sanity-client'
+import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
 import Gravatar from 'react-gravatar'
-import Image from 'next/image'
 
+import client from '../../sanity-client'
 import SocialMediaLinks from '../../sections/about/SocialMediaLinks'
 import { formatPhoneNumber } from '../../utils/helpers'
 import { Typography } from '../Core'

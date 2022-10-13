@@ -1,11 +1,12 @@
 import React from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import Link from 'next/link'
+import clsx from 'clsx'
+
 import { Section, Typography, Button } from '../../components/Core'
 import { getExternalOrInternalLink, hexToRGBA } from '../../utils/helpers'
 import { urlFor } from '../../utils/helpers'
-import clsx from 'clsx'
 
 const SectionStyled = styled(Section)`
   background-image: ${({ color }) =>

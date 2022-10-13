@@ -1,16 +1,17 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
+import clsx from 'clsx'
+
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Typography } from '../../components/Core'
 import BlogList from '../../sections/aktuellt/BlogList'
-import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
-import { NextSeo } from 'next-seo'
-import { useRouter } from 'next/router'
-import clsx from 'clsx'
 
 export default function BlogRegular({ data, preview = false }) {
   const router = useRouter()

@@ -1,4 +1,5 @@
 import { rgba } from 'polished'
+
 import { breakpoints } from './breakpoints'
 
 const defaultColors = {

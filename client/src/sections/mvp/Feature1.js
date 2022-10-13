@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+
 import { Button, Section, Box, Typography } from '../../components/Core'
 
 const FeatureCard = ({ title, children, ...rest }) => (

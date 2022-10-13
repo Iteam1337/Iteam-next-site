@@ -1,6 +1,5 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-
 import Select from 'react-select'
 
 const defaultOptions = [

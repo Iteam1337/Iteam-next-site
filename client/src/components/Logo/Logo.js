@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 import imgL1Logo from '../../assets/image/png/Iteam-logo.png'
 import imgL1LogoWhite from '../../assets/image/png/Iteam-Logotype-Horizontal-RGB-White.png'
-
 import imgL1VericalLogo from '../../assets/image/png/Iteam-Logotype-Vertical-RGB-Black.png'
 import imgL1VericalLogoWhite from '../../assets/image/png/Iteam-Logotype-Vertical-RGB-White.png'
 

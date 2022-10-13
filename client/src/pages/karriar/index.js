@@ -1,9 +1,11 @@
 import React from 'react'
+import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+
 import PageWrapper from '../../components/PageWrapper'
 import { Hero, Testimonial } from '../../sections/common'
 import Feature from '../../sections/karriar/Feature'
 import Roles from '../../sections/karriar/Roles'
-import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import {
@@ -11,7 +13,6 @@ import {
   shuffleArray,
   urlFor,
 } from '../../utils/helpers'
-import { NextSeo } from 'next-seo'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const Career = ({ data, preview = false, carousel }) => {

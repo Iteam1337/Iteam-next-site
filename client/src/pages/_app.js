@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 // import App from 'next/app'
-import Layout from '../components/Layout'
-import { GlobalProvider } from '../context/GlobalContext'
-import { getClient } from '../lib/sanity.server'
 import { groq } from 'next-sanity'
 
+import { GlobalProvider } from '../context/GlobalContext'
+import { getClient } from '../lib/sanity.server'
+import Layout from '../components/Layout'
 import '../components/Layout/bootstrap-custom.scss'
 import '../../node_modules/slick-carousel/slick/slick.css'
 import '../../node_modules/slick-carousel/slick/slick-theme.css'

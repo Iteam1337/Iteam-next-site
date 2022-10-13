@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+
 import { Section, Typography } from '../../components/Core'
 import { formatPhoneNumber } from '../../utils/helpers'
 import SocialMediaLinks from './SocialMediaLinks'

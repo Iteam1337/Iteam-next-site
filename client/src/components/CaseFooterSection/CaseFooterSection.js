@@ -1,6 +1,7 @@
-import Image from 'next/image'
 import React from 'react'
+import Image from 'next/image'
 import styled from 'styled-components'
+
 import { Box, Typography } from '../Core'
 
 const Card = styled(Box)`

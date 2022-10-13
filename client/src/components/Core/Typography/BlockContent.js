@@ -1,10 +1,10 @@
 import React from 'react'
-import BaseBlockContent from '@sanity/block-content-to-react'
-import client from '../../../sanity-client'
-import { useNextSanityImage } from 'next-sanity-image'
 import Image from 'next/image'
 import clsx from 'clsx'
+import BaseBlockContent from '@sanity/block-content-to-react'
+import { useNextSanityImage } from 'next-sanity-image'
 
+import client from '../../../sanity-client'
 import { buildInternalUrl } from '../../../utils/helpers'
 
 const SerializedImage = ({ node }) => {

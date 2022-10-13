@@ -1,8 +1,8 @@
 import React from 'react'
-import client from '../../sanity-client'
-import { useNextSanityImage } from 'next-sanity-image'
 import Image from 'next/image'
+import { useNextSanityImage } from 'next-sanity-image'
 
+import client from '../../sanity-client'
 import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'
 

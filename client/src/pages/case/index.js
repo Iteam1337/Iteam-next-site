@@ -1,16 +1,17 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Typography } from '../../components/Core'
 import CaseList from '../../sections/case/CaseList'
 import CaseFooter from '../../sections/case/CaseFooter'
 import CTA from '../../sections/case/CTA'
-import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
-import { NextSeo } from 'next-seo'
 import { urlFor } from '../../utils/helpers'
 
 const CaseStudy = ({ data, preview = false }) => {

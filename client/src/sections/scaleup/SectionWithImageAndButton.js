@@ -1,8 +1,9 @@
 import React from 'react'
+import Image from 'next/image'
 import { Container, Row, Col } from 'react-bootstrap'
+
 import { Button, Section, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
-import Image from 'next/image'
 
 const SectionWithImageAndButton = ({ content }) => {
   const { title, blockText, button, imageWithAlt } = content
