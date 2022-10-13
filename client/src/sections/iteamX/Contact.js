@@ -1,11 +1,11 @@
 import React from 'react'
+import Image from 'next/image'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Box } from '../../components/Core'
 import imgShape from '../../assets/image/svg/contact-shape.svg'
 import HubspotForm from '../../components/HubspotForm'
-import Image from 'next/image'
 
 const BoxStyled = styled(Box)`
   &::after {

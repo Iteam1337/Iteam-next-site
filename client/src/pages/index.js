@@ -1,9 +1,9 @@
 import React from 'react'
+import Script from 'next/script'
+import { groq } from 'next-sanity'
+
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
-import { groq } from 'next-sanity'
-import Script from 'next/script'
-
 import Hero from '../sections/startpage/Hero'
 import TextGrid from '../sections/startpage/TextGrid'
 import TextWithImageToRight from '../sections/startpage/TextWithImageToRight'

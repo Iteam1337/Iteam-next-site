@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
+import { useNextSanityImage } from 'next-sanity-image'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Gravatar from 'react-gravatar'
-import { Box, Typography } from '../../components/Core'
 import Slider from 'react-slick'
-import { device, breakpoints } from '../../utils'
 import { rgba } from 'polished'
+
 import sanityClient from '../../sanity-client'
-import { useNextSanityImage } from 'next-sanity-image'
 import { buildInternalUrl } from '../../utils/helpers'
-import Image from 'next/image'
+import { Box, Typography } from '../../components/Core'
+import { device, breakpoints } from '../../utils'
 
 const SliderStyled = styled(Slider)`
   position: relative;

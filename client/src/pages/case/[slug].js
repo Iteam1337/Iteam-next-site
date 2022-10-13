@@ -1,14 +1,15 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Box, Typography } from '../../components/Core'
-import { groq } from 'next-sanity'
 import CaseList from '../../sections/case/CaseList'
 import CTA from '../../sections/case/CTA'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
-import { NextSeo } from 'next-seo'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const BlogDetails = ({ data, preview = false }) => {

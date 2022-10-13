@@ -1,4 +1,7 @@
 import React from 'react'
+import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+
 import Hero from '../sections/iteamX/Hero'
 import Fact from '../sections/iteamX/Fact'
 import Content from '../sections/iteamX/Content'
@@ -6,14 +9,11 @@ import Content2 from '../sections/iteamX/Content2'
 import CaseStudies from '../sections/iteamX/CaseStudies'
 import Reviews from '../sections/iteamX/Reviews'
 import Contact from '../sections/iteamX/Contact'
-
 import PageWrapper from '../components/PageWrapper'
 import { getClient } from '../lib/sanity.server'
-import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../lib/sanity'
 import { filterDataToSingleItem, urlFor } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'
-import { NextSeo } from 'next-seo'
 import { SectionWithButtonAndTextGrid } from '../sections/common'
 
 const IteamX = ({ data, preview = false }) => {

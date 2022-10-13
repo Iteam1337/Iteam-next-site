@@ -1,10 +1,11 @@
 import React from 'react'
+import Image from 'next/image'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
+import clsx from 'clsx'
+
 import { Section, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
-import clsx from 'clsx'
-import Image from 'next/image'
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid ${({ bg }) => (bg == 'dark' ? '#242427' : 'white')};

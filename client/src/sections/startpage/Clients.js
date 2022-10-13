@@ -1,10 +1,11 @@
 import React from 'react'
+import Image from 'next/image'
+import { useNextSanityImage } from 'next-sanity-image'
 import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
+
 import { Box } from '../../components/Core'
 import sanityClient from '../../sanity-client'
-import { useNextSanityImage } from 'next-sanity-image'
-import Image from 'next/image'
 
 const Brand = styled(Box)`
   opacity: 0.7;

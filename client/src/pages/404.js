@@ -1,14 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Container } from 'react-bootstrap'
 import styled from 'styled-components'
 import { rgba } from 'polished'
+
 import Section from '../components/Section'
 import PageWrapper from '../components/PageWrapper'
-
 import imgIcon from '../assets/image/png/heart-shape.png'
 import { Typography } from '../components/Core'
-import Image from 'next/image'
 
 const ContentIcon = styled.div`
   width: 118px;

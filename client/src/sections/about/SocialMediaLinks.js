@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+
 import { Typography } from '../../components/Core'
 
 const SocialMediaLinks = ({ socialMedia, fullname }) => {

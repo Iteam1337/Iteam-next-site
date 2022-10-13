@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import ReactPlayer from 'react-player'
 import styled from 'styled-components'
 import { Modal } from 'react-bootstrap'
+
 import GlobalContext from '../../context/GlobalContext'
 import { device } from '../../utils'
 

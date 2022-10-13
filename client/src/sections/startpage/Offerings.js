@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
 import { Section, Box, Typography } from '../../components/Core'
-
 import svgCurve from '../../assets/image/svg/l1-curve-content2.svg'
 import { getRouteNameFromPageType, urlFor } from '../../utils/helpers'
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
-import Image from 'next/image'
 
 const ShapeTop = styled(Box)`
   position: absolute;

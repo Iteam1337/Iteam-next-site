@@ -1,9 +1,10 @@
 import React from 'react'
+import { groq } from 'next-sanity'
+
+import { usePreviewSubscription } from '../../lib/sanity'
 import PageWrapper from '../../components/PageWrapper'
 import Medarbetare from '../../sections/about/Medarbetare'
 import Hero from '../../sections/about/CoworkerHero'
-import { groq } from 'next-sanity'
-import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import ExitPreviewLink from '../../components/ExitPreviewLink'

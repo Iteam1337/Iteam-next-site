@@ -1,10 +1,10 @@
 import React from 'react'
+import Image from 'next/image'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Box, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
-import Image from 'next/image'
 
 const ContentImg = styled(Box)`
   box-shadow: ${({ theme }) => `0 42px 54px ${theme.colors.shadow}`};

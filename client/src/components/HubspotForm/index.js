@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Box, Typography } from '../Core'
-
 import { device } from '../../utils'
 
 const FormStyled = styled.form`

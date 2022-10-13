@@ -1,8 +1,9 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 import styled from 'styled-components'
-import { Box, Typography } from '../Core'
 import clsx from 'clsx'
+
+import { Box, Typography } from '../Core'
 
 const StyledBox = styled(Box)`
   padding: 25px 20px;

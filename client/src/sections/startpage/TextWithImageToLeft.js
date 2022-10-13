@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
+
 import { Section, Box, Typography } from '../../components/Core'
 import { device } from '../../utils'
 import { urlFor } from '../../utils/helpers'

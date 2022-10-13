@@ -1,6 +1,7 @@
 import React from 'react'
-import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
+import { groq } from 'next-sanity'
+
 import ExitPreviewLink from '../components/ExitPreviewLink'
 import PageWrapper from '../components/PageWrapper'
 import {
