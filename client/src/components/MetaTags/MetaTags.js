@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import Logo from '../../../public/android-chrome-384x384.png'
 
 const MetaTags = ({ title, description, image }) => {
