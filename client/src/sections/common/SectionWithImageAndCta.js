@@ -1,10 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Button, Section, Typography } from '../../components/Core'
+import { Section, Typography, CTALink } from '../../components/Core'
 import { urlFor, buildInternalUrl } from '../../utils/helpers'
 
 const SectionStyled = styled(Section)`
@@ -47,21 +46,15 @@ const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
                   light
                   blocks={content.blockText.blockText}
                 />
-                <div className="mt-5">
-                  <Link
-                    href={
-                      referenceTo
-                        ? referenceTo
-                        : buildInternalUrl(content.cta.reference)
-                    }
-                  >
-                    <a>
-                      <Button>
-                        {referenceTo ? content.button : content.cta.title}
-                      </Button>
-                    </a>
-                  </Link>
-                </div>
+                <CTALink
+                  href={
+                    referenceTo
+                      ? referenceTo
+                      : buildInternalUrl(content.cta.reference)
+                  }
+                  text={referenceTo ? content.button : content.cta.title}
+                  className="tw-mt-8"
+                />
               </div>
             </Col>
           </Row>

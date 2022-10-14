@@ -1,8 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Button, Section, Box, Typography, Span } from '../../components/Core'
+import { Section, Box, Typography, Span, CTALink } from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
 
 const Hero = ({ content }) => {
@@ -36,19 +35,11 @@ const Hero = ({ content }) => {
                   data-aos-delay="200"
                 >
                   {content?.link?.link && (
-                    <Link href={getExternalOrInternalLink(content.link.link)}>
-                      <a>
-                        <Button
-                          css={`
-                            margin-top: 20px;
-                            width: fit-content;
-                          `}
-                          color="dark"
-                        >
-                          {content.link.title}
-                        </Button>
-                      </a>
-                    </Link>
+                    <CTALink
+                      href={getExternalOrInternalLink(content.link.link)}
+                      text={content.link.title}
+                      className="tw-mt-6"
+                    />
                   )}
                 </Box>
               </Box>
