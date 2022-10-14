@@ -11,6 +11,7 @@ import Span from './Span'
 import List from './List'
 import ImgContainer from './ImgContainer'
 import Typography from './Typography'
+import CTALink from './CTALink'
 
 export {
   Box,
@@ -26,4 +27,5 @@ export {
   List,
   ImgContainer,
   Typography,
+  CTALink,
 }

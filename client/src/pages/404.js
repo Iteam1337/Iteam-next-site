@@ -74,9 +74,7 @@ const NotFoundPage = () => {
               </div>
               <div className="mt-5">
                 <Link href="/">
-                  <a>
-                    <ButtonStyled>Go back to home</ButtonStyled>
-                  </a>
+                  <ButtonStyled>Go back to home</ButtonStyled>
                 </Link>
               </div>
             </div>

@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
 import { ListGroup, Collapse } from 'react-bootstrap'
 import { FaAngleRight, FaAngleDown } from 'react-icons/fa'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import GlobalContext from '../../context/GlobalContext'
 
@@ -60,6 +60,7 @@ const MenuItem = ({
   const [open, setOpen] = useState(false)
   const hasSubItems = Array.isArray(items)
 
+  const router = useRouter()
   const gContext = useContext(GlobalContext)
 
   return (
@@ -104,18 +105,17 @@ const MenuItem = ({
               {label}
             </a>
           ) : (
-            <Link href={`/${name}`}>
-              <a
-                onClick={() => {
-                  if (gContext.visibleOffCanvas) {
-                    gContext.toggleOffCanvas()
-                    document.body.style.overflow = 'visible'
-                  }
-                }}
-              >
-                {label}
-              </a>
-            </Link>
+            <button
+              onClick={() => {
+                if (gContext.visibleOffCanvas) {
+                  gContext.toggleOffCanvas()
+                  document.body.style.overflow = 'visible'
+                }
+                router.push(`/${name}`)
+              }}
+            >
+              {label}
+            </button>
           )}
         </ListGroup.Item>
       )}

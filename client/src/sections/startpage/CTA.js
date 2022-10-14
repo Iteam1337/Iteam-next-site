@@ -1,8 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import Link from 'next/link'
 
-import { Button, Box, Typography } from '../../components/Core'
+import { Box, Typography, CTALink } from '../../components/Core'
 import { getRouteNameFromPageType } from '../../utils/helpers'
 
 const CTA = ({ content }) => {
@@ -17,19 +16,11 @@ const CTA = ({ content }) => {
                 <Typography.H2 className="tw-text-white">
                   {content?.title}
                 </Typography.H2>
-                <div className="d-flex flex-column align-items-center pt-3">
-                  <Box>
-                    <Link
-                      href={getRouteNameFromPageType(
-                        content?.cta?.reference?._ref
-                      )}
-                    >
-                      <a>
-                        <Button>{content?.cta?.title}</Button>
-                      </a>
-                    </Link>
-                  </Box>
-                </div>
+                <CTALink
+                  href={getRouteNameFromPageType(content?.cta?.reference?._ref)}
+                  text={content?.cta?.title}
+                  className="tw-mt-6"
+                />
               </Box>
             </Col>
           </Row>

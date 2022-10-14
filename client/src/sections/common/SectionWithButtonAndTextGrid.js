@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Button, Section, Box, Typography } from '../../components/Core'
+import { Section, Box, Typography, CTALink } from '../../components/Core'
 
 const FeatureCard = ({ title, children, ...rest }) => (
   <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>
@@ -39,9 +39,7 @@ const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
                 light
                 blocks={section.blockText.blockText}
               />
-              <Typography.Anchor href={`#${linkTo}`}>
-                <Button mt={4}>{button}</Button>
-              </Typography.Anchor>
+              <CTALink className="tw-mt-8" href={`#${linkTo}`} text={button} />
             </Box>
           </Col>
           <Col md="8" lg="5" className="order-lg-1 mt-5 mt-lg-0">

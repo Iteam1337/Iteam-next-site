@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import Image from 'next/image'
 
-import { Button, Section, Box, Typography } from '../../components/Core'
+import { Section, Box, Typography, CTALink } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
 const ImageRight = styled(Box)`
@@ -52,11 +52,10 @@ const Content2 = ({ content }) => {
                     blocks={content.blockText.blockText}
                   />
                 </div>
-                <a href="https://predictivemovement.se">
-                  <Button bg="secondary" color="dark">
-                    {content.cta.title}
-                  </Button>
-                </a>
+                <CTALink
+                  href="https://predictivemovement.se"
+                  text={content.cta.title}
+                />
               </div>
             </Col>
           </Row>

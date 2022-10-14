@@ -64,10 +64,8 @@ export const CatListItem = ({
     `}
   >
     <Link href={link}>
-      <a>
-        <Span color="light">{children}</Span>{' '}
-        <Span color="lightShade">- {numPosts} Posts</Span>
-      </a>
+      <Span color="light">{children}</Span>{' '}
+      <Span color="lightShade">- {numPosts} Posts</Span>
     </Link>
   </li>
 )

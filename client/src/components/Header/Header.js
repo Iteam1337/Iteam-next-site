@@ -2,8 +2,8 @@ import React, { useState, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
+import clsx from 'clsx'
 
 import GlobalContext from '../../context/GlobalContext'
 import Offcanvas from '../Offcanvas'
@@ -124,47 +124,10 @@ const Menu = styled.ul`
     justify-content: flex-end;
   }
   > li {
-    > a {
-      display: block;
-      @media ${device.lg} {
-        color: ${({ dark, theme }) =>
-          dark ? theme.colors.light : theme.colors.darkShade}!important;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        padding-top: 18px !important;
-        padding-bottom: 18px !important;
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-        margin-left: 9px;
-        margin-right: 9px;
-      }
-    }
     &.with-dropdown {
       @media ${device.lg} {
         position: relative;
         z-index: 99;
-      }
-      & > a {
-        &::after {
-          display: inline-block;
-          vertical-align: 0.255em;
-          content: '';
-          border-top: 0.325em solid;
-          border-right: 0.325em solid transparent;
-          border-bottom: 0;
-          border-left: 0.325em solid transparent;
-          position: relative;
-          top: 1px;
-          margin-left: auto;
-          transform: ${({ open }) =>
-            open ? 'rotate(0deg)' : 'rotate(-90deg)'};
-          margin-left: 0.5rem;
-
-          @media screen and (prefers-reduced-motion: no-preference) {
-            transition: transform 0.4s;
-          }
-        }
       }
     }
   }
@@ -188,7 +151,7 @@ const DropdownMenu = styled.ul`
     transition: none;
     pointer-events: ${({ open }) => (open ? 'visible' : 'none')};
     left: auto;
-    right: -56%;
+    right: -50%;
     border-radius: 0 0 10px 10px;
     border: 1px solid #eae9f2;
     background-color: #ffffff;
@@ -282,7 +245,7 @@ const Header = ({ isDark = false, loaded }) => {
     return windowSize
   }
 
-  const getNavLinkStyle = (names) => {
+  const getNavButtonStyle = (names) => {
     for (const name of names) {
       const regex = new RegExp(name)
       if (router.pathname.search(regex) === 1) {
@@ -332,26 +295,32 @@ const Header = ({ isDark = false, loaded }) => {
                           <React.Fragment key={name + index}>
                             {hasSubItems ? (
                               <li className="with-dropdown" {...rest}>
-                                <Link
-                                  style={getNavLinkStyle([
+                                <button
+                                  onClick={(e) => {
+                                    e.preventDefault()
+                                    setOpen(!open)
+                                  }}
+                                  className={clsx(
+                                    'tw-mx-4 tw-block tw-p-4 tw-text-base tw-font-medium hover:tw-underline',
+                                    'after:tw-relative after:tw-top-1 after:tw-ml-2 after:tw-inline-block after:tw-border-x-[0.325em] after:tw-border-t-[0.325em] after:tw-border-b-0 after:tw-border-x-transparent after:tw-border-t-inherit after:tw-align-[0.400em]',
+                                    'motion-safe:after:tw-transition-transform',
+                                    open
+                                      ? 'after:tw-rotate-0'
+                                      : 'after:tw-rotate-[-90deg]',
+                                    isDark
+                                      ? 'tw-text-white after:tw-border-t-white'
+                                      : 'tw-text-dark-gray after:tw-border-t-gray-dark'
+                                  )}
+                                  style={getNavButtonStyle([
                                     'mvp',
                                     'scaleup',
                                     'iteamX',
                                   ])}
-                                  role="button"
                                   data-toggle="dropdown"
                                   aria-expanded="false"
-                                  href="/#"
                                 >
-                                  <a
-                                    onClick={(e) => {
-                                      e.preventDefault()
-                                      setOpen(!open)
-                                    }}
-                                  >
-                                    {label}
-                                  </a>
-                                </Link>
+                                  {label}
+                                </button>
                                 <DropdownMenu dark={isDark ? 1 : 0} open={open}>
                                   {items.map((subItem, indexSub) => {
                                     return (
@@ -362,24 +331,26 @@ const Header = ({ isDark = false, loaded }) => {
                                           {subItem.isExternal ? (
                                             <a
                                               href={`${subItem.name}`}
+                                              onClick={() => {
+                                                setOpen(!open)
+                                              }}
                                               target="_blank"
                                               rel="noopener noreferrer"
                                             >
                                               {subItem.label}
                                             </a>
                                           ) : (
-                                            <Link href={`/${subItem.name}`}>
-                                              <a
-                                                style={getNavLinkStyle([
-                                                  subItem.name,
-                                                ])}
-                                                onClick={() => {
-                                                  setOpen(!open)
-                                                }}
-                                              >
-                                                {subItem.label}
-                                              </a>
-                                            </Link>
+                                            <button
+                                              style={getNavButtonStyle([
+                                                subItem.name,
+                                              ])}
+                                              onClick={() => {
+                                                router.push(`/${subItem.name}`)
+                                                setOpen(!open)
+                                              }}
+                                            >
+                                              {subItem.label}
+                                            </button>
                                           )}
                                         </li>
                                       </React.Fragment>
@@ -392,24 +363,38 @@ const Header = ({ isDark = false, loaded }) => {
                                 {isExternal ? (
                                   <a
                                     href={`${name}`}
+                                    onClick={() => {
+                                      setOpen(!open)
+                                    }}
+                                    className={clsx(
+                                      'tw-mx-3 tw-block tw-p-4 tw-text-base tw-font-medium hover:tw-underline',
+                                      isDark
+                                        ? 'tw-text-white'
+                                        : 'tw-text-dark-gray'
+                                    )}
+                                    style={getNavButtonStyle([name])}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                   >
                                     {label}
                                   </a>
                                 ) : (
-                                  <Link href={`/${name}`}>
-                                    <a
-                                      style={getNavLinkStyle([name])}
-                                      role="button"
-                                      aria-expanded="false"
-                                      onClick={() => {
-                                        setOpen(false)
-                                      }}
-                                    >
-                                      {label}
-                                    </a>
-                                  </Link>
+                                  <button
+                                    className={clsx(
+                                      'tw-mx-3 tw-block tw-p-4 tw-text-base tw-font-medium hover:tw-underline',
+                                      isDark
+                                        ? 'tw-text-white'
+                                        : 'tw-text-dark-gray'
+                                    )}
+                                    style={getNavButtonStyle([name])}
+                                    aria-expanded="false"
+                                    onClick={() => {
+                                      router.push(`/${name}`)
+                                      setOpen(false)
+                                    }}
+                                  >
+                                    {label}
+                                  </button>
                                 )}
                               </li>
                             )}
