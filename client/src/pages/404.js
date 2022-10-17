@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { Container } from 'react-bootstrap'
 import styled from 'styled-components'
@@ -8,7 +7,7 @@ import { rgba } from 'polished'
 import Section from '../components/Section'
 import PageWrapper from '../components/PageWrapper'
 import imgIcon from '../assets/image/png/heart-shape.png'
-import { Typography } from '../components/Core'
+import { CTALink, Typography } from '../components/Core'
 
 const ContentIcon = styled.div`
   width: 118px;
@@ -19,33 +18,6 @@ const ContentIcon = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 48px;
-`
-
-const ButtonStyled = styled.button`
-  min-width: 250px;
-  min-height: 60px;
-  border-radius: 10px;
-  border: ${({ theme }) => `1px solid ${theme.colors.primary}`};
-  color: ${({ theme }) => theme.colors.primary};
-  font-size: 21px;
-  font-weight: 500;
-  letter-spacing: -0.66px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  box-shadow: none;
-  outline: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  transition: 0.4s;
-  &:hover,
-  &:focus {
-    background: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.light};
-    box-shadow: none;
-    outline: none;
-  }
 `
 
 const NotFoundPage = () => {
@@ -72,11 +44,12 @@ const NotFoundPage = () => {
                   <br className="d-none d-md-block" /> belong to this website!
                 </Typography.Paragraph>
               </div>
-              <div className="mt-5">
-                <Link href="/">
-                  <ButtonStyled>Go back to home</ButtonStyled>
-                </Link>
-              </div>
+              <CTALink
+                href="/"
+                text="Go back to home"
+                className="tw-mt-8"
+                variant="secondary"
+              />
             </div>
           </Container>
         </Section>

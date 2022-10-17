@@ -6,7 +6,6 @@ import styled from 'styled-components'
 const StyledAnchor = styled.a`
   padding: 0.85rem 1.75rem;
   min-width: 200px;
-  border-radius: 5px;
   font-size: 21px;
   font-weight: 500;
   letter-spacing: -0.66px;
@@ -47,14 +46,16 @@ const StyledAnchor = styled.a`
   }
 `
 
-const CTALink = ({ href, text, className }) => {
+const CTALink = ({ href, text, variant, bottomRounded, className }) => {
   const isExternal = href.includes('http')
   return isExternal ? (
     <StyledAnchor
       href={href}
       className={clsx(
         className,
-        'tw-bg-primary-light focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-secondary focus:[&:not(:focus-visible)]:tw-outline-none'
+        'focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-secondary focus:[&:not(:focus-visible)]:tw-outline-none',
+        variant === 'secondary' ? 'tw-bg-secondary' : 'tw-bg-primary-light',
+        bottomRounded ? 'tw-rounded-b-md' : 'tw-rounded-md'
       )}
     >
       {text}
@@ -64,7 +65,9 @@ const CTALink = ({ href, text, className }) => {
       <StyledAnchor
         className={clsx(
           className,
-          'tw-bg-primary-light focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-secondary focus:[&:not(:focus-visible)]:tw-outline-none'
+          'focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-secondary focus:[&:not(:focus-visible)]:tw-outline-none',
+          variant === 'secondary' ? 'tw-bg-secondary' : 'tw-bg-primary-light',
+          bottomRounded ? 'tw-rounded-b-md' : 'tw-rounded-md'
         )}
       >
         {text}

@@ -9,8 +9,8 @@ import {
   Box,
   Typography,
   Badge,
-  Button,
   Switch,
+  CTALink,
 } from '../../components/Core'
 import { device } from '../../utils'
 
@@ -76,14 +76,8 @@ const ULStyled = styled.ul`
 const CardPricing = styled(Box)`
   box-shadow: ${({ theme }) =>
     `0 52px 54px ${rgba(theme.colors.shadow, 0.125)}`};
-  border-radius: 10px;
   background-color: #fff;
   padding-top: 30px;
-
-  button {
-    width: 100% !important;
-    border-radius: 0 0 10px 10px !important;
-  }
 `
 
 const Currency = styled.span`
@@ -136,7 +130,7 @@ const Pricing = ({ content }) => {
             </div>
             <Row className="justify-content-center">
               <Col lg="8" className="mb-5 align-items-center">
-                <CardPricing>
+                <CardPricing className="tw-rounded-md">
                   <div className="mb-4">
                     <Typography.H3 className="tw-pb-2 tw-text-base tw-font-light">
                       {content.team}
@@ -157,15 +151,12 @@ const Pricing = ({ content }) => {
                       ))}
                     </ULStyled>
                   </div>
-                  <Button
-                    onClick={() =>
-                      (window.location.href = buildInternalUrl(
-                        content.cta.reference
-                      ))
-                    }
-                  >
-                    {content.cta.title}
-                  </Button>
+                  <CTALink
+                    href={buildInternalUrl(content.cta.reference)}
+                    text={content.cta.title}
+                    className="tw-relative tw-top-0.5 tw-w-full"
+                    bottomRounded={true}
+                  />
                 </CardPricing>
               </Col>
             </Row>

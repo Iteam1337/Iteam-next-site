@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
 import { Container } from 'react-bootstrap'
 
 import HeroImg from '../../assets/image/jpeg/working-hero.jpg'
-import { Typography, Button, Section } from '../../components/Core'
+import { Typography, Section, CTALink } from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
 
 const Wrapper = styled.div`
@@ -56,17 +55,12 @@ const RecruteHero = ({ content }) => {
                 </span>
               </Typography.Paragraph>
               {content?.link?.link && (
-                <Link href={getExternalOrInternalLink(content.link.link)}>
-                  <Button
-                    css={`
-                      margin-top: 20px;
-                      width: fit-content;
-                    `}
-                    bg="secondary"
-                  >
-                    {content.link.title}
-                  </Button>
-                </Link>
+                <CTALink
+                  href={getExternalOrInternalLink(content.link.link)}
+                  text={content.link.title}
+                  className="tw-mt-8 tw-w-fit"
+                  variant="secondary"
+                />
               )}
             </TextContainer>
           </Container>
