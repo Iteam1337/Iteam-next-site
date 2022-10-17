@@ -13,10 +13,12 @@ export const BaseCard = ({
   children,
   variant,
   bgDark,
+  className,
 }) => {
   return (
     <li
       className={clsx(
+        className,
         'tw-group tw-relative tw-mt-2 tw-flex tw-flex-1 tw-flex-col tw-overflow-hidden tw-rounded-md tw-border-[1px] tw-border-solid tw-border-gray-border tw-bg-white tw-transition',
         'focus-within:tw-shadow-lg hover:tw-shadow-lg motion-reduce:tw-transition-none',
         variant === 'secondary' && 'tw-border-secondary tw-bg-secondary',

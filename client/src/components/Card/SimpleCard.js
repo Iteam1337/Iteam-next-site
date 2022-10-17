@@ -45,6 +45,7 @@ export const SimpleCard = ({
       readMore={readMore}
       centerContent={false}
       bgDark={bgDark}
+      className="tw-max-w-lg"
     >
       <Typography.ParagraphSmall
         className={clsx(readMore ? 'tw-pb-0' : 'tw-pb-6')}
