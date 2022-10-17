@@ -1,24 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { Box, Typography } from '../Core'
-import { device } from '../../utils'
-
-const FormStyled = styled.form`
-  padding: 40px 30px;
-  @media ${device.sm} {
-    padding: 53px 58px 50px;
-  }
-  box-shadow: ${({ theme }) => `0 20px 61px ${theme.colors.shadow}`};
-  border-radius: 10px;
-  background-color: #f7f7fb;
-  width: 100%;
-  text-align: center;
-`
-const FrameStyled = styled.div`
-  max-width: 484px;
-  margin: 0 auto;
-`
 
 const HubspotForm = ({
   value,
@@ -38,21 +20,22 @@ const HubspotForm = ({
   }, [])
 
   return (
-    <FormStyled
+    <form
       name={value}
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      className="tw-w-full tw-rounded-md tw-bg-gray-blue tw-px-0 tw-pt-[40px] tw-pb-0 tw-text-center sm:tw-px-[10px] sm:tw-pb-[50px] sm:tw-pt-[53px]"
     >
       <Box>
         <Typography.H2>{title}</Typography.H2>
       </Box>
       <input type="hidden" name="form-name" value={value} />
-      <FrameStyled
-        className="meetings-iframe-container"
+      <div
+        className="meetings-iframe-container tw-mx-auto tw-my-0 tw-max-h-[640px] tw-max-w-[484px]"
         data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
       />
-    </FormStyled>
+    </form>
   )
 }
 
