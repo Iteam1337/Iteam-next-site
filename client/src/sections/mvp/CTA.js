@@ -25,9 +25,7 @@ const CTA = () => (
             </div>
           </Col>
           <Col lg={6} md={10} className="">
-            <div className="">
-              <HubspotForm value="mvp" title="Hur kan vi hjälpa dig?" />
-            </div>
+            <HubspotForm value="mvp" title="Hur kan vi hjälpa dig?" />
           </Col>
         </Row>
       </Container>

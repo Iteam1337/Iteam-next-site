@@ -16,6 +16,7 @@ module.exports = {
         'primary-light': '#FF5C77',
         'gray-light': '#f2f2f2',
         'gray-dark': '#19191b',
+        'gray-blue': '#f7f7fb',
         'gray-border': '#eae9f2',
       },
     },
