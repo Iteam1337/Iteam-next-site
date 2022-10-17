@@ -5,7 +5,7 @@ export const CardListFlex = ({ column, children }) => {
   return (
     <ul
       className={clsx(
-        'tw-flex tw-justify-center tw-gap-8',
+        'tw-justify-center tw-gap-8 md:tw-flex',
         column && 'tw-flex-col tw-gap-2'
       )}
     >
