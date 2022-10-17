@@ -23,7 +23,7 @@ const Content1 = ({ content }) => {
             <div>
               <Typography.H2>{content.title}</Typography.H2>
               <Typography.BlockContent blocks={content.blockText.blockText} />
-              <CTALink href="#book" text={content.button} />
+              <CTALink href="#book" text={content.button} className="tw-mt-8" />
             </div>
           </Col>
           <Col md="10" lg="5" className="offset-lg-1 tw-my-12 lg:tw-my-0">

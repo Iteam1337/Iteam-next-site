@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Button, Section, Box, Typography } from '../../components/Core'
+import { Section, Box, Typography, CTALink } from '../../components/Core'
 import imgOval from '../../assets/image/svg/l1-cta-oval.svg'
 import svgCurveGray from '../../assets/image/svg/l1-curve-cta-gray.svg'
 import { buildInternalUrl } from '../../utils/helpers'
@@ -38,15 +38,15 @@ const CTA = ({ text }) => {
         <Container className="tw-relative">
           <Row className="justify-content-center text-center">
             <Col lg="6">
-              <Box mb={5} className="text-center">
+              <Box className="text-center">
                 <Typography.H2 className="tw-text-white">
                   {text.title}
                 </Typography.H2>
-              </Box>
-              <Box>
-                <a href={buildInternalUrl(text.cta.reference)}>
-                  <Button>{text.cta.title}</Button>
-                </a>
+                <CTALink
+                  href={buildInternalUrl(text.cta.reference)}
+                  text={text.cta.title}
+                  className="tw-mt-3"
+                />
               </Box>
             </Col>
           </Row>

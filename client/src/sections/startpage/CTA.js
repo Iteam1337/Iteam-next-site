@@ -19,7 +19,7 @@ const CTA = ({ content }) => {
                 <CTALink
                   href={getRouteNameFromPageType(content?.cta?.reference?._ref)}
                   text={content?.cta?.title}
-                  className="tw-mt-6"
+                  className="tw-mt-3"
                 />
               </Box>
             </Col>
