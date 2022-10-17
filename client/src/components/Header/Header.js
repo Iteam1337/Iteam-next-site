@@ -341,6 +341,7 @@ const Header = ({ isDark = false, loaded }) => {
                                             </a>
                                           ) : (
                                             <button
+                                              className="hover:tw-underline"
                                               style={getNavButtonStyle([
                                                 subItem.name,
                                               ])}

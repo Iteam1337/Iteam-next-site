@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import clsx from 'clsx'
 
 import imgL1Logo from '../../assets/image/png/Iteam-logo.png'
 import imgL1LogoWhite from '../../assets/image/png/Iteam-Logotype-Horizontal-RGB-White.png'
@@ -10,7 +11,14 @@ import imgL1VericalLogoWhite from '../../assets/image/png/Iteam-Logotype-Vertica
 const Logo = ({ white, vertical = false, className, ...rest }) => {
   return (
     <Link href="/">
-      <a className={`${className}`} {...rest} aria-label="Länk till startsidan">
+      <a
+        className={clsx(
+          className,
+          'tw-opacity-100 [@media(hover:hover)]:hover:tw-opacity-75'
+        )}
+        {...rest}
+        aria-label="Länk till startsidan"
+      >
         {white ? (
           vertical ? (
             <Image
