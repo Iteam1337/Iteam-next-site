@@ -40,26 +40,7 @@ export const BaseCard = ({
             </Typography.Anchor>
           </Typography.H3>
         )}
-        {img && (
-          <>
-            {img}
-            {variant && (
-              <div className="tw-absolute tw-top-[296px] tw-left-[-24px] tw-w-[calc(100%+48px)]">
-                <svg
-                  height="100%"
-                  viewBox="0 0 540 22"
-                  className={clsx(
-                    'tw-w-full',
-                    variant === 'secondary' && 'tw-fill-secondary'
-                  )}
-                  aria-hidden="true"
-                >
-                  <path d="M0 0s233.088 28.458 539.999 0c306.91-28.458 0 22 0 22H.06"></path>
-                </svg>
-              </div>
-            )}
-          </>
-        )}
+        {img && img}
         {preTitle && (
           <div className="tw-order-2 tw-px-6 tw-pt-6">{preTitle}</div>
         )}
