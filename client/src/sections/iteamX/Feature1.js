@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Button, Section, Box, Typography } from '../../components/Core'
+import { Section, Box, Typography, CTALink } from '../../components/Core'
 
 const FeatureCard = ({ title, children, ...rest }) => (
   <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>
@@ -39,11 +39,11 @@ const Feature = () => (
                 vågar utforska. Du får löpande se resultat och kan styra
                 riktningen.
               </Typography.Paragraph>
-              <a href="#sprintMeeting">
-                <Button color="dark" mt={4}>
-                  Boka ett X team
-                </Button>
-              </a>
+              <CTALink
+                href="#sprintMeeting"
+                text="Boka ett X team"
+                className="tw-mt-8"
+              />
             </Box>
           </Col>
           <Col md="8" lg="5" className="order-lg-1 mt-5 mt-lg-0">

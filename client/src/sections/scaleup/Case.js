@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Button, Section, Box, Typography } from '../../components/Core'
+import { Section, Typography, CTALink } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
 const Case = ({ content }) => {
@@ -36,16 +36,12 @@ const Case = ({ content }) => {
                 <Typography.Paragraph>
                   {content.preview.imageCard.description}
                 </Typography.Paragraph>
-                <Box className="tw-mt-8">
-                  <Button
-                    onClick={() =>
-                      (window.location.href = `/case/${content.slug.current}`)
-                    }
-                    bg="secondary"
-                  >
-                    Läs mer om {content.company}
-                  </Button>
-                </Box>
+                <CTALink
+                  href={`/case/${content.slug.current}`}
+                  text={`Läs mer om ${content.company}`}
+                  className="tw-mt-8"
+                  variant="secondary"
+                />
               </div>
             </div>
           </Col>

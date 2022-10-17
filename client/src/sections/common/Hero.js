@@ -1,10 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import clsx from 'clsx'
 
-import { Section, Typography, Button } from '../../components/Core'
+import { Section, Typography, CTALink } from '../../components/Core'
 import { getExternalOrInternalLink, hexToRGBA } from '../../utils/helpers'
 import { urlFor } from '../../utils/helpers'
 
@@ -111,17 +110,12 @@ const Hero = ({ content, flipTexts = false }) => {
                   </span>
                 </Typography.Paragraph>
                 {link && (
-                  <Link href={getExternalOrInternalLink(link.link)}>
-                    <Button
-                      css={`
-                        margin-top: 20px;
-                        width: fit-content;
-                      `}
-                      bg="secondary"
-                    >
-                      {link.title}
-                    </Button>
-                  </Link>
+                  <CTALink
+                    href={getExternalOrInternalLink(link.link)}
+                    text={link.title}
+                    className="tw-mt-8 tw-w-fit"
+                    variant="secondary"
+                  />
                 )}
               </div>
             </Col>

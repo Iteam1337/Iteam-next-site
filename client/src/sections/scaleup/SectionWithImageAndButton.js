@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Button, Section, Typography } from '../../components/Core'
+import { CTALink, Section, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
 const SectionWithImageAndButton = ({ content }) => {
@@ -24,13 +24,12 @@ const SectionWithImageAndButton = ({ content }) => {
             <div>
               <Typography.H2>{title}</Typography.H2>
               <Typography.BlockContent blocks={blockText.blockText} />
-              <Button
-                mt={4}
-                onClick={() => (window.location.href = '#pricing')}
-                bg="secondary"
-              >
-                {button}
-              </Button>
+              <CTALink
+                href="#pricing"
+                text={button}
+                className="tw-mt-8"
+                variant="secondary"
+              />
             </div>
           </Col>
           <Col md={10} lg={5} className="offset-lg-1 mt-5 mt-lg-0">
