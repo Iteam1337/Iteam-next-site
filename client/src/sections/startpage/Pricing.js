@@ -125,11 +125,11 @@ const Pricing = ({ content }) => {
               </div>
             </Col>
           </Row>
-          <div className="text-center pt-5">
-            <div className="d-inline-flex justify-content-between align-items-center mb-5">
+          <div className="tw-pt-4 tw-text-center md:tw-pt-6">
+            <div className="tw-mb-6 tw-inline-flex tw-flex-col tw-items-center tw-justify-between tw-gap-3 md:tw-mb-8 md:tw-flex-row">
               <Typography.Paragraph>{content.onGoing}</Typography.Paragraph>
               <Switch onClick={() => setTimeMonthly(!timeMonthly)} />
-              <div className="d-flex align-items-center">
+              <div className="tw-flex tw-items-center">
                 <Typography.Paragraph>{content.agreement}</Typography.Paragraph>
                 <Badge ml={2}>{content.discount}</Badge>
               </div>
