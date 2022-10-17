@@ -33,10 +33,10 @@ const Case = ({ content }) => {
             >
               <div>
                 <Typography.H2>{content.title}</Typography.H2>
-                <Typography.Paragraph className="tw-mb-12">
+                <Typography.Paragraph>
                   {content.preview.imageCard.description}
                 </Typography.Paragraph>
-                <Box>
+                <Box className="tw-mt-8">
                   <Button
                     onClick={() =>
                       (window.location.href = `/case/${content.slug.current}`)

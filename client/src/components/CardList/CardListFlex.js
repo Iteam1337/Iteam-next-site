@@ -5,8 +5,8 @@ export const CardListFlex = ({ column, children }) => {
   return (
     <ul
       className={clsx(
-        'tw-justify-center tw-gap-8 md:tw-flex',
-        column && 'tw-flex-col tw-gap-2'
+        'tw-flex tw-flex-col tw-justify-center tw-gap-8 md:tw-flex-row',
+        column && 'tw-gap-3 md:tw-flex-col'
       )}
     >
       {children}

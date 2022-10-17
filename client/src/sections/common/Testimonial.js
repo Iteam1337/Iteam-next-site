@@ -20,7 +20,7 @@ const Testimonial = ({ content, coworker, bg }) => {
                 />
               </Col>
             </Row>
-            <Box>
+            <Box className="tw-mt-6">
               <Carousel coworker={true} content={content.carousel} />
             </Box>
           </>
