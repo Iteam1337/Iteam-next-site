@@ -21,7 +21,7 @@ const ButtonSolid = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transform: perspective(1px) translateZ(0);
+  transform: translateZ(0);
   position: relative;
   overflow: hidden;
   white-space: nowrap;
@@ -46,15 +46,19 @@ const ButtonSolid = styled.button`
     transform: scaleX(0);
     transform-origin: 100% 50%;
     transition-property: transform;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+    }
   }
 
   &:hover:before,
   &:focus:before,
   &:active:before {
+    @media (prefers-reduced-motion: no-preference) {
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
     transform: scaleX(1);
-    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   }
 `
 
@@ -75,8 +79,10 @@ const ButtonOutline = styled(ButtonSolid)`
   &:hover:before,
   &:focus:before,
   &:active:before {
+    @media (prefers-reduced-motion: no-preference) {
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
     transform: scaleX(1);
-    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     background: ${({ theme, color }) => theme.colors[color]};
   }
 `
