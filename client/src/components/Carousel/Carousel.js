@@ -62,6 +62,7 @@ const SliderStyled = styled(Slider)`
     color: ${({ theme }) => theme.colors.dark}!important;
     box-shadow: ${({ theme }) =>
       `0 1px 6px ${rgba(theme.colors.shadow, 0.125)}`};
+    outline: none;
     &:before {
       color: ${({ theme }) => theme.colors.dark}!important;
     }
@@ -158,12 +159,11 @@ const SliderCard = styled(Box)`
     margin-top: 0;
   }
 
-  @media ${device.md} {
+  @media ${device.sm} {
     padding: 10px;
     align-items: flex-start;
   }
   @media ${device.lg} {
-    padding: 0 0 0 30px;
     flex-direction: row;
   }
 `
@@ -172,19 +172,8 @@ const SliderImgContainer = styled(Box)`
   overflow: hidden;
   min-width: 100%;
 
-  img {
-    margin: 0 auto;
-    max-width: unset;
-    width: 100%;
-  }
-
-  @media ${device.sm} {
-    padding: 0;
-    max-width: 100%;
-    width: auto;
-  }
   @media ${device.lg} {
-    min-width: 315px;
+    min-width: 400px;
     margin-top: 5px;
   }
 `
@@ -196,14 +185,11 @@ const SliderText = styled(Box)`
   align-items: left;
   justify-content: left;
   flex: auto;
-  padding: 60px 0 0 0;
-
+  @media ${device.xl} {
+    max-width: 60%;
+  }
   p {
     margin-top: 0;
-  }
-
-  @media ${device.lg} {
-    padding: 0 0 0 30px;
   }
 `
 
@@ -211,20 +197,24 @@ const Coworker = ({ item, active }) => {
   return (
     <SliderItem>
       <SliderCard>
-        <SliderImgContainer>
+        <SliderImgContainer className="">
           {item.email && (
-            <Gravatar email={item.email} className="img-fluid" size={200} />
+            <Gravatar
+              email={item.email}
+              className="tw-w-full tw-object-cover"
+              size={400}
+            />
           )}
         </SliderImgContainer>
-        <SliderText>
+        <SliderText className="tw-px-0 tw-pb-0 tw-pt-4 lg:tw-pt-0 lg:tw-pl-6">
           <Typography.H3 className="tw-mt-1">{item.whyTech}</Typography.H3>
           <Typography.Paragraph>{item.answerTech}</Typography.Paragraph>
-          <Typography.ParagraphSmall className="tw-mt-2 tw-font-bold">
+          <Typography.ParagraphSmall className="tw-pt-3 tw-font-bold">
             {item.fullname}
           </Typography.ParagraphSmall>
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           {active && (
-            <Typography.ParagraphSmall className="tw-mt-2">
+            <Typography.ParagraphSmall className="tw-pt-3">
               <Typography.Anchor href={`/about/${item.slug.current}`}>
                 Läs mer…
               </Typography.Anchor>
@@ -241,17 +231,22 @@ const Client = ({ item, active }) => {
   return (
     <SliderItem active={active}>
       <SliderCard className="slider-card">
-        <SliderImgContainer>
-          <Image {...imageProps} alt={item.image.alt} />
+        <SliderImgContainer className="tw-relative tw-h-[300px] sm:tw-h-[500px]">
+          <Image
+            {...imageProps}
+            alt={item.image.alt}
+            layout="fill"
+            objectFit="cover"
+          />
         </SliderImgContainer>
-        <SliderText>
+        <SliderText className="tw-px-0 tw-pb-0 tw-pt-4 lg:tw-pl-6 lg:tw-pt-0">
           <Typography.Paragraph>{item.quote}</Typography.Paragraph>
-          <Typography.ParagraphSmall className="tw-mt-2 tw-font-bold">
+          <Typography.ParagraphSmall className="tw-pt-3 tw-font-bold">
             {item.fullname}
           </Typography.ParagraphSmall>
           <Typography.ParagraphSmall>{item.role}</Typography.ParagraphSmall>
           {active && item.reference && (
-            <Typography.ParagraphSmall className="tw-mt-2">
+            <Typography.ParagraphSmall className="tw-pt-3">
               <Typography.Anchor href={buildInternalUrl(item.reference)}>
                 Läs mer…
               </Typography.Anchor>
