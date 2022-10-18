@@ -18,7 +18,7 @@ const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
   const { section, textGrid, button } = content
 
   return (
-    <Section bg="ash">
+    <Section className="tw-bg-gray-dark">
       <Container>
         <Row className="align-items-center">
           <Col
