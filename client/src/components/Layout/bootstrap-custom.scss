@@ -12,6 +12,21 @@ $headings-color: $text;
 $body-bg: $bg;
 $font-family-base: 'Roboto', sans-serif;
 $headings-font-family: $font-family-base;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px,
+);
+$container-max-widths: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px,
+);
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
