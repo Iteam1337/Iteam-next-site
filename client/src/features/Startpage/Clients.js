@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 
 import { Box } from '../../components/Core'
-import sanityClient from '../../sanity-client'
+import sanityClient from '../../utils/sanity-client'
 
 const Brand = styled(Box)`
   opacity: 0.7;

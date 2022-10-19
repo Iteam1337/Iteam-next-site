@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
 import clsx from 'clsx'
 
-import client from '../../sanity-client'
+import client from '../../utils/sanity-client'
 import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'
 

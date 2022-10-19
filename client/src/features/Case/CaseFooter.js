@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Typography } from '../../components/Core'
-import { CaseFooterSection } from '../../components/CaseFooterSection'
+import { CaseFooterSection } from './CaseFooterSection'
 import { urlFor } from '../../utils/helpers'
 
 export const CaseFooter = ({ sectionCards }) => {

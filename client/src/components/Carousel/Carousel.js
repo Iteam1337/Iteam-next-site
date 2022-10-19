@@ -7,7 +7,7 @@ import Gravatar from 'react-gravatar'
 import Slider from 'react-slick'
 import { rgba } from 'polished'
 
-import sanityClient from '../../sanity-client'
+import sanityClient from '../../utils/sanity-client'
 import { buildInternalUrl } from '../../utils/helpers'
 import { Box, Typography } from '../../components/Core'
 import { device, breakpoints } from '../../utils'
