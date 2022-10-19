@@ -3,9 +3,9 @@ import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 
 import PageWrapper from '../../components/PageWrapper'
-import { Hero } from '../../sections/Hero'
-import { Testimonial } from '../../sections/Testimonial'
-import { Feature, Roles } from '../../sections/Karriar'
+import { Hero } from '../../features/Hero'
+import { Testimonial } from '../../features/Testimonial'
+import { Feature, Roles } from '../../features/Karriar'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import {

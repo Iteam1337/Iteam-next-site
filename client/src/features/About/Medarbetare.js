@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Typography } from '../../components/Core'
 import { formatPhoneNumber } from '../../utils/helpers'
-import SocialMediaLinks from './SocialMediaLinks'
+import { SocialMediaLinks } from './SocialMediaLinks'
 
 const InfoSection = ({ text, title }) => (
   <Row className="py-5">

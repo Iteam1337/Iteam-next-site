@@ -7,7 +7,7 @@ import clsx from 'clsx'
 
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Typography } from '../../components/Core'
-import { BlogList } from '../../sections/Aktuellt'
+import { BlogList } from '../../features/Aktuellt'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'

@@ -4,14 +4,14 @@ import { groq } from 'next-sanity'
 
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
-import { SectionWithImageAndCta } from '../sections/SectionWithImageAndCta'
+import { SectionWithImageAndCta } from '../features/SectionWithImageAndCta'
 import {
   Hero,
   TextGrid,
   TextWithImageToRight,
   TextWithImageToLeft,
   DefaultContent,
-} from '../sections/Startpage'
+} from '../features/Startpage'
 import PageWrapper from '../components/PageWrapper'
 import { filterDataToSingleItem } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'

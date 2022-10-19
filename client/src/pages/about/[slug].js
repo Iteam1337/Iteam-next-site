@@ -3,10 +3,10 @@ import { groq } from 'next-sanity'
 
 import { usePreviewSubscription } from '../../lib/sanity'
 import PageWrapper from '../../components/PageWrapper'
-import { CoworkerHero, Medarbetare } from '../../sections/about'
+import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { CoworkerHero, Medarbetare } from '../../features/About'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const CoworkerPage = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.coworkerQuery, {
