@@ -13,7 +13,7 @@ const SectionStyled = styled(Section)`
 /*
  * This component is both for linking to an id or sending to another page.
  */
-const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
+export const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
   return (
     <>
       <SectionStyled bg="dark">
@@ -63,5 +63,3 @@ const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
     </>
   )
 }
-
-export default SectionWithImageAndCta

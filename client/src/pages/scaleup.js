@@ -3,14 +3,12 @@ import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 
 import PageWrapper from '../components/PageWrapper'
-import {
-  SectionWithButtonAndTextGrid,
-  SectionWithImage,
-  TextWithTags,
-  Testimonial,
-  Hero,
-  Pricing,
-} from '../sections/common'
+import { TextWithTags } from '../sections/TextWithTags'
+import { Testimonial } from '../sections/Testimonial'
+import { SectionWithImage } from '../sections/SectionWithImage'
+import { SectionWithButtonAndTextGrid } from '../sections/SectionWithButtonAndTextGrid'
+import { Hero } from '../sections/Hero'
+import { Pricing } from '../sections/Pricing'
 import { Role, SectionWithImageAndButton, Case, CTA } from '../sections/Scaleup'
 import { getClient } from '../lib/sanity.server'
 import { filterDataToSingleItem } from '../utils/helpers'

@@ -74,7 +74,7 @@ const MediaType = ({ mediaType, children }) => {
   }
 }
 
-const Hero = ({ content, flipTexts = false }) => {
+export const Hero = ({ content, flipTexts = false }) => {
   const { title, link, mediaType = { type: '' } } = content
 
   return (
@@ -125,4 +125,3 @@ const Hero = ({ content, flipTexts = false }) => {
     </>
   )
 }
-export default Hero

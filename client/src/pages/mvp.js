@@ -4,17 +4,15 @@ import { groq } from 'next-sanity'
 
 import ExitPreviewLink from '../components/ExitPreviewLink'
 import PageWrapper from '../components/PageWrapper'
-import {
-  SectionWithButtonAndTextGrid,
-  SectionWithImage,
-  TextWithTags,
-  Testimonial,
-  Hero,
-} from '../sections/common'
+import { TextWithTags } from '../sections/TextWithTags'
+import { Testimonial } from '../sections/Testimonial'
+import { Hero } from '../sections/Hero'
+import { SectionWithImage } from '../sections/SectionWithImage'
+import { SectionWithButtonAndTextGrid } from '../sections/SectionWithButtonAndTextGrid'
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
 import { Content1, CTA } from '../sections/Mvp'
-import SectionWithImageAndCta from '../sections/common/SectionWithImageAndCta'
+import { SectionWithImageAndCta } from '../sections/SectionWithImageAndCta'
 import { filterDataToSingleItem, urlFor } from '../utils/helpers'
 
 const Mvp = ({ data, preview = false }) => {
