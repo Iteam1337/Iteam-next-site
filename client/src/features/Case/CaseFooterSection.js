@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-import { Box, Typography } from '../Core'
+import { Box, Typography } from '../../components/Core'
 
 const Card = styled(Box)`
   border-radius: 0;

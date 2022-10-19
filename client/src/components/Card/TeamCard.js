@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
 import Gravatar from 'react-gravatar'
 
-import client from '../../sanity-client'
+import client from '../../utils/sanity-client'
 import { SocialMediaLinks } from '../../features/About/SocialMediaLinks'
 import { formatPhoneNumber } from '../../utils/helpers'
 import { Typography } from '../Core'

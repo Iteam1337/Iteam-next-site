@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import { Box } from '../../components/Core'
 import imgShape from '../../assets/image/svg/contact-shape.svg'
-import { HubspotForm } from '../../components/HubspotForm'
+import { HubspotForm } from '../../features/HubspotForm'
 
 const BoxStyled = styled(Box)`
   &::after {

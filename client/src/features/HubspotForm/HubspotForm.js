@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Typography } from '../Core'
+import { Box, Typography } from '../../components/Core'
 
 export const HubspotForm = ({
   value,

@@ -1,6 +1,6 @@
 import imageUrlBuilder from '@sanity/image-url'
 
-import client from '../sanity-client'
+import client from './sanity-client'
 
 const PNF = require('google-libphonenumber').PhoneNumberFormat
 const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance()

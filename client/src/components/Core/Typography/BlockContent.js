@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import BaseBlockContent from '@sanity/block-content-to-react'
 import { useNextSanityImage } from 'next-sanity-image'
 
-import client from '../../../sanity-client'
+import client from '../../../utils/sanity-client'
 import { buildInternalUrl } from '../../../utils/helpers'
 
 const SerializedImage = ({ node }) => {

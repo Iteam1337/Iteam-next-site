@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section } from '../../components/Core'
-import { HubspotForm } from '../../components/HubspotForm'
+import { HubspotForm } from '../../features/HubspotForm'
 import imgCtaBG from '../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg'
 
 export const CTA = () => (
