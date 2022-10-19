@@ -18,7 +18,7 @@ const Icon = styled.div`
   transform: translateY(-50%);
 `
 
-const InputGroup = ({
+export const InputGroup = ({
   type = 'text',
   focusColor = 'secondary',
   icon = <span className="far fa-envelope" />,
@@ -39,5 +39,3 @@ const InputGroup = ({
     </InputGroupStyled>
   )
 }
-
-export default InputGroup

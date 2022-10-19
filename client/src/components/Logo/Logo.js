@@ -40,7 +40,7 @@ const LogoHorizontal = ({ className }) => {
   )
 }
 
-const Logo = ({ white, vertical = false, className, ...rest }) => {
+export const Logo = ({ white, vertical = false, className, ...rest }) => {
   return (
     <Link href="/">
       <a
@@ -65,5 +65,3 @@ const Logo = ({ white, vertical = false, className, ...rest }) => {
     </Link>
   )
 }
-
-export default Logo

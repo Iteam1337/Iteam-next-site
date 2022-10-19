@@ -10,8 +10,8 @@ import {
   urlFor,
 } from '../utils/helpers'
 import { Section, Box, Typography } from '../components/Core'
-import PageWrapper from '../components/PageWrapper'
-import ExitPreviewLink from '../components/ExitPreviewLink'
+import { PageWrapper } from '../components/PageWrapper'
+import { ExitPreviewLink } from '../components/ExitPreviewLink'
 import { Hero } from '../features/Hero'
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'

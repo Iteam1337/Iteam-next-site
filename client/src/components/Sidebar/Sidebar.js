@@ -1,7 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 
-import { Box, Span, Typography } from '../Core'
+import { Box, Typography } from '../Core'
 
 export const CardSidebar = ({ children, ...rest }) => (
   <Box
@@ -36,36 +35,4 @@ export const TitlePost = ({ link = '/', children }) => (
 
 export const Date = ({ children }) => (
   <Typography.Caption>{children}</Typography.Caption>
-)
-
-export const CatList = ({ children, ...rest }) => (
-  <ul
-    css={`
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    `}
-    {...rest}
-  >
-    {children}
-  </ul>
-)
-
-export const CatListItem = ({
-  link = '/',
-  numPosts = 20,
-  children,
-  ...rest
-}) => (
-  <li
-    {...rest}
-    css={`
-      margin-bottom: 13px;
-    `}
-  >
-    <Link href={link}>
-      <Span color="light">{children}</Span>{' '}
-      <Span color="lightShade">- {numPosts} Posts</Span>
-    </Link>
-  </li>
 )

@@ -2,8 +2,8 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Typography } from '../../components/Core'
-import Card from '../../components/Card'
-import CardList from '../../components/CardList'
+import { Card } from '../../components/Card'
+import { CardList } from '../../components/CardList'
 
 export const TeamList = ({ content, coworkers }) => {
   const sortedTeam = coworkers.sort(function (a, b) {

@@ -46,7 +46,7 @@ const StyledAnchor = styled.a`
   }
 `
 
-const CTALink = ({ href, text, variant, bottomRounded, className }) => {
+export const CTALink = ({ href, text, variant, bottomRounded, className }) => {
   const isExternal = href.includes('http')
   return isExternal ? (
     <StyledAnchor
@@ -75,5 +75,3 @@ const CTALink = ({ href, text, variant, bottomRounded, className }) => {
     </Link>
   )
 }
-
-export default CTALink

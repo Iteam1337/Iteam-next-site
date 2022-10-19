@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   }
 `
 
-const ExitPreviewLink = () => {
+export const ExitPreviewLink = () => {
   const router = useRouter()
   return (
     <Wrapper>
@@ -26,5 +26,3 @@ const ExitPreviewLink = () => {
     </Wrapper>
   )
 }
-
-export default ExitPreviewLink

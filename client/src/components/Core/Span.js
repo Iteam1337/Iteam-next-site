@@ -9,8 +9,6 @@ const SpanStyled = styled.span`
   ${shadow};
 `
 
-const Span = ({ ...props }) => {
+export const Span = ({ ...props }) => {
   return <SpanStyled {...props} />
 }
-
-export default Span

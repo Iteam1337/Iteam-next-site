@@ -21,7 +21,7 @@ const CardText = styled(Box)`
   padding-left: 30px;
 `
 
-const CaseFooterSection = ({ img, title, alt, blocks, ...rest }) => {
+export const CaseFooterSection = ({ img, title, alt, blocks, ...rest }) => {
   return (
     <Card className="d-flex" {...rest}>
       <ImageContainer>
@@ -34,5 +34,3 @@ const CaseFooterSection = ({ img, title, alt, blocks, ...rest }) => {
     </Card>
   )
 }
-
-export default CaseFooterSection

@@ -12,9 +12,9 @@ import {
   TextWithImageToLeft,
   DefaultContent,
 } from '../features/Startpage'
-import PageWrapper from '../components/PageWrapper'
+import { PageWrapper } from '../components/PageWrapper'
 import { filterDataToSingleItem } from '../utils/helpers'
-import ExitPreviewLink from '../components/ExitPreviewLink'
+import { ExitPreviewLink } from '../components/ExitPreviewLink'
 
 const StartPage = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.startPageQuery, {

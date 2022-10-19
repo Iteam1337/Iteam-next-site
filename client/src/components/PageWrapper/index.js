@@ -1,1 +1,1 @@
-export { default } from './PageWrapper'
+export { PageWrapper } from './PageWrapper'

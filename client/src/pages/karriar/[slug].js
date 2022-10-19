@@ -3,13 +3,13 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 
-import PageWrapper from '../../components/PageWrapper'
+import { PageWrapper } from '../../components/PageWrapper'
 import { Section, Box, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
 
 const OpeningDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(

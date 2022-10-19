@@ -23,12 +23,10 @@ const DivStyledInside = styled(DivStyled)`
   }
 `
 
-const Section = ({ children, inside, ...rest }) => {
+export const Section = ({ children, inside, ...rest }) => {
   return inside ? (
     <DivStyledInside {...rest}> {children}</DivStyledInside>
   ) : (
     <DivStyled {...rest}> {children}</DivStyled>
   )
 }
-
-export default Section

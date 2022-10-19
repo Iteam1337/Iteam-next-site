@@ -263,7 +263,7 @@ const Client = ({ item, active }) => {
   )
 }
 
-const Carousel = ({ content, coworker = false }) => {
+export const Carousel = ({ content, coworker = false }) => {
   const [activeSlide, setActiveSlide] = useState(0)
 
   useEffect(() => {
@@ -330,5 +330,3 @@ const Carousel = ({ content, coworker = false }) => {
     </Container>
   )
 }
-
-export default Carousel

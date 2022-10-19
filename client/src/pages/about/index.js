@@ -2,13 +2,13 @@ import React from 'react'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 
-import PageWrapper from '../../components/PageWrapper'
+import { PageWrapper } from '../../components/PageWrapper'
 import { Hero } from '../../features/Hero'
 import { Content, CTA, TeamList } from '../../features/About'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
-import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
 
 const About = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.aboutPageQuery, {

@@ -2,7 +2,7 @@ import React from 'react'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 
-import PageWrapper from '../components/PageWrapper'
+import { PageWrapper } from '../components/PageWrapper'
 import { TextWithTags } from '../features/TextWithTags'
 import { Testimonial } from '../features/Testimonial'
 import { SectionWithImage } from '../features/SectionWithImage'
@@ -14,7 +14,7 @@ import { getClient } from '../lib/sanity.server'
 import { filterDataToSingleItem } from '../utils/helpers'
 import { usePreviewSubscription } from '../lib/sanity'
 import { urlFor } from '../utils/helpers'
-import ExitPreviewLink from '../components/ExitPreviewLink'
+import { ExitPreviewLink } from '../components/ExitPreviewLink'
 
 const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
   const { data: previewData } = usePreviewSubscription(data?.scaleUpPageQuery, {

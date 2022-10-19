@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import clsx from 'clsx'
 
 import { Box, Typography } from '../Core'
-import Logo from '../Logo'
+import { Logo } from '../Logo'
 
 const FooterList = ({ children, className }) => {
   return (
@@ -13,7 +13,7 @@ const FooterList = ({ children, className }) => {
   )
 }
 
-const Footer = ({ isDark = true, content }) => {
+export const Footer = ({ isDark = true, content }) => {
   return (
     <footer>
       <Box bg={isDark ? 'dark' : 'light'}>
@@ -309,5 +309,3 @@ const Footer = ({ isDark = true, content }) => {
     </footer>
   )
 }
-
-export default Footer

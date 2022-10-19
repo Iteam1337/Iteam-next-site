@@ -87,7 +87,7 @@ const ButtonOutline = styled(ButtonSolid)`
   }
 `
 
-const Button = ({
+export const Button = ({
   variant = 'solid',
   color = 'dark',
   bg = 'pink',
@@ -111,5 +111,3 @@ const Button = ({
     />
   )
 }
-
-export default Button

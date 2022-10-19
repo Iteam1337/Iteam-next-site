@@ -1,1 +1,1 @@
-export { default } from './CaseFooterSection'
+export { CaseFooterSection } from './CaseFooterSection'

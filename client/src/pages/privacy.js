@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
-import PageWrapper from '../components/PageWrapper'
+import { PageWrapper } from '../components/PageWrapper'
 import { Section, Box, List, Typography } from '../components/Core'
 
 const StyledLi = styled.li`

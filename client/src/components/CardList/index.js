@@ -1,9 +1,7 @@
 import { CardListGrid } from './CardListGrid'
 import { CardListFlex } from './CardListFlex'
 
-const CardList = {
+export const CardList = {
   CardListGrid,
   CardListFlex,
 }
-
-export default CardList

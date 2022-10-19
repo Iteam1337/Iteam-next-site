@@ -81,7 +81,7 @@ const CloseButton = (props) => (
   </CloseWrapper>
 )
 
-const ModalVideo = (props) => {
+export const ModalVideo = (props) => {
   const [loading, setLoading] = useState(true)
   const gContext = useContext(GlobalContext)
 
@@ -118,5 +118,3 @@ const ModalVideo = (props) => {
     </ModalStyled>
   )
 }
-
-export default ModalVideo

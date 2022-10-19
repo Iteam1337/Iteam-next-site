@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Span, Typography } from '../../components/Core'
-import ContentCard from '../../components/ContentCard'
+import { ContentCard } from '../../components/ContentCard'
 
 const SectionStyled = styled(Section)``
 

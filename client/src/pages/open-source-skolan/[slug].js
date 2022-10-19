@@ -4,14 +4,14 @@ import { NextSeo } from 'next-seo'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import PageWrapper from '../../components/PageWrapper'
+import { PageWrapper } from '../../components/PageWrapper'
 import { Section, Box, Span, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import { BlogList } from '../../sections/Aktuellt'
-import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { BlogList } from '../../features/Aktuellt'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
 
 const VideoContainer = styled.div`
   position: relative;
