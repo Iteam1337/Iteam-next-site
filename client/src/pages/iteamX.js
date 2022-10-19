@@ -10,13 +10,13 @@ import {
   CaseStudies,
   Reviews,
   Contact,
-} from '../sections/IteamX'
+} from '../features/IteamX'
 import PageWrapper from '../components/PageWrapper'
 import { getClient } from '../lib/sanity.server'
 import { usePreviewSubscription } from '../lib/sanity'
 import { filterDataToSingleItem, urlFor } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'
-import { SectionWithButtonAndTextGrid } from '../sections/SectionWithButtonAndTextGrid'
+import { SectionWithButtonAndTextGrid } from '../features/SectionWithButtonAndTextGrid'
 
 const IteamX = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.xPageQuery, {

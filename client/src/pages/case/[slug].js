@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo'
 
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Box, Typography } from '../../components/Core'
-import { CTA, CaseList } from '../../sections/Case'
+import { CTA, CaseList } from '../../features/Case'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'

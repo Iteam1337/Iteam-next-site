@@ -4,7 +4,7 @@ import { useNextSanityImage } from 'next-sanity-image'
 import Gravatar from 'react-gravatar'
 
 import client from '../../sanity-client'
-import { SocialMediaLinks } from '../../sections/About/SocialMediaLinks'
+import { SocialMediaLinks } from '../../features/About/SocialMediaLinks'
 import { formatPhoneNumber } from '../../utils/helpers'
 import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'

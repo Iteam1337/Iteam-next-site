@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo'
 
 import PageWrapper from '../../components/PageWrapper'
 import { Section, Typography, Box } from '../../components/Core'
-import { BlogList, Sidebar } from '../../sections/Aktuellt'
+import { BlogList, Sidebar } from '../../features/Aktuellt'
 import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
