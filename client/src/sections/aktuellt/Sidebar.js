@@ -8,7 +8,7 @@ import {
   Date,
 } from '../../components/Sidebar'
 
-const Sidebar = ({ posts }) => {
+export const Sidebar = ({ posts }) => {
   const sortedPosts = posts.sort((a, b) => {
     if (a.date < b.date) {
       return 1
@@ -32,4 +32,3 @@ const Sidebar = ({ posts }) => {
     </>
   )
 }
-export default Sidebar

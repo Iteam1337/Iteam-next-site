@@ -1,0 +1,7 @@
+export { CaseStudies } from './CaseStudies'
+export { Contact } from './Contact'
+export { Content } from './Content'
+export { Content2 } from './Content2'
+export { Fact } from './Fact'
+export { Hero } from './Hero'
+export { Reviews } from './Reviews'

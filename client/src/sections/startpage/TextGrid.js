@@ -24,7 +24,7 @@ const FeatureCard = ({ title, children, ...rest }) => (
   </Box>
 )
 
-const TextGrid = ({ content }) => {
+export const TextGrid = ({ content }) => {
   return (
     <SectionStyled>
       {/* content.title is actually just a description of the Sanity document type ("Flera texter"), but serves OK as a generic h2 */}
@@ -43,5 +43,3 @@ const TextGrid = ({ content }) => {
     </SectionStyled>
   )
 }
-
-export default TextGrid

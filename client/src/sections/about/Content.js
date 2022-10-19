@@ -13,7 +13,7 @@ const ContentImg = styled(Box)`
   height: 100%;
 `
 
-const Content = ({ content }) => (
+export const Content = ({ content }) => (
   <>
     <Section>
       <Container>
@@ -65,5 +65,3 @@ const Content = ({ content }) => (
     </Section>
   </>
 )
-
-export default Content

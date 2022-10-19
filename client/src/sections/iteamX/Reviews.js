@@ -58,7 +58,7 @@ const ContentCard = ({
   </Box>
 )
 
-const Reviews = ({ quote }) => {
+export const Reviews = ({ quote }) => {
   return (
     <>
       <Section bg="dark">
@@ -80,5 +80,3 @@ const Reviews = ({ quote }) => {
     </>
   )
 }
-
-export default Reviews

@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { CTALink, Section, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
-const Content1 = ({ content }) => {
+export const Content1 = ({ content }) => {
   return (
     <Section py={0}>
       <Container>
@@ -40,5 +40,3 @@ const Content1 = ({ content }) => {
     </Section>
   )
 }
-
-export default Content1

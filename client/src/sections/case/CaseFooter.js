@@ -5,7 +5,7 @@ import { Section, Typography } from '../../components/Core'
 import CaseFooterSection from '../../components/CaseFooterSection'
 import { urlFor } from '../../utils/helpers'
 
-const CaseFooter = ({ sectionCards }) => {
+export const CaseFooter = ({ sectionCards }) => {
   return (
     <>
       {/* <!-- Feature section --> */}
@@ -31,5 +31,3 @@ const CaseFooter = ({ sectionCards }) => {
     </>
   )
 }
-
-export default CaseFooter

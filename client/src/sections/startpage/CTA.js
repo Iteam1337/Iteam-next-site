@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Box, Typography, CTALink } from '../../components/Core'
 import { getRouteNameFromPageType } from '../../utils/helpers'
 
-const CTA = ({ content }) => {
+export const CTA = ({ content }) => {
   return (
     <>
       {/* <!-- CTA section --> */}
@@ -29,5 +29,3 @@ const CTA = ({ content }) => {
     </>
   )
 }
-
-export default CTA

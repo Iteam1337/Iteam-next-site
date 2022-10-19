@@ -98,7 +98,7 @@ const TimePer = styled.span`
   margin-bottom: 5px;
 `
 
-const Pricing = ({ content }) => {
+export const Pricing = ({ content }) => {
   const [timeMonthly, setTimeMonthly] = useState(true)
   return (
     <>
@@ -166,5 +166,3 @@ const Pricing = ({ content }) => {
     </>
   )
 }
-
-export default Pricing

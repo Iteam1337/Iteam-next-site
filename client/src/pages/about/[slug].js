@@ -3,8 +3,7 @@ import { groq } from 'next-sanity'
 
 import { usePreviewSubscription } from '../../lib/sanity'
 import PageWrapper from '../../components/PageWrapper'
-import Medarbetare from '../../sections/about/Medarbetare'
-import Hero from '../../sections/about/CoworkerHero'
+import { CoworkerHero, Medarbetare } from '../../sections/about'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
@@ -22,12 +21,12 @@ const CoworkerPage = ({ data, preview = false }) => {
       {preview && <ExitPreviewLink />}
       {post && (
         <>
-          <Hero
+          <CoworkerHero
             title={post?.fullname ?? post.fullname}
             heroImage={post?.heroImage ?? post.heroImage}
           >
             {post?.role ?? post.role}
-          </Hero>
+          </CoworkerHero>
           <Medarbetare info={post ?? post} />
         </>
       )}

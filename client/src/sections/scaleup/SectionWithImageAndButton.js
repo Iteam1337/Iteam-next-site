@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { CTALink, Section, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
-const SectionWithImageAndButton = ({ content }) => {
+export const SectionWithImageAndButton = ({ content }) => {
   const { title, blockText, button, imageWithAlt } = content
 
   return (
@@ -46,5 +46,3 @@ const SectionWithImageAndButton = ({ content }) => {
     </Section>
   )
 }
-
-export default SectionWithImageAndButton

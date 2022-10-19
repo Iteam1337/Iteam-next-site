@@ -14,7 +14,7 @@ const SectionStyled = styled(Section)`
   }
 `
 
-const Fact = ({ content }) => (
+export const Fact = ({ content }) => (
   <>
     {/* <!-- Fact section 1 --> */}
     <SectionStyled bg="dark">
@@ -37,5 +37,3 @@ const Fact = ({ content }) => (
     </SectionStyled>
   </>
 )
-
-export default Fact

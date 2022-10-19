@@ -24,7 +24,7 @@ const ImgStyled = styled.img`
   }
 `
 
-const TextWithImageToLeft = ({ content }) => {
+export const TextWithImageToLeft = ({ content }) => {
   return (
     <>
       <Section>
@@ -59,5 +59,3 @@ const TextWithImageToLeft = ({ content }) => {
     </>
   )
 }
-
-export default TextWithImageToLeft

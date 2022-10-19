@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Box, Typography } from '../../components/Core'
 
-const Feature = ({ content }) => {
+export const Feature = ({ content }) => {
   return (
     <>
       <Section pt="0!important">
@@ -27,4 +27,3 @@ const Feature = ({ content }) => {
     </>
   )
 }
-export default Feature

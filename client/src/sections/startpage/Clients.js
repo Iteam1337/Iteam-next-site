@@ -26,7 +26,7 @@ const Client = ({ client }) => {
   )
 }
 
-const Clients = ({ clients }) => {
+export const Clients = ({ clients }) => {
   return (
     <Box py={'30px'}>
       <h3 className="tw-sr-only">Kunder</h3>
@@ -44,5 +44,3 @@ const Clients = ({ clients }) => {
     </Box>
   )
 }
-
-export default Clients

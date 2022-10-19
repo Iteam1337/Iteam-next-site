@@ -13,7 +13,7 @@ const ImageRight = styled(Box)`
   }
 `
 
-const Content2 = ({ content }) => {
+export const Content2 = ({ content }) => {
   return (
     <>
       {/* <!-- Content section 1 --> */}
@@ -64,5 +64,3 @@ const Content2 = ({ content }) => {
     </>
   )
 }
-
-export default Content2

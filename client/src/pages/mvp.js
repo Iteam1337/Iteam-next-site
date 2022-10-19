@@ -13,8 +13,7 @@ import {
 } from '../sections/common'
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
-import Content1 from '../sections/mvp/Content1'
-import CTA from '../sections/mvp/CTA'
+import { Content1, CTA } from '../sections/Mvp'
 import SectionWithImageAndCta from '../sections/common/SectionWithImageAndCta'
 import { filterDataToSingleItem, urlFor } from '../utils/helpers'
 

@@ -10,7 +10,7 @@ import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
-import BlogList from '../../sections/aktuellt/BlogList'
+import { BlogList } from '../../sections/Aktuellt'
 import ExitPreviewLink from '../../components/ExitPreviewLink'
 
 const VideoContainer = styled.div`

@@ -30,7 +30,7 @@ const FaqCard = styled(Box)`
   }
 `
 
-const Faq = ({ content }) => {
+export const Faq = ({ content }) => {
   return (
     <>
       {/* <!-- Faq section --> */}
@@ -60,5 +60,3 @@ const Faq = ({ content }) => {
     </>
   )
 }
-
-export default Faq

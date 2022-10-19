@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Box, Typography } from '../../components/Core'
 import ContentCard from '../../components/ContentCard'
 
-const Feature2 = ({ content }) => {
+export const Role = ({ content }) => {
   return (
     <Section bg="#f7f7fb">
       <Container>
@@ -25,5 +25,3 @@ const Feature2 = ({ content }) => {
     </Section>
   )
 }
-
-export default Feature2
