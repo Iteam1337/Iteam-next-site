@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import styled from 'styled-components'
 
-import Logo from '../Logo'
+import { Logo } from '../Logo'
 
 const Overlay = styled.div`
   position: fixed;
@@ -44,7 +44,7 @@ const LogoContainer = styled.div`
   font-size: 1.25rem;
 `
 
-const Offcanvas = ({ show, onHideOffcanvas, children }) => {
+export const Offcanvas = ({ show, onHideOffcanvas, children }) => {
   return (
     <>
       <Overlay show={show} onClick={onHideOffcanvas} />
@@ -62,5 +62,3 @@ const Offcanvas = ({ show, onHideOffcanvas, children }) => {
     </>
   )
 }
-
-export default Offcanvas

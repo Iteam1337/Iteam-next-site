@@ -18,8 +18,6 @@ const BadgeSolid = styled.span`
   ${space};
 `
 
-const Badge = ({ ...rest }) => {
+export const Badge = ({ ...rest }) => {
   return <BadgeSolid {...rest} />
 }
-
-export default Badge

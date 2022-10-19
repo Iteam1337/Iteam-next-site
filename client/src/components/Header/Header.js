@@ -6,10 +6,10 @@ import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
 import GlobalContext from '../../context/GlobalContext'
-import Offcanvas from '../Offcanvas'
-import NestedMenu from '../NestedMenu'
+import { Offcanvas } from '../Offcanvas'
+import { NestedMenu } from '../NestedMenu'
 import { device } from '../../utils'
-import Logo from '../Logo'
+import { Logo } from '../Logo'
 import { menuItems } from './menuItems'
 
 const SiteHeader = styled.header`
@@ -190,7 +190,7 @@ const CloseMenuButton = styled.button`
   padding: 0;
 `
 
-const Header = ({ isDark = false, loaded }) => {
+export const Header = ({ isDark = false, loaded }) => {
   const gContext = useContext(GlobalContext)
   const [showScrolling, setShowScrolling] = useState(false)
   const [showReveal, setShowReveal] = useState(false)
@@ -466,5 +466,3 @@ const Header = ({ isDark = false, loaded }) => {
     </>
   )
 }
-
-export default Header

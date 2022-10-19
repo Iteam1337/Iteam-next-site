@@ -53,7 +53,7 @@ const Round = styled.span`
   pointer-events: none;
 `
 
-const Switch = ({ bg = 'secondary', ...rest }) => {
+export const Switch = ({ bg = 'secondary', ...rest }) => {
   const [active, setActive] = useState(false)
 
   const handleSwitch = () => {
@@ -72,5 +72,3 @@ const Switch = ({ bg = 'secondary', ...rest }) => {
     </SwitchStyled>
   )
 }
-
-export default Switch

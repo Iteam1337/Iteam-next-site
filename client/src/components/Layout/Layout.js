@@ -4,11 +4,11 @@ import Head from 'next/head'
 import AOS from 'aos'
 import { get, merge } from 'lodash'
 
-import Header from '../Header'
-import Footer from '../Footer'
-import ModalVideo from '../ModalVideo'
+import { Header } from '../Header'
+import { Footer } from '../Footer'
+import { ModalVideo } from '../ModalVideo'
 import GlobalContext from '../../context/GlobalContext'
-import SkipLink from '../SkipLink'
+import { SkipLink } from '../SkipLink'
 // the full theme object
 import { theme as baseTheme } from '../../utils'
 
@@ -22,7 +22,7 @@ const getTheme = (mode) =>
     colors: get(baseTheme.colors.modes, mode, baseTheme.colors),
   })
 
-const Layout = ({ children, pageContext, footer }) => {
+export const Layout = ({ children, pageContext, footer }) => {
   const gContext = useContext(GlobalContext)
 
   const [loaded, setLoaded] = useState(false)
@@ -81,9 +81,23 @@ const Layout = ({ children, pageContext, footer }) => {
       >
         <Head>
           <title>Iteam</title>
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         </Head>
@@ -102,5 +116,3 @@ const Layout = ({ children, pageContext, footer }) => {
     </>
   )
 }
-
-export default Layout

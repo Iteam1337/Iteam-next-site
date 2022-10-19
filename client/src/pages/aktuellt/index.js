@@ -5,13 +5,13 @@ import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
-import PageWrapper from '../../components/PageWrapper'
+import { PageWrapper } from '../../components/PageWrapper'
 import { Section, Typography } from '../../components/Core'
 import { BlogList } from '../../features/Aktuellt'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
-import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
 
 export default function BlogRegular({ data, preview = false }) {
   const router = useRouter()

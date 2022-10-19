@@ -74,7 +74,7 @@ const InputAnimation = styled.div`
   }
 `
 
-const Input = ({
+export const Input = ({
   variant = 'solid',
   type = 'text',
   focusColor = 'secondary',
@@ -98,5 +98,3 @@ const Input = ({
     />
   )
 }
-
-export default Input

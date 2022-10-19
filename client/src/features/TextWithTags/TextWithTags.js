@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { Section, Box, Typography } from '../../components/Core'
-import ContentCard from '../../components/ContentCard'
+import { ContentCard } from '../../components/ContentCard'
 
 export const TextWithTags = ({ content }) => {
   return (

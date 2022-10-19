@@ -1,31 +1,13 @@
-import Box from './Box'
-import Badge from './Badge'
-import Button from './Button'
-import Section from './Section'
-import Input from './Input'
-import Checkbox from './Checkbox'
-import InputGroup from './InputGroup'
-import Select from './Select'
-import Switch from './Switch'
-import Span from './Span'
-import List from './List'
-import ImgContainer from './ImgContainer'
-import Typography from './Typography'
-import CTALink from './CTALink'
-
-export {
-  Box,
-  Badge,
-  Button,
-  Section,
-  Input,
-  Checkbox,
-  InputGroup,
-  Select,
-  Switch,
-  Span,
-  List,
-  ImgContainer,
-  Typography,
-  CTALink,
-}
+export { Box } from './Box'
+export { Badge } from './Badge'
+export { Button } from './Button'
+export { Section } from './Section'
+export { Input } from './Input'
+export { Checkbox } from './Checkbox'
+export { InputGroup } from './InputGroup'
+export { Switch } from './Switch'
+export { Span } from './Span'
+export { List } from './List'
+export { ImgContainer } from './ImgContainer'
+export { Typography } from './Typography'
+export { CTALink } from './CTALink'

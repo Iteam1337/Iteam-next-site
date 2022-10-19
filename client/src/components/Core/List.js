@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const List = styled.ul`
+export const List = styled.ul`
   li {
     color: ${({ theme }) => theme.colors.text};
     font-size: 16px;
@@ -24,5 +24,3 @@ const List = styled.ul`
     }
   }
 `
-
-export default List

@@ -2,7 +2,7 @@ import React from 'react'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 
-import PageWrapper from '../../components/PageWrapper'
+import { PageWrapper } from '../../components/PageWrapper'
 import { Hero } from '../../features/Hero'
 import { Testimonial } from '../../features/Testimonial'
 import { Feature, Roles } from '../../features/Karriar'
@@ -13,7 +13,7 @@ import {
   shuffleArray,
   urlFor,
 } from '../../utils/helpers'
-import ExitPreviewLink from '../../components/ExitPreviewLink'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
 
 const Career = ({ data, preview = false, carousel }) => {
   const { data: previewData } = usePreviewSubscription(data?.careerPageQuery, {

@@ -2,7 +2,11 @@ import React, { useEffect, useContext } from 'react'
 
 import GlobalContext from '../../context/GlobalContext'
 
-const PageWrapper = ({ children, headerDark = false, footerDark = false }) => {
+export const PageWrapper = ({
+  children,
+  headerDark = false,
+  footerDark = false,
+}) => {
   const gContext = useContext(GlobalContext)
 
   useEffect(() => {
@@ -21,5 +25,3 @@ const PageWrapper = ({ children, headerDark = false, footerDark = false }) => {
 
   return <>{children}</>
 }
-
-export default PageWrapper

@@ -1,1 +1,1 @@
-export { default } from './Offcanvas'
+export { Offcanvas } from './Offcanvas'

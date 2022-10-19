@@ -11,11 +11,11 @@ import {
   Reviews,
   Contact,
 } from '../features/IteamX'
-import PageWrapper from '../components/PageWrapper'
+import { PageWrapper } from '../components/PageWrapper'
 import { getClient } from '../lib/sanity.server'
 import { usePreviewSubscription } from '../lib/sanity'
 import { filterDataToSingleItem, urlFor } from '../utils/helpers'
-import ExitPreviewLink from '../components/ExitPreviewLink'
+import { ExitPreviewLink } from '../components/ExitPreviewLink'
 import { SectionWithButtonAndTextGrid } from '../features/SectionWithButtonAndTextGrid'
 
 const IteamX = ({ data, preview = false }) => {

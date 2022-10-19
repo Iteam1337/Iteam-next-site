@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-import Card from '../../components/Card'
-import CardList from '../../components/CardList'
+import { Card } from '../../components/Card'
+import { CardList } from '../../components/CardList'
 import { Section } from '../../components/Core'
 
 export function BlogList({ posts }) {

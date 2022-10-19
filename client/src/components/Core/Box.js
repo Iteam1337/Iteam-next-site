@@ -28,7 +28,7 @@ import {
   shadow,
 } from 'styled-system'
 
-const Box = styled.div`
+export const Box = styled.div`
   box-sizing: border-box;
   min-width: 0;
   ${color};
@@ -42,5 +42,3 @@ const Box = styled.div`
   ${position};
   ${shadow};
 `
-
-export default Box

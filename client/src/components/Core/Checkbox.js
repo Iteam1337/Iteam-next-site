@@ -51,7 +51,7 @@ const Text = styled.p`
   margin-bottom: 0;
 `
 
-const Checkbox = ({ children = 'Keep me signed in', ...rest }) => {
+export const Checkbox = ({ children = 'Keep me signed in', ...rest }) => {
   const uID = 'check_'
 
   return (
@@ -62,5 +62,3 @@ const Checkbox = ({ children = 'Keep me signed in', ...rest }) => {
     </CheckStyled>
   )
 }
-
-export default Checkbox
