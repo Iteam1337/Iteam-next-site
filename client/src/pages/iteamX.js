@@ -16,7 +16,7 @@ import { getClient } from '../lib/sanity.server'
 import { usePreviewSubscription } from '../lib/sanity'
 import { filterDataToSingleItem, urlFor } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'
-import { SectionWithButtonAndTextGrid } from '../sections/common'
+import { SectionWithButtonAndTextGrid } from '../sections/SectionWithButtonAndTextGrid'
 
 const IteamX = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.xPageQuery, {

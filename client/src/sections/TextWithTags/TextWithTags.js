@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Box, Typography } from '../../components/Core'
 import ContentCard from '../../components/ContentCard'
 
-const TextWithTags = ({ content }) => {
+export const TextWithTags = ({ content }) => {
   return (
     <Section bg="#f7f7fb">
       <Container>
@@ -27,5 +27,3 @@ const TextWithTags = ({ content }) => {
     </Section>
   )
 }
-
-export default TextWithTags

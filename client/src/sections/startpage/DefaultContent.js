@@ -4,7 +4,8 @@ import { Clients } from './Clients'
 import { CTA } from './CTA'
 import { Faq } from './Faq'
 import { Offerings } from './Offerings'
-import { Testimonial, Pricing } from '../../sections/common'
+import { Testimonial } from '../../sections/Testimonial'
+import { Pricing } from '../../sections/Pricing'
 
 export const DefaultContent = ({ data, carousel, ourPricing }) => {
   return (

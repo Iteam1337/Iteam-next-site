@@ -3,7 +3,7 @@ import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 
 import PageWrapper from '../../components/PageWrapper'
-import { Hero } from '../../sections/common'
+import { Hero } from '../../sections/Hero'
 import { Content, CTA, TeamList } from '../../sections/About'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'

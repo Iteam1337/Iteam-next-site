@@ -14,7 +14,7 @@ const FeatureCard = ({ title, children, ...rest }) => (
   </Box>
 )
 
-const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
+export const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
   const { section, textGrid, button } = content
 
   return (
@@ -69,5 +69,3 @@ const SectionWithButtonAndTextGrid = ({ content, linkTo = 'book' }) => {
     </Section>
   )
 }
-
-export default SectionWithButtonAndTextGrid

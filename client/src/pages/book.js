@@ -12,7 +12,7 @@ import {
 import { Section, Box, Typography } from '../components/Core'
 import PageWrapper from '../components/PageWrapper'
 import ExitPreviewLink from '../components/ExitPreviewLink'
-import { Hero } from '../sections/common'
+import { Hero } from '../sections/Hero'
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
 

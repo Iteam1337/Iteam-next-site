@@ -4,7 +4,7 @@ import { groq } from 'next-sanity'
 
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
-import SectionWithImageAndCta from '../sections/common/SectionWithImageAndCta'
+import { SectionWithImageAndCta } from '../sections/SectionWithImageAndCta'
 import {
   Hero,
   TextGrid,
