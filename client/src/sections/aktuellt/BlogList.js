@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-import Card from '../../components/Card/'
+import Card from '../../components/Card'
 import CardList from '../../components/CardList'
 import { Section } from '../../components/Core'
 
-export default function BlogList({ posts }) {
+export function BlogList({ posts }) {
   const sortedPosts = posts.sort((a, b) => {
     if (a.date < b.date) {
       return 1

@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Typography, CTALink } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
-const Case = ({ content }) => {
+export const Case = ({ content }) => {
   return (
     <Section id="design_sprint">
       <Container>
@@ -50,5 +50,3 @@ const Case = ({ content }) => {
     </Section>
   )
 }
-
-export default Case

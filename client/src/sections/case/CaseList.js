@@ -5,7 +5,7 @@ import Card from '../../components/Card'
 import CardList from '../../components/CardList'
 import { Section, Typography } from '../../components/Core'
 
-const CaseList = ({ posts }) => {
+export const CaseList = ({ posts }) => {
   return (
     <>
       <Section className="position-relative">
@@ -33,5 +33,3 @@ const CaseList = ({ posts }) => {
     </>
   )
 }
-
-export default CaseList

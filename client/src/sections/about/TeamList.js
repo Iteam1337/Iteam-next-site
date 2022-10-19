@@ -5,7 +5,7 @@ import { Section, Typography } from '../../components/Core'
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
 
-const TeamList = ({ content, coworkers }) => {
+export const TeamList = ({ content, coworkers }) => {
   const sortedTeam = coworkers.sort(function (a, b) {
     if (a.fullname < b.fullname) {
       return -1
@@ -63,5 +63,3 @@ const TeamList = ({ content, coworkers }) => {
     </>
   )
 }
-
-export default TeamList

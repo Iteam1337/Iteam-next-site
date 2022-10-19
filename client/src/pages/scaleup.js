@@ -9,17 +9,14 @@ import {
   TextWithTags,
   Testimonial,
   Hero,
+  Pricing,
 } from '../sections/common'
-import Role from '../sections/scaleup/Role'
-import SectionWithImageAndButton from '../sections/scaleup/SectionWithImageAndButton'
-import Case from '../sections/scaleup/Case'
-import CTA from '../sections/scaleup/CTA'
+import { Role, SectionWithImageAndButton, Case, CTA } from '../sections/Scaleup'
 import { getClient } from '../lib/sanity.server'
 import { filterDataToSingleItem } from '../utils/helpers'
 import { usePreviewSubscription } from '../lib/sanity'
 import { urlFor } from '../utils/helpers'
 import ExitPreviewLink from '../components/ExitPreviewLink'
-import Pricing from '../sections/startpage/Pricing'
 
 const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
   const { data: previewData } = usePreviewSubscription(data?.scaleUpPageQuery, {

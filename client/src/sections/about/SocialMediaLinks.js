@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import { Typography } from '../../components/Core'
 
-const SocialMediaLinks = ({ socialMedia, fullname }) => {
+export const SocialMediaLinks = ({ socialMedia, fullname }) => {
   return Object.entries(socialMedia).map(([key, value], index) => {
     return (
       <Fragment key={index}>
@@ -24,5 +24,3 @@ const SocialMediaLinks = ({ socialMedia, fullname }) => {
     )
   })
 }
-
-export default SocialMediaLinks

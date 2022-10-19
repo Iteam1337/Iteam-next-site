@@ -4,8 +4,7 @@ import { NextSeo } from 'next-seo'
 
 import PageWrapper from '../../components/PageWrapper'
 import { Hero, Testimonial } from '../../sections/common'
-import Feature from '../../sections/karriar/Feature'
-import Roles from '../../sections/karriar/Roles'
+import { Feature, Roles } from '../../sections/Karriar'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import {

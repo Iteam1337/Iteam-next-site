@@ -18,7 +18,7 @@ const ShapeTop = styled(Box)`
   }
 `
 
-const Offerings = ({ data }) => {
+export const Offerings = ({ data }) => {
   const [time, setTime] = useState('00:00:00')
 
   useEffect(() => {
@@ -108,5 +108,3 @@ const Offerings = ({ data }) => {
     </>
   )
 }
-
-export default Offerings

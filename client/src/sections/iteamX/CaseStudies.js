@@ -5,7 +5,7 @@ import { Box } from '../../components/Core'
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
 
-const CaseStudies = ({ cases }) => {
+export const CaseStudies = ({ cases }) => {
   const formatPreviewDescription = (description) => {
     let trimmedDescription = description.slice(0, 150)
     trimmedDescription = trimmedDescription.slice(
@@ -55,5 +55,3 @@ const CaseStudies = ({ cases }) => {
     </>
   )
 }
-
-export default CaseStudies

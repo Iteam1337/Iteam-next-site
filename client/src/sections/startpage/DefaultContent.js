@@ -1,13 +1,12 @@
 import React from 'react'
 
-import Clients from './Clients'
-import CTA from './CTA'
-import Faq from './Faq'
-import Offerings from './Offerings'
-import Pricing from './Pricing'
-import { Testimonial } from '../../sections/common'
+import { Clients } from './Clients'
+import { CTA } from './CTA'
+import { Faq } from './Faq'
+import { Offerings } from './Offerings'
+import { Testimonial, Pricing } from '../../sections/common'
 
-const DefaultContent = ({ data, carousel, ourPricing }) => {
+export const DefaultContent = ({ data, carousel, ourPricing }) => {
   return (
     <>
       <Offerings data={data.ourOffers} />
@@ -19,5 +18,3 @@ const DefaultContent = ({ data, carousel, ourPricing }) => {
     </>
   )
 }
-
-export default DefaultContent

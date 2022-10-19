@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Typography } from '../../components/Core'
 import Carousel from '../../components/Carousel'
 
-const Testimonial = ({ content }) => {
+export const Testimonial = ({ content }) => {
   return (
     <>
       <Section bg="#F7F7FB" pb={['130px!important']}>
@@ -23,5 +23,3 @@ const Testimonial = ({ content }) => {
     </>
   )
 }
-
-export default Testimonial

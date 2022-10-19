@@ -28,7 +28,7 @@ const SectionStyled = styled(Section)`
   background-size: cover;
 `
 
-const Hero = ({ title, children, heroImage }) => {
+export const CoworkerHero = ({ title, children, heroImage }) => {
   return (
     <>
       <SectionStyled
@@ -57,5 +57,3 @@ const Hero = ({ title, children, heroImage }) => {
     </>
   )
 }
-
-export default Hero

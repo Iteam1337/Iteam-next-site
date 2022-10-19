@@ -6,7 +6,7 @@ import { Section } from '../../components/Core'
 import HubspotForm from '../../components/HubspotForm'
 import imgCtaBG from '../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg'
 
-const CTA = () => (
+export const CTA = () => (
   <>
     <Section bg="ash" id="book">
       <Container>
@@ -34,5 +34,3 @@ const CTA = () => (
     </Section>
   </>
 )
-
-export default CTA

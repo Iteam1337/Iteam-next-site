@@ -19,7 +19,7 @@ const tech = [
   'Datavisualisering',
 ]
 
-const Content = ({ content }) => {
+export const Content = ({ content }) => {
   const title = content.title.split('en hypotes.')
   return (
     <>
@@ -46,5 +46,3 @@ const Content = ({ content }) => {
     </>
   )
 }
-
-export default Content

@@ -20,7 +20,7 @@ const BoxStyled = styled(Box)`
   }
 `
 
-const Contact = () => (
+export const Contact = () => (
   <>
     <BoxStyled
       bg="dark"
@@ -53,5 +53,3 @@ const Contact = () => (
     </BoxStyled>
   </>
 )
-
-export default Contact

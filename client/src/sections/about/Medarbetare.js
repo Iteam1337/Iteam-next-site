@@ -16,7 +16,7 @@ const InfoSection = ({ text, title }) => (
   </Row>
 )
 
-const Medarbetare = ({ info }) => (
+export const Medarbetare = ({ info }) => (
   <Container>
     <Section>
       <Typography.H2 className="sr-only">Info</Typography.H2>
@@ -60,5 +60,3 @@ const Medarbetare = ({ info }) => (
     </Section>
   </Container>
 )
-
-export default Medarbetare

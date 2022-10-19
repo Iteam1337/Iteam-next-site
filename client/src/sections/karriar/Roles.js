@@ -5,7 +5,7 @@ import { Section, Typography } from '../../components/Core'
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
 
-const Roles = ({ content, openPositions }) => (
+export const Roles = ({ content, openPositions }) => (
   <>
     <Section bg="#f7f7fb" id="openings">
       <Container>
@@ -34,5 +34,3 @@ const Roles = ({ content, openPositions }) => (
     </Section>
   </>
 )
-
-export default Roles

@@ -20,7 +20,7 @@ const RightCard = styled(Box)`
   right: -275px;
 `
 
-const CTA = ({ text }) => {
+export const CTA = ({ text }) => {
   return (
     <>
       {/* <!-- CTA section --> */}
@@ -55,5 +55,3 @@ const CTA = ({ text }) => {
     </>
   )
 }
-
-export default CTA

@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Box, Typography, Span, CTALink } from '../../components/Core'
 import { getExternalOrInternalLink } from '../../utils/helpers'
 
-const Hero = ({ content }) => {
+export const Hero = ({ content }) => {
   const [title] = content.title.split('.')
   return (
     <>
@@ -50,5 +50,3 @@ const Hero = ({ content }) => {
     </>
   )
 }
-
-export default Hero

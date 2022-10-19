@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { Section, Typography } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
 
-const TextWithImageToRight = ({ content }) => {
+export const TextWithImageToRight = ({ content }) => {
   return (
     <>
       <Section
@@ -43,5 +43,3 @@ const TextWithImageToRight = ({ content }) => {
     </>
   )
 }
-
-export default TextWithImageToRight
