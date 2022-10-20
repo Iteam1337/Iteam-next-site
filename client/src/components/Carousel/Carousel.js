@@ -228,12 +228,17 @@ const Coworker = ({ item, active }) => {
 
 const Client = ({ item, active }) => {
   const imageProps = useNextSanityImage(sanityClient, item?.image?.asset._ref)
+  const { blurDataURL, loader, placeholder, src } = imageProps
+
   return (
     <SliderItem active={active}>
       <SliderCard className="slider-card">
         <SliderImgContainer className="tw-relative tw-h-[300px] sm:tw-h-[500px]">
           <Image
-            {...imageProps}
+            blurDataURL={blurDataURL}
+            loader={loader}
+            placeholder={placeholder}
+            src={src}
             alt={item.image.alt}
             layout="fill"
             objectFit="cover"
