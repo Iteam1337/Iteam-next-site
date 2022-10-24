@@ -1,5 +1,4 @@
 import React from 'react'
-import clsx from 'clsx'
 
 import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'
@@ -27,7 +26,6 @@ export const SimpleCard = ({
   preTitle,
   title,
   children,
-  readMore,
   ariaLabel,
   bgDark,
 }) => {
@@ -42,16 +40,13 @@ export const SimpleCard = ({
         />
       }
       title={title}
-      readMore={readMore}
       centerContent={false}
       bgDark={bgDark}
       className="tw-max-w-lg"
     >
-      <Typography.ParagraphSmall
-        className={clsx(readMore ? 'tw-pb-0' : 'tw-pb-6')}
-      >
-        {children}
-      </Typography.ParagraphSmall>
+      {children && (
+        <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
+      )}
     </BaseCard>
   )
 }

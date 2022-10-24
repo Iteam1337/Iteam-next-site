@@ -8,7 +8,6 @@ export const BaseCard = ({
   img,
   preTitle,
   title,
-  readMore,
   centerContent,
   children,
   variant,
@@ -46,25 +45,25 @@ export const BaseCard = ({
         {preTitle && (
           <div className="tw-order-2 tw-px-6 tw-pt-6">{preTitle}</div>
         )}
-        <div
-          className={clsx(
-            'tw-order-3 tw-px-6',
-            centerContent && 'tw-text-center'
-          )}
-        >
-          {children}
-        </div>
-        {readMore && (
-          <Typography.Caption
-            ariaHidden="true"
+        {children && (
+          <div
             className={clsx(
-              'tw-order-4 tw-mb-0 tw-mt-auto tw-px-6 tw-pb-6 tw-pt-1 tw-text-right tw-leading-none tw-underline tw-transition-opacity lg:tw-opacity-0',
-              'motion-reduce:tw-transition-none lg:group-hover:tw-opacity-100 lg:peer-focus-within:tw-opacity-100'
+              'tw-order-3 tw-px-6',
+              centerContent && 'tw-text-center'
             )}
           >
-            Läs mer
-          </Typography.Caption>
+            {children}
+          </div>
         )}
+        <Typography.Caption
+          ariaHidden="true"
+          className={clsx(
+            'tw-relative tw-order-4 tw-mb-0 tw-mt-auto tw-px-6 tw-pb-6 tw-pt-1 tw-text-right tw-leading-none tw-underline tw-transition-opacity lg:tw-opacity-0',
+            'motion-reduce:tw-transition-none lg:group-hover:tw-opacity-100 lg:peer-focus-within:tw-opacity-100'
+          )}
+        >
+          Läs mer
+        </Typography.Caption>
       </div>
     </li>
   )

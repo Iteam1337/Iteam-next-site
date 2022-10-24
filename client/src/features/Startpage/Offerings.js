@@ -92,7 +92,6 @@ export const Offerings = ({ data }) => {
                         link={getRouteNameFromPageType(offer.reference._ref)}
                         icon=""
                         title={offer.title}
-                        readMore={true}
                         bgDark={false}
                       >
                         {offer.subtitle}
