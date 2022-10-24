@@ -56,7 +56,6 @@ export const TeamCard = ({
         <TeamCardImage img={img} email={email} customImgAlt={customImgAlt} />
       }
       title={title}
-      readMore={false}
       gravatarEmail={email}
       centerContent={true}
       bgDark={bgDark}
@@ -67,7 +66,7 @@ export const TeamCard = ({
         )}
         <Typography.Caption className="tw-pb-3">{role}</Typography.Caption>
       </div>
-      <div className="tw-relative tw-flex tw-flex-col tw-pb-6">
+      <div className="tw-relative tw-flex tw-flex-col tw-pb-2">
         {phoneNumber && (
           <Typography.Caption>
             <Typography.Anchor href={`tel:${phoneNumber}`}>

@@ -60,12 +60,13 @@ export const ArticleCard = ({
       img={<ArticleCardImage img={img} variant={variant} />}
       preTitle={<ArticleCardPreTitle preTitle={preTitle} />}
       title={title}
-      readMore={true}
       centerContent={false}
       variant={variant}
       bgDark={bgDark}
     >
-      <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>
+      <Typography.ParagraphSmall className="tw-pb-2">
+        {children}
+      </Typography.ParagraphSmall>
     </BaseCard>
   )
 }
