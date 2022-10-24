@@ -211,7 +211,6 @@ export const Footer = ({ isDark = true, content }) => {
             <Row className="align-items-center">
               <Col
                 sm="6"
-                display="flex"
                 className="text-sm-left text-left mb-2 mb-sm-0 tw-w-full"
               >
                 <p
@@ -220,87 +219,17 @@ export const Footer = ({ isDark = true, content }) => {
                     isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                   )}
                 >
-                  &copy; 2021 Iteam, All Rights Reserved.
-                </p>
-                <p
-                  className={clsx(
-                    'tw-text-xs tw-tracking-normal',
-                    isDark ? 'tw-text-white' : 'tw-text-gray-dark'
-                  )}
-                >
+                  &copy; 2021 Iteam, All Rights Reserved.{' '}
                   <Typography.Anchor
                     className={clsx(
-                      isDark ? 'tw-text-white' : 'tw-text-gray-dark'
+                      isDark ? 'tw-text-white' : 'tw-text-gray-dark',
+                      'tw-underline'
                     )}
                     href="/privacy"
                   >
                     Our privacy policy.
                   </Typography.Anchor>
                 </p>
-              </Col>
-              <Col sm="6" className="tw-w-full">
-                <FooterList className="tw tw-mt-2 tw-flex tw-justify-start tw-gap-3">
-                  <li>
-                    <Typography.Anchor
-                      href={content.linkedinLink}
-                      target="_blank"
-                      aria-label="Linkedin"
-                      className={clsx(
-                        isDark ? 'tw-text-white' : 'tw-text-gray-dark'
-                      )}
-                    >
-                      <i
-                        className="icon icon-logo-linkedin"
-                        aria-hidden="true"
-                      ></i>
-                    </Typography.Anchor>
-                  </li>
-                  <li>
-                    <Typography.Anchor
-                      href={content.twitterLink}
-                      target="_blank"
-                      aria-label="Twitter"
-                      className={clsx(
-                        isDark ? 'tw-text-white' : 'tw-text-gray-dark'
-                      )}
-                    >
-                      <i
-                        className="icon icon-logo-twitter"
-                        aria-hidden="true"
-                      ></i>
-                    </Typography.Anchor>
-                  </li>
-                  <li>
-                    <Typography.Anchor
-                      href={content.facebookLink}
-                      target="_blank"
-                      aria-label="Facebook"
-                      className={clsx(
-                        isDark ? 'tw-text-white' : 'tw-text-gray-dark'
-                      )}
-                    >
-                      <i
-                        className="icon icon-logo-facebook"
-                        aria-hidden="true"
-                      ></i>
-                    </Typography.Anchor>
-                  </li>
-                  <li>
-                    <Typography.Anchor
-                      href={content.instagramLink}
-                      target="_blank"
-                      aria-label="Instagram"
-                      className={clsx(
-                        isDark ? 'tw-text-white' : 'tw-text-gray-dark'
-                      )}
-                    >
-                      <i
-                        className="icon icon-logo-instagram"
-                        aria-hidden="true"
-                      ></i>
-                    </Typography.Anchor>
-                  </li>
-                </FooterList>
               </Col>
             </Row>
           </div>
