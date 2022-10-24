@@ -58,8 +58,8 @@ export const BaseCard = ({
           <Typography.Caption
             ariaHidden="true"
             className={clsx(
-              'tw-order-4 tw-mb-0 tw-mt-auto tw-px-6 tw-pb-6 tw-pt-1 tw-text-right tw-leading-none tw-underline tw-opacity-0 tw-transition-opacity',
-              'group-hover:tw-opacity-100 peer-focus-within:tw-opacity-100 motion-reduce:tw-transition-none'
+              'tw-order-4 tw-mb-0 tw-mt-auto tw-px-6 tw-pb-6 tw-pt-1 tw-text-right tw-leading-none tw-underline tw-transition-opacity lg:tw-opacity-0',
+              'motion-reduce:tw-transition-none lg:group-hover:tw-opacity-100 lg:peer-focus-within:tw-opacity-100'
             )}
           >
             Läs mer
