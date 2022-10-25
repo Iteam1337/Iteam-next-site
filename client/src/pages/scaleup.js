@@ -27,6 +27,8 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
     (casePost) => casePost.slug.current === scaleUpPage.reference.slug.current
   )
 
+  const { hero } = scaleUpPage
+
   return (
     <PageWrapper>
       {preview && <ExitPreviewLink />}
@@ -56,7 +58,14 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
           }}
         />
       )}
-      {scaleUpPage?.hero && <Hero content={scaleUpPage.hero} />}
+      {scaleUpPage?.hero && (
+        <Hero
+          title={hero?.title && hero.title}
+          subtitle={hero?.subtitle && hero.subtitle}
+          mediaType={hero?.mediaType && hero.mediaType}
+          link={hero?.link && hero.link}
+        />
+      )}
       {scaleUpPage?.sectionWithImageAndButton && (
         <SectionWithImageAndButton
           content={scaleUpPage.sectionWithImageAndButton}

@@ -54,7 +54,12 @@ const Career = ({ data, preview = false, carousel }) => {
       )}
       <PageWrapper headerDark footerDark>
         {preview && <ExitPreviewLink />}
-        <Hero content={hero} />
+        <Hero
+          title={hero?.title && hero.title}
+          subtitle={hero?.subtitle && hero.subtitle}
+          mediaType={hero?.mediaType && hero.mediaType}
+          link={hero?.link && hero.link}
+        />
         <Testimonial coworker content={{ section, carousel }} />
         <Feature content={textGrid} />
         <Roles content={openings} openPositions={data.openPositions} />

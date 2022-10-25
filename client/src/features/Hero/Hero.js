@@ -74,9 +74,13 @@ const MediaType = ({ mediaType, children }) => {
   }
 }
 
-export const Hero = ({ content, flipTexts = false }) => {
-  const { title, link, mediaType = { type: '' } } = content
-
+export const Hero = ({
+  title,
+  subtitle,
+  mediaType,
+  link,
+  flipTexts = false,
+}) => {
   return (
     <>
       <MediaType mediaType={mediaType}>
@@ -106,7 +110,7 @@ export const Hero = ({ content, flipTexts = false }) => {
                 </Typography.H1>
                 <Typography.Paragraph className="tw-text-white">
                   <span className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.7)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
-                    {content.subtitle}
+                    {subtitle}
                   </span>
                 </Typography.Paragraph>
                 {link && (

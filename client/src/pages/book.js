@@ -24,6 +24,8 @@ const Book = ({ data, preview = false }) => {
 
   const page = filterDataToSingleItem(previewData, preview)
 
+  const { hero } = page
+
   useEffect(() => {
     const script = document.createElement('script')
     script.src =
@@ -62,7 +64,12 @@ const Book = ({ data, preview = false }) => {
           />
         )}
         {preview && <ExitPreviewLink />}
-        <Hero content={page?.hero && page.hero} />
+        <Hero
+          title={hero?.title && hero.title}
+          subtitle={hero?.subtitle && hero.subtitle}
+          mediaType={hero?.mediaType && hero.mediaType}
+          link={hero?.link && hero.link}
+        />
         <Section>
           <Container>
             <Row>
