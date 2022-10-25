@@ -74,13 +74,7 @@ const MediaType = ({ mediaType, children }) => {
   }
 }
 
-export const Hero = ({
-  title,
-  subtitle,
-  mediaType,
-  link,
-  flipTexts = false,
-}) => {
+export const Hero = ({ title, subtitle, mediaType, link }) => {
   return (
     <>
       <MediaType mediaType={mediaType}>
@@ -94,7 +88,7 @@ export const Hero = ({
               <div
                 style={{
                   display: 'flex',
-                  flexDirection: flipTexts ? 'column-reverse' : 'column',
+                  flexDirection: 'column',
                 }}
               >
                 <Typography.H1
