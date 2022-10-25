@@ -4,9 +4,10 @@ import { groq } from 'next-sanity'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { PageWrapper } from '../../components/PageWrapper'
 import { ExitPreviewLink } from '../../components/ExitPreviewLink'
-import { CoworkerHero, Medarbetare } from '../../features/About'
+import { Medarbetare } from '../../features/About'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
+import { Hero } from '../../features/Hero/'
 
 const CoworkerPage = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.coworkerQuery, {
@@ -15,21 +16,17 @@ const CoworkerPage = ({ data, preview = false }) => {
     enabled: preview,
   })
   const post = filterDataToSingleItem(previewData, preview)
+  const customMediaType = { image: { ...post.heroImage }, type: 'image' }
 
   return (
     <PageWrapper footerDark>
       {preview && <ExitPreviewLink />}
-      {post && (
-        <>
-          <CoworkerHero
-            title={post?.fullname ?? post.fullname}
-            heroImage={post?.heroImage ?? post.heroImage}
-          >
-            {post?.role ?? post.role}
-          </CoworkerHero>
-          <Medarbetare info={post ?? post} />
-        </>
-      )}
+      <Hero
+        title={post?.fullname && post.fullname}
+        subtitle={post?.role && post.role}
+        mediaType={post?.heroImage && customMediaType}
+      />
+      <Medarbetare info={post ?? post} />
     </PageWrapper>
   )
 }
