@@ -58,12 +58,12 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
           }}
         />
       )}
-      {scaleUpPage?.hero && (
+      {hero && (
         <Hero
-          title={hero?.title && hero.title}
-          subtitle={hero?.subtitle && hero.subtitle}
-          mediaType={hero?.mediaType && hero.mediaType}
-          link={hero?.link && hero.link}
+          title={hero.title && hero.title}
+          subtitle={hero.subtitle && hero.subtitle}
+          mediaType={hero.mediaType && hero.mediaType}
+          link={hero.link && hero.link}
         />
       )}
       {scaleUpPage?.sectionWithImageAndButton && (

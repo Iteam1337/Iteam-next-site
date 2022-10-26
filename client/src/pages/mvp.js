@@ -53,12 +53,14 @@ const Mvp = ({ data, preview = false }) => {
           }}
         />
       )}
-      <Hero
-        title={hero?.title && hero.title}
-        subtitle={hero?.subtitle && hero.subtitle}
-        mediaType={hero?.mediaType && hero.mediaType}
-        link={hero?.link && hero.link}
-      />
+      {hero && (
+        <Hero
+          title={hero.title && hero.title}
+          subtitle={hero.subtitle && hero.subtitle}
+          mediaType={hero.mediaType && hero.mediaType}
+          link={hero.link && hero.link}
+        />
+      )}
       {mvpPage?.sectionWithButtonAndTextGrid && (
         <SectionWithButtonAndTextGrid
           content={mvpPage.sectionWithButtonAndTextGrid}

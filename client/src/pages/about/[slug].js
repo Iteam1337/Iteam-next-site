@@ -21,11 +21,13 @@ const CoworkerPage = ({ data, preview = false }) => {
   return (
     <PageWrapper footerDark>
       {preview && <ExitPreviewLink />}
-      <Hero
-        title={post?.fullname && post.fullname}
-        subtitle={post?.role && post.role}
-        mediaType={post?.heroImage && customMediaType}
-      />
+      {post && (
+        <Hero
+          title={post.fullname && post.fullname}
+          subtitle={post.role && post.role}
+          mediaType={post.heroImage && customMediaType}
+        />
+      )}
       <Medarbetare info={post ?? post} />
     </PageWrapper>
   )
