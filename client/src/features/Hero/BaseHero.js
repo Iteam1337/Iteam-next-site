@@ -33,7 +33,7 @@ const SectionWithBackground = ({ mediaType, children, className }) => {
             className,
             'tw-absolute tw-inset-0',
             mediaType.darkGradient
-              ? 'tw-bg-gradient-to-l tw-from-[rgb(0,0,0,0.2)] tw-via-[rgb(0,0,0,0.4)] tw-to-[rgb(0,0,0,0.7)]'
+              ? 'tw-bg-gradient-to-l tw-from-[rgb(0,0,0,0.3)] tw-to-[rgb(0,0,0,0.5)]'
               : 'tw-bg-gradient-to-r tw-from-[rgb(255,255,255,0.9)] tw-via-[rgb(255,255,255,0.4)] tw-to-[rgb(255,255,255,0.1)]'
           )}
         />
@@ -77,7 +77,7 @@ export const BaseHero = ({
               </Typography.Paragraph>
             ) : (
               <Typography.Paragraph className="tw-text-white">
-                <span className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.7)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
+                <span className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.8)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
                   {subtitle}
                 </span>
               </Typography.Paragraph>

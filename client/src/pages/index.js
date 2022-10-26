@@ -6,7 +6,6 @@ import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
 import { SectionWithImageAndCta } from '../features/SectionWithImageAndCta'
 import {
-  Hero,
   TextGrid,
   TextWithImageToRight,
   TextWithImageToLeft,
@@ -15,6 +14,7 @@ import {
 import { PageWrapper } from '../components/PageWrapper'
 import { filterDataToSingleItem } from '../utils/helpers'
 import { ExitPreviewLink } from '../components/ExitPreviewLink'
+import { Hero } from '../features/Hero'
 
 const StartPage = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.startPageQuery, {
@@ -23,7 +23,7 @@ const StartPage = ({ data, preview = false }) => {
   })
 
   const page = filterDataToSingleItem(previewData, preview)
-  const { layout } = page
+  const { layout, hero } = page
 
   const getLayoutComponent = (content, index) => {
     switch (content._type) {
@@ -63,7 +63,15 @@ const StartPage = ({ data, preview = false }) => {
   `,
         }}
       />
-      {page?.hero && <Hero content={page.hero} />}
+      {hero && (
+        <Hero
+          title={hero.title && hero.title}
+          subtitle={hero.subtitle && hero.subtitle}
+          mediaType={hero.mediaType && hero.mediaType}
+          link={hero.link && hero.link}
+          className="tw-h-screen"
+        />
+      )}
       {layout.map((content, index) => getLayoutComponent(content, index))}
 
       <DefaultContent

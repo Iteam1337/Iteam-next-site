@@ -3,7 +3,7 @@ export default {
   type: 'document',
   title: 'Startsida',
   fields: [
-    {
+    /* {
       name: 'hero',
       type: 'object',
       title: 'Hero',
@@ -35,7 +35,8 @@ export default {
             'Om du vill ha en CTA på hero sektionen så fyller du i det här.',
         },
       ],
-    },
+    }, */
+    { type: 'hero', name: 'hero' },
     { type: 'layout', name: 'layout' },
     {
       type: 'document',
