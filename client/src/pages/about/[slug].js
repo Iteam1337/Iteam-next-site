@@ -28,7 +28,7 @@ const CoworkerPage = ({ data, preview = false }) => {
           mediaType={customMediaType}
         />
       )}
-      <Medarbetare info={post ?? post} />
+      {post && <Medarbetare info={post} />}
     </PageWrapper>
   )
 }
