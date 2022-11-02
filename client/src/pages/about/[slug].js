@@ -23,9 +23,9 @@ const CoworkerPage = ({ data, preview = false }) => {
       {preview && <ExitPreviewLink />}
       {post && (
         <Hero
-          title={post.fullname && post.fullname}
-          subtitle={post.role && post.role}
-          mediaType={post.heroImage && customMediaType}
+          title={post.fullname}
+          subtitle={post.role}
+          mediaType={customMediaType}
         />
       )}
       <Medarbetare info={post ?? post} />

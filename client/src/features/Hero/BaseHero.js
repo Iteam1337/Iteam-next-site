@@ -6,7 +6,7 @@ import { CTALink, Section, Typography } from '../../components/Core'
 import { getExternalOrInternalLink, urlFor } from '../../utils/helpers'
 
 const SectionWithBackground = ({ mediaType, children, className }) => {
-  if (mediaType.type === 'color') {
+  if (mediaType?.type === 'color') {
     return (
       <Section
         // todo: set bg-color as tailwind util class when Box component has been refactored
@@ -16,7 +16,7 @@ const SectionWithBackground = ({ mediaType, children, className }) => {
         {children}
       </Section>
     )
-  } else if (mediaType.type === 'image') {
+  } else if (mediaType?.type === 'image') {
     return (
       <Section
         style={{
@@ -71,7 +71,7 @@ export const BaseHero = ({
         <Row>
           <Col md="11" lg="9" xl="7">
             {children}
-            {mediaType.type === 'color' ? (
+            {subtitle && mediaType.type === 'color' ? (
               <Typography.Paragraph className="tw-text-white">
                 {subtitle}
               </Typography.Paragraph>

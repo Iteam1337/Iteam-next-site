@@ -12,15 +12,17 @@ export const Hero = ({ title, subtitle, mediaType, link, className }) => {
       link={link}
       className={className}
     >
-      <Typography.H1
-        className={clsx(
-          mediaType.darkGradient || mediaType.type === 'color'
-            ? 'tw-text-white'
-            : 'tw-text-gray-dark'
-        )}
-      >
-        {title}
-      </Typography.H1>
+      {title && (
+        <Typography.H1
+          className={clsx(
+            mediaType.darkGradient || mediaType.type === 'color'
+              ? 'tw-text-white'
+              : 'tw-text-gray-dark'
+          )}
+        >
+          {title}
+        </Typography.H1>
+      )}
     </BaseHero>
   )
 }

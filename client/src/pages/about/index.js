@@ -51,10 +51,10 @@ const About = ({ data, preview = false }) => {
         )}
         {hero && (
           <Hero
-            title={hero.title && hero.title}
-            subtitle={hero.subtitle && hero.subtitle}
-            mediaType={hero.mediaType && hero.mediaType}
-            link={hero.link && hero.link}
+            title={hero.title}
+            subtitle={hero.subtitle}
+            mediaType={hero.mediaType}
+            link={hero.link}
           />
         )}
         <Content content={rest && rest} />
