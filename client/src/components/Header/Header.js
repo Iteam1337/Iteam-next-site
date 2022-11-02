@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
@@ -196,9 +196,6 @@ export const Header = ({ isDark = false, loaded }) => {
   const [showReveal, setShowReveal] = useState(false)
   const [open, setOpen] = useState(false)
 
-  const size = useWindowSize()
-  const isMobile = size.width < 622
-
   const router = useRouter()
 
   const toggleMenu = () => {
@@ -219,31 +216,6 @@ export const Header = ({ isDark = false, loaded }) => {
       setShowReveal(false)
     }
   })
-
-  function useWindowSize() {
-    const [windowSize, setWindowSize] = useState({
-      width: undefined,
-      height: undefined,
-    })
-
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      })
-    }
-
-    useEffect(() => {
-      if (typeof window !== 'undefined') {
-        window.addEventListener('resize', handleResize)
-
-        handleResize()
-
-        return () => window.removeEventListener('resize', handleResize)
-      }
-    }, [])
-    return windowSize
-  }
 
   const getNavButtonStyle = (names) => {
     for (const name of names) {
@@ -267,15 +239,12 @@ export const Header = ({ isDark = false, loaded }) => {
             <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
               {/* <!-- Brand Logo--> */}
               <div className="brand-logo">
-                {isMobile ? (
-                  <div className="tw-mt-3.5">
-                    <Logo vertical={false} white={isDark} />
-                  </div>
-                ) : (
-                  <div className="tw-mt-3.5">
-                    <Logo vertical={!showReveal} white={isDark} />
-                  </div>
-                )}
+                <div className="tw-mt-3.5 lg:tw-hidden">
+                  <Logo vertical={false} white={isDark} />
+                </div>
+                <div className="tw-mt-3.5 tw-hidden lg:tw-block">
+                  <Logo vertical={!showReveal} white={isDark} />
+                </div>
               </div>
               <div className="collapse navbar-collapse tw-justify-end">
                 <div className="navbar-nav ml-lg-auto mr-3">
