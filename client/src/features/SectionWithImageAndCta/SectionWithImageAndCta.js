@@ -1,10 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section, Typography, CTALink } from '../../components/Core'
 import { urlFor, buildInternalUrl } from '../../utils/helpers'
+import { Container } from '../../components/Layout'
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid #242427;

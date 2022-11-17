@@ -1,9 +1,10 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import clsx from 'clsx'
 
 import { Box, Typography } from '../Core'
 import { Logo } from '../Logo'
+import { Container } from '../Layout'
 
 const FooterList = ({ children, className }) => {
   return (

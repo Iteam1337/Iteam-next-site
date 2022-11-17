@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import Image from 'next/image'
 
 import { Section, Box, Typography, CTALink } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
+import { Container } from '../../components/Layout'
 
 const ImageRight = styled(Box)`
   img {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { rgba } from 'polished'
 
 import { buildInternalUrl } from '../../utils/helpers'
@@ -13,6 +13,7 @@ import {
   CTALink,
 } from '../../components/Core'
 import { device } from '../../utils'
+import { Container } from '../../components/Layout'
 
 const SectionStyled = styled(Section)`
   position: relative;
@@ -103,12 +104,7 @@ export const Pricing = ({ content }) => {
   return (
     <>
       <SectionStyled bg="#F7F7FB" pt="90px !important" pb="0 !important">
-        <Container
-          className="position-relative"
-          css={`
-            z-index: 1;
-          `}
-        >
+        <Container className="tw-relative tw-z-10">
           <Row className="justify-content-center">
             <Col md="8" lg="9">
               <div className=" text-center" id="pricing">

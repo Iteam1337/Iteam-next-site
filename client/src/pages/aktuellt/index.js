@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
@@ -12,6 +12,7 @@ import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 import { ExitPreviewLink } from '../../components/ExitPreviewLink'
+import { Container } from '../../components/Layout'
 
 export default function BlogRegular({ data, preview = false }) {
   const router = useRouter()

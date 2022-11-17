@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { NextSeo } from 'next-seo'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
 
 import {
@@ -16,6 +16,7 @@ import { Hero } from '../features/Hero'
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
 import { HubspotForm } from '../features/HubspotForm'
+import { Container } from '../components/Layout'
 
 const Book = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.bookPageQuery, {

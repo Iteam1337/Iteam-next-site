@@ -1,7 +1,8 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section, Box, Typography, CTALink } from '../../components/Core'
+import { Container } from '../../components/Layout'
 
 const FeatureCard = ({ title, children, ...rest }) => (
   <Box width={'100%'} bg="light" p="30px" borderRadius={10} {...rest}>

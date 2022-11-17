@@ -1,10 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section } from '../../components/Core'
 import { HubspotForm } from '../../features/HubspotForm'
 import imgCtaBG from '../../assets/image/jpeg/Fanny-Flowers-Lowres.jpg'
+import { Container } from '../../components/Layout'
 
 export const CTA = () => (
   <>

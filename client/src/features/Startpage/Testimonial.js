@@ -1,8 +1,9 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section, Typography } from '../../components/Core'
 import { Carousel } from '../../components/Carousel'
+import { Container } from '../../components/Layout'
 
 export const Testimonial = ({ content }) => {
   return (

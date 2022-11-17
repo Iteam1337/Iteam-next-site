@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section, Box, Typography } from '../../components/Core'
+import { Container } from '../../components/Layout'
 import { urlFor } from '../../utils/helpers'
 
 const ContentCard = ({

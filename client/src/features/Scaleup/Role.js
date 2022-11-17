@@ -1,8 +1,9 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section, Box, Typography } from '../../components/Core'
 import { ContentCard } from '../../components/ContentCard'
+import { Container } from '../../components/Layout'
 
 export const Role = ({ content }) => {
   return (

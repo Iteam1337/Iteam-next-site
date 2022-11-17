@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section, Box, Typography, CTALink } from '../../components/Core'
 import imgOval from '../../assets/image/svg/l1-cta-oval.svg'
 import svgCurveGray from '../../assets/image/svg/l1-curve-cta-gray.svg'
 import { buildInternalUrl } from '../../utils/helpers'
+import { Container } from '../../components/Layout'
 
 const LeftCard = styled(Box)`
   position: absolute;

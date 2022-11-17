@@ -2,7 +2,7 @@ import React from 'react'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { PageWrapper } from '../../components/PageWrapper'
 import { Section, Box, Span, Typography } from '../../components/Core'
@@ -12,6 +12,7 @@ import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import { BlogList } from '../../features/Aktuellt'
 import { ExitPreviewLink } from '../../components/ExitPreviewLink'
+import { Container } from '../../components/Layout'
 
 const VideoContainer = styled.div`
   position: relative;

@@ -1,9 +1,10 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section, Typography } from '../../components/Core'
 import { CaseFooterSection } from './CaseFooterSection'
 import { urlFor } from '../../utils/helpers'
+import { Container } from '../../components/Layout'
 
 export const CaseFooter = ({ sectionCards }) => {
   return (

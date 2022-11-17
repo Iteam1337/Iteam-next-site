@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 
@@ -11,6 +11,7 @@ import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import { ExitPreviewLink } from '../../components/ExitPreviewLink'
 import { urlFor } from '../../utils/helpers'
+import { Container } from '../../components/Layout'
 
 const CaseStudy = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePageQuery, {

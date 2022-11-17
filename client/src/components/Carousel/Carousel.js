@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import Gravatar from 'react-gravatar'
 import Slider from 'react-slick'
 import { rgba } from 'polished'
@@ -11,6 +11,7 @@ import sanityClient from '../../utils/sanity-client'
 import { buildInternalUrl } from '../../utils/helpers'
 import { Box, Typography } from '../../components/Core'
 import { device, breakpoints } from '../../utils'
+import { Container } from '../Layout'
 
 const SliderStyled = styled(Slider)`
   position: relative;
@@ -306,13 +307,7 @@ export const Carousel = ({ content, coworker = false }) => {
     },
   }
   return (
-    <Container
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-duration="500"
-      data-aos-offset="0"
-      data-aos-once="true"
-    >
+    <Container>
       <Row className="justify-content-center">
         <Col lg="12" xl="11">
           <SliderStyled {...slickSettings} activeSlide={activeSlide}>

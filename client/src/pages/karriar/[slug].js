@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 
@@ -10,6 +10,7 @@ import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem } from '../../utils/helpers'
 import { ExitPreviewLink } from '../../components/ExitPreviewLink'
+import { Container } from '../../components/Layout'
 
 const OpeningDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(

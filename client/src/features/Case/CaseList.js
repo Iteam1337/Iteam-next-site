@@ -1,9 +1,9 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
 
 import { Card } from '../../components/Card'
 import { CardList } from '../../components/CardList'
 import { Section, Typography } from '../../components/Core'
+import { Container } from '../../components/Layout'
 
 export const CaseList = ({ posts }) => {
   return (

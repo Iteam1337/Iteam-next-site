@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section, Typography, CTALink } from '../../components/Core'
 import { urlFor } from '../../utils/helpers'
+import { Container } from '../../components/Layout'
 
 export const Case = ({ content }) => {
   return (

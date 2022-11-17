@@ -1,9 +1,10 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { Section, Typography } from '../../components/Core'
 import { Card } from '../../components/Card'
 import { CardList } from '../../components/CardList'
+import { Container } from '../../components/Layout'
 
 export const Roles = ({ content, openPositions }) => (
   <>

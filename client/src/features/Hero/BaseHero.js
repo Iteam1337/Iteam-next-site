@@ -1,8 +1,9 @@
 import clsx from 'clsx'
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import { CTALink, Section, Typography } from '../../components/Core'
+import { Container } from '../../components/Layout'
 import { getExternalOrInternalLink, urlFor } from '../../utils/helpers'
 
 const SectionWithBackground = ({ mediaType, children, className }) => {
