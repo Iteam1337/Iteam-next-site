@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
     footerCache = footer
   }, [footer])
 
-  usePostHog(`${process.env.NEXT_PUBLIC_POSTHOG_API_KEY}`, {
+  usePostHog(process.env.NEXT_PUBLIC_POSTHOG_API_KEY, {
     api_host: 'https://posthog.iteam.services',
     loaded: (posthog) => {
       if (process.env.NODE_ENV === 'development') posthog.opt_out_capturing()
