@@ -15,6 +15,7 @@ import { ExitPreviewLink } from '../components/ExitPreviewLink'
 import { Hero } from '../features/Hero'
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
+import { HubspotForm } from '../features/HubspotForm'
 
 const Book = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.bookPageQuery, {
@@ -76,26 +77,10 @@ const Book = ({ data, preview = false }) => {
           <Container>
             <Row>
               <Col lg={6}>
-                <form
-                  id="form"
-                  name="contact1"
-                  method="post"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  className="tw-mb-12 tw-w-full tw-rounded-md tw-bg-gray-blue tw-px-0 tw-pt-[40px] tw-pb-0 tw-text-center sm:tw-px-[10px] sm:tw-pb-[50px] sm:tw-pt-[53px]"
-                >
-                  {/* You still need to add the hidden input with the form name to your JSX form */}
-                  <input type="hidden" name="form-name" value="contact1" />
-                  <Box>
-                    <Typography.H2 className="sm:tw-mx-12">
-                      {page?.title && page.title}
-                    </Typography.H2>
-                  </Box>
-                  <div
-                    className="meetings-iframe-container tw-mx-auto tw-my-0 tw-max-h-[640px] tw-max-w-[484px]"
-                    data-src="https://meetings.hubspot.com/jonna-hjern/intromote-iteam?embed=true"
-                  />
-                </form>
+                <HubspotForm
+                  value="contact1"
+                  title="Boka ett möte i kalendern"
+                />
               </Col>
               <Col lg={5} className="offset-lg-1 order-lg-2 mt-lg-0">
                 <Box className="tw-mb-6">
