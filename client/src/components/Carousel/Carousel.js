@@ -263,7 +263,7 @@ const Client = ({ item, active }) => {
   )
 }
 
-export const Carousel = ({ content, coworker = false }) => {
+export const Carousel = ({ content, coworker }) => {
   const [activeSlide, setActiveSlide] = useState(0)
 
   useEffect(() => {

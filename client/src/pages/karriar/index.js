@@ -62,7 +62,7 @@ const Career = ({ data, preview = false, carousel }) => {
             link={hero.link}
           />
         )}
-        <Testimonial coworker content={{ section, carousel }} />
+        <Testimonial coworker={true} content={{ section, carousel }} />
         <Feature content={textGrid} />
         <Roles content={openings} openPositions={data.openPositions} />
       </PageWrapper>

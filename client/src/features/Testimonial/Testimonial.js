@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Section, Box, Typography } from '../../components/Core'
+import { Section /* , Box */, Typography } from '../../components/Core'
 import { Carousel } from '../../components/Carousel'
 
 export const Testimonial = ({ content, coworker, bg }) => {
@@ -20,9 +20,9 @@ export const Testimonial = ({ content, coworker, bg }) => {
                 />
               </Col>
             </Row>
-            <Box className="tw-mt-6">
+            {/* <Box className="tw-mt-6">
               <Carousel coworker={true} content={content.carousel} />
-            </Box>
+            </Box> */}
           </>
         ) : (
           <>
