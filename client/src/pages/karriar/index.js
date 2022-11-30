@@ -82,28 +82,7 @@ const careerPageQuery = groq`
   hero, 
   openings, 
   textGrid, 
-  _id, 
-  coworkerCarouselOne[] -> {
-  slug {
-    current
-  },
-  fullname,
-  role,
-  whyTech,
-  answerTech, 
-  email,
-  _type,
-  } , coworkerCarouselTwo[] -> {
-  slug {
-    current
-  },
-  fullname,
-  role,
-  whyTech,
-  answerTech,
-  email,
-  _type,
-  },
+  _id,
    section{
      title,
      blockText{
