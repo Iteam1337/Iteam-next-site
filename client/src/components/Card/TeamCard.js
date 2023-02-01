@@ -1,16 +1,16 @@
-import React from 'react'
-import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
+import Image from 'next/image'
+import React from 'react'
 import Gravatar from 'react-gravatar'
 
-import client from '../../utils/sanity-client'
 import { SocialMediaLinks } from '../../features/About/SocialMediaLinks'
+import { sanityClient } from '../../lib/sanity.client'
 import { formatPhoneNumber } from '../../utils/helpers'
 import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'
 
 const TeamCardImage = ({ img, email, customImgAlt }) => {
-  const imageProps = useNextSanityImage(client, img)
+  const imageProps = useNextSanityImage(sanityClient, img)
   return (
     <div className="tw-flex tw-justify-center">
       <div className="tw-relative tw-z-0 tw-order-1 tw-mt-8 tw-mb-2 tw-max-h-[160px] tw-min-h-[160px] tw-min-w-[160px] tw-max-w-[160px] tw-overflow-hidden tw-rounded-full">
