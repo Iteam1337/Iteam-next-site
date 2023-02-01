@@ -7,7 +7,7 @@ We are using Sanity for our CMS at iteam.se.
 ```
 npm ci
 
-npm run start
+npm run dev
 ```
 
 When starting the project locally sanity will use the `development` dataset by default. By running a development dataset instead of running the `production` you can make changes that won't effect the schema that is deployed :smile:
