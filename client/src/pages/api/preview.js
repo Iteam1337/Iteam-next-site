@@ -1,4 +1,6 @@
-export default function preview(req, res) {
+// OLD
+
+/* export default function preview(req, res) {
   if (!req?.query?.secret) {
     return res.status(401).json({ message: 'No secret token' })
   }
@@ -21,4 +23,32 @@ export default function preview(req, res) {
   res.writeHead(307, { Location: `/${req?.query?.slug}` ?? `/` })
 
   return res.end()
+}
+ */
+
+// CUSTOM TOKEN
+
+// export default function preview(req, res) {
+//   if (
+//     !req.query.secret ||
+//     req.query.secret !== process.env.SANITY_PREVIEW_SECRET
+//   ) {
+//     return res.status(401).json({ message: 'Invalid secret token' })
+//   }
+
+//   /* if (!req.query.slug) {
+//     return res.status(401).json({ message: 'No slug' })
+//   } */
+
+//   res.setPreviewData({ token: process.env.SANITY_API_READ_TOKEN })
+//   res.writeHead(307, { Location: '/' })
+//   res.end()
+// }
+
+// PREVIEW_KIT AUTH
+
+export default function preview(req, res) {
+  res.setPreviewData({})
+  res.writeHead(307, { Location: '/' })
+  res.end()
 }

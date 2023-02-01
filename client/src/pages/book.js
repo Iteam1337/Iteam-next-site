@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react'
-import { NextSeo } from 'next-seo'
-import { Container, Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+import React, { useEffect } from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 
+import { Box, Section, Typography } from '../components/Core'
+import { ExitPreviewLink } from '../components/ExitPreviewLink'
+import { PageWrapper } from '../components/PageWrapper'
+import { Hero } from '../features/Hero'
+import { HubspotForm } from '../features/HubspotForm'
+import { usePreviewSubscription } from '../lib/sanity'
+import { getClient } from '../lib/sanity.server'
 import {
   buildInternalUrl,
   filterDataToSingleItem,
   formatPhoneNumber,
   urlFor,
 } from '../utils/helpers'
-import { Section, Box, Typography } from '../components/Core'
-import { PageWrapper } from '../components/PageWrapper'
-import { ExitPreviewLink } from '../components/ExitPreviewLink'
-import { Hero } from '../features/Hero'
-import { usePreviewSubscription } from '../lib/sanity'
-import { getClient } from '../lib/sanity.server'
-import { HubspotForm } from '../features/HubspotForm'
 
 const Book = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.bookPageQuery, {

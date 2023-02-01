@@ -1,14 +1,14 @@
-import React from 'react'
-import Image from 'next/image'
-import { useNextSanityImage } from 'next-sanity-image'
 import clsx from 'clsx'
+import { useNextSanityImage } from 'next-sanity-image'
+import Image from 'next/image'
+import React from 'react'
 
-import client from '../../utils/sanity-client'
+import { sanityClient } from '../../lib/sanity.client'
 import { Typography } from '../Core'
 import { BaseCard } from './BaseCard'
 
 const ArticleCardImage = ({ img, variant }) => {
-  const imageProps = useNextSanityImage(client, img?.asset._ref)
+  const imageProps = useNextSanityImage(sanityClient, img?.asset._ref)
   return (
     <>
       <div className="tw-relative tw-z-0 tw-order-1 tw-h-80">
