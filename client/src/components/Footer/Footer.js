@@ -238,3 +238,5 @@ export const Footer = ({ isDark = true, content }) => {
     </footer>
   )
 }
+
+export default Footer

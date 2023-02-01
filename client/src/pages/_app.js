@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 // import App from 'next/app'
-import { groq } from 'next-sanity'
 import posthog from 'posthog-js'
+import { groq } from 'next-sanity'
 
-import { GlobalProvider } from '../context/GlobalContext'
 import { getClient } from '../lib/sanity.server'
+import { GlobalProvider } from '../context/GlobalContext'
 import { Layout } from '../components/Layout'
 import '../components/Layout/bootstrap-custom.scss'
 import '../../node_modules/slick-carousel/slick/slick.css'
