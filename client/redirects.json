@@ -35,11 +35,6 @@
     "permanent": true
   },
   {
-    "source": "/medarbetare/iln",
-    "destination": "/about/izabella-larsson",
-    "permanent": true
-  },
-  {
     "source": "/medarbetare/abo",
     "destination": "/about/anders-bornholm",
     "permanent": true
@@ -60,18 +55,8 @@
     "permanent": true
   },
   {
-    "source": "/medarbetare/and",
-    "destination": "/about/adam-näslund",
-    "permanent": true
-  },
-  {
     "source": "/medarbetare/eak",
     "destination": "/about/emil-ahlbäck",
-    "permanent": true
-  },
-  {
-    "source": "/medarbetare/ewr",
-    "destination": "/about/emma-klara-wachter",
     "permanent": true
   },
   {
@@ -82,12 +67,6 @@
   {
     "source": "/medarbetare/hrn",
     "destination": "/about/hans-rollman",
-    "permanent": true
-  },
-
-  {
-    "source": "/medarbetare/ile",
-    "destination": "/about/iris-löthen",
     "permanent": true
   },
   {
@@ -111,11 +90,6 @@
     "permanent": true
   },
   {
-    "source": "/medarbetare/mln",
-    "destination": "/about/martin-Loman",
-    "permanent": true
-  },
-  {
     "source": "/medarbetare/mrs",
     "destination": "/about/maria-sölscher",
     "permanent": true
@@ -123,26 +97,6 @@
   {
     "source": "/medarbetare/pej",
     "destination": "/about/petronella-johansson",
-    "permanent": true
-  },
-  {
-    "source": "/medarbetare/ram",
-    "destination": "/about/radu-achim",
-    "permanent": true
-  },
-  {
-    "source": "/medarbetare/rnn",
-    "destination": "/about/rebecca-noren",
-    "permanent": true
-  },
-  {
-    "source": "/medarbetare/sll",
-    "destination": "/about/simon-lundell",
-    "permanent": true
-  },
-  {
-    "source": "/medarbetare/swr",
-    "destination": "/about/stephanie-weaver",
     "permanent": true
   }
 ]
