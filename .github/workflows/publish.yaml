@@ -47,6 +47,10 @@ jobs:
 
       - name: Render output
         uses: hiberbee/github-action-skaffold@latest
+        env:
+          SANITY_READ_DATA_TOKEN: ${{ secrets.SANITY_READ_DATA_TOKEN }}
+          SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
+          SANITY_PREVIEW_SECRET: ${{ secrets.SANITY_PREVIEW_SECRET }}
         with:
           command: render --output deploy/latest.yaml
           cache-file: ''
