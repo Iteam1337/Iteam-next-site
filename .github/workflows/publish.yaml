@@ -1,12 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Build & Deploy to production
+name: Build & Deploy to Dev
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [main, feat/k8s]
+    branches: [master, feat/k8s]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,33 +17,41 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: install dependencies
-        run: |
-          curl -Lo skaffold https://storage.googleapis.com/skaffold/builds/latest/skaffold-linux-amd64
-          chmod +x skaffold
-          sudo mv skaffold /usr/local/bin
-          curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-          chmod +x ./kubectl
-          sudo mv ./kubectl /usr/local/bin/kubectl
+      - name: Checkout sources
+        uses: actions/checkout@v3
 
-      - name: create kubeconfig
-        run: |
-          mkdir ${HOME}/.kube
-          cp k8s/config.yaml ${HOME}/.kube/config
-          cd ${HOME}/.kube
-          sed -i 's;$KUBE_CLUSTER_NAME;${{ secrets.KUBE_CLUSTER_NAME }};g' config
-          sed -i 's;$KUBE_CLUSTER_SERVER;${{ secrets.KUBE_CLUSTER_SERVER }};g' config
-          sed -i 's;$KUBE_CLUSTER_CERTIFICATE;${{ secrets.KUBE_CLUSTER_CERTIFICATE }};g' config
-          sed -i 's;$KUBE_USER_NAME;${{ secrets.KUBE_USER_NAME }};g' config
-          sed -i 's;$KUBE_USER_TOKEN;${{ secrets.KUBE_USER_TOKEN }};g' config
-          kubectl config use-context ${{ secrets.KUBE_CLUSTER_NAME }}
+      - name: Cache skaffold image builds & config
+        uses: actions/cache@v2
+        with:
+          path: ~/.skaffold/
+          key: skaffold
+          restore-keys: |
+            skaffold
 
-      - name: build-and-deploy
-        env:
-          SANITY_READ_DATA_TOKEN: ${{ secrets.SANITY_READ_DATA_TOKEN }}
-          SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
-          SANITY_PREVIEW_SECRET: ${{ secrets.SANITY_PREVIEW_SECRET }}
+      - name: Update Minor Verision
         run: |
-          skaffold run --default-repo registry.iteam.pub
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+          npm version minor
+
+      - name: Build with Skaffold
+        uses: hiberbee/github-action-skaffold@latest
+        with:
+          command: build
+          repository: registry.iteam.services
+          digest-source: tag
+
+      - name: Render output
+        uses: hiberbee/github-action-skaffold@latest
+        with:
+          command: render --output deploy/latest.yaml
+          cache-file: ''
+          repository: registry.iteam.services
+          digest-source: tag
+
+      - name: Push new manifest to FluxCD
+        run: |
+          git add deploy/latest.yaml
+          git commit --amend --no-edit
+          git push
