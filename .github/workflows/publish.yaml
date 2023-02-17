@@ -28,12 +28,10 @@ jobs:
           restore-keys: |
             skaffold
 
-      - name: Update Minor Verision
+      - name: Config git bot user
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-
-          npm version minor
 
       - name: Build with Skaffold
         uses: hiberbee/github-action-skaffold@latest
