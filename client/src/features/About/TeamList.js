@@ -1,5 +1,4 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 
 import { Section, Typography } from '../../components/Core'
 import { Card } from '../../components/Card'
@@ -21,15 +20,11 @@ export const TeamList = ({ content, coworkers }) => {
     <>
       {/* <!-- Team section --> */}
       <Section className="position-relative pt-5" id="medarbetare">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg="6" className="text-center pb-3">
-              <div id="medarbetare" className="">
-                <Typography.H2>{content.title}</Typography.H2>
-                <Typography.Paragraph>{content.subtitle}</Typography.Paragraph>
-              </div>
-            </Col>
-          </Row>
+        <Container className="tw-justify-center tw-text-center">
+          <div id="medarbetare" className="tw-mb-8">
+            <Typography.H2>{content.title}</Typography.H2>
+            <Typography.Paragraph>{content.subtitle}</Typography.Paragraph>
+          </div>
           <CardList.CardListGrid>
             {sortedTeam.map((coworker) => {
               const {

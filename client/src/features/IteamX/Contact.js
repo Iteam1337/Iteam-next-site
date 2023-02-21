@@ -1,12 +1,11 @@
-import React from 'react'
 import Image from 'next/image'
+import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 
-import { Box } from '../../components/Core'
 import imgShape from '../../assets/image/svg/contact-shape.svg'
-import { HubspotForm } from '../../features/HubspotForm'
+import { Box } from '../../components/Core'
 import { Container } from '../../components/Layout'
+import { HubspotForm } from '../../features/HubspotForm'
 
 const BoxStyled = styled(Box)`
   &::after {
@@ -40,11 +39,9 @@ export const Contact = () => (
         />
       </div>
       <Container className="tw-relative tw-z-10">
-        <Row className="justify-content-center">
-          <Col lg="10" id="sprintMeeting">
-            <HubspotForm value="iteamX" title="Boka gratis rådgivningsmöte" />
-          </Col>
-        </Row>
+        <div id="sprintMeeting">
+          <HubspotForm value="iteamX" title="Boka gratis rådgivningsmöte" />
+        </div>
       </Container>
     </BoxStyled>
   </>

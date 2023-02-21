@@ -16,10 +16,7 @@ const StyledBox = styled(Box)`
 `
 
 export const ContentCard = ({ dark = false, className, title, ...rest }) => (
-  <Col
-    lg="4"
-    md="6"
-    className="mb-4"
+  <div
     data-aos="fade-zoom-in"
     data-aos-easing="ease-in-back"
     data-aos-delay="50"
@@ -38,5 +35,5 @@ export const ContentCard = ({ dark = false, className, title, ...rest }) => (
         {title}
       </Typography.H3>
     </StyledBox>
-  </Col>
+  </div>
 )

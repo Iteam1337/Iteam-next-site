@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 
 import { Section, Box, Typography, CTALink } from '../../components/Core'
 import imgOval from '../../assets/image/svg/l1-cta-oval.svg'
@@ -35,21 +34,19 @@ export const CTA = ({ content }) => (
       <RightCard>
         <Image src={svgCurve} alt="" aria-hidden="true" />
       </RightCard>
-      <Container className="tw-relative">
-        <Row className="justify-content-center text-center">
-          <Col lg="6">
-            <Box mb={5} className="text-center">
-              <Typography.H2 className="tw-text-white">
-                {content.title}
-              </Typography.H2>
-              <CTALink
-                href={buildInternalUrl(content.cta.reference)}
-                text={content.cta.title}
-                className="tw-mt-3"
-              />
-            </Box>
-          </Col>
-        </Row>
+      <Container className="tw-relative tw-justify-center tw-text-center">
+        <div>
+          <Box mb={5} className="text-center">
+            <Typography.H2 className="tw-text-white">
+              {content.title}
+            </Typography.H2>
+            <CTALink
+              href={buildInternalUrl(content.cta.reference)}
+              text={content.cta.title}
+              className="tw-mt-3"
+            />
+          </Box>
+        </div>
       </Container>
     </Section>
   </>

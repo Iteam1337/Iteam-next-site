@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 import Gravatar from 'react-gravatar'
 import Slider from 'react-slick'
 import { rgba } from 'polished'
@@ -308,20 +307,16 @@ export const Carousel = ({ content, coworker = false }) => {
   }
   return (
     <Container>
-      <Row className="justify-content-center">
-        <Col lg="12" xl="11">
-          <SliderStyled {...slickSettings} activeSlide={activeSlide}>
-            {content.map((person, i) => {
-              const active = activeSlide === i
-              return coworker ? (
-                <Coworker item={person} key={i} active={active} />
-              ) : (
-                <Client item={person} key={i} active={active} />
-              )
-            })}
-          </SliderStyled>
-        </Col>
-      </Row>
+      <SliderStyled {...slickSettings} activeSlide={activeSlide}>
+        {content.map((person, i) => {
+          const active = activeSlide === i
+          return coworker ? (
+            <Coworker item={person} key={i} active={active} />
+          ) : (
+            <Client item={person} key={i} active={active} />
+          )
+        })}
+      </SliderStyled>
     </Container>
   )
 }

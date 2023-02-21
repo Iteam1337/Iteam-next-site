@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 
 import { CTALink, Section, Typography } from '../../components/Core'
 import { Container } from '../../components/Layout'
@@ -69,37 +69,35 @@ export const BaseHero = ({
       )}
     >
       <Container className="tw-h-full">
-        <Row>
-          <Col md="11" lg="9" xl="7">
-            {children}
-            {subtitle && mediaType.type === 'color' ? (
-              <Typography.Paragraph className="tw-text-white">
+        <Col md="11" lg="9" xl="7">
+          {children}
+          {subtitle && mediaType.type === 'color' ? (
+            <Typography.Paragraph className="tw-text-white">
+              {subtitle}
+            </Typography.Paragraph>
+          ) : (
+            <Typography.Paragraph className="tw-text-white">
+              <span className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.8)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
                 {subtitle}
-              </Typography.Paragraph>
-            ) : (
-              <Typography.Paragraph className="tw-text-white">
-                <span className="tw-inline tw-whitespace-pre-wrap tw-bg-[rgb(0,0,0,0.8)] tw-box-decoration-clone tw-p-2 tw-leading-[2.46rem]">
-                  {subtitle}
-                </span>
-              </Typography.Paragraph>
-            )}
-            {link && (
-              <div
-                data-aos="fade-up"
-                data-aos-duration="300"
-                data-aos-once="true"
-                data-aos-delay="200"
-              >
-                <CTALink
-                  href={getExternalOrInternalLink(link.link)}
-                  text={link.title}
-                  className="tw-mt-8 tw-w-fit"
-                  variant="secondary"
-                />
-              </div>
-            )}
-          </Col>
-        </Row>
+              </span>
+            </Typography.Paragraph>
+          )}
+          {link && (
+            <div
+              data-aos="fade-up"
+              data-aos-duration="300"
+              data-aos-once="true"
+              data-aos-delay="200"
+            >
+              <CTALink
+                href={getExternalOrInternalLink(link.link)}
+                text={link.title}
+                className="tw-mt-8 tw-w-fit"
+                variant="secondary"
+              />
+            </div>
+          )}
+        </Col>
       </Container>
     </SectionWithBackground>
   )

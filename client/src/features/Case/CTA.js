@@ -1,13 +1,12 @@
-import React from 'react'
 import Image from 'next/image'
+import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 
-import { Section, Box, Typography, CTALink } from '../../components/Core'
 import imgOval from '../../assets/image/svg/l1-cta-oval.svg'
 import svgCurveGray from '../../assets/image/svg/l1-curve-cta-gray.svg'
-import { buildInternalUrl } from '../../utils/helpers'
+import { Box, CTALink, Section, Typography } from '../../components/Core'
 import { Container } from '../../components/Layout'
+import { buildInternalUrl } from '../../utils/helpers'
 
 const LeftCard = styled(Box)`
   position: absolute;
@@ -37,20 +36,16 @@ export const CTA = ({ text }) => {
           {<Image src={svgCurveGray} alt="" aria-hidden="true" />}
         </RightCard>
         <Container className="tw-relative">
-          <Row className="justify-content-center text-center">
-            <Col lg="6">
-              <Box className="text-center">
-                <Typography.H2 className="tw-text-white">
-                  {text.title}
-                </Typography.H2>
-                <CTALink
-                  href={buildInternalUrl(text.cta.reference)}
-                  text={text.cta.title}
-                  className="tw-mt-3"
-                />
-              </Box>
-            </Col>
-          </Row>
+          <div className="text-center">
+            <Typography.H2 className="tw-text-white">
+              {text.title}
+            </Typography.H2>
+            <CTALink
+              href={buildInternalUrl(text.cta.reference)}
+              text={text.cta.title}
+              className="tw-mt-3"
+            />
+          </div>
         </Container>
       </Section>
     </>
