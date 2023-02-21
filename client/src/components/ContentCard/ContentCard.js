@@ -1,7 +1,6 @@
-import React from 'react'
-import { Col } from 'react-bootstrap'
-import styled from 'styled-components'
 import clsx from 'clsx'
+import React from 'react'
+import styled from 'styled-components'
 
 import { Box, Typography } from '../Core'
 
