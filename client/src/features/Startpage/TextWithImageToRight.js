@@ -1,10 +1,9 @@
-import React from 'react'
 import Image from 'next/image'
-import { Row, Col } from 'react-bootstrap'
+import React from 'react'
 
 import { Section, Typography } from '../../components/Core'
+import { Container, Flex } from '../../components/Layout'
 import { urlFor } from '../../utils/helpers'
-import { Container } from '../../components/Layout'
 
 export const TextWithImageToRight = ({ content }) => {
   return (
@@ -15,30 +14,29 @@ export const TextWithImageToRight = ({ content }) => {
         py={['50px', null, '130px', null, '230px']}
       >
         <Container>
-          <Row
+          <div
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
             data-aos-delay="50"
             data-aos-offset="0"
             data-aos-once="true"
           >
-            <Col lg="6" className="mt-5 mt-lg-0 tw-order-2">
-              <Typography.H2>{content.title}</Typography.H2>
-              <Typography.BlockContent blocks={content.blockText.blockText} />
-            </Col>
-            <Col
-              lg="5"
-              className="offset-lg-1 order-1  order-lg-2 tw-mb-5 lg:tw-mb-0"
-            >
-              <Image
-                src={urlFor(content.imageWithAlt.asset._ref)}
-                alt={content.imageWithAlt.alt}
-                width={1500}
-                height={1001}
-                layout="responsive"
-              />
-            </Col>
-          </Row>
+            <Flex center>
+              <div className="tw-order-2 tw-mt-5 tw-w-4/5 lg:tw-order-1 lg:tw-mt-0 lg:tw-w-full">
+                <Typography.H2>{content.title}</Typography.H2>
+                <Typography.BlockContent blocks={content.blockText.blockText} />
+              </div>
+              <div className="tw-order-1 tw-mb-5 tw-w-full lg:tw-order-2 lg:tw-ml-10 lg:tw-mb-0">
+                <Image
+                  src={urlFor(content.imageWithAlt.asset._ref)}
+                  alt={content.imageWithAlt.alt}
+                  width={1500}
+                  height={1001}
+                  layout="responsive"
+                />
+              </div>
+            </Flex>
+          </div>
         </Container>
       </Section>
     </>

@@ -1,18 +1,17 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import clsx from 'clsx'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
-import clsx from 'clsx'
+import React from 'react'
 
-import { PageWrapper } from '../../components/PageWrapper'
 import { Section, Typography } from '../../components/Core'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
+import { Container, Flex } from '../../components/Layout'
+import { PageWrapper } from '../../components/PageWrapper'
 import { BlogList } from '../../features/Aktuellt'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
-import { ExitPreviewLink } from '../../components/ExitPreviewLink'
-import { Container } from '../../components/Layout'
 
 export default function BlogRegular({ data, preview = false }) {
   const router = useRouter()
@@ -77,49 +76,57 @@ export default function BlogRegular({ data, preview = false }) {
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
-            <Row className="justify-content-center text-center">
-              <Typography.H1 className="pb-4">{title && title}</Typography.H1>
-              <Typography.H2 className="tw-sr-only">
-                {(filterParam == 'alla' && 'Allt') ||
-                  (filterParam == 'blogg' && 'Blogg') ||
-                  (filterParam == 'open-source-skolan' && 'Open Source Skolan')}
-              </Typography.H2>
-              {mixedPosts && (
-                <Col lg="8">
-                  <Typography.Anchor
-                    className={clsx(
-                      'tw-mx-6 tw-text-sm hover:tw-underline',
-                      filterParam == 'alla' ? 'tw-underline' : 'tw-no-underline'
-                    )}
-                    href="/aktuellt"
-                  >
-                    Allt
-                  </Typography.Anchor>
-                  <Typography.Anchor
-                    className={clsx(
-                      'tw-mx-6 tw-text-sm hover:tw-underline',
-                      filterParam == 'blogg'
-                        ? 'tw-underline'
-                        : 'tw-no-underline'
-                    )}
-                    href="/aktuellt?taggat=blogg"
-                  >
-                    Blogg
-                  </Typography.Anchor>
-                  <Typography.Anchor
-                    className={clsx(
-                      'tw-mx-6 tw-text-sm hover:tw-underline',
-                      filterParam == 'open-source-skolan'
-                        ? 'tw-underline'
-                        : 'tw-no-underline'
-                    )}
-                    href="/aktuellt?taggat=open-source-skolan"
-                  >
-                    Open Source skolan
-                  </Typography.Anchor>
-                </Col>
-              )}
-            </Row>
+            <Flex center>
+              <div className="tw-w-4/5 tw-text-center">
+                <Typography.H1 className="tw-mb-0">
+                  {title && title}
+                </Typography.H1>
+                <Typography.H2 className="tw-sr-only">
+                  {(filterParam == 'alla' && 'Allt') ||
+                    (filterParam == 'blogg' && 'Blogg') ||
+                    (filterParam == 'open-source-skolan' &&
+                      'Open Source Skolan')}
+                </Typography.H2>
+
+                {mixedPosts && (
+                  <div>
+                    <Typography.Anchor
+                      className={clsx(
+                        'tw-mx-6 tw-text-sm hover:tw-underline',
+                        filterParam == 'alla'
+                          ? 'tw-underline'
+                          : 'tw-no-underline'
+                      )}
+                      href="/aktuellt"
+                    >
+                      Allt
+                    </Typography.Anchor>
+                    <Typography.Anchor
+                      className={clsx(
+                        'tw-mx-6 tw-text-sm hover:tw-underline',
+                        filterParam == 'blogg'
+                          ? 'tw-underline'
+                          : 'tw-no-underline'
+                      )}
+                      href="/aktuellt?taggat=blogg"
+                    >
+                      Blogg
+                    </Typography.Anchor>
+                    <Typography.Anchor
+                      className={clsx(
+                        'tw-mx-6 tw-text-sm hover:tw-underline',
+                        filterParam == 'open-source-skolan'
+                          ? 'tw-underline'
+                          : 'tw-no-underline'
+                      )}
+                      href="/aktuellt?taggat=open-source-skolan"
+                    >
+                      Open Source skolan
+                    </Typography.Anchor>
+                  </div>
+                )}
+              </div>
+            </Flex>
           </Container>
         </Section>
         <BlogList posts={sortedPosts && sortedPosts} />

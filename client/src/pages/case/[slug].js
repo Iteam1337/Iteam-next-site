@@ -1,16 +1,15 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
+import React from 'react'
 
+import { Box, Section, Typography } from '../../components/Core'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
+import { Container, Flex } from '../../components/Layout'
 import { PageWrapper } from '../../components/PageWrapper'
-import { Section, Box, Typography } from '../../components/Core'
-import { CTA, CaseList } from '../../features/Case'
+import { CaseList, CTA } from '../../features/Case'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
 import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
-import { ExitPreviewLink } from '../../components/ExitPreviewLink'
-import { Container } from '../../components/Layout'
 
 const BlogDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePostQuery, {
@@ -67,8 +66,8 @@ const BlogDetails = ({ data, preview = false }) => {
       <Section className="pb-0">
         <div className="pt-5"></div>
         <Container>
-          <Row className="justify-content-center text-center">
-            <Col lg="8">
+          <Flex center>
+            <div className="tw-w-4/5 tw-text-center">
               <Box className="text-center" mb={4}>
                 {post?.company && post.company}
               </Box>
@@ -76,21 +75,21 @@ const BlogDetails = ({ data, preview = false }) => {
               <Typography.Paragraph>
                 {post?.subtitle && post.subtitle}
               </Typography.Paragraph>
-            </Col>
-          </Row>
+            </div>
+          </Flex>
         </Container>
       </Section>
       <Section className="position-relative" borderBottom="1px solid #eae9f2;">
         <Container>
-          <Row>
-            <Col lg="12" xl="10" className="offset-xl-1">
+          <Flex>
+            <div>
               <Box pb={['40px', null, '65px']}>
                 {post?.blockText?.blockText && (
                   <Typography.BlockContent blocks={post.blockText.blockText} />
                 )}
               </Box>
-            </Col>
-          </Row>
+            </div>
+          </Flex>
         </Container>
       </Section>
       {data?.posts && <CaseList posts={data.posts} />}

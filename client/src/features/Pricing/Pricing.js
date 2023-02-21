@@ -1,19 +1,18 @@
+import { rgba } from 'polished'
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
-import { rgba } from 'polished'
 
-import { buildInternalUrl } from '../../utils/helpers'
 import {
-  Section,
-  Box,
-  Typography,
   Badge,
-  Switch,
+  Box,
   CTALink,
+  Section,
+  Switch,
+  Typography,
 } from '../../components/Core'
+import { Container, Flex } from '../../components/Layout'
 import { device } from '../../utils'
-import { Container } from '../../components/Layout'
+import { buildInternalUrl } from '../../utils/helpers'
 
 const SectionStyled = styled(Section)`
   position: relative;
@@ -105,16 +104,14 @@ export const Pricing = ({ content }) => {
     <>
       <SectionStyled bg="#F7F7FB" pt="90px !important" pb="0 !important">
         <Container className="tw-relative tw-z-10">
-          <Row className="justify-content-center">
-            <Col md="8" lg="9">
-              <div className=" text-center" id="pricing">
-                <Typography.H2>{content.section.title}</Typography.H2>
-                <Typography.BlockContent
-                  blocks={content.section.blockText.blockText}
-                />
-              </div>
-            </Col>
-          </Row>
+          <Flex>
+            <div className=" text-center" id="pricing">
+              <Typography.H2>{content.section.title}</Typography.H2>
+              <Typography.BlockContent
+                blocks={content.section.blockText.blockText}
+              />
+            </div>
+          </Flex>
           <div className="tw-pt-4 tw-text-center md:tw-pt-6">
             <div className="tw-mb-6 tw-inline-flex tw-flex-col tw-items-center tw-justify-between tw-gap-3 md:tw-mb-8 md:tw-flex-row">
               <Typography.Paragraph>{content.onGoing}</Typography.Paragraph>
@@ -124,38 +121,36 @@ export const Pricing = ({ content }) => {
                 <Badge ml={2}>{content.discount}</Badge>
               </div>
             </div>
-            <Row className="justify-content-center">
-              <Col lg="8" className="mb-5 align-items-center">
-                <CardPricing className="tw-rounded-md">
-                  <div className="mb-4">
-                    <Typography.H3 className="tw-pb-2 tw-text-base tw-font-light">
-                      {content.team}
-                    </Typography.H3>
-                    <div className="d-flex align-items-end justify-content-center my-3">
-                      <Currency>{content.value}</Currency>
-                      <Typography.Paragraph className="tw-mb-[-5px] tw-mr-1 tw-text-7xl tw-font-bold tw-leading-none tw-tracking-tighter">
-                        {timeMonthly ? content.price : content.priceOngoing}
-                      </Typography.Paragraph>
-                      <TimePer>/h</TimePer>
-                    </div>
-                    <Typography.ParagraphSmall>
-                      {content.priceIncluding}
-                    </Typography.ParagraphSmall>
-                    <ULStyled>
-                      {content.includes.map((include, i) => (
-                        <li key={i}>{include}</li>
-                      ))}
-                    </ULStyled>
+            <Flex center>
+              <CardPricing className="tw-rounded-md">
+                <div className="mb-4">
+                  <Typography.H3 className="tw-pb-2 tw-text-base tw-font-light">
+                    {content.team}
+                  </Typography.H3>
+                  <div className="d-flex align-items-end justify-content-center my-3">
+                    <Currency>{content.value}</Currency>
+                    <Typography.Paragraph className="tw-mb-[-5px] tw-mr-1 tw-text-7xl tw-font-bold tw-leading-none tw-tracking-tighter">
+                      {timeMonthly ? content.price : content.priceOngoing}
+                    </Typography.Paragraph>
+                    <TimePer>/h</TimePer>
                   </div>
-                  <CTALink
-                    href={buildInternalUrl(content.cta.reference)}
-                    text={content.cta.title}
-                    className="tw-relative tw-top-0.5 tw-w-full"
-                    bottomRounded={true}
-                  />
-                </CardPricing>
-              </Col>
-            </Row>
+                  <Typography.ParagraphSmall>
+                    {content.priceIncluding}
+                  </Typography.ParagraphSmall>
+                  <ULStyled>
+                    {content.includes.map((include, i) => (
+                      <li key={i}>{include}</li>
+                    ))}
+                  </ULStyled>
+                </div>
+                <CTALink
+                  href={buildInternalUrl(content.cta.reference)}
+                  text={content.cta.title}
+                  className="tw-relative tw-top-0.5 tw-w-full"
+                  bottomRounded={true}
+                />
+              </CardPricing>
+            </Flex>
           </div>
         </Container>
       </SectionStyled>

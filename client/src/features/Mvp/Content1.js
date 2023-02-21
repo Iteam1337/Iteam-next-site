@@ -1,33 +1,28 @@
-import React from 'react'
 import Image from 'next/image'
-import { Row, Col } from 'react-bootstrap'
+import React from 'react'
 
 import { CTALink, Section, Typography } from '../../components/Core'
+import { Container, Flex } from '../../components/Layout'
 import { urlFor } from '../../utils/helpers'
-import { Container } from '../../components/Layout'
 
 export const Content1 = ({ content }) => {
   return (
     <Section py={0}>
       <Container>
-        <Row className="align-items-center">
-          <Col
-            md="10"
-            lg="6"
-            className="mt-5 mt-lg-0"
+        <Flex center>
+          <div
+            className="tw-mt-8 tw-w-4/5 lg:tw-mt-0 lg:tw-w-full"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
             data-aos-delay="50"
             data-aos-offset="0"
             data-aos-once="true"
           >
-            <div>
-              <Typography.H2>{content.title}</Typography.H2>
-              <Typography.BlockContent blocks={content.blockText.blockText} />
-              <CTALink href="#book" text={content.button} className="tw-mt-8" />
-            </div>
-          </Col>
-          <Col md="10" lg="5" className="offset-lg-1 tw-my-12 lg:tw-my-0">
+            <Typography.H2>{content.title}</Typography.H2>
+            <Typography.BlockContent blocks={content.blockText.blockText} />
+            <CTALink href="#book" text={content.button} className="tw-mt-8" />
+          </div>
+          <div className="tw-my-12 tw-w-1/2 lg:tw-my-0 lg:tw-ml-10">
             <Image
               src={urlFor(content.imageWithAlt.asset._ref)}
               alt={content.imageWithAlt.alt}
@@ -35,8 +30,8 @@ export const Content1 = ({ content }) => {
               height={1500}
               layout="responsive"
             />
-          </Col>
-        </Row>
+          </div>
+        </Flex>
       </Container>
     </Section>
   )

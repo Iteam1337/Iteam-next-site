@@ -1,11 +1,10 @@
-import React from 'react'
 import Image from 'next/image'
+import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 
-import { Section, Typography, CTALink } from '../../components/Core'
-import { urlFor, buildInternalUrl } from '../../utils/helpers'
-import { Container } from '../../components/Layout'
+import { CTALink, Section, Typography } from '../../components/Core'
+import { Container, Flex } from '../../components/Layout'
+import { buildInternalUrl, urlFor } from '../../utils/helpers'
 
 const SectionStyled = styled(Section)`
   border-bottom: 1px solid #242427;
@@ -19,8 +18,8 @@ export const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
     <>
       <SectionStyled bg="dark">
         <Container>
-          <Row className="justify-content-center align-items-center">
-            <Col lg="5" className="offset-lg-1 order-lg-2 mb-5 mb-lg-0">
+          <Flex center>
+            <div className="lg:mb-0 tw-mb-5 tw-w-full lg:tw-order-2 lg:tw-ml-10">
               <Image
                 src={urlFor(content.imageWithAlt.asset._ref)}
                 alt={content.imageWithAlt.alt}
@@ -28,37 +27,33 @@ export const SectionWithImageAndCta = ({ content, referenceTo = '' }) => {
                 height={1001}
                 layout="responsive"
               />
-            </Col>
-            <Col
-              md="10"
-              lg="6"
-              className="order-lg-1"
+            </div>
+            <div
+              className="tw-w-4/5 lg:tw-order-1 lg:tw-w-full"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="50"
               data-aos-offset="0"
               data-aos-once="true"
             >
-              <div>
-                <Typography.H2 className="tw-text-white">
-                  {content.title}
-                </Typography.H2>
-                <Typography.BlockContent
-                  light
-                  blocks={content.blockText.blockText}
-                />
-                <CTALink
-                  href={
-                    referenceTo
-                      ? referenceTo
-                      : buildInternalUrl(content.cta.reference)
-                  }
-                  text={referenceTo ? content.button : content.cta.title}
-                  className="tw-mt-8"
-                />
-              </div>
-            </Col>
-          </Row>
+              <Typography.H2 className="tw-text-white">
+                {content.title}
+              </Typography.H2>
+              <Typography.BlockContent
+                light
+                blocks={content.blockText.blockText}
+              />
+              <CTALink
+                href={
+                  referenceTo
+                    ? referenceTo
+                    : buildInternalUrl(content.cta.reference)
+                }
+                text={referenceTo ? content.button : content.cta.title}
+                className="tw-mt-8"
+              />
+            </div>
+          </Flex>
         </Container>
       </SectionStyled>
     </>

@@ -1,6 +1,5 @@
 import clsx from 'clsx'
 import React from 'react'
-import { Col } from 'react-bootstrap'
 
 import { CTALink, Section, Typography } from '../../components/Core'
 import { Container } from '../../components/Layout'
@@ -69,7 +68,7 @@ export const BaseHero = ({
       )}
     >
       <Container className="tw-h-full">
-        <Col md="11" lg="9" xl="7">
+        <div>
           {children}
           {subtitle && mediaType.type === 'color' ? (
             <Typography.Paragraph className="tw-text-white">
@@ -97,7 +96,7 @@ export const BaseHero = ({
               />
             </div>
           )}
-        </Col>
+        </div>
       </Container>
     </SectionWithBackground>
   )

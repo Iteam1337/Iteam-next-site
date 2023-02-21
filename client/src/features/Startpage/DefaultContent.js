@@ -1,11 +1,11 @@
 import React from 'react'
 
+import { Pricing } from '../Pricing'
+import { Testimonial } from '../Testimonial'
 import { Clients } from './Clients'
 import { CTA } from './CTA'
 import { Faq } from './Faq'
 import { Offerings } from './Offerings'
-import { Testimonial } from '../Testimonial'
-import { Pricing } from '../Pricing'
 
 export const DefaultContent = ({ data, carousel, ourPricing }) => {
   return (

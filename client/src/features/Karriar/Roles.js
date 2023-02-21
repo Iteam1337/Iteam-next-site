@@ -1,23 +1,22 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 
-import { Section, Typography } from '../../components/Core'
 import { Card } from '../../components/Card'
 import { CardList } from '../../components/CardList'
-import { Container } from '../../components/Layout'
+import { Section, Typography } from '../../components/Core'
+import { Container, Flex } from '../../components/Layout'
 
 export const Roles = ({ content, openPositions }) => (
   <>
     <Section bg="#f7f7fb" id="openings">
       <Container>
-        <Row className="justify-content-center tw-mb-6">
-          <Col lg="6" className="text-center">
+        <Flex center className="tw-mb-6">
+          <div className="tw-text-center">
             <div>
               <Typography.H2>{content.title}</Typography.H2>
               <Typography.BlockContent blocks={content.subtitle.blockText} />
             </div>
-          </Col>
-        </Row>
+          </div>
+        </Flex>
         <CardList.CardListFlex>
           {openPositions.map((openPosition) => (
             <Card.SimpleCard
@@ -28,6 +27,7 @@ export const Roles = ({ content, openPositions }) => (
               title={openPosition.title}
               ariaLabel={`Plats: ${openPosition.position}`}
               bgDark={false}
+              className="tw-max-w-lg"
             />
           ))}
         </CardList.CardListFlex>

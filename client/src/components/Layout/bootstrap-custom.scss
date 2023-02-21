@@ -12,6 +12,7 @@ $headings-color: $text;
 $body-bg: $bg;
 $font-family-base: 'Roboto', sans-serif;
 $headings-font-family: $font-family-base;
+// these are tailwind breakpoint values
 $grid-breakpoints: (
   xs: 0,
   sm: 640px,
@@ -20,7 +21,9 @@ $grid-breakpoints: (
   xl: 1280px,
   xxl: 1536px,
 );
+// these are tailwind breakpoint values
 $container-max-widths: (
+  xs: 576px,
   sm: 640px,
   md: 768px,
   lg: 1024px,

@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 
-import { Section, Box, Typography } from '../../components/Core'
+import { Box, Section, Typography } from '../../components/Core'
+import { Container, Grid } from '../../components/Layout'
 import { device } from '../../utils'
-import { Container } from '../../components/Layout'
 
 const SectionStyled = styled(Section)`
   padding-top: 47px;
@@ -31,15 +30,15 @@ export const TextGrid = ({ content }) => {
       {/* content.title is actually just a description of the Sanity document type ("Flera texter"), but serves OK as a generic h2 */}
       <Typography.H2 className="sr-only">{content.title}</Typography.H2>
       <Container>
-        <Row className="justify-content-center">
+        <Grid className="justify-content-center">
           {content.texts.map((text, i) => {
             return (
-              <Col lg="4" className="mb-5 mb-lg-4" key={i}>
+              <div className="tw-mb-5 lg:tw-mb-4" key={i}>
                 <FeatureCard title={text.title}>{text.text}</FeatureCard>
-              </Col>
+              </div>
             )
           })}
-        </Row>
+        </Grid>
       </Container>
     </SectionStyled>
   )

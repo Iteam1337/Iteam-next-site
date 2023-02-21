@@ -1,18 +1,16 @@
-import React from 'react'
-import Link from 'next/link'
-import { Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
+import Link from 'next/link'
+import React from 'react'
 
+import { Box, Section, Typography } from '../../components/Core'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
+import { Container, Flex } from '../../components/Layout'
 import { PageWrapper } from '../../components/PageWrapper'
-import { Section, Typography, Box } from '../../components/Core'
 import { BlogList, Sidebar } from '../../features/Aktuellt'
-import { urlFor } from '../../utils/helpers'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
-import { ExitPreviewLink } from '../../components/ExitPreviewLink'
-import { Container } from '../../components/Layout'
+import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 
 const BlogDetails = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.newsPostQuery, {
@@ -69,8 +67,8 @@ const BlogDetails = ({ data, preview = false }) => {
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
-            <Row className="justify-content-center text-center">
-              <Col lg="12">
+            <Flex center className="tw-text-center">
+              <div>
                 <Typography.H1>{post?.title && post.title}</Typography.H1>
                 <Box className="d-flex justify-content-center">
                   <Typography.Paragraph>
@@ -88,22 +86,22 @@ const BlogDetails = ({ data, preview = false }) => {
                     {post?.author && 'av ' + post.author}
                   </Typography.Paragraph>
                 </Box>
-              </Col>
-            </Row>
+              </div>
+            </Flex>
           </Container>
         </Section>
         <Section className="pb-0">
           <Container>
-            <Row>
-              <Col lg="8" className="mb-5">
+            <Flex>
+              <div className="tw-mb-5">
                 {post?.blockText?.blockText && (
                   <Typography.BlockContent blocks={post.blockText.blockText} />
                 )}
-              </Col>
-              <Col lg="4" className="" style={{ marginTop: '2.3rem' }}>
+              </div>
+              <div style={{ marginTop: '2.3rem' }}>
                 {data?.posts && <Sidebar posts={data.posts} />}
-              </Col>
-            </Row>
+              </div>
+            </Flex>
           </Container>
         </Section>
         {data?.posts && <BlogList posts={data.posts} />}

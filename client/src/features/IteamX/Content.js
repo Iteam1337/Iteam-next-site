@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 
-import { Section, Span, Typography } from '../../components/Core'
 import { ContentCard } from '../../components/ContentCard'
-import { Container } from '../../components/Layout'
+import { Section, Span, Typography } from '../../components/Core'
+import { Container, Grid } from '../../components/Layout'
 
 const SectionStyled = styled(Section)``
 
@@ -27,21 +26,15 @@ export const Content = ({ content }) => {
       {/* <!-- Content section --> */}
       <SectionStyled bg="dark">
         <Container>
-          <Row className="justify-content-center mb-5">
-            <Col lg="10">
-              <div className="text-center">
-                <Typography.H2 className="tw-text-white">
-                  {title[0]}
-                  <Span color="secondary">en hypotes.</Span> {title[1]}
-                </Typography.H2>
-              </div>
-            </Col>
-          </Row>
-          <Row className="justify-content-center">
+          <Typography.H2 className="tw-text-center tw-text-white">
+            {title[0]}
+            <Span color="secondary">en hypotes.</Span> {title[1]}
+          </Typography.H2>
+          <Grid className="tw-mt-20 tw-justify-center">
             {tech.map((item, i) => (
               <ContentCard key={i} title={item} dark />
             ))}
-          </Row>
+          </Grid>
         </Container>
       </SectionStyled>
     </>

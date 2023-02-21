@@ -1,11 +1,10 @@
+import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
-import Image from 'next/image'
 
-import { Section, Box, Typography, CTALink } from '../../components/Core'
+import { Box, CTALink, Section, Typography } from '../../components/Core'
+import { Container, Flex } from '../../components/Layout'
 import { urlFor } from '../../utils/helpers'
-import { Container } from '../../components/Layout'
 
 const ImageRight = styled(Box)`
   img {
@@ -20,46 +19,41 @@ export const Content2 = ({ content }) => {
       {/* <!-- Content section 1 --> */}
       <Section bg="dark" id="ai_sustainability">
         <Container>
-          <Row className="align-items-center">
-            <Col lg="6" md="10" className="order-lg-2 mb-4">
-              <div className="position-relative text-lg-right">
-                <ImageRight>
-                  <Image
-                    src={urlFor(content.imageWithAlt.asset._ref)}
-                    alt={content.imageWithAlt.alt}
-                    width={1526}
-                    height={918}
-                    layout="responsive"
-                  />
-                </ImageRight>
-              </div>
-            </Col>
-            <Col
-              lg="6"
-              className="order-lg-1 mt-5 mt-lg-0"
+          <Flex center>
+            <div
+              className="tw-order-2 tw-mt-12 tw-w-4/5 lg:tw-order-1 lg:tw-mt-0 lg:tw-w-full"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="50"
               data-aos-offset="0"
               data-aos-once="true"
             >
-              <div>
-                <Typography.H2 className="tw-text-white">
-                  {content.title}
-                </Typography.H2>
-                <div className="tw-mb-9">
-                  <Typography.BlockContent
-                    light
-                    blocks={content.blockText.blockText}
-                  />
-                </div>
-                <CTALink
-                  href="https://predictivemovement.se"
-                  text={content.cta.title}
+              <Typography.H2 className="tw-text-white">
+                {content.title}
+              </Typography.H2>
+              <div className="tw-mb-9">
+                <Typography.BlockContent
+                  light
+                  blocks={content.blockText.blockText}
                 />
               </div>
-            </Col>
-          </Row>
+              <CTALink
+                href="https://predictivemovement.se"
+                text={content.cta.title}
+              />
+            </div>
+            <div className="tw-relative tw-order-1 tw-w-full lg:tw-order-2">
+              <ImageRight>
+                <Image
+                  src={urlFor(content.imageWithAlt.asset._ref)}
+                  alt={content.imageWithAlt.alt}
+                  width={1526}
+                  height={918}
+                  layout="responsive"
+                />
+              </ImageRight>
+            </div>
+          </Flex>
         </Container>
       </Section>
     </>

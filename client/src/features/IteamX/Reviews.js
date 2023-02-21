@@ -1,9 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 
-import { Section, Box, Typography } from '../../components/Core'
-import { Container } from '../../components/Layout'
+import { Box, Section, Typography } from '../../components/Core'
+import { Container, Flex } from '../../components/Layout'
 import { urlFor } from '../../utils/helpers'
 
 const ContentCard = ({
@@ -64,8 +63,8 @@ export const Reviews = ({ quote }) => {
     <>
       <Section bg="dark">
         <Container>
-          <Row className="justify-content-center mt-3">
-            <Col lg="4" md="6" className="mb-5 mb-lg-0">
+          <Flex center>
+            <div className="tw-mt-3 tw-mb-5 tw-max-w-md">
               <ContentCard
                 name={quote.name}
                 role={quote.role}
@@ -74,8 +73,8 @@ export const Reviews = ({ quote }) => {
               >
                 {quote.quote}
               </ContentCard>
-            </Col>
-          </Row>
+            </div>
+          </Flex>
         </Container>
       </Section>
     </>

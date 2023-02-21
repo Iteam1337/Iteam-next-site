@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 
-import { Section, Box, Typography } from '../../components/Core'
+import { Box, Section, Typography } from '../../components/Core'
 import { Container } from '../../components/Layout'
 
 const SectionStyled = styled(Section)`
-  padding-top: 90px;
+  padding: 90px 0;
 `
 
 const FaqCard = styled(Box)`
@@ -35,27 +34,25 @@ export const Faq = ({ content }) => {
   return (
     <>
       {/* <!-- Faq section --> */}
-      <SectionStyled bg="dark" pb="0 !important">
+      <SectionStyled bg="dark">
         <Container>
-          <Row>
+          <div className="tw-flex tw-grid-flow-row tw-gap-8 md:tw-grid-cols-2 [@supports(display:grid)]:tw-grid">
             {content.map((faq, index) => {
               return (
-                <Col lg="6" className="mb-5" key={index}>
+                <div className="tw-w-50" key={index}>
                   <FaqCard>
-                    <div>
-                      <Typography.H3 className="tw-text-xl tw-text-white">
-                        {faq.title}
-                      </Typography.H3>
-                      <Typography.BlockContent
-                        light
-                        blocks={faq.blockText.blockText}
-                      />
-                    </div>
+                    <Typography.H3 className="tw-text-xl tw-text-white">
+                      {faq.title}
+                    </Typography.H3>
+                    <Typography.BlockContent
+                      light
+                      blocks={faq.blockText.blockText}
+                    />
                   </FaqCard>
-                </Col>
+                </div>
               )
             })}
-          </Row>
+          </div>
         </Container>
       </SectionStyled>
     </>

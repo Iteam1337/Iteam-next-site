@@ -1,17 +1,15 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
+import React from 'react'
 
-import { PageWrapper } from '../../components/PageWrapper'
 import { Section, Typography } from '../../components/Core'
-import { CaseList, CaseFooter, CTA } from '../../features/Case'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
+import { Container } from '../../components/Layout'
+import { PageWrapper } from '../../components/PageWrapper'
+import { CaseFooter, CaseList, CTA } from '../../features/Case'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
-import { ExitPreviewLink } from '../../components/ExitPreviewLink'
-import { urlFor } from '../../utils/helpers'
-import { Container } from '../../components/Layout'
+import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 
 const CaseStudy = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.casePageQuery, {
@@ -60,14 +58,12 @@ const CaseStudy = ({ data, preview = false }) => {
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
-            <Row className="justify-content-center text-center">
-              <Col lg="6">
-                <Typography.H1>{title && title}</Typography.H1>
-                <Typography.Paragraph>
-                  {subTitle && subTitle}
-                </Typography.Paragraph>
-              </Col>
-            </Row>
+            <div className="tw-text-center">
+              <Typography.H1>{title && title}</Typography.H1>
+              <Typography.Paragraph>
+                {subTitle && subTitle}
+              </Typography.Paragraph>
+            </div>
           </Container>
         </Section>
         <CaseList posts={data?.casePosts && data?.casePosts} />

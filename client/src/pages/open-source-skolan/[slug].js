@@ -1,18 +1,16 @@
-import React from 'react'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
+import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
 
+import { Box, Section, Span, Typography } from '../../components/Core'
+import { ExitPreviewLink } from '../../components/ExitPreviewLink'
+import { Container, Flex } from '../../components/Layout'
 import { PageWrapper } from '../../components/PageWrapper'
-import { Section, Box, Span, Typography } from '../../components/Core'
-import { urlFor } from '../../utils/helpers'
+import { BlogList } from '../../features/Aktuellt'
 import { usePreviewSubscription } from '../../lib/sanity'
 import { getClient } from '../../lib/sanity.server'
-import { filterDataToSingleItem } from '../../utils/helpers'
-import { BlogList } from '../../features/Aktuellt'
-import { ExitPreviewLink } from '../../components/ExitPreviewLink'
-import { Container } from '../../components/Layout'
+import { filterDataToSingleItem, urlFor } from '../../utils/helpers'
 
 const VideoContainer = styled.div`
   position: relative;
@@ -86,39 +84,37 @@ const LessonDetails = ({ data, preview = false }) => {
         <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
-            <Row className="justify-content-center text-center">
-              <Col lg="12">
+            <Flex center>
+              <div className="tw-w-4/5 tw-text-center">
                 <Typography.H1>{lesson?.title && lesson.title}</Typography.H1>
                 <Box className="d-flex justify-content-center">
                   <Typography.Paragraph>
                     {lesson?.date && lesson.date}
                   </Typography.Paragraph>
                 </Box>
-              </Col>
-            </Row>
+              </div>
+            </Flex>
             {lesson?.youtubeId && (
-              <Row>
-                <Col>
-                  <Box mt={56} mb={32}>
-                    <VideoContainer>
-                      <VideoIframe
-                        src={`https://www.youtube.com/embed/${lesson?.youtubeId}`}
-                        title={lesson?.metaTags?.title ?? lesson.title}
-                        frameborder="0"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                      />
-                    </VideoContainer>
-                  </Box>
-                  <Box>
-                    <Typography.Paragraph>
-                      <Span fontWeight="bold">Open Source skolan:</Span>{' '}
-                      {lesson?.imageCard?.description &&
-                        lesson.imageCard.description}
-                    </Typography.Paragraph>
-                  </Box>
-                </Col>
-              </Row>
+              <>
+                <Box mt={56} mb={32}>
+                  <VideoContainer>
+                    <VideoIframe
+                      src={`https://www.youtube.com/embed/${lesson?.youtubeId}`}
+                      title={lesson?.metaTags?.title ?? lesson.title}
+                      frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    />
+                  </VideoContainer>
+                </Box>
+                <Box>
+                  <Typography.Paragraph>
+                    <Span fontWeight="bold">Open Source skolan:</Span>{' '}
+                    {lesson?.imageCard?.description &&
+                      lesson.imageCard.description}
+                  </Typography.Paragraph>
+                </Box>
+              </>
             )}
           </Container>
         </Section>
@@ -127,13 +123,13 @@ const LessonDetails = ({ data, preview = false }) => {
             <Section className="pb-0">
               <div className="pt-5"></div>
               <Container>
-                <Row className="justify-content-center text-center">
-                  <Col lg="12">
+                <Flex center className="text-center">
+                  <div>
                     <Typography.H2>
                       Se fler lektioner i Open Source skolan
                     </Typography.H2>
-                  </Col>
-                </Row>
+                  </div>
+                </Flex>
               </Container>
             </Section>
             <BlogList posts={data.lessons} />

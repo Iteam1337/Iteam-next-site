@@ -28,6 +28,7 @@ export const SimpleCard = ({
   children,
   ariaLabel,
   bgDark,
+  className,
 }) => {
   return (
     <BaseCard
@@ -42,7 +43,7 @@ export const SimpleCard = ({
       title={title}
       centerContent={false}
       bgDark={bgDark}
-      className="tw-max-w-lg"
+      className={className}
     >
       {children && (
         <Typography.ParagraphSmall>{children}</Typography.ParagraphSmall>

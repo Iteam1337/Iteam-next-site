@@ -1,31 +1,30 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 
 import { Section, Typography } from '../../components/Core'
-import { Container } from '../../components/Layout'
+import { Container, Flex } from '../../components/Layout'
 import { formatPhoneNumber } from '../../utils/helpers'
 import { SocialMediaLinks } from './SocialMediaLinks'
 
 const InfoSection = ({ text, title }) => (
-  <Row className="py-5">
-    <Col md={8} lg={6}>
+  <Flex className="tw-py-5">
+    <div>
       <Typography.H3>{title}</Typography.H3>
-    </Col>
-    <Col md={8} lg={6}>
+    </div>
+    <div>
       <Typography.Paragraph>{text}</Typography.Paragraph>
-    </Col>
-  </Row>
+    </div>
+  </Flex>
 )
 
 export const Medarbetare = ({ info }) => (
   <Container>
     <Section>
       <Typography.H2 className="sr-only">Info</Typography.H2>
-      <Row className="py-5">
-        <Col md={8} lg={6}>
+      <Flex className="tw-py-5">
+        <div>
           <Typography.H3>Kontakt</Typography.H3>
-        </Col>
-        <Col md={8} lg={6}>
+        </div>
+        <div>
           {info.phoneNumber && (
             <Typography.Paragraph>
               <Typography.Anchor href={`tel:${info.phoneNumber}`}>
@@ -47,8 +46,8 @@ export const Medarbetare = ({ info }) => (
               />
             )}
           </Typography.Paragraph>
-        </Col>
-      </Row>
+        </div>
+      </Flex>
       {info.answerTech && (
         <InfoSection title={info.whyTech} text={info.answerTech} />
       )}

@@ -1,29 +1,26 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 
-import { Section, Box, Typography } from '../../components/Core'
 import { ContentCard } from '../../components/ContentCard'
-import { Container } from '../../components/Layout'
+import { Box, Section, Typography } from '../../components/Core'
+import { Container, Flex, Grid } from '../../components/Layout'
 
 export const TextWithTags = ({ content }) => {
   return (
     <Section bg="#f7f7fb">
       <Container>
-        <Row className="justify-content-center">
-          <Col lg="9">
-            <Box className="text-center" mb={[4, 5]}>
-              <Typography.H2>{content.title}</Typography.H2>
-              {content?.subtitle?.blockText && (
-                <Typography.BlockContent blocks={content.subtitle.blockText} />
-              )}
-            </Box>
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
+        <Flex center>
+          <Box className="text-center tw-w-4/5 lg:tw-w-full" mb={[4, 5]}>
+            <Typography.H2>{content.title}</Typography.H2>
+            {content?.subtitle?.blockText && (
+              <Typography.BlockContent blocks={content.subtitle.blockText} />
+            )}
+          </Box>
+        </Flex>
+        <Grid>
           {content.keywords.map((service, i) => (
             <ContentCard title={service} key={i} />
           ))}
-        </Row>
+        </Grid>
       </Container>
     </Section>
   )
