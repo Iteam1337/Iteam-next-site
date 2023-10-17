@@ -1,5 +1,4 @@
 import React from 'react'
-import Script from 'next/script'
 import { groq } from 'next-sanity'
 
 import { usePreviewSubscription } from '../lib/sanity'
