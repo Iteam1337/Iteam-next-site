@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
     footerCache = footer
   }, [footer])
 
-  const MATOMO_URL = 'https://matomo.iteam.services/matomo.php'
+  const MATOMO_URL = 'https://matomo.iteam.services'
   const MATOMO_SITE_ID = '1'
 
   useEffect(() => {
