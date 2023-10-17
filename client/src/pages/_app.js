@@ -1,8 +1,7 @@
-import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 // import App from 'next/app'
 import { groq } from 'next-sanity'
-import posthog from 'posthog-js'
+import matomo from '@socialgouv/matomo-next'
 
 import { GlobalProvider } from '../context/GlobalContext'
 import { getClient } from '../lib/sanity.server'
@@ -19,27 +18,16 @@ import '../styles/globals.css'
 let footerCache
 
 const MyApp = ({ Component, pageProps, router, footer }) => {
-  const nextRouter = useRouter()
-
   useEffect(() => {
     footerCache = footer
   }, [footer])
 
+  const MATOMO_URL = 'https://matomo.iteam.services/matomo.php'
+  const MATOMO_SITE_ID = '1'
+
   useEffect(() => {
-    posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY, {
-      api_host: 'https://posthog.iteam.services',
-      loaded: (posthog) => {
-        if (process.env.NODE_ENV === 'development') posthog.opt_out_capturing()
-      },
-    })
-
-    const handleRouteChange = () => posthog.capture('$pageview')
-    nextRouter.events.on('routeChangeComplete', handleRouteChange)
-
-    return () => {
-      nextRouter.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [nextRouter.events])
+    matomo.init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID })
+  }, [])
 
   if (router.pathname.match(/sign|reset|coming/)) {
     return (
