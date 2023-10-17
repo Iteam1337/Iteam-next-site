@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
   const MATOMO_SITE_ID = '1'
 
   useEffect(() => {
-    init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID })
+    init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID, disableCookies: true })
   }, [])
 
   if (router.pathname.match(/sign|reset|coming/)) {
