@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 // import App from 'next/app'
 import { groq } from 'next-sanity'
-import matomo from '@socialgouv/matomo-next'
+import { init } from '@socialgouv/matomo-next'
 
 import { GlobalProvider } from '../context/GlobalContext'
 import { getClient } from '../lib/sanity.server'
@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
   const MATOMO_SITE_ID = '1'
 
   useEffect(() => {
-    matomo.init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID })
+    init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID })
   }, [])
 
   if (router.pathname.match(/sign|reset|coming/)) {
