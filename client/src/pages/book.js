@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react'
-import { NextSeo } from 'next-seo'
-import { Container, Row, Col } from 'react-bootstrap'
 import { groq } from 'next-sanity'
+import { NextSeo } from 'next-seo'
+import React, { useEffect } from 'react'
 
+import { Box, Section, Typography } from '../components/Core'
+import { ExitPreviewLink } from '../components/ExitPreviewLink'
+import { Container, Flex } from '../components/Layout'
+import { PageWrapper } from '../components/PageWrapper'
+import { Hero } from '../features/Hero'
+import { HubspotForm } from '../features/HubspotForm'
+import { usePreviewSubscription } from '../lib/sanity'
+import { getClient } from '../lib/sanity.server'
 import {
   buildInternalUrl,
   filterDataToSingleItem,
   formatPhoneNumber,
   urlFor,
 } from '../utils/helpers'
-import { Section, Box, Typography } from '../components/Core'
-import { PageWrapper } from '../components/PageWrapper'
-import { ExitPreviewLink } from '../components/ExitPreviewLink'
-import { Hero } from '../features/Hero'
-import { usePreviewSubscription } from '../lib/sanity'
-import { getClient } from '../lib/sanity.server'
-import { HubspotForm } from '../features/HubspotForm'
 
 const Book = ({ data, preview = false }) => {
   const { data: previewData } = usePreviewSubscription(data?.bookPageQuery, {
@@ -75,14 +75,14 @@ const Book = ({ data, preview = false }) => {
         )}
         <Section>
           <Container>
-            <Row>
-              <Col lg={6}>
+            <Flex>
+              <div>
                 <HubspotForm
                   value="contact1"
                   title="Boka ett möte i kalendern"
                 />
-              </Col>
-              <Col lg={5} className="offset-lg-1 order-lg-2 mt-lg-0">
+              </div>
+              <div>
                 <Box className="tw-mb-6">
                   <Typography.H2>
                     {page?.call?.title && page.call.title}
@@ -134,8 +134,8 @@ const Book = ({ data, preview = false }) => {
                       />
                     </Box>
                   ))}
-              </Col>
-            </Row>
+              </div>
+            </Flex>
           </Container>
         </Section>
       </PageWrapper>

@@ -1,20 +1,19 @@
-import React from 'react'
 import { groq } from 'next-sanity'
 import { NextSeo } from 'next-seo'
+import React from 'react'
 
+import { ExitPreviewLink } from '../components/ExitPreviewLink'
 import { PageWrapper } from '../components/PageWrapper'
-import { TextWithTags } from '../features/TextWithTags'
-import { Testimonial } from '../features/Testimonial'
-import { SectionWithImage } from '../features/SectionWithImage'
-import { SectionWithButtonAndTextGrid } from '../features/SectionWithButtonAndTextGrid'
 import { Hero } from '../features/Hero'
 import { Pricing } from '../features/Pricing'
-import { Role, SectionWithImageAndButton, Case, CTA } from '../features/Scaleup'
-import { getClient } from '../lib/sanity.server'
-import { filterDataToSingleItem } from '../utils/helpers'
+import { Case, CTA, SectionWithImageAndButton } from '../features/Scaleup'
+import { SectionWithButtonAndTextGrid } from '../features/SectionWithButtonAndTextGrid'
+import { SectionWithImage } from '../features/SectionWithImage'
+import { Testimonial } from '../features/Testimonial'
+import { TextWithTags } from '../features/TextWithTags'
 import { usePreviewSubscription } from '../lib/sanity'
-import { urlFor } from '../utils/helpers'
-import { ExitPreviewLink } from '../components/ExitPreviewLink'
+import { getClient } from '../lib/sanity.server'
+import { filterDataToSingleItem, urlFor } from '../utils/helpers'
 
 const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
   const { data: previewData } = usePreviewSubscription(data?.scaleUpPageQuery, {
@@ -88,7 +87,7 @@ const ScaleUp = ({ data, preview = false, carousel, ourPricing }) => {
       )}
       {casePost && <Case content={casePost} />}
       {scaleUpPage?.textWithTagsThirs && (
-        <Role content={scaleUpPage.textWithTagsThirs} />
+        <TextWithTags content={scaleUpPage.textWithTagsThirs} />
       )}
       <Testimonial bg content={carousel} />
       <Pricing content={ourPricing} />

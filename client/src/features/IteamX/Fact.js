@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
 
-import { Section, Box, Typography } from '../../components/Core'
+import { Box, Section, Typography } from '../../components/Core'
+import { Container, Flex } from '../../components/Layout'
 import { device } from '../../utils'
 
 const SectionStyled = styled(Section)`
@@ -19,9 +19,9 @@ export const Fact = ({ content }) => (
     {/* <!-- Fact section 1 --> */}
     <SectionStyled bg="dark">
       <Container>
-        <Row>
+        <Flex>
           {content.texts.map((item, index) => (
-            <Col md="4" sm="6" className="mb-4 mb-md-0" key={index}>
+            <div className="tw-mb-4 md:tw-mb-0" key={index}>
               <Box>
                 <Typography.H2 className="tw-mb-6 tw-text-white">
                   {item.title}
@@ -30,9 +30,9 @@ export const Fact = ({ content }) => (
                   {item.text}
                 </Typography.Paragraph>
               </Box>
-            </Col>
+            </div>
           ))}
-        </Row>
+        </Flex>
       </Container>
     </SectionStyled>
   </>

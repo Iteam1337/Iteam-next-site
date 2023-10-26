@@ -1,10 +1,10 @@
-import React from 'react'
 import Image from 'next/image'
+import React from 'react'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
 
-import { Box } from '../../components/Core'
 import imgShape from '../../assets/image/svg/contact-shape.svg'
+import { Box } from '../../components/Core'
+import { Container } from '../../components/Layout'
 import { HubspotForm } from '../../features/HubspotForm'
 
 const BoxStyled = styled(Box)`
@@ -38,17 +38,10 @@ export const Contact = () => (
           layout="responsive"
         />
       </div>
-      <Container
-        css={`
-          position: relative;
-          z-index: 10;
-        `}
-      >
-        <Row className="justify-content-center">
-          <Col lg="10" id="sprintMeeting">
-            <HubspotForm value="iteamX" title="Boka gratis rådgivningsmöte" />
-          </Col>
-        </Row>
+      <Container className="tw-relative tw-z-10">
+        <div id="sprintMeeting">
+          <HubspotForm value="iteamX" title="Boka gratis rådgivningsmöte" />
+        </div>
       </Container>
     </BoxStyled>
   </>

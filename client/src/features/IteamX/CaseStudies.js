@@ -1,9 +1,9 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
 
 import { Box } from '../../components/Core'
 import { Card } from '../../components/Card'
 import { CardList } from '../../components/CardList'
+import { Container } from '../../components/Layout'
 
 export const CaseStudies = ({ cases }) => {
   const formatPreviewDescription = (description) => {

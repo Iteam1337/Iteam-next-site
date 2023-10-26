@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
-import { Container } from 'react-bootstrap'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
@@ -11,6 +10,7 @@ import { NestedMenu } from '../NestedMenu'
 import { device } from '../../utils'
 import { Logo } from '../Logo'
 import { menuItems } from './menuItems'
+import { Container } from '../Layout'
 
 const SiteHeader = styled.header`
   padding: 10px 0 10px 3px;
