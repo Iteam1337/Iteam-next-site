@@ -42,7 +42,7 @@ export const HubspotForm = ({
         <input type="hidden" name="form-name" value={value} />
         <div
           className="meetings-iframe-container tw-mx-auto tw-my-0 tw-max-h-[640px] tw-max-w-[484px]"
-          data-src="https://meetings.hubspot.com/andreas-lindqvist?embed=true"
+          data-src="https://meetings.hubspot.com/andreas-lindqvist"
         />
       </form>
     </>
