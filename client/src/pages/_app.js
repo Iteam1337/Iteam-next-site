@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
 // import App from 'next/app'
-import { groq } from 'next-sanity'
+import React, { useEffect } from 'react'
 import Script from 'next/script'
+import { groq } from 'next-sanity'
+
 import { GlobalProvider } from '../context/GlobalContext'
 import { getClient } from '../lib/sanity.server'
 import { Layout } from '../components/Layout'
+
 import '../components/Layout/bootstrap-custom.scss'
 import '../../node_modules/slick-carousel/slick/slick.css'
 import '../../node_modules/slick-carousel/slick/slick-theme.css'
@@ -13,6 +15,7 @@ import '../assets/fonts/icon-font/css/style.css'
 import '../assets/fonts/fontawesome-5/css/all.css'
 import '../assets/fonts/roboto/css/style.css'
 import '../styles/globals.css'
+
 let footerCache
 const MyApp = ({ Component, pageProps, router, footer }) => {
   useEffect(() => {
