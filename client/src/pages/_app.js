@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 // import App from 'next/app'
 import { groq } from 'next-sanity'
+
 import Script from 'next/script'
+
 import { GlobalProvider } from '../context/GlobalContext'
 import { getClient } from '../lib/sanity.server'
 import { Layout } from '../components/Layout'
