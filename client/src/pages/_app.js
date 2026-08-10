@@ -27,6 +27,11 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
         <Layout pageContext={{ layout: 'bare' }}>
           <Component {...pageProps} />
         </Layout>
+        <Script
+          src="https://statistik.iteam.se/script.js"
+          data-website-id="8efaa222-7a1c-4e60-b253-6dd505ddbb1a"
+          strategy="afterInteractive"
+        />
       </GlobalProvider>
     )
   }
@@ -36,7 +41,8 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
         <Component {...pageProps} />
       </Layout>
       <Script
-        src="https://scripts.simpleanalyticscdn.com/latest.js"
+        src="https://statistik.iteam.se/script.js"
+        data-website-id="8efaa222-7a1c-4e60-b253-6dd505ddbb1a"
         strategy="afterInteractive"
       />
     </GlobalProvider>
