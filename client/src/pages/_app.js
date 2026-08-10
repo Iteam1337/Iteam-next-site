@@ -32,6 +32,10 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
           data-website-id="8efaa222-7a1c-4e60-b253-6dd505ddbb1a"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://scripts.simpleanalyticscdn.com/latest.js"
+          strategy="afterInteractive"
+        />
       </GlobalProvider>
     )
   }
@@ -43,6 +47,10 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
       <Script
         src="https://statistik.iteam.se/script.js"
         data-website-id="8efaa222-7a1c-4e60-b253-6dd505ddbb1a"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://scripts.simpleanalyticscdn.com/latest.js"
         strategy="afterInteractive"
       />
     </GlobalProvider>
