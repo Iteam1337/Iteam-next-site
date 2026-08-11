@@ -27,8 +27,22 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
         <Layout pageContext={{ layout: 'bare' }}>
           <Component {...pageProps} />
         </Layout>
+        <Script id="matomo" strategy="afterInteractive">
+          {`
+            var _paq = window._paq = window._paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+              var u="//statistik.iteam.se/";
+              _paq.push(['setTrackerUrl', u+'matomo.php']);
+              _paq.push(['setSiteId', '2']);
+              var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+              g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+          `}
+        </Script>
         <Script
-          src="https://statistik.iteam.se/script.js"
+          src="https://iteam-umami-u69690.vm.elestio.app/script.js"
           data-website-id="8efaa222-7a1c-4e60-b253-6dd505ddbb1a"
           strategy="afterInteractive"
         />
@@ -44,8 +58,22 @@ const MyApp = ({ Component, pageProps, router, footer }) => {
       <Layout pageContext={{}} footer={footer}>
         <Component {...pageProps} />
       </Layout>
+      <Script id="matomo" strategy="afterInteractive">
+        {`
+          var _paq = window._paq = window._paq || [];
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+            var u="//statistik.iteam.se/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '2']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+          })();
+        `}
+      </Script>
       <Script
-        src="https://statistik.iteam.se/script.js"
+        src="https://iteam-umami-u69690.vm.elestio.app/script.js"
         data-website-id="8efaa222-7a1c-4e60-b253-6dd505ddbb1a"
         strategy="afterInteractive"
       />
