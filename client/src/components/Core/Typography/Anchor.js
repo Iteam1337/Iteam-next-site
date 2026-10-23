@@ -7,6 +7,7 @@ export const Anchor = ({
   className,
   ariaLabel,
   target,
+  rel,
 }) => {
   return (
     <a
@@ -14,6 +15,7 @@ export const Anchor = ({
       className={clsx(className, 'text-inherit')}
       aria-label={ariaLabel}
       target={target}
+      rel={rel}
     >
       {children}
     </a>

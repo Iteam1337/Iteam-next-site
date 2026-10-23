@@ -44,6 +44,7 @@ export const Footer = ({ isDark = true, content }) => {
                           <Typography.Anchor
                             href={content.linkedinLink}
                             target="_blank"
+                            rel="noopener noreferrer"
                             ariaLabel="Linkedin"
                             className={clsx(
                               isDark ? 'tw-text-white' : 'tw-text-gray-dark'
@@ -60,6 +61,7 @@ export const Footer = ({ isDark = true, content }) => {
                           <Typography.Anchor
                             href={content.twitterLink}
                             target="_blank"
+                            rel="noopener noreferrer"
                             aria-label="Twitter"
                             className={clsx(
                               isDark ? 'tw-text-white' : 'tw-text-gray-dark'
@@ -76,6 +78,7 @@ export const Footer = ({ isDark = true, content }) => {
                           <Typography.Anchor
                             href={content.facebookLink}
                             target="_blank"
+                            rel="noopener noreferrer"
                             aria-label="Facebook"
                             className={clsx(
                               isDark ? 'tw-text-white' : 'tw-text-gray-dark'
@@ -93,6 +96,7 @@ export const Footer = ({ isDark = true, content }) => {
                           <Typography.Anchor
                             href={content.instagramLink}
                             target="_blank"
+                            rel="noopener noreferrer"
                             aria-label="Instagram"
                             className={clsx(
                               isDark ? 'tw-text-white' : 'tw-text-gray-dark'
@@ -134,6 +138,7 @@ export const Footer = ({ isDark = true, content }) => {
                                 isDark ? 'tw-text-white' : 'tw-text-gray-dark'
                               )}
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {address.name}
                               <br />
