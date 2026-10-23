@@ -1921,9 +1921,10 @@ human-signals@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/human-signals/-/human-signals-3.0.1.tgz"
 
-husky@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.npmjs.org/husky/-/husky-8.0.1.tgz"
+husky@^9.1.7:
+  version "9.1.7"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-9.1.7.tgz#d46a38035d101b46a70456a850ff4201344c0b2d"
+  integrity sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==
 
 hyperscript@^2.0.2:
   version "2.0.2"
