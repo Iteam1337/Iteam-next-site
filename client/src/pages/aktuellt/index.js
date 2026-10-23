@@ -27,7 +27,13 @@ export default function BlogRegular({ data, preview = false }) {
     'open-source-skolan': (type) => type == 'openSourceLesson',
   }
   const filterParam = router?.query?.taggat || 'alla'
-  const contentFilter = filters[filterParam] || filters['alla']
+  // hasOwnProperty, so ?taggat=constructor can't pick up Object.prototype members
+  const contentFilter = Object.prototype.hasOwnProperty.call(
+    filters,
+    filterParam
+  )
+    ? filters[filterParam]
+    : filters['alla']
 
   const filteredPosts = data.posts.filter((post) => contentFilter(post._type))
 
