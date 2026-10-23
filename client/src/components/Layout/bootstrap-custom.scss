@@ -12,6 +12,9 @@ $headings-color: $text;
 $body-bg: $bg;
 $font-family-base: 'Roboto', sans-serif;
 $headings-font-family: $font-family-base;
+// Bootstrap 5.3 changed this default to var(--bs-border-color), which shows as
+// light lines in the black mobile submenu. Keep the 5.2 value.
+$list-group-border-color: rgba($black, 0.125);
 $grid-breakpoints: (
   xs: 0,
   sm: 640px,
