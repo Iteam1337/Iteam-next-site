@@ -29,7 +29,7 @@
     "sanity-plugin-color-picker": "^1.0.3",
     "sanity-plugin-iframe-pane": "^1.0.8",
     "sanity-plugin-social-preview": "^0.1.5",
-    "sanity-plugin-vercel-deploy": "^2.0.1",
+    "sanity-plugin-vercel-deploy": "^4.0.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
