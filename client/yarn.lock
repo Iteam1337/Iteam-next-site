@@ -3747,9 +3747,10 @@ slice-ansi@^5.0.0:
     ansi-styles "^6.0.0"
     is-fullwidth-code-point "^4.0.0"
 
-slick-carousel@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.8.1.tgz"
+slick-carousel@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-2.0.0.tgz#564da57e846f67fd349a2cd1d4bd807937183310"
+  integrity sha512-GdU9wJUPtYyJij6PTAGhqTu2Dd0FwauvqqYTCUSzfzZg+uhvwJkue6bT1fVQUzAjAid/bXAaZvlcung4cQpuLg==
 
 "source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.2, source-map-js@^1.2.2:
   version "1.2.2"
