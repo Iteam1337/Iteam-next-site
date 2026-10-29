@@ -8,9 +8,31 @@ updates:
     open-pull-requests-limit: 5
     groups:
       minor-and-patch:
+        applies-to: version-updates
         update-types:
           - minor
           - patch
+      # One PR for all security fixes instead of one per transitive package.
+      security:
+        applies-to: security-updates
+        patterns:
+          - '*'
+    ignore:
+      # 0.30+ stops applying Carousel's `responsive` settings (no dots on mobile).
+      - dependency-name: react-slick
+        versions: ['>=0.30.0']
+      # 0.2+ requires Prettier 3; the commit hook still runs Prettier 2.
+      - dependency-name: prettier-plugin-tailwindcss
+        versions: ['>=0.2.0']
+      # Major upgrades need a planned migration, not a Dependabot PR.
+      - dependency-name: react
+        update-types: ['version-update:semver-major']
+      - dependency-name: react-dom
+        update-types: ['version-update:semver-major']
+      - dependency-name: react-is
+        update-types: ['version-update:semver-major']
+      - dependency-name: husky
+        update-types: ['version-update:semver-major']
 
   - package-ecosystem: github-actions
     directory: /
