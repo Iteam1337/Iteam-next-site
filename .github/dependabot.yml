@@ -25,14 +25,19 @@ updates:
       - dependency-name: prettier-plugin-tailwindcss
         versions: ['>=0.2.0']
       # Major upgrades need a planned migration, not a Dependabot PR.
-      - dependency-name: react
+      - dependency-name: '*'
         update-types: ['version-update:semver-major']
-      - dependency-name: react-dom
-        update-types: ['version-update:semver-major']
-      - dependency-name: react-is
-        update-types: ['version-update:semver-major']
-      - dependency-name: husky
-        update-types: ['version-update:semver-major']
+
+  # Sanity Studio v2 can't be built or deployed (Vercel dropped its Node 14) and
+  # is being replaced by a Sanity v3 migration. Silence it until then; remove
+  # this block when the new studio lands.
+  - package-ecosystem: npm
+    directory: /studio
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 0
+    ignore:
+      - dependency-name: '*'
 
   - package-ecosystem: github-actions
     directory: /
